@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "14457b676a0b23ba38d404a34d16b14473a5f2fe",
+  "LastProcessedCommit": "b9e6847ff44f72115a5b507fd50e4203e9efff54",
   "LastTranslatedCommit": "aa1ce900745af9ef2374f6c25fdeb6c716d0faa8",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
@@ -71,8 +71,8 @@
         "dsc\\authoringResourceClass.md"
       ],
       "HandoffFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.pt-br\\live\\authoringResourceClass.3603134df9ad1cad202d10769ff631a083cc3aae.pt-br.xlf",
-      "HandoffFileCommit": "d5522c840137ad6e1207f2696b25295eec8eb082",
-      "HandoffDateTime": "2016-02-23T03:03:56.5065669Z",
+      "HandoffFileCommit": "a80e280e05e0c3f08b2bdc9b169c124dafc6510a",
+      "HandoffDateTime": "2016-03-24T22:09:56.3424339Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
