@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "b0829d2ed24d07c337e1775463861c10b5d14cb2",
-  "LastTranslatedCommit": "71c85a830bf975884154a3608adb3c5b1cfdaff0",
+  "LastTranslatedCommit": "dd581665632f606d42a9cdcd002507cb705d3365",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -4674,14 +4674,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "dd581665632f606d42a9cdcd002507cb705d3365",
+      "TargetFilePath": "dsc\\images\\CredentialEncryptionDiagram1.png",
+      "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\d9f53a805041164f5070845c0fd216b63d17ae58.png",
+      "HandbackFileCommit": "edc1d8e3a998c7cef5a9c33d7d4bd4a0937e22e0",
+      "HandbackDateTime": "2016-03-30T17:02:24.2530333Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-03-30T17:02:24.2530333Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
