@@ -26,6 +26,7 @@
 ### [Recursos personalizados baseados em classe](authoringResourceClass.md)
 ### [Recursos de composição](authoringResourceComposite.md)
 ### [Depurando os recursos de DSC](debugResource.md)
+### [Lista de verificação da criação de recursos](resourceAuthoringChecklist.md)
 
 # [Configurando o Gerenciador de Configurações Local (LCM)](metaConfig.md)
 ## [Configurando o LCM no PowerShell 4.0](metaConfig4.md)
@@ -52,4 +53,4 @@
 ### [Recurso nxService](lnxServiceResource.md)
 ### [Recurso nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md)
 ### [Recurso nxUser](lnxUserResource.md)
-<!--HONumber=Feb16_HO4-->
+<!--HONumber=Mar16_HO1-->
