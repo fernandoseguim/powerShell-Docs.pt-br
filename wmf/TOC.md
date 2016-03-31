@@ -39,7 +39,6 @@
 #### [Configurar o nó com vários fragmentos de configuração](dsc_partialconfig.md)
 ##### [Suporte para RefreshModes misto](dsc_partialconfig_mixedmode.md)
 #### [Configurar o mecanismo DSC com o novo atributo](dsc_metaconfiguration.md)
-#### [Combinação e correspondência de modos PUSH e PULL](dsc_mixedrefreshmode.md)
 #### [Informações detalhadas sobre o estado do LCM](dsc_lcmstate.md)
 #### [As frequências de RefreshMode e ConfigurationMode não precisam ser múltiplos um do outro](dsc_freqnomultiple.md)
 #### [Valor adicional para a propriedade de RefreshMode](dsc_refreshmode.md)
@@ -98,4 +97,8 @@
 
 # [Limitações e problemas conhecidos](limitation_overview.md)
 ## [Problemas conhecidos no DSC (Configuração de Estado Desejado)](limitation_dsc.md)
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Mar16_HO3-->
+
+
