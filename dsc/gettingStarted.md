@@ -10,9 +10,9 @@ Este guia descreve como começar a criar documentos de Configuração de Estado 
 As configurações podem vir de várias formas. A maneira mais fácil de criar uma nova configuração é criar um arquivo .ps1 (script do PowerShell). Para fazer isso, abra o editor escolhido por você. O ISE do PowerShell é uma boa opção, pois entenda a DSC nativamente. Salve o seguinte como um PS1:
 
 ```powershell
-configuration myFirstConfiguration
+configuration MyFirstConfiguration
 {
-    import-dscresource -name WindowsFeature
+    Import-DscResource -Name WindowsFeature
 
     Node localhost
     {
@@ -33,7 +33,7 @@ A próxima linha é uma instrução de importação, semelhante à importação 
 
 "Nó" define o nome do computador em que essa configuração vai agir. Embora ela seja editada localmente, as configurações podem chegar a nós remotos e configurá-los. 
 
-Os nós podem ser nomes ou endereços IP de computador. Você pode ter vários nós em um único documento de configuração. Usando [dados de configuração](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), também é possível aplicar a mesma configuração a vários nós. Nesse caso, o nó é "localhost" - o que significa o computador local. 
+Os nós podem ser nomes ou endereços IP de computador. Você pode ter vários nós em um único documento de configuração. Usando [dados de configuração](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), também é possível aplicar a mesma configuração a vários nós. Nesse caso, o nó é "localhost" - que significa o computador local. 
 
 O próximo item é um [**recurso**](https://msdn.microsoft.com/en-us/powershell/dsc/resources). Os recursos são blocos de construção de configurações. Cada recurso é um módulo que define a lógica de implementação de um único aspecto de um computador. Você pode exibir todos os recursos no seu computador executando **Get-DscResource** no PowerShell. Os recursos devem estar presentes no computador local e ser importados antes que possam ser usados em uma configuração com **Import-DscResource**, que está na segunda linha dessa configuração. 
 
@@ -50,11 +50,15 @@ Depois de ser executada, a configuração cria uma pasta com seu nome contendo u
 
 Para aplicar a configuração:
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration
+Start-DscConfiguration -Path ./myFirstConfiguration
 ```
-É criado um trabalho do PowerShell que atinge os nós na configuração e os configura. Para ver a saída do trabalho, use -wait. 
+É criado um trabalho do PowerShell que atinge os nós na configuração e os configura. Para ver a saída do trabalho, use -Wait. 
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration -wait
+Start-DscConfiguration -Path ./myFirstConfiguration -Wait
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+

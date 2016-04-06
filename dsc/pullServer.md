@@ -63,7 +63,7 @@ configuration Sample_xDscWebService
 1. Execute a configuração, passando a impressão digital do certificado autoassinado criado como o parâmetro **certificateThumbPrint**:
 
 ```powershell
-PS:\>$myCert = Get-ChildItem CERT: | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
+PS:\>$myCert = Get-ChildItem CERT:\LocalMachine\My | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
 PS:\>Sample_xDSCService -certificateThumbprint $myCert.Thumbprint 
 ```
 
@@ -89,4 +89,8 @@ O arquivo de soma de verificação deve estar presente no mesmo diretório em qu
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Aplicando configurações](enactingConfigurations.md)
 * [Como recuperar informações do nó do servidor de pull de DSC](retrieveNodeInfo.md)
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+
