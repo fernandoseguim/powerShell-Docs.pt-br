@@ -52,7 +52,7 @@ Configuration MyDscConfiguration {
 }
 ```
 
-Neste exemplo, o nome do nó é especificado ao ser passado como o parâmetro $computerName quando você [compila a configuração](# Compilando a configuração). O nome padrão é "localhost".
+Neste exemplo, o nome do nó é especificado ao ser passado como o parâmetro $computerName quando você [compila a configuração](# Compiling the configuration). O nome padrão é "localhost".
 
 ## Compilando a configuração
 Para poder aplicar uma configuração, você precisa compilá-la em um documento MOF. Chame a configuração como chamaria uma função do PowerShell.
@@ -118,4 +118,8 @@ Depois que esses módulos forem colocados em `$env:PSModulePath` e reconhecidos 
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Recursos de DSC](resources.md)
 * [Configurando o Gerenciador de Configurações Local](metaconfig.md)
+
+
 <!--HONumber=Feb16_HO4-->
+
+
