@@ -4,6 +4,7 @@
 ## [Aplicando configurações](enactingConfigurations.md)
 ## [Dados de configuração](configData.md)
 ### [Opções de credenciais nos dados de configuração](configDataCredentials.md)
+### [Executar DSC com as credenciais do usuário](runAsUser.md)
 ## [Protegendo o arquivo MOF de configuração](secureMOF.md)
 ## [Configurações Parciais](partialConfigs.md)
 # [Recursos](resources.md)
@@ -18,7 +19,7 @@
 ### [Recurso Script](scriptResource.md)
 ### [Recurso Service](serviceResource.md)
 ### [Recurso User](userResource.md)
-### [Recurso Windows Feature](windowsfeatureResource.md)
+### [Recurso WindowsFeature](windowsfeatureResource.md)
 ### [Recurso WindowsProcess](windowsProcessResource.md)
 ## [Criando recursos personalizados](authoringResource.md) 
 ### [Recursos personalizados baseados em MOF](authoringResourceMOF.md)
@@ -26,6 +27,7 @@
 ### [Recursos personalizados baseados em classe](authoringResourceClass.md)
 ### [Recursos de composição](authoringResourceComposite.md)
 ### [Depurando os recursos de DSC](debugResource.md)
+### [Escrevendo um recurso de DSC de instância única (melhor prática)](singleInstance.md)
 ### [Lista de verificação da criação de recursos](resourceAuthoringChecklist.md)
 
 # [Configurando o Gerenciador de Configurações Local (LCM)](metaConfig.md)
@@ -33,6 +35,7 @@
 
 # O modelo de pull de DSC
 ## [Configurando um servidor de pull da Web](pullServer.md)
+## [Configurando um servidor de pull de SMB para DSC](pullServerSMB.md)
 ## [Configurando um cliente de pull](pullClient.md)
 ### [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
 ### [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md)
@@ -53,4 +56,8 @@
 ### [Recurso nxService](lnxServiceResource.md)
 ### [Recurso nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md)
 ### [Recurso nxUser](lnxUserResource.md)
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Apr16_HO1-->
+
+
