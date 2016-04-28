@@ -73,8 +73,20 @@ Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção.
 ## Depurando o script de recurso
 
 Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas de saída da saída `Start-DscConifiguration` como comandos, substituindo `<credentials>` por
-credenciais de usuário válidas. Esta é a saída resultante.
+credenciais de usuário válidas. Agora você verá um prompt semelhante a:
+
+```powershell
+[TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
+```
+
+O script de recurso será aberto no painel de script e o depurador será interrompido na primeira linha da função **Test-TargetResource** (o método **Test()** de um recurso baseado em classe).
+Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Para obter informações sobre a depuração com o ISE do PowerShell,
+veja [Como depurar scripts no ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/dd819480.aspx). Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
+
+## Consulte Também
+- [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
+- [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
+
+<!--HONumber=Mar16_HO2-->
 
 
-
-<!--HONumber=Feb16_HO4-->

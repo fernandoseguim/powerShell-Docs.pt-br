@@ -1,5 +1,5 @@
 # Lista de verificação da criação de recursos
-
+Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso DSC
 ## O módulo de recurso contém os arquivos .psd1 e schema.mof de cada um dos recursos 
 A primeira coisa que você deve fazer é verificar se o recurso tem a estrutura correta e se ele contém todos os arquivos necessários. Cada módulo de recurso deve conter um arquivo .psd1 e cada recurso de não composição deve ter o arquivo schema.mof. Recursos que não contêm o esquema não serão listados por **Get-DscResource** e os usuários não poderão usar o IntelliSense ao escrever código nesses módulos no ISE. 
 A estrutura de diretórios de exemplo para o recurso xRemoteFile, que faz parte do módulo de recurso xPSDesiredStateConfiguration, poderia ter a seguinte aparência:
@@ -92,7 +92,7 @@ File file {
 } 
 ```
 Depois de aplicá-la pela primeira vez, o arquivo test.txt deve aparecer na pasta C:\test. No entanto, execuções posteriores da mesma configuração não devem alterar o estado do computador (por exemplo, nenhuma cópia do arquivo test.txt deve ser criada).
-Para garantir que nosso recurso é idempotente, podemos chamar repetidamente **Set-TargetResource** ao testar o recurso diretamente ou chamar **Start-DscConfiguration** várias vezes ao realizar testes fim a fim. O resultado deve ser o mesmo após cada execução. 
+Para garantir que nosso recurso é idempotente, podemos chamar repetidamente **Set-TargetResource** ao testar o recurso diretamente ou chamar **Start-DscConfiguration** várias vezes ao realizar testes de ponta a ponta. O resultado deve ser o mesmo após cada execução. 
 
 
 ## O cenário de modificação de usuário foi testado ##
@@ -118,10 +118,10 @@ Certifique-se de testar as funções **Get/Set/Test-TargetResource** implementad
 
 ## O recurso foi verificado de ponta a ponta usando **Start-DscConfiguration** ##
 
-É importante testar as funções **Get/Set/Test-TargetResource** chamando-as diretamente; no entanto, nem todos os problemas serão descobertos dessa maneira. Você deve concentrar uma parte significativa do teste no uso de **Start-DscConfiguration** ou no servidor de recepção. Na verdade, essa é a forma como os usuários usarão o recurso; portanto, não subestime a importância desse tipo de testes. 
+É importante testar as funções **Get/Set/Test-TargetResource** chamando-as diretamente; no entanto, nem todos os problemas serão descobertos dessa maneira. Você deve concentrar uma parte significativa do teste no uso de **Start-DscConfiguration** ou no servidor de pull. Na verdade, essa é a forma como os usuários usarão o recurso; portanto, não subestime a importância desse tipo de testes. 
 Possíveis tipos de problemas:
 -   A Credencial/Sessão podem se comportar de maneira diferente, porque o agente do DSC é executado como um serviço.  Certifique-se de testar quaisquer recursos aqui de ponta a ponta.
--   Faz sentido verificar as mensagens de erro exibidas pelo recurso. Por exemplo, os erros gerados por **Start-DscConfiguration** podem ser diferentes daqueles exibidos com a chamada da função **Set-TargetResource** diretamente.
+-   Faz sentido verificar as mensagens de erro exibidas pelo recurso. Por exemplo, os erros gerados por **Start-DscConfiguration** podem ser diferentes daqueles exibidos ao chamar diretamente a função **Set-TargetResource**.
 
 ## O recurso se comporta corretamente em todas as plataformas do DSC com suporte (caso contrário, retorna um erro específico) ##
 O recurso deve funcionar em todas as plataformas do DSC com suporte (Windows Server 2008 R2 e mais recente). Certifique-se de instalar o Windows Management Framework (WMF) mais recente em seu sistema operacional para obter a versão mais recente do DSC. Se, por design, o recurso não funcionar em algumas dessas plataformas, uma mensagem de erro específica deverá ser retornada. Além disso, certifique-se de que o recurso verifica se os cmdlets que estão sendo chamados estão presentes em um computador específico. O Windows Server 2012 adicionou um grande número de novos cmdlets que não estão disponíveis no Windows Server 2008R2, mesmo com o WMF instalado. 
@@ -256,7 +256,7 @@ Para xRemoteFile, ResourceTests.ps1 poderá ser bem simples, da seguinte forma:
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof 
 ```
-**Prática recomendada: a pasta de recurso contém um script do designer de recursos para a geração de esquema**
+**Melhor prática: a pasta do recurso contém um script do designer de recursos para a geração de esquema**
 Cada recurso deve conter um script do designer de recursos que gera um esquema mof do recurso. Este arquivo deve ser colocado em <ResourceName>\ResourceDesignerScripts e nomeado Generate<ResourceName>Schema.ps1
 Para o recurso xRemoteFile, esse arquivo será chamado GenerateXRemoteFileSchema.ps1 e conterá:
 ```powershell 
@@ -315,4 +315,8 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 
 Isso conclui nossa lista de verificação. Tenha em mente de que esta lista não é completa, mas abrange muitos problemas importantes enfrentados durante a criação, o desenvolvimento e teste dos recursos DSC. Ter uma lista de verificação ajuda a garantir que não esquecemos nenhum desses aspectos. De fato, nós mesmos usamos uma na Microsoft ao desenvolver recursos DSC. 
 Se você desenvolveu diretrizes e práticas recomendadas que você usa para escrever e testar recursos DSC, compartilhe-as!
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Mar16_HO2-->
+
+

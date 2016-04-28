@@ -50,14 +50,14 @@ Além de especificar servidores de pull e configurações parciais, todas as pro
 |----------- |------- |--------------- | 
 | ConfigurationModeFrequencyMins| UInt32| A frequência, em minutos, em que a configuração atual é verificada e aplicada. Essa propriedade será ignorada se a propriedade ConfigurationMode estiver definida como ApplyOnly. O valor padrão é 15. __Observação__: o valor dessa propriedade deve ser um múltiplo do valor da propriedade __RefreshFrequencyMins__ ou o valor da propriedade __RefreshFrequencyMins__ deve ser um múltiplo do valor dessa propriedade.| 
 | RebootNodeIfNeeded| bool| Defina como __$true__ para reinicializar automaticamente o nó após uma configuração que requer que a reinicialização seja aplicada. Caso contrário, você precisará reinicializar manualmente o nó para qualquer configuração que exigir. O valor padrão é __$false__.| 
-| ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Pode usar os seguintes valores: __"ApplyOnly"__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando for efetuado o pull de uma nova configuração de um servidor. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. __"ApplyAndMonitor"__: e o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs __"ApplyAndAutoCorrect"__: a DSC aplicará as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.| 
-| ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são os seguintes: __"ContinueConfiguration"__: continuar aplicando a configuração atual.__" StopConfiguration"__: interromper a configuração atual.| 
-| RefreshMode| cadeia de caracteres| Especifica como o LCM obtém as configurações. Os valores possíveis são os seguintes: __"Disabled"__: as configurações DSC estão desabilitadas para este nó. __"Push"__: as configurações são iniciadas chamando o cmdlet Start-DscConfiguration. A configuração é aplicada imediatamente ao nó. Este é o valor padrão. __Pull:__ o nó está configurado para verificar regularmente as configurações de um servidor de pull. Se essa propriedade estiver definida como Pull, você deverá especificar um servidor de pull em um bloco __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__. Para obter mais informações sobre servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).| 
-| CertificateID| cadeia de caracteres| Um GUID que especifica um certificado usado para proteger credenciais para acessar a configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)?| 
+| ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Pode usar os seguintes valores: __"ApplyOnly"__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando o pull de uma nova configuração for efetuado de um servidor. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. __"ApplyAndMonitor"__: este é o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs __"ApplyAndAutoCorrect"__: a DSC aplicará as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.| 
+| ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são os seguintes: __"ContinueConfiguration"__: continuar aplicando a configuração atual.__"StopConfiguration"__: interromper a configuração atual.| 
+| RefreshMode| cadeia de caracteres| Especifica como o LCM obtém as configurações. Os valores possíveis são os seguintes: __"Disabled"__: as configurações DSC estão desabilitadas para este nó. __"Push"__: as configurações são iniciadas chamando o cmdlet Start-DscConfiguration. A configuração é aplicada imediatamente ao nó. Este é o valor padrão. __Pull__: o nó está configurado para verificar regularmente as configurações de um servidor de pull. Se essa propriedade estiver definida como Pull, você deverá especificar um servidor de pull em um bloco __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__. Para obter mais informações sobre servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).| 
+| CertificateID| cadeia de caracteres| Um GUID que especifica um certificado usado para proteger credenciais para acessar a configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
 | ConfigurationID| cadeia de caracteres| Um GUID que identifica o arquivo de configuração que deve ser obtido de um servidor de pull no modo de pull. O nó efetuará o pull das configurações no servidor de pull se o nome do MOF de configuração for ConfigurationID.mof. __Observação:__ se você definir essa propriedade, registrar o nó com um servidor de pull usando __RegistryKeys__ não funcionará. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).| 
 | RefreshFrequencyMins| Uint32| O intervalo de tempo, em minutos, em que o LCM verifica um servidor de pull para obter configurações atualizadas. Esse valor será ignorado se o LCM não estiver configurado no modo de pull. O valor padrão é 30. __Observação:__ o valor dessa propriedade deve ser um múltiplo do valor da propriedade __ConfigurationModeFrequencyMins__ ou o valor da propriedade __ConfigurationModeFrequencyMins__ deve ser um múltiplo do valor dessa propriedade.| 
-| AllowModlueOverwrite| bool| __$TRUE__ se as novas configurações baixadas do servidor de configuração tiverem permissão para substituir as antigas no nó de destino. Caso contrário, $FALSE.| 
-| DebugMode| cadeia de caracteres| Os valores possíveis são __None(Default)__, __ForceModuleImport__ e __All__. <ul><li>Defina como __None__ para usar os recursos armazenados em cache. Este é o padrão e deve ser usado em cenários de produção.</li><li>Definir como __ForceModuleImport__ faz com que o LCM recarregue todos os módulos de recurso de DSC, mesmo se tiverem sido carregados e armazenados em cache anteriormente. Isso afeta o desempenho das operações de DSC, já que cada módulo é recarregado no momento do uso. Normalmente, você usaria esse valor durante a depuração de um recurso</li><li>Nesta versão, __All__ é igual a __ForceModuleImport__</li></ul> |
+| AllowModuleOverwrite| bool| __$TRUE__ se as novas configurações baixadas do servidor de configuração tiverem permissão para substituir as antigas no nó de destino. Caso contrário, $FALSE.| 
+| DebugMode| cadeia de caracteres| Os valores possíveis são __None(Default)__, __ForceModuleImport__ e __All__. <ul><li>Defina como __None__ para usar os recursos armazenados em cache. Este é o padrão e deve ser usada em cenários de produção.</li><li>Definir como __ForceModuleImport__ fará com que o LCM recarregue todos os módulos de recursos DSC, mesmo se tiverem sido carregados e armazenados em cache anteriormente. Isso afeta o desempenho das operações de DSC, já que cada módulo é recarregado no momento do uso. Normalmente, você usaria esse valor durante a depuração de um recurso</li><li>Nesta versão, __All__ é o mesmo que __ForceModuleImport__</li></ul> |
 | ConfigurationDownloadManagers| CimInstance[]| Obsoleto. Use os blocos __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ para definir servidores de pull de configuração.| 
 | ResourceModuleManagers| CimInstance[]| Obsoleto. Use os blocos __ResourceRepositoryWeb__ e __ResourceRepositoryShare__ para definir servidores de pull de recurso.| 
 | ReportManagers| CimInstance[]| Obsoleto. Use os blocos __ReportServerWeb__ para definir servidores de relatório.| 
@@ -104,7 +104,7 @@ Para definir um servidor de recurso baseado na Web, crie um bloco **ResourceRepo
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o servidor de pull. Para obter mais informações, consulte Como registrar um nó com um servidor de pull de DSC.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
  
-Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepositoryShare**. O **ResourceRepositoryShare** define as propriedades a seguir.
+Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepositoryShare**. **ResourceRepositoryShare** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---|
@@ -113,7 +113,7 @@ Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepo
 
 ## Blocos do servidor de relatório
 
-Um servidor de relatório deve ser um serviço Web OData. Para definir um servidor de relatório, crie um bloco **ReportServerWeb**. O **ReportServerWeb** define as propriedades a seguir.
+Um servidor de relatório deve ser um serviço Web OData. Para definir um servidor de relatório, crie um bloco **ReportServerWeb**. **ReportServerWeb** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---| 
@@ -124,7 +124,7 @@ Um servidor de relatório deve ser um serviço Web OData. Para definir um servid
 
 ## Configurações parciais
 
-Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**. Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](partialConfigs.md). O **PartialConfiguration** define as propriedades a seguir.
+Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**. Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](partialConfigs.md). **PartialConfiguration** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---| 
@@ -133,7 +133,7 @@ Para definir uma configuração parcial, você cria um bloco **PartialConfigurat
 |Descrição|cadeia de caracteres|Texto usado para descrever a configuração parcial.|
 |ExclusiveResources|string[]|Uma matriz de recursos exclusivos para essa configuração parcial.|
 |RefreshMode|cadeia de caracteres|Especifica como a DSC obtém essa configuração parcial. Os valores possíveis são os seguintes: **Disabled**: essa configuração parcial está desabilitada. **Push**: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](https://technet.microsoft.com/en-us/library/mt517875.aspx). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um servidor, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Este é o valor padrão. **Pull**: o nó é configurado para verificar regularmente a configuração parcial de um servidor de pull. Se essa propriedade for definida como "Pull", você deverá especificar um servidor de pull definindo a propriedade **ConfigurationSource**. Para obter mais informações sobre servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).|
-|ResourceModlueSource|string[]|Uma matriz de nomes de servidores de recurso por meio dos quais é possível baixar os recursos necessários para essa configuração parcial. Esses nomes devem se referir a servidores de recurso definidos previamente nos blocos **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
+|ResourceModuleSource|string[]|Uma matriz de nomes de servidores de recurso por meio dos quais é possível baixar os recursos necessários para essa configuração parcial. Esses nomes devem se referir a servidores de recurso definidos previamente nos blocos **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
 
 ## Consulte Também 
 
@@ -145,4 +145,8 @@ Introdução à Configuração de Estado Desejado do Windows PowerShell
 ### Outros recursos
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
 [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md) 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO4-->
+
+

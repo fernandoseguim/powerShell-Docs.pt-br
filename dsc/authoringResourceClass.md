@@ -4,7 +4,7 @@
 
 Com a introdução de classes do PowerShell no Windows PowerShell 5.0, já é possível definir um recurso de DSC criando uma classe. A classe define o esquema e a implementação do recurso; portanto, não há necessidade de criar um arquivo MOF separado. A estrutura de pastas para um recurso baseado em classe também é mais simples, pois uma pasta **DSCResources** não é necessária.
 
-Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos **Get ()**, **Set()** e **Test ()** (equivalente às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script.
+Em um recurso de DSC baseado em classes, o esquema é definido como propriedades da classe que pode ser modificado com atributos para especificar o tipo de propriedade... O recurso é implementado pelos métodos **Get ()**, **Set()** e **Test ()** (equivalentes às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script).
 
 Neste tópico, criaremos um recurso simples chamado **FileResource**, que gerencia um arquivo em um caminho especificado.
 
@@ -20,25 +20,6 @@ $env: psmodulepath (folder)
         |- MyDscResource.psm1 
            MyDscResource.psd1 
 ```
-
-### Módulos aninhados
-
-Como alternativa, é possível dividir recursos em vários arquivos `.psm1` e incluí-los como módulos aninhados.
-É razoável quando se tem muitos recursos e colocá-los em um arquivo dificultaria o gerenciamento.
-
-```
-$env: psmodulepath (folder)
-    |- MyDscResource (folder)
-        |- MyDscResourceA.psm1
-           MyDscResourceB.psm1 
-           MyDscResource.psd1 
-```
-
-Você pode colocar uma classe em cada arquivo ou várias delas. 
-Pode ser útil agrupar recursos por uma subárea dentro de um módulo aninhado.
-Do ponto de vista do usuário, não há nenhuma diferença no uso.
-Todos os recursos serão exibidos no módulo `MyDscResource`.
-Pense nesses módulos aninhados como detalhes de implementação e use-os para sua conveniência.
 
 ## Criar a classe
 
@@ -75,7 +56,7 @@ Observe que as propriedades são modificadas por atributos. O significado dos at
 - **DscProperty(NotConfigurable)**: a propriedade é somente leitura. As propriedades marcadas com esse atributo não podem ser definidas por uma configuração, mas são preenchidas pelo método **Get ()** quando presentes.
 - **DscProperty()**: a propriedade é configurável, mas não é obrigatória.
 
-As propriedades **$Path** e **$SourcePath** são cadeias de caracteres. O **$CreationTime** é uma propriedade [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx). A propriedade **$Ensure** é um tipo de enumeração definido da seguinte maneira.
+As propriedades **$Path** e **$SourcePath** são ambas cadeias de caracteres. O **$CreationTime** é uma propriedade [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx). A propriedade **$Ensure** é um tipo de enumeração definido da seguinte maneira.
 
 ```powershell
 enum Ensure 
@@ -423,7 +404,7 @@ class FileResource
 
 ## Criar um manifesto
 
-Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você precisa incluir uma declaração **DscResourcesToExport** no arquivo de manifesto que instrui o módulo para exportar recursos. 
+Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você precisa incluir uma declaração **DscResourcesToExport** no arquivo de manifesto que instrui o módulo para exportar recursos. Nosso manifesto tem essa aparência:
 
 ```powershell
 @{
@@ -431,45 +412,7 @@ Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você
 # Script module or binary module file associated with this manifest.
 RootModule = 'MyDscResource.psm1'
 
-DscResourcesToExport = @('FileResource')
-
-# Version number of this module.
-ModuleVersion = '1.0'
-
-# ID used to uniquely identify this module
-GUID = '81624038-5e71-40f8-8905-b1a87afe22d7'
-
-# Author of this module
-Author = 'Microsoft Corporation'
-
-# Company or vendor of this module
-CompanyName = 'Microsoft Corporation'
-
-# Copyright statement for this module
-Copyright = '(c) 2014 Microsoft. All rights reserved.'
-
-# Description of the functionality provided by this module
-# Description = ''
-
-# Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '5.0'
-
-# Name of the Windows PowerShell host required by this module
-# PowerShellHostName = ''
-} 
-```
-
-Se você estiver usando **Módulos aninhados** para dividir recursos em alguns arquivos, você deverá colocar a lista de módulos aninhados na chave `NestedModules`
-
-```powershell
-@{
-
-# Don't specify RootModule
-
-# Script module or binary module file associated with this manifest.
-NestedModules = @('MyDscResourceA.psm1', 'MyDscResourceB.psm1')
-
-DscResourcesToExport = @('MyDscResourceA', 'MyDscResourceB')
+DscResourcesToExport = 'FileResource'
 
 # Version number of this module.
 ModuleVersion = '1.0'
@@ -519,4 +462,8 @@ Start-DscConfiguration -Wait -Force Test
 ## Consulte Também
 ### Conceitos
 [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Mar16_HO4-->
+
+

@@ -12,7 +12,7 @@ Há suporte para as seguintes versões de sistema operacional do Linux para DSC 
 - SUSE Linux Enterprise Server 10, 11 e 12 (x86/x64)
 - Ubuntu Server 12.04 LTS e 14.04 LTS (x86/x64)
 
-A tabela a seguir descreve as dependências necessárias de pacote para DSC para Linux.
+A tabela a seguir descreve as dependências de pacote necessárias para a DSC para Linux.
 
 |  Pacote necessário |  Descrição |  Versão mínima | 
 |---|---|---|
@@ -25,11 +25,11 @@ A tabela a seguir descreve as dependências necessárias de pacote para DSC para
 
 ## Instalando a DSC para Linux
 
-É necessário instalar a [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/) antes de instalar a DSC para Linux.
+É necessário instalar a [OMI (Infraestrutura de Gerenciamento Aberta)](https://collaboration.opengroup.org/omi/) antes de instalar a DSC para Linux.
 
 ### Instalando a OMI
 
-A Configuração de Estado Desejado para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/).
+A Configuração de Estado Desejado para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1. A OMI pode ser baixada do The Open Group: [OMI (Infraestrutura de Gerenciamento Aberta)](https://collaboration.opengroup.org/omi/).
 
 Para instalar a OMI, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -41,9 +41,11 @@ Execute o seguinte comando para instalar a OMI em um sistema CentOS 7 x64.
 
 ### Instalando a DSC
 
+A DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
+
 Para instalar a DSC, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
-> **Observação**: para determinar a versão instalada do OpenSSL, execute a versão do comando openssl.
+> **Observação**: para determinar a versão do OpenSSL instalada, execute o comando openssl version.
  
 Execute o seguinte comando para instalar a DSC em um sistema CentOS 7 x64.
 
@@ -92,7 +94,7 @@ ExampleConfiguration -OutputPath:"C:\temp"
 
 ### Envie a configuração por push para o computador Linux
 
-Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379). aspx ou [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) é usado para criar uma CIMSession para o computador Linux.
+Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx ou [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) é usado para criar uma CIMSession para o computador Linux.
 
 O código a seguir mostra como criar uma CIMSession para DSC para Linux.
 
@@ -120,22 +122,22 @@ Execute o seguinte comando para enviar a configuração DSC por push para o nó 
 
 ### Distribuir a configuração com um servidor de pull
 
-As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter orientações sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
+As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter diretrizes sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
 
 ### Trabalhando com configurações localmente
 
 A DSC para Linux inclui scripts para trabalhar com a configuração no computador Linux local. Esses scripts estão localizados em `/opt/microsoft/dsc/Scripts` e incluem o seguinte:
-* GetConfiguration.py
+* GetDscConfiguration.py
 
  Gera a configuração atual aplicada ao computador. Semelhante ao cmdlet Get-DscConfiguration do Windows PowerShell.
 
-`# sudo ./GetConfiguration.py`
+`# sudo ./GetDscConfiguration.py`
 
-* GetMetaConfiguration.py
+* GetDscLocalConfigurationManager.py
 
  Gera a metaconfiguração atual aplicada ao computador. Semelhante ao cmdlet [Get-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
-`# sudo ./GetMetaConfiguration.py`
+`# sudo ./GetDscLocalConfigurationManager.py`
 
 * InstallModule.py
 
@@ -149,17 +151,17 @@ A DSC para Linux inclui scripts para trabalhar com a configuração no computado
 
 `# sudo ./RemoveModule.py cnx_Resource`
 
-* SendConfigurationApply.py
+* StartDscLocalConfigurationManager.py 
 
  Aplica um arquivo MOF de configuração ao computador. Semelhante ao cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Exige o caminho até o MOF de configuração para aplicar.
 
-`# sudo ./RemoveModule.py cnx_Resource`
+`# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
 
-* SendMetaConfiguration.py
+* SetDscLocalConfigurationManager.py
 
  Aplica um arquivo MOF de metaconfiguração ao computador. Semelhante ao cmdlet [Set-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx). Exige o caminho até o MOF de metaconfiguração para aplicar.
 
-`# sudo ./SendMetaConfiguration.py –configurationmof /tmp/localhost.meta.mof`
+`# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
 ## Arquivos de Log da Configuração de Estado Desejado do PowerShell para Linux
 
@@ -168,4 +170,9 @@ Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 |Arquivo de log|Directory|Descrição|
 |---|---|---|
 |omiserver.log|/opt/omi/var/log/|Mensagens relacionadas à operação do servidor CIM da OMI.|
-|dsc.log|/opt/omi/var/log/|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|<!--HONumber=Feb16_HO4-->
+|dsc.log|/opt/omi/var/log/|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|
+
+
+<!--HONumber=Mar16_HO2-->
+
+
