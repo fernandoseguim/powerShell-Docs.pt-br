@@ -4,18 +4,18 @@
 
 Este tópico descreve métodos para fazer seus scripts de Configuração de Estado Desejado (DSC) serem executados sem erros. Usando logs de forma eficiente para rastrear erros e entender como reciclar o cache para ver os resultados imediatos das alterações de recurso, você poderá solucionar problemas de DSC com mais eficiência. Essas técnicas são discutidas em duas seções:
 
-* Meu script não funciona: **Usando logs de DSC para diagnosticar erros de script**
-* Meus recursos não são atualizados: **como redefinir o cache**
+* Meu script não funciona: Usando logs de DSC para diagnosticar erros de script
+* Meus recursos não são atualizados: Como redefinir o cache
 
 ## Meu script não funciona: Usando logs de DSC para diagnosticar erros de script
 
-Como todos os softwares do Windows, a DSC registra erros e eventos em [logs](https://msdn.microsoft.com/library/windows/desktop/aa363632.aspx) que podem ser exibidos no [Visualizador de Eventos](http://windows.microsoft.com/windows/what-information-event-logs-event-viewer). Um exame desses logs pode ajudá-lo a entender por que uma determinada operação falhou e como evitar falhas no futuro. Escrever scripts de configuração pode ser complicado; portanto, para facilitar o rastreamento de erros durante a criação, use o recurso de Log de DSC para acompanhar o progresso da sua configuração no log de eventos Analítico de DSC.
+Como todos os softwares do Windows, a DSC registra erros e eventos em logs que podem ser exibidos no Visualizador de Eventos. Um exame desses logs pode ajudá-lo a entender por que uma determinada operação falhou e como evitar falhas no futuro. Escrever scripts de configuração pode ser complicado; portanto, para facilitar o rastreamento de erros durante a criação, use o recurso de Log de DSC para acompanhar o progresso da sua configuração no log de eventos Analítico de DSC.
 
 ## Onde estão os logs de eventos de DSC?
 
-No Visualizador de Eventos, os eventos de DSC estão em: **Applications and Services Logs/Microsoft/Windows/Desired State Configuration**
+No Visualizador de Eventos, os eventos de DSC estão em: Applications and Services Logs/Microsoft/Windows/Desired State Configuration
 
-O cmdlet do PowerShell correspondente, [Get-WinEvent](https://technet.microsoft.com/library/hh849682.aspx), também pode ser executado para exibir os logs de eventos:
+O cmdlet do PowerShell correspondente, Get-WinEvent, também pode ser executado para exibir os logs de eventos:
 
 ```
 PS C:\> Get-WinEvent -LogName "Microsoft-Windows-Dsc/Operational"
@@ -25,7 +25,7 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} : 
 ```
 
-Como mostrado acima, o nome do log primário da DSC é **Microsoft->Windows->DSC** (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC escreve principalmente em três tipos de logs: [logs Operacional, Analítico e de Depuração](https://technet.microsoft.com/library/cc722404.aspx). Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos. Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão **Iniciar**, clique em **Painel de Controle**, em **Ferramentas Administrativas** e, em seguida, clique em **Visualizador de Eventos**. No menu **Exibir** no Visualizador de Eventos, clique em **Mostrar Logs Analítico e de Depuração**. O nome do log para o canal analítico **Microsoft-Windows-Dsc/Analytic**; para o canal de depuração é **Microsoft-Windows-Dsc/Debug**. Também é possível usar o utilitário [wevtutil](https://technet.microsoft.com/library/cc732848.aspx) para habilitar os logs, conforme mostrado no exemplo a seguir.
+Como mostrado acima, o nome do log primário da DSC é Microsoft->Windows->DSC (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC escreve principalmente em três tipos de logs: logs Operacional, Analítico e de Depuração. Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos. Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão Iniciar, clique em Painel de Controle, em Ferramentas Administrativas e, em seguida, clique em Visualizador de Eventos. No menu Exibir do Visualizador de Eventos, clique em Mostrar Logs Analíticos e de Depuração. O nome do log para o canal analítico é Microsoft-Windows-Dsc/Analytic; para o canal de depuração é Microsoft-Windows-Dsc/Debug. Também é possível usar o utilitário wevtutil para habilitar os logs, conforme mostrado no exemplo a seguir.
 
 ```powershell
 wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
@@ -45,7 +45,7 @@ Consistency engine was run successfully.
 
 Os eventos de DSC são registrados em uma estrutura específica que permite que o usuário agregue eventos por meio de um trabalho de DSC. A estrutura é a seguinte:
 
-**ID do Trabalho: <Guid>**
+ID do Trabalho: <Guid>
 **<Event Message>**
 
 ## Coletando eventos de uma operação única de DSC
@@ -111,11 +111,11 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 3:47:29 PM          4182 Information      Job {1A776B6A-5BAC-11E3-BF41-00155D553612} : ...       
 ```
 
-Você pode extrair os dados na variável `$SeparateDscOperations` usando [Where-Object](https://technet.microsoft.com/library/ee177028.aspx). Seguem cinco cenários em que talvez você queira extrair dados para solucionar problemas de DSC:
+Você pode extrair os dados na variável `$SeparateDscOperations` usando Where-Object. Seguem cinco cenários em que talvez você queira extrair dados para solucionar problemas de DSC:
 
 ### 1: Falhas em operações
 
-Todos os eventos têm [níveis de gravidade](https://msdn.microsoft.com/library/dd996917(v=vs.85)). Essas informações podem ser usadas para identificar os eventos de erro:
+Todos os eventos têm níveis de gravidade. Essas informações podem ser usadas para identificar os eventos de erro:
 
 ```
 PS C:\> $SeparateDscOperations | Where-Object {$_.Group.LevelDisplayName -contains "Error"}
@@ -192,7 +192,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 ## Usando xDscDiagnostics para analisar logs de DSC
 
-**xDscDiagnostics** é um módulo do PowerShell que consiste em duas funções simples que podem ajudar a analisar falhas de DSC em seu computador: `Get-xDscOperation` e `Trace-xDscOperation`. Essas funções podem ajudá-lo a identificar todos os eventos locais de operações anteriores de DSC ou eventos de DSC em computadores remotos (com credenciais válidas). Aqui, o termo operação de DSC é usado para definir uma única execução de DSC desde o início até o fim. Por exemplo, `Test-DscConfiguration` seria uma operação de DSC separada. Da mesma forma, cada outro cmdlet na DSC (como `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) pode ser identificado como operações de DSC separadas. As duas funções são explicadas no módulo [xDscDiagnostics](https://powershellgallery.com/packages/xDscDiagnostics) do PowerShell (Kit de Recursos de DSC) e em mais detalhes abaixo. A ajuda está disponível executando `Get-Help <cmdlet name>`.
+xDscDiagnostics é um módulo do PowerShell que consiste em duas funções simples que podem ajudar a analisar falhas de DSC em seu computador: `Get-xDscOperation` e `Trace-xDscOperation`. Essas funções podem ajudá-lo a identificar todos os eventos locais de operações anteriores de DSC ou eventos de DSC em computadores remotos (com credenciais válidas). Aqui, o termo operação de DSC é usado para definir uma única execução de DSC desde o início até o fim. Por exemplo, `Test-DscConfiguration` seria uma operação de DSC separada. Da mesma forma, cada outro cmdlet na DSC (como `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) pode ser identificado como operações de DSC separadas. As duas funções são explicadas no módulo xDscDiagnostics do PowerShell (Kit de Recursos de DSC) e em mais detalhes abaixo. A ajuda está disponível executando `Get-Help <cmdlet name>`.
 
 ## Get-xDscOperation
 
@@ -202,22 +202,22 @@ TODO: Substituir esta imagem que mostra a saída de Get-xDscOperation
 
 ### Parâmetros
 
-* **Newest**: aceita um valor inteiro para indicar o número de operações que devem ser exibidas. Por padrão, gera as 10 operações mais recentes. Por exemplo,
+* Newest: aceita um valor inteiro para indicar o número de operações que devem ser exibidas. Por padrão, gera as 10 operações mais recentes. Por exemplo,
   TODO: Mostrar Get-xDscOperation -Newest 5
-* **ComputerName**: parâmetro que aceita uma matriz de cadeias de caracteres, cada uma contendo o nome de um computador do qual você deseja coletar dados de log de eventos de DSC. Por padrão, ele coleta dados do computador local. Para habilitar esse recurso, você deve executar o seguinte comando em computadores remotos, no modo elevado, para permitir a coleta de eventos
+* ComputerName: parâmetro que aceita uma matriz de cadeias de caracteres, cada uma contendo o nome de um computador do qual você deseja coletar dados de log de eventos de DSC. Por padrão, ele coleta dados do computador local. Para habilitar esse recurso, você deve executar o seguinte comando em computadores remotos, no modo elevado, para permitir a coleta de eventos
 ```powershell
   New-NetFirewallRule -Name "Service RemoteAdmin" -Action Allow
 ```
-* **Credential**: parâmetro que é do tipo PSCredential, que pode ajudar a acessar os computadores especificados no parâmetro ComputerName.
+* Credential: parâmetro que é do tipo PSCredential, que pode ajudar a acessar os computadores especificados no parâmetro ComputerName.
 
 ### Objeto gerado
 
-O cmdlet gera uma matriz de objetos do tipo **Microsoft.PowerShell.xDscDiagnostics.GroupedEvents**. Cada objeto nessa matriz se refere a uma operação de DSC diferente. A exibição padrão para este objeto tem as seguintes propriedades
-* **SequenceID**: especifica o número incremental atribuído à operação de DSC com base no tempo. Por exemplo, a última operação executada teria SequenceID como 1, a penúltima operação de DSC teria SequenceID de 2 e assim por diante. Esse número é outro identificador para cada objeto na matriz gerada.
-* **TimeCreated**: um valor DateTime que indica quando a operação de DSC começou.
-* **ComputerName**: o nome do computador em que os resultados estão agregados.
-* **Result**: uma cadeia de caracteres com o valor **Failure** ou **Success** que indica se a operação de DSC sofreu um erro ou não, respectivamente.
-* **AllEvents**: um objeto que representa uma coleção de eventos produzidos pela operação de DSC.
+O cmdlet gera uma matriz de objetos do tipo Microsoft.PowerShell.xDscDiagnostics.GroupedEvents. Cada objeto nessa matriz se refere a uma operação de DSC diferente. A exibição padrão para este objeto tem as seguintes propriedades
+* SequenceID: especifica o número incremental atribuído à operação de DSC com base no tempo. Por exemplo, a última operação executada teria SequenceID como 1, a penúltima operação de DSC teria SequenceID de 2 e assim por diante. Esse número é outro identificador para cada objeto na matriz gerada.
+* TimeCreated: um valor DateTime que indica quando a operação de DSC começou.
+* ComputerName: o nome do computador em que os resultados estão agregados.
+* Result: uma cadeia de caracteres com o valor Failure ou Success que indica se a operação de DSC sofreu um erro ou não, respectivamente.
+* AllEvents: um objeto que representa uma coleção de eventos produzidos pela operação de DSC.
 
 Por exemplo, a saída a seguir mostra os resultados da última operação de vários computadores:
   TODO: Substituir imagem para Get-xDscOperation para exibir logs do computador remoto
@@ -228,12 +228,12 @@ Esse cmdlet gera um objeto que contém uma coleção de eventos, os tipos de eve
 
 ### Parâmetros
 
-* **SequenceID**: esse é o valor inteiro atribuído a qualquer operação, referente a um computador específico. Ao especificar uma ID de sequência de 4, por exemplo, o rastreamento para a operação de DSC que ficou em 4º lugar a partir do último será gerado
+* SequenceID: esse é o valor inteiro atribuído a qualquer operação, referente a um computador específico. Ao especificar uma ID de sequência de 4, por exemplo, o rastreamento para a operação de DSC que ficou em 4º lugar a partir do último será gerado
 
 Trace-xDscOperation com ID de sequência especificada
-* **JobID**: esse é o valor GUID atribuído pelo xDscOperation do LCM para identificar exclusivamente uma operação. Quando um JobID é especificado, o rastreamento da operação de DSC correspondente é a saída.
+* JobID: esse é o valor GUID atribuído pelo xDscOperation do LCM para identificar exclusivamente uma operação. Quando um JobID é especificado, o rastreamento da operação de DSC correspondente é a saída.
   TODO: Substituir a imagem para Trace-xDscOperation usando JobID como parâmetro
-* **ComputerName** e **Credential**: esses parâmetros permitem que o rastreamento seja coletado de computadores remotos:
+* ComputerName e Credential: esses parâmetros permitem que o rastreamento seja coletado de computadores remotos:
 ```powershell
 New-NetFirewallRule -Name "Service RemoteAdmin" -Action Allow
 ```
@@ -244,21 +244,21 @@ Observe que, como `Trace-xDscOperation` agrega eventos dos logs Operacional, Ana
 ### Objeto gerado
 
 O cmdlet gera uma matriz de objetos, cada um do tipo `Microsoft.PowerShell.xDscDiagnostics.TraceOutput`. Cada objeto nessa matriz contém os seguintes campos:
-* **ComputerName**: o nome do computador do qual os logs estão sendo coletados.
-* **EventType**: é um campo do tipo de enumerador que contém informações sobre o tipo de evento. Pode ser um dos seguintes:
-  - *Operational*: o evento é do log operacional.
-  - *Analytic*: do evento é do log analítico.
-  - *Debug*: o evento é do log de depuração.
-  - *Verbose*: saída de eventos como mensagens detalhadas durante a execução. As mensagens detalhadas facilitam a identificação da sequência de eventos que são publicados.
-  - *Error*: eventos de erro. Ao procurar os eventos de erro, em geral é possível encontrar rapidamente o motivo da falha.
-* **TimeCreated**: um valor DateTime que indica quando o evento foi registrado pela DSC.
-* **Message**: a mensagem que foi registrada pela DSC nos logs de eventos.
+* ComputerName: o nome do computador do qual os logs estão sendo coletados.
+* EventType: é um campo do tipo de enumerador que contém informações sobre o tipo de evento. Pode ser um dos seguintes:
+  - Operational: o evento é do log operacional.
+  - Analytic: do evento é do log analítico.
+  - Debug: o evento é do log de depuração.
+  - Verbose: saída de eventos como mensagens detalhadas durante a execução. As mensagens detalhadas facilitam a identificação da sequência de eventos que são publicados.
+  - Error: eventos de erro. Ao procurar os eventos de erro, em geral é possível encontrar rapidamente o motivo da falha.
+* TimeCreated: um valor DateTime que indica quando o evento foi registrado pela DSC.
+* Message: a mensagem que foi registrada pela DSC nos logs de eventos.
 
 A seguir estão campos nesse objeto que podem ser usados para obter mais informações sobre o evento, mas não são exibidos por padrão:
 
-* **JobID**: a ID do trabalho (formato GUID) específica para essa operação de DSC.
-* **SequenceID**: a SequenceID exclusivo para essa operação de DSC nesse computador.
-* **Event**: o evento real registrado pela DSC, do tipo `System.Diagnostics.Eventing.Reader.EventLogRecord`. Também pode ser obtido por execução do cmdlet `Get-WinEvent`. Ele contém mais informações, como a tarefa, a eventID e o nível do evento.
+* JobID: a ID do trabalho (formato GUID) específica para essa operação de DSC.
+* SequenceID: a SequenceID exclusiva para essa operação de DSC nesse computador.
+* Event: o evento real registrado pela DSC, do tipo `System.Diagnostics.Eventing.Reader.EventLogRecord`. Também pode ser obtido por execução do cmdlet `Get-WinEvent`. Ele contém mais informações, como a tarefa, a eventID e o nível do evento.
 
 Como alternativa, você pode reunir informações sobre os eventos salvando a saída de `Trace-xDscOperation` em uma variável. Pode-se usar o comando a seguir para exibir todos os eventos de uma determinada operação de DSC:
 
@@ -279,7 +279,7 @@ Da mesma forma, quando você executa `Start-DscConfiguration`, depois de adicion
 
 Para conseguir reciclar a configuração e limpar o cache sem reinicialização, você deve parar e reiniciar o processo de host. Isso pode ser feito por instância, ou seja, você identifica o processo, interrompe-o e reinicia-o. Ou pode usar `DebugMode`, conforme demonstrado abaixo, para recarregar o recurso de DSC do PowerShell.
 
-Para identificar o processo que está hospedando o mecanismo de DSC e interrompê-lo por instância, é possível listar a ID do processo do WmiPrvSE que está hospedando o mecanismo de DSC. Em seguida, para atualizar o provedor, interrompa o processo WmiPrvSE usando os comandos abaixo; depois, execute **Start-DscConfiguration** novamente.
+Para identificar o processo que está hospedando o mecanismo de DSC e interrompê-lo por instância, é possível listar a ID do processo do WmiPrvSE que está hospedando o mecanismo de DSC. Em seguida, para atualizar o provedor, interrompa o processo WmiPrvSE usando os comandos abaixo; depois, execute Start-DscConfiguration novamente.
 
 ```powershell
 ###
@@ -297,7 +297,7 @@ Get-Process -Id $dscProcessID | Stop-Process
 
 ## Usando o DebugMode
 
-Você pode configurar o Gerenciador de Configurações Local (LCM) de DSC para usar `DebugMode` para sempre limpar o cache quando o processo de host for reiniciado. Quando definido como **TRUE**, faz com que o mecanismo sempre recarregue o recurso de DSC do PowerShell. Depois de escrever seu recurso, você pode defini-lo como **FALSE** e o mecanismo será revertido para o comportamento de armazenamento em cache dos módulos.
+Você pode configurar o Gerenciador de Configurações Local (LCM) de DSC para usar `DebugMode` para sempre limpar o cache quando o processo de host for reiniciado. Quando definido como TRUE, faz com que o mecanismo sempre recarregue o recurso de DSC do PowerShell. Depois de escrever seu recurso, você pode defini-lo como FALSE e o mecanismo será revertido para o comportamento de armazenamento em cache dos módulos.
 
 Segue uma demonstração para mostrar como `DebugMode` pode atualizar o cache automaticamente. Primeiro, vamos examinar a configuração padrão:
 
@@ -321,7 +321,7 @@ RefreshMode                    : PUSH
 PSComputerName                 :  
 ```
 
-Pode-se ver que `DebugMode` foi definido como **FALSE**.
+Pode-se ver que `DebugMode` foi definido como FALSE.
 
 Para configurar a demonstração `DebugMode`, use o seguinte recurso do PowerShell:
 
@@ -372,7 +372,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-Você verá que o conteúdo do arquivo: “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” é **1**.
+Você verá que o conteúdo do arquivo: “$env:SystemDrive\OutputFromTestProviderDebugMode.txt” é 1.
 
 Agora, atualize o código do provedor usando o script a seguir:
 
@@ -409,9 +409,9 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Esse script gera um número aleatório e atualiza o código do provedor correspondentemente. Com `DebugMode` definido como falso, o conteúdo do arquivo “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” nunca é alterado.
+Esse script gera um número aleatório e atualiza o código do provedor correspondentemente. Com `DebugMode` definido como false, o conteúdo do arquivo “$env:SystemDrive\OutputFromTestProviderDebugMode.txt” nunca é alterado.
 
-Agora, defina `DebugMode` como **TRUE** no script de configuração:
+Agora, defina `DebugMode` como TRUE no script de configuração:
 
 ```powershell
 LocalConfigurationManager
