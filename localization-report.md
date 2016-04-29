@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 341
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 30
+[ Handoff Success Files ](#handoff-success-list)| 25
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 78
+[ Archive Success Files ](#archive-success-list)| 83
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 35
 [ In Sync Handback Files ](#insync-handback-success-list)| 186
@@ -18,12 +18,7 @@
 ## <a name='handoff-success-list'></a> Handoff Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md) | HandedOffSuccess | [Details](#f6b6006e9d1ad8aef62523accf73e5f2dba3689816)
- [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md) | HandedOffSuccess | [Details](#156f2a3b3107cfb7501be1a8ddd918f70bcbd25419)
  [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md) | HandedOffSuccess | [Details](#12e17503c55845ecaa154bd4c8c6b108bb3293c966)
- [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md) | HandedOffSuccess | [Details](#deb5fb9243d3b1d61e60991f70479e252b78024347)
- [dsc\msft-dsclocalconfigurationmanager-disabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md) | HandedOffSuccess | [Details](#f343d09519af33d6b913f46d15b464e92601523748)
- [dsc\msft-dsclocalconfigurationmanager-enabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md) | HandedOffSuccess | [Details](#ddc78784632f3453b5f229b4169d9512acb6afdd49)
  [dsc\msft-dsclocalconfigurationmanager-getconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-getconfiguration.md) | HandedOffSuccess | [Details](#ec36bc9e6a824a78701c565c7f7f41f92c074f2d50)
  [dsc\msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md) | HandedOffSuccess | [Details](#cc94a826a3638e2d2335827ebfb8b29ed7323e9b51)
  [dsc\msft-dsclocalconfigurationmanager-getconfigurationstatus.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-getconfigurationstatus.md) | HandedOffSuccess | [Details](#3f339f86399ee71efe0448a2868a90b9f3f6c16252)
@@ -54,6 +49,11 @@
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md) | ArchivedSuccess | [Details](#f6b6006e9d1ad8aef62523accf73e5f2dba3689816)
+ [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md) | ArchivedSuccess | [Details](#156f2a3b3107cfb7501be1a8ddd918f70bcbd25419)
+ [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md) | ArchivedSuccess | [Details](#deb5fb9243d3b1d61e60991f70479e252b78024347)
+ [dsc\msft-dsclocalconfigurationmanager-disabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md) | ArchivedSuccess | [Details](#f343d09519af33d6b913f46d15b464e92601523748)
+ [dsc\msft-dsclocalconfigurationmanager-enabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md) | ArchivedSuccess | [Details](#ddc78784632f3453b5f229b4169d9512acb6afdd49)
  [scripting\Token\ise_1.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_1.md) | ArchivedSuccess | [Details](#f9c29a9e142a47a564dc7b3f87ac1d2eb5f90a2e101)
  [scripting\Token\ise_1_md.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_1_md.md) | ArchivedSuccess | [Details](#2a227b561c7b3f0a0946f2caccd252dfb08bb4ef102)
  [scripting\Token\ise_2.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_2.md) | ArchivedSuccess | [Details](#e17dc2e36469369e5d0ad23c3130075d05e11dc7103)
@@ -531,8 +531,8 @@
 * Handoff File: [builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/b0fbe102236f425da30e137bc09c335d0775beaa/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.pt-br.xlf)
 * Handoff Datetime: 2016-04-10 21:05:07
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\builtInResource.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/f8e7c7f6a7e8ba34ab2b4f2b103777cc43b2ff49/dsc/builtInResource.md)
@@ -570,8 +570,8 @@
 * Handoff File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5db199c939d818805cf2510887c1adcf6f88ebbf/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.pt-br.xlf)
 * Handoff Datetime: 2016-04-11 17:34:54
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8fdcaf2b5347c152aeb43f17d9daaa36eaaea38c/dsc/configurations.md)
@@ -580,13 +580,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f6b6006e9d1ad8aef62523accf73e5f2dba3689816'></a> Source: [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6206ad5c36f0867fd5f5437de83cb5cad881cd7e/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.pt-br.xlf)
 * Handoff Datetime: 2016-04-22 22:43:21
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -616,13 +616,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='156f2a3b3107cfb7501be1a8ddd918f70bcbd25419'></a> Source: [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6206ad5c36f0867fd5f5437de83cb5cad881cd7e/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.pt-br.xlf)
 * Handoff Datetime: 2016-04-22 22:43:21
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -693,8 +693,8 @@
 * Handoff File: [groupResource.d19d416269795c92566b62c36b9782062dcea43e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3e98dd8c1fba37e7547812644e087f1499a74363/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/groupResource.d19d416269795c92566b62c36b9782062dcea43e.pt-br.xlf)
 * Handoff Datetime: 2016-04-15 16:38:37
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [groupResource.d19d416269795c92566b62c36b9782062dcea43e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/groupResource.d19d416269795c92566b62c36b9782062dcea43e.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\groupResource.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0f9507c332b66bd8e62ed1996a53024af1253eb8/dsc/groupResource.md)
@@ -833,8 +833,8 @@
 * Handoff File: [lnxGettingStarted.1601cf6d0eb8b4f7343575c8fbf2106bfaad8b65.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0d8a1d152c2000e5763f5a30812048b752194481/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/lnxGettingStarted.1601cf6d0eb8b4f7343575c8fbf2106bfaad8b65.pt-br.xlf)
 * Handoff Datetime: 2016-04-08 00:38:11
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [lnxGettingStarted.1601cf6d0eb8b4f7343575c8fbf2106bfaad8b65.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/lnxGettingStarted.1601cf6d0eb8b4f7343575c8fbf2106bfaad8b65.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\lnxGettingStarted.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/5ba888c3f018b7ba37f937b6b8942615db01e2c3/dsc/lnxGettingStarted.md)
@@ -975,37 +975,37 @@
 * [Back to Top](#report-top)
 
 ##### <a name='deb5fb9243d3b1d61e60991f70479e252b78024347'></a> Source: [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [msft-dsclocalconfigurationmanager-applyconfiguration.8a8c7cf9f83c8fe20cc7240603987f13bf76ac94.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/39e311ed48c102a8deb523a15348530374f3fd3a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/msft-dsclocalconfigurationmanager-applyconfiguration.8a8c7cf9f83c8fe20cc7240603987f13bf76ac94.pt-br.xlf)
 * Handoff Datetime: 2016-04-12 22:06:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [msft-dsclocalconfigurationmanager-applyconfiguration.8a8c7cf9f83c8fe20cc7240603987f13bf76ac94.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/msft-dsclocalconfigurationmanager-applyconfiguration.8a8c7cf9f83c8fe20cc7240603987f13bf76ac94.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 ##### <a name='f343d09519af33d6b913f46d15b464e92601523748'></a> Source: [dsc\msft-dsclocalconfigurationmanager-disabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [msft-dsclocalconfigurationmanager-disabledebugconfiguration.9c5587dc91662800483c6063f100aa74b2fc1881.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/39e311ed48c102a8deb523a15348530374f3fd3a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/msft-dsclocalconfigurationmanager-disabledebugconfiguration.9c5587dc91662800483c6063f100aa74b2fc1881.pt-br.xlf)
 * Handoff Datetime: 2016-04-12 22:06:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [msft-dsclocalconfigurationmanager-disabledebugconfiguration.9c5587dc91662800483c6063f100aa74b2fc1881.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/msft-dsclocalconfigurationmanager-disabledebugconfiguration.9c5587dc91662800483c6063f100aa74b2fc1881.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 ##### <a name='ddc78784632f3453b5f229b4169d9512acb6afdd49'></a> Source: [dsc\msft-dsclocalconfigurationmanager-enabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [msft-dsclocalconfigurationmanager-enabledebugconfiguration.56f0b880660ab81bf574c91fac5c3489b478d217.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/39e311ed48c102a8deb523a15348530374f3fd3a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/msft-dsclocalconfigurationmanager-enabledebugconfiguration.56f0b880660ab81bf574c91fac5c3489b478d217.pt-br.xlf)
 * Handoff Datetime: 2016-04-12 22:06:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [msft-dsclocalconfigurationmanager-enabledebugconfiguration.56f0b880660ab81bf574c91fac5c3489b478d217.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/db866d263896d43218956c0f44ffe86b070f820b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/msft-dsclocalconfigurationmanager-enabledebugconfiguration.56f0b880660ab81bf574c91fac5c3489b478d217.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:08
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
