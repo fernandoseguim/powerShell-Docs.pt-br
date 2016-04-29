@@ -1,20 +1,21 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/1f1cc50334a2c060bac7ac4a41ff5cb115f5136b/dsc/nanoDsc.md) | HandedOffSuccess | [Details](#ee9548a75d6eef498109c42007ef6c9d91b7c1ba67)
- [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/19872004828cf1f33768e997ace1ea0a1ada9014/dsc/TOC.md) | OutofSyncHandedBackSuccess | [Details](#bbe92fa020f2c0db430d13112d346778e44b590589)
+ [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md) | HandedOffSuccess | [Details](#918f7ebd3f6973cb17db4bdada7babf5dc716c3c15)
+ [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/49416135900c0960b79ccd43f64d38f2d4e0d0aa/dsc/nanoDsc.md) | HandedOffSuccess | [Details](#36eb67cfb8a17de40d1e826807f0386c5eb488f468)
+ [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/TOC.md) | OutofSyncHandedBackSuccess | [Details](#8a1b3001e3db183d6cef1f7f7bdcb9c685268fac90)
 
 ## Item Details
-##### <a name='ee9548a75d6eef498109c42007ef6c9d91b7c1ba67'></a> Source: [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/1f1cc50334a2c060bac7ac4a41ff5cb115f5136b/dsc/nanoDsc.md)
+##### <a name='918f7ebd3f6973cb17db4bdada7babf5dc716c3c15'></a> Source: [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/2e5874c8744fae22fc3359112c528f589dd08139/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf)
-* Handoff Datetime: 2016-04-27 20:41:28
+* Handoff File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
+* Handoff Datetime: 2016-04-29 22:42:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,19 +23,31 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bbe92fa020f2c0db430d13112d346778e44b590589'></a> Source: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/19872004828cf1f33768e997ace1ea0a1ada9014/dsc/TOC.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='36eb67cfb8a17de40d1e826807f0386c5eb488f468'></a> Source: [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/49416135900c0960b79ccd43f64d38f2d4e0d0aa/dsc/nanoDsc.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/2e5874c8744fae22fc3359112c528f589dd08139/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
-* Handoff Datetime: 2016-04-27 20:41:28
+* Handoff File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf)
+* Handoff Datetime: 2016-04-29 22:42:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0f9507c332b66bd8e62ed1996a53024af1253eb8/dsc/TOC.md)
-* Current Handback File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/30edbf8c6707b9a0b7c1612c7c79b7c8b7657018/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
-* Current Handback Datetime: 2016-03-30 16:52:32
+* [Back to Top](#report-top)
+
+##### <a name='8a1b3001e3db183d6cef1f7f7bdcb9c685268fac90'></a> Source: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
+* Handoff Datetime: 2016-04-29 22:42:15
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/cf0f2a87a06a36648da0560246dd9bc5e043d930/dsc/TOC.md)
+* Current Handback File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/800b7387cbc4f2d9e0ac3f890bc8111bb605cadd/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
+* Current Handback Datetime: 2016-04-28 19:44:44
 * [Back to Top](#report-top)
 
 
