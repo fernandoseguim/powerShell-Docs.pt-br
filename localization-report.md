@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 342
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 2
+[ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 34
+[ Archive Success Files ](#archive-success-list)| 36
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 27
 [ In Sync Handback Files ](#insync-handback-success-list)| 267
@@ -16,16 +16,13 @@
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
 ## <a name='handoff-success-list'></a> Handoff Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md) | HandedOffSuccess | [Details](#918f7ebd3f6973cb17db4bdada7babf5dc716c3c15)
- [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/49416135900c0960b79ccd43f64d38f2d4e0d0aa/dsc/nanoDsc.md) | HandedOffSuccess | [Details](#36eb67cfb8a17de40d1e826807f0386c5eb488f468)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md) | ArchivedSuccess | [Details](#918f7ebd3f6973cb17db4bdada7babf5dc716c3c15)
  [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md) | ArchivedSuccess | [Details](#f6b6006e9d1ad8aef62523accf73e5f2dba3689817)
  [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md) | ArchivedSuccess | [Details](#156f2a3b3107cfb7501be1a8ddd918f70bcbd25420)
  [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md) | ArchivedSuccess | [Details](#12e17503c55845ecaa154bd4c8c6b108bb3293c967)
@@ -48,6 +45,7 @@
  [dsc\msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md) | ArchivedSuccess | [Details](#7c7707acdb166718fff7de83539245212d6a8a8264)
  [dsc\msft-dsclocalconfigurationmanager-stopconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-stopconfiguration.md) | ArchivedSuccess | [Details](#28904d9987bfa3fe57dc6a929eb3fd796537210465)
  [dsc\msft-dsclocalconfigurationmanager-testconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-testconfiguration.md) | ArchivedSuccess | [Details](#ffdabc57d75d80ed6a250f53237d2bd5c6bc99fb66)
+ [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/49416135900c0960b79ccd43f64d38f2d4e0d0aa/dsc/nanoDsc.md) | ArchivedSuccess | [Details](#36eb67cfb8a17de40d1e826807f0386c5eb488f468)
  [dsc\sxsResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/sxsResource.md) | ArchivedSuccess | [Details](#a770b81f2fa2457b15e7711b74d0df87637b05e089)
  [dsc\whitepapers.md](https://github.com/PowerShell/powerShell-Docs/blob/29d8a5b89e372e75727430dd09a13d956f6f4f9e/dsc/whitepapers.md) | ArchivedSuccess | [Details](#4105e15b76b182f9c085aef0c380df4982cb72f893)
  [scripting\Topic\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md) | ArchivedSuccess | [Details](#a30fcb49f83cb29ce659afeb59ec8813e86fc829187)
@@ -566,13 +564,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='918f7ebd3f6973cb17db4bdada7babf5dc716c3c15'></a> Source: [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 22:42:15
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1216,13 +1214,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='36eb67cfb8a17de40d1e826807f0386c5eb488f468'></a> Source: [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/49416135900c0960b79ccd43f64d38f2d4e0d0aa/dsc/nanoDsc.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 22:42:15
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1413,8 +1411,8 @@
 * Handoff File: [runAsUser.d2b90b6bc42ef965e454f9c9f5fd19bc7b488b34.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/faf93063844d1e3c941cfed6b913f0b2fc87a3cd/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/runAsUser.d2b90b6bc42ef965e454f9c9f5fd19bc7b488b34.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 23:10:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [runAsUser.d2b90b6bc42ef965e454f9c9f5fd19bc7b488b34.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/runAsUser.d2b90b6bc42ef965e454f9c9f5fd19bc7b488b34.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\runAsUser.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/5ba888c3f018b7ba37f937b6b8942615db01e2c3/dsc/runAsUser.md)
@@ -1443,8 +1441,8 @@
 * Handoff File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/faf93063844d1e3c941cfed6b913f0b2fc87a3cd/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 23:10:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/cf0f2a87a06a36648da0560246dd9bc5e043d930/dsc/secureMOF.md)
@@ -1509,8 +1507,8 @@
 * Handoff File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/faf93063844d1e3c941cfed6b913f0b2fc87a3cd/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 23:10:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/cf0f2a87a06a36648da0560246dd9bc5e043d930/dsc/TOC.md)
@@ -3648,8 +3646,8 @@
 * Handoff File: [class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/115aabe4c0a9297df52e9d6c231d8efc117463b7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 23:39:19
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\class_newtype.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/6910e635551a5a0be1dc1c068b83a1e9b050caff/wmf/class_newtype.md)
@@ -3711,8 +3709,8 @@
 * Handoff File: [dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/115aabe4c0a9297df52e9d6c231d8efc117463b7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.pt-br.xlf)
 * Handoff Datetime: 2016-04-29 23:39:19
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\dsc_classbasedresource.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/6910e635551a5a0be1dc1c068b83a1e9b050caff/wmf/dsc_classbasedresource.md)
