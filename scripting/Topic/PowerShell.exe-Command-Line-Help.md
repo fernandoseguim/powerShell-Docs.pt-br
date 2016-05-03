@@ -72,7 +72,7 @@ Não carrega o perfil do Windows PowerShell.
 Determina como a saída do Windows PowerShell é formatada. Os valores válidos são "Text" (cadeias de caracteres de texto) ou "XML" (formato CLIXML serializado).
 
 ### -PSConsoleFile <FilePath>
-Carrega o arquivo do console do Windows PowerShell especificado. Insira o caminho e o nome do arquivo de console. Para criar um arquivo de console, use o cmdlet [Export-Console](assetId:///4bab1c02-9e61-4aaf-9957-11d1934ef4ef) do Windows PowerShell.
+Carrega o arquivo do console do Windows PowerShell especificado. Insira o caminho e o nome do arquivo de console. Para criar um arquivo de console, use o cmdlet [Export-Console](https://technet.microsoft.com/en-us/library/4bab1c02-9e61-4aaf-9957-11d1934ef4ef) do Windows PowerShell.
 
 ### -Sta
 Inicia o Windows PowerShell usando um single-threaded apartment. No [!INCLUDE[psversion3](../Token/psversion3_md.md)], o STA (Single-Threaded Apartment) é o padrão. No [!INCLUDE[psversion2](../Token/psversion2_md.md)], MTA (Multi-Threaded Apartment) é o padrão.
@@ -82,7 +82,7 @@ Inicia a versão especificada do Windows PowerShell. A versão que você especif
 
 Se [!INCLUDE[psversion3](../Token/psversion3_md.md)] não estiver instalado, o único valor válido será "2.0". Outros valores são ignorados.
 
-Para obter mais informações, consulte "Instalar o Windows PowerShell" na [Introdução ao Fluxo de Trabalho do Windows PowerShell [MSDN ANTIGO]](assetId:///69555d95-b481-43e1-86e7-b46d68b3e2dd).
+Para obter mais informações, consulte "Instalar o Windows PowerShell" na [Introdução ao Fluxo de Trabalho do Windows PowerShell [MSDN ANTIGO]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
 
 ### -WindowStyle <Window style>
 Define o estilo da janela da sessão. Os valores válidos são Normal, Minimized, Maximized e Hidden.
@@ -130,6 +130,6 @@ powershell.exe -encodedCommand $encodedCommand
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

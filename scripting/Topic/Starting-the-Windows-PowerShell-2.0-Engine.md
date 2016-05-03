@@ -31,13 +31,13 @@ Para executar o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)] e
 
 Essa é uma tarefa avançada que normalmente é executada por um administrador do sistema.
 
-O procedimento a seguir usa o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) para criar uma configuração de sessão que usa o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Você também pode usar o parâmetro **PowerShellVersion** do cmdlet [New-PSSessionConfigurationFile](assetId:///5f3e3633-6e90-479c-aea9-ba45a1954866) para criar um arquivo de configuração de sessão para uma sessão que carrega o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], bem como usar o parâmetro **PSVersion** do parâmetro [Set-PSSessionConfiguration](assetId:///b21fbad3-1759-4260-b206-dcb8431cd6ea) para alterar uma configuração de sessão para usar o Mecanismo [!INCLUDE[psversion2](../Token/psversion2_md.md)].
+O procedimento a seguir usa o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) para criar uma configuração de sessão que usa o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Você também pode usar o parâmetro **PowerShellVersion** do cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866) para criar um arquivo de configuração de sessão para uma sessão que carrega o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], bem como usar o parâmetro **PSVersion** do parâmetro [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) para alterar uma configuração de sessão para usar o Mecanismo [!INCLUDE[psversion2](../Token/psversion2_md.md)].
 
-Para obter mais informações sobre os arquivos de configuração de sessão, consulte [about_Session_Configuration_Files](assetId:///c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Para obter mais informações sobre as configurações de sessão, incluindo instalação e segurança, consulte [about_Session_Configurations [v4]](assetId:///a2fbe12a-350c-4d04-be50-24102824e3ab).
+Para obter mais informações sobre os arquivos de configuração de sessão, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Para obter mais informações sobre as configurações de sessão, incluindo instalação e segurança, consulte [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
 #### Para iniciar uma sessão remota do [!INCLUDE[psversion2](../Token/psversion2_md.md)]
 
-1.  Para criar uma configuração de sessão que requer o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], use o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) com um valor de "2.0". Execute este comando no computador no “lado do servidor” ou na extremidade de recebimento de uma conexão.
+1.  Para criar uma configuração de sessão que requer o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], use o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) com um valor de "2.0". Execute este comando no computador no “lado do servidor” ou na extremidade de recebimento de uma conexão.
 
     O comando de exemplo a seguir cria a configuração de sessão PS2 no computador Server01. Para executar esse comando, inicie o [!INCLUDE[psversion4](../Token/psversion4_md.md)] ou [!INCLUDE[psversion3](../Token/psversion3_md.md)] com a opção **Executar como administrador**.
 
@@ -45,7 +45,7 @@ Para obter mais informações sobre os arquivos de configuração de sessão, co
     Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
     ```
 
-2.  Para criar uma sessão no computador Server01 que usa a configuração de sessão PS2, use o parâmetro **ConfigurationName** de cmdlets que criam uma sessão remota, como o cmdlet [New-PSSession](assetId:///76f6628c-054c-4eda-ba7a-a6f28daaa26f).
+2.  Para criar uma sessão no computador Server01 que usa a configuração de sessão PS2, use o parâmetro **ConfigurationName** de cmdlets que criam uma sessão remota, como o cmdlet [New-PSSession](https://technet.microsoft.com/en-us/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f).
 
     Quando uma sessão que usa a configuração de sessão é iniciada, o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)] é carregado automaticamente para a sessão.
 
@@ -56,7 +56,7 @@ Para obter mais informações sobre os arquivos de configuração de sessão, co
     ```
 
 ## Como iniciar um trabalho em segundo plano com o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)]
-Para iniciar um trabalho em segundo plano com o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], use o parâmetro **PSVersion** do cmdlet [Start-Job](assetId:///2bc04935-0deb-4ec0-b856-d7290cca6442).
+Para iniciar um trabalho em segundo plano com o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)], use o parâmetro **PSVersion** do cmdlet [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
 
 O comando a seguir inicia um trabalho em segundo plano com o Mecanismo do [!INCLUDE[psversion2](../Token/psversion2_md.md)]
 
@@ -64,10 +64,10 @@ O comando a seguir inicia um trabalho em segundo plano com o Mecanismo do [!INCL
 Start-Job {Get-Process} -PSVersion 2.0
 ```
 
-Para obter mais informações sobre trabalhos em segundo plano, consulte [about_Jobs [v4]](assetId:///7362512a-8a4e-4575-b2ea-a740e5c4f002).
+Para obter mais informações sobre trabalhos em segundo plano, consulte [about_Jobs [v4]](https://technet.microsoft.com/en-us/library/7362512a-8a4e-4575-b2ea-a740e5c4f002).
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
 ---
 # Como usar perfis no ISE do Windows PowerShell
-Este tópico explica como usar Perfis no [!INCLUDE[ise_1](../Token/ise_1_md.md)]. Recomendamos que antes de executar as tarefas nesta seção, você examine [about_Profiles [v4]](assetId:///e1d9e30a-70cc-4f36-949f-fc7cd96b4054) ou, no Painel de Console, digite "get-help about_profiles" e pressione **ENTER**.
+Este tópico explica como usar Perfis no [!INCLUDE[ise_1](../Token/ise_1_md.md)]. Recomendamos que antes de executar as tarefas nesta seção, você examine [about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054) ou, no Painel de Console, digite "get-help about_profiles" e pressione **ENTER**.
 
 Um perfil é um script do [!INCLUDE[ise_2](../Token/ise_2_md.md)] que é executado automaticamente quando você inicia uma nova sessão.  Você pode criar um ou mais perfis do [!INCLUDE[wps_2](../Token/wps_2_md.md)] para [!INCLUDE[ise_2](../Token/ise_2_md.md)] e usá-los para adicionar a configuração ao ambiente [!INCLUDE[wps_2](../Token/wps_2_md.md)] ou [!INCLUDE[ise_2](../Token/ise_2_md.md)], preparando-o para seu uso com variáveis, aliases, funções e as preferências de cor e de fonte que você deseja disponibilizar. Um perfil afeta cada sessão do [!INCLUDE[ise_2](../Token/ise_2_md.md)] que você iniciar.
 
 > [!NOTE]
-> A política de execução do [!INCLUDE[wps_2](../Token/wps_2_md.md)] determina se você pode executar scripts e carregar um perfil. A política de execução padrão, “Restricted”, impede a execução de todos os scripts, incluindo perfis. Se você usar a política “Restricted”, não será possível carregar o perfil. Para obter mais informações sobre as políticas, consulte [about_Execution_Policies [v4]](assetId:///347708dc-1515-4d74-978b-8334603472e6).
+> A política de execução do [!INCLUDE[wps_2](../Token/wps_2_md.md)] determina se você pode executar scripts e carregar um perfil. A política de execução padrão, “Restricted”, impede a execução de todos os scripts, incluindo perfis. Se você usar a política “Restricted”, não será possível carregar o perfil. Para obter mais informações sobre as políticas, consulte [about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6).
 
 ## Selecionar um perfil para usar com o ISE do Windows PowerShell
 O [!INCLUDE[ise_2](../Token/ise_2_md.md)] dá suporte a perfis para o usuário atual e todos os usuários. Ele também dá suporte a perfis do [!INCLUDE[wps_2](../Token/wps_2_md.md)] que se aplicam a todos os hosts.
@@ -68,18 +68,18 @@ if (!(test-path $profile.AllUsersAllHosts))
 
 2.  Adicione alguns itens ao seu perfil. A seguir estão alguns exemplos para começar:
 
-    -   Para alterar a cor da tela de fundo padrão do Painel de Console para azul, digite o seguinte no arquivo do perfil: `$psISE.Options.OutputPaneBackground = 'blue'` . Para obter mais informações sobre a variável $psISE, consulte a [Referência de Modelo de Objeto do ISE do Windows PowerShell](assetId:///e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c).
+    -   Para alterar a cor da tela de fundo padrão do Painel de Console para azul, digite o seguinte no arquivo do perfil: `$psISE.Options.OutputPaneBackground = 'blue'` . Para obter mais informações sobre a variável $psISE, consulte a [Referência de Modelo de Objeto do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c).
 
     -   Para alterar o tamanho da fonte para 20, digite o seguinte no tipo de arquivo do perfil: `$psISE.Options.FontSize =20`
 
 3.  Para salvar esse arquivo de perfil, no menu **Arquivo**, clique em **Salvar**. Da próxima vez que você abrir o [!INCLUDE[ise_2](../Token/ise_2_md.md)], suas personalizações serão aplicadas.
 
 ## Consulte Também
-[about_Profiles [v4]](assetId:///e1d9e30a-70cc-4f36-949f-fc7cd96b4054)
+[about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054)
 [Usando o ISE do Windows PowerShell](../Topic/Using-the-Windows-PowerShell-ISE.md)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

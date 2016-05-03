@@ -26,12 +26,12 @@ Um ponto de interrupção é um ponto designado em um script em que você deseja
 
 3.  **Ponto de interrupção de comando.** O script faz uma pausa sempre que o comando designado está prestes a ser executado durante a operação do script. Ele pode incluir parâmetros para filtrar ainda mais o ponto de interrupção para somente a operação desejada. O comando também pode ser uma função que você criou.
 
-Desses, além do ambiente de depuração do [!INCLUDE[ise_2](../Token/ise_2_md.md)], somente pontos de interrupção de linha podem ser definidos usando o menu ou os atalhos de teclado. Os outros dois tipos de pontos de interrupção podem ser definidos, mas são definidos no Painel de Console usando o cmdlet [Set-PSBreakpoint [m2]](assetId:///88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Esta seção descreve como executar tarefas de depuração no [!INCLUDE[ise_2](../Token/ise_2_md.md)] usando os menus quando disponíveis e realizando uma grande variedade de comandos no Painel de Console usando scripts.
+Desses, além do ambiente de depuração do [!INCLUDE[ise_2](../Token/ise_2_md.md)], somente pontos de interrupção de linha podem ser definidos usando o menu ou os atalhos de teclado. Os outros dois tipos de pontos de interrupção podem ser definidos, mas são definidos no Painel de Console usando o cmdlet [Set-PSBreakpoint [m2]](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Esta seção descreve como executar tarefas de depuração no [!INCLUDE[ise_2](../Token/ise_2_md.md)] usando os menus quando disponíveis e realizando uma grande variedade de comandos no Painel de Console usando scripts.
 
 ### Para definir um ponto de interrupção
 Um ponto de interrupção pode ser definido em um script somente depois de ele ser salvo. Clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e depois em **Alternar Ponto de Interrupção**. Ou então clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**.
 
-O script a seguir é um exemplo de como é possível definir um ponto de interrupção de variável no Painel de Console usando o cmdlet [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420).
+O script a seguir é um exemplo de como é possível definir um ponto de interrupção de variável no Painel de Console usando o cmdlet [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
 ```
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -41,7 +41,7 @@ set-psbreakpoint -script sample.ps1 -variable Server
 ### Listar todos os pontos de interrupção
 Exibe todos os pontos de interrupção na sessão atual do [!INCLUDE[wps_1](../Token/wps_1_md.md)].
 
-No menu **Depurar**, clique em **Listar Pontos de Interrupção**. O script a seguir é um exemplo de como é possível listar todos os pontos de interrupção no Painel de Console usando o cmdlet [Get-PSBreakpoint](assetId:///0bf48936-00ab-411c-b5e0-9b10a812a3c6).
+No menu **Depurar**, clique em **Listar Pontos de Interrupção**. O script a seguir é um exemplo de como é possível listar todos os pontos de interrupção no Painel de Console usando o cmdlet [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
 
 ```
 # This command lists all breakpoints in the current session. 
@@ -49,7 +49,7 @@ get-psbreakpoint
 ```
 
 ### Remover um ponto de interrupção
-Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo](#bkmk_disable) em vez disso.  Clique com o botão direito do mouse no local de onde você deseja remover um ponto de interrupção e depois em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo](#bkmk_disable) em vez disso.  Clique com o botão direito do mouse no local de onde você deseja remover um ponto de interrupção e depois em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -59,7 +59,7 @@ remove-psbreakpoint -id 2
 ### Remover Todos os Pontos de Interrupção
 Para remover todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Remover Todos os Pontos de Interrupção**.
 
-O script a seguir é um exemplo de como remover todos os pontos de interrupção no Painel de Console usando o cmdlet [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+O script a seguir é um exemplo de como remover todos os pontos de interrupção no Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes all of the breakpoints in the current session.
@@ -67,7 +67,7 @@ get-breakpoint | remove-breakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Desabilitar um ponto de interrupção
-Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar um ponto de interrupção de uma linha específica, clique com o botão direito do mouse na linha na qual você deseja desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar um ponto de interrupção de uma linha específica, clique com o botão direito do mouse na linha na qual você deseja desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables the breakpoint with breakpoint ID 0.
@@ -75,7 +75,7 @@ disable-psbreakpoint -id 0
 ```
 
 ### Desabilitar Todos os Pontos de Interrupção
-Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar todos os pontos de interrupção na sessão atual, no menu **Depurar**, clique em **Desabilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível desabilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar todos os pontos de interrupção na sessão atual, no menu **Depurar**, clique em **Desabilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível desabilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables all breakpoints in the current session. 
@@ -84,7 +84,7 @@ get-psbreakpoint | disable-psbreakpoint
 ```
 
 ### Habilitar um ponto de interrupção
-Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha na qual você deseja habilitar um ponto de interrupção e clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha na qual você deseja habilitar um ponto de interrupção e clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -92,7 +92,7 @@ enable-psbreakpoint -id 0, 1, 5
 ```
 
 ### Habilitar Todos os Pontos de Interrupção
-Para habilitar todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Habilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível habilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Para habilitar todos os pontos de interrupção definidos na sessão atual, no menu **Depurar**, clique em **Habilitar Todos os Pontos de Interrupção**. O script a seguir é um exemplo de como é possível habilitar todos os pontos de interrupção no Painel de Console usando o cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables all breakpoints in the current session. 
@@ -101,7 +101,7 @@ get-psbreakpoint | enable-psbreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Como gerenciar uma sessão de depuração
-Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#bkmk_1) ou [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
+Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
 
 ### Para iniciar a depuração
 Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar/Continuar**. O script é executado até encontrar o primeiro ponto de interrupção. Ele pausa a operação neste ponto e realça a linha na qual ele pausa.
@@ -175,6 +175,6 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

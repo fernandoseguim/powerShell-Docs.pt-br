@@ -14,7 +14,7 @@ Você pode usar o [!INCLUDE[ise_1](../Token/ise_1_md.md)] para criar, executar e
 > Começando do [!INCLUDE[ise_2](../Token/ise_2_md.md)] 3.0, os Painéis de Comando e de Saída foram combinados em um único Painel de Console.
 
 ## Barra de menu
-A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à gravação e execução de scripts e execução de comandos no [!INCLUDE[ise_2](../Token/ise_2_md.md)]. Além disso, um [Menu de complementos](assetId:///412dd662-417a-4661-ada2-558802d0f6d2#submenus) pode ser colocado na barra de menus executando os scripts que usam o [Modelo de Objeto de Script do ISE do Windows PowerShell](assetId:///1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
+A barra de menus contém os menus **Arquivo**, **Editar**, **Exibir**, **Ferramentas**, **Depurar**, **Complementos** e **Ajuda**. Os botões nos menus permitem executar tarefas relacionadas à gravação e execução de scripts e execução de comandos no [!INCLUDE[ise_2](../Token/ise_2_md.md)]. Além disso, um [Menu de complementos](https://technet.microsoft.com/en-us/library/412dd662-417a-4661-ada2-558802d0f6d2#submenus) pode ser colocado na barra de menus executando os scripts que usam o [Modelo de Objeto de Script do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
 
 > [!NOTE]
 > No [!INCLUDE[ise_2](../Token/ise_2_md.md)] 2.0, os menus **Ferramentas** e **Complementos** não existiam.
@@ -73,6 +73,6 @@ A Ajuda para [!INCLUDE[ise_2](../Token/ise_2_md.md)] está disponível na Web na
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

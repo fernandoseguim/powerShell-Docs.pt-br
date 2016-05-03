@@ -31,10 +31,10 @@ Fornece informações e as etapas para criar e usar perfis no [!INCLUDE[ise_2](.
 ## Consulte Também
 [Explorando o ISE do Windows PowerShell](../Topic/Exploring-the-Windows-PowerShell-ISE.md)
 [Acessibilidade no ISE do Windows PowerShell](../Topic/Accessibility-in-Windows-PowerShell-ISE.md)
-[O modelo de objeto de script do ISE do Windows PowerShell](assetId:///69b047d0-da79-413e-b948-8e45d05d1f85)
+[O modelo de objeto de script do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

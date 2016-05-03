@@ -13,7 +13,7 @@ O Windows PowerShell inclui tópicos detalhados que explicam os conceitos do Win
 Você pode exibir esses tópicos da Ajuda no prompt de comando ou exibir as versões mais atualizadas dos seguintes tópicos na Biblioteca do Microsoft TechNet. Muitos programas que hospedam o Windows PowerShell, como o Ambiente de Script Integrado do Windows PowerShell, fornecem recursos adicionais de Ajuda, como a Ajuda contextual e o arquivo de Ajuda compilado (.chm).
 
 ## Obtendo Ajuda para os cmdlets
-Para obter Ajuda para cmdlets do Windows PowerShell, use o cmdlet [Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2). Por exemplo, para obter Ajuda para o cmdlet [Get-ChildItem [m2]](assetId:///4b270d63-c995-45b8-b5b4-3f8887efbfcc), digite:
+Para obter Ajuda para cmdlets do Windows PowerShell, use o cmdlet [Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2). Por exemplo, para obter Ajuda para o cmdlet [Get-ChildItem [m2]](https://technet.microsoft.com/en-us/library/4b270d63-c995-45b8-b5b4-3f8887efbfcc), digite:
 
 ```
 get-help get-childitem
@@ -126,7 +126,7 @@ get-help c:\ps-test\TestScript.ps1
 
 Os parâmetros que foram projetados para exibir o cmdlet Help, como *Detailed*, *Full*, *Examples* e *Parameter* funcionam tanto para o script quanto para a função Help. No entanto, ao exibir toda a Ajuda digitando “get-help *”, a Ajuda para funções e scripts não é exibida.
 
-Para obter informações sobre como criar Ajuda para suas funções e scripts, consulte [about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
+Para obter informações sobre como criar Ajuda para suas funções e scripts, consulte [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
 ## Obtendo Ajuda online
 Se você estiver conectado à Internet, uma das melhores maneiras de obter Ajuda será exibir os tópicos da Ajuda online. Como tópicos online são fáceis de atualizar, eles provavelmente fornecerão o conteúdo mais atual.
@@ -163,16 +163,16 @@ A primeira linha na seção Links Relacionados do tópico é mostrada abaixo.
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Para obter informações sobre como dar suporte online aos seus tópicos de Ajuda, consulte [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e consulte "Como criar Ajuda para cmdlets" ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) na Biblioteca do MSDN (Microsoft Developer Network).
+Para obter informações sobre como dar suporte online aos seus tópicos de Ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e consulte "Como criar Ajuda para cmdlets" ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) na Biblioteca do MSDN (Microsoft Developer Network).
 
 ## Consulte Também
-[about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105)
-[about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af)
-[about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
-[Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2)
+[about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
+[about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af)
+[about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
+[Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
