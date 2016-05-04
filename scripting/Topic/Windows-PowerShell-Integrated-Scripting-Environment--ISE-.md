@@ -20,7 +20,7 @@ O **IntelliSense** preenche automaticamente seus comandos exibindo menus de cmdl
 
 **Trechos de código** são sessões de código curtas que você pode inserir facilmente nos scritps que você cria. Uma coleção de trechos de código útil está de fábrica caixa e é possível obter mais usando o cmdlet **New-Snippet**.
 
-**Ferramentas complementares** que adicionam recursos ao ISE podem ser criadas escrevendo código que interage com [O Modelo de Objeto de Script do ISE do Windows PowerShell](assetId:///69b047d0-da79-413e-b948-8e45d05d1f85). Essas ferramentas podem exibir controles em um painel com guias ou trabalhar de forma invisível em segundo plano. O complemento **Comandos** é um bom exemplo disso e está incluído na versão 3.0 e posterior para exibir uma lista dos comandos disponíveis e a Ajuda.
+**Ferramentas complementares** que adicionam recursos ao ISE podem ser criadas escrevendo código que interage com [O Modelo de Objeto de Script do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/dd819478.aspx). Essas ferramentas podem exibir controles em um painel com guias ou trabalhar de forma invisível em segundo plano. O complemento **Comandos** é um bom exemplo disso e está incluído na versão 3.0 e posterior para exibir uma lista dos comandos disponíveis e a Ajuda.
 
 **Gerenciador de Reinicialização e Salvamento Automático** salvam automaticamente seus scripts a cada dois minutos para ajudar a evitar perda do trabalho em caso de falha ou de reinicialização inesperada.
 
@@ -62,6 +62,6 @@ O ISE está disponível em qualquer computador que execute o Windows PowerShell 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

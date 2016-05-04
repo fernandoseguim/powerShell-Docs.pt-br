@@ -22,11 +22,11 @@ No Painel de Comando ou Painel de Script, digite um cmdlet seguido por um traço
 Por exemplo, digite `get-process -` e pressione TAB várias vezes para exibir cada um dos parâmetros do cmdlet sucessivamente.
 
 ## Consulte Também
-[Usando o ISE do Windows PowerShell](assetId:///777ea82b-dd73-4269-b61a-69a17e6ff16f)
-[Como criar uma guia do PowerShell](assetId:///c57fc210-19c8-47b1-9171-26a2144c907c)
+[Usando o ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/777ea82b-dd73-4269-b61a-69a17e6ff16f)
+[Como criar uma guia do PowerShell](https://technet.microsoft.com/en-us/library/c57fc210-19c8-47b1-9171-26a2144c907c)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

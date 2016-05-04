@@ -13,7 +13,7 @@ As guias no [!INCLUDE[ise_1](../Token/ise_1_md.md)] permitem criar e usar simult
 > [!NOTE]
 > Variáveis, funções e aliases que você criar em uma guia não serão transferidos para outra. Eles são sessões diferentes do Windows PowerShell.
 
-Use as etapas a seguir para abrir ou fechar uma guia no [!INCLUDE[wps_2](../Token/wps_2_md.md)]. Para renomear uma guia, defina a propriedade [DisplayName](assetId:///a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) no objeto de script de guia do [!INCLUDE[wps_2](../Token/wps_2_md.md)].
+Use as etapas a seguir para abrir ou fechar uma guia no [!INCLUDE[wps_2](../Token/wps_2_md.md)]. Para renomear uma guia, defina a propriedade [DisplayName](https://technet.microsoft.com/en-us/library/a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) no objeto de script de guia do [!INCLUDE[wps_2](../Token/wps_2_md.md)].
 
 ## Para criar e usar uma nova guia do PowerShell
 No menu **Arquivo**, clique em **Nova Guia do PowerShell**. A nova guia do PowerShell sempre é aberta como a janela ativa. Guias do PowerShell são numeradas incrementalmente na ordem em que são abertas. Cada guia é associada à sua própria janela de console do Windows PowerShell. Você pode ter até 32 guias do PowerShell com sua própria sessão aberta por vez (isso fica limitado a 8 no [!INCLUDE[ise_2](../Token/ise_2_md.md)] 2.0.)
@@ -32,7 +32,7 @@ Para fechar uma guia, você pode usar qualquer uma das seguintes técnicas:
 
 -   No menu **Arquivo**, clique em **Fechar Guia do PowerShell** ou no botão Fechar (**X**) em uma guia para fechar a guia ativa.
 
-Se tiver arquivos não salvos abertos na guia do PowerShell que você está fechando, será solicitado salvá-los ou descartá-los. Para obter mais informações sobre como salvar um script, consulte [Como salvar um script](assetId:///162f594d-efd3-4234-9960-45e56e6eadc8).
+Se tiver arquivos não salvos abertos na guia do PowerShell que você está fechando, será solicitado salvá-los ou descartá-los. Para obter mais informações sobre como salvar um script, consulte [Como salvar um script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## Consulte Também
 [Usando o ISE do Windows PowerShell](../Topic/Using-the-Windows-PowerShell-ISE.md)
@@ -40,6 +40,6 @@ Se tiver arquivos não salvos abertos na guia do PowerShell que você está fech
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
