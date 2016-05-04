@@ -1,76 +1,63 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 5
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [scripting\Topic\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md) | InSyncHandedBackSuccess | [Details](#a30fcb49f83cb29ce659afeb59ec8813e86fc829187)
- [scripting\Topic\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#ae84dd06fe3cef20e2199c2412ac2dbef7d4be4a203)
- [scripting\Topic\Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md) | InSyncHandedBackSuccess | [Details](#6ae3e0440a17d83681aff7c3a8d33f25a4d83a63221)
- [scripting\Topic\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md) | InSyncHandedBackSuccess | [Details](#faa7485e649b7c3e00fccd4f1d45f2b07773fcb3228)
- [scripting\Topic\Understanding-Important-Windows-PowerShell-Concepts.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Understanding-Important-Windows-PowerShell-Concepts.md) | InSyncHandedBackSuccess | [Details](#b34db3f79c3148bf0f32970c3b7d7e3ba252ae66230)
+ [scripting\Topic\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#1b5cd1d95ae70ea2308d1707b056a3f37f11435f199)
+ [scripting\Topic\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) | InSyncHandedBackSuccess | [Details](#4c2ad42cfce41094e9149cb3f06b932eb8542ca6202)
+ [scripting\Topic\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#39991114d99e7d331062068236aef75e24f69bb2204)
+ [scripting\Topic\Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md) | InSyncHandedBackSuccess | [Details](#f3c5c7e1dd5961dd05122990816278facba748e6245)
 
 ## Item Details
-##### <a name='a30fcb49f83cb29ce659afeb59ec8813e86fc829187'></a> Source: [scripting\Topic\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md)
+##### <a name='1b5cd1d95ae70ea2308d1707b056a3f37f11435f199'></a> Source: [scripting\Topic\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [scripting\Topic\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8b239687f4adca066c65af5a35b76320b90be956/scripting/Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md)
-* Handoff File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da220cb3eb037a7d84642ed4b8028f9ff6cc5d99/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf)
-* Handoff Datetime: 2016-04-05 17:34:26
+* Target File: [scripting\Topic\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/3656ac5ba823d0ff39bdff74fe89c801dacbaa1c/scripting/Topic/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
+* Handoff File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f29f9a7b777cae0029d06592e599a9a2860de05f/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf)
+* Handoff Datetime: 2016-04-09 01:38:56
 * Handoff Reason: Include
-* Archive File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/11e2bc79378b34a8e58eaef0d811a5ba9a7884d8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf)
-* Archive Datetime: 2016-04-15 00:54:12
-* Handback File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c8a1eeacb4392935fe6471c062cab3f314b1743/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.504df3df36bbd2889dd5bb672592af1b3ebdc11a.pt-br.xlf)
-* Handback Datetime: 2016-05-04 06:51:41
+* Archive File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/de1583964eec9f6041d5f742e672e982a77308c7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:45
+* Handback File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/7566f17db8d759237443a5b9d570253a0f23834a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.fdd95f05f0fdd9910edf4704e59c3d0f0cad9d7d.pt-br.xlf)
+* Handback Datetime: 2016-05-04 06:55:02
 * [Back to Top](#report-top)
 
-##### <a name='ae84dd06fe3cef20e2199c2412ac2dbef7d4be4a203'></a> Source: [scripting\Topic\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+##### <a name='4c2ad42cfce41094e9149cb3f06b932eb8542ca6202'></a> Source: [scripting\Topic\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [scripting\Topic\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8b239687f4adca066c65af5a35b76320b90be956/scripting/Topic/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
-* Handoff File: [How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da220cb3eb037a7d84642ed4b8028f9ff6cc5d99/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf)
-* Handoff Datetime: 2016-04-05 17:34:26
+* Target File: [scripting\Topic\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/3656ac5ba823d0ff39bdff74fe89c801dacbaa1c/scripting/Topic/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
+* Handoff File: [How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f29f9a7b777cae0029d06592e599a9a2860de05f/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf)
+* Handoff Datetime: 2016-04-09 01:38:56
 * Handoff Reason: Include
-* Archive File: [How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/11e2bc79378b34a8e58eaef0d811a5ba9a7884d8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf)
-* Archive Datetime: 2016-04-15 00:54:12
-* Handback File: [How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c8a1eeacb4392935fe6471c062cab3f314b1743/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.03cbe3a7267f7ce55906544fb0fbd16c80995814.pt-br.xlf)
-* Handback Datetime: 2016-05-04 06:51:41
+* Archive File: [How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/de1583964eec9f6041d5f742e672e982a77308c7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:45
+* Handback File: [How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/7566f17db8d759237443a5b9d570253a0f23834a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.b70741a343f7d1ac7d5121fdbbf62ef920c71bea.pt-br.xlf)
+* Handback Datetime: 2016-05-04 06:55:02
 * [Back to Top](#report-top)
 
-##### <a name='6ae3e0440a17d83681aff7c3a8d33f25a4d83a63221'></a> Source: [scripting\Topic\Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)
+##### <a name='39991114d99e7d331062068236aef75e24f69bb2204'></a> Source: [scripting\Topic\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [scripting\Topic\Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8b239687f4adca066c65af5a35b76320b90be956/scripting/Topic/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)
-* Handoff File: [Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da220cb3eb037a7d84642ed4b8028f9ff6cc5d99/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf)
-* Handoff Datetime: 2016-04-05 17:34:26
+* Target File: [scripting\Topic\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/3656ac5ba823d0ff39bdff74fe89c801dacbaa1c/scripting/Topic/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
+* Handoff File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f29f9a7b777cae0029d06592e599a9a2860de05f/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf)
+* Handoff Datetime: 2016-04-09 01:38:56
 * Handoff Reason: Include
-* Archive File: [Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/11e2bc79378b34a8e58eaef0d811a5ba9a7884d8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf)
-* Archive Datetime: 2016-04-15 00:54:12
-* Handback File: [Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c8a1eeacb4392935fe6471c062cab3f314b1743/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.391c05a28821fdc8889f13861f08a18ed5e80550.pt-br.xlf)
-* Handback Datetime: 2016-05-04 06:51:41
+* Archive File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/de1583964eec9f6041d5f742e672e982a77308c7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:45
+* Handback File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/7566f17db8d759237443a5b9d570253a0f23834a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.d0b2f2e61c101c3181451fadc5e0ed4e84ff96cf.pt-br.xlf)
+* Handback Datetime: 2016-05-04 06:55:02
 * [Back to Top](#report-top)
 
-##### <a name='faa7485e649b7c3e00fccd4f1d45f2b07773fcb3228'></a> Source: [scripting\Topic\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
+##### <a name='f3c5c7e1dd5961dd05122990816278facba748e6245'></a> Source: [scripting\Topic\Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [scripting\Topic\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8b239687f4adca066c65af5a35b76320b90be956/scripting/Topic/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
-* Handoff File: [Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da220cb3eb037a7d84642ed4b8028f9ff6cc5d99/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf)
-* Handoff Datetime: 2016-04-05 17:34:26
+* Target File: [scripting\Topic\Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/3656ac5ba823d0ff39bdff74fe89c801dacbaa1c/scripting/Topic/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
+* Handoff File: [Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f29f9a7b777cae0029d06592e599a9a2860de05f/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf)
+* Handoff Datetime: 2016-04-09 01:38:56
 * Handoff Reason: Include
-* Archive File: [Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/11e2bc79378b34a8e58eaef0d811a5ba9a7884d8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf)
-* Archive Datetime: 2016-04-15 00:54:12
-* Handback File: [Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c8a1eeacb4392935fe6471c062cab3f314b1743/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.cec4d0ea5e0928855ea32b8ac08e6a0e2d726377.pt-br.xlf)
-* Handback Datetime: 2016-05-04 06:51:41
-* [Back to Top](#report-top)
-
-##### <a name='b34db3f79c3148bf0f32970c3b7d7e3ba252ae66230'></a> Source: [scripting\Topic\Understanding-Important-Windows-PowerShell-Concepts.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Understanding-Important-Windows-PowerShell-Concepts.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [scripting\Topic\Understanding-Important-Windows-PowerShell-Concepts.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8b239687f4adca066c65af5a35b76320b90be956/scripting/Topic/Understanding-Important-Windows-PowerShell-Concepts.md)
-* Handoff File: [Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da220cb3eb037a7d84642ed4b8028f9ff6cc5d99/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf)
-* Handoff Datetime: 2016-04-05 17:34:26
-* Handoff Reason: Include
-* Archive File: [Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/11e2bc79378b34a8e58eaef0d811a5ba9a7884d8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf)
-* Archive Datetime: 2016-04-15 00:54:12
-* Handback File: [Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c8a1eeacb4392935fe6471c062cab3f314b1743/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Understanding-Important-Windows-PowerShell-Concepts.e8bae9b84b4e44e1b22cc9b182a634b655760a6d.pt-br.xlf)
-* Handback Datetime: 2016-05-04 06:51:41
+* Archive File: [Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/de1583964eec9f6041d5f742e672e982a77308c7/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf)
+* Archive Datetime: 2016-04-29 00:26:45
+* Handback File: [Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/7566f17db8d759237443a5b9d570253a0f23834a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.2ecd6ee5f4c53d144be28b9b51460bf9111d1653.pt-br.xlf)
+* Handback Datetime: 2016-05-04 06:55:02
 * [Back to Top](#report-top)
 
 
