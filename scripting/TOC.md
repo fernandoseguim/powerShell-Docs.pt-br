@@ -44,7 +44,7 @@
 ### [Navegação do Windows PowerShell](Topic/Windows-PowerShell-Navigation.md)
 #### [Gerenciando o local atual](Topic/Managing-Current-Location.md)
 #### [Gerenciando unidades do Windows PowerShell](Topic/Managing-Windows-PowerShell-Drives.md)
-#### [Trabalhando com arquivos, pastas e chaves do Registro](Topic/Working-With-Files,-Folders-and-Registry-Keys.md)
+#### [Trabalhando com arquivos, pastas e chaves do Registro](Topic/Working-With-Files-Folders-and-Registry-Keys.md)
 #### [Manipulando itens diretamente](Topic/Manipulating-Items-Directly.md)
 ### [Trabalhando com objetos](Topic/Working-with-Objects.md)
 #### [Obtendo objetos WMI com “Get-WmiObject”](Topic/Getting-WMI-Objects--Get-WmiObject-.md)
@@ -67,6 +67,8 @@
 #### [Trabalhando com chaves do Registro](Topic/Working-with-Registry-Keys.md)
 #### [Trabalhando com entradas do Registro](Topic/Working-with-Registry-Entries.md)
 #### [Executando comandos remotos](Topic/Running-Remote-Commands.md)
+## Segurança do Windows PowerShell
+### [Considerações de segurança de comunicação remota do PowerShell](Topic/WinRMSecurity.md)
 ## [Novidades no Windows PowerShell 5](Topic/What-s-New-in-Windows-PowerShell.md)
 ### [Alias de compatibilidade](Topic/Appendix-1---Compatibility-Aliases.md)
 ### [Criar um atalho do PowerShell personalizado](Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md)
@@ -74,6 +76,6 @@
 ## [Glossário do Windows PowerShell](Topic/Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO4-->
 
 

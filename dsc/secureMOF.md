@@ -49,24 +49,154 @@ Esse certificado de chave pública tem requisitos específicos para ser usado pa
 >EKUs.
   
 Qualquer certificado existente no _Nó de Destino_ que atende esses critérios pode ser usado para proteger credenciais DSC.
- 
-## Criar o Certificado
 
-A chave privada deve ser mantida em segredo, pois ela é usada para descriptografar o MOF. A maneira mais fácil de fazer isso é criar o certificado de chave privada no *Nó do Destino* e copiar o certificado de chave pública 
-para o computador que está sendo usado para compilar a configuração DSC para um arquivo MOF. O exemplo a seguir cria um certificado, exporta a chave pública e importa a chave pública
-para a raiz do repositório de certificados local.
+## Criação de certificado
+
+Há duas abordagens que você pode executar para criar e usar o certificado de criptografia necessário (par de chaves públicas-privadas).
+
+1. Criá-lo no **Nó de Destino** e exportar apenas a chave pública para o **Nó de Criação**
+2. Criá-lo no **Nó de Criação** e exportar o par de chaves inteiro para o **Nó de Destino**
+
+O Método 1 é recomendado porque a chave privada usada para descriptografar credenciais no MOF permanece no nó de destino em todos os momentos.
+
+
+### Criando o certificado no nó de destino
+
+A chave privada deve ser mantida em segredo, pois ela é usada para descriptografar o MOF no **Nó de Destino**
+A forma mais fácil de fazer isso é criar o certificado da chave privada no **Nó de Destino** e copiar o **certificado de chave pública** no computador que está sendo usado para criar a configuração DSC em um arquivo MOF.
+O exemplo a seguir:
+ 1. cria um certificado no **Nó de destino**
+ 2. exporta o certificado de chave pública para o **Nó de destino**.
+ 3. importa o certificado de chave pública para o **meu** repositório de certificados no **Nó de criação**.
+
+#### No Nó de destino: criar e exportar o certificado
+>Nó de Criação: Windows Server 2016 e Windows 10
 
 ```powershell
-# create the cert
-$cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName 'DscEncryptionCert' 
-# export the cert’s public key
-$cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer"  -Force                                                              
-# import the cert’s public key as a trusted root certificate authority so that it is trusted
-Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\Root > $null
+# note: These steps need to be performed in an Administrator PowerShell session
+$cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName 'DscEncryptionCert' -HashAlgorithm SHA256
+# export the public key certificate
+$cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
+```
+Uma vez exportado, o ```DscPublicKey.cer``` precisaria ser copiados no **Nó de Criação**.
+
+>Nó de Criação: Windows Server 2012 R2/Windows 8.1 e versões anteriores
+
+Como não há suporte para o cmdlet New-SelfSignedCertificate em sistemas operacionais Windows anteriores ao Windows 10 e o Windows Server 2016 não dá suporte ao parâmetro **Type**, um método alternativo de criar esse certificado é necessário nesses sistemas operacionais.
+Nesse caso, você pode usar ```makecert.exe``` ou ```certutil.exe``` para criar o certificado.
+
+Um método alternativo é [baixar o script New-SelfSignedCertificateEx.ps1 do Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) e usá-lo para criar o certificado em vez disso:
+```powershell
+# note: These steps need to be performed in an Administrator PowerShell session
+# and in the folder that contains New-SelfSignedCertificateEx.ps1
+. .\New-SelfSignedCertificateEx.ps1
+New-SelfsignedCertificateEx `
+    -Subject "CN=${ENV:ComputerName}" `
+    -EKU 'Document Encryption' `
+    -KeyUsage 'KeyEncipherment, DataEncipherment' `
+    -SAN ${ENV:ComputerName} `
+    -FriendlyName 'DSC Credential Encryption certificate' `
+    -Exportable `
+    -StoreLocation 'LocalMachine' `
+    -StoreName 'My' `
+    -KeyLength 2048 `
+    -ProviderName 'Microsoft Enhanced Cryptographic Provider v1.0' `
+    -AlgorithmName 'RSA' `
+    -SignatureAlgorithm 'SHA256'
+# Locate the newly created certificate
+$Cert = Get-ChildItem -Path cert:\LocalMachine\My `
+    | Where-Object {
+        ($_.FriendlyName -eq 'DSC Credential Encryption certificate') `
+        -and ($_.Subject -eq "CN=${ENV:ComputerName}")
+    } | Select-Object -First 1
+# export the public key certificate
+$cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
+```
+Uma vez exportado, o ```DscPublicKey.cer``` precisaria ser copiados no **Nó de Criação**.
+
+#### No Nó de Criação: importar a chave pública do certificado
+```powershell
+# Import to the my store
+Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
 ```
 
-Como alternativa, o certificado de chave privada pode ser criado no computador que está sendo usado para compilar o arquivo de configuração DSC, exportado com a chave privada e então importado no _Nó de Destino_. 
-Esse é o método atual para implementar a criptografia de credencial DSC em Nano Server. A chave privada deve ser mantida segura durante o trânsito.
+### Criando o certificado no Nó de Criação
+Como alternativa, o certificado de criptografia pode ser criado no **Nó de Criação**, exportado com a **chave privada** como um arquivo PFX e, em seguida, importado no **Nó de Destino**.
+Esse é o método atual para implementar a criptografia de credencial DSC no _Nano Server_.
+Embora o PFX seja protegido por uma senha, ele deve ser mantido seguro durante o trânsito.
+O exemplo a seguir:
+ 1. cria um certificado no **Nó de criação**.
+ 2. exporta o certificado, incluindo a chave privada do **Nó de criação**.
+ 3. remove a chave privada do **Nó de criação**, mas mantém o certificado de chave pública no **meu** repositório.
+ 4. importa o certificado de chave privada para o repositório de certificados raiz no **Nó de destino**.
+   - ele deve ser adicionado ao repositório raiz para que seja confiável pelo **Nó de destino**.
+
+#### No Nó de criação: criar e exportar o certificado
+>Nó de destino: Windows Server 2016 e Windows 10
+
+```powershell
+# note: These steps need to be performed in an Administrator PowerShell session
+$cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName 'DscEncryptionCert' -HashAlgorithm SHA256
+# export the private key certificate
+$mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText
+$cert | Export-PfxCertificate -FilePath "$env:temp\DscPrivateKey.pfx" -Password $mypwd -Force
+# remove the private key certificate from the node but keep the public key certificate
+$cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
+$cert | Remove-Item -Force
+Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
+```
+Uma vez exportado, o ```DscPrivateKey.cer``` precisaria ser copiado no **Nó de Destino**.
+
+>Nó de destino: Windows Server 2012 R2/Windows 8.1 e versões anteriores
+
+Como não há suporte para o cmdlet New-SelfSignedCertificate em sistemas operacionais Windows anteriores ao Windows 10 e o Windows Server 2016 não dá suporte ao parâmetro **Type**, um método alternativo de criar esse certificado é necessário nesses sistemas operacionais.
+Nesse caso, você pode usar ```makecert.exe``` ou ```certutil.exe``` para criar o certificado.
+
+Um método alternativo é [baixar o script New-SelfSignedCertificateEx.ps1 do Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) e usá-lo para criar o certificado em vez disso:
+```powershell
+# note: These steps need to be performed in an Administrator PowerShell session
+# and in the folder that contains New-SelfSignedCertificateEx.ps1
+. .\New-SelfSignedCertificateEx.ps1
+New-SelfsignedCertificateEx `
+    -Subject "CN=${ENV:ComputerName}" `
+    -EKU 'Document Encryption' `
+    -KeyUsage 'KeyEncipherment, DataEncipherment' `
+    -SAN ${ENV:ComputerName} `
+    -FriendlyName 'DSC Credential Encryption certificate' `
+    -Exportable `
+    -StoreLocation 'LocalMachine' `
+    -StoreName 'My' `
+    -KeyLength 2048 `
+    -ProviderName 'Microsoft Enhanced Cryptographic Provider v1.0' `
+    -AlgorithmName 'RSA' `
+    -SignatureAlgorithm 'SHA256'
+# Locate the newly created certificate
+$Cert = Get-ChildItem -Path cert:\LocalMachine\My `
+    | Where-Object {
+        ($_.FriendlyName -eq 'DSC Credential Encryption certificate') `
+        -and ($_.Subject -eq "CN=${ENV:ComputerName}")
+    } | Select-Object -First 1
+# export the public key certificate
+$mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText
+$cert | Export-PfxCertificate -FilePath "$env:temp\DscPrivateKey.pfx" -Password $mypwd -Force
+# remove the private key certificate from the node but keep the public key certificate
+$cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
+$cert | Remove-Item -Force
+Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
+```
+
+#### No Nó de destino: importar a chave privada do certificado como uma raiz confiável
+```powershell
+# Import to the root store so that it is trusted
+$mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText
+Import-PfxCertificate -FilePath "$env:temp\DscPrivateKey.pfx" -CertStoreLocation Cert:\LocalMachine\Root -Password $mypwd > $null
+```
+
+Observação: se o nó de destino for um _Nano Server_, você deverá usar o aplicativo CertOC.exe para importar o certificado de chave privada porque o cmdlet ```Import-PfxCertificate``` não estará disponível.
+```powershell
+# Import to the root store so that it is trusted
+certoc.exe -ImportPFX -p YOUR_PFX_PASSWD Root c:\temp\DscPrivateKey.pfx
+```
 
 ## Dados de configuração
 
@@ -197,7 +327,7 @@ Start-DscConfiguration .\CredentialEncryptionExample -wait -Verbose
 Este exemplo enviaria por push a configuração DSC para o nó de destino.
 A configuração DSC também poderá ser aplicada usando um Servidor de Pull de DSC, se houver um disponível.
 
-Consulte [esta página](PullClient.md) para obter mais informações sobre como aplicar as configurações DSC usando um Servidor de Pull de DSC.
+Consulte [Configurando um cliente pull de DSC](pullClient.md) para obter mais informações sobre como aplicar configurações de DSC usando um Servidor de Pull de DSC.
 
 ## Exemplo de Módulo de Criptografia de Credencial
 
@@ -318,6 +448,6 @@ Start-CredentialEncryptionExample
 ```
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=Apr16_HO3-->
 
 

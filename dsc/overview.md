@@ -35,6 +35,10 @@ A DSC também inclui uma série de novas palavras-chave, cmdlets e ferramentas d
 ## Consulte Também
 * [Configurações DSC](configurations.md)
 * [Recursos de DSC](resources.md)
-* [Configurando o Gerenciador de Configurações Local](metaconfig.md)
+* [Configurando o Gerenciador de Configurações Local](metaConfig.md)
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+

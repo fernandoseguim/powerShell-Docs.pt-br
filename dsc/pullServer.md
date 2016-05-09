@@ -123,7 +123,7 @@ PullClientConfigID -OutputPath c:\Configs\TargetNodes
 ```
 > **Observação**: a seção **ReportServerWeb** permite que dados de relatório sejam enviados ao servidor pull. 
 
-A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração significa implicitamente que esse servidor pull dá suporte à versão V2 do protocolo de servidor pull, de modo que um registro inicial é necessário. Por outro lado, a apresentação de uma **ConfigurationID** significa que a versão V1 do protocolo do servidor pull é usada e não há nenhum processamento de registro.
+A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração significa implicitamente que esse servidor pull dá suporte à versão V2 do protocolo de servidor pull, de modo que um registro inicial é necessário. Por outro lado, a presença de uma **ConfigurationID** significa que a versão V1 do protocolo do servidor de pull é usada e não há nenhum processamento de registro.
 
 >**Observação**: em um cenário PUSH, existe um bug na versão atual que torna necessário definir uma propriedade ConfigurationID no arquivo de metaconfiguração para nós que nunca foram registrados com um servidor pull. Isso forçará o uso do protocolo de Servidor de Pull V1 e evitará mensagens de falha de registro.
 
@@ -168,6 +168,6 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 * [Usando um servidor de relatório de DSC](reportServer.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=Apr16_HO2-->
 
 

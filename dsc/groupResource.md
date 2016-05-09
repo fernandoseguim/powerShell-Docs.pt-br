@@ -32,7 +32,7 @@ Group [string] #ResourceName
 | MembersToInclude| Indica os usuários que você deseja garantir que sejam membros do grupo.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 
-## Exemplo
+## Exemplo 1
 
 O exemplo a seguir mostra como garantir que um grupo chamado TestGroup esteja ausente. 
 
@@ -45,4 +45,36 @@ Group GroupExample
     GroupName = "TestGroup"
 }
 ```
-<!--HONumber=Feb16_HO4-->
+## Exemplo 2
+O exemplo a seguir mostra como adicionar um usuário do Active Directory ao grupo de administradores locais como parte de um build de laboratório com vários computadores, em que você já está usando um PSCredential para a conta de Administrador Local. Como isso também é usado para a conta de administrador do domínio (após a promoção do domínio), precisamos converter esse PSCredential existente em uma credencial de domínio amigável para adicionar um usuário de domínio ao grupo de Administradores Locais no servidor membro.
+
+```powershell
+@{
+    AllNodes = @(
+        @{
+            NodeName = '*';
+            DomainName = 'SubTest.contoso.com';
+         }
+     @{
+            NodeName = 'Box2';
+            AdminAccount = 'Admin-Dave_Alexanderson'   
+      }    
+    )
+}
+                  
+$domain = $node.DomainName.split('.')[0]
+$DCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ("$domain\$($credential.Username)", $Credential.Password)
+
+Group AddADUserToLocalAdminGroup
+        {
+            GroupName='Administrators'   
+            Ensure= 'Present'             
+            MembersToInclude= "$domain\$($Node.AdminAccount)"
+            Credential = $dCredential    
+            PsDscRunAsCredential = $DCredential
+        }
+```
+
+<!--HONumber=Apr16_HO3-->
+
+

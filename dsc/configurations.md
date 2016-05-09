@@ -100,8 +100,9 @@ Configuration DependsOnExample {
 
         User UserExample {
             Ensure = "Present"
+            UserName = "TestUser"
             FullName = "TestUser"
-            DependsOn = "GroupExample"
+            DependsOn = "[Group]GroupExample"
         }
     }
 }
@@ -117,9 +118,9 @@ Depois que esses módulos forem colocados em `$env:PSModulePath` e reconhecidos 
 ## Consulte Também
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Recursos de DSC](resources.md)
-* [Configurando o Gerenciador de Configurações Local](metaconfig.md)
+* [Configurando o Gerenciador de Configurações Local](metaConfig.md)
 
 
-<!--HONumber=Feb16_HO4-->
+<!--HONumber=Apr16_HO2-->
 
 

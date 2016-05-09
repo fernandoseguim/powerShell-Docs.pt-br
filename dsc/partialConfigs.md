@@ -7,10 +7,10 @@ No PowerShell 5.0, a Configuração de Estado Desejado (DSC) permite que as conf
 É possível usar configurações parciais no modo de push, no modo de pull ou em uma combinação de ambos.
 
 ## Configurações parciais no modo de push
-Para usar configurações parciais no modo de push, o LCM é configurado no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada por push para o destino usando o cmdlet Publish-DSCConfiguration. Em seguida, o nó de destino combina a configuração parcial em uma única configuração; pode-se aplicar a configuração chamando o cmdlet [Start-DscConfigurationxt](https://technet.microsoft.com/en-us/library/dn521623.aspx).
+Para usar configurações parciais no modo de push, o LCM é configurado no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada por push para o destino usando o cmdlet Publish-DSCConfiguration. Em seguida, o nó de destino combina a configuração parcial em uma única configuração; pode-se aplicar a configuração chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
 ### Configurando o LCM para configurações parciais no modo de push
-Para configurar o LCM para configurações parciais no modo de envio por push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
+Para configurar o LCM para configurações parciais no modo de push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -78,7 +78,7 @@ configuration PartialConfigDemo
         {
             Description = 'Configuration for the Sharepoint Server'
             ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Pull'
         }
     }
@@ -131,7 +131,7 @@ configuration PartialConfigDemo
            PartialConfiguration SharePointConfig
         {
             Description = 'Configuration for the Sharepoint Server'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Push'
         }
     }
@@ -150,6 +150,6 @@ Observe que o **RefreshMode** especificado no bloco Settings é "Pull", mas o **
 [Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=Apr16_HO2-->
 
 

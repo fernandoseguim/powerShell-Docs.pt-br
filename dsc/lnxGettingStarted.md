@@ -25,11 +25,11 @@ A tabela a seguir descreve as dependências de pacote necessárias para a DSC pa
 
 ## Instalando a DSC para Linux
 
-É necessário instalar a [OMI (Infraestrutura de Gerenciamento Aberta)](https://collaboration.opengroup.org/omi/) antes de instalar a DSC para Linux.
+É necessário instalar a [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/) antes de instalar a DSC para Linux.
 
 ### Instalando a OMI
 
-A Configuração de Estado Desejado para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1. A OMI pode ser baixada do The Open Group: [OMI (Infraestrutura de Gerenciamento Aberta)](https://collaboration.opengroup.org/omi/).
+A Configuração de Estado Desejado para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/).
 
 Para instalar a OMI, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
@@ -41,11 +41,11 @@ Execute o seguinte comando para instalar a OMI em um sistema CentOS 7 x64.
 
 ### Instalando a DSC
 
-A DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
+DSC para Linux está disponível para download [aqui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
 
 Para instalar a DSC, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 
-> **Observação**: para determinar a versão do OpenSSL instalada, execute o comando openssl version.
+> **Observação**: para determinar a versão instalada do OpenSSL, execute a versão do comando openssl.
  
 Execute o seguinte comando para instalar a DSC em um sistema CentOS 7 x64.
 
@@ -62,7 +62,7 @@ A palavra-chave Configuration do Windows PowerShell é usada para criar uma conf
 
 1. Importe o módulo nx. O módulo nx do Windows PowerShell contém o esquema para recursos internos para DSC para Linux e deve ser instalado no seu computador local e importado na configuração.
 
-    -Para instalar o módulo nx, copie o diretório do módulo nx para `%UserProfile%\Documents\WindowsPowerShell\Modules\` ou `C:\windows\system32\WindowsPowerShell\v1.0\Modules`. O módulo nx está incluído no pacote de instalação da DSC para Linux (MSI). Para importar o módulo nx na sua configuração, use o comando __Import-DSCResource__:
+    -Para instalar o módulo nx, copie o diretório do módulo nx para `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` ou `$PSHOME\Modules`. O módulo nx está incluído no pacote de instalação da DSC para Linux (MSI). Para importar o módulo nx na sua configuração, use o comando __Import-DSCResource__:
     
 ```powershell
 Configuration ExampleConfiguration{
@@ -76,7 +76,7 @@ Configuration ExampleConfiguration{
 ```powershell
 Configuration ExampleConfiguration{
    
-    Import-DSCResource -Module nx
+    Import-DscResource -Module nx
  
     Node  "linuxhost.contoso.com"{
     nxFile ExampleFile {
@@ -94,7 +94,7 @@ ExampleConfiguration -OutputPath:"C:\temp"
 
 ### Envie a configuração por push para o computador Linux
 
-Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx ou [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) é usado para criar uma CIMSession para o computador Linux.
+Documentos de configuração (arquivos MOF) podem ser enviados por push para o computador Linux usando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Para usar esse cmdlet, juntamente com os cmdlets [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379). aspx ou [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), remotamente em um computador Linux, você deve utilizar uma CIMSession. O cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) é usado para criar uma CIMSession para o computador Linux.
 
 O código a seguir mostra como criar uma CIMSession para DSC para Linux.
 
@@ -118,11 +118,11 @@ Se o computador Windows em que você está executando o cmdlet [New-CimSession](
 
 Execute o seguinte comando para enviar a configuração DSC por push para o nó do Linux.
 
-`Start-DSCConfiguration -Path:"C:\temp" -cimsession:$sess -wait -verbose`
+`Start-DscConfiguration -Path:"C:\temp" -CimSession:$Sess -Wait -Verbose`
 
 ### Distribuir a configuração com um servidor de pull
 
-As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter diretrizes sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
+As configurações podem ser distribuídas para um computador Linux com um servidor de pull, assim como para computadores Windows. Para obter orientações sobre como usar um servidor de pull, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md). Para obter informações adicionais e se informar sobre as limitações relacionadas ao uso de computadores Linux com um servidor pull, consulte as Notas de versão para a configuração de estado desejado para Linux.
 
 ### Trabalhando com configurações localmente
 
@@ -173,6 +173,6 @@ Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 |dsc.log|/opt/omi/var/log/|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=Apr16_HO2-->
 
 
