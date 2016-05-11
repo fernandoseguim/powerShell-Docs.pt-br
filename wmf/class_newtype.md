@@ -103,7 +103,7 @@ $c = [MyClass]::new(@(42,43,44), "Hello")
 
 Nesta versão, New-Object não funciona com classes definidas no Windows PowerShell. Além disso, nesta versão, o nome de tipo é visível apenas lexicalmente, o que significa que ele não é visível fora do módulo ou do script que define a classe. As funções podem retornar instâncias de uma classe definida no Windows PowerShell, e as instâncias funcionam bem fora do módulo ou do script.
 
-`Get-Member -Static` lista os construtores, para que seja possível exibir sobrecargas como qualquer outro método. O desempenho dessa sintaxe também é consideravelmente mais rápido do que o de New-Object.
+`Get-Member -Static` lista os construtores, para que você possa exibir sobrecargas como qualquer outro método. O desempenho dessa sintaxe também é consideravelmente mais rápido do que o de New-Object.
 
 O método pseudoestático chamado **new** funciona com tipos do .NET, conforme mostrado no exemplo a seguir.
 
@@ -124,7 +124,7 @@ hashtable new(int capacity, float loadFactor)
 
 ## Métodos
 
-Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tem apenas um end block. Todos os métodos são públicos. Veja a seguir um exemplo de definição de um método chamado **DoSomething**.
+Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tem apenas um end block. Todos os métodos são públicos. A seguir, um exemplo de como definir um método chamado **DoSomething**.
 
 ```powershell
 class MyClass
@@ -168,7 +168,7 @@ O tipo de retorno é um contrato; o valor retornado é convertido para o tipo es
 
 ## Atributos
 
-Quatro novos atributos, **DscResource**, **DscResourceKey**, **DscResourceMandatory** e **DscResourceOut** foram adicionados.
+Dois novos atributos, **DscResource** e **DscProperty** foram adicionados.
 
 ## Escopo léxico de variáveis
 
@@ -324,4 +324,8 @@ function Style
 # and then returns the resulting type.
 #
 function Html ([HTML] $doc) { return $doc }
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Apr16_HO5-->
+
+

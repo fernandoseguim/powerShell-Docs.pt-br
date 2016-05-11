@@ -9,7 +9,7 @@ As principais diferenças entre um recurso DSC baseado em classe e um provedor d
 * Uma subpasta **DSCResource** na pasta do módulo não é necessária.
 * Um arquivo de módulo do PowerShell pode conter várias classes de recursos DSC.
 
-Veja abaixo um exemplo de um recurso DSC baseado em classe que estende o outro recurso DSC de classe no mesmo arquivo. Isso é salvo como um módulo, **MyDSCResource.psm1**. 
+Veja abaixo um exemplo de um recurso DSC baseado em classe que estende o outro recurso DSC de classe no mesmo arquivo. É salvo como um módulo, **MyDSCResource.psm1**. 
 Observe que sempre é necessário incluir, pelo menos, uma propriedade de chave e um método Get, Set ou Test em um recurso DSC definido por classe ou em suas classes base.
 
 ```powershell
@@ -60,7 +60,7 @@ NOTE: This property is required because [DscProperty(Mandatory)] is set.
 [string] $SourcePath
 
 <#
-This property reports the file's creation timestamp.
+This property reports the file creation timestamp.
 
 [DscProperty(NotConfigurable)] attribute indicates the property is not configurable in a DSC configuration. Properties marked this way are populated by the Get() method to report additional details about the resource when it is present.
 #>
@@ -212,13 +212,13 @@ class FileResource : BaseFileResource
     [bool] $IsReadOnly
 
     <#
-    This property reports the file's LastAccessTime timestamp.
+    This property reports the file LastAccessTime timestamp.
     #>
     [DscProperty(NotConfigurable)]
     [Nullable[datetime]] $LastAccessTime
 
     <#
-    This property reports the file's LastWriteTime timestamp.
+    This property reports the file LastWriteTime timestamp.
     #>
     [DscProperty(NotConfigurable)]
     [Nullable[datetime]] $LastWriteTime
@@ -288,13 +288,13 @@ DscResourcesToExport = @('BaseFileResource','FileResource')
 }
 ```
 
-Implante o novo provedor de recursos DSC criando uma pasta **MyDscResource** para ele em `$env:SystemDrive\Program Files\WindowsPowerShell\Modules`.
+Implantar o novo provedor de recursos DSC criando uma pasta **MyDscResource** para ele em `$env:SystemDrive\Program Files\WindowsPowerShell\Modules`.
 Não é necessário criar uma subpasta DSCResource.
 Faça uma cópia do módulo e dos arquivos de manifesto de módulo (**MyDscResource.psm1** e **MyDscResource.psd1**) e cole-os na pasta **MyDscResource**.
 
 Desse ponto em diante, você cria e executa um script de configuração como faria com qualquer recurso DSC. 
 Apresentamos a seguir uma configuração que faz referência ao módulo MyDSCResource. 
-Salve isso como um script, **MyResource.ps1**.
+Salvar como um script, **MyResource.ps1**.
 
 ```powershell
 Configuration MyConfig
@@ -333,4 +333,8 @@ Nesta versão, os seguintes problemas são problemas conhecidos com recursos DSC
 
 * Get-DscConfiguration poderá retornar valores vazios (null) ou erros se um tipo complexo for retornado pela função Get() de um recurso DSC baseado em classe.
 * Recursos de composição não podem ser escritos como um recurso baseado em classe.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Apr16_HO5-->
+
+
