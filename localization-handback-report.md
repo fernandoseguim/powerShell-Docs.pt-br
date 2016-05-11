@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md) | InSyncHandedBackSuccess | [Details](#918f7ebd3f6973cb17db4bdada7babf5dc716c3c15)
 
 ## Item Details
+##### <a name='918f7ebd3f6973cb17db4bdada7babf5dc716c3c15'></a> Source: [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/826a2f2909bef6645030a8a9e899bbc7de1a452c/dsc/configHelp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/31ae9143f9ec89d4398825db3cb02507b3b9a008/dsc/configHelp.md)
+* Handoff File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7585f3936f81745a9a3144522ec32845eaaae64b/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
+* Handoff Datetime: 2016-04-29 22:42:15
+* Handoff Reason: Include
+* Archive File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/61be10a64bd94af448c59a42d89c94138575b6a6/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
+* Archive Datetime: 2016-05-03 15:36:44
+* Handback File: [configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/676ccd2561c43886544fefc96c4182160e764a95/ol-handback/PowerShell/powerShell-Docs.pt-br/live/configHelp.640c1514ba89b533fcd70fb36da2f349eced1926.pt-br.xlf)
+* Handback Datetime: 2016-05-11 11:09:41
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
