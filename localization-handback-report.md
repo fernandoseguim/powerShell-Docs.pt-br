@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [dsc\registryResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/registryResource.md) | InSyncHandedBackSuccess | [Details](#15e346ecd630a1256477d375bc1373f376e76f6479)
 
 ## Item Details
+##### <a name='15e346ecd630a1256477d375bc1373f376e76f6479'></a> Source: [dsc\registryResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/registryResource.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\registryResource.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/94066ff6725cc2a01e682ad78390f9b4876a9833/dsc/registryResource.md)
+* Handoff File: [registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d49759c490f6e643ff9b777c78c7bab031275b8e/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf)
+* Handoff Datetime: 2016-05-16 23:04:15
+* Handoff Reason: Include
+* Archive File: [registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/77179a61c83609e0f5115cfa4c0c64fbd3c510fa/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf)
+* Archive Datetime: 2016-05-17 13:27:01
+* Handback File: [registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d21f245008e197d92e3f8d9bf62abaf66ce9b886/ol-handback/PowerShell/powerShell-Docs.pt-br/live/registryResource.7e5e3fabff013c107bd112ac774a50c9cab7c90a.pt-br.xlf)
+* Handback Datetime: 2016-05-17 21:38:36
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
