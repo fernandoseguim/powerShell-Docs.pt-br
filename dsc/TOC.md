@@ -3,12 +3,13 @@
 # [Configurações](configurations.md)
 ## [Aplicando configurações](enactingConfigurations.md)
 ## [Usando recursos com várias versões](sxsResource.md)
+## [Executar DSC com as credenciais do usuário](runAsUser.md)
 ## [Especificando dependências de nó cruzado](crossNodeDependencies.md)
 ## [Dados de configuração](configData.md)
 ### [Opções de credenciais nos dados de configuração](configDataCredentials.md)
-### [Executar DSC com as credenciais do usuário](runAsUser.md)
 ## [Protegendo o arquivo MOF de configuração](secureMOF.md)
 ## [Configurações Parciais](partialConfigs.md)
+## [Escrever ajuda para configurações de DSC](configHelp.md)
 
 # [Recursos](resources.md)
 ## [Recursos internos](builtInResource.md)
@@ -89,6 +90,7 @@
 ## [Whitepapers](whitepapers.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

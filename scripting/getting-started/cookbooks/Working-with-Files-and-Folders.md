@@ -1,12 +1,15 @@
 ---
-title: Trabalhando com arquivos e pastas
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
+title:  Trabalhando com arquivos e pastas
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c0ceb96b-e708-45f3-803b-d1f61a48f4c1
 ---
+
 # Trabalhando com arquivos e pastas
 Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Abordaremos como lidar com tarefas específicas de manipulação de arquivo e pasta nesta seção.
 
@@ -140,6 +143,6 @@ $Computers = Get-Content -Path C:\temp\DomainMembers.txt
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Recurso nxPackage de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxPackage de DSC para Linux
 
 O recurso **nxPackage** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar pacotes em um nó do Linux.
@@ -48,4 +59,9 @@ nxPackage httpd
 }
 }
 ```
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

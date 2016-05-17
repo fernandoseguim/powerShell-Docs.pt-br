@@ -1,12 +1,15 @@
 ---
-title: Usando variáveis para armazenar objetos
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
+title:  Usando variáveis para armazenar objetos
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b1688d73-c173-491e-9ba6-6d0c1cc852de
 ---
+
 # Usando variáveis para armazenar objetos
 O Windows PowerShell funciona com objetos. O Windows PowerShell permite criar variáveis que são basicamente objetos nomeados a fim de preservar a saída para uso futuro. Se você está acostumado a trabalhar com variáveis em outros shells, lembre-se de que variáveis do Windows PowerShell são objetos, não texto.
 
@@ -98,6 +101,6 @@ Você também pode criar e modificar variáveis de ambiente do Windows PowerShel
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

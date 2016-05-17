@@ -1,3 +1,14 @@
+---
+title:   Whitepapers
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Whitepapers
 
 Os seguintes whitepapers foram publicados para fornecer informações adicionais sobre tópicos relacionados à configuração de estado desejado do PowerShell.
@@ -7,6 +18,8 @@ Há vantagens quando padrões e práticas recomendadas de técnicas de desenvolv
 
 **[Baixar PDF](http://aka.ms/thereleasepipelinemodelpdf)**
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Aprendendo a usar nomes do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
+title:  Aprendendo a usar nomes do Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b4d0fd22-8298-4ee6-82ae-9b6f2907c986
 ---
+
 # Aprendendo a usar nomes do Windows PowerShell
 Aprender os nomes de comandos e parâmetros é um investimento de tempo significativo com a maioria das interfaces de linha de comando. O problema é que há pouquíssimos padrões, portanto, a única maneira aprender é memorizar cada comando e cada parâmetro que você precisa usar regularmente.
 
@@ -92,6 +95,6 @@ Por exemplo, as diretrizes recomendam nomear um parâmetro que se refere a um co
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

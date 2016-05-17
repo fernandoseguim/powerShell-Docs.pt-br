@@ -1,3 +1,14 @@
+---
+title:   Recurso nxSshAuthorizedKeys de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxSshAuthorizedKeys de DSC para Linux
 
 O recurso **nxAuthorizedKeys** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar chaves ssh autorizadas para um usuário especificado.
@@ -44,4 +55,8 @@ nxSshAuthorizedKeys myKey{
 }
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=May16_HO3-->
+
+

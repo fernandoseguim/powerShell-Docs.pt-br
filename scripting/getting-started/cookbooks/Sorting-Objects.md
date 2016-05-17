@@ -1,12 +1,15 @@
 ---
-title: Classificação de objetos
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
+title:  Classificação de objetos
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8530caa8-3ed4-4c56-aed7-1295dd9ba199
 ---
+
 # Classificação de objetos
 É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet **Sort-Object**. O **Sort-Object** obtém o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
 
@@ -50,6 +53,6 @@ Wanarp         Running    True Remote Access IP ARP Driver
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

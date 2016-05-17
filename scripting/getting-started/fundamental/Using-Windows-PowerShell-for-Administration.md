@@ -1,12 +1,15 @@
 ---
-title: Usando o Windows PowerShell para Administração
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: db6334ec-ace6-436d-ab88-77aefc817511
+title:  Usando o Windows PowerShell para Administração
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  db6334ec-ace6-436d-ab88-77aefc817511
 ---
+
 # Usando o Windows PowerShell para Administração
 O objetivo fundamental do Windows PowerShell é fornecendo um controle administrativo melhor e mais fácil sobre os sistemas, seja interativamente ou de script. Este capítulo apresenta soluções para muitos problemas específicos na administração de sistemas do Windows com o Windows PowerShell. Embora ainda não tenhamos abordado scripts ou funções no Guia do Usuário do Windows PowerShell, as soluções podem ser usadas de scripts ou como funções posteriormente. Mostraremos exemplos que incluem funções como parte da solução para resolver problemas.
 
@@ -14,6 +17,6 @@ Durante toda as descrições da solução, você verá uma mistura de soluções
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

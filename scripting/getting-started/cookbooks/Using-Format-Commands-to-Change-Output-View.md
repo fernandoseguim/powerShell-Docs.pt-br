@@ -1,12 +1,15 @@
 ---
-title: Usando comandos de formatação para alterar a exibição de saída
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
+title:  Usando comandos de formatação para alterar a exibição de saída
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  63515a06-a6f7-4175-a45e-a0537f4f6d05
 ---
+
 # Usando comandos de formatação para alterar a exibição de saída
 O Windows PowerShell tem um conjunto de cmdlets que permite controlar quais propriedades são exibidas para objetos específicos. Os nomes de todos os cmdlets começam com o verbo **Format**. Eles permitem selecionar uma ou mais propriedades para mostrar.
 
@@ -212,6 +215,6 @@ powershell 2656 C:\Program Files\Windows PowerShell\v1.0\powershell.exe
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Recurso nxGroup de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxGroup de DSC para Linux
 
 O recurso **nxGroup** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar grupos locais em um nó do Linux.
@@ -54,4 +65,9 @@ nxGroup GroupExample{
 }
 }
 ```
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

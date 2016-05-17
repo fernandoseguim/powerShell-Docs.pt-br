@@ -1,12 +1,15 @@
 ---
-title: Noções básicas do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
+title:  Noções básicas do Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6b3cbbc8-060c-4877-b00b-7300dbbe4e28
 ---
+
 # Noções básicas do Windows PowerShell
 Interfaces do usuário gráficas usam alguns conceitos básicos que são conhecidos para a maioria dos usuários do computador. Os usuários contam com a familiaridade dessas interfaces para realizar tarefas. Sistemas operacionais apresentam aos usuários uma representação gráfica dos itens que pode ser navegados, geralmente com menus suspensos para acessar os menus de contexto e funcionalidade específicas para acessar a funcionalidade específica ao contexto.
 
@@ -28,6 +31,6 @@ O Windows PowerShell foi projetado para aproveitar o conhecimento histórico de 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Trabalhando com impressoras
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
+title:  Trabalhando com impressoras
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  4f29ead3-f83b-4706-ac3e-f2154ff38dc5
 ---
+
 # Trabalhando com impressoras
 Você pode usar o Windows PowerShell para gerenciar impressoras usando o WMI e o objeto COM WScript.Network do WSH. Usaremos uma combinação das duas ferramentas para demonstrar as tarefas específicas.
 
@@ -54,6 +57,6 @@ Para remover uma conexão de impressora, use o método **WScript.Network RemoveP
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

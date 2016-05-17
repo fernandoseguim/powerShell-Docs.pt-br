@@ -1,12 +1,15 @@
 ---
-title: Compreendendo o Pipeline do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
+title:  Compreendendo o Pipeline do Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6be50926-7943-4ef7-9499-4490d72a63fb
 ---
+
 # Compreendendo o Pipeline do Windows PowerShell
 O redirecionamento funciona praticamente em qualquer lugar no Windows PowerShell. Embora você veja o texto na tela, o Windows PowerShell não redireciona o texto entre comandos. Em vez disso, ele redireciona os objetos.
 
@@ -62,6 +65,6 @@ O restante deste capítulo discute como é possível pode descobrir a estrutura 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

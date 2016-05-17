@@ -1,12 +1,15 @@
 ---
-title: Trabalhando com chaves do Registro
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
+title:  Trabalhando com chaves do Registro
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  91bfaecd-8684-48b4-ad86-065dfe6dc90a
 ---
+
 # Trabalhando com chaves do Registro
 Como as chaves do Registro são itens em unidades do Windows PowerShell, trabalhar com elas é muito semelhante a trabalhar com arquivos e pastas. Uma diferença fundamental é que cada item em uma unidade do Windows PowerShell com base no Registro é um contêiner, assim como uma pasta em uma unidade de sistema de arquivos. No entanto, as entradas do Registro e seus valores associados são propriedades de itens, não itens distintos.
 
@@ -117,6 +120,6 @@ Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

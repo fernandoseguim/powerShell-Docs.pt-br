@@ -1,3 +1,14 @@
+---
+title:   Recurso nxFileLine de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxFileLine de DSC para Linux
 
 O recurso **nxFileLine** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar linhas dentro de um arquivo de configuração em um nó do Linux.
@@ -39,4 +50,8 @@ nxFileLine DoNotRequireTTY
 } 
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=May16_HO3-->
+
+

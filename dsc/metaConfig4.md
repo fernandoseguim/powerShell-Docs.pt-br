@@ -1,3 +1,14 @@
+---
+title:   Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -61,4 +72,10 @@ Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 
 > **Observação**: para o parâmetro **Path**, você deve especificar o mesmo caminho que especificou para o parâmetro **OutputPath** quando chamou a configuração no exemplo anterior.
 
-Para ver as configurações do Gerenciador de Configurações Local atual, você pode usar o cmdlet **Get-DscLocalConfigurationManager**. Se você invocar esse cmdlet sem parâmetros, ele receberá, por padrão, as configurações do Gerenciador de Configurações Local para o nó no qual será executado. Para especificar outro nó, use o parâmetro **CimSession** com esse cmdlet.<!--HONumber=Feb16_HO4-->
+Para ver as configurações do Gerenciador de Configurações Local atual, você pode usar o cmdlet **Get-DscLocalConfigurationManager**. Se você invocar esse cmdlet sem parâmetros, ele receberá, por padrão, as configurações do Gerenciador de Configurações Local para o nó no qual será executado. Para especificar outro nó, use o parâmetro **CimSession** com esse cmdlet.
+
+
+
+<!--HONumber=May16_HO3-->
+
+

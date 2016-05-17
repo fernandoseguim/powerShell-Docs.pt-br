@@ -1,3 +1,14 @@
+---
+title:   Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -18,6 +29,7 @@ A Configuração de Estado Desejado (DSC) do Windows PowerShell vem com um conju
 * [Recurso WindowsProcess](windowsProcessResource.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

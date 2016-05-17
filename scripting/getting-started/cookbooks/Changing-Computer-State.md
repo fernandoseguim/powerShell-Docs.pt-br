@@ -1,12 +1,15 @@
 ---
-title: Alterando o estado do computador
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
+title:  Alterando o estado do computador
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8093268b-27f8-4a49-8871-142c5cc33f01
 ---
+
 # Alterando o estado do computador
 Para redefinir um computador no Windows PowerShell, use uma ferramenta de linha de comando padrão ou uma classe WMI. Embora você esteja usando o Windows PowerShell somente para executar a ferramenta, aprender como alterar o estado de energia do computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com ferramentas externas no Windows PowerShell.
 
@@ -59,6 +62,6 @@ Para reiniciar sistema operacional, use o método Win32Shutdown com o sinalizado
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

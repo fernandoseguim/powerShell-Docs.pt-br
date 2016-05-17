@@ -1,12 +1,15 @@
 ---
-title: Coletando informações sobre computadores
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
+title:  Coletando informações sobre computadores
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
 ---
+
 # Coletando informações sobre computadores
 **Get-WmiObject** é o cmdlet mais importante para as tarefas gerais de gerenciamento do sistema. Todas as configurações do subsistema críticas são expostas por meio do WMI. Além disso, o WMI trata dados como objetos que são coleções de um ou mais itens. Como o Windows PowerShell também funciona com objetos e tem um pipeline que permite tratar objetos únicos ou vários objetos da mesma forma, o acesso ao WMI genérico permite executar algumas tarefas avançadas com pouquíssimo trabalho.
 
@@ -220,6 +223,6 @@ Get-WmiObject -Class Win32_Service -ComputerName . | Format-Table -Property Stat
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Recurso nxArchive de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxArchive de DSC para Linux
 
 O recurso **nxArchive** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para descompactar arquivos mortos (.tar, .zip) em um caminho específico em um nó do Linux.
@@ -51,4 +62,9 @@ nxArchive SyncWebDir
    DependsOn = "[nxFile]SyncArchiveFromWeb"
 } 
 ```
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

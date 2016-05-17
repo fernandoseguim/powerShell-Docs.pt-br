@@ -1,3 +1,14 @@
+---
+title:   Recurso nxService de DSC para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recurso nxService de DSC para Linux
 
 O recurso **nxService** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar serviços em um nó do Linux.
@@ -48,4 +59,9 @@ Controller = "systemd"
 }
 }
 ```
-<!--HONumber=Mar16_HO1-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+
