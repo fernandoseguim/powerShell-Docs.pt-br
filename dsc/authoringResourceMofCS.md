@@ -2,9 +2,9 @@
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Normalmente, um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell é implementado em um script do PowerShell. No entanto, também é possível implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em C#. Para obter uma introdução sobre como escrever cmdlets em C#, consulte [Escrevendo um Cmdlet do Windows PowerShell](https://technet.microsoft.com/en-us/library/dd878294.aspx).
+Normalmente, um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell é implementado em um script do PowerShell. No entanto, também é possível implementar a funcionalidade de um recurso personalizado de DSC escrevendo cmdlets em C#. Para obter uma introdução sobre como escrever cmdlets em C#, consulte [Writing a Windows PowerShell Cmdlet](https://technet.microsoft.com/en-us/library/dd878294.aspx) (Escrevendo um cmdlet do Windows PowerShell).
 
-Além de implementar o recurso em C# como cmdlets, o processo de criar o esquema MOF, criando a estrutura de pastas, importar e usar o recurso personalizado de DSC é igual ao descrito em [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md).
+Com exceção da implementação do recurso em C# como cmdlets, o processo de criar o esquema MOF, criar a estrutura de pastas, importar e usar o recurso de DSC personalizado é igual ao descrito em [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md).
 
 ## Escrevendo um recurso baseado em cmdlet
 Para este exemplo, vamos implementar um recurso simples que gerencia um arquivo de texto e seu conteúdo.
@@ -150,6 +150,7 @@ O arquivo dll compilado deve ser salvo em uma estrutura de arquivos semelhante a
 ```
 $env: psmodulepath (folder)
     |- MyDscResources (folder)
+        |- MyDscResources.psd1 (file, required)     
         |- DSCResources (folder)
             |- MSFT_XDemoFile (folder)
                 |- MSFT_XDemoFile.psd1 (file, optional)
@@ -161,4 +162,9 @@ $env: psmodulepath (folder)
 #### Conceitos
 [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
 #### Outros recursos
-[Escrevendo um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)<!--HONumber=Feb16_HO4-->
+[Escrevendo um Cmdlet do Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)
+
+
+<!--HONumber=May16_HO2-->
+
+
