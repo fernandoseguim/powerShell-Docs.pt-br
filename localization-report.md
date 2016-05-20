@@ -7,9 +7,9 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 9
+[ Archive Success Files ](#archive-success-list)| 5
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 160
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 164
 [ In Sync Handback Files ](#insync-handback-success-list)| 135
 [ Ignored Files ](#ignored-list)| 14
 
@@ -22,11 +22,7 @@
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [scripting\core-powershell\core-modules\Microsoft.WSMan.Management-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.WSMan.Management-Module.md) | ArchivedSuccess | [Details](#49a97d15fdef0d7fa60e94636fc200e8f70943f7108)
- [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md) | ArchivedSuccess | [Details](#f6b1ca1a3253c941c76826c6644079a14f19ddcf116)
  [scripting\core-powershell\ise\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) | ArchivedSuccess | [Details](#07f7fb6b4e5d94de31551566ca8faff263817383122)
- [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | ArchivedSuccess | [Details](#1c1534bc37d0a53262caffdfa60400e1ff8d98e7124)
- [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md) | ArchivedSuccess | [Details](#811cdcc3466d366f89fe43b90f928019d7405039131)
  [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | ArchivedSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb6639748201)
  [scripting\PowerShell-Scripting.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/PowerShell-Scripting.md) | ArchivedSuccess | [Details](#5398df704bc69fc4f333e23b5d9f21efc0859dff215)
  [scripting\setup\Installing-the-Windows-PowerShell-SDK.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Installing-the-Windows-PowerShell-SDK.md) | ArchivedSuccess | [Details](#9ba9ef3efe6a8ae85d96b59db53ad3a16bf57699218)
@@ -99,6 +95,7 @@
  [scripting\core-powershell\core-modules\Microsoft.PowerShell.Management-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.PowerShell.Management-Module.md) | OutofSyncHandedBackSuccess | [Details](#d62bf183f2b80c8ff7bc279124dc10ef72fdf5ff105)
  [scripting\core-powershell\core-modules\Microsoft.PowerShell.ODataUtils-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.PowerShell.ODataUtils-Module.md) | OutofSyncHandedBackSuccess | [Details](#ad4433d14277a6e10906ee74a765504cede12587106)
  [scripting\core-powershell\core-modules\Microsoft.PowerShell.Utility-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.PowerShell.Utility-Module.md) | OutofSyncHandedBackSuccess | [Details](#215d1e2d0eb17967552143635a5413681907fc50107)
+ [scripting\core-powershell\core-modules\Microsoft.WSMan.Management-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.WSMan.Management-Module.md) | OutofSyncHandedBackSuccess | [Details](#49a97d15fdef0d7fa60e94636fc200e8f70943f7108)
  [scripting\core-powershell\core-modules\PackageManagement-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PackageManagement-Module.md) | OutofSyncHandedBackSuccess | [Details](#dfca9909da78dc45cd72cbfaff5ab4c441762c60109)
  [scripting\core-powershell\core-modules\PSLocalAccount5-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PSLocalAccount5-Module.md) | OutofSyncHandedBackSuccess | [Details](#130368e634668b7229f1c1423c946ae4b0a65466110)
  [scripting\core-powershell\core-modules\PSReadline-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PSReadline-Module.md) | OutofSyncHandedBackSuccess | [Details](#7f9bcbbf683e0cda8ec9dbb87f28fa46a7473ca1111)
@@ -106,15 +103,18 @@
  [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md) | OutofSyncHandedBackSuccess | [Details](#3e9ba43162afb7b689bf92883f2347c2c8551ea2113)
  [scripting\core-powershell\core-modules\Windows-PowerShell-5.0.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-5.0.md) | OutofSyncHandedBackSuccess | [Details](#8adf724740b2f09bff6d5cafb822566f4747780c114)
  [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md) | OutofSyncHandedBackSuccess | [Details](#cc44c1deb8c3162b0d2188c2af313bf064290267115)
+ [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md) | OutofSyncHandedBackSuccess | [Details](#f6b1ca1a3253c941c76826c6644079a14f19ddcf116)
  [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-powershell.md) | OutofSyncHandedBackSuccess | [Details](#897702d56a14657881121890f2283f50bdc2d517117)
  [scripting\core-powershell\ise\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#8af4de973a95352fd41d2bb2823b9382899ef5bf119)
  [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#c6d79fc7ef5a896bb3b686468adb540d4327605e120)
  [scripting\core-powershell\ise\How-to-Use-Profiles-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#a8b729612c54e5f0f95497a71a192f16e2a9d32a121)
  [scripting\core-powershell\ise\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#29e73b1bfd8efea2b53299c52bf65117f7c535f5123)
+ [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#1c1534bc37d0a53262caffdfa60400e1ff8d98e7124)
  [scripting\core-powershell\ise\Introducing-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#64afa8599f29279798445a5694fe467143d29bec125)
  [scripting\core-powershell\ise\ISE-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/ISE-Module.md) | OutofSyncHandedBackSuccess | [Details](#750253273ca2b97085fef1de695d6011057d6846126)
  [scripting\core-powershell\ise\Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#df4fc6e4a501bc7cbeae83b6bf90f05544c6a6ac127)
  [scripting\core-powershell\ise\Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md) | OutofSyncHandedBackSuccess | [Details](#41c508e7aebc3501f29be7246ca817f95180ef2f128)
+ [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md) | OutofSyncHandedBackSuccess | [Details](#811cdcc3466d366f89fe43b90f928019d7405039131)
  [scripting\core-powershell\ise\The-ISEAddOnTool-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEAddOnTool-Object.md) | OutofSyncHandedBackSuccess | [Details](#44b218200e4207fba059ce63adabec924fe6eb1d130)
  [scripting\core-powershell\ise\The-ISEEditor-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEEditor-Object.md) | OutofSyncHandedBackSuccess | [Details](#4812092dea24fa61245af7e06d1c5924ec812218132)
  [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEFileCollection-Object.md) | OutofSyncHandedBackSuccess | [Details](#c334a38d6686be45101f4569f38411e9703c8fea134)
@@ -1407,9 +1407,9 @@
 * Archive Datetime: 2016-05-17 13:27:01
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/f4f3de266f0e5409cf9b7d273d3532a93b17a795/dsc/pullServer.md)
-* Current Handback File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/8f38a461bac3997b6e9cefc1ad5f94e991d166b5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.pt-br.xlf)
-* Current Handback Datetime: 2016-05-09 22:06:29
+* Current Target File: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/dsc/pullServer.md)
+* Current Handback File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.pt-br.xlf)
+* Current Handback Datetime: 2016-05-20 11:30:15
 * [Back to Top](#report-top)
 
 ##### <a name='35ac9b38086b12fb48844c56a488854f63529e2177'></a> Source: [dsc\pullServerSMB.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullServerSMB.md)
@@ -1842,7 +1842,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='49a97d15fdef0d7fa60e94636fc200e8f70943f7108'></a> Source: [scripting\core-powershell\core-modules\Microsoft.WSMan.Management-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Microsoft.WSMan.Management-Module.md)
-* Status: ArchivedSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e4b80aa630fb9f78f9384b705bd021dff7e6c363/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.pt-br.xlf)
 * Handoff Datetime: 2016-05-12 23:24:54
@@ -1851,6 +1851,9 @@
 * Archive Datetime: 2016-05-17 13:27:01
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\core-powershell\core-modules\Microsoft.WSMan.Management-Module.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/scripting/core-powershell/core-modules/Microsoft.WSMan.Management-Module.md)
+* Current Handback File: [Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.pt-br.xlf)
+* Current Handback Datetime: 2016-05-20 11:30:15
 * [Back to Top](#report-top)
 
 ##### <a name='dfca9909da78dc45cd72cbfaff5ab4c441762c60109'></a> Source: [scripting\core-powershell\core-modules\PackageManagement-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PackageManagement-Module.md)
@@ -1959,7 +1962,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f6b1ca1a3253c941c76826c6644079a14f19ddcf116'></a> Source: [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md)
-* Status: ArchivedSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e4b80aa630fb9f78f9384b705bd021dff7e6c363/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.pt-br.xlf)
 * Handoff Datetime: 2016-05-12 23:24:54
@@ -1968,6 +1971,9 @@
 * Archive Datetime: 2016-05-17 13:27:01
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md)
+* Current Handback File: [Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.pt-br.xlf)
+* Current Handback Datetime: 2016-05-20 11:30:15
 * [Back to Top](#report-top)
 
 ##### <a name='897702d56a14657881121890f2283f50bdc2d517117'></a> Source: [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-powershell.md)
@@ -2058,7 +2064,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='1c1534bc37d0a53262caffdfa60400e1ff8d98e7124'></a> Source: [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
-* Status: ArchivedSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e4b80aa630fb9f78f9384b705bd021dff7e6c363/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
 * Handoff Datetime: 2016-05-12 23:24:54
@@ -2067,6 +2073,9 @@
 * Archive Datetime: 2016-05-17 13:27:01
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
+* Current Handback File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
+* Current Handback Datetime: 2016-05-20 11:30:15
 * [Back to Top](#report-top)
 
 ##### <a name='64afa8599f29279798445a5694fe467143d29bec125'></a> Source: [scripting\core-powershell\ise\Introducing-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
@@ -2130,7 +2139,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='811cdcc3466d366f89fe43b90f928019d7405039131'></a> Source: [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md)
-* Status: ArchivedSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [The-ISEAddOnToolCollection-Object.a3f1b3c62b9fdabc22f8b0eecd511c74b8556c6d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e4b80aa630fb9f78f9384b705bd021dff7e6c363/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISEAddOnToolCollection-Object.a3f1b3c62b9fdabc22f8b0eecd511c74b8556c6d.pt-br.xlf)
 * Handoff Datetime: 2016-05-12 23:24:54
@@ -2139,6 +2148,9 @@
 * Archive Datetime: 2016-05-17 13:27:01
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md)
+* Current Handback File: [The-ISEAddOnToolCollection-Object.a3f1b3c62b9fdabc22f8b0eecd511c74b8556c6d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEAddOnToolCollection-Object.a3f1b3c62b9fdabc22f8b0eecd511c74b8556c6d.pt-br.xlf)
+* Current Handback Datetime: 2016-05-20 11:30:15
 * [Back to Top](#report-top)
 
 ##### <a name='44b218200e4207fba059ce63adabec924fe6eb1d130'></a> Source: [scripting\core-powershell\ise\The-ISEAddOnTool-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEAddOnTool-Object.md)
