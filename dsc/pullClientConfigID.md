@@ -4,7 +4,7 @@
 
 Cada nó de destino deve ser instruído a usar o modo de pull e receber a URL em que possa contatar o servidor de pull para obter as configurações. Para fazer isso, você precisa configurar o Gerenciador de Configurações Local (LCM) com as informações necessárias. Para configurar o LCM, é criado um tipo especial de configuração, com diminuição da potência com o atributo **DSCLocalConfigurationManager**. Para obter mais informações sobre como configurar o LCM, consulte [Configuring the Local Configuration Manager](metaConfig.md) (Configurando o Gerenciador de Configurações Local).
 
-> **Observação**: este tópico se aplica ao PowerShell 5.0. Para obter informações sobre como configurar um cliente de pull no PowerShell 4.0, consulte [Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md).
+> **Observação**: este tópico se aplica ao PowerShell 5.0. Para obter informações sobre como configurar um cliente de pull no PowerShell 4.0, consulte [Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md)
 
 O script a seguir configura o LCM para efetuar o pull de configurações de um servidor chamado "CONTOSO-PullSrv".
 
@@ -31,7 +31,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-No script, o bloco **ConfigurationRepositoryWeb** define o servidor de pull. O **ServerURL**
+No script, o bloco **ConfigurationRepositoryWeb** define o servidor de pull. A **ServerURL**
 
 Depois de ser executado, esse script cria uma nova pasta de saída denominada **PullClientConfigID** e coloca um arquivo MOF de metaconfiguração nela. Nesse caso, o arquivo MOF de metaconfiguração será nomeado `localhost.meta.mof`.
 
