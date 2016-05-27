@@ -1,35 +1,41 @@
+---
+title:   Usando DSC no Nano Server
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Usando DSC no Nano Server
 
 > Aplica-se a: Windows PowerShell 5.0
 
-**DSC no Nano Server** é um pacote opcional na pasta `NanoServer\Packages` de mídia do Windows Server 2016. O pacote pode ser instalado quando você cria um VHD para um Nano Server ao
-especificar **Microsoft-NanoServer-DSC-Package** como o valor do parâmetro **Packages** da função **New-NanoServerImage**. Por exemplo, se você estiver criando um VHD para uma máquina virtual,
-o comando seria parecido com este:
+**DSC no Nano Server** é um pacote opcional na pasta `NanoServer\Packages` de mídia do Windows Server 2016. O pacote pode ser instalado quando você cria um VHD para um Nano Server especificando **Microsoft-NanoServer-DSC-Package** como o valor do parâmetro **Packages** da função **New-NanoServerImage**. Por exemplo, se você estivesse criando um VHD para uma máquina virtual, o comando seria semelhante ao seguinte:
 
 ```powershell
 New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1 -Packages Microsoft-NanoServer-DSC-Package
 ```
 
-Para obter informações sobre como instalar e usar o Nano Server, bem como gerenciar o Nano Server com a comunicação remota do PowerShell, consulte 
-[Introdução ao Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx).
+Para saber mais sobre como instalar e usar o Nano Server, bem como gerenciar o Nano Server com a comunicação remota do PowerShell, confira [Getting Started with Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx) (Introdução ao Nano Server).
 
 
 ## Recursos de DSC disponíveis no Nano Server
 
- Como o Nano Server dá suporte a apenas um conjunto limitado de APIs em comparação com uma versão completa do Windows Server, o DSC no Nano Server não tem paridade funcional completo com DSC em execução em 
- SKUs completas por enquanto. O DSC no Nano Server está em desenvolvimento ativo e ainda não é um recurso completo.
+ Como o Nano Server permite apenas um conjunto limitado de APIs em comparação com uma versão completa do Windows Server, por enquanto, o DSC no Nano Server não tem paridade funcional completa com DSC em execução em SKUs completas. O DSC no Nano Server está em desenvolvimento ativo e ainda não é um recurso completo.
  
  Os recursos de DSC a seguir estão disponíveis atualmente no Nano Server: 
 
 
 * Nos modos push e pull
+
 * Todos os cmdlets de DSC que existem em uma versão completa do Windows Server, incluindo o seguinte: 
   * [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-  * [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)
-        
+  * [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx)   
   * [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx)
-  * [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx)
-        
+  * [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx)       
   * [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx)
   * [Stop-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143542.aspx)
   * [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx)
@@ -37,56 +43,79 @@ Para obter informações sobre como instalar e usar o Nano Server, bem como gere
   * [Publish-DscConfiguraiton](https://technet.microsoft.com/en-us/library/mt517875.aspx) 
   * [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541.aspx)
   * [Restore-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407383.aspx)
-
   * [Remove-DscConfigurationDocument](https://technet.microsoft.com/en-us/library/mt143544.aspx)
-    
   * [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx)
-        
   * [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx)
   * [Find-DscResource](https://technet.microsoft.com/en-us/library/mt517874.aspx)
   * [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)
+  * [New-DscChecksum](https://technet.microsoft.com/en-us/library/dn521622.aspx)    
 
-  * [New-DscChecksum](https://technet.microsoft.com/en-us/library/dn521622.aspx)
-    
-* Compilando configurações (consulte [Configurações de DSC](configurations.md))
-* Compilando metaconfigurações (consulte [Configurando o Gerenciador de Configurações Local](metaConfig.md))
-* [Executar DSC com credenciais do usuário (RunAs)](runAsUser.md)
-* Recursos baseados em classe (consulte [Escrevendo um recurso DSC personalizado com classes do PowerShell](authoringResourceClass.md))
+* Compilação de configurações (confira [Configurações DSC](configurations.md))
+
+  **Problema:** a criptografia de senha (confira [Protegendo o arquivo MOF](securemof.md)) durante a compilação da configuração não funciona.
+
+* Compilação de metaconfigurações (confira [Configurando o Gerenciador de Configurações Local](metaConfig.md))
+
+* Execução de um recurso no contexto do usuário (confira [Executar DSC com as credenciais do usuário (RunAs)](runAsUser.md))
+
+* Recursos baseados em classe (confira [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md))
+
+* Depuração dos recursos de DSC (confira [Depurando os recursos de DSC](debugresource.md))
+  
+  **Problema:** não funciona se um recurso estiver usando PsDscRunAsCredential (confira [Executar DSC com as credenciais do usuário](runAsUser.md))
+
 * [Especificando dependências de nó cruzado](crossNodeDependencies.md) 
+
 * [Controle de versão do recurso](sxsResource.md)
-* Eventos
-* Cliente de pull (configurações e recursos) (veja [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md))
+
+* Cliente de pull (configurações e recursos) (confira [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md))
+
 * [Configurações parciais (pull e push)](partialConfigs.md)
+
 * [Relatórios para o servidor de pull](reportServer.md) 
+
 * Criptografia do MOF
+
 * Registro em log de eventos
+
 * Relatórios de DSC de automação do Azure
 
-
-* Recursos que funcionam
+* Recursos que são totalmente funcionais
   * [Archive](archiveResource.md)
   * [Ambiente](environmentResource.md)
   * [Arquivo](fileResource.md)
-  * [Grupo](groupResource.md)
-  * GroupSet
   * [Log](logResource.md)
   * ProcessSet
   * [Registro](registryResource.md)
-  * [Serviço](serviceResource.md)
-  * ServiceSet
   * [script](scriptResource.md)
-  * [User](userResource.md)
   * WindowsPackageCab
   * [WindowsProcess](windowsProcessResource.md)
+  * WaitForAll (confira [Especificação de dependências de nó cruzado](crossNodeDependencies.md))
+  * WaitForAny (confira [Especificação de dependências de nó cruzado](crossNodeDependencies.md))
+  * WaitForSome (confira [Especificação de dependências de nó cruzado](crossNodeDependencies.md))
 
-  * WaitForAll (veja [Especificando dependências de nó cruzado](crossNodeDependencies.md))
-  * WaitForAny (veja [Especificando dependências de nó cruzado](crossNodeDependencies.md))
-  * WaitForSome (veja [Especificando dependências de nó cruzado](crossNodeDependencies.md))
+* Recursos que são parcialmente funcionais
+  * [Grupo](groupResource.md)
+  * GroupSet
+  
+  **Problema:** os recursos acima falharão se a instância for chamada duas vezes (executando a mesma configuração duas vezes)
+  
+  * [Serviço](serviceResource.md)
+  * ServiceSet
+  
+  **Problema:** só funciona para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
+  
+  *Não é possível localizar o tipo [management.managementobject]: verifique se o assembly que contém esse tipo é carregado.*
+  
+* Recursos que não são funcionais
+  * [User](userResource.md)
+  
 
 ## Recursos de DSC não disponíveis no Nano Server
 
 Os recursos de DSC a seguir não estão disponíveis atualmente no Nano Server:
 
+* Descriptografando documento MOF com senhas criptografadas 
 * Servidor de pull -- no momento não é possível definir um servidor de pull no Nano Server
 * Tudo o que não está na lista de recursos funciona
 
@@ -98,6 +127,8 @@ Conclua completamente o teste antes de implantar qualquer recurso personalizado 
 ## Consulte Também
 - [Introdução ao Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx)
 
-<!--HONumber=Apr16_HO4-->
+
+
+<!--HONumber=May16_HO3-->
 
 

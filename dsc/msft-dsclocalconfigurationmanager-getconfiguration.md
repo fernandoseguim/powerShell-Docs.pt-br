@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Envia o documento de configuração para o nó gerenciado e usa o Agente de Configuração para aplicar a configuração usando o método Get.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Método GetConfiguration da classe MSFT_DSCLocalConfigurationManager'
+title:  Método GetConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Método GetConfiguration da classe MSFT_DSCLocalConfigurationManager
@@ -26,7 +29,7 @@ Parâmetros
 *configurationData* \[in\]  
 Especifica os dados de configuração para envio.
 
-*configurações* \[out\]  
+*configurations* \[out\]  
 No retorno, contém uma instância incorporada das configurações.
 
 ## Retornar valor
@@ -57,6 +60,6 @@ Esse é um método estático.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

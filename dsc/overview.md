@@ -1,3 +1,14 @@
+---
+title:   Visão Geral da Configuração de Estado Desejado do Windows PowerShell 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Visão Geral da Configuração de Estado Desejado do Windows PowerShell 
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -30,7 +41,7 @@ A DSC é uma plataforma declarativa usada para configuração, implantação e g
 * Recursos são os blocos de construção fundamentais da DSC, escritos para modelar os vários componentes de um subsistema e implementar o fluxo de controle de seus estados mutáveis. Residem dentro de módulos do PowerShell e podem ser escritos para modelar algo tão genérico quanto um arquivo ou um processo do Windows ou tão específico quanto um servidor IIS ou em uma VM em execução no Azure.
 * O Gerenciador de Configurações Local (LCM) é o mecanismo pelo qual a DSC facilita a interação entre recursos e configurações. Regularmente, o LCM sonda o sistema usando o fluxo de controle implementado pelos recursos para garantir que o estado disposto por uma Configuração seja mantido. Se o sistema estiver sem estado, o LCM usará mais lógica dentro dos recursos para “realizar”, de acordo com a declaração de Configuração. 
 
-A DSC também inclui uma série de novas palavras-chave, cmdlets e ferramentas de linguagem que permitem a criação de configurações, ajudam a criar recursos de DSC, invocar as configurações e gerenciar o LCM. Muitos desses cmdlets podem ser encontrados no Windows 8.1 como parte do módulo PsDesiredStateConfig (incluindo `Start-DscConfiguration`, `Set-DscLocalConfigurationManager` e `Get-DscResource`). O xDscResourceDesigner (encontrado na [Galeria do PowerShell](https://www.powershellgallery.com/packages/xDSCResourceDesigner/)) é uma coleção de cmdlets que simplificam o desenvolvimento de recursos de DSC.
+A DSC também inclui uma série de novas palavras-chave, cmdlets e ferramentas de linguagem que permitem a criação de configurações, ajudam a criar recursos de DSC, invocar as configurações e gerenciar o LCM. Muitos desses cmdlets podem ser encontrados no Windows 8.1 como parte do módulo PSDesiredStateConfiguration (incluindo `Start-DscConfiguration`, `Set-DscLocalConfigurationManager` e `Get-DscResource`). O xDscResourceDesigner (encontrado na [Galeria do PowerShell](https://www.powershellgallery.com/packages/xDSCResourceDesigner/)) é uma coleção de cmdlets que simplificam o desenvolvimento de recursos de DSC.
 
 ## Consulte Também
 * [Configurações DSC](configurations.md)
@@ -39,6 +50,6 @@ A DSC também inclui uma série de novas palavras-chave, cmdlets e ferramentas d
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

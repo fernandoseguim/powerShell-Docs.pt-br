@@ -1,12 +1,15 @@
 ---
-title: Sobre o Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
+title:  Sobre o Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  979654ae-7994-47f8-be43-d79e7a140143
 ---
+
 # Sobre o Windows PowerShell
 O Windows PowerShell foi projetado para melhorar o ambiente de script e de linha de comando eliminando problemas antigos e adicionando novos recursos.
 
@@ -14,19 +17,18 @@ O Windows PowerShell foi projetado para melhorar o ambiente de script e de linha
 O Windows PowerShell facilita a descoberta dos seus recursos. Por exemplo, para localizar uma lista de cmdlets que exibem e alteram os serviços do Windows, digite:
 
 ```
-get-command *-service
+Get-Command *-Service
 ```
 
 Depois de descobrir qual cmdlet realiza uma tarefa, você pode aprender mais sobre o ele usando o cmdlet Get-Help. Por exemplo, para exibir ajuda para o cmdlet Get-Service, digite:
 
 ```
-get-help get-service
+Get-Help Get-Service
 ```
-
-Para entender completamente a saída desse cmdlet, direcione a saída para o cmdlet Get-Member. Por exemplo, o comando a seguir exibe informações sobre os membros do objeto de saída pelo cmdlet Get-Member.
+A maioria dos cmdlets emite objetos que podem ser manipulados e renderizados no texto para exibição. Para entender completamente a saída desse cmdlet, direcione a saída para o cmdlet Get-Member. Por exemplo, o comando a seguir exibe informações sobre os membros do objeto de saída pelo cmdlet Get-Member.
 
 ```
-get-service | get-member
+Get-Service | Get-Member
 ```
 
 ## Consistência
@@ -51,6 +53,6 @@ O Windows PowerShell torna fácil a transição da digitação de comandos inter
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

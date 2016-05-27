@@ -1,3 +1,14 @@
+---
+title:   Configurando o Gerenciador de Configurações Local
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurando o Gerenciador de Configurações Local
 
 > Aplica-se a: Windows PowerShell 5.0
@@ -11,7 +22,7 @@ O Gerenciador de Configurações Local (LCM) é o mecanismo da Configuração de
 
 Um tipo especial de configuração é utilizado para configurar o LCM para especificar cada um desses comportamentos. As seções a seguir descrevem como configurar o LCM.
 
-> **Observação**: este tópico se aplica ao LCM introduzido no Windows PowerShell 5.0. Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, consulte o Gerenciador de Configurações Local de Configuração de Estado Desejado do Windows PowerShell 4.0.
+> **Observação**: este tópico se aplica ao LCM introduzido no Windows PowerShell 5.0. Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, consulte o [Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0](metaconfig4.md).
 
 ## Escrevendo e aplicando uma configuração do LCM
 
@@ -31,7 +42,7 @@ configuration LCMConfig
 } 
 ```
 
-Você chama e executa a configuração para criar o MOF de configuração, como faria com uma configuração normal (para obter informações sobre como criar o MOF de configuração, consulte Introdução à Configuração de Estado Desejado do Windows PowerShell). Ao contrário de configurações normais, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Em vez disso, chama o cmdlet Set-DscLocalConfigurationManager, fornecendo o caminho até o MOF de configuração como parâmetro. Depois de aplicar a configuração, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Você chama e executa a configuração para criar o MOF de configuração, como faria com uma configuração normal (para obter informações sobre como criar o MOF de configuração, consulte [Compilando a configuração](configurations#compiling-the-configuration)). Ao contrário de configurações normais, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Em vez disso, você chama o cmdlet [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx), fornecendo o caminho até o MOF de configuração como parâmetro. Depois de aplicar a configuração, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
 Uma configuração do LCM pode conter blocos somente para um conjunto limitado de recursos. No exemplo anterior, o único recurso chamado é **Settings**. Os outros recursos disponíveis são:
 
@@ -138,15 +149,19 @@ Para definir uma configuração parcial, você cria um bloco **PartialConfigurat
 ## Consulte Também 
 
 ### Conceitos
-Introdução à Configuração de Estado Desejado do Windows PowerShell 
+[Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
+ 
 [Configurando um servidor de pull de DSC](pullServer.md) 
+
 [Gerenciador de Configurações Local de Configuração de Estado Desejado do Windows PowerShell 4.0](metaConfig4.md) 
 
 ### Outros recursos
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
+
 [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md) 
 
 
-<!--HONumber=Mar16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

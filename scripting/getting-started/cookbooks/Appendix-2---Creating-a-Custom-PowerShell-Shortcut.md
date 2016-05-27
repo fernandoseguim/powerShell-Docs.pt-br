@@ -1,12 +1,15 @@
 ---
-title: Apêndice 2: Criar um atalho do PowerShell personalizado
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
+title:  Apêndice 2   Criar um atalho do PowerShell personalizado
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5d4fd421-5d43-4ec7-86fd-acfe887b066e
 ---
+
 # Apêndice 2: Criar um atalho do PowerShell personalizado
 O procedimento a seguir descreve como criar um atalho para o Windows PowerShell que tem várias opções convenientes personalizadas.
 
@@ -38,6 +41,6 @@ O procedimento a seguir descreve como criar um atalho para o Windows PowerShell 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

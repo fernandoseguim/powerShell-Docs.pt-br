@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Inicia a verificação de consistência.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_performrequiredconfigurationchecks'
-MSHAttr: 'PreferredLib:/library'
-title: 'Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager'
+title: Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
 
@@ -22,7 +26,7 @@ uint32 PerformRequiredConfigurationChecks(
 Parâmetros
 ----------
 
-*Sinalizadores* \[in\]  
+*Flags* \[in\]  
 Um bitmask que especifica o tipo de verificação de consistência a ser executada. Os seguintes valores são válidos e podem ser combinados usando um operação **OR** bit a bit:
 
 |Valor |Descrição |
@@ -62,6 +66,6 @@ Esse é um método estático.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

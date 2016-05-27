@@ -1,25 +1,29 @@
+---
+title:   Usando um servidor de relatório de DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Usando um servidor de relatório de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
 >**Observação**: o servidor de relatório descrito neste tópico não está disponível no PowerShell 4.0.
 
-O Gerenciador de Configurações Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o status de configuração para um servidor de pull, que, por sua vez, pode ser consultado para recuperar dados. Cada vez que o nó verifica e aplica
-uma configuração, envia um relatório para o servidor de relatório. Esses relatórios são armazenados em um banco de dados no servidor e podem ser recuperados chamando o serviço Web de relatórios. Cada relatório contém
-informações como quais configurações foram aplicadas e se tiveram êxito, os recursos usados, os erros que foram lançados e os horários de início e término.
+O Gerenciador de Configurações Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o status de configuração para um servidor de pull, que, por sua vez, pode ser consultado para recuperar dados. Cada vez que o nó verifica e aplica uma configuração, ele envia um relatório para o servidor de relatório. Esses relatórios são armazenados em um banco de dados no servidor e podem ser recuperados chamando o serviço Web de relatórios. Cada relatório contém informações como quais configurações foram aplicadas e se tiveram êxito, os recursos usados, os erros que foram lançados e os horários de início e término.
 
 ## Configurando um nó para enviar relatórios
 
-Um nó é instruído a enviar relatórios para um servidor usando um bloco **ReportServerWeb** na configuração do LCM do nó (para obter informações sobre como configurar o LCM,
-consulte [Configurando o Gerenciador de Configurações Local](metaConfig.md)). O servidor ao qual o nó envia relatórios deve ser configurado como servidor de pull da Web (não é possível enviar relatórios
-para um compartilhamento SMB). Para obter informações sobre a configuração de um servidor de pull, consulte [Configurando um servidor de pull da Web de DSC](pullServer.md). O servidor de relatório pode ser o mesmo serviço do qual
-o nó efetua pull de configurações e obtém recursos ou pode ser um serviço diferente.
+Um nó é instruído a enviar relatórios para um servidor usando um bloco **ReportServerWeb** na configuração do LCM do nó (para obter informações sobre como configurar o LCM, confira [Configurando o Gerenciador de Configurações Local](metaConfig.md)). O servidor ao qual o nó envia relatórios deve ser configurado como servidor de pull da Web (não é possível enviar relatórios para um compartilhamento SMB). Para obter informações sobre a configuração de um servidor de pull, consulte [Configurando um servidor de pull da Web de DSC](pullServer.md). O servidor de relatório pode ser o mesmo serviço do qual o nó efetua pull de configurações e obtém recursos ou pode ser um serviço diferente.
  
-No bloco **ReportServerWeb**, especifique a URL do serviço de pull
-e uma chave de registro que seja conhecida pelo servidor.
+No bloco **ReportServerWeb**, especifique a URL do serviço de pull e uma chave de Registro que seja conhecida pelo servidor.
  
-A configuração a seguir define um nó para efetuar pull de configurações por meio de um serviço e enviar relatórios
-para um serviço em um servidor diferente. 
+A configuração a seguir define um nó para efetuar pull de configurações por meio de um serviço e enviar relatórios para um serviço em um servidor diferente. 
  
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -88,11 +92,7 @@ PullClientConfig
 
 ## Obtendo dados de relatório
 
-Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço Web. Para recuperar os relatórios de um nó específico, 
-envie uma solicitação HTTP para o serviço Web no relatório a seguir:
-`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` 
-em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios. Pode-se obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-nesse nó.
+Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço Web. Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web no relatório a seguir: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios. É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) no nó em questão.
 
 Os relatórios são gerados como uma matriz de objetos JSON.
 
@@ -160,8 +160,7 @@ $reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-Observe que a propriedade **StatusData** é um objeto com diversas propriedades. É aqui que se encontra grande parte dos dados de relatório. Vamos examinar os campos individuais da
-propriedade **StatusData** do relatório mais recente:
+Observe que a propriedade **StatusData** é um objeto com diversas propriedades. É aqui que se encontra grande parte dos dados de relatório. Vamos observar os campos individuais da propriedade **StatusData** do relatório mais recente:
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -199,8 +198,7 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-Entre outras coisas, isso mostra que a configuração mais recente chamou dois recursos e que um deles estava no estado desejado e outro não estava. É possível obter
-uma saída mais legível apenas da propriedade **ResourcesNotInDesiredState**:
+Entre outras coisas, isso mostra que a configuração mais recente chamou dois recursos e que um deles estava no estado desejado e outro não estava. Você pode obter uma saída mais legível apenas da propriedade **ResourcesNotInDesiredState**:
 
 ```powershell
 $statusData.ResourcesInDesiredState
@@ -218,8 +216,7 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer com os dados de relatório. Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte
-[Brincando com JSON e PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
+Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer com os dados de relatório. Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Playing with JSON and PowerShell (Brincando com JSON e PowerShell)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
 ## Consulte Também
 - [Configurando o Gerenciador de Configurações Local](metaConfig.md)
@@ -227,6 +224,7 @@ Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer c
 - [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
 
 
-<!--HONumber=Apr16_HO1-->
+
+<!--HONumber=May16_HO3-->
 
 

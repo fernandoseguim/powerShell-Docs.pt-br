@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Desabilite a configuração de DSC da depuração.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_disabledebugconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager'
+title:  Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Método DisableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
@@ -51,6 +54,6 @@ Esse é um método estático.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

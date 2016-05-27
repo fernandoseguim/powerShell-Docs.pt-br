@@ -1,3 +1,14 @@
+---
+title:   Introdução à Configuração de Estado Desejado (DSC) para Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Introdução à Configuração de Estado Desejado (DSC) para Linux
 
 Este tópico explica como começar a usar a Configuração de Estado Desejado (DSC) do PowerShell para Linux. Para obter informações gerais sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](overview.md).
@@ -114,7 +125,7 @@ $Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Aut
 * No modo de “push”, a credencial do usuário precisa ser o usuário raiz no computador Linux.
 * Há suporte apenas para conexões SSL/TLS para DSC para Linux; a New-CimSession precisa ser usada com o parâmetro –UseSSL definido como $true.
 * O certificado SSL usado pela OMI (para DSC) é especificado no arquivo: `/opt/omi/etc/omiserver.conf` com as propriedades: pemfile e keyfile.
-Se o computador Windows em que você está executando o cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) não confiar nesse certificado, será possível optar por ignorar a validação do certificado com as Opções de CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
+Se o computador Windows em que você está executando o cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) não confiar nesse certificado, será possível ignorar a validação do certificado com as Opções de CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
 
 Execute o seguinte comando para enviar a configuração DSC por push para o nó do Linux.
 
@@ -173,6 +184,7 @@ Os seguintes arquivos de log são gerados para mensagens da DSC para Linux.
 |dsc.log|/opt/omi/var/log/|Mensagens relacionadas à operação das operações de recurso do Gerenciador de Configurações Local (LCM) e da DSC.|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

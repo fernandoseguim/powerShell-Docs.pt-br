@@ -1,12 +1,15 @@
 ---
-title: Gerenciando processos com os Cmdlets de processo
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
+title:  Gerenciando processos com os Cmdlets de processo
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5038f612-d149-4698-8bbb-999986959e31
 ---
+
 # Gerenciando processos com os Cmdlets de processo
 Você pode usar os cmdlets de processo do Windows PowerShell para gerenciar processos locais e remotos no Windows PowerShell.
 
@@ -174,6 +177,6 @@ O Windows PowerShell também inclui cmdlets para iniciar (ou reiniciar), depurar
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

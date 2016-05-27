@@ -1,12 +1,15 @@
 ---
-title: Obtendo objetos WMI (Get-WmiObject)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
+title:  Obtendo objetos WMI com Get WmiObject 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f0ddfc7d-6b5e-4832-82de-2283597ea70d
 ---
+
 # Obtendo objetos WMI (Get-WmiObject)
 
 ## Obtendo objetos WMI (Get-WmiObject)
@@ -114,8 +117,7 @@ TotalVirtualMemorySize TotalVisibleMem FreePhysicalMem FreeVirtualMemo FreeSpace
         2097024          785904          305808         2056724         1558232
 ```
 
-> [!NOTE]
-> Curingas funcionam com nomes de propriedade no **Format-Table**, portanto, o elemento final do pipeline pode ser reduzido para **Format-Table -Property TotalV, *Free***
+> Os curingas [!NOTE] funcionam com nomes de propriedade em **Format\-Table**, portanto, o elemento final do pipeline pode ser reduzido para **Format\-Table \-Property TotalV\&#42;,Free\&#42;**
 
 Os dados da memória podem ficar mais legíveis se você formatá-los como uma lista digitando:
 
@@ -131,6 +133,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

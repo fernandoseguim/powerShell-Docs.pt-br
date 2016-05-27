@@ -1,12 +1,15 @@
 ---
-title: Criando objetos .NET e COM (New-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
+title:  Criando objetos .NET e COM New Object 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  2057b113-efeb-465e-8b44-da2f20dbf603
 ---
+
 # Criando objetos .NET e COM (New-Object)
 Existem componentes de software com as interfaces .NET Framework e COM que permitem executar muitas tarefas de administração do sistema. O Windows PowerShell permite usar esses componentes para que você não fique limitado a tarefas que podem ser executadas usando cmdlets. Muitos dos cmdlets na versão inicial do Windows PowerShell não funcionam em computadores remotos. Demonstraremos como contornar essa limitação gerenciando logs de eventos usando a classe **System.Diagnostics.EventLog** do .NET Framework diretamente do Windows PowerShell.
 
@@ -175,20 +178,11 @@ $Home\Desktop\PSHome.lnk
 
 Agora temos uma variável chamada **$lnk** que contém uma nova referência de atalho. Se você quiser ver seus membros, poderá direcioná-lo para **Get-Member**. A saída abaixo mostra os membros que precisamos usar para terminar de criar o atalho:
 
-<pre>PS> $lnk | Get-Member
-TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b}
-Name             MemberType   Definition
-----             ----------   ----------
-...
-Save             Method       void Save ()
-...
-TargetPath       Property     string TargetPath () {get} {set}
-...</pre>
+<pre>PS> $lnk | Get-Member TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b} Name             MemberType   Definition ----             ----------   ---------- ... Save             Method       void Save () ... TargetPath       Property     string TargetPath () {get} {set} ...</pre>
 
 É necessário especificar o **TargetPath**, que é a pasta do aplicativo para o Windows PowerShell e salvar o atalho **$lnk** chamando o método **Save**. O caminho da pasta de aplicativo do Windows PowerShell é armazenado na variável **$PSHome**, por isso podemos fazer isso digitando:
 
-<pre>$lnk.TargetPath = $PSHome
-$lnk.Save()</pre>
+<pre>$lnk.TargetPath = $PSHome $lnk.Save()</pre>
 
 ### Usando o Internet Explorer do Windows PowerShell
 Muitos aplicativos (incluindo a família de aplicativos Microsoft Office e o Internet Explorer) podem ser automatizados usando COM. O Internet Explorer ilustra algumas das técnicas e problemas típicos envolvidos ao trabalhar com aplicativos baseados em COM.
@@ -266,6 +260,6 @@ Embora o objeto ainda seja criado, você será avisado de que este não é um ob
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

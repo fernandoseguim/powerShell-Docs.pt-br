@@ -1,3 +1,14 @@
+---
+title:   Recursos de DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Recursos de DSC
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -8,6 +19,12 @@ Um recurso pode modelar algo tão genérico quanto um arquivo ou tão específic
 
 Os tópicos a seguir descrevem os recursos de DSC:
 
-- [Recursos internos de DSC](builtInResource.md)
-- [Criar recursos personalizados de DSC](authoringResource.md)
-- [Recursos internos de DSC para Linux](lnxBuiltInResources.md)<!--HONumber=Feb16_HO4-->
+- [Recursos DSC internos](builtInResource.md)
+- [Criar recursos DSC personalizados](authoringResource.md)
+- [Recursos DSC internos para Linux](lnxBuiltInResources.md)
+
+
+
+<!--HONumber=May16_HO3-->
+
+

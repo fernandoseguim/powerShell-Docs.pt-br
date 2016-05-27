@@ -1,12 +1,15 @@
 ---
-title: Trabalhando com instalações de software
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
+title:  Trabalhando com instalações de software
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ---
+
 # Trabalhando com instalações de software
 Aplicativos que são projetados para usar o Windows Installer podem ser acessados através da classe do WMI **Win32_Product**, mas nem todos os aplicativos usados atualmente usam o Windows Installer. Como o Windows Installer fornece a mais ampla variedade de técnicas padrão para trabalhar com aplicativos instalados, abordaremos principalmente estes aplicativos. Aplicativos que usam rotinas de instalação alternativas geralmente não serão gerenciados pelo Windows Installer. Técnicas específicas para trabalhar com esses aplicativos dependem do instalador do software e as decisões tomadas pelo desenvolvedor do aplicativo.
 
@@ -137,8 +140,7 @@ SKC  VC Name                           Property
 ### Instalando aplicativos
 Você pode usar a classe **Win32_Product** para instalar os pacotes do Windows Installer, localmente ou remotamente.
 
-> [!NOTE]
-> Para instalar um aplicativo no Windows Vista, Windows Server 2008 e versões posteriores do Windows, você deve iniciar o Windows PowerShell com a opção "Executar como administrador".
+> [!NOTE] Para instalar um aplicativo no Windows Vista, no Windows Server 2008 e em versões posteriores do Windows, você deverá iniciar o Windows PowerShell com a opção "Executar como administrador".
 
 Ao instalar remotamente, use um caminho de rede da Convenção de Nomenclatura Universal (UNC) para especificar o caminho para o pacote .msi, porque o subsistema WMI não entende caminhos do Windows PowerShell. Por exemplo, para instalar o pacote NewPackage.msi localizado no compartilhamento de rede \\AppServ\dsp no computador remoto PC01, digite o seguinte comando no prompt do Windows PowerShell:
 
@@ -178,6 +180,6 @@ Para atualizar um aplicativo, você precisa saber o nome do aplicativo e o camin
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

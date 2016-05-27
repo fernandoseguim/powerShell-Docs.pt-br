@@ -1,10 +1,19 @@
+---
+title:   Escrever ajuda para configurações de DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Escrever ajuda para configurações de DSC
 
 >Aplica-se a: Windows Windows PowerShell 5.0
 
-Você pode usar a ajuda baseada em comentários em configurações de DSC. Os usuários podem acessar a ajuda chamando a função de configuração com `-?`, ou usando o 
-cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Para obter mais informações sobre a ajuda baseada em comentários do PowerShell, consulte 
-[about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
+Você pode usar a ajuda baseada em comentários em configurações de DSC. Os usuários podem acessar a ajuda chamando a função de configuração com `-?` ou usando o cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Para saber mais sobre a ajuda baseada em comentários do PowerShell, veja [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
 
 O exemplo a seguir mostra um script que contém duas configurações e ajuda baseada em comentários para cada configuração:
 
@@ -52,8 +61,7 @@ configuration HelpSample1
 
 ## Exibindo a ajuda de configuração
 
-Para exibir a ajuda para uma configuração, use o cmdlet **Get-Help** com o nome da função, ou digite o nome da função seguido por `-?`. A seguir está o resultado
-da função anterior quando passada para o **Get-Help**:
+Para exibir a ajuda para uma configuração, use o cmdlet **Get-Help** com o nome da função, ou digite o nome da função seguido por `-?`. Veja a seguir a saída da função anterior quando passada para **Get-Help**:
 
 ```powershell
 PS C:\> Get-Help HelpSample1
@@ -85,6 +93,8 @@ REMARKS
 ## Consulte Também
 * [Configurações DSC](configurations.md)
 
-<!--HONumber=Apr16_HO5-->
+
+
+<!--HONumber=May16_HO3-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+title:  Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
 ---
+
 # Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 O preenchimento com Tab fornece Ajuda automática quando você estiver digitando no Painel de Script ou no Painel de Comando. Use as seguintes etapas para aproveitar esse recurso:
 
@@ -24,6 +27,7 @@ Por exemplo, digite `get-process -` e pressione TAB várias vezes para exibir ca
 ## Consulte Também
 [Usando o ISE do Windows PowerShell](using-the-windows-powershell-ise.md)
 [Como criar uma guia do PowerShell](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
+
 
 
 <!--HONumber=May16_HO2-->

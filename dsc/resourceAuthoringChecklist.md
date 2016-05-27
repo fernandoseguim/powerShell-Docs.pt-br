@@ -1,3 +1,14 @@
+---
+title:   Lista de verificação da criação de recursos
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Lista de verificação da criação de recursos
 Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso DSC
 ## O módulo de recurso contém os arquivos .psd1 e schema.mof de cada um dos recursos 
@@ -33,8 +44,7 @@ Certifique-se de que:
 - A propriedade [read] não pode coexistir com um desses: [required], [key] e [write]
 
 
-- Se forem especificados vários qualificadores, exceto [read], [key] terá precedência
-Se [write] e [required] forem especificados, [required] terá precedência
+- Se vários qualificadores forem especificados, exceto [read], [key] terá precedência, se [write] e [required] forem especificados, [required] terá precedência
 -   ValueMap foi especificado, quando apropriado
 
 Exemplo:
@@ -44,7 +54,7 @@ Exemplo:
 
 -   O nome amigável é especificado e está em conformidade com as convenções de nomenclatura do DSC
 
-Exemplo: 
+Exemplo:
 ```[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]```
 
 -   Cada campo contém uma descrição significativa
@@ -83,8 +93,7 @@ If ($error.count –ne 0) {
     Throw “Module was not imported correctly. Errors returned: $error”
 }
 ```
-4   O recurso é idempotente no caso positivo 
-Uma das características fundamentais de cada um dos recursos DSC deve ser a idempotência. Isso significa que podemos aplicar uma configuração DSC contendo esse recurso várias vezes sem alterar o resultado além da aplicação inicial. Por exemplo, se criarmos uma configuração que contém o seguinte recurso File:
+4   O recurso é idempotente no caso positivo. Uma das características fundamentais de cada um dos recursos DSC deve ser a idempotência. Isso significa que podemos aplicar uma configuração DSC contendo esse recurso várias vezes sem alterar o resultado além da aplicação inicial. Por exemplo, se criarmos uma configuração que contém o seguinte recurso File:
 ```powershell
 File file {
     DestinationPath = "C:\test\test.txt"
@@ -101,8 +110,7 @@ A modificação de usuário é outro cenário comum que vale a pena testar. Ela 
 2.  Executar a configuração com o recurso
 3.  Verificar se **Test-DscConfiguration** retorna True
 4.  Modificar o recurso fora do estado desejado
-5.  Verificar se **Test-DscConfiguration** retorna False
-Aqui está um exemplo mais concreto usando o recurso do Registro:
+5.  Verifique se **Test-DscConfiguration** retorna false. Veja um exemplo mais concreto usando o recurso de Registro:
 1.  Inicie com a chave do Registro fora do estado desejado
 2.  Executar **Start-DscConfiguration** com uma configuração para colocá-la no estado desejado e verificar se ela é passada.
 3.  Executar **Test-DscConfiguration** e verificar se ela retorna True
@@ -195,8 +203,7 @@ Mensagens de erro úteis devem ser:
 -   Fáceis de entender: legíveis por humanos e sem códigos de erro obscuros
 -   Precisas: descrevem qual é exatamente o problema
 -   Construtivas: fazem recomendações sobre como corrigir o problema
--   Educadas: não culpam o usuário ou os fazem sentir-se tolos
-Certifique-se de verificar erros nos cenários de ponta a ponta (usando **Start-DscConfiguration**), pois eles podem ser diferentes daqueles retornados ao executar as funções de recurso diretamente. 
+-   Cortês: não culpe o usuário nem o faça se sentir um tolo.Verifique os erros nos cenários de ponta a ponta (usando **Start-DscConfiguration**), pois eles podem ser diferentes daqueles retornados ao executar as funções de recurso diretamente. 
 
 ## Mensagens de log são informativas e fáceis de entender (incluindo –verbose, –debug e logs do ETW) ##
 Certifique-se de que logs gerados pelo recurso são fáceis de entender e fornecem valor ao usuário. Os recursos devem gerar todas as informações que podem ser úteis para o usuário; contudo, mais logs nem sempre são o melhor. É necessário evitar a redundância e gerar dados que não fornecem valor adicional – não faça alguém percorrer centenas de entradas de log para encontrar o que está procurando. Obviamente, não fornecer nenhum log também não é uma solução aceitável para esse problema. 
@@ -256,9 +263,7 @@ Para xRemoteFile, ResourceTests.ps1 poderá ser bem simples, da seguinte forma:
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof 
 ```
-**Melhor prática: a pasta do recurso contém um script do designer de recursos para a geração de esquema**
-Cada recurso deve conter um script do designer de recursos que gera um esquema mof do recurso. Este arquivo deve ser colocado em <ResourceName>\ResourceDesignerScripts e nomeado Generate<ResourceName>Schema.ps1
-Para o recurso xRemoteFile, esse arquivo será chamado GenerateXRemoteFileSchema.ps1 e conterá:
+**Prática recomendada: as pasta de recursos contém script de designer de recursos para gerar esquema** Cada recurso deve conter um script de designer de recursos que gera um esquema mof do recurso. Este arquivo deve ser colocado em <ResourceName>\ResourceDesignerScripts e nomeado Generate<ResourceName>Schema.ps1 Para o recurso xRemoteFile, esse arquivo será chamado GenerateXRemoteFileSchema.ps1 e conterá:
 ```powershell 
 $DestinationPath = New-xDscResourceProperty -Name DestinationPath -Type String -Attribute Key -Description 'Path under which downloaded or copied file should be accessible after operation.'
 $Uri = New-xDscResourceProperty -Name Uri -Type String -Attribute Required -Description 'Uri of a file which should be copied or downloaded. This parameter supports HTTP and HTTPS values.'
@@ -270,8 +275,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile 
 ```
-22  Prática recomendada: o recurso dá suporte a –whatif
-Caso o recurso esteja executando operações “perigosas”, é uma prática recomendada implementar a funcionalidade –whatif. Após a conclusão, certifique-se de que a saída –whatif descreve corretamente as operações que ocorreriam se o comando fosse executado sem a opção –whatif.
+22  Prática recomendada: o recurso será compatível com -whatif se o recurso estiver executando operações "perigosas", é uma prática recomendada para implementar a funcionalidade -whatif. Após a conclusão, certifique-se de que a saída –whatif descreve corretamente as operações que ocorreriam se o comando fosse executado sem a opção –whatif.
 Além disso, verifique se as operações não são executadas (não é feita nenhuma alteração ao estado do nó) quando a opção –whatif está presente. 
 Por exemplo, vamos supor que estamos testando o recurso File. Veja abaixo uma configuração simples que cria o arquivo “test.txt” com o conteúdo “test”:
 ```powershell
@@ -317,6 +321,7 @@ Isso conclui nossa lista de verificação. Tenha em mente de que esta lista não
 Se você desenvolveu diretrizes e práticas recomendadas que você usa para escrever e testar recursos DSC, compartilhe-as!
 
 
-<!--HONumber=Mar16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

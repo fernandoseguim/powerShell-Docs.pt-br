@@ -1,12 +1,15 @@
 ---
-title: Usando nomes familiares de comando
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
+title:  Usando nomes familiares de comando
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  021e2424-c64e-4fa5-aa98-aa6405758d5d
 ---
+
 # Usando nomes familiares de comando
 Usando um mecanismo chamado *aliasing*, o Windows PowerShell permite que os usuários consultem comandos por nomes alternativos. Usar alias permite que usuários com experiência em outros shells reutilizem nomes de comando comuns que já conhecem para executar operações semelhantes no Windows PowerShell. Embora não abordemos aliases do Windows PowerShell em detalhes, você ainda pode usá-los ao começar a usar o Windows PowerShell.
 
@@ -59,13 +62,11 @@ Set-Alias -Name gcm -Value Get-Command
 
 Internamente, o Windows PowerShell usa comandos como estes durante a inicialização, mas esses aliases não são mutáveis. Se você tentar executar um desses comandos, receberá um erro explicando que o alias não pode ser modificado. Por exemplo:
 
-<pre>PS> Set-Alias -Name gi -Value Get-Item
-Set-Alias: o alias não é gravável porque o alias gi é somente leitura ou é constante e não pode ser gravado.
-Na linha:1 char:10
-+ Set-Alias  <<<< -Name gi -Value Get-Item</pre>
+<pre>PS> Set-Alias -Name gi -Value Get-Item et-Alias: o alias não é gravável porque o alias gi é somente leitura ou é constante e não se pode gravar nele.
+Na linha:1 char:10 + Set-Alias  <<<< -Name gi -Value Get-Item</pre>
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

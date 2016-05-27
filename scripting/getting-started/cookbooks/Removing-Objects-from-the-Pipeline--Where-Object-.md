@@ -1,12 +1,15 @@
 ---
-title: Removendo objetos do pipeline (Where-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
+title:  Removendo objetos do pipeline com Where Object 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ---
+
 # Removendo objetos do pipeline (Where-Object)
 No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeline do que deseja. Você pode especificar as propriedades de determinados objetos para exibição usando os cmdlets **Format**, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Talvez você queira filtrar objetos antes do final de um pipeline para poder executar ações em apenas um subconjunto dos objetos gerados inicialmente.
 
@@ -15,8 +18,7 @@ O Windows PowerShell inclui um cmdlet **Where-Object** que permite testar cada o
 ### Executar testes simples com Where-Object
 O valor de **FilterScript** é um *bloco de script* (um ou mais comandos do Windows PowerShell cercados por chaves {}) que é avaliado como verdadeiro ou falso. Esses blocos de script podem ser muito simples, mas criá-los requer conhecimento sobre outro conceito do Windows PowerShell, os operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dela. Operadores de comparação começam com um caractere “-” caracteres e são seguidos por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados podem funcionar apenas em texto ou matrizes.
 
-> [!NOTE]
-> Por padrão, ao trabalhar com texto, os operadores de comparação do Windows PowerShell não diferenciam maiúsculas de minúsculas.
+> [!NOTE] Por padrão, ao trabalhar com texto, os operadores de comparação do Windows PowerShell não diferenciam maiúsculas de minúsculas.
 
 Devido a considerações de análise, símbolos como <, > e = não são usados como operadores de comparação. Em vez disso, os operadores de comparação são compostos por letras. Os operadores de comparação básicos estão listados na tabela a seguir.
 
@@ -102,6 +104,6 @@ Os operadores lógicos padrão são listados na tabela a seguir.
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

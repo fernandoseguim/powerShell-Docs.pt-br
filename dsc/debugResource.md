@@ -1,3 +1,14 @@
+---
+title:   Depurando os recursos de DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Depurando os recursos de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
@@ -5,7 +16,10 @@
 No PowerShell 5.0, foi introduzido um novo recurso na Configuração de Estado Desejado (DSC) que permite depurar um recurso de DSC como uma configuração que está sendo aplicada.
 
 ## Habilitando a depuração de DSC
-Para poder depurar um recurso, é preciso habilitar a depuração chamando o cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**. É possível verificar se a depuração foi habilitada analisando o resultado de uma chamada para o [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). A seguinte saída do PowerShell mostra o resultado de habilitar a depuração:
+Para poder depurar um recurso, é preciso habilitar a depuração chamando o cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**. 
+
+É possível verificar se a depuração foi habilitada analisando o resultado de uma chamada para o [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). 
+A seguinte saída do PowerShell mostra o resultado de habilitar a depuração:
 
 
 ```powershell
@@ -44,9 +58,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Depois de compilar a configuração, inicie chamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). A configuração parará quando o
-Gerenciador de Configurações Local (LCM) chamar o primeiro recurso na configuração. Se você usar os parâmetros `-Verbose` e `-Wait`, a saída exibirá as linhas que você precisa inserir
-para iniciar a depuração.
+Depois de compilar a configuração, inicie chamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). A configuração parará quando o LCM (Gerenciador de Configurações Local) chamar o primeiro recurso na configuração. Se você usar os parâmetros `-Verbose` e `-Wait`, a saída exibirá as linhas que você precisa inserir para iniciar a depuração.
 
 ```powershell
 PS C:\DebugTest> Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -72,21 +84,28 @@ Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção.
 
 ## Depurando o script de recurso
 
-Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas de saída da saída `Start-DscConifiguration` como comandos, substituindo `<credentials>` por
-credenciais de usuário válidas. Agora você verá um prompt semelhante a:
+Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas da saída `Start-DscConifiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas. Agora você verá um prompt semelhante a:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
 ```
 
 O script de recurso será aberto no painel de script e o depurador será interrompido na primeira linha da função **Test-TargetResource** (o método **Test()** de um recurso baseado em classe).
-Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Para obter informações sobre a depuração com o ISE do PowerShell,
-veja [Como depurar scripts no ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/dd819480.aspx). Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
+Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Para obter informações sobre como depurar no ISE do PowerShell, confira [How to Debug Scripts in Windows PowerShell ISE (Como depurar scripts no ISE do Windows PowerShell)](https://technet.microsoft.com/en-us/library/dd819480.aspx). Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
+
+## Desabilitando a depuração de DSC
+
+Depois de chamar [Enable DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), todas as chamadas a [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) resultarão na interrupção do depurador pela configuração. Para permitir que as configurações sejam executadas normalmente, você deve desabilitar a depuração chamando o cmdlet [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
+
+>**Observação:** a reinicialização não altera o estado de depuração do LCM. Se a depuração estiver desabilitada, iniciar uma configuração ainda interromperá o depurador após uma reinicialização.
+
 
 ## Consulte Também
 - [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
 - [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

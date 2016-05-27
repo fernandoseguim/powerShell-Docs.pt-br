@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Habilite a configuração de DSC da depuração.'
-MS-HAID: 'cimwin32a.msft\_dsclocalconfigurationmanager\_enabledebugconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager'
+title:  Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -53,6 +57,6 @@ Esse é um método estático.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

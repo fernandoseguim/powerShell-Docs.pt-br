@@ -1,10 +1,19 @@
+---
+title:   Escrevendo um recurso de DSC de instância única (melhor prática)
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Escrevendo um recurso de DSC de instância única (melhor prática)
 
->**Observação:** este tópico descreve a melhor prática para a definição de um recurso de DSC que permite apenas uma única instância em uma configuração. Atualmente, não há nenhum recurso interno do DSC para fazer isso. Isso pode
->mudar no futuro.
+>**Observação:** este tópico descreve a melhor prática para a definição de um recurso de DSC que permite apenas uma única instância em uma configuração. Atualmente, não há nenhum recurso interno do DSC para fazer isso. Isso pode mudar no futuro.
 
-Há situações em que você não deseja permitir que um recurso seja usado várias vezes em uma configuração. Por exemplo, em uma implementação anterior do 
-recurso [xTimeZone](https://github.com/PowerShell/xTimeZone), uma configuração poderia chamar o recurso várias vezes, configurando o fuso horário para uma definição diferente em cada bloco de recurso:
+Há situações em que você não deseja permitir que um recurso seja usado várias vezes em uma configuração. Por exemplo, um uma implementação anterior do recurso [xTimeZone](https://github.com/PowerShell/xTimeZone), uma configuração poderia chamar o recurso várias vezes, configurando o fuso horário para uma definição diferente em cada bloco de recurso:
 
 ```powershell
 Configuration SetTimeZone 
@@ -37,10 +46,7 @@ Configuration SetTimeZone
 } 
 ```
 
-Isso ocorre devido à forma como as chaves de recurso de DSC funcionam. Um recurso deve ter pelo menos uma propriedade de chave. Uma instância do recurso é considerada exclusiva se a combinação de valores de todas 
-as suas propriedades de chave for exclusiva. Em sua implementação anterior, o recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) apresentava apenas uma propriedade -**TimeZone**, que obrigatoriamente 
-deve ser uma chave. Por isso, uma configuração, como mostrado acima seria compilada e executada sem aviso. Cada um do blocos de recurso de **xTimeZone** é considerado exclusivo. Isso faria com que a 
-configuração fosse aplicada várias vezes ao nó, alternando o fuso horário.
+Isso ocorre devido à forma como as chaves de recurso de DSC funcionam. Um recurso deve ter pelo menos uma propriedade de chave. Uma instância do recurso é considerada exclusiva se a combinação de valores de todas as suas propriedades de chave for exclusiva. Em sua implementação anterior, o recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) apresentava apenas uma propriedade --**TimeZone**, que obrigatoriamente tinha que ser uma chave. Por isso, uma configuração, como mostrado acima seria compilada e executada sem aviso. Cada um do blocos de recurso de **xTimeZone** é considerado exclusivo. Isso faria com que a configuração fosse aplicada várias vezes ao nó, alternando o fuso horário.
 
 Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade principal. 
 O **IsSingleInstance** foi limitado a um único valor, "Yes" (Sim) usando um **ValueMap**. O esquema MOF antigo para o recurso foi:
@@ -197,8 +203,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-Observe que a propriedade **TimeZone** propriedade não é mais uma chave. Agora, se uma configuração tentar definir o fuso horário duas vezes (usando dois blocos **xTimeZone** diferentes com valores de **TimeZone**
-distintos), a tentativa de compilar a configuração causará um erro:
+Observe que a propriedade **TimeZone** propriedade não é mais uma chave. Agora, se uma configuração tentar definir o fuso horário duas vezes (usando dois blocos **xTimeZone** diferentes com valores de **TimeZone** diferentes), tentar compilar a configuração vai gerar um erro:
 
 ```powershell
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and 
@@ -219,6 +224,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 ```
    
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

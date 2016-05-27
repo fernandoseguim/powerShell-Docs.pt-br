@@ -1,3 +1,14 @@
+---
+title:   Opções de Credenciais nos Dados de Configuração
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
 
@@ -15,7 +26,7 @@ Os recursos de configuração DSC são executados como `Local System` por padrã
 Contudo, alguns recursos precisam de uma credencial, como quando o recurso `Package` precisa instalar um software em uma conta de usuário específica.
 
 Recursos anteriores usaram um nome de propriedade `Credential` embutido em código para lidar com isso.
-O WMF 5.0 adicionou uma propriedade `PsDscRunAsCredential` automática para todos os recursos.
+O WMF 5.0 adicionou uma propriedade `PsDscRunAsCredential` automática para todos os recursos. Para obter informações sobre como usar o `PsDscRunAsCredential`, confira [Executar DSC com as credenciais do usuário](runAsUser.md).
 Recursos mais recentes e recursos personalizados podem usar essa propriedade automática em vez de criar sua própria propriedade para credenciais.
 
 *Observe que o design de alguns recursos consiste em usar diversas credenciais por um motivo específico e eles terão suas próprias propriedades de credencial.*
@@ -161,7 +172,7 @@ O uso de uma conta local elimina a possível exposição das credenciais de dom�
 
 **Ao usar credenciais com recursos de DSC, prefira uma conta local a uma conta de domínio, quando possível.**
 
-Se houver um '\' ou um '@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
+Se houver um '\'' ou um '@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.
 
 ## PSDscAllowDomainUser
@@ -183,4 +194,9 @@ $cd = @{
 ```
 
 Agora o script de configuração vai gerar o arquivo MOF sem erros ou avisos.
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

@@ -1,12 +1,15 @@
 ---
-title: Gerenciamento de serviços
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
+title:  Gerenciamento de serviços
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  7a410e4d-514b-4813-ba0c-0d8cef88df31
 ---
+
 # Gerenciamento de serviços
 Há oito cmdlets de Serviço principal, projetados para uma ampla variedade de tarefas de serviço. Abordaremos somente a listagem e a alteração do estado de execução para os serviços, porém é possível obter uma lista de cmdlets Service usando **Get-Help *-Service**, e você pode encontrar informações sobre cada cmdlet Service usando **Get-Help New-Service**, como **Get-Help New-Service**.
 
@@ -146,6 +149,6 @@ Para obter mais informações, consulte [Set-Service [m2]](https://technet.micro
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

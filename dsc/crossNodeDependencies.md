@@ -1,22 +1,29 @@
+---
+title:   Especificando dependências de nó cruzado
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Especificando dependências de nó cruzado
 
 > Aplica-se a: Windows PowerShell 5.0
 
-O DSC fornece recursos especiais, **WaitForAll**, **WaitForAny**, e **WaitForSome** que podem ser usados em configurações para especificar dependências em configurações em outros nós. O parâmetro
-comportamento desses recursos é o seguinte:
+O DSC fornece recursos especiais, **WaitForAll**, **WaitForAny**, e **WaitForSome** que podem ser usados em configurações para especificar dependências em configurações em outros nós. O comportamento desses recursos é o seguinte:
 
 * **WaitForAll**: terá êxito se o recurso especificado estiver no estado desejado em todos os nós de destino definidos na propriedade **NodeName**.
 * **WaitForAny**: terá êxito se o recurso especificado estiver no estado desejado em pelo menos um dos nós de destino definidos na propriedade **NodeName**.
-* **WaitForSome**: especifica uma propriedade **NodeCount** além de uma propriedade **NodeName**. O recurso terá êxito se estiver no estado desejado em um número mínimo de nós 
-(especificado por **NodeCount**) definido pela propriedade **NodeName**. 
+* **WaitForSome**: especifica uma propriedade **NodeCount** além de uma propriedade **NodeName**. O recurso terá êxito se estiver no estado desejado em um número mínimo de nós (especificado por **NodeCount**) definido pela propriedade **NodeName**. 
 
 ## Usando os recursos WaitForXXXX
 
-Para usar os recursos **WaitForXXXX**, você cria um bloco de recursos desse tipo de recurso que especifica o recurso DSC e os nós a serem esperados. Você, então, usa a propriedade **DependsOn**
-em quaisquer outros blocos de recursos em sua configuração para aguardar que as condições especificadas no nó **WaitForXXXX** sejam bem-sucedidas.
+Para usar os recursos **WaitForXXXX**, você cria um bloco de recursos desse tipo de recurso que especifica o recurso DSC e os nós a serem esperados. Em seguida, use a propriedade **DependsOn** em quaisquer outros blocos de recursos em sua configuração para aguardar que as condições especificadas no nó **WaitForXXXX** sejam bem-sucedidas.
 
-Por exemplo, na configuração a seguir, o nó de destino aguarda que o recurso **xADDomain** seja concluído no nó **MyDC** em intervalos de 15 a 30 segundos, antes que o nó de destino 
-possa ingressar no domínio.
+Por exemplo, na configuração a seguir, o nó de destino aguarda que o recurso **xADDomain** seja concluído no nó **MyDC** com 30, em intervalos de 15 segundos, antes que o nó de destino possa se unir ao domínio.
 
 ```PowerShell
 Configuration JoinDomain
@@ -53,6 +60,8 @@ Configuration JoinDomain
 * [Recursos de DSC](resources.md)
 * [Configurando o Gerenciador de Configurações Local](metaConfig.md)
 
-<!--HONumber=Apr16_HO4-->
+
+
+<!--HONumber=May16_HO3-->
 
 

@@ -2,7 +2,7 @@
 
 # [Detalhes da instalação](requirements.md)
 
-# [Incompatibilidades conhecidas do produto](productincompat.md)
+# [Status de compatibilidade do produto](productincompat.md)
 
 # [Comentários](feedback.md)
 
@@ -99,6 +99,6 @@
 ## [Problemas conhecidos no DSC (Configuração de Estado Desejado)](limitation_dsc.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO4-->
 
 

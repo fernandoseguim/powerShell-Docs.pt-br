@@ -1,12 +1,15 @@
 ---
-title: Manipulando itens diretamente
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
+title:  Manipulando itens diretamente
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8cbd4867-917d-41ea-9ff0-b8e765509735
 ---
+
 # Manipulando itens diretamente
 Os elementos exibidos em unidades do Windows PowerShell, como os arquivos e pastas em unidades de sistema de arquivos e as chaves do Registro nas unidades do Registro do Windows PowerShell, são chamados de *itens* no Windows PowerShell. Os cmdlets para trabalhar com tais itens têm o substantivo **Item** em seus nomes.
 
@@ -86,7 +89,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Embora seria algo conveniente tratar as entradas do registro como itens, não é possível você especificar um caminho para uma entrada de registro de uma maneira que garanta que ele seja exclusivo. A notação de caminho não faz distinção entre a subchave do Registro chamada **Run** e a entrada do Registro **(Default)** na subchave **Run**. Além disso, como nomes de entrada do Registro podem conter o caractere de barra invertida (**\**), se as entradas de Registro fossem itens, você não poderia usar a notação de caminho para distinguir uma entrada de Registro denominada **Windows\CurrentVersion\Run** da subchave localizada nesse caminho.
+Embora seria algo conveniente tratar as entradas do registro como itens, não é possível você especificar um caminho para uma entrada de registro de uma maneira que garanta que ele seja exclusivo. A notação de caminho não faz distinção entre a subchave do Registro chamada **Run** e a entrada do Registro **(Default)** na subchave **Run**. Além disso, como nomes de entrada do Registro podem conter o caractere de barra invertida (**\\**), se as entradas de Registro fossem itens, você não poderia usar a notação de caminho para distinguir uma entrada do Registro denominada **Windows\\CurrentVersion\\Run** da subchave localizada nesse caminho.
 
 ### Renomeando itens existentes (Rename-Item)
 Para alterar o nome de uma configuração de sessão, use o cmdlet **Rename-Item**. O comando a seguir altera o nome do arquivo **file1.txt** para **fileOne.txt**.
@@ -197,6 +200,6 @@ Se o tipo de arquivo .ini estiver associado ao Bloco de Notas, o arquivo Boot.in
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

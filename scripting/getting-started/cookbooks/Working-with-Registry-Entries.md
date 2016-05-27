@@ -1,12 +1,15 @@
 ---
-title: Trabalhando com entradas do Registro
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
+title:  Trabalhando com entradas do Registro
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  fd254570-27ac-4cc9-81d4-011afd29b7dc
 ---
+
 # Trabalhando com entradas do Registro
 Como entradas do registro são propriedades de chaves e, como tal, não podem ser navegadas diretamente, precisamos usar uma abordagem ligeiramente diferente ao trabalhar com elas.
 
@@ -143,8 +146,7 @@ O **PropertyType** deve ter o mesmo nome de um membro da enumeração **Microsof
 |Cadeia de caracteres|Qualquer valor de cadeia de caracteres|
 |QWord|8 bytes de dados binários|
 
-> [!NOTE]
-> Você pode adicionar uma entrada de Registro em vários locais, especificando uma matriz de valores para o parâmetro **Path**:
+> [!NOTE] Você pode adicionar uma entrada do Registro a vários locais, especificando uma matriz de valores para o parâmetro **Path**:
 
 ```
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion, HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -PropertyType String -Value $PSHome
@@ -175,6 +177,6 @@ Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

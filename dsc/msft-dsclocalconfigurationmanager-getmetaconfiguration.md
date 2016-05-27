@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Obtém as configurações do Gerenciador de Configurações Local que são usadas para controlar o Agente de Configuração.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getmetaconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager'
+title:  Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -55,6 +59,6 @@ Esse é um método estático.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

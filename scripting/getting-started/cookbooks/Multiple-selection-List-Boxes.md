@@ -1,12 +1,15 @@
 ---
-title: Caixas de listagem de seleção múltipla
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
+title:  Caixas de listagem de seleção múltipla
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f74cd5d9-da57-4802-b614-0b194a7bc8f8
 ---
+
 # Caixas de listagem de seleção múltipla
 Use o Windows PowerShell 3.0 e versões posteriores para criar um controle de caixa de listagem de seleção múltipla em um formulário personalizado do Windows.
 
@@ -177,12 +180,12 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Consulte Também
-[Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla e muito mais!](http://technet.microsoft.com/library/ff730950.aspx)
+[Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Por que esses exemplos de GUI do PowerShell não funcionam?)](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: Dave Wyatt's WinFormsExampleUpdates (As atualizações de exemplos de WinForms de Dave Wyatt)](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week:  Multi-Select List Boxes – And More! (Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla - e muito mais!)](http://technet.microsoft.com/library/ff730950.aspx)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

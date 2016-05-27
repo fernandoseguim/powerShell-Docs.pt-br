@@ -1,12 +1,15 @@
 ---
-title: Gerenciando o local atual
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
+title:  Gerenciando o local atual
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
 ---
+
 # Gerenciando o local atual
 Ao navegar em sistemas de pasta no Explorador de Arquivos, normalmente há um local de trabalho específico, ou seja, a pasta aberta atual. Itens na pasta atual podem ser manipulados facilmente clicando neles. Para interfaces de linha de comando como Cmd.exe, quando você estiver na mesma pasta que um arquivo específico, poderá acessá-lo especificando um nome relativamente curto, em vez de precisar especificar todo o caminho para o arquivo. O diretório atual é chamado no diretório de trabalho.
 
@@ -47,10 +50,7 @@ Você pode especificar caminhos em relação ao seu local atual da mesma forma q
 
 Por exemplo, se você está na pasta **C:\Windows**, um ponto (**.**) representa **C:\Windows** e um ponto duplo (**..**) representa **C:**. Você pode alterar do seu local atual para a raiz da unidade C: digitando:
 
-<pre>PS> Set-Location -Path .. -PassThru
-Caminho
-----
-C:\</pre>
+<pre>PS> Set-Location -Path .. -PassThru Path ---- C:\</pre>
 
 A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de arquivos, como **HKLM:**. Você pode definir seu local na chave HKLM\Software no Registro digitando:
 
@@ -168,6 +168,6 @@ Ao usar uma interface de linha de comando, não é conveniente usar o Explorador
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
