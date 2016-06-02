@@ -156,7 +156,7 @@ AdditionalData       : {}
 Por padrão, os relatórios são classificados por **JobID**. Para obter o relatório mais recente, você pode classificar os relatórios pela propriedade **StartTime** decrescente e obter o primeiro elemento da matriz:
 
 ```powershell
-$reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
+$reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
@@ -225,6 +225,6 @@ Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer c
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=May16_HO4-->
 
 
