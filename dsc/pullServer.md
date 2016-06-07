@@ -1,3 +1,14 @@
+---
+title:   Configurando um servidor de pull da Web de DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurando um servidor de pull da Web de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
@@ -81,7 +92,7 @@ configuration Sample_xDscPullServer
 dir Cert:\LocalMachine\my
 
 # Then include this thumbprint when running the configuration
-Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutpuPath c:\Configs\PullServer
+Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutputPath c:\Configs\PullServer
 
 # Run the compiled configuration to make the target node a DSC Pull Server
 Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
@@ -133,7 +144,7 @@ A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração sign
 Após a instalação do servidor pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente. 
 
 ### Formato de pacote do módulo de recursos DSC
-Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir: **{Nome do Módulo}_{Versão do Módulo}.zip**. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{Versão do Módulo}\DscResources\{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
+Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir: **{Nome do Módulo}_{Versão do Módulo}.zip**. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 ### Formato MOF de configuração 
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e seus arquivos de soma de verificação associados na pasta **ConfigurationPath**.
@@ -170,6 +181,7 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 * [Usando um servidor de relatório de DSC](reportServer.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=May16_HO4-->
 
 
