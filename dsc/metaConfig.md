@@ -42,7 +42,7 @@ configuration LCMConfig
 } 
 ```
 
-Você chama e executa a configuração para criar o MOF de configuração, como faria com uma configuração normal (para obter informações sobre como criar o MOF de configuração, consulte [Compilando a configuração](configurations#compiling-the-configuration)). Ao contrário de configurações normais, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Em vez disso, você chama o cmdlet [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx), fornecendo o caminho até o MOF de configuração como parâmetro. Depois de aplicar a configuração, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Você chama e executa a configuração para criar o MOF de configuração, como faria com uma configuração normal (para obter informações sobre como criar o MOF de configuração, consulte [Compilando a configuração](configurations.md#compiling-the-configuration)). Ao contrário de configurações normais, você não aplica uma configuração do LCM chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Em vez disso, você chama o cmdlet [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx), fornecendo o caminho até o MOF de configuração como parâmetro. Depois de aplicar a configuração, você pode ver as propriedades do LCM chamando o cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
 Uma configuração do LCM pode conter blocos somente para um conjunto limitado de recursos. No exemplo anterior, o único recurso chamado é **Settings**. Os outros recursos disponíveis são:
 
@@ -162,6 +162,6 @@ Para definir uma configuração parcial, você cria um bloco **PartialConfigurat
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
