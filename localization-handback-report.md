@@ -1,29 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/60a4a3125347e0a1e5351573cb60f6ea2494e5bd/jea/README.md) | OutofSyncHandedBackSuccess | [Details](#f2c72fc2a66f59d78da643da9febb9e09ce7989e98)
 
 ## Item Details
-##### <a name='f2c72fc2a66f59d78da643da9febb9e09ce7989e98'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/60a4a3125347e0a1e5351573cb60f6ea2494e5bd/jea/README.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
-* Handoff Datetime: 2016-06-07 18:33:22
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/95e0d19bc99a983e16ed7e763f5d04a327584e6c/jea/README.md)
-* Current Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/de3e285b4aa28510856bb22158b67db4cc7dc4a2/ol-handback/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
-* Current Handback Datetime: 2016-06-13 15:57:51
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
