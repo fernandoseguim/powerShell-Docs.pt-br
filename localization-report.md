@@ -5,20 +5,17 @@
  -------- | ----- 
  Total Files | 322
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 1
+[ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 88
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 89
 [ In Sync Handback Files ](#insync-handback-success-list)| 217
 [ Ignored Files ](#ignored-list)| 16
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
 ## <a name='handoff-success-list'></a> Handoff Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/60a4a3125347e0a1e5351573cb60f6ea2494e5bd/jea/README.md) | HandedOffSuccess | [Details](#f2c72fc2a66f59d78da643da9febb9e09ce7989e98)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
@@ -34,6 +31,7 @@
  [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs/blob/644d08a69a8bb70f49e12c1504aa46c4b57a51fc/dsc/authoringResourceMofCS.md) | OutofSyncHandedBackSuccess | [Details](#991a324945289b2eff0b706d093b2d345352fb1510)
  [dsc\pullClientConfigID.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullClientConfigID.md) | OutofSyncHandedBackSuccess | [Details](#f6569220fbafdba49bac9ac9dca3e6036a7aad0873)
  [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/0dc83a1b69f26a25874c819a2f3a027ed7966895/dsc/secureMOF.md) | OutofSyncHandedBackSuccess | [Details](#f0aed5bb627825b74fe4df29cbe2f0bc53f90c2385)
+ [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/60a4a3125347e0a1e5351573cb60f6ea2494e5bd/jea/README.md) | OutofSyncHandedBackSuccess | [Details](#f2c72fc2a66f59d78da643da9febb9e09ce7989e98)
  [scripting\core-powershell\console\PowerShell.exe-Command-Line-Help.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console/PowerShell.exe-Command-Line-Help.md) | OutofSyncHandedBackSuccess | [Details](#a53a9457712973b4ff43c226b247214d24406592102)
  [scripting\core-powershell\console-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console-guide.md) | OutofSyncHandedBackSuccess | [Details](#074f3570e9354f2186be8690744640ea4739ef6e101)
  [scripting\core-powershell\core-modules.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules.md) | OutofSyncHandedBackSuccess | [Details](#d891d849156b990c600672341ad18ffeebdd9bf8104)
@@ -1555,7 +1553,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f2c72fc2a66f59d78da643da9febb9e09ce7989e98'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/60a4a3125347e0a1e5351573cb60f6ea2494e5bd/jea/README.md)
-* Status: HandedOffSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
 * Handoff Datetime: 2016-06-07 18:33:22
@@ -1564,6 +1562,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/95e0d19bc99a983e16ed7e763f5d04a327584e6c/jea/README.md)
+* Current Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/de3e285b4aa28510856bb22158b67db4cc7dc4a2/ol-handback/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Current Handback Datetime: 2016-06-13 15:57:51
 * [Back to Top](#report-top)
 
 ##### <a name='dbae1dff1fde6e24e32a864a30a1328915ad26ac99'></a> Source: [jea\TOC.MD](https://github.com/PowerShell/powerShell-Docs/blob/dfa1b62e1f20808bf11ad8613e185e6ca56d76b0/jea/TOC.MD)
