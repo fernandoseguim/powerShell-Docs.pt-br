@@ -460,8 +460,8 @@
 * Handoff File: [authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.pt-br.xlf)
 * Handoff Datetime: 2016-06-07 18:33:22
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c864903d162821d31e68d245d6ab7a3c3e251fa0/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.pt-br.xlf)
+* Archive Datetime: 2016-06-14 13:17:37
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/37cbe7fbd7723548605b6b61fd313100d063f952/dsc/authoringResourceComposite.md)
@@ -490,8 +490,8 @@
 * Handoff File: [authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.pt-br.xlf)
 * Handoff Datetime: 2016-06-07 18:33:22
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c864903d162821d31e68d245d6ab7a3c3e251fa0/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.pt-br.xlf)
+* Archive Datetime: 2016-06-14 13:17:37
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/dsc/authoringResourceMofCS.md)
@@ -1399,8 +1399,8 @@
 * Handoff File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf)
 * Handoff Datetime: 2016-06-07 18:33:22
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c864903d162821d31e68d245d6ab7a3c3e251fa0/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.pt-br.xlf)
+* Archive Datetime: 2016-06-14 13:17:37
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/37cbe7fbd7723548605b6b61fd313100d063f952/dsc/secureMOF.md)
@@ -1558,8 +1558,8 @@
 * Handoff File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8604afed2325b06a733b8fc895b8061f7085ad0c/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
 * Handoff Datetime: 2016-06-07 18:33:22
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c864903d162821d31e68d245d6ab7a3c3e251fa0/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Archive Datetime: 2016-06-14 13:17:37
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/95e0d19bc99a983e16ed7e763f5d04a327584e6c/jea/README.md)
