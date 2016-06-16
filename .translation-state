@@ -20924,18 +20924,10 @@
       "ArchiveFileCommit": "77179a61c83609e0f5115cfa4c0c64fbd3c510fa",
       "ArchiveFileDateTime": "2016-05-17T13:27:01.3746583Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "2016-06-16T14:34:17.7222017Z",
-      "BilingualException": {
-        "internal_error_code": "bilingual_uploading_failed",
-        "internal_error_message": "Bilingual file: ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\Creating-a-Graphical-Date-Picker.a933c5ebd581abc094dabf7086ffddce8ea5c63e.pt-br.xlf with commit: 77222a2dc391e1845b58ac0e572b033597704fef failed.",
-        "internal_error_retriable": false,
-        "exception_message": "One or more errors occurred.",
-        "exception_type": "System.AggregateException",
-        "stack_trace": "   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass23_0.<UploadBilingualFiles>b__0(Tuple`3 fileToBeUpload) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\LocalizationCore.cs:line 380",
-        "extended_information": null
-      }
+      "BilingualFilePath": "ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\Creating-a-Graphical-Date-Picker.a933c5ebd581abc094dabf7086ffddce8ea5c63e.pt-br.xlf",
+      "BilingualFileCommit": "77222a2dc391e1845b58ac0e572b033597704fef",
+      "BilingualDateTime": "2016-06-16T15:57:29.4490947Z",
+      "BilingualException": null
     },
     "2e6f58860c7aebcf60d8df562f009fce0db3c955": {
       "FileHash": "2e6f58860c7aebcf60d8df562f009fce0db3c955",
