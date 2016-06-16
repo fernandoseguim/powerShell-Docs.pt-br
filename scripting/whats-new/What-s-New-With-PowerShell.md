@@ -1,3 +1,14 @@
+---
+title:  O que há de novo no PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Novidades no PowerShell
 O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem e melhoram seu uso e permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
 
@@ -16,6 +27,7 @@ O Windows PowerShell 5.0 está instalado por padrão no Windows Server® 2016 Te
 
 -   New features in Windows PowerShell 3.0
 -->
+
 
 
 <!--HONumber=May16_HO2-->

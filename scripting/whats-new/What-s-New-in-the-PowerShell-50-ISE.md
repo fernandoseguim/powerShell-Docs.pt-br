@@ -1,19 +1,22 @@
 ---
-title: Novidades no ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
+title:  O que há de novo no ISE do PowerShell 50
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  38648d47-7c27-4b37-a40e-ad29948519c2
 ---
+
 # Novidades no ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
 ## <a name="overview"></a>Descrição do recurso
 O ISE do Windows PowerShell é um aplicativo host que permite gravar, executar e testar scripts e módulos em um ambiente gráfico e intuitivo. Recursos importantes como cores de sintaxe, preenchimento com Tab, depuração visual, conformidade com Unicode e Ajuda contextual proporcionam uma experiência avançada de script.
 
-Para ter uma visão geral do ISE do Windows PowerShell, consulte [Windows PowerShell Integrated Scripting Environment overview](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671) (Visão geral do Ambiente de Script Integrado do Windows PowerShell).
+Para ter uma visão geral do ISE do Windows PowerShell, consulte [Visão geral do Ambiente de Script Integrado do Windows PowerShell](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="versions"></a>Funcionalidades novas e alteradas no ISE do Windows PowerShell
 A tabela a seguir lista os recursos novos e alterados para esta versão do ISE do Windows PowerShell no Windows PowerShell.
@@ -55,12 +58,12 @@ Usando trechos de código, você pode montar e criar scripts para automatizar se
 
 **O que passou a funcionar de maneira diferente?**
 
-Para usar trechos de código no Windows PowerShell 3.0 ou posterior, no menu **Editar**, clique em **Iniciar Trechos de Código** ou pressione **Ctrl-J**.
+Para usar trechos de código no Windows PowerShell 3.0 ou posterior, no menu **Editar**, clique em **Iniciar Trechos de Código** ou pressione **Ctrl\-J**.
 
 ### <a name="BKMK_AddOnTools"></a>Ferramentas complementares
 **Adicionado no PowerShell 3.0**
 
-O ISE do Windows PowerShell agora dá suporte a ferramentas complementares, que são controles do WPF (Windows Presentation Foundation) que são adicionados usando o modelo de objeto. As ferramentas complementares podem ser exibidas como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações sobre como importar ou remover ferramentas complementares, consulte [Windows PowerShell ISE Operations](http://technet.microsoft.com/library/cc732148.aspx) (Operações do ISE do Windows PowerShell).
+O ISE do Windows PowerShell agora dá suporte a ferramentas complementares, que são controles do WPF (Windows Presentation Foundation) que são adicionados usando o modelo de objeto. As ferramentas complementares podem ser exibidas como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para saber mais sobre como importar ou remover ferramentas complementares, consulte [Operações do ISE do Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx).
 
 **Qual é o valor agregado desta alteração?**
 
@@ -148,7 +151,7 @@ Se você iniciar o ISE do Windows PowerShell com a linha de comando (digitando *
 
 -   *-Help*: exibe uma janela de ajuda
 
--   *-mta*: inicia o ISE do Windows PowerShell no modo Multi-Threaded Apartment. O modo de operação padrão para o ISE do Windows PowerShell é o modo single-threaded apartment ou *-sta*.
+-   *-mta*: inicia o ISE do Windows PowerShell no modo Multi-Threaded Apartment. O modo de operação padrão para o ISE do Windows PowerShell é o modo single\-threaded apartment ou *\-sta*.
 
 **Qual é o valor agregado desta alteração?**
 
@@ -225,6 +228,7 @@ Para mais informações sobre o ISE do Windows PowerShell no Windows PowerShell,
 -   [ISE no TechNet Wiki](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 
 -   [Central de Scripts](http://technet.microsoft.com/scriptcenter/default)
+
 
 
 <!--HONumber=May16_HO2-->

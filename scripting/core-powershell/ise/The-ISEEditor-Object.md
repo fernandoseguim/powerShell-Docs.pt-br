@@ -1,12 +1,15 @@
 ---
-title: O objeto ISEEditor
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
+title:  O objeto ISEEditor
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 ---
+
 # O objeto ISEEditor
   Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor. O painel de Console é um objeto **ISEEditor**. Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado. As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor**.
 
@@ -53,10 +56,10 @@ $psISE.CurrentPowerShellTab.ConsolePane.Focus()
  Obtém o comprimento da linha como um inteiro para a linha especificada pelo número de linha.
 
  **lineNumber**
- O número da linha do qual obter o comprimento.
+ O número da linha da qual obter o comprimento.
 
- **Retorna**
- O comprimento da linha para a linha especificada no número de linha.
+ **Returns**
+ O comprimento da linha para a linha no número de linha especificado.
 
 ```
 # Gets the length of the first line in the text of the Command pane. 
@@ -77,8 +80,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Substitui a seleção por texto ou inserções de texto na posição do cursor atual.
 
- **text** \- String
- O texto a ser inserido.
+ **text** \- Cadeia O texto a ser inserido.
 
  Veja o [Exemplo de script](#example), posteriormente neste tópico.
 
@@ -87,17 +89,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Seleciona o texto dos parâmetros **startLine**, **startColumn**, **endLine** e **endColumn**.
 
- **startLine** - Inteiro
- A linha em que a seleção começa.
+ **startLine** \- Inteiro A linha na qual a seleção começa.
 
- **startColumn** - Inteiro
- A coluna dentro da linha de início na qual a seleção começa.
+ **startColumn** \- Inteiro A coluna na linha inicial na qual a seleção começa.
 
- **endLine** - Inteiro
- A linha em que a seleção termina.
+ **endLine** \- Inteiro A linha na qual a seleção é encerrada.
 
- **endColumn** - Inteiro
- A coluna dentro da linha final na qual a seleção termina.
+ **endColumn** \- Inteiro A coluna na linha final na qual a seleção encerrada.
 
  Veja o [Exemplo de script](#example), posteriormente neste tópico.
 
@@ -119,11 +117,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Define a posição do cursor no número de linha e no número da coluna. Gera uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.
 
- **lineNumber** - Inteiro
- O número de linha do cursor.
+ **lineNumber** \- Inteiro O número de linha do cursor do sistema.
 
- **columnNumber** - Inteiro
- O número de coluna do cursor.
+ **columnNumber** \- Inteiro O número da coluna do número do cursor do sistema.
 
 ```
 # Set the CaretPosition.
@@ -146,7 +142,7 @@ $psIse.CurrentFile.Editor.ToggleOutliningExpansion()
 ###  <a name="CanGoToMatch"></a> CanGoToMatch
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- A propriedade booliana de leitura/gravação para indicar se o cursor está ao lado de um parêntese, colchete ou chave – \ (\), \ [\], {}. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**. Caso contrário será **$false**.
+ A propriedade booliana de leitura/gravação para indicar se o cursor está ao lado de um parêntese, colchete ou chave – \ (\), \ [\], {}. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**. Caso contrário é **$false**.
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace
@@ -243,11 +239,11 @@ $myEditor.InsertText($selection.ToLower())
 ```
 
 ## Consulte Também
- [O objeto ISEFile](The-ISEFile-Object.md) 
- [O objeto PowerShellTab](The-PowerShellTab-Object.md) 
- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [O Objeto ISEFile](The-ISEFile-Object.md) 
+ [O Objeto PowerShellTab](The-PowerShellTab-Object.md) 
+ [O Modelo de Objeto de Script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [Referência de Modelo de Objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+ [Hierarquia de Modelo de Objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 

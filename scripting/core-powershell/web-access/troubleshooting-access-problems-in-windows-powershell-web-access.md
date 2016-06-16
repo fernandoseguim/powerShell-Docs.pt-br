@@ -1,3 +1,14 @@
+---
+title:  Solucionando problemas de acesso no Windows PowerShell Web Access
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Solucionando problemas de acesso no Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
@@ -27,7 +38,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 <td><p>A falha pode ocorrer com base em um dos fatores a seguir.</p>
 <ul>
 <li><p>Uma regra de autorização que concede ao usuário acesso ao computador (ou uma configuração de sessão específica no computador remoto) não existe. A segurança do Windows PowerShell Web Access é restritiva. Os usuários devem receber acesso explícito a computadores remotos usando regras de autorização. Para obter mais informações, consulte <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Authorization Rules and Security Features of Windows PowerShell Web Access (Regras de autorização e recursos de segurança do Windows PowerShell Web Access)</a> neste guia.</p></li>
-<li><p>O usuário não tem o acesso autorizado ao computador de destino. Isso é determinado pelas listas de controle de acesso (ACLs). Para obter mais informações, consulte “Signing in to Windows PowerShell Web Access” (Entrando no Windows PowerShell Web Access) em <a href="https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx">Use the Web-based Windows PowerShell Console (Usar o Console do Windows PowerShell baseado na Web)</a> ou o <a href="https://msdn.microsoft.com/library/windows/desktop/ee706585.aspx">Windows PowerShell Team Blog (Blog da equipe do Windows PowerShell)</a>.</p>
+<li><p>O usuário não tem o acesso autorizado ao computador de destino. Isso é determinado pelas listas de controle de acesso (ACLs). Para obter mais informações, consulte “Entrando no Windows PowerShell Web Access” em <a href="https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx">Usar o Console do Windows PowerShell baseado na Web</a> ou o <a href="https://msdn.microsoft.com/library/windows/desktop/ee706585.aspx">Windows PowerShell Team Blog</a> (Blog da Equipe do Windows PowerShell).</p>
 <ul>
 <li><p>O gerenciamento remoto do Windows PowerShell não deve estar habilitado no computador de destino. Verifique se ele está habilitado no computador ao qual o usuário está tentando se conectar. Para obter mais informações, consulte “How to Configure Your Computer for Remoting” (Como configurar seu computador para comunicação remota) em <a href="https://technet.microsoft.com/library/dd315349.aspx">about_Remote_Requirements</a> nos Windows PowerShell About Help Topics (Tópicos da Ajuda sobre o Windows PowerShell).</p></li>
 </ul></li>
@@ -116,7 +127,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 </tr>
 <tr class="even">
 <td><p>Não é possível entrar em um computador de destino especificado em regras de autorização como endereço IPv6 com um domínio.</p></td>
-<td><p>As regras de autorização não dão suporte a endereços IPv6 no formato de nome de domínio. Para especificar um computador de destino usando um endereço IPv6, use o endereço IPv6 original (que contém dois-pontos) na regra de autorização. Tanto domínios quanto endereços IPv6 numéricos (com dois-pontos) têm suporte como nome do computador de destino na página de entrada do Windows PowerShell Web Access, mas não em regras de autorização. Para obter mais informações sobre endereços IPv6, consulte <a href="https://technet.microsoft.com/library/cc781672.aspx">How IPv6 Works (Como o IPv6 funciona)</a>.</p></td>
+<td><p>As regras de autorização não dão suporte a endereços IPv6 no formato de nome de domínio. Para especificar um computador de destino usando um endereço IPv6, use o endereço IPv6 original (que contém dois-pontos) na regra de autorização. Tanto domínios quanto endereços IPv6 numéricos (com dois-pontos) têm suporte como nome do computador de destino na página de entrada do Windows PowerShell Web Access, mas não em regras de autorização. Para obter mais informações sobre endereços IPv6, consulte <a href="https://technet.microsoft.com/library/cc781672.aspx">How IPv6 Works</a> (Como o IPv6 Funciona).</p></td>
 </tr>
 </tbody>
 </table>
@@ -126,30 +137,26 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 
 ------------------------------------------------------------------------
 
-[Regras de autorização e recursos de segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
+[Regras de Autorização e Recursos de Segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
 [Usar o Console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-[about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
+[about\_Remote\_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
 
 <span>Mostrar:</span> herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
-Sim
-Não
+Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span>
-Enviar
-Ignorar
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
 
-<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos seus comentários.</span>
+<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
 [Gerenciar o perfil](https://social.technet.microsoft.com/profile)
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários do site</a>
-Comentários do site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários sobre o Site</a> Comentários sobre o Site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -182,6 +189,7 @@ Fale mais
 
 Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso de ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->
