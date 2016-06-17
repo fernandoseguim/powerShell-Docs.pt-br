@@ -55,13 +55,13 @@ Contas virtuais pertencem ao grupo de segurança "Administradores" por padrão, 
 
 ### Explorar o guia de experiência
 Pronto para criar seu primeiro ponto de extremidade de JEA?
-Confira o [JEA Experience Guide](./JEA Guide.md) (Guia de Experiência de JEA) para aprender a criar, implantar e usar seu próprio ponto de extremidade de JEA.
+Confira o [JEA Experience Guide](jea-uide.md) (Guia de Experiência de JEA) para aprender a criar, implantar e usar seu próprio ponto de extremidade de JEA.
 O guia introduz rapidamente com um ponto de extremidade de JEA pré-criado para dar uma ideia de como é a experiência do usuário final, percorrendo então pela recriação do ponto de extremidade do zero para ajudar a explicar as configurações de sessão e Capacidades de Função.
 
 ### Começar a criar seus próprios pontos de extremidade de JEA
 É fácil criar um ponto de extremidade de JEA, tudo o que você precisa é um sistema habilitado para JEA e um editor de texto (como o ISE do PowerShell).
 Uma dica útil para começar é criar arquivos esqueleto usando `New-PSRoleCapabilityFile -Path <path>` e `New-PSSessionCapabilityFile -Path <Path>` sem outros argumentos.
-Esses arquivos de esqueleto contêm todos os campos de configuração aplicáveis juntamente com comentários úteis para explicar a finalidade de cada campo. 
+Esses arquivos de esqueleto contêm todos os campos de configuração aplicáveis juntamente com comentários úteis para explicar a finalidade de cada campo.
 
 Para tornar a criação dos pontos de extremidade de JEA ainda mais fácil, confira o [Auxiliar do Kit de Ferramentas JEA](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) que fornece uma interface gráfica com a qual você pode criar arquivos de Configuração de Sessão e de Capacidade de Função.
 Ela ainda dão suporte à geração de Capacidades de Função com base nos logs do PowerShell para dar os primeiros passos nos comandos que os usuários executam regularmente para trabalhar.
