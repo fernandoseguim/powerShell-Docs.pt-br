@@ -5,11 +5,11 @@
 
     | Sistema operacional       | Edições         | Pré-requisitos        |  Links do pacote |
     |------------------------|--------------|------------------|----------------------| --------------|
-    | Windows Server 2012 R2 |  |  | <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkId=717507)">Win8.1AndW2K12R2-KB3134758-x64.msu</ctype="x-NOTFOUND"> |
-    | Windows Server 2012    |  |  | <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkId=717506)">W2K12-KB3134759-x64.msu</ctype="x-NOTFOUND"> |
-    | Windows Server 2008 R2 SP1 | Todas, exceto IA64 | O <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://www.microsoft.com/en-us/download/details.aspx?id=40855)">WMF 4.0</ctype="x-NOTFOUND"> e o <ctype="x-NOTFOUND" mdpre="[" mdpost="](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx)">.NET Framework 4.5 ou posterior</ctype="x-NOTFOUND"> são instalados | <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkId=717504)">Win7AndW2K8R2-KB3134760-x64.msu</ctype="x-NOTFOUND">|
-    | Windows 8.1 | Pro, Enterprise | | <ctype="x-NOTFOUND" mdpre="**" mdpost="**">x64:</ctype="x-NOTFOUND">  <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkId=717507)">Win8.1AndW2K12R2-KB3134758-x64.msu</ctype="x-NOTFOUND"> </br> <ctype="x-NOTFOUND" mdpre="**" mdpost="**">x86:</ctype="x-NOTFOUND">  <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkID=717963)">Win8.1-KB3134758-x86.msu</ctype="x-NOTFOUND">|
-    | Windows 7 SP1 | Todas | O <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://www.microsoft.com/en-us/download/details.aspx?id=40855)">WMF 4.0</ctype="x-NOTFOUND"> e o <ctype="x-NOTFOUND" mdpre="[" mdpost="](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx)">.NET Framework 4.5 ou posterior</ctype="x-NOTFOUND"> são instalados | <ctype="x-NOTFOUND" mdpre="**" mdpost="**">x64:</ctype="x-NOTFOUND"> <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkId=717504)">Win7AndW2K8R2-KB3134760-x64.msu</ctype="x-NOTFOUND">  </br> <ctype="x-NOTFOUND" mdpre="**" mdpost="**">x86:</ctype="x-NOTFOUND">  <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://go.microsoft.com/fwlink/?LinkID=717962)">Win7-KB3134760-x86.msu</ctype="x-NOTFOUND">|
+    | Windows Server 2012 R2 |  |  | [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) |
+    | Windows Server 2012    |  |  | [W2K12-KB3134759-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717506) |
+    | Windows Server 2008 R2 SP1 | Todas, exceto IA64 | O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e o [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) são instalados | [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
+    | Windows 8.1 | Pro, Enterprise | | **x64:**  [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) </br> **x86:**  [Win8.1-KB3134758-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717963)|
+    | Windows 7 SP1 | Todas | O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e o [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) são instalados | **x64:** [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
 
 # Instruções de instalação
 
@@ -26,18 +26,18 @@
 2. Altere os diretórios para a pasta na qual você baixou ou copiou o pacote de instalação do WMF 5.0.
 
 3. Execute um dos seguintes comandos:
-    - Nos computadores que executam o Windows Server 2012 R2 ou Windows 8.1 x64, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Win8.1AndW2K12R2-KB3134758-x64.msu /quiet</ctype="x-NOTFOUND">.
-    - Nos computadores que executam o Windows Server 2012, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">W2K12-KB3134759-x64.msu /quiet</ctype="x-NOTFOUND">.
-    - Nos computadores que executam o Windows Server 2008 R2 SP1 ou Windows 7 SP1 x64, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Win7AndW2K8R2-KB3134760-x64.msu /quiet</ctype="x-NOTFOUND">.
-    - Nos computadores que executam o Windows 8.1 x86, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Win8.1-KB3134758-x86.msu /quiet</ctype="x-NOTFOUND">.
-    - Nos computadores que executam o Windows 7 SP1 x86, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Win7-KB3134760-x86.msu /quiet</ctype="x-NOTFOUND">.
+    - Nos computadores que executam o Windows Server 2012 R2 ou Windows 8.1 x64, execute **Win8.1AndW2K12R2-KB3134758-x64.msu /quiet**.
+    - Nos computadores que executam o Windows Server 2012, execute **W2K12-KB3134759-x64.msu /quiet**.
+    - Nos computadores que executam o Windows Server 2008 R2 SP1 ou Windows 7 SP1 x64, execute **Win7AndW2K8R2-KB3134760-x64.msu /quiet**.
+    - Nos computadores que executam o Windows 8.1 x86, execute **Win8.1-KB3134758-x86.msu /quiet**.
+    - Nos computadores que executam o Windows 7 SP1 x86, execute **Win7-KB3134760-x86.msu /quiet**.
 
 ### Notas de instalação adicionais para o Windows Server 2008 R2 SP1 e Windows 7 SP1:
 
 Certifique-se de que os seguintes pré-requisitos foram atendidos:
 - O service pack mais recente está instalado.
-- O <ctype="x-NOTFOUND" mdpre="[" mdpost="](http://www.microsoft.com/en-us/download/details.aspx?id=40855)">WMF 4.0</ctype="x-NOTFOUND"> está instalado.
-- O <ctype="x-NOTFOUND" mdpre="[" mdpost="](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx)">.NET Framework 4.5 ou posterior</ctype="x-NOTFOUND"> está instalado.
+- O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) está instalado.
+- O [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) está instalado.
 
 **Dependência do WMF 4.0**
 
@@ -48,20 +48,20 @@ Os sistemas Windows Server 2008 R2 SP1 e Windows 7 SP1 têm PowerShell 2.0, WinR
 
 Corrigimos todos esses problemas em pacotes do WMF 4.0. Portanto, há um pré-requisito de WMF 4.0 para instalação WMF 5.0 no Windows Server 2008 R2 SP1 e Windows 7 SP1. Abaixo estão os problemas específicos que poderão ocorrer se você não instalar o WMF 4.0 antes de atualizar para o WMF 5.0:
 
-- O Log de eventos encaminhado não está disponível e o log de EventCollector não é exibido no Visualizador de Eventos após a desinstalação do WMF 3.0 ou WMF 5.0 (sem o pré-requisito WMF 4.0 instalado) no Windows 7 SP1 e no Windows Server 2008 R2 SP1 (<ctype="x-NOTFOUND" mdpre="[" mdpost="](https://support.microsoft.com/en-us/kb/2809215)">KB2809215</ctype="x-NOTFOUND">).
-- A personalização para a variável de ambiente <ctype="x-NOTFOUND" mdpre="*" mdpost="*">PSModulePath</ctype="x-NOTFOUND"> é redefinida para o valor padrão quando você atualiza diretamente do PowerShell 2.0 interno para WMF 5.0 (<ctype="x-NOTFOUND" mdpre="[" mdpost="](https://support.microsoft.com/en-us/kb/2872035)">KB2872035</ctype="x-NOTFOUND">) ou do WMF 3.0 para o WMF 5.0. (<ctype="x-NOTFOUND" mdpre="[" mdpost="](https://support.microsoft.com/en-us/kb/2872047)">KB2872047</ctype="x-NOTFOUND">) no Windows 7 SP1 e no Windows Server 2008 R2 SP1.
+- O Log de eventos encaminhado não está disponível e o log de EventCollector não é exibido no Visualizador de Eventos após a desinstalação do WMF 3.0 ou WMF 5.0 (sem o pré-requisito WMF 4.0 instalado) no Windows 7 SP1 e no Windows Server 2008 R2 SP1 ([KB2809215](https://support.microsoft.com/en-us/kb/2809215)).
+- A personalização para a variável de ambiente *PSModulePath* é redefinida para o valor padrão quando você atualiza diretamente do PowerShell 2.0 interno para WMF 5.0 ([KB2872035](https://support.microsoft.com/en-us/kb/2872035)) ou do WMF 3.0 para o WMF 5.0. ([KB2872047](https://support.microsoft.com/en-us/kb/2872047)) no Windows 7 SP1 e no Windows Server 2008 R2 SP1.
 
 **Dependência do WinRM**
 
-O DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 SP1 e Windows 7 SP1. Para habilitar o WinRM, em uma sessão com privilégios elevados do Windows PowerShell, execute <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Set-WSManQuickConfig</ctype="x-NOTFOUND">.
+O DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 SP1 e Windows 7 SP1. Para habilitar o WinRM, em uma sessão com privilégios elevados do Windows PowerShell, execute **Set-WSManQuickConfig**.
 
 # Instruções de desinstalação
 
 ### Usando o Prompt de Comando
 
-1.  Abra o <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Prompt de Comando.</ctype="x-NOTFOUND">
+1.  Abra o **Prompt de Comando.**
 
-2.  Execute o <ctype="x-NOTFOUND" mdpre="[" mdpost="](https://support.microsoft.com/en-us/kb/934307)">Inicializador Autônomo do Windows Update</ctype="x-NOTFOUND">, conforme mostrado abaixo:
+2.  Execute o [Inicializador Autônomo do Windows Update](https://support.microsoft.com/en-us/kb/934307), conforme mostrado abaixo:
 
 No Windows Server 2012 R2 e Windows 8.1:
 ```powershell
@@ -78,13 +78,13 @@ wusa /uninstall /kb:3134760
 
 ### Usando o Painel de Controle
 
-1.  Abra o <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Painel de Controle.</ctype="x-NOTFOUND">
+1.  Abra o **Painel de Controle.**
 
-2.  Abra <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Programas</ctype="x-NOTFOUND"> e, em seguida, <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Desinstalar um programa.</ctype="x-NOTFOUND">
+2.  Abra **Programas** e, em seguida, **Desinstalar um programa.**
 
-3.  Clique em <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Exibir atualizações instaladas.</ctype="x-NOTFOUND">
+3.  Clique em **Exibir atualizações instaladas.**
 
-4.  Selecione <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Windows Management Framework 5.0</ctype="x-NOTFOUND"> na lista de atualizações instaladas. Isso corresponde a <ctype="x-NOTFOUND" mdpre="*" mdpost="*">KB3134758</ctype="x-NOTFOUND">, <ctype="x-NOTFOUND" mdpre="*" mdpost="*">KB3134759</ctype="x-NOTFOUND"> ou <ctype="x-NOTFOUND" mdpre="*" mdpost="*">KB3134760</ctype="x-NOTFOUND">. Clique em <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Desinstalar.</ctype="x-NOTFOUND">
+4.  Selecione **Windows Management Framework 5.0** na lista de atualizações instaladas. Isso corresponde a *KB3134758*, *KB3134759* ou *KB3134760*. Clique em **Desinstalar.**
 
 
 <!--HONumber=Mar16_HO4-->
