@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scripting\setup\Starting-the-32-Bit-Version-of-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/b6ab9bfdd779a865c1f543bf16e91ec17b43c4b0/scripting/setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#41bbdd302aa3aa0d253bc4c820fdbbeb1b827ccc236)
 
 ## Item Details
-##### <a name='41bbdd302aa3aa0d253bc4c820fdbbeb1b827ccc236'></a> Source: [scripting\setup\Starting-the-32-Bit-Version-of-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/b6ab9bfdd779a865c1f543bf16e91ec17b43c4b0/scripting/setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [scripting\setup\Starting-the-32-Bit-Version-of-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/e4dc4a78a6d3091a6b24198580478e3aba94edd2/scripting/setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md)
-* Handoff File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c957236d87fff9f63f5c017bdcd24ba978cc32fd/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf)
-* Handoff Datetime: 2016-06-17 21:45:26
-* Handoff Reason: Include
-* Archive File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c4c97c2bcf7b8ea31d26d11855cf55f407a881ad/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf)
-* Archive Datetime: 2016-06-21 13:13:52
-* Handback File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/afae59c05423ef6aff0f25e1972672a6915c2e12/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf)
-* Handback Datetime: 2016-06-24 16:01:21
-* Bilingual File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/afae59c05423ef6aff0f25e1972672a6915c2e12/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.pt-br.xlf)
-* Bilingual Datetime: 2016-06-24 16:02:13
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
