@@ -51,7 +51,7 @@ A classe **MSFT_DSCLocalConfigurationManager** tem os métodos a seguir.
 | [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Chama diretamente o método **Set** de um recurso de DSC.| 
 | [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Chama diretamente o método **Test** de um recurso de DSC.| 
 | [Reversão](msft-dsclocalconfigurationmanager-rollback.md)| Reverte a uma configuração anterior.| 
-| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envie o documento de configuração para o nó gerenciado e salve-o como o documento de configuração pendingSends no nó gerenciado e salve-o como uma alteração pendente.| 
+| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envia o documento de configuração para o nó gerenciado e o salva como alteração pendente.| 
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envia o documento de configuração para o nó gerenciado e usa o Agente de Configuração para aplicar a configuração.| 
 | [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Envia o documento de configuração para o nó gerenciado e começa a usar o Agente de Configuração para aplicar a configuração. Use GetConfigurationResultOutput para recuperar a saída do resultado.| 
 | [SendMetaConfigurationApply](msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md)| Obtém as configurações de LCM que são usadas para controlar o Agente de Configuração.| 
@@ -78,6 +78,6 @@ A classe **MSFT_DSCLocalConfigurationManager** tem os métodos a seguir.
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 

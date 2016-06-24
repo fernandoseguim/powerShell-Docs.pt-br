@@ -1,14 +1,17 @@
 ---
-title: Instalar o Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
+title:  Instalar o Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
 ---
+
 # Instalar o Windows PowerShell
-Windows® 8 e Windows Server® 2012 incluem o Windows PowerShell 3.0 e todos os seus pré-requisitos. O sistema também inclui o Mecanismo Windows PowerShell 2.0 para compatibilidade com programas host que não podem usar o Windows PowerShell 3.0.
+O Windows® 8 e o Windows Server® 2012 incluem o Windows PowerShell 3.0 e todos os seus pré-requisitos. O sistema também inclui o Mecanismo Windows PowerShell 2.0 para compatibilidade com programas host que não podem usar o Windows PowerShell 3.0.
 
 Este tópico explica como instalar o Windows PowerShell 3.0 em sistemas anteriores e instalar e habilitar os recursos necessários.
 
@@ -27,7 +30,7 @@ Este tópico inclui as seções a seguir:
 -   [Instalar o Mecanismo do Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md)
 
 ## <a name="BKMK_InstallingOnWindows8andWindowsServer2012"></a>Instalar o Windows PowerShell no Windows 8 e no Windows Server 2012
-O Windows PowerShell 3.0 chega instalado, configurado e pronto para uso. O ISE (Ambiente de Script Integrado) do Windows PowerShell está instalado e habilitado. Para obter informações sobre como iniciar o Windows PowerShell, consulte [Starting Windows PowerShell on Windows 8](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) (Iniciando o Windows PowerShell no Windows 8) e [Starting Windows PowerShell on Windows Server 2012](https://technet.microsoft.com/en-us/library/4fc0110a-cc0c-42a4-bbb5-3cc89a0fc968) (Iniciando o Windows PowerShell no Windows Server 2012).
+O Windows PowerShell 3.0 chega instalado, configurado e pronto para uso. O ISE (Ambiente de Script Integrado) do Windows PowerShell está instalado e habilitado. Para obter informações sobre como iniciar o Windows PowerShell, consulte [Starting Windows PowerShell on Windows 8](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) (Iniciando o Windows PowerShell no Windows 8) e [Starting Windows PowerShell on Windows Server 2012](https://technet.microsoft.com/library/hh831491.aspx#BKMK_powershell) (Iniciando o Windows PowerShell no Windows Server 2012).
 
 ## <a name="BKMK_InstallingOnWindows7andWindowsServer2008R2"></a>Instalar o Windows PowerShell no Windows 7 e no Windows Server 2008 R2
 Estas instruções explicam como instalar o Windows PowerShell 3.0 em computadores com o Windows 7 com Service Pack 1 e Windows Server 2008 R2 com Service Pack 1. Há instruções de instalação separadas abaixo para computadores que executam com a opção de instalação Server Core do Windows Server 2008 R2.
@@ -38,9 +41,9 @@ Estas instruções explicam como instalar o Windows PowerShell 3.0 em computador
 
 #### Para instalar o Windows PowerShell 3.0
 
-1.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
+1.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Ou, instale a instalação completa do Microsoft .NET Framework 4.5.(dotNetFx45_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    Ou, instale o Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 2.  Instale o Windows Management Framework 3.0 do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
 
@@ -82,13 +85,13 @@ Em sistemas Windows Server 2008, o Windows Management Framework (Windows PowerSh
 
 #### Para instalar o Windows PowerShell 3.0
 
-1.  Instale o Microsoft .NET Framework 3.5 com Service Pack 1 do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242910](http://go.microsoft.com/fwlink/?LinkID=242910).
+1.  Instale o Microsoft .NET Framework 3.5 com Service Pack 1 no Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242910](http://go.microsoft.com/fwlink/?LinkID=242910).
 
 2.  Instale o Windows Management Framework (Windows PowerShell 2.0, KB 968930) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkId=243035](http://go.microsoft.com/fwlink/?LinkId=243035).
 
-3.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
+3.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Ou, instale a instalação completa do Microsoft .NET Framework 4.5.(dotNetFx45_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    Ou, instale o Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 4.  Instale a "Proteção Estendida para Autenticação" (KB 968389) de [http://go.microsoft.com/fwlink/?LinkID=186398](http://go.microsoft.com/fwlink/?LinkID=186398).
 
@@ -99,7 +102,6 @@ Em sistemas Windows Server 2008, o Windows Management Framework (Windows PowerSh
 [Iniciando o Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

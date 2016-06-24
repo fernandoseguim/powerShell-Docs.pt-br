@@ -6,7 +6,7 @@ Com o JEA, você pode:
 - **Entender melhor o que seus usuários estão fazendo** com transcrições "Over The Shoulder” que mostram exatamente quais comandos um usuário executou durante uma sessão.
 
 Por que isso é importante?
-Considere o cenário comuns em que os servidores DNS estão colocalizados com seus Controladores de Domínio do Active Directory.
+Considere o cenário comum em que os servidores DNS estão colocalizados com seus Controladores de Domínio do Active Directory.
 Os administradores DNS precisam ter privilégios de administrador local para corrigir problemas com o servidor DNS, porém para isso você precisa torná-los membros do grupo de segurança altamente privilegiado "Administradores do Domínio".
 Isso efetivamente concede controle sobre todo o domínio e acesso a todos os recursos nesse computador.
 
@@ -67,6 +67,6 @@ Para tornar a criação dos pontos de extremidade de JEA ainda mais fácil, conf
 Ela ainda dão suporte à geração de Capacidades de Função com base nos logs do PowerShell para dar os primeiros passos nos comandos que os usuários executam regularmente para trabalhar.
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

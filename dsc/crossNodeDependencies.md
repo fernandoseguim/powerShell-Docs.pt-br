@@ -23,7 +23,7 @@ O DSC fornece recursos especiais, **WaitForAll**, **WaitForAny**, e **WaitForSom
 
 Para usar os recursos **WaitForXXXX**, você cria um bloco de recursos desse tipo de recurso que especifica o recurso DSC e os nós a serem esperados. Em seguida, use a propriedade **DependsOn** em quaisquer outros blocos de recursos em sua configuração para aguardar que as condições especificadas no nó **WaitForXXXX** sejam bem-sucedidas.
 
-Por exemplo, na configuração a seguir, o nó de destino aguarda que o recurso **xADDomain** seja concluído no nó **MyDC** com 30, em intervalos de 15 segundos, antes que o nó de destino possa se unir ao domínio.
+Por exemplo, na configuração a seguir, o nó de destino aguarda que o recurso **xADDomain** seja concluído no nó **MyDC** com um número máximo de 30 novas tentativas, em intervalos de 15 segundos, antes que o nó de destino possa se unir ao domínio.
 
 ```PowerShell
 Configuration JoinDomain
@@ -46,7 +46,7 @@ Configuration JoinDomain
         {
             Name             = 'MyPC'
             DomainName       = 'Contoso.com'
-            Credential       = (get-credential)
+            Credential       = (Get-Credential)
             DependsOn        ='[WaitForAll]DC'
         }
     }
@@ -62,6 +62,6 @@ Configuration JoinDomain
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 
