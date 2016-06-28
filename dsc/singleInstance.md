@@ -1,12 +1,16 @@
 ---
-title:   Escrevendo um recurso de DSC de instância única (melhor prática)
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Escrevendo um recurso de DSC de instância única (melhor prática)"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4b1e8a6d3fb4feca426a9d7861c40d194e612c22
+
 ---
 
 # Escrevendo um recurso de DSC de instância única (melhor prática)
@@ -48,8 +52,7 @@ Configuration SetTimeZone
 
 Isso ocorre devido à forma como as chaves de recurso de DSC funcionam. Um recurso deve ter pelo menos uma propriedade de chave. Uma instância do recurso é considerada exclusiva se a combinação de valores de todas as suas propriedades de chave for exclusiva. Em sua implementação anterior, o recurso [xTimeZone](https://github.com/PowerShell/xTimeZone) apresentava apenas uma propriedade --**TimeZone**, que obrigatoriamente tinha que ser uma chave. Por isso, uma configuração, como mostrado acima seria compilada e executada sem aviso. Cada um do blocos de recurso de **xTimeZone** é considerado exclusivo. Isso faria com que a configuração fosse aplicada várias vezes ao nó, alternando o fuso horário.
 
-Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade principal. 
-O **IsSingleInstance** foi limitado a um único valor, "Yes" (Sim) usando um **ValueMap**. O esquema MOF antigo para o recurso foi:
+Para garantir que uma configuração possa definir o fuso horário para um nó de destino somente uma vez, o recurso foi atualizado para adicionar uma segunda propriedade, **IsSingleInstance**, que se tornou a propriedade principal. O **IsSingleInstance** foi limitado a um único valor, "Yes" (Sim) usando um **ValueMap**. O esquema MOF antigo para o recurso foi:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -225,6 +228,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
    
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

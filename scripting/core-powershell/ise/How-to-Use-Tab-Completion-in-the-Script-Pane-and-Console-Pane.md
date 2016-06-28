@@ -1,13 +1,17 @@
 ---
-title:  Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+title: Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 07f7fb6b4e5d94de31551566ca8faff263817383
+
 ---
 
 # Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
@@ -30,6 +34,7 @@ Por exemplo, digite `get-process -` e pressione TAB várias vezes para exibir ca
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,16 @@
 ---
-title:   Configurando um servidor de pull da Web de DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Configurando um servidor de pull da Web de DSC
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: a5f3025ff222d4a27c0da074df9e84d82c51a46f
+ms.openlocfilehash: 7bbfc31fdebdde83ac1784373b51af40b1dc9492
+
 ---
 
 # Configurando um servidor de pull da Web de DSC
@@ -182,6 +186,7 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

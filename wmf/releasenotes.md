@@ -13,4 +13,8 @@ O WMF (Windows Management Framework) 5.0 RTM oferece funcionalidade que foi atua
 O WMF 5.0 RTM substitui a [Preview de Produção do WMF 5.0](http://blogs.msdn.com/b/powershell/archive/2015/08/31/windows-management-framework-5-0-production-preview-is-now-available.aspx). É possível instalar o WMF 5.0 RTM sem desinstalar a Preview de Produção do WMF 5.0; no entanto, é necessário desinstalar todas as outras versões mais antigas de previews do WMF 5.0 antes de instalar o WMF 5.0 RTM.
 
 *Observação:* se estiver executando o Windows 10, será possível obter o mesmo conjunto de funcionalidades disponíveis no WMF 5.0 RTM pela atualização para a atualização de novembro do Windows 10 (Versão 1511). Se você não ainda atualizou seu sistema Windows 10, selecione o botão Iniciar e selecione Configurações > Atualização e segurança > Windows Update > Verificar atualizações. 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+
