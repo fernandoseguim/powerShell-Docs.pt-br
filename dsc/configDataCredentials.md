@@ -1,12 +1,16 @@
 ---
-title:   Opções de Credenciais nos Dados de Configuração
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Opções de Credenciais nos Dados de Configuração"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: a750fb208e73ce2ebffb2fa86a55c825169d8ad8
+
 ---
 
 # Opções de Credenciais nos Dados de Configuração
@@ -197,6 +201,7 @@ Agora o script de configuração vai gerar o arquivo MOF sem erros ou avisos.
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

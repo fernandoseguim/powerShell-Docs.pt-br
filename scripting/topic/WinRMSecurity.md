@@ -1,13 +1,17 @@
 ---
-title:  WinRMSecurityRedirect
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: WinRMSecurityRedirect
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
 redirect_url: https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity
+translationtype: Human Translation
+ms.sourcegitcommit: afa259b8611f995bbf5b824179a12e3d8f15df86
+ms.openlocfilehash: 207792452c563ec6cca5c17fbcd122372442d8ac
+
 ---
 
 # Considerações de segurança de comunicação remota do PowerShell
@@ -35,8 +39,7 @@ Em redes privadas, a regra de Firewall do Windows padrão para comunicação rem
 
 ## Isolamento do processo
 
-A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) para comunicação entre computadores. 
-O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
+A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) para comunicação entre computadores. O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
 
 ## Logs de eventos gerados pela comunicação remota do PowerShell
 
@@ -80,8 +83,7 @@ Quando a autenticação inicial é concluída, o [Protocolo de Comunicação Rem
 ## Dando o segundo salto
 
 Por padrão, a comunicação remota do PowerShell usa o Kerberos (se disponível) ou o NTLM para autenticação. Ambos os protocolos autenticam o computador remoto sem enviar as credenciais para ele.
-Essa é a maneira mais segura de autenticar, mas como o computador remoto não tem as credenciais do usuário, não é possível acessar outros computadores e serviços em nome do usuário. 
-Isso é conhecido como o problema de "Salto duplo".
+Essa é a maneira mais segura de autenticar, mas como o computador remoto não tem as credenciais do usuário, não é possível acessar outros computadores e serviços em nome do usuário. Isso é conhecido como o problema de "Salto duplo".
 
 Há várias maneiras de evitar esse problema:
 
@@ -119,6 +121,7 @@ Para obter mais informações sobre ataques de roubo de credenciais, consulte [M
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

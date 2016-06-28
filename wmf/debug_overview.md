@@ -41,4 +41,8 @@ Foram adicionados novos cmdlets que permitem listar os runspaces atuais em um pr
 Agora é possível anexar a qualquer processo de computador que tenha o Windows PowerShell carregado. É possível fazer isso entrando em uma sessão interativa com o processo, de forma semelhante a como você entra em uma sessão remota interativa executando o cmdlet Enter-PSSession:
 
 -   Enter-PSHostProcess
--   Exit-PSHostProcess<!--HONumber=Mar16_HO2-->
+-   Exit-PSHostProcess
+
+<!--HONumber=Jun16_HO4-->
+
+
