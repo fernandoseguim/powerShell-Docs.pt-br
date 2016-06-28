@@ -1,12 +1,16 @@
 ---
-title:   Aplicando configurações
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Aplicando configurações"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4c802002c6a03a27d02221dd713677911a77c30b
+
 ---
 
 # Aplicando configurações
@@ -30,8 +34,7 @@ Depois de criar e compilar uma configuração, você pode aplicá-la no modo de 
 
 ![Modo Pull](images/Pull.png "How pull mode works")
 
-No modo de pull, os clientes de pull são configurados para obter suas configurações de estado desejado de um servidor remoto de pull. Da mesma forma, o servidor de pull foi configurado para hospedar o serviço de DSC e recebeu as configurações e os recursos necessários para os clientes de pull. Cada um dos clientes de pull tem uma tarefa agendada que executa uma verificação periódica de conformidade na configuração do nó. Quando o evento é disparado na primeira vez, faz com que o Gerenciador de Configurações Local (LCM) no cliente de pull valide a configuração. 
-Se o cliente de pull estiver configurado como desejado, nada acontecerá. Caso contrário, o LCM faz uma solicitação para o servidor de pull para obter uma determinada configuração. Se essa configuração existir no servidor de pull e passar nas verificações iniciais de validação, ela será transmitida para o cliente pull, no qual será executada pelo LCM.
+No modo de pull, os clientes de pull são configurados para obter suas configurações de estado desejado de um servidor remoto de pull. Da mesma forma, o servidor de pull foi configurado para hospedar o serviço de DSC e recebeu as configurações e os recursos necessários para os clientes de pull. Cada um dos clientes de pull tem uma tarefa agendada que executa uma verificação periódica de conformidade na configuração do nó. Quando o evento é disparado na primeira vez, faz com que o Gerenciador de Configurações Local (LCM) no cliente de pull valide a configuração. Se o cliente de pull estiver configurado como desejado, nada acontecerá. Caso contrário, o LCM faz uma solicitação para o servidor de pull para obter uma determinada configuração. Se essa configuração existir no servidor de pull e passar nas verificações iniciais de validação, ela será transmitida para o cliente pull, no qual será executada pelo LCM.
 
 Para obter mais informações sobre como implantar um Servidor de Pull de DSC localmente, consulte o Guia de Planejamento e Configuração de Servidores de Pull de DSC.
 
@@ -45,6 +48,7 @@ Os tópicos a seguir explicam como configurar clientes e servidores de pull:
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

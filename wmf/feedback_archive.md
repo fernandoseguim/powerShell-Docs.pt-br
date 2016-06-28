@@ -15,4 +15,8 @@ O cmdlet **Expand-Archive** extrai os arquivos de um arquivo morto especificado.
 Expand-Archive -LiteralPath <String> [-DestinationPath] <String>
 Expand-Archive [-Path] <String> [-DestinationPath] <String>
 ```
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

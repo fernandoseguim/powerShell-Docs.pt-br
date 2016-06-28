@@ -1,12 +1,16 @@
 ---
-title:  WinRMSecurity
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: WinRMSecurity
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 7facb78962411d7b96ef6741e3ffa153d5537a0d
+ms.openlocfilehash: e1827e102a9b35ea214f89395f7ff3c5e0a58506
+
 ---
 
 # Considerações de segurança de comunicação remota do PowerShell
@@ -34,8 +38,7 @@ Em redes privadas, a regra de Firewall do Windows padrão para comunicação rem
 
 ## Isolamento do processo
 
-A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) para comunicação entre computadores. 
-O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
+A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) para comunicação entre computadores. O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
 
 ## Logs de eventos gerados pela comunicação remota do PowerShell
 
@@ -79,8 +82,7 @@ Quando a autenticação inicial é concluída, o [Protocolo de Comunicação Rem
 ## Dando o segundo salto
 
 Por padrão, a comunicação remota do PowerShell usa o Kerberos (se disponível) ou o NTLM para autenticação. Ambos os protocolos autenticam o computador remoto sem enviar as credenciais para ele.
-Essa é a maneira mais segura de autenticar, mas como o computador remoto não tem as credenciais do usuário, não é possível acessar outros computadores e serviços em nome do usuário. 
-Isso é conhecido como o problema de "Salto duplo".
+Essa é a maneira mais segura de autenticar, mas como o computador remoto não tem as credenciais do usuário, não é possível acessar outros computadores e serviços em nome do usuário. Isso é conhecido como o problema de "Salto duplo".
 
 Há várias maneiras de evitar esse problema:
 
@@ -118,6 +120,7 @@ Para obter mais informações sobre ataques de roubo de credenciais, consulte [M
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

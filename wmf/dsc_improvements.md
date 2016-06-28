@@ -9,4 +9,8 @@ Obrigado por participar de nossa pesquisa! Seus comentários são muito importan
 **Versão do módulo de PSDesiredStateConfiguration atualizada para 1.1**
 
 A versão do módulo de PsDesiredStateConfiguration foi atualizada para 1.1. Configurações DSC compiladas na Preview do WMF 5.0 de fevereiro de 2015 ou anterior não funcionarão no PowerShell/WMF 5.0. 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+
