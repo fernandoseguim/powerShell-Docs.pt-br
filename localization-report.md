@@ -2821,8 +2821,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf)
 * Handback Datetime: 2016-07-05 19:57:59
-* Bilingual File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/74d954c0f3bea4476d6501bdddf933a2895e4aff/ol-handback/PowerShell/powerShell-Docs.pt-br/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.pt-br.xlf)
+* Bilingual Datetime: 2016-07-05 19:58:48
 * [Back to Top](#report-top)
 
 ##### <a name='ee5e88ece27add955fcef3a9df0a441a08251e77168'></a> Source: [scripting\core-powershell\web-access\uninstall-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/uninstall-windows-powershell-web-access.md)
@@ -3440,8 +3440,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf)
 * Handback Datetime: 2016-07-05 19:57:59
-* Bilingual File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/77222a2dc391e1845b58ac0e572b033597704fef/ol-handback/PowerShell/powerShell-Docs.pt-br/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.pt-br.xlf)
+* Bilingual Datetime: 2016-07-05 19:58:48
 * [Back to Top](#report-top)
 
 ##### <a name='642bc1ba2e6d63de2ef692a1e2c547fb3f1a5946211'></a> Source: [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
@@ -3583,8 +3583,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf)
 * Handback Datetime: 2016-07-05 19:57:59
-* Bilingual File: [Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/13e1324021a915c41c77b06f151f50b3d4647007/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Using-Variables-to-Store-Objects.18165e54af473f3b203e56ff6805e411c4cebf96.pt-br.xlf)
+* Bilingual Datetime: 2016-07-05 19:58:48
 * [Back to Top](#report-top)
 
 ##### <a name='1d00a67656fc6682675a934645bddcb300a48808222'></a> Source: [scripting\getting-started\fundamental\Using-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Using-Windows-PowerShell.md)
@@ -3928,8 +3928,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf)
 * Handback Datetime: 2016-07-05 19:57:59
-* Bilingual File: [Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/74d954c0f3bea4476d6501bdddf933a2895e4aff/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d93fd5c37aa3043e513e1d9ac8e0f34c206f191c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-System-Requirements.90a72e00f7c321f4c9ff85e3a9ac215639266c9c.pt-br.xlf)
+* Bilingual Datetime: 2016-07-05 19:58:48
 * [Back to Top](#report-top)
 
 ##### <a name='e1827e102a9b35ea214f89395f7ff3c5e0a58506242'></a> Source: [scripting\setup\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/7facb78962411d7b96ef6741e3ffa153d5537a0d/scripting/setup/WinRMSecurity.md)
