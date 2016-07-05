@@ -17,7 +17,7 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 O padrão de criptografia CMS implementa a criptografia por chave pública, em que as chaves usadas para criptografar o conteúdo (a *chave pública*) e as chaves usadas para descriptografá-lo (a *chave privada*) são separadas.
 
-Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações sobre a Criptografia por Chave Pública, veja: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações sobre Criptografia por Chave Pública, veja: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
 
 Para ser reconhecidos no PowerShell, os certificados de criptografia exigem um EKU (identificador exclusivo de uso de chave) para identificá-los como certificados de criptografia de dados (como os identificadores para “Assinatura de Código”, “Mensagens Criptografadas”).
 
@@ -81,4 +81,8 @@ Para exibir certificados de criptografia de documento no provedor de certificado
 
 ```powershell
 dir -DocumentEncryptionCert
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Jun16_HO4-->
+
+

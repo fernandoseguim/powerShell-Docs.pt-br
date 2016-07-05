@@ -2,10 +2,16 @@
 
 Os módulos que contêm recursos DSC podem ser instalados lado a lado, e as configurações DSC podem usar uma versão específica do recurso instalado no sistema.
 
+Para obter mais informações, veja [Usando recursos com várias versões](../dsc/sxsResource.md).
+
 ## Problemas conhecidos
 
 Nesta versão, os seguintes problemas são problemas conhecidos da instalação lado a lado:
 
 -   Não há suporte para o uso de duas versões diferentes do recurso DSC na mesma configuração.
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

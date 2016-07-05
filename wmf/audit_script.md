@@ -96,4 +96,8 @@ $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
 Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior. Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os logs de eventos para fora do computador assim que possível.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

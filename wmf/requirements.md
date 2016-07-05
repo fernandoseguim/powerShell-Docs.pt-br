@@ -3,13 +3,13 @@
 - Instale as atualizações mais recentes do Windows antes de instalar o WMF 5.0 RTM.
 - É possível instalar o WMF 5.0 RTM apenas nos seguintes sistemas operacionais:
 
-    | Sistema operacional       | Edições         | Pré-requisitos        |  Links do pacote |
+    | Sistema operacional       | Edições         | Pré-requisitos        |  Links de pacote |
     |------------------------|--------------|------------------|----------------------| --------------|
     | Windows Server 2012 R2 |  |  | [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) |
     | Windows Server 2012    |  |  | [W2K12-KB3134759-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717506) |
-    | Windows Server 2008 R2 SP1 | Todas, exceto IA64 | O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e o [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) são instalados | [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
+    | Windows Server 2008 R2 SP1 | Todos, exceto IA64 | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) estão instalados| [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
     | Windows 8.1 | Pro, Enterprise | | **x64:**  [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) </br> **x86:**  [Win8.1-KB3134758-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717963)|
-    | Windows 7 SP1 | Todas | O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e o [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) são instalados | **x64:** [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
+    | Windows 7 SP1 | Tudo | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) estão instalados | **x64:**  [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
 
 # Instruções de instalação
 
@@ -48,8 +48,8 @@ Os sistemas Windows Server 2008 R2 SP1 e Windows 7 SP1 têm PowerShell 2.0, WinR
 
 Corrigimos todos esses problemas em pacotes do WMF 4.0. Portanto, há um pré-requisito de WMF 4.0 para instalação WMF 5.0 no Windows Server 2008 R2 SP1 e Windows 7 SP1. Abaixo estão os problemas específicos que poderão ocorrer se você não instalar o WMF 4.0 antes de atualizar para o WMF 5.0:
 
-- O Log de eventos encaminhado não está disponível e o log de EventCollector não é exibido no Visualizador de Eventos após a desinstalação do WMF 3.0 ou WMF 5.0 (sem o pré-requisito WMF 4.0 instalado) no Windows 7 SP1 e no Windows Server 2008 R2 SP1 ([KB2809215](https://support.microsoft.com/en-us/kb/2809215)).
-- A personalização para a variável de ambiente *PSModulePath* é redefinida para o valor padrão quando você atualiza diretamente do PowerShell 2.0 interno para WMF 5.0 ([KB2872035](https://support.microsoft.com/en-us/kb/2872035)) ou do WMF 3.0 para o WMF 5.0. ([KB2872047](https://support.microsoft.com/en-us/kb/2872047)) no Windows 7 SP1 e no Windows Server 2008 R2 SP1.
+- O Log de Eventos encaminhado não está disponível e o log de EventCollector não é exibido no Visualizador de Eventos após a desinstalação do WMF 3.0 ou WMF 5.0 (sem o pré-requisito de instalação do WMF 4.0) no Windows 7 SP1 e no Windows Server 2008 R2 SP1 ([KB2809215](https://support.microsoft.com/en-us/kb/2809215)).
+- A personalização para a variável de ambiente *PSModulePath* é redefinida para o valor padrão quando você atualiza diretamente do PowerShell 2.0 interno para o WMF 5.0 ([KB2872035](https://support.microsoft.com/en-us/kb/2872035)) ou do WMF 3.0 para o WMF 5.0. ([KB2872047](https://support.microsoft.com/en-us/kb/2872047)) no Windows 7 SP1 e no Windows Server 2008 R2 SP1.
 
 **Dependência do WinRM**
 
@@ -84,9 +84,9 @@ wusa /uninstall /kb:3134760
 
 3.  Clique em **Exibir atualizações instaladas.**
 
-4.  Selecione **Windows Management Framework 5.0** na lista de atualizações instaladas. Isso corresponde a *KB3134758*, *KB3134759* ou *KB3134760*. Clique em **Desinstalar.**
+4.  Selecione **Windows Management Framework 5.0** na lista de atualizações instaladas. Isso corresponde à *KB3134758*, *KB3134759* ou *KB3134760*. Clique em **Desinstalar.**
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=Jun16_HO4-->
 
 

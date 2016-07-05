@@ -18,7 +18,7 @@ Esse cmdlet dá suporte a dois modos: análise delimitada básica e análise ori
 A análise delimitada, por padrão, divide a entrada no espaço em branco e atribui nomes de propriedade aos grupos resultantes. É possível personalizar o delimitador:
 
 > 1 \[C:\\temp\]
-> &gt;&gt; "Hello World" | ConvertFrom-String | Format-Table -Auto
+> &gt;&gt; “Hello World” | ConvertFrom-String | Format-Table -Auto
 
 P1    P2
 --    --
@@ -73,17 +73,16 @@ Desse conjunto de exemplos, **ConvertFrom-String** agora pode extrair automatica
 
 > 2 \[C:\\temp\]
 >
-> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt |
-> &gt;&gt;&gt; Format-Table -Auto
+> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt | &gt;&gt;&gt; Format-Table -Auto
 >
 > ExtentText                     Name               City     State
 > ----------                     ----               ----     -----
-> Ana Trujillo...                Ana Trujillo       Redmond  WA
-> Antonio Moreno...              Antonio Moreno     Renton   WA
-> Thomas Hardy...                Thomas Hardy       Seattle  WA
-> Christina Berglund...          Christina Berglund Redmond  WA
-> Hanna Moos...                  Hanna Moos         Puyallup WA
+> Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
-A fim de realizar a manipulação de dados adicional no texto extraído, a propriedade **ExtentText** captura o texto não processado do qual o registro foi extraído. Para fornecer comentários sobre este recurso ou compartilhar conteúdo para o qual está tendo dificuldades para escrever exemplos, envie um email para <psdmfb@microsoft.com>.
+A fim de realizar a manipulação de dados adicional no texto extraído, a propriedade **ExtentText** captura o texto não processado do qual o registro foi extraído. Para fornecer comentários sobre este recurso ou compartilhar conteúdo para o qual está tendo dificuldades em escrever exemplos, envie um email para <psdmfb@microsoft.com>.
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

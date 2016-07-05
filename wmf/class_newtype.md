@@ -4,8 +4,7 @@ O PowerShell 5.0 introduz os seguintes novos elementos de linguagem no Windows P
 
 ## Palavra-chave class
 
-A palavra-chave **class** define uma nova classe. Este é um tipo real do .NET Framework. 
-Membros de classe são públicos, mas somente públicos dentro do escopo do módulo.
+A palavra-chave **class** define uma nova classe. Este é um tipo real do .NET Framework. Membros de classe são públicos, mas somente públicos dentro do escopo do módulo.
 Não é possível se referir ao nome de tipo como uma cadeia de caracteres (por exemplo, `New-Object` não funciona), e nesta versão, não é possível usar um literal de tipo (por exemplo, `[MyClass]`) fora do arquivo de script/módulo no qual a classe é definida.
 
 ```powershell
@@ -80,7 +79,7 @@ Todos os membros são públicos.
 
 ## Construtores e instanciação
 
-As classes do Windows PowerShell podem ter construtores; eles têm o mesmo nome que a classe. Os construtores podem ser sobrecarregados. Há suporte para construtores estáticos. As propriedades com expressões de inicialização são inicializadas antes da execução de qualquer código em um construtor. As propriedades estáticas são inicializadas antes do corpo de um construtor estático, e as propriedades de instância são inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor (como a sintaxe do C\# ": this()"). A solução alternativa é definir um método comum de Init. 
+As classes do Windows PowerShell podem ter construtores; eles têm o mesmo nome que a classe. Os construtores podem ser sobrecarregados. Há suporte para construtores estáticos. As propriedades com expressões de inicialização são inicializadas antes da execução de qualquer código em um construtor. As propriedades estáticas são inicializadas antes do corpo de um construtor estático, e as propriedades de instância são inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor [como a sintaxe do C\# ": this()"]. A solução alternativa é definir um método comum de Init. 
 
 Veja a seguir as maneiras de criar uma instância de classes nesta versão.
 
@@ -124,7 +123,7 @@ hashtable new(int capacity, float loadFactor)
 
 ## Métodos
 
-Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tem apenas um end block. Todos os métodos são públicos. A seguir, um exemplo de como definir um método chamado **DoSomething**.
+Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tem apenas um end block. Todos os métodos são públicos. Veja a seguir um exemplo de definição de um método chamado **DoSomething**.
 
 ```powershell
 class MyClass
@@ -200,8 +199,7 @@ $v -eq $d # true
 
 ## Exemplo de ponta a ponta
 
-O exemplo a seguir cria várias classes novas e personalizadas para implementar uma DSL (linguagem de folha de estilos dinâmica) em HTML. 
-Em seguida, o exemplo adiciona funções auxiliares para criar tipos específicos de elementos como parte da classe de elemento, como estilos de título e tabelas, já que os tipos não podem ser usados fora do escopo de um módulo.
+O exemplo a seguir cria várias classes novas e personalizadas para implementar uma DSL (linguagem de folha de estilos dinâmica) em HTML. Em seguida, o exemplo adiciona funções auxiliares para criar tipos específicos de elementos como parte da classe de elemento, como estilos de título e tabelas, já que os tipos não podem ser usados fora do escopo de um módulo.
 
 ```powershell
 # Classes that define the structure of the document
@@ -326,6 +324,6 @@ function Style
 function Html ([HTML] $doc) { return $doc }
 ```
 
-<!--HONumber=Apr16_HO5-->
+<!--HONumber=Jun16_HO4-->
 
 
