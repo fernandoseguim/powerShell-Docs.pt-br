@@ -1,12 +1,16 @@
 ---
-title:  Solucionando problemas de acesso no Windows PowerShell Web Access
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: Solucionando problemas de acesso no Windows PowerShell Web Access
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 6366ec9c49f721b758b6a520f68cf2b3c5ee0caf
+
 ---
 
 #  Solucionando problemas de acesso no Windows PowerShell Web Access
@@ -65,7 +69,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 </tr>
 <tr class="odd">
 <td><p>Não é possível conectar a um computador de grupo de trabalho remoto</p></td>
-<td><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>workgroup_name</em>&gt;\&lt;<em>user_name</em>&gt;</p></td>
+<td><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>nome_grupotrabalho</em>&gt;\&lt;<em>usuário_nome</em>&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Não é possível encontrar as ferramentas de gerenciamento do Servidor Web (IIS), embora a função esteja instalada</p></td>
@@ -192,6 +196,7 @@ Código e scripts de terceiros, vinculados ou referenciados neste site, são lic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
