@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 114
-[ In Sync Handback Files ](#insync-handback-success-list)| 202
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 113
+[ In Sync Handback Files ](#insync-handback-success-list)| 203
 [ Ignored Files ](#ignored-list)| 17
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -126,7 +126,6 @@
  [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md) | OutofSyncHandedBackSuccess | [Details](#c3d86239550566a7704405930f72c598d140cdb8243)
  [scripting\Windows-PowerShell-Glossary.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/Windows-PowerShell-Glossary.md) | OutofSyncHandedBackSuccess | [Details](#0cd377653a3ca82052b1b88f00bfe92830f2020f248)
  [wmf\class_base.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_base.md) | OutofSyncHandedBackSuccess | [Details](#6968ca2fb27c1f300b7b5e5730e358d81fc4c400253)
- [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md) | OutofSyncHandedBackSuccess | [Details](#a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254)
  [wmf\class_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_overview.md) | OutofSyncHandedBackSuccess | [Details](#3010b1ce497d8a5e45ada003587d9e104eddd8b1258)
  [wmf\dsc_authoring.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/dsc_authoring.md) | OutofSyncHandedBackSuccess | [Details](#b1cdc60338b2c130dad7d917c8fcec543aafe467261)
  [wmf\dsc_identicalduplicate.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_identicalduplicate.md) | OutofSyncHandedBackSuccess | [Details](#a257f792d39f360a2c9e638f42ffac5fed282b00268)
@@ -283,6 +282,7 @@
  [wmf\audit_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_overview.md) | InSyncHandedBackSuccess | [Details](#94d24bd3b67d1eceb71af4ffe704f2e03bf0806c250)
  [wmf\audit_script.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_script.md) | InSyncHandedBackSuccess | [Details](#654c0d5e83b9832524298b5c96eae094f371330f251)
  [wmf\audit_transcript.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_transcript.md) | InSyncHandedBackSuccess | [Details](#61364255f33378d71724705658d9924a7730b74e252)
+ [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md) | InSyncHandedBackSuccess | [Details](#a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254)
  [wmf\class_basemethod.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_basemethod.md) | InSyncHandedBackSuccess | [Details](#09ff4761ecdcf1d4433c4f40701cb7af3be44c8f255)
  [wmf\class_interface.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_interface.md) | InSyncHandedBackSuccess | [Details](#31b64b6845c8d6ece8628bd565662525a65353d9256)
  [wmf\class_newtype.md](https://github.com/PowerShell/powerShell-Docs/blob/3950bffa1f487b15d380ac2889f0fb17b7518ca6/wmf/class_newtype.md) | InSyncHandedBackSuccess | [Details](#b91e3bbb40b2b5eddd1e43be568773c850a9b8e0257)
@@ -4047,14 +4047,14 @@
 
 ##### <a name='2160a4b932075c98df6806c61d263d30f650b9f4249'></a> Source: [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_cms.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0f57abcf15b92607712ef2ec7e13f580b62e626b/wmf/audit_cms.md)
+* Target File: [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/b4985ab528a7ddc3fd476fd6a3d9ae7d49ecb069/wmf/audit_cms.md)
 * Handoff File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f7805777cd6b3da6698e4bc806063f0f3da8824a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 20:23:30
 * Handoff Reason: Include
 * Archive File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6be110bc94fa8c77a35f99ca58d9b51961e67694/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
 * Archive Datetime: 2016-06-28 13:31:02
-* Handback File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
-* Handback Datetime: 2016-07-05 20:14:16
+* Handback File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Handback Datetime: 2016-07-06 13:35:48
 * Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
 * Bilingual Datetime: 2016-07-05 20:15:09
 * [Back to Top](#report-top)
@@ -4116,15 +4116,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254'></a> Source: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/6910e635551a5a0be1dc1c068b83a1e9b050caff/wmf/class_baseconstructor.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/b4985ab528a7ddc3fd476fd6a3d9ae7d49ecb069/wmf/class_baseconstructor.md)
 * Handoff File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f7805777cd6b3da6698e4bc806063f0f3da8824a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 20:23:30
 * Handoff Reason: Include
 * Archive File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6be110bc94fa8c77a35f99ca58d9b51961e67694/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
 * Archive Datetime: 2016-06-28 13:31:02
-* Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/78491c6c329d691d7d4b9d9f6e463f6405d4c94d/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
-* Handback Datetime: 2016-03-23 22:57:48
+* Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Handback Datetime: 2016-07-06 13:35:48
 * Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/78491c6c329d691d7d4b9d9f6e463f6405d4c94d/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
