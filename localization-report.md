@@ -4055,8 +4055,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
 * Handback Datetime: 2016-07-06 13:35:48
-* Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
-* Bilingual Datetime: 2016-07-05 20:15:09
+* Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Bilingual Datetime: 2016-07-06 13:36:49
 * [Back to Top](#report-top)
 
 ##### <a name='94d24bd3b67d1eceb71af4ffe704f2e03bf0806c250'></a> Source: [wmf\audit_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_overview.md)
@@ -4125,8 +4125,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
 * Handback Datetime: 2016-07-06 13:35:48
-* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/78491c6c329d691d7d4b9d9f6e463f6405d4c94d/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Bilingual Datetime: 2016-07-06 13:36:49
 * [Back to Top](#report-top)
 
 ##### <a name='09ff4761ecdcf1d4433c4f40701cb7af3be44c8f255'></a> Source: [wmf\class_basemethod.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_basemethod.md)

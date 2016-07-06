@@ -2351,8 +2351,8 @@
       "ArchiveFileDateTime": "2016-06-28T13:31:02.3952036Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf",
-      "BilingualFileCommit": "b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5",
-      "BilingualDateTime": "2016-07-05T20:15:09.2751385Z",
+      "BilingualFileCommit": "20b29b51ddb26b7db5536150590952d6800754c0",
+      "BilingualDateTime": "2016-07-06T13:36:49.4400335Z",
       "BilingualException": null
     },
     "94d24bd3b67d1eceb71af4ffe704f2e03bf0806c": {
@@ -2526,8 +2526,8 @@
       "ArchiveFileDateTime": "2016-06-28T13:31:02.3952036Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf",
-      "BilingualFileCommit": "78491c6c329d691d7d4b9d9f6e463f6405d4c94d",
-      "BilingualDateTime": "2016-06-16T14:34:17.7222017Z",
+      "BilingualFileCommit": "20b29b51ddb26b7db5536150590952d6800754c0",
+      "BilingualDateTime": "2016-07-06T13:36:49.4400335Z",
       "BilingualException": null
     },
     "09ff4761ecdcf1d4433c4f40701cb7af3be44c8f": {

@@ -1,11 +1,43 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_cms.md) | InSyncHandedBackSuccess | [Details](#2160a4b932075c98df6806c61d263d30f650b9f4249)
+ [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md) | InSyncHandedBackSuccess | [Details](#a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254)
 
 ## Item Details
+##### <a name='2160a4b932075c98df6806c61d263d30f650b9f4249'></a> Source: [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_cms.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\audit_cms.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/b4985ab528a7ddc3fd476fd6a3d9ae7d49ecb069/wmf/audit_cms.md)
+* Handoff File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f7805777cd6b3da6698e4bc806063f0f3da8824a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Handoff Datetime: 2016-06-27 20:23:30
+* Handoff Reason: Include
+* Archive File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6be110bc94fa8c77a35f99ca58d9b51961e67694/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Archive Datetime: 2016-06-28 13:31:02
+* Handback File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Handback Datetime: 2016-07-06 13:35:48
+* Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.pt-br.xlf)
+* Bilingual Datetime: 2016-07-06 13:36:49
+* [Back to Top](#report-top)
+
+##### <a name='a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254'></a> Source: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/b4985ab528a7ddc3fd476fd6a3d9ae7d49ecb069/wmf/class_baseconstructor.md)
+* Handoff File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f7805777cd6b3da6698e4bc806063f0f3da8824a/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Handoff Datetime: 2016-06-27 20:23:30
+* Handoff Reason: Include
+* Archive File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/6be110bc94fa8c77a35f99ca58d9b51961e67694/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Archive Datetime: 2016-06-28 13:31:02
+* Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Handback Datetime: 2016-07-06 13:35:48
+* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/20b29b51ddb26b7db5536150590952d6800754c0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.pt-br.xlf)
+* Bilingual Datetime: 2016-07-06 13:36:49
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
