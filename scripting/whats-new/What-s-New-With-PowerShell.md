@@ -1,16 +1,20 @@
 ---
-title:  O que há de novo no PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: "O que há de novo no PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: abb8a868b735a2eb39a2276da6ece611d5423a16
+
 ---
 
 # Novidades no PowerShell
-O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem e melhoram seu uso e permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
+O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem e melhoram sua usabilidade e permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
 
 O Windows PowerShell 5.0 é compatível com versões anteriores. Os cmdlets, provedores, módulos, snap-ins, scripts, funções e perfis que foram criados para o Windows PowerShell 4.0, o Windows PowerShell 3.0 e o Windows PowerShell 2.0 geralmente funcionam no Windows PowerShell 5.0 sem alterações.
 
@@ -30,6 +34,7 @@ O Windows PowerShell 5.0 está instalado por padrão no Windows Server® 2016 Te
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

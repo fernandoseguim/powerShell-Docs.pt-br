@@ -1,19 +1,23 @@
 ---
-title:  Criando um seletor de data gráfico
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  c1cb722c-41e9-4baa-be83-59b4653222e9
+title: "Criando um seletor de data gráfico"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: f359254900dce0ef0a28af3e16b8ef4095e85309
+
 ---
 
 # Criando um seletor de data gráfico
-Use o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controle de calendário de estilo gráfico, que permite aos usuários selecionar um dia do mês.
+Use o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controle gráfico do estilo calendário, que permite aos usuários selecionar um dia do mês.
 
-## Criar um controle de seletor de data gráfico
+## Criar um controle gráfico de seletor de data
 Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```
@@ -140,6 +144,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

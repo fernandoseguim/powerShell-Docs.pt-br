@@ -1,13 +1,17 @@
 ---
-title:  Apêndice 2   Criar um atalho do PowerShell personalizado
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  5d4fd421-5d43-4ec7-86fd-acfe887b066e
+title: "Apêndice 2   Criar um atalho do PowerShell personalizado"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 24e9b67cf51b99156db3f0bdfb446996b9d3df76
+
 ---
 
 # Apêndice 2: Criar um atalho do PowerShell personalizado
@@ -21,7 +25,7 @@ O procedimento a seguir descreve como criar um atalho para o Windows PowerShell 
 
 4.  Na seção **Editar Opções**, selecione a caixa de seleção **Edição Rápida**.
 
-    Essa configuração permite selecionar o texto na janela do console do Windows PowerShell, arrastar o botão esquerdo do mouse e permite copiar texto para a área de transferência pressionando ENTER ou clicando com o botão direito do mouse.
+    Essa configuração permite selecionar o texto na janela do console do Windows PowerShell arrastando o botão esquerdo do mouse e permite copiar o texto para a área de transferência pressionando ENTER ou clicando com o botão direito do mouse.
 
 5.  Na seção **Editar Opções**, selecione a caixa de seleção **Modo Inserir**. Essa configuração permite clicar com o botão direito do mouse na janela do console para colar o texto da área de transferência automaticamente.
 
@@ -41,6 +45,7 @@ O procedimento a seguir descreve como criar um atalho para o Windows PowerShell 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

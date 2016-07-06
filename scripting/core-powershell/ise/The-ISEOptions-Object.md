@@ -1,13 +1,17 @@
 ---
-title:  O objeto ISEOptions
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  75e2a76f-f3d1-490b-ad5d-e3829946aabb
+title: O objeto ISEOptions
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 272749d487a59ccf5eb30352dc902591228746f3
+
 ---
 
 # O objeto ISEOptions
@@ -109,7 +113,7 @@ ms.assetid:  75e2a76f-f3d1-490b-ad5d-e3829946aabb
 
 ## Métodos
 
-###  <a name="rdctc"></a> RestoreDefaultConsoleTokenColors()
+###  <a name="rdctc"></a> RestoreDefaultConsoleTokenColors\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  Restaura os valores padrão das cores do token no painel de Console.
@@ -120,7 +124,7 @@ $psISE.Options.ConsoleTokenColors["Command"] = "red"
 $psISE.Options.RestoreDefaultConsoleTokenColors()
 ```
 
-###  <a name="rd"></a> RestoreDefaults()
+###  <a name="rd"></a> RestoreDefaults\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
  Restaura os valores padrão das cores de todas as configurações de opções no painel de Console. Ele também redefine o comportamento de várias mensagens de aviso que fornecem a caixa de seleção padrão para impedir que a mensagem seja mostrada novamente.
@@ -131,7 +135,7 @@ $psISE.Options.ConsolePaneBackgroundColor = "orange"
 $psISE.Options.RestoreDefaults()
 ```
 
-###  <a name="rdtc"></a> RestoreDefaultTokenColors()
+###  <a name="rdtc"></a> RestoreDefaultTokenColors\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
  Restaura os valores padrão das cores do token no painel de script.
@@ -142,7 +146,7 @@ $psISE.Options.TokenColors["Comment"]="red"
 $psISE.Options.RestoreDefaultTokenColors()
 ```
 
-###  <a name="rdxtc"></a> RestoreDefaultXmlTokenColors()
+###  <a name="rdxtc"></a> RestoreDefaultXmlTokenColors\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  Restaura os valores padrão das cores do token para elementos XML exibidos no ISE do Windows PowerShell. Consulte também [XmlTokenColors](#xtc).
@@ -220,7 +224,7 @@ $psISE.Options.ConsolePaneTextBackgroundColor = "pink"
 ###  <a name="contc"></a> ConsoleTokenColors
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica as cores dos tokens do IntelliSense no painel de Console de ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel de Console. Para alterar as cores dos tokens do IntelliSense no painel de Script, consulte [TokenColors](#tc). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultConsoleTokenColors()](#rdctc). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Especifica as cores dos tokens do IntelliSense no painel de Console de ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome\/valor de tipos de token e cores para o painel de Console. Para alterar as cores dos tokens do IntelliSense no painel de Script, consulte [TokenColors](#tc). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultConsoleTokenColors()](#rdctc). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -361,7 +365,7 @@ $psISE.Options.MruCount = 5
 ###  <a name="opbc"></a> OutputPaneBackgroundColor
   Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneBackgroundColor](#conpbc).
 
- A propriedade de leitura gravação que obtém ou define a cor da tela de fundo para o painel Saída em si. É uma instância da classe **System.Windows.Media.Color**.
+ A propriedade de leitura\/gravação que obtém ou define a cor da tela de fundo para o painel de Saída em si. É uma instância da classe **System.Windows.Media.Color**.
 
 ```
 # Changes the background color of the Output pane to gold.
@@ -372,7 +376,7 @@ $psISE.Options.OutputPaneForegroundColor = "gold"
 ###  <a name="optfc"></a> OutputPaneTextForegroundColor
   Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneForegroundColor](#conpfc).
 
- A propriedade de leitura/gravação que muda a cor de primeiro plano do texto no painel de Saída no ISE do Windows PowerShell 2.0.
+ A propriedade de leitura\/gravação que muda a cor de primeiro plano do texto no painel de Saída no ISE do Windows PowerShell 2.0.
 
 ```
 # Changes the foreground color of the text in the Output Pane to blue.
@@ -383,7 +387,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 ###  <a name="optbc"></a> OutputPaneTextBackgroundColor
   Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneTextBackgroundColor](#conptbc).
 
- A propriedade de leitura/gravação que muda a cor da tela de fundo do texto no painel de Saída.
+ A propriedade de leitura\/gravação que muda a cor da tela de fundo do texto no painel de Saída.
 
 ```
 # Changes the background color of the Output pane text to pink.
@@ -393,7 +397,7 @@ $psISE.Options.OutputPaneTextBackgroundColor = "pink"
 ###  <a name="spbc"></a> ScriptPaneBackgroundColor
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
- A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo dos arquivos. É uma instância da classe **System.Windows.Media.Color**.
+ A propriedade de leitura\/gravação que obtém ou define a cor da tela de fundo dos arquivos. É uma instância da classe **System.Windows.Media.Color**.
 
 ```
 
@@ -405,7 +409,7 @@ $psISE.Options.ScriptPaneBackgroundColor = ”yellow”
 ###  <a name="spfc"></a> ScriptPaneForegroundColor
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
- A propriedade de leitura/gravação que obtém ou define a cor de primeiro plano de arquivos de não script no painel de Script.
+ A propriedade de leitura\/gravação que obtém ou define a cor de primeiro plano de arquivos de não script no painel de Script.
 Para definir a cor de primeiro plano dos arquivos de script, use a propriedade [TokenColors](The-ISEOptions-Object.md#tc).
 
 ```
@@ -417,7 +421,7 @@ $psISE.Options.ScriptPaneBackgroundColor = "green"
 ###  <a name="ssps"></a> SelectedScriptPaneState
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
- A propriedade leitura/gravação que obtém ou define a posição do painel Script no visor. A cadeia pode ser "Maximizada", "Na parte superior" ou à "Direita".
+ A propriedade leitura\/gravação que obtém ou define a posição do painel de Script na exibição. A cadeia pode ser "Maximizada", "Na parte superior" ou à "Direita".
 
 ```
 # Moves the Script Pane to the top.
@@ -432,7 +436,7 @@ $psISE.Options.SelectedScriptPaneState = "Maximized"
 ###  <a name="sds"></a> ShowDefaultSnippets
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica se a lista **CTRL+J** dos trechos de código inclui o conjunto inicial que está incluído no Windows PowerShell. Quando definido como **$false**, somente trechos de código definidos pelo usuário aparecem na lista **CTRL+J**. O valor padrão é **$true**.
+ Especifica se a lista **CTRL\+J** de trechos de código inclui o conjunto inicial incluído no Windows PowerShell. Quando é definido como **$false**, somente trechos de código definidos\-pelo usuário aparecem na lista **CTRL\+J**. O valor padrão é **$true**.
 
 ```
 # Hide the default snippets from the CTRL+J list.
@@ -472,7 +476,7 @@ $psISe.Options.ShowLineNumbers = $false
 ###  <a name="so"></a> ShowOutlining
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica se o painel de Script exibe colchetes expansíveis e recolhíveis próximos às seções de código na margem esquerda. Quando eles são exibidos, você pode clicar nos ícones de menos (-)s ao lado de um bloco de texto para recolhê-los ou clicar no ícone de mais (+) para expandir um bloco de texto. O valor padrão é **$true**.
+ Especifica se o painel de Script exibe colchetes expansíveis e recolhíveis próximos às seções de código na margem esquerda. Quando eles são exibidos, você pode clicar nos ícones de subtração \(\-\) ao lado de um bloco de texto para recolhê-los ou clicar no ícone de adição \(\+\) para expandir um bloco de texto. O valor padrão é **$true**.
 
 ```
 # Turn off outlining in the Script pane.
@@ -516,7 +520,7 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 ###  <a name="tc"></a> TokenColors
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
- Especifica as cores de tokens do IntelliSense no painel de script do ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel de Script. Para alterar as cores dos tokens IntelliSense no painel de Console, consulte [ConsoleTokenColors](#contc). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultTokenColors()](#rdtc). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Especifica as cores de tokens do IntelliSense no painel de script do ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome\/valor de tipos de token e cores para o painel de Script. Para alterar as cores dos tokens IntelliSense no painel de Console, consulte [ConsoleTokenColors](#contc). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultTokenColors()](#rdtc). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -540,7 +544,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense=$false
 ###  <a name="uetsispi"></a> UseEnterToSelectInScriptPaneIntellisense
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica se você pode usar a tecla Enter para selecionar uma opção IntelliSense fornecida no painel de Script. O valor padrão é **$true**.
+ Especifica se é possível usar a tecla Enter para selecionar uma opção fornecida pelo IntelliSense no painel de Script. O valor padrão é **$true**.
 
 ```
 # Turn on using the Enter key to select an IntelliSense provided option in the Console pane.
@@ -551,7 +555,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense=$true
 ###  <a name="ulh"></a> UseLocalHelp
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica se a Ajuda instalada localmente ou a Ajuda da biblioteca do TechNet online aparece quando você pressiona F1 com o cursor posicionado em uma palavra-chave. Se definida como **$true**, uma janela pop-up mostra o conteúdo da Ajuda instalada localmente. Você pode instalar os arquivos de Ajuda, executando o comando `Update-Help`. Se definido como **$false**, seu navegador abrirá uma página na biblioteca do TechNet.
+ Especifica se a Ajuda instalada localmente ou a Ajuda da biblioteca do TechNet online aparece quando você pressiona F1 com o cursor posicionado em uma palavra-chave. Se for definida como **$true**, uma janela pop\-up mostrará o conteúdo da Ajuda instalada localmente. Você pode instalar os arquivos de Ajuda, executando o comando `Update-Help`. Se definido como **$false**, seu navegador abrirá uma página na biblioteca do TechNet.
 
 ```
 # Sets the option for the online help to be displayed.
@@ -604,7 +608,7 @@ $psISE.Options.WarningForegroundColor =”yellow”
 ###  <a name="xtc"></a> XmlTokenColors
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica um objeto de dicionário que contém pares de nome/valor de tipos e cores de token para o conteúdo XML exibido no ISE do Windows PowerShell. As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Veja também [RestoreDefaultXmlTokenColors()](#rdxtc).
+ Especifica um objeto de dicionário que contém pares de nome\/valor de tipos e cores de token para o conteúdo XML exibido no ISE do Windows PowerShell. As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Veja também [RestoreDefaultXmlTokenColors()](#rdxtc).
 
 ```
 # Sets the color of XML element names to green.
@@ -630,6 +634,7 @@ $psISE.Options.Zoom = 200
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
