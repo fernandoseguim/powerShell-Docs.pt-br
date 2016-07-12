@@ -1819,8 +1819,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf)
 * Handback Datetime: 2016-07-12 18:18:32
-* Bilingual File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf)
-* Bilingual Datetime: 2016-07-05 20:15:09
+* Bilingual File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.pt-br.xlf)
+* Bilingual Datetime: 2016-07-12 18:21:12
 * [Back to Top](#report-top)
 
 ##### <a name='9f3f79a29e0fb7ec5a5111284bb7985548e17749103'></a> Source: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/considerations-when-limiting-commands.md)
@@ -1949,8 +1949,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf)
 * Handback Datetime: 2016-07-12 18:18:32
-* Bilingual File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf)
-* Bilingual Datetime: 2016-07-05 20:15:09
+* Bilingual File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.pt-br.xlf)
+* Bilingual Datetime: 2016-07-12 18:21:12
 * [Back to Top](#report-top)
 
 ##### <a name='e24757029fd3ac9a70f710a7a755c35f440f087c112'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/d4e46653ff31ea7cda71f1c92b12ce5f2811b8a7/jea/README.md)
@@ -3230,8 +3230,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf)
 * Handback Datetime: 2016-07-12 18:18:32
-* Bilingual File: [Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf)
-* Bilingual Datetime: 2016-07-06 09:23:55
+* Bilingual File: [Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cdb16f6b606e26e2e80356fb541ddb805d0c94e7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Managing-Current-Location.d3cc0638ed635f92822a2f7ba0e1a1b92de3ad78.pt-br.xlf)
+* Bilingual Datetime: 2016-07-12 18:21:12
 * [Back to Top](#report-top)
 
 ##### <a name='6857cf5e73252f646e563fa12a8252b4bdc2e1e5191'></a> Source: [scripting\getting-started\cookbooks\Managing-Processes-with-Process-Cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Managing-Processes-with-Process-Cmdlets.md)
