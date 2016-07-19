@@ -31,4 +31,8 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 
 Para relatar as _ações_ executadas pelos usuários durante uma sessão JEA, é possível:
 1. Habilitar as transcrições “over the shoulder” para o ponto de extremidade JEA e consultar o diretório de transcrições para obter um log completo das ações de cada usuário
-2. Ativar o registro de módulo PowerShell e inspecionar os logs de eventos do PowerShell.<!--HONumber=Mar16_HO2-->
+2. Ativar o registro de módulo PowerShell e inspecionar os logs de eventos do PowerShell.
+
+<!--HONumber=Jun16_HO4-->
+
+

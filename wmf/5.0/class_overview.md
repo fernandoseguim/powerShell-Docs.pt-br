@@ -8,4 +8,8 @@ Melhoramos a linguagem do PowerShell para definir classes e outros tipos definid
 -   Definir tipos personalizados no PowerShell usando constructos de programação orientada a objeto conhecidos, como classes, propriedades, métodos, etc.
 -   Suporte à herança com classe no PowerShell e no recurso DSC de classe base
 -   Depurar tipos usando a linguagem do PowerShell
--   Gerar e manipular exceções usando mecanismos formais e no nível certo<!--HONumber=Mar16_HO2-->
+-   Gerar e manipular exceções usando mecanismos formais e no nível certo
+
+<!--HONumber=Jun16_HO4-->
+
+

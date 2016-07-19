@@ -136,4 +136,8 @@ A conexão a um Ponto de Extremidade JEA funciona da mesma forma que a conexão 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
-Depois de se conectar à sessão JEA, você estará limitado à execução de comandos na lista de permissões nas Funcionalidades da Função às quais você tem acesso. Caso tente executar algum comando que não seja permitido para sua função, você encontrará um erro.<!--HONumber=Mar16_HO2-->
+Depois de se conectar à sessão JEA, você estará limitado à execução de comandos na lista de permissões nas Funcionalidades da Função às quais você tem acesso. Caso tente executar algum comando que não seja permitido para sua função, você encontrará um erro.
+
+<!--HONumber=Jun16_HO4-->
+
+

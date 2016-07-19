@@ -1,12 +1,16 @@
 ---
-title:   Separando Dados de Configuração e de Ambiente
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Separando Dados de Configuração e de Ambiente"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: ebd74549e2671a332ef6abf131ab984a4d0865a6
+ms.openlocfilehash: 8a3ae5fdf5d70de999ca6b992efb14533408c305
+
 ---
 
 # Separando Dados de Configuração e de Ambiente
@@ -221,6 +225,7 @@ configuration MyConfiguration
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

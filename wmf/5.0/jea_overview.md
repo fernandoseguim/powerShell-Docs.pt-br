@@ -7,4 +7,8 @@ O JEA funciona por meio da permissão de criar pontos de extremidade restritos e
 
 1. Os usuários que se conectam a eles “executam como” uma Conta Virtual privilegiada que existe somente durante tal sessão remota.  Por padrão, essa Conta Virtual é um membro do grupo de Administradores internos, bem como um Administrador de Domínio em controladores de domínio (observação: essas permissões são configuráveis). Ao se conectar como um usuário e administrar como um usuário diferente com privilégios, é possível permitir que usuários não privilegiados executem tarefas administrativas específicas sem lhes conceder direitos administrativos em seus sistemas.
 2. O ponto de extremidade é bloqueado.  Isso significa que o PowerShell é executado no modo Sem Linguagem.  Apenas comandos, scripts e executáveis específicos são visíveis para o usuário.
-3. Diferentes usuários que se conectam veem um conjunto diferente de funcionalidades com base na associação a um grupo.  É possível fornecer funcionalidades diferentes a funções diferentes no mesmo ponto de extremidade.<!--HONumber=Mar16_HO2-->
+3. Diferentes usuários que se conectam veem um conjunto diferente de funcionalidades com base na associação a um grupo.  É possível fornecer funcionalidades diferentes a funções diferentes no mesmo ponto de extremidade.
+
+<!--HONumber=Jun16_HO4-->
+
+
