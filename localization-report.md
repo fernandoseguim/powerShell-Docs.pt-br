@@ -4069,8 +4069,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a7ec2220e37e04cfe430c891ab5dd40acc623c9c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf)
 * Handback Datetime: 2016-07-22 16:05:33
-* Bilingual File: [Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf)
-* Bilingual Datetime: 2016-07-06 09:23:55
+* Bilingual File: [Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a7ec2220e37e04cfe430c891ab5dd40acc623c9c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Manipulating-Items-Directly.555f7b1c862dcd9242ab20f5755ded2039933823.pt-br.xlf)
+* Bilingual Datetime: 2016-07-22 16:06:28
 * [Back to Top](#report-top)
 
 ##### <a name='84030be8564e10ce33e15c21f41bda79ea8fad7d253'></a> Source: [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md)
@@ -4114,8 +4114,8 @@
 * Archive Datetime: 2016-06-28 13:31:02
 * Handback File: [Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a7ec2220e37e04cfe430c891ab5dd40acc623c9c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf)
 * Handback Datetime: 2016-07-22 16:05:33
-* Bilingual File: [Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf)
-* Bilingual Datetime: 2016-07-06 09:23:55
+* Bilingual File: [Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a7ec2220e37e04cfe430c891ab5dd40acc623c9c/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Performing-Networking-Tasks.8fb5e0306e65ac69813c68c34345bd110f038067.pt-br.xlf)
+* Bilingual Datetime: 2016-07-22 16:06:28
 * [Back to Top](#report-top)
 
 ##### <a name='3093c4c307ff61151946c417d18cde8fe56278bc256'></a> Source: [scripting\getting-started\cookbooks\PowerShellGet-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/PowerShellGet-Module.md)
