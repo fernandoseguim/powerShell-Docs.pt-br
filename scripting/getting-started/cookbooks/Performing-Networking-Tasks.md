@@ -15,7 +15,7 @@ ms.openlocfilehash: 6d878b89a4cd49948cb465525e74e92db819c192
 ---
 
 # Executando tarefas de rede
-Como TCP\/IP é o protocolo de rede mais usado em geral, a maioria das tarefas de administração de protocolo de rede de baixo nível envolvem TCP\/IP. Nesta seção, usamos o Windows PowerShell e o WMI para realizar essas tarefas.
+Como, em geral, TCP\/IP é o protocolo de rede mais usado, a maioria das tarefas de administração de protocolo de rede de nível menor envolve TCP\/IP. Nesta seção, usamos o Windows PowerShell e o WMI para realizar essas tarefas.
 
 ### Listando de endereços IP para um computador
 Para obter todos os endereços IP em uso no computador local, use o seguinte comando:

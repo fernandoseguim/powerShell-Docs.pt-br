@@ -96,7 +96,7 @@ SKC  VC Name                           Property
 Embora seria algo conveniente tratar as entradas do registro como itens, não é possível você especificar um caminho para uma entrada de registro de uma maneira que garanta que ele seja exclusivo. A notação de caminho não faz distinção entre a subchave do Registro chamada **Run** e a entrada do Registro **(Default)** na subchave **Run**. Além disso, como nomes de entrada do Registro podem conter o caractere de barra invertida (**\\**), se as entradas de Registro fossem itens, você não poderia usar a notação de caminho para distinguir uma entrada do Registro denominada **Windows\\CurrentVersion\\Run** da subchave localizada nesse caminho.
 
 ### Renomeando itens existentes (Rename\-Item)
-Para alterar o nome de uma configuração de sessão, use o cmdlet **Rename\-Item**. O comando a seguir altera o nome do arquivo **file1.txt** para **fileOne.txt**.
+Para alterar o nome de um arquivo ou de uma pasta, use o cmdlet **Rename\-Item**. O comando a seguir altera o nome do arquivo **file1.txt** para **fileOne.txt**.
 
 ```
 PS> Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
@@ -164,7 +164,7 @@ Mode                LastWriteTime     Length Name
 ```
 
 ### Excluindo itens (Remove\-Item)
-Para excluir arquivos ou pastas, use o cmdlet **Remove\-Item**. Cmdlets do Windows PowerShell, como **Remove\-Item**, que podem executar alterações significativas e irreversíveis, geralmente, solicitarão confirmação quando você inserir seus comandos. Por exemplo, se você tentar remover a pasta **New.Directory**, será solicitado a confirmar o comando, pois a pasta contém arquivos:
+Para excluir arquivos ou pastas, use o cmdlet **Remove\-Item**. Cmdlets do Windows PowerShell, como **Remove\-Item**, que podem executar alterações significativas e irreversíveis, geralmente, solicitarão confirmação quando você inserir os comandos. Por exemplo, se você tentar remover a pasta **New.Directory**, será solicitado a confirmar o comando, pois a pasta contém arquivos:
 
 ```
 PS> Remove-Item C:\New.Directory
