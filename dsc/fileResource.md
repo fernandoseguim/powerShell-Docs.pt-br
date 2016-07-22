@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 535b25125a0c56feb10147f1872bdfdf3e3ef33a
+ms.sourcegitcommit: df9bb0362e82757ed1580cc4ace27735414a3e6d
+ms.openlocfilehash: 8c8fb7a40c066b048e1a54a741f4953e6b5a47b6
 
 ---
 
@@ -18,6 +18,9 @@ ms.openlocfilehash: 535b25125a0c56feb10147f1872bdfdf3e3ef33a
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso File na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar arquivos e pastas no nó de destino.
+
+>**Observação:** se a propriedade **MatchSource** estiver definida como **$false** (que é o valor padrão), o conteúdo a ser copiado será armazenado em cache na primeira vez que a configuração for aplicada. 
+>Os aplicativos subsequentes da configuração não verificarão arquivos e/ou pastas atualizados no caminho especificado pelo **SourcePath**. Se você quiser verificar se há atualizações para os arquivos e/ou pastas em **SourcePath** toda vez que a configuração for aplicada, defina **MatchSource** como **$true**. 
 
 ## Sintaxe
 ```
@@ -53,7 +56,7 @@ File [string] #ResourceName
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | SourcePath| Indica o caminho do qual o recurso de arquivo ou pasta deve ser copiado.| 
 | Tipo| Indica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como "Directory" para indicar que o recurso é um diretório. Defina-a como "File" para indicar que o recurso é um arquivo. O valor padrão é “File”.| 
-| MatchSource| Se definida como o valor padrão de __$false__, em seguida, todos os arquivos de origem (digamos, arquivos A, B e C) serão adicionados ao destino na primeira vez em que a configuração for aplicada. Se for adicionado um novo arquivo (D) à origem, ele não será adicionado ao destino, mesmo quando a configuração for reaplicada posteriormente. Se o valor for __$true__, em seguida, cada vez que a configuração for aplicada, os novos arquivos subsequentemente encontrados na origem (como arquivo D, neste exemplo) serão adicionados ao destino.| 
+| MatchSource| Se definida como o valor padrão de __$false__, em seguida, todos os arquivos de origem (digamos, arquivos A, B e C) serão adicionados ao destino na primeira vez em que a configuração for aplicada. Se for adicionado um novo arquivo (D) à origem, ele não será adicionado ao destino, mesmo quando a configuração for reaplicada posteriormente. Se o valor for __$true__, em seguida, cada vez que a configuração for aplicada, os novos arquivos subsequentemente encontrados na origem (como arquivo D, neste exemplo) serão adicionados ao destino. O valor padrão é **$false**.| 
 
 ## Exemplo
 
@@ -86,6 +89,6 @@ Configuration FileResourceDemo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

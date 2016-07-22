@@ -1,12 +1,19 @@
 ---
 title: Como depurar scripts no ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
+translationtype: Human Translation
+ms.sourcegitcommit: 669bbe8da3d6b5f4955b86474c21c11c3cfe495b
+ms.openlocfilehash: 080cbfd63838472d9d5405e4b232cda1cc1d028a
+
 ---
+
 # Como depurar scripts no ISE do Windows PowerShell
 Este tópico descreve como depurar scripts em um computador local usando os recursos de depuração visual do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
@@ -29,7 +36,7 @@ Um ponto de interrupção é um ponto designado em um script em que você deseja
 Desses, no ambiente de depuração do ISE do Windows PowerShell, somente os pontos de interrupção de linha podem ser definidos usando o menu ou os atalhos de teclado. Os outros dois tipos de pontos de interrupção podem ser definidos, mas são definidos no Painel de Console usando o cmdlet [Set-PSBreakpoint [m2]](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Esta seção descreve como executar tarefas de depuração no ISE do Windows PowerShell usando os menus quando disponíveis e como executar uma variedade maior de comandos no Painel de Console usando scripts.
 
 ### Para definir um ponto de interrupção
-Um ponto de interrupção pode ser definido em um script somente depois de ele ser salvo. Clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e depois em **Alternar Ponto de Interrupção**. Ou então clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**.
+Um ponto de interrupção pode ser definido em um script somente depois de ele ser salvo. Clique com o botão direito do mouse na linha em que você deseja definir um ponto de interrupção de linha e, depois, clique em **Alternar Ponto de Interrupção**. Ou então clique com o botão direito do mouse na linha na qual você deseja definir um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**.
 
 O script a seguir é um exemplo de como é possível definir um ponto de interrupção de variável no Painel de Console usando o cmdlet [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
@@ -49,7 +56,7 @@ get-psbreakpoint
 ```
 
 ### Remover um ponto de interrupção
-Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo](#bkmk_disable) em vez disso.  Clique com o botão direito do mouse no local de onde você deseja remover um ponto de interrupção e depois em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo](#bkmk_disable) em vez disso.  Clique com o botão direito do mouse na linha em que você deseja remover um ponto de interrupção de linha e, depois, clique em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -63,11 +70,11 @@ O script a seguir é um exemplo de como remover todos os pontos de interrupção
 
 ```
 # This command deletes all of the breakpoints in the current session.
-get-breakpoint | remove-breakpoint
+get-psbreakpoint | remove-psbreakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Desabilitar um ponto de interrupção
-Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar um ponto de interrupção de uma linha específica, clique com o botão direito do mouse na linha na qual você deseja desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar um ponto de interrupção de linha específico, clique com o botão direito do mouse na linha em que você deseja desabilitar um ponto de interrupção e, então, clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables the breakpoint with breakpoint ID 0.
@@ -84,7 +91,7 @@ get-psbreakpoint | disable-psbreakpoint
 ```
 
 ### Habilitar um ponto de interrupção
-Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha na qual você deseja habilitar um ponto de interrupção e clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
+Para habilitar um ponto de interrupção específico, clique com o botão direito do mouse na linha em que você deseja habilitar um ponto de interrupção e, então, clique em **Habilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja habilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Habilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível habilitar pontos de interrupção específicos no Painel de Console usando o cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -104,18 +111,18 @@ get-psbreakpoint | enable-psbreakpoint
 Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
 
 ### Para iniciar a depuração
-Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar/Continuar**. O script é executado até encontrar o primeiro ponto de interrupção. Ele pausa a operação neste ponto e realça a linha na qual ele pausa.
+Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar\/Continuar**. O script é executado até encontrar o primeiro ponto de interrupção. Ele pausa a operação neste ponto e realça a linha na qual ele pausa.
 
 ### Para continuar a depuração
-Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar/Continuar** ou então, no Painel de Console, digite **C** e pressione **ENTER**. Isso fará com que o script continue em execução até o próximo ponto de interrupção ou até o fim do script se outros pontos de interrupção não forem encontrados.
+Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar\/Continuar** ou então, no Painel de Console, digite **C** e pressione **ENTER**. Isso fará com que o script continue em execução até o próximo ponto de interrupção ou até o fim do script se outros pontos de interrupção não forem encontrados.
 
 ### Para exibir a pilha de chamadas
 A pilha de chamadas exibe a execução local no script atual. Se o script for executado em uma função que foi chamada por uma função diferente, isso será representado na exibição por linhas adicionais na saída. A linha inferior exibe o script original e a linha em que uma função foi chamada. A próxima linha mostra essa função e a linha em que outra função pode ter sido chamada.  A linha superior mostra o contexto atual da linha atual em que o ponto de interrupção está definido.
 
-Enquanto está em pausa, para ver a pilha de chamadas atual, pressione **CTRL+SHIFT+D** ou, no menu **Depurar**, clique em **Exibir a Pilha de Chamadas** ou então, no Painel de Console, digite **K** e pressione **ENTER**.
+Enquanto está em pausa, para ver a pilha de chamadas atual, pressione **CTRL\+SHIFT\+D** ou, no menu **Depurar**, clique em **Exibir a Pilha de Chamadas** ou então, no Painel de Console, digite **K** e pressione **ENTER**.
 
 ### Para interromper a depuração
-Pressione **SHIFT-F5** ou, no menu **Depurar**, clique em **Parar Depurador** ou então, no Painel de Console, digite **Q** e pressione **ENTER**.
+Pressione **SHIFT\-F5** ou, no menu **Depurar**, clique em **Interromper Depurador** ou então, no Painel de Console, digite **Q** e pressione **ENTER**.
 
 ## <a name="bkmk_3"></a>Como contornar, intervir e sair durante a depuração
 Passo a passo é o processo de executar uma instrução de cada vez. Você pode parar em uma linha de código e examinar os valores de variáveis e o estado do sistema. A tabela a seguir descreve as tarefas comuns de depuração como contornar, intervir e sair.
@@ -125,8 +132,8 @@ Passo a passo é o processo de executar uma instrução de cada vez. Você pode 
 |**Tarefa de Depuração**|**Descrição**|**Como fazer isso no ISE do PowerShell**|
 |**Intervir**|Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador intervirá nessa função ou script, caso contrário, ele parará na próxima instrução.|Pressione **F11** ou, no menu **Depurar**, clique em **Intervir** ou então, no Painel de Console, digite **S** e pressione **ENTER**.|
 |**Contornar**|Executa a instrução atual e para na próxima instrução. Se a instrução atual for uma função ou uma chamada de script, o depurador executará a função ou script completos e parará na próxima instrução após a chamada de função.|Pressione **F10** ou, no menu **Depurar**, clique em **Contornar** ou então, no Painel de Console, digite **V** e pressione **ENTER**.|
-|**Sair**|Sairá da função atual e subirá um nível se a função for aninhada. Se estiver no corpo principal, o script será executado ao final ou no próximo ponto de interrupção. As instruções ignoradas são executadas, mas não percorridas.|Pressione **SHIFT+F11** ou, no menu **Depurar**, clique em **Sair** ou então, no Painel de Console, digite **O** e pressione **ENTER**.|
-|**Continuar**|Continua a execução até o final ou até o próximo ponto de interrupção. As funções e invocações ignoradas são executadas, mas não são percorridas.|Pressione **F5** ou, no menu **Depurar**, clique em **Executar/Continuar** ou então, no Painel de Console, digite **C** e pressione **ENTER**.|
+|**Sair**|Sairá da função atual e subirá um nível se a função for aninhada. Se estiver no corpo principal, o script será executado ao final ou no próximo ponto de interrupção. As instruções ignoradas são executadas, mas não percorridas.|Pressione **SHIFT\+F11** ou, no menu **Depurar**, clique em **Sair** ou então, no Painel de Console, digite **O** e pressione **ENTER**.|
+|**Continuar**|Continua a execução até o final ou até o próximo ponto de interrupção. As funções e invocações ignoradas são executadas, mas não são percorridas.|Pressione **F5** ou, no menu **Depurar**, clique em **Executar\/Continuar** ou então, no Painel de Console, digite **C** e pressione **ENTER**.|
 
 ## <a name="bkmk_4"></a>Como exibir os valores de variáveis durante a depuração
 Você pode exibir os valores atuais das variáveis no script ao percorrer o código.
@@ -143,7 +150,7 @@ Todos os painéis no ISE estão sempre no mesmo escopo. Portanto, enquanto você
 ### Para exibir os valores de variáveis automáticas
 Você pode usar o método anterior para exibir o valor de quase todas as variáveis enquanto está depurando um script. No entanto, esses métodos não funcionam para as seguintes variáveis automáticas.
 
--   $_
+-   $\_
 
 -   $Input
 
@@ -153,7 +160,7 @@ Você pode usar o método anterior para exibir o valor de quase todas as variáv
 
 -   $Args
 
-Se você tentar exibir o valor de qualquer uma dessas variáveis, obterá o valor dessa variável para em um pipeline interno usado pelo depurador, não o valor da variável no script. É possível contornar isso para algumas variáveis ($_, $Input, $MyInvocation, $PSBoundParameters e $Args) usando o seguinte método:
+Se você tentar exibir o valor de qualquer uma dessas variáveis, obterá o valor dessa variável para em um pipeline interno usado pelo depurador, não o valor da variável no script. É possível contornar isso para algumas variáveis ($\_, $Input, $MyInvocation, $PSBoundParameters e $Args) usando o seguinte método:
 
 1.  No script, atribua o valor da variável automática a uma nova variável.
 
@@ -175,6 +182,7 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 
