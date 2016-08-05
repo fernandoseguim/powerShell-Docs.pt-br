@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: f5290e085c8949f6b3cdf23f3244a7142da6248d
+ms.sourcegitcommit: 83ca45d507e39b77751ac7feb6a7b65ae2834280
+ms.openlocfilehash: e1922008a92f00c9ddab28598735839c25219d24
 
 ---
 
@@ -87,7 +87,7 @@ Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção.
 
 ## Depurando o script de recurso
 
-Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas da saída `Start-DscConifiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas. Agora você verá um prompt semelhante a:
+Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas da saída `Start-DscConfiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas. Agora você verá um prompt semelhante a:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
@@ -110,6 +110,6 @@ Depois de chamar [Enable DscDebug](https://technet.microsoft.com/en-us/library/m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

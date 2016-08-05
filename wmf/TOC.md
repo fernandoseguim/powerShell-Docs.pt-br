@@ -2,11 +2,11 @@
 
 # [WMF 5.1](5.1/release-notes.md)
 ## [Novos cenários e recursos](5.1/scenarios-features.md)
-### [Bugs corrigidos no WMF 5.1](5.1/bugfixes.md)
+### [Melhorias no DSC (Configuração de Estado Desejado)](5.1/DSC-improvements.md)
 ### [Melhorias no Console do PowerShell](5.1/console-improvements.md)
 ### [Melhorias no Mecanismo do PowerShell](5.1/engine-improvements.md)
-### [Melhorias no DSC (Configuração de Estado Desejado)](5.1/DSC-improvements.md)
-### [Melhorias no OneGet]
+### [Aprimoramentos ao Gerenciamento de Pacotes](5/1/package-management-improvements.md)
+### [Bugs corrigidos no WMF 5.1](5.1/bugfixes.md)
 ## [Instalação e configuração](5.1/install-configure.md)
 ## [Problemas conhecidos](5.1/known-issues.md)
 ## [Compatibilidade](5.1/Compatibility.md)
@@ -94,6 +94,6 @@
 ### [SIL (Log de Inventário de Software)](5.0/sil_overview.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

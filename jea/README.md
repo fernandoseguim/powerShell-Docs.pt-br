@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: ARQUIVO LEIAME
 ms.technology: powershell
-ms.sourcegitcommit: 47593773fb0f34e0b52d35617522d7b1db7f48e6
-ms.openlocfilehash: 1cecf1b6bf5a55ed785c8ff43bdd4a0a41e96cd0
+translationtype: Human Translation
+ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
+ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
 
 ---
 
@@ -91,6 +92,6 @@ Ela ainda dão suporte à geração de Capacidades de Função com base nos logs
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
