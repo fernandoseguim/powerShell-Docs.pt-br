@@ -77,7 +77,7 @@ Descobrir como auditar e relatar todas as ações e a infraestrutura do JEA
 9.  Apêndices
   - [Conceitos fundamentais usados em todo este guia](key-concepts-used-throughout-this-guide.md)  
   -  [Criar um Controlador de Domínio](creating-a-domain-controller.md)  
-  -  [Sobre lista negra](on-blacklisting.md)  
+  -  [lista de bloqueios](on-blacklisting.md)  
   -  [Considerações sobre a limitação de comandos](considerations-when-limiting-commands.md)  
   -  [Armadilhas comuns de Capacidade de Função](common-role-capability-pitfalls.md)
 
