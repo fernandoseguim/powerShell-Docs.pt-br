@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/bd7f637d0889fd0f56c3fa653389819341d2ccff/jea/README.md) | InSyncHandedBackSuccess | [Details](#bfee5ef59a4085f0350ff454f634fc0bf5d6d837174)
 
 ## Item Details
+##### <a name='bfee5ef59a4085f0350ff454f634fc0bf5d6d837174'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/bd7f637d0889fd0f56c3fa653389819341d2ccff/jea/README.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/9190c726e7bfd3c1813510a26dfeb102ab97da45/jea/README.md)
+* Handoff File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/bd8978a603461bbbc12d956616392dc34a004fb8/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Handoff Datetime: 2016-07-28 12:41:31
+* Handoff Reason: Include
+* Archive File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3df121ab0256c5d02dde653d185547a11bea9e9f/ol-archive/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Archive Datetime: 2016-08-02 13:12:50
+* Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d98944566ea75ff4864d73711997b0687cbfc0cb/ol-handback/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Handback Datetime: 2016-08-11 07:01:41
+* Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b565c20064eca0bb92037cc8fe73f29789d68eb0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.pt-br.xlf)
+* Bilingual Datetime: 2016-08-05 06:25:24
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
