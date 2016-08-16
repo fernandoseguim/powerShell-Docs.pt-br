@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 24
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 168
+[ Archive Success Files ](#archive-success-list)| 167
 [ Handback Failed Files ](#handback-failed-list)| 5
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 220
+[ In Sync Handback Files ](#insync-handback-success-list)| 221
 [ Ignored Files ](#ignored-list)| 31
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -111,7 +111,6 @@
  [jea\end-to-end---active-directory.md](https://github.com/PowerShell/powerShell-Docs/blob/5954eb797df43de6f132a434ecad7049ee0221fb/jea/end-to-end---active-directory.md) | ArchivedSuccess | [Details](#204909c16d5e3e2099f6ba4247929d61445cd654168)
  [jea\introduction.md](https://github.com/PowerShell/powerShell-Docs/blob/e6b5107b7222708dcceff14bc26f0e12ef98d728/jea/introduction.md) | ArchivedSuccess | [Details](#00d568234b1453b9161b60d20117374ee4111ab3170)
  [jea\remake-the-demo-endpoint.md](https://github.com/PowerShell/powerShell-Docs/blob/d20ea8418cb7389d756de94ea752cf604b8d07af/jea/remake-the-demo-endpoint.md) | ArchivedSuccess | [Details](#acd2cfbd038250a26236c875d0e8b03a32cd84f9176)
- [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md) | ArchivedSuccess | [Details](#a3dd4a217f5b1fd80e97adf802c65073ca015bbc178)
  [jea\using-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/88ce340c09efdbb3d81a72fe6113c1187a9152f2/jea/using-jea.md) | ArchivedSuccess | [Details](#9db7a5a91d25d459313117da34af63016f03c241180)
  [scripting\core-powershell\console\PowerShell.exe-Command-Line-Help.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console/PowerShell.exe-Command-Line-Help.md) | ArchivedSuccess | [Details](#a53a9457712973b4ff43c226b247214d24406592183)
  [scripting\core-powershell\console-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console-guide.md) | ArchivedSuccess | [Details](#074f3570e9354f2186be8690744640ea4739ef6e182)
@@ -319,6 +318,7 @@
  [jea\prerequisites.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/prerequisites.md) | InSyncHandedBackSuccess | [Details](#ac9231a475ba84e9051bbd06a65f3f20c9e49846174)
  [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/bd7f637d0889fd0f56c3fa653389819341d2ccff/jea/README.md) | InSyncHandedBackSuccess | [Details](#bfee5ef59a4085f0350ff454f634fc0bf5d6d837175)
  [jea\reporting-on-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/reporting-on-jea.md) | InSyncHandedBackSuccess | [Details](#d867a6462e9fa8b6e16c8c2103899c72b380116c177)
+ [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md) | InSyncHandedBackSuccess | [Details](#a3dd4a217f5b1fd80e97adf802c65073ca015bbc178)
  [scripting\core-powershell\console\Using-Tab-Expansion.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console/Using-Tab-Expansion.md) | InSyncHandedBackSuccess | [Details](#644dbbb51e98efda9735f0ff23489e936f6b28a2184)
  [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md) | InSyncHandedBackSuccess | [Details](#4c22e1a2543690a971836813cb32ace74ababb4a202)
  [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#080cbfd63838472d9d5405e4b232cda1cc1d028a205)
@@ -2678,14 +2678,14 @@
 
 ##### <a name='9f3f79a29e0fb7ec5a5111284bb7985548e17749165'></a> Source: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/considerations-when-limiting-commands.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/11ca47502bfe7a8610f3b260ba6ed36e274a90d1/jea/considerations-when-limiting-commands.md)
+* Target File: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0fb6df882a43062c7079618f2e3dfbbbc6787e99/jea/considerations-when-limiting-commands.md)
 * Handoff File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/1b46447512c7bd85a46955150f0ac7ac4b20e345/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
 * Handoff Datetime: 2016-07-06 23:51:28
 * Handoff Reason: Include
 * Archive File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/32ae761c580251c62a754b1219160d9868dc1d73/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
 * Archive Datetime: 2016-07-12 13:14:04
-* Handback File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c87c5fa27932e5f3a85bf80da235c2f8bcae7bc/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
-* Handback Datetime: 2016-07-12 18:04:39
+* Handback File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/3ee44b0727ee202000e32d3796f3745b2e855ce7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
+* Handback Datetime: 2016-08-16 14:40:23
 * Bilingual File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c87c5fa27932e5f3a85bf80da235c2f8bcae7bc/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
 * Bilingual Datetime: 2016-07-12 18:05:35
 * [Back to Top](#report-top)
@@ -2794,14 +2794,14 @@
 
 ##### <a name='8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf173'></a> Source: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/11ca47502bfe7a8610f3b260ba6ed36e274a90d1/jea/on-blacklisting.md)
+* Target File: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0fb6df882a43062c7079618f2e3dfbbbc6787e99/jea/on-blacklisting.md)
 * Handoff File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/1b46447512c7bd85a46955150f0ac7ac4b20e345/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
 * Handoff Datetime: 2016-07-06 23:51:28
 * Handoff Reason: Include
 * Archive File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/32ae761c580251c62a754b1219160d9868dc1d73/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
 * Archive Datetime: 2016-07-12 13:14:04
-* Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c87c5fa27932e5f3a85bf80da235c2f8bcae7bc/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
-* Handback Datetime: 2016-07-12 18:04:39
+* Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/3ee44b0727ee202000e32d3796f3745b2e855ce7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
+* Handback Datetime: 2016-08-16 14:40:23
 * Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1c87c5fa27932e5f3a85bf80da235c2f8bcae7bc/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
 * Bilingual Datetime: 2016-07-12 18:05:35
 * [Back to Top](#report-top)
@@ -2866,18 +2866,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='a3dd4a217f5b1fd80e97adf802c65073ca015bbc178'></a> Source: [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0fb6df882a43062c7079618f2e3dfbbbc6787e99/jea/role-capabilities.md)
 * Handoff File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/1b46447512c7bd85a46955150f0ac7ac4b20e345/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
 * Handoff Datetime: 2016-07-06 23:51:28
 * Handoff Reason: Include
 * Archive File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/32ae761c580251c62a754b1219160d9868dc1d73/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/archive/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
 * Archive Datetime: 2016-07-12 13:14:04
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/0f57abcf15b92607712ef2ec7e13f580b62e626b/jea/role-capabilities.md)
-* Current Handback File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
-* Current Handback Datetime: 2016-07-05 20:14:16
+* Handback File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/3ee44b0727ee202000e32d3796f3745b2e855ce7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
+* Handback Datetime: 2016-08-16 14:40:23
 * Bilingual File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b4fd40c97ce4d5814bff55bac47bd4cb1106e6f5/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
 * Bilingual Datetime: 2016-07-05 20:15:09
 * [Back to Top](#report-top)
