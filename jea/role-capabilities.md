@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "capacidades de função"
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 5b6dcb205d2c3cbb1a98c6465cb1002b9ed61459
+translationtype: Human Translation
+ms.sourcegitcommit: 81fd386d58576a8930093b4f18ce36a4ff6cecd0
+ms.openlocfilehash: a3dd4a217f5b1fd80e97adf802c65073ca015bbc
 
 ---
 
@@ -22,7 +23,7 @@ Esta seção responderá essa pergunta.
 
 ## Apresentando as Capacidades de Função do PowerShell
 Capacidades de Função do PowerShell definem "o que" um usuário pode fazer em um ponto de extremidade JEA.
-Eles fornecem detalhes sobre uma lista branca de coisas como comandos visíveis, aplicativos visíveis e muito mais.
+Eles fornecem detalhes sobre uma lista de permissões de coisas como comandos visíveis, aplicativos visíveis e muito mais.
 Capacidades de Função são definidas por arquivos com uma extensão ".psrc".
 
 ## Conteúdo do Capacidade de Função
@@ -64,7 +65,7 @@ Dito isso, é altamente recomendável examinar atentamente cada comando exposto 
 
 3.  Você expôs um executável (ipconfig) usando VisibleExternalCommands.
 Você também pode expor scripts do PowerShell completos com este campo.
-É importante sempre fornecer o caminho completo para comandos externos para garantir que um programa com o mesmo nome (e potencialmente mal-intencionado) colocado no caminho do usuário não seja executado em vez dele.
+É importante sempre informar o caminho completo para comandos externos para garantir que um programa com um nome similar (e potencialmente mal-intencionado) colocado no caminho do usuário não seja executado em vez dele.
 
 Salve o arquivo e conecte-se ao ponto de extremidade de demonstração novamente para confirmar se as alterações funcionaram.
 
@@ -122,7 +123,7 @@ New-ModuleManifest -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_
 # Create a blank script module. You'll use this for custom functions in the next section.
 New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1' -ItemType File
 
-# Create a RoleCapabilities folder in the AD_Module folder. PowerShell expects Role Capabilities to be located in a "RoleCapabilities" folder within a module.
+# Create a RoleCapabilities folder in the Contoso_AD_Module folder. PowerShell expects Role Capabilities to be located in a "RoleCapabilities" folder within a module.
 New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities' -ItemType Directory
 
 # Create a blank Role Capability in your RoleCapabilities folder. Running this command without any additional parameters just creates a blank template.
@@ -134,7 +135,7 @@ Ele será usado na próxima seção.
 
 ## Conceitos Principais
 **Capacidade de Função (.psrc)**: um arquivo que define "o que" um usuário pode fazer em um ponto de extremidade JEA.
-Ele fornece detalhes sobre uma lista branca de coisas como comandos visíveis, aplicativos de console visíveis e muito mais.
+Ele fornece detalhes sobre uma lista de permissões de coisas como comandos visíveis, aplicativos de console visíveis e muito mais.
 Para que o PowerShell detecte as Capacidades de Função, você deve colocá-los em uma pasta "RoleCapabilities" em um módulo do PowerShell válido.
 
 **Módulo do PowerShell**: um pacote da funcionalidade do PowerShell.
@@ -144,6 +145,6 @@ Para ser carregado automaticamente, módulos do PowerShell devem estar localizad
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

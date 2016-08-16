@@ -19,7 +19,7 @@ Há um ponto importante sobre esta etapa.
 É fundamental que todos os recursos expostos por meio de JEA estejam localizados em áreas restritas pelo administrador.
 Os usuários não administradores não devem ter a capacidade de modificar os scripts usados por meio de pontos de extremidade JEA.
 
-Falando nisso, é essencial que você não conceda a usuários do JEA a capacidade de substituir configurações do JEA e scripts na lista branca dentro de suas sessões JEA.
+Falando nisso, é essencial que você não conceda a usuários do JEA a capacidade de substituir configurações do JEA e scripts na lista de permissões dentro de suas sessões JEA.
 Tenha muito cuidado ao expor comandos como `Copy-Item`!
 
 
