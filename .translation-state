@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "877e2df3b80ad730f143f8008a5d8c071eabb9ca",
-  "LastTranslatedCommit": "cbdce8af32c46e79d750376d5904c27143feb51f",
+  "LastTranslatedCommit": "f3721ae50b540ba811e8fa3eaa26e30252c34ba9",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -17508,9 +17508,17 @@
       "TargetFilePath": "scripting\\core-powershell\\web-access\\authorization-rules-and-security-features-of-windows-powershell-web-access.md",
       "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.pt-br.xlf",
       "HandbackFileCommit": "d3173356a18da61447e58bc8310f7d423a7b4aa6",
-      "HandbackDateTime": "2016-05-25T00:41:41.2976632Z",
-      "HandbackException": null,
-      "HandbackFailureTimes": 0,
+      "HandbackDateTime": "2016-08-17T09:08:22.6985101Z",
+      "HandbackException": {
+        "internal_error_code": "handback_transform_failed",
+        "internal_error_message": "Handback file: C:\\ol\\master\\PSD.handback\\7f42c4\\ol-handback\\PowerShell\\powerShell-Docs.pt-br\\live\\authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.pt-br.xlf failed.",
+        "internal_error_retriable": false,
+        "exception_message": "",
+        "exception_type": "System.Net.Http.HttpRequestException",
+        "stack_trace": "   at Microsoft.OpenLocalization.Transformer.MarkdownJavascriptTransformer.XliffToMarkdownCore(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\Transformer\\MarkdownJavascriptTransformer.cs:line 119\r\n   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 104\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass7_0.<GetHandbackFiles>b__1(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 420",
+        "extended_information": null
+      },
+      "HandbackFailureTimes": 1,
       "UpdatedDateTime": "2016-05-25T00:41:41.2976632Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.pt-br\\live\\archive\\authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.pt-br.xlf",
       "ArchiveFileCommit": "467770c93a30037823fd981eaecaf7f02c78de43",
