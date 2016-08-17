@@ -2684,8 +2684,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
 * Handback Datetime: 2016-08-17 11:21:10
-* Bilingual File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/775779e18664174bc6917fa6d6202571b6498fc2/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
-* Bilingual Datetime: 2016-08-17 04:14:21
+* Bilingual File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.pt-br.xlf)
+* Bilingual Datetime: 2016-08-17 11:22:05
 * [Back to Top](#report-top)
 
 ##### <a name='8473eb668e4da5bab01c2f2b7647cbced413bd22166'></a> Source: [jea\creating-a-domain-controller.md](https://github.com/PowerShell/powerShell-Docs/blob/d4a72a7c5883b1d3ba8de3dbc9cfe016a6fb3498/jea/creating-a-domain-controller.md)
@@ -2800,8 +2800,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
 * Handback Datetime: 2016-08-17 11:21:10
-* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/775779e18664174bc6917fa6d6202571b6498fc2/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
-* Bilingual Datetime: 2016-08-17 04:14:21
+* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.pt-br.xlf)
+* Bilingual Datetime: 2016-08-17 11:22:05
 * [Back to Top](#report-top)
 
 ##### <a name='ac9231a475ba84e9051bbd06a65f3f20c9e49846174'></a> Source: [jea\prerequisites.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/prerequisites.md)
@@ -2873,8 +2873,8 @@
 * Archive Datetime: 2016-07-12 13:14:04
 * Handback File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
 * Handback Datetime: 2016-08-17 11:21:10
-* Bilingual File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/775779e18664174bc6917fa6d6202571b6498fc2/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
-* Bilingual Datetime: 2016-08-17 04:14:21
+* Bilingual File: [role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5125567f644cad45868f76859d16874ac4f5d88/ol-handback/PowerShell/powerShell-Docs.pt-br/live/role-capabilities.f5d3ffdf33f9043c1ffa50f8a35842c90ffd6c71.pt-br.xlf)
+* Bilingual Datetime: 2016-08-17 11:22:05
 * [Back to Top](#report-top)
 
 ##### <a name='fc3b6d859bf3842a857d9519516ea4e275fa1876179'></a> Source: [jea\TOC.MD](https://github.com/PowerShell/powerShell-Docs/blob/877e2df3b80ad730f143f8008a5d8c071eabb9ca/jea/TOC.MD)
