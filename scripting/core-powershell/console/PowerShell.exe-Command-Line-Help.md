@@ -1,12 +1,19 @@
 ---
 title: Ajuda da linha de comando do PowerShell.exe
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: e4635890a5433e199d5ddbce0ac1475a134ecd57
+
 ---
+
 # Ajuda da linha de comando do PowerShell.exe
 Inicia uma sessão do Windows PowerShell. Você pode usar o PowerShell.exe para iniciar uma sessão do Windows PowerShell na linha de comando de outra ferramenta, como Cmd.exe, ou usá-lo na linha de comando do Windows PowerShell para iniciar uma nova sessão. Use os parâmetros para personalizar a sessão.
 
@@ -39,10 +46,10 @@ PowerShell[.exe] -Help | -? | /?
 Aceita uma versão de cadeia de caracteres com codificação de base 64 de um comando. Use esse parâmetro para enviar comandos ao Windows PowerShell que exigem aspas complexas ou chaves.
 
 ### -ExecutionPolicy <ExecutionPolicy>
-Define a política de execução padrão para a sessão atual e o salva-a na variável de ambiente $env:PSExecutionPolicyPreference. Esse parâmetro não altera a política de execução do Windows PowerShell que está definida no Registro. Para obter mais informações sobre as políticas de execução do Windows PowerShell, incluindo uma lista de valores válidos, consulte about_Execution_Policies (http://go.microsoft.com/fwlink/?LinkID=135170).
+Define a política de execução padrão para a sessão atual e o salva-a na variável de ambiente $env:PSExecutionPolicyPreference. Esse parâmetro não altera a política de execução do Windows PowerShell que está definida no Registro. Para saber mais sobre as políticas de execução do Windows PowerShell, incluindo uma lista de valores válidos, confira about_Execution_Policies (http://go.microsoft.com/fwlink/?LinkID=135170).
 
-### -File <FilePath> [<Parameters>]
-Executa o script especificado no escopo local ("dot-sourced"), para que as funções e variáveis que o script criar estejam disponíveis na sessão atual. Insira o caminho do arquivo de script e quaisquer parâmetros. **File** deve ser o último parâmetro no comando, pois todos os caracteres digitados após nome do parâmetro **File** são interpretados como o caminho do arquivo de script seguido pelos parâmetros do script e seus valores.
+### -File <FilePath> \[<Parameters>]
+Executa o script especificado no escopo local ("dot-sourced") para que as funções e variáveis que o script criar estejam disponíveis na sessão atual. Insira o caminho do arquivo de script e quaisquer parâmetros. **File** deve ser o último parâmetro no comando, pois todos os caracteres digitados após nome do parâmetro **File** são interpretados como o caminho do arquivo de script seguido pelos parâmetros do script e seus valores.
 
 Você pode incluir os parâmetros de um script e os valores de parâmetro no valor do parâmetro **File**. Por exemplo: `-File .\Get-Script.ps1 -Domain Central`
 
@@ -82,7 +89,7 @@ Inicia a versão especificada do Windows PowerShell. A versão que você especif
 
 Se o Windows PowerShell 3.0 não estiver instalado, o único valor válido será "2.0". Outros valores são ignorados.
 
-Para obter mais informações, consulte "Installing Windows PowerShell" (Instalando o Windows PowerShell) na [Getting Started with Windows PowerShell [OLD MSDN]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd) (Introdução ao fluxo de trabalho do Windows PowerShell [MSDN ANTIGO]).
+Para obter mais informações, consulte "Instalar o Windows PowerShell" na [Introdução ao Fluxo de Trabalho do Windows PowerShell [MSDN ANTIGO]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
 
 ### -WindowStyle <Window style>
 Define o estilo da janela da sessão. Os valores válidos são Normal, Minimized, Maximized e Hidden.
@@ -105,7 +112,7 @@ Para gravar uma cadeia de caracteres que executa um comando do Windows PowerShel
 no qual as aspas indicam uma cadeia de caracteres e o operador de invocação (&) faz com que o comando seja executado.
 
 ### -Help, -?, /?
-Mostra esta mensagem. Se você estiver digitando um comando do PowerShell.exe no Windows PowerShell, adicione um hífen (-) ao início dos parâmetros do comando, não uma barra "/". Você pode usar um hífen ou uma barra "/" no Cmd.exe.
+Mostra esta mensagem. Se você estiver digitando um comando do PowerShell.exe no Windows PowerShell, adicione um hífen (-) ao início dos parâmetros do comando, não uma barra (/). Você pode usar um hífen ou uma barra "/" no Cmd.exe.
 
 > [!NOTE]
 > Observação de solução de problemas: no Windows PowerShell 2.0, a inicialização de alguns programas no console do Windows PowerShell falha com um LastExitCode 0xc0000142.
@@ -130,6 +137,7 @@ powershell.exe -encodedCommand $encodedCommand
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

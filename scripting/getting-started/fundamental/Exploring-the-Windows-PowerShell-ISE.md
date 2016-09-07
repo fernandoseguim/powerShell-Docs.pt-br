@@ -1,14 +1,21 @@
 ---
 title: Explorando o ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c1f285a1d1beb35c931c17f5944d7ec697cb152e
+
 ---
+
 # Explorando o ISE do Windows PowerShell
-Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell® para criar, executar e depurar scripts e comandos. O ISE do Windows PowerShell é composto por uma barra de menus, guias do Windows PowerShell, a barra de ferramentas, guias de script, um Painel de Script, um Painel de Console, uma barra de status, um controle deslizante de tamanho de texto e a Ajuda contextual.
+Você pode usar o ISE (Ambiente de Script Integrado) do Windows PowerShell® para criar, executar e depurar scripts e comandos. O ISE do Windows PowerShell é composto por uma barra de menus, guias do Windows PowerShell, a barra de ferramentas, guias de script, um Painel de Script, um Painel Console, uma barra de status, um controle deslizante de tamanho de texto e a Ajuda contextual.
 
 > [!NOTE]
 > No ISE do Windows PowerShell 3.0 os Painéis de Comando e de Saída foram combinados em um único Painel de Console.
@@ -57,7 +64,7 @@ Permite criar e executar scripts. Você pode abrir, editar e executar scripts ex
 Exibe os resultados dos comandos e scripts executados por você. Você também pode copiar e limpar o conteúdo do Painel de Saída.
 
 ## Painel de Comando
-Permite gravar comandos. Você pode executar um comando de uma ou várias linhas no Painel de Comando. Pressione SHIFT+ENTER para inserir cada linha de comando de várias linhas e pressione ENTER após a última linha para executá-lo. O prompt exibido na parte superior do Painel de Comando mostra o caminho para o diretório de trabalho atual.
+Permite gravar comandos. Você pode executar um comando de uma ou várias linhas no Painel de Comando. Pressione Shift+Enter para inserir cada linha de comando de várias linhas e pressione Enter após a última linha para executá-lo. O prompt exibido na parte superior do Painel de Comando mostra o caminho para o diretório de trabalho atual.
 
 ## Barra de Status
 Permite que você veja se os comandos e scripts que você executou foram concluídos. A barra de status localiza-se na parte mais inferior da tela. Partes selecionadas de mensagens de erro são exibidas na barra de status.
@@ -66,12 +73,14 @@ Permite que você veja se os comandos e scripts que você executou foram conclu�
 Aumenta ou diminui o tamanho do texto na tela.
 
 ## Ajuda
-A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla F1 em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console. No menu **Ajuda**, você também pode executar o cmdlet Uptade-Help e exibir a Janela Comando que auxilia na construção de comandos, mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
+A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla F1 em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console. No menu **Ajuda**, você também pode executar o cmdlet Update-Help e exibir a Janela Comando que auxilia na construção de comandos, mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
 
 ## Consulte Também
 [Usando o ISE do Windows PowerShell](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

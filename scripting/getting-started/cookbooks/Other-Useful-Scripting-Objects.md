@@ -1,12 +1,19 @@
 ---
-title: Outros objetos de script úteis
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Outros objetos de script úteis"
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 83aa2ceb63497c7a12ec80d4b1472327284acf5b
+
 ---
+
 # Outros objetos de script úteis
   Os seguintes objetos fornecem funcionalidade adicional de script no ISE do Windows PowerShell. Eles não fazem parte da hierarquia **$psISE**.
 
@@ -26,11 +33,11 @@ psUnsupportedConsoleApplications
 ```
 
 ### $psLocalHelp
- Esse é um objeto de dicionário que mantém um mapeamento contextual entre os tópicos da Ajuda e seus links associados no arquivo de ajuda local HTML compilado. Ele é usado para localizar a Ajuda local para determinado tópico. Você pode adicionar ou excluir tópicos desta lista. O exemplo de código a seguir mostra alguns exemplos de pares chave-valor contidos em **$psLocalHelp**.
+ Esse é um objeto de dicionário que mantém um mapeamento contextual entre os tópicos da Ajuda e seus links associados no arquivo de ajuda local HTML compilado. Ele é usado para localizar a Ajuda local para determinado tópico. Você pode adicionar ou excluir tópicos desta lista. O exemplo de código a seguir mostra alguns exemplos de pares de chave-valor contidos em **$psLocalHelp**.
 
 ```
 # See the local help map
-$psLocalHelp |Format-List
+$psLocalHelp | Format-List
 
 ```
 
@@ -51,7 +58,7 @@ $psLocalHelp.Add("get-myNoun","c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-57
  Este é um objeto de dicionário que mantém um mapeamento contextual entre títulos de tópicos dos tópicos de ajuda e suas URLs externas associadas. Ele é usado para localizar a ajuda para um tópico específico na Web. Você pode adicionar ou excluir tópicos desta lista.
 
 ```
-$psOnlineHelp |format-list
+$psOnlineHelp | Format-List
 
 ```
 
@@ -59,7 +66,7 @@ $psOnlineHelp |format-list
 
 |||
 |-|-|
-|Chave: Add-Computer|Valor: http://go.microsoft.com/fwlink/p/?LinkID=135194|
+|Chave: Add-Computer|Valor : http://go.microsoft.com/fwlink/p/?LinkID=135194|
 |Chave: Add-Content|Valor: http://go.microsoft.com/fwlink/p/?LinkID=113278|
 
  O script a seguir adiciona uma entrada à lista.
@@ -74,6 +81,7 @@ $psOnlineHelp.Add("get-myNoun","http://www.mydomain.com/MyNoun.html")
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

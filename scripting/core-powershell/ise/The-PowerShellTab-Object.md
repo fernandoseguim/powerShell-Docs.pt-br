@@ -1,18 +1,25 @@
 ---
 title: O objeto PowerShellTab
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: f3f2d27c3c82406f8e8967fd1784a6e07579c1fa
+
 ---
+
 # O objeto PowerShellTab
   O objeto **PowerShellTab** representa um ambiente de tempo de execução do Windows PowerShell.
 
 ## Métodos
 
-###  <a name="invoke"></a> Invoke( Script )
+###  <a name="invoke"></a> Invoke\( Script \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Executa o script determinado na guia PowerShell.
@@ -20,8 +27,7 @@ ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 > [!NOTE]
 >  Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. Ele não retorna nenhum objeto ou valor. Se o código modificar qualquer variável, essas alterações persistirão na guia na qual o comando foi invocado.
 
- **Script** \- System.Management.Automation.ScriptBlock ou cadeia de caracteres
- O bloco de script a ser executado.
+ **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
 ```
 # Manually create a second PowerShell tab before running this script.
@@ -29,7 +35,7 @@ ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 $psise.PowerShellTabs[1].Invoke({dir})
 ```
 
-### InvokeSynchronous( Script, [useNewScope], millisecondsTimeout )
+### InvokeSynchronous\( Script, \[useNewScope\], millisecondsTimeout \)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
  Executa o script determinado na guia PowerShell.
@@ -37,14 +43,13 @@ $psise.PowerShellTabs[1].Invoke({dir})
 > [!NOTE]
 >  Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando levar mais tempo para executar do que valor **millesecondsTimeout** especifica, o comando falhará com uma exceção: "A operação expirou".
 
- **Script** \- System.Management.Automation.ScriptBlock ou cadeia de caracteres
- O bloco de script a ser executado.
+ **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
- **[useNewScope]** - Boolianos opcionais cujo padrão é **$true**
- Se definido como **$true**, um novo escopo será criado dentro do qual executar o comando. Ele não modifica o ambiente de tempo de execução da guia PowerShell que é especificada pelo comando.
+ **\[useNewScope\]** – booliano opcional que assume como padrão **$true**
+ Se definido como **$true**, um novo escopo será criado no qual executar o comando. Ele não modifica o ambiente de tempo de execução da guia PowerShell que é especificada pelo comando.
 
- **[millisecondsTimeout]** - Inteiro opcional cujo padrão é **500**.
- Se o comando não terminar dentro do tempo especificado, gerará um **TimeoutException** com a mensagem "A operação atingiu o tempo limite".
+ **\[[millisecondsTimeout]\]** – inteiro opcional padronizado para **500**.
+Se o comando não terminar dentro do tempo especificado, gerará um **TimeoutException** com a mensagem "A operação atingiu o tempo limite".
 
 ```
 # create a new PowerShell tab and then switch back to the first
@@ -89,7 +94,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 ###  <a name="CanExecute"></a> CanInvoke
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade booliana somente leitura que retornará um valor **$true** se um script puder ser chamado com o método [Invoke( Script )](#invoke).
+ A propriedade Boolean somente leitura que retornará um valor **$true** se um script puder ser invocado com o método [Invoke( Script )](#invoke).
 
 ```
 # CanInvoke will be false if the PowerShell
@@ -106,9 +111,9 @@ $secondTab.CanInvoke
 ```
 
 ###  <a name="Commandpane"></a> Consolepane
-  Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.  No ISE do Windows PowerShell 2.0 isso foi nomeado **CommandPane**.
+  Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.  No ISE do Windows PowerShell 2.0 isso foi chamado de **CommandPane**.
 
- A propriedade somente leitura que obtém o objeto [editor](../ise/The-ISEEditor-Object.md) do painel de Console.
+ A propriedade somente leitura que obtém o objeto [editor](../ise/The-ISEEditor-Object.md) do painel Console.
 
 ```
 # Gets the Console Pane editor.
@@ -119,7 +124,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 ###  <a name="Displayname"></a> DisplayName
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém ou define o texto exibido na guia PowerShell. Por padrão, as guias são nomeadas "PowerShell #", em que # representa um número.
+ A propriedade de leitura/leitura que obtém ou define o texto exibido na guia PowerShell. Por padrão, as guias são denominadas "PowerShell #", em que # representa um número.
 
 ```
 $newTab = $psise.PowerShellTabs.Add()
@@ -130,7 +135,7 @@ $newTab.DisplayName="Brand New Tab"
 ###  <a name="ExpandedScript"></a> ExpandedScript
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade booliana somente leitura que determina se o painel de Script é expandido ou oculto.
+ A propriedade Boolean de leitura/gravação que determina se o painel Script será expandido ou ocultado.
 
 ```
 # Toggle the expanded script property to see its effect.
@@ -141,7 +146,7 @@ $PSise.CurrentPowerShellTab.ExpandedScript=!$PSise.CurrentPowerShellTab.Expanded
 ###  <a name="Files"></a> Arquivos
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade booleana somente leitura que obtém a [coleção de arquivos de script](../ise/The-ISEFileCollection-Object.md) abertos na guia PowerShell.
+ A propriedade somente leitura que obtém a [coleção de arquivos de script](../ise/The-ISEFileCollection-Object.md) abertos na guia PowerShell.
 
 ```
 $newFile = $psISE.CurrentPowerShellTab.Files.Add()
@@ -153,7 +158,7 @@ $newFile.Editor.LineCount
 ###  <a name="Output"></a> Saída
   Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Em versões mais recentes do ISE do Windows PowerShell, você pode usar o objeto **ConsolePane** para os mesmos fins.
 
- A propriedade somente leitura que obtém o painel de Saída do [editor](../ise/The-ISEEditor-Object.md) atual.
+ A propriedade somente leitura que obtém o Painel de saída do [editor](../ise/The-ISEEditor-Object.md) atual.
 
 ```
 # Clears the text in the Output pane.
@@ -163,7 +168,7 @@ $psise.CurrentPowerShellTab.output.clear()
 ###  <a name="Prompt"></a> Prompt
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém o atual texto do prompt. Observação: a função **Prompt** pode ser substituído pelo perfil do usuário. Se o resultado for diferente de uma cadeia simples, essa propriedade não retornará nada.
+ A propriedade somente leitura que obtém o atual texto de solicitação. Observação: a função **Prompt** pode ser substituído pelo perfil do usuário. Se o resultado for diferente de uma cadeia simples, essa propriedade não retornará nada.
 
 ```
 # Gets the current prompt text.
@@ -173,7 +178,7 @@ $psISE.CurrentPowerShellTab.Prompt
 ###  <a name="ShowCommands"></a> ShowCommands
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- A propriedade de leitura/gravação que indica se o painel de comandos está sendo exibido no momento.
+ A propriedade de leitura/gravação que indica se o Painel de comandos está sendo exibido no momento.
 
 ```
 # Gets the current status of the Commands pane and stores it in the $a variable
@@ -185,7 +190,7 @@ if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands=$True}
 ###  <a name="StatusText"></a> StatusText
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que recebe o texto do status **PowerShellTab**.
+ A propriedade somente leitura que obtém o texto do status **PowerShellTab**.
 
 ```
 # Gets the current status text,
@@ -195,7 +200,7 @@ $psISE.CurrentPowerShellTab.StatusText
 ###  <a name="HorizontalAddOnToolsPaneOpened"></a> HorizontalAddOnToolsPaneOpened
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- A propriedade somente leitura que indica se o painel de ferramentas horizontal complementar está aberto no momento.
+ A propriedade somente leitura que indica se o painel de ferramentas horizontal Complementos está aberto no momento.
 
 ```
 # Gets the current state of the horizontal Add-ons tool pane. 
@@ -205,7 +210,7 @@ $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ###  <a name="VerticalAddOnToolsPaneOpened"></a> **VerticalAddOnToolsPaneOpened**
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- A propriedade somente leitura que indica se o painel de ferramentas vertical complementar está aberto no momento.
+ A propriedade somente leitura que indica se o painel de ferramentas vertical Complementos está aberto no momento.
 
 ```
 # Turns on the Commands pane
@@ -215,14 +220,15 @@ $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
 ## Consulte Também
- [O objeto PowerShellTabCollection](The-PowerShellTabCollection-Object.md) 
- [O modelo de objeto de script do ISE do Windows PowerShell](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Referência de modelo de objeto do ISE do Windows PowerShell](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
+ [O Objeto PowerShellTabCollection](The-PowerShellTabCollection-Object.md) 
+ [O Modelo de Objeto de Script do ISE do Windows PowerShell](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [Referência de Modelo de Objeto do ISE do Windows PowerShell](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
+ [A Hierarquia de Modelo de Objeto do ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,12 +1,19 @@
 ---
 title: Iniciando o Mecanismo do Windows PowerShell 2.0
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 094c3c9f240457fc884031e7d82dcdc1e81e582d
+
 ---
+
 # Iniciando o Mecanismo do Windows PowerShell 2.0
 Esta seção explica como iniciar o Mecanismo Windows PowerShell 2.0 no Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, que inclui o Mecanismo Windows PowerShell 2.0 e em outros sistemas em que o Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 são instalados.
 
@@ -15,9 +22,9 @@ Windows PowerShell 4.0 e Windows PowerShell 3.0 são projetados para serem compa
 Muitos programas que exigem o Mecanismo Windows PowerShell 2.0 o inicia automaticamente. Essas instruções são incluídas para as raras situações em que você precisa iniciar o mecanismo manualmente.
 
 ## Instalar e habilitar os programas necessários
-Antes de iniciar o Mecanismo Windows PowerShell 2.0, habilite o Mecanismo Windows PowerShell 2.0 e o Microsoft .NET Framework 3.5 com o Service Pack 1. Para obter instruções, consulte [Installing Windows PowerShell](Installing-Windows-PowerShell.md) (Instalando o Windows PowerShell).
+Antes de iniciar o Mecanismo Windows PowerShell 2.0, habilite o Mecanismo Windows PowerShell 2.0 e o Microsoft .NET Framework 3.5 com o Service Pack 1. Para ver as instruções, consulte [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Sistemas nos quais o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0 estão instalados têm todos os componentes necessários. Nenhuma outra configuração é necessária. Para obter informações sobre como instalar o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0, consulte [Installing Windows PowerShell](Installing-Windows-PowerShell.md) (Instalando o Windows PowerShell).
+Sistemas nos quais o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0 estão instalados têm todos os componentes necessários. Nenhuma outra configuração é necessária. Para obter informações sobre como instalar o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0, confira [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
 ## Como iniciar o Mecanismo Windows PowerShell 2.0
 Ao iniciar o Windows PowerShell a versão mais recente é iniciada por padrão. Para iniciar o Windows PowerShell com o Mecanismo Windows PowerShell 2.0, use o parâmetro de Versão do PowerShell.exe. Você pode executar o comando no prompt de comando, incluindo o Windows PowerShell e Cmd.exe.
@@ -33,7 +40,7 @@ Essa é uma tarefa avançada que normalmente é executada por um administrador d
 
 O procedimento a seguir usa o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) para criar uma Mecanismo Windows PowerShell 2.0. Você também pode usar o parâmetro **PowerShellVersion** do cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866) para criar um arquivo de configuração de sessão para uma sessão que carrega o Mecanismo Windows PowerShell 2.0 e você pode usar o parâmetro **PSVersion** do parâmetro [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) para alterar uma configuração de sessão para usar o Mecanismo Windows PowerShell 2.0.
 
-Para mais informações sobre arquivos de configuração de sessão, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Para obter informações sobre configurações de sessão, incluindo configuração e segurança, consulte [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
+Para obter mais informações sobre os arquivos de configuração de sessão, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Para obter mais informações sobre as configurações de sessão, incluindo instalação e segurança, consulte [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
 #### Para iniciar uma sessão remota do Windows PowerShell 2.0
 
@@ -68,6 +75,7 @@ Para obter mais informações sobre trabalhos em segundo plano, consulte [about_
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

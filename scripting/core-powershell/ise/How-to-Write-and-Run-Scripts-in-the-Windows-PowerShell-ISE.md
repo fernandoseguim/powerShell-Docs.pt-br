@@ -1,12 +1,19 @@
 ---
 title: Como gravar e executar scripts no ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6e58c298725254a84819856070b9702340fcf81d
+
 ---
+
 # Como gravar e executar scripts no ISE do Windows PowerShell
 Este tópico descreve como criar, editar, executar e salvar scripts no Painel de Script.
 
@@ -20,7 +27,7 @@ Este tópico descreve como criar, editar, executar e salvar scripts no Painel de
 Você pode abrir e editar arquivos do Windows PowerShell® no Painel de Script. Tipos de arquivos específicos de interesse no Windows PowerShell® são arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1). Esses tipos de arquivo são coloridos por sintaxe no editor do Painel de Script. Outros tipos de arquivo comuns que você pode abrir no Painel de Script são arquivos de configuração (.ps1xml), arquivos XML e arquivos de texto.
 
 > [!NOTE]
-> A política de execução do Windows PowerShell determina se você pode executar scripts e carregar perfis e arquivos de configuração do Windows PowerShell. A política de execução padrão, Restricted, impede a execução de todos os scripts e impede o carregamento dos perfis. Para alterar a política de execução para permitir que os perfis sejam carregados usados, consulte [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
+> A política de execução do Windows PowerShell determina se você pode executar scripts e carregar perfis e arquivos de configuração do Windows PowerShell. A política de execução padrão, Restricted, impede a execução de todos os scripts e impede o carregamento dos perfis. Para alterar a política de execução para permitir que os perfis sejam carregados usados, consulte [Set-ExecutionPolicy [PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
 
 ### Para criar um novo arquivo de script
 Na barra de ferramentas, clique em **Novo** ou, no menu **Arquivo**, clique em **Novo**. O arquivo criado aparece em uma nova guia do arquivo sob a guia atual do PowerShell. Lembre-se de que as guias do PowerShell são visíveis apenas quando há mais de uma. Por padrão, um arquivo de script de tipo (.ps1) é criado, mas pode ser salvo com um novo nome e uma extensão. Vários arquivos de script podem ser criados na mesma guia do PowerShell.
@@ -33,7 +40,7 @@ Clique na guia script do script que deseja fechar e siga um destes procedimentos
 
 1.  Clique no ícone **Fechar** (X) na guia do script.
 
-2.  No menu **Arquivo**, clique em **Fechar**.
+2.  No menu **Arquivo**, clique em **Abrir**.
 
 Se o arquivo tiver sido alterado desde que foi salvo pela última vez, você precisará salvá-lo ou descartá-lo.
 
@@ -41,16 +48,16 @@ Se o arquivo tiver sido alterado desde que foi salvo pela última vez, você pre
 Na guia arquivo, aponte para o nome do arquivo. O caminho totalmente qualificado para o arquivo de script é exibido em uma dica de ferramenta.
 
 ### Para executar um script
-Na barra de ferramentas, clique em **Executar Script** ou no menu **Arquivo** clique em **Executar**.
+Na barra de ferramentas, clique em **Executar Script** ou, no menu **Arquivo**, clique em **Executar**.
 
 ### Para executar uma parte de um script
 
 1.  No Painel de Script, selecione uma parte de um script.
 
-2.  No menu **Arquivo**, clique em **Executar Seleção** ou na barra de ferramentas, clique em **Executar Seleção**.
+2.  No menu **Arquivo**, clique em **Executar Seleção** ou, na barra de ferramentas, clique em **Executar Seleção**.
 
 ### Para interromper um script em execução
-Na barra de ferramentas, clique em **Parar Operação**, pressione CTRL+BREAK ou, no menu **Arquivo**, clique em **Parar Operação**. Pressionar **CTRL+C** também funciona, a menos que algum texto esteja selecionado no momento, quando então **CTRL+C** é mapeado para a função de cópia do texto selecionado.
+Na barra de ferramentas, clique em **Parar Operação**, pressione Ctrl+Break ou, no menu **Arquivo**, clique em **Parar Operação**. Pressionar **Ctrl+C** também funciona, a menos que algum texto esteja selecionado no momento, quando então **Ctrl+C** é mapeado para a função de cópia do texto selecionado.
 
 ## <a name="bkmk_2"></a>Como gravar e editar texto no Painel de Script
 Use as etapas a seguir para editar texto no Painel de Script. Você pode copiar, recortar, colar, localizar e substituir texto. Você também pode desfazer e refazer a última ação que você acabou de executar. Os atalhos de teclado para executar essas ações são os mesmos usados para todos os aplicativos do Windows.
@@ -65,18 +72,18 @@ Use as etapas a seguir para editar texto no Painel de Script. Você pode copiar,
 
 ### Para localizar texto no Painel de Script
 
-1.  Para localizar texto em qualquer lugar, pressione **CTRL+F** ou, no menu **Editar**, clique em **Localizar no Script**.
+1.  Para localizar texto em qualquer lugar, pressione **Ctrl+F** ou, no menu **Editar**, clique em **Localizar no Script**.
 
-2.  Para localizar o texto após o cursor, pressione **F3** ou, no menu **Editar**, clique em **Localizar Próximo no Script**.
+2.  Para localizar texto após o cursor, pressione **F3** ou, no menu **Editar**, clique em **Localizar Próximo no Script**.
 
-3.  Para localizar o texto antes do cursor, pressione **SHIFT+F3** ou, no menu **Editar**, clique em **Localizar Anterior no Script**.
+3.  Para localizar o texto antes do cursor, pressione **Shift+F3** ou, no menu **Editar**, clique em **Localizar Anterior no Script**.
 
 ### Para localizar e substituir texto no Painel de Script
-Pressione **CRTL+H** ou, no menu **Editar**, clique em **Substituir no Script**. Insira o texto que deseja localizar e o texto pelo qual deseja substituí-lo e pressione **ENTER**.
+Pressione **CRTL+H** ou, no menu **Editar**, clique em **Substituir no Script**. Insira o texto que você deseja localizar e o texto com o qual você deseja substituí-lo, e então pressione **Enter**.
 
 ### Para ir para uma determinada linha de texto no Painel de Script
 
-1.  No Painel de Script, pressione **CTRL+G** ou, no menu **Editar**, clique em **Ir para a Linha**.
+1.  No Painel de Script, pressione **Ctrl+G** ou, no menu **Editar**, clique em **Ir para a Linha**.
 
 2.  Insira um número de linha.
 
@@ -84,28 +91,28 @@ Pressione **CRTL+H** ou, no menu **Editar**, clique em **Substituir no Script**.
 
 1.  No Painel de Script, selecione o texto que você deseja copiar.
 
-2.  Pressione **CTRL+C** ou, na barra de ferramentas, clique no ícone **Copiar** ou então, no menu **Editar**, clique em **Copiar**.
+2.  Pressione **Ctrl+C** ou, na barra de ferramentas, clique no ícone **Copiar** ou, no menu **Editar**, clique em **Copiar**.
 
 ### Para recortar texto no Painel de Script
 
 1.  No Painel de Script, selecione o texto que você deseja recortar.
 
-2.  Pressione **CTRL+X** ou, na barra de ferramentas, clique no ícone **Recortar** ou então, no menu **Editar**, clique em **Recortar**.
+2.  Pressione **Ctrl+X** ou, na barra de ferramentas, clique no ícone **Recortar** ou, no menu **Editar**, clique em **Recortar**.
 
 ### Para colar o texto no Painel de Script
-Pressione **CTRL+V** ou, na barra de ferramentas, clique no ícone **Colar** ou então, no menu **Editar**, clique em **Colar**.
+Pressione **Ctrl+V** ou, na barra de ferramentas, clique no ícone **Colar** ou, no menu **Editar**, clique em **Colar**.
 
 ### Para desfazer uma ação no Painel de Script
-Pressione **CTRL+Z** ou, na barra de ferramentas, clique no ícone **Desfazer** ou então, no menu **Editar**, clique em **Desfazer**.
+Pressione **Ctrl+Z** ou, na barra de ferramentas, clique no ícone **Desfazer** ou, no menu **Editar**, clique em **Desfazer**.
 
 ### Para refazer uma ação no Painel de Script
-Pressione **CTRL+Y** ou, na barra de ferramentas, clique no ícone **Refazer** ou então, no menu **Editar**, clique em **Refazer**.
+Pressione **Ctrl+Y** ou, na barra de ferramentas, clique no ícone **Refazer** ou, no menu **Editar**, clique em **Refazer**.
 
 ## <a name="bkmk_3"></a>Como salvar um script
 Use as etapas a seguir para salvar e nomear um script. Um asterisco é exibido ao lado do nome do script para marcar um arquivo que não foi salvo desde que ele foi alterado. O asterisco desaparece quando o arquivo é salvo.
 
 ### Para salvar um script
-Pressione **CTRL+S** ou, na barra de ferramentas, clique no ícone **Salvar** ou então, no menu **Arquivo**, clique em **Salvar**.
+Pressione **Ctrl+S** ou, na barra de ferramentas, clique no ícone **Salvar** ou, no menu **Arquivo**, clique em **Salvar**.
 
 ### Para salvar e nomear um script
 
@@ -147,6 +154,7 @@ O ISE do Windows PowerShell não altera a codificação de scripts criados por o
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

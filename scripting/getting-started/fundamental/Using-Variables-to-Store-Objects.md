@@ -1,7 +1,7 @@
 ---
 title: "Usando variáveis para armazenar objetos"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: c3bcf9dc6f70383e971d9c1ae75ec78860111de9
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6216f3e1a766c57a7549a3e3b4fbe76d043a8a41
 
 ---
 
 # Usando variáveis para armazenar objetos
-O Windows PowerShell funciona com objetos. O Windows PowerShell permite criar variáveis \- que são basicamente objetos nomeados \- a fim de preservar a saída para uso futuro. Se você está acostumado a trabalhar com variáveis em outros shells, lembre-se de que variáveis do Windows PowerShell são objetos, não texto.
+O Windows PowerShell funciona com objetos. O Windows PowerShell permite criar variáveis (que são basicamente objetos nomeados) a fim de preservar a saída para uso futuro. Se você está acostumado a trabalhar com variáveis em outros shells, lembre-se de que variáveis do Windows PowerShell são objetos, não texto.
 
 Variáveis sempre são especificadas com o caractere inicial $ e podem incluir qualquer caractere alfanumérico ou sublinhado em seus nomes.
 
@@ -43,7 +43,7 @@ Path
 C:\temp
 ```
 
-Você pode usar **Get\-Member** para exibir informações sobre o conteúdo de variáveis. Direcionar $loc para Get\-Member mostrará que ele é um objeto **PathInfo**, bem como a saída de Get\-Location:
+Você pode usar o **Get-Member** para exibir informações sobre o conteúdo de variáveis. Direcionar $loc para Get-Member mostrará que ele é um objeto **PathInfo**, bem como a saída de Get-Location:
 
 ```
 PS> $loc | Get-Member -MemberType Property
@@ -65,7 +65,7 @@ O Windows PowerShell fornece vários comandos para manipular variáveis. Você p
 Get-Command -Noun Variable | Format-Table -Property Name,Definition -AutoSize -Wrap
 ```
 
-Além das variáveis criadas na sessão atual do Windows PowerShell, há diversas variáveis definidas\-pelo sistema. Você pode usar o cmdlet **Remove\-Variable** para limpar todas as variáveis que não são controladas pelo Windows PowerShell. Digite o seguinte comando a seguir para limpar todas as variáveis:
+Além de variáveis criadas na sessão atual do Windows PowerShell, há diversas variáveis definidas pelo sistema. Você pode usar o cmdlet **Remove-Variable** para limpar todas as variáveis que não são controladas pelo Windows PowerShell. Digite o seguinte comando a seguir para limpar todas as variáveis:
 
 ```
 Remove-Variable -Name * -Force -ErrorAction SilentlyContinue
@@ -81,7 +81,7 @@ Performing operation "Remove Variable" on Target "Name: Error".
 (default is "Y"):A
 ```
 
-Se você executar o cmdlet **Get\-Variable**, verá as variáveis restantes do Windows PowerShell. Como também há uma variável de unidade do Windows PowerShell, você também pode exibir todas as variáveis do Windows PowerShell digitando:
+Se executar o cmdlet **Get-Variable**, você verá as variáveis restantes do Windows PowerShell. Como também há uma variável de unidade do Windows PowerShell, você também pode exibir todas as variáveis do Windows PowerShell digitando:
 
 ```
 Get-ChildItem variable:
@@ -94,7 +94,7 @@ Embora o Windows PowerShell não seja o Cmd.exe, ele é executado em um ambiente
 Get-ChildItem env:
 ```
 
-Embora os cmdlets de variável padrão não sejam projetados para trabalhar com variáveis **env:**, você ainda pode usá-las especificando o prefixo **env:**. Por exemplo, para ver o diretório raiz do sistema operacional, você pode usar a variável do shell\-de comando **%SystemRoot%** no Windows PowerShell digitando:
+Embora os cmdlets de variável padrão não sejam projetados para trabalhar com variáveis **env:**, você ainda pode usá-las especificando o prefixo **env:**. Por exemplo, para ver o diretório raiz do sistema operacional, você pode usar a variável do shell de comando **%SystemRoot%** dentro do Windows PowerShell digitando:
 
 ```
 PS> $env:SystemRoot
@@ -106,6 +106,6 @@ Você também pode criar e modificar variáveis de ambiente do Windows PowerShel
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

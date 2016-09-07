@@ -1,7 +1,7 @@
 ---
 title: "Classificação de objetos"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 72d0c66e8fe1c87561af89821e16032f25c3b1b5
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 88753c43124cfce3581af2259449be5f01579ae8
 
 ---
 
 # Classificação de objetos
-É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet **Sort\-Object**. **Sort\-Object** usa o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
+É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet **Sort-Object**. O **Sort-Object** obtém o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
 
-Considere o problema de listagem das instâncias de Win32\_SystemDriver. Se quisermos classificar por **Estado** e depois por **Nome**, poderemos fazer isso digitando:
+Considere o problema de listagem das instâncias do Win32_SystemDriver. Se quisermos classificar por **Estado** e depois por **Nome**, poderemos fazer isso digitando:
 
 ```
 Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name | Format-Table -Property Name,State,Started,DisplayName -AutoSize -Wrap
@@ -58,6 +58,6 @@ Wanarp         Running    True Remote Access IP ARP Driver
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

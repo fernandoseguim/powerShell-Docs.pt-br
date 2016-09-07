@@ -1,7 +1,7 @@
 ---
 title: Instalar o Mecanismo do Windows PowerShell 2.0
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,17 +9,17 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 8a61e974e7f7ea479ecc447c2db91c677cd8931f
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: b6189e43fc9579a29d598deb705bb8e4e32e4a4f
 
 ---
 
 # Instalar o Mecanismo do Windows PowerShell 2.0
 Este tópico explica como instalar o Mecanismo Windows PowerShell 2.0.
 
-O Windows PowerShell 3.0 é projetado para ser compatível com o Windows PowerShell 2.0. Cmdlets, provedores, snap\-ins, módulos e scripts escritos para o Windows PowerShell 2.0 e o Windows PowerShell 3.0 são executados sem alteração no Windows PowerShell 4.0. No entanto, devido a uma mudança na política de ativação de tempo de execução no Microsoft .NET Framework 4, programas host do Windows PowerShell escritos para o Windows PowerShell 2.0 e compilados com CLR (Common Language Runtime) 2.0 não podem ser executados sem modificações nas versões posteriores do Windows PowerShell, que é compilado com CLR 4.0.
+O Windows PowerShell 3.0 é projetado para ser compatível com o Windows PowerShell 2.0. Cmdlets, provedores, snap-ins, módulos e scripts escritos para o Windows PowerShell 2.0 são executados sem alteração no Windows PowerShell 3.0 e Windows PowerShell 4.0. No entanto, devido a uma mudança na política de ativação de tempo de execução no Microsoft .NET Framework 4, programas host do Windows PowerShell escritos para o Windows PowerShell 2.0 e compilados com CLR (Common Language Runtime) 2.0 não podem ser executados sem modificações nas versões posteriores do Windows PowerShell, que é compilado com CLR 4.0.
 
-Para manter a compatibilidade com versões anteriores de comandos e programas host afetados por essas alterações, os mecanismos do Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 são projetados para funcionar lado a lado. Além disso, o Mecanismo Windows PowerShell 2.0 está incluído no Windows Server 2012 R2, Windows 8.1, Windows 8, Windows Server 2012 e Windows Management Framework 3.0. O Mecanismo Windows PowerShell 2.0 deve ser usado somente quando um programa de script ou host existente não puder ser executado porque é incompatível com o Windows PowerShell 3.0, Windows PowerShell 4.0 ou Microsoft .NET Framework 4. Tais casos devem ser raros.
+Para manter a compatibilidade com versões anteriores com comandos e programas host afetados por essas alterações, os mecanismos Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 são projetados para funcionar lado a lado. Além disso, o Mecanismo Windows PowerShell 2.0 está incluído no Windows Server 2012 R2, Windows 8.1, Windows 8, Windows Server 2012 e Windows Management Framework 3.0. O Mecanismo Windows PowerShell 2.0 deve ser usado somente quando um programa de script ou host existente não puder ser executado porque é incompatível com o Windows PowerShell 3.0, Windows PowerShell 4.0 ou Microsoft .NET Framework 4. Tais casos devem ser raros.
 
 O Mecanismo Windows PowerShell 2.0 é um recurso opcional do Windows Server 2012 R2, Windows 8.1, Windows® 8 e Windows Server® 2012. Em versões anteriores do Windows, quando você instala o Windows Management Framework 3.0, a instalação do Windows PowerShell 3.0 substitui completamente a instalação do Windows PowerShell 2.0 no diretório de instalação do Windows PowerShell. No entanto, o Mecanismo Windows PowerShell 2.0 é mantido.
 
@@ -53,9 +53,9 @@ Use os seguintes procedimentos para adicionar os recursos dos Mecanismos Windows
 
 1.  Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
 
-    Se preferir, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome do servidor e selecione **Adicionar Funções e Recursos**.
+    Ou, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome de servidor e escolha **Adicionar Funções e Recursos**.
 
-2.  Na página **Tipo de Instalação**, selecione **Instalação baseada em função ou em recurso**.
+2.  Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
 
 3.  Sobre a página **Recursos**, expanda o nó **Recursos do .NET 3.5 Framework** e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)**.
 
@@ -65,9 +65,9 @@ Use os seguintes procedimentos para adicionar os recursos dos Mecanismos Windows
 
 -   Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
 
-    Se preferir, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome do servidor e selecione **Adicionar Funções e Recursos**.
+    Ou, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome de servidor e escolha **Adicionar Funções e Recursos**.
 
--   Na página **Tipo de Instalação**, selecione **Instalação baseada em função ou em recurso**.
+-   Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
 
 -   Na página **Recursos**, expanda o nó **Windows PowerShell (Instalado)** e selecione **Mecanismo do Windows PowerShell 2.0**.
 
@@ -87,6 +87,6 @@ O pacote Windows Management Framework 3.0 que instala o Windows PowerShell 3.0 n
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

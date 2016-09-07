@@ -1,7 +1,7 @@
 ---
 title: Removendo objetos do pipeline com Where Object
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,38 +9,38 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 0c5e2b60d96a6c64aedfa9522cbdc0ce5d4aa6b0
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 94117fcf337ecf550d6df1d167e608ba64582c03
 
 ---
 
 # Removendo objetos do pipeline (Where-Object)
-No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeline do que deseja. Você pode especificar as propriedades de determinados objetos para exibição usando os cmdlets **Format**, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Pode ser útil filtrar objetos antes do final de um pipeline para que você possa executar ações em apenas um subconjunto dos objetos gerados inicialmente.
+No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeline do que deseja. Você pode especificar as propriedades de determinados objetos para exibição usando os cmdlets **Format**, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Talvez você queira filtrar objetos antes do final de um pipeline para poder executar ações em apenas um subconjunto dos objetos gerados inicialmente.
 
-O Windows PowerShell inclui um cmdlet **Where\-Object** que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a determinada condição de teste. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **Where\-ObjectFilterScript**.
+O Windows PowerShell inclui um cmdlet **Where-Object** que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a uma condição de teste específica. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **Where-ObjectFilterScript**.
 
-### Executando testes simples com Where\-Object
-O valor de **FilterScript** é um *bloco de script* \- (um ou mais comandos do Windows PowerShell envolvidos por chaves {}) \- que é avaliado como verdadeiro ou falso. Esses blocos de script podem ser muito simples, mas criá-los requer conhecimento sobre outro conceito do Windows PowerShell, os operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dela. Operadores de comparação começam com um caractere “\-” e são seguidos por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados podem funcionar apenas em texto ou matrizes.
+### Executando testes simples com Where-Object
+O valor de **FilterScript** é um *bloco de script* (um ou mais comandos do Windows PowerShell entre chaves {}) que é avaliado como verdadeiro ou falso. Esses blocos de script podem ser muito simples, mas criá-los requer conhecimento sobre outro conceito do Windows PowerShell, os operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dela. Operadores de comparação começam com um caractere '-' e são seguidos por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados podem funcionar apenas em texto ou matrizes.
 
 > [!NOTE]
 > Por padrão, ao trabalhar com texto, os operadores de comparação do Windows PowerShell não diferenciam maiúsculas de minúsculas.
 
-Devido a considerações de análise, símbolos como <, > e \= não são usados como operadores de comparação. Em vez disso, os operadores de comparação são compostos por letras. Os operadores de comparação básicos estão listados na tabela a seguir.
+Devido a considerações de análise, símbolos como <, > e = não são usados como operadores de comparação. Em vez disso, os operadores de comparação são compostos por letras. Os operadores de comparação básicos estão listados na tabela a seguir.
 
 |Operador de Comparação|Significado|Exemplo (returna true)|
 |-----------------------|-----------|--------------------------|
-|\-eq|é igual a|1 \-eq 1|
-|\-ne|Não é igual a|1 \-ne 2|
-|\-lt|É menor que|1 \-lt 2|
-|\-le|É menor ou igual a|1 \-le 2|
-|\-gt|É maior que|2 \-gt 1|
-|\-ge|É maior ou igual a|2 \-ge 1|
-|\-like|É como (curinga de comparação para texto)|"file.doc" \-like "f\*.do?"|
-|\-notlike|Não é como (curinga de comparação para texto)|"file.doc" \-notlike "p\*.doc"|
-|\-contains|Contém|1,2,3 \-contains 1|
-|\-notcontains|Não contém|1,2,3 \-notcontains 4|
+|-eq|é igual a|1 -eq 1|
+|-ne|Não é igual a|1 -ne 2|
+|-lt|É menor que|1 -lt 2|
+|-le|É menor ou igual a|1 -le 2|
+|-gt|É maior que|2 -gt 1|
+|-ge|É maior ou igual a|2 -ge 1|
+|-like|É como (curinga de comparação para texto)|"file.doc" -like "f\*.do?"|
+|-notlike|Não é como (curinga de comparação para texto)|"file.doc" -notlike "p\*.doc"|
+|-contains|Contém|1,2,3 -contains 1|
+|-notcontains|Não contém|1,2,3 -notcontains 4|
 
-Os blocos de script de Where\-Object usam a variável especial “$\_” para fazer referência ao objeto atual no pipeline. Veja um exemplo de como isso funciona. Se você tiver uma lista de números e quiser retornar apenas os inferiores a três, poderá usar Where\-Object para filtrar os números digitando:
+Blocos de script Where-Object usam a variável especial '$_' para fazer referência ao objeto atual no pipeline. Veja um exemplo de como isso funciona. Se tiver uma lista de números e só quiser retornar aqueles inferiores a três, você poderá usar Where-Object para filtrar os números digitando:
 
 ```
 PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
@@ -49,9 +49,9 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 ```
 
 ### Filtragem com base nas propriedades de objeto
-Como $\_ se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
+Como $_ se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
 
-Por exemplo, podemos ver a classe Win32\_SystemDriver no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Se você usar Get\-Member para exibir os membros de Win32\_SystemDriver (**Get\-WmiObject \-Class Win32\_SystemDriver | Get\-Member \-MemberType Property**), verá que a propriedade relevante é State e que ela tem um valor “Running” (Em execução) quando o driver está sendo executado. Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
+Por exemplo, podemos ver a classe Win32_SystemDriver no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Se usar Get-Member para exibir os membros de Win32_SystemDriver (**Get-WmiObject -Class Win32_SystemDriver | Get-Member -MemberType Property**), você verá que a propriedade relevante é State e que ela tem um valor "Running" quando o driver está sendo executado. Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
 
 ```
 Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -eq "Running"}
@@ -92,7 +92,7 @@ MRxDAV                                  WebDav Client Redirector
 mssmbios                                Microsoft System Management BIOS Driver
 ```
 
-Há dois elementos Where\-Object no comando acima, mas eles podem ser expressos em um único elemento Where\-Object usando o operador lógico \-and, desta forma:
+Há dois elementos Where-Object no comando acima, mas pode eles podem ser expressos em um único elemento Where-Object usando o operador lógico -and, desta forma:
 
 ```
 Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript { ($_.State -eq "Running") -and ($_.StartMode -eq "Manual") } | Format-Table -Property Name,DisplayName
@@ -102,14 +102,14 @@ Os operadores lógicos padrão são listados na tabela a seguir.
 
 |Operador Lógico|Significado|Exemplo (returna true)|
 |--------------------|-----------|--------------------------|
-|\-e|E lógico; verdadeiro se ambos os lados forem verdadeiros|(1 \-eq 1) \-and (2 \-eq 2)|
-|\-ou|Ou lógico; verdadeiro se um dos lados for verdadeiro|(1 \-eq 1) \-or (1 \-eq 2)|
-|\-not|Não lógico; inverte o verdadeiro e o falso|\-not (1 \-eq 2)|
-|\!|Não lógico; inverte o verdadeiro e o falso|\!(1 \-eq 2)|
+|-and|E lógico; verdadeiro se ambos os lados forem verdadeiros|(1 -eq 1) -and (2 -eq 2)|
+|-or|Ou lógico; verdadeiro se um dos lados for verdadeiro|(1 -eq 1) -or (1 -eq 2)|
+|-not|Não lógico; inverte o verdadeiro e o falso|-not (1 -eq 2)|
+|\!|Não lógico; inverte o verdadeiro e o falso|\!(1 -eq 2)|
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,3 +1,18 @@
+---
+title: instalar e usar o windows powershell web access
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 75e9b6525d74a8bc632b9fe2e64183717f59776f
+
+---
+
 #  Instalar e usar o Windows PowerShell Web Access
 
 Atualizado em: 5 de novembro de 2013
@@ -217,7 +232,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
     -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas.
 
-    -   Na tela **Iniciar**, clique em **Windows PowerShell**.
+    -   Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
 
 2.  Digite o seguinte e pressione **Enter**.
 
@@ -239,7 +254,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </tbody>
     </table>
 
-    Quando o cmdlet é executado, o aplicativo web Windows PowerShell Web Access é instalado no contêiner Site Padrão do IIS. O cmdlet cria a infraestrutura necessária para executar o Windows PowerShell Web Access no site padrão, https://&lt;server_name&gt;/pswa. Para instalar o aplicativo Web em outro site, forneça o nome do site adicionando o parâmetro <span class="code">WebSiteName</span>. Para alterar o nome do aplicativo Web (o padrão é <span class="code">pswa</span>), adicione o parâmetro <span class="code">WebApplicationName</span>.
+    Quando o cmdlet é executado, o aplicativo web Windows PowerShell Web Access é instalado no contêiner Site Padrão do IIS. O cmdlet cria a infraestrutura necessária para executar o Windows PowerShell Web Access no site padrão, https://&lt;nome_do_servidor&gt;/pswa. Para instalar o aplicativo Web em outro site, forneça o nome do site adicionando o parâmetro <span class="code">WebSiteName</span>. Para alterar o nome do aplicativo Web (o padrão é <span class="code">pswa</span>), adicione o parâmetro <span class="code">WebApplicationName</span>.
 
     As configurações a seguir são feitas executando o cmdlet. Você pode alterá-las manualmente no console do Gerenciador do IIS, se desejado.
 
@@ -253,7 +268,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
     <span class="label">Exemplo:</span> <span class="code">Install-PswaWebApplication –webApplicationName myWebApp –useTestCertificate</span>
 
-    Neste exemplo, o site resultante do Windows PowerShell Web Access é https://&lt; *server_name*&gt;/myWebApp.
+    Neste exemplo, o site resultante do Windows PowerShell Web Access é https://&lt;*nome_do_servidor*&gt;/myWebApp.
 
     <table>
     <colgroup>
@@ -266,7 +281,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Você não poderá fazer logon até que todos os usuários tenham obtido acesso ao site adicionando regras de autorização. Para obter mais informações, consulte <a href="#BKMK_step3">Etapa 3: Configurar uma regra de autorização restritiva</a> e <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Regras de autorização e recursos de segurança do Windows PowerShell Web Access</a>.</p></td>
+    <td><p>Você não poderá fazer logon até que todos os usuários tenham obtido acesso ao site adicionando regras de autorização. Para saber mais, confira <a href="#BKMK_step3">Etapa 3: Configurar uma regra de autorização restritiva</a> e <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Regras de autorização e recursos de segurança do Windows PowerShell Web Access</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -277,7 +292,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
     -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas.
 
-    -   Na tela **Iniciar**, clique em **Windows PowerShell**.
+    -   Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
 
 2.  Digite o seguinte e pressione **Enter**.
 
@@ -305,11 +320,11 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
 6.  Na caixa de diálogo **Associação do Site**, clique em **Adicionar**.
 
-7.  Na caixa de diálogo **Adicionar Associação do Site**, no campo **Tipo**, clique em **https**.
+7.  Na caixa de diálogo **Adicionar Associação do Site**, no campo **Tipo**, escolha **https**.
 
 8.  No campo **Certificado SSL**, selecione o certificado assinado no menu suspenso. Clique em **OK**. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#BKMK_cert) neste tópico para obter mais informações sobre como obter um certificado.
 
-    O aplicativo web Windows PowerShell Web Access agora está configurado para usar seu certificado SSL assinado. Você pode acessar o Windows PowerShell Web Access ao abrir https://&lt;server_name&gt;/pswa em uma janela do navegador.
+    O aplicativo web Windows PowerShell Web Access agora está configurado para usar seu certificado SSL assinado. Você pode acessar o Windows PowerShell Web Access ao abrir https://&lt;nome_do_servidor&gt;/pswa em uma janela do navegador.
 
     <table>
     <colgroup>
@@ -322,7 +337,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Você não poderá fazer logon até que todos os usuários tenham obtido acesso ao site adicionando regras de autorização. Para obter mais informações, consulte <a href="#BKMK_step3">Etapa 3: Configurar uma regra de autorização restritiva</a> e <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Regras de autorização e recursos de segurança do Windows PowerShell Web Access</a>.</p></td>
+    <td><p>Você não poderá fazer logon até que todos os usuários tenham obtido acesso ao site adicionando regras de autorização. Para saber mais, confira <a href="#BKMK_step3">Etapa 3: Configurar uma regra de autorização restritiva</a> e <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Regras de autorização e recursos de segurança do Windows PowerShell Web Access</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -334,9 +349,9 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
 ------------------------------------------------------------------------
 
-Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](https://technet.microsoft.com/library/hh918342.aspx) (Cmdlets do Windows PowerShell Web Access).
+Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para saber mais sobre os cmdlets do Windows PowerShell Web Access, confira os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](https://technet.microsoft.com/library/hh918342.aspx) (Cmdlets do Windows PowerShell Web Access).
 
-Para obter mais detalhes sobre regras e segurança de autorização do Windows PowerShell Web Access, consulte [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de regras e segurança de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
+Para obter mais detalhes sobre as regras e a segurança de autorização do Windows PowerShell Web Access, confira [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de segurança e regras de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
 #### Para adicionar uma regra de autorização restritiva
 
@@ -360,7 +375,7 @@ Para obter mais detalhes sobre regras e segurança de autorização do Windows P
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Por exemplo, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**.
+4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
 
 Depois de configurar uma regra de autorização, você está pronto para que os usuários autorizados entrem no console baseado na web e comecem a usar o Windows PowerShell Web Access.
 
@@ -394,7 +409,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 
 4.  Na página **Selecionar servidor de destino**, escolha um servidor no pool de servidores ou um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor no qual deseja montar o VHD e selecione o arquivo VHD. Para obter informações sobre como adicionar servidores ao pool de servidores, consulte a Ajuda do Gerenciador do Servidor. Após selecionar o servidor de destino, clique em **Avançar**.
 
-5.  Na página **Selecionar recursos** do assistente, expanda **Windows PowerShell** e selecione **Windows PowerShell Web Access**.
+5.  Na página **Selecionar recursos** do assistente, expanda **Windows PowerShell** e escolha **Windows PowerShell Web Access**.
 
 6.  O sistema solicitará a adição dos recursos obrigatórios, como o .NET Framework 4.5 e os serviços de função do Servidor Web (IIS). Adicione os recursos obrigatórios e continue.
 
@@ -448,7 +463,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 5.  Clique com o botão direito do mouse no site (por exemplo, **Site Padrão**) ao qual você deseja adicionar o site do Windows PowerShell Web Access e clique em **Adicionar Aplicativo**.
 
-6.  No campo **Alias**, digite pswa ou forneça outro alias. O alias vira o nome do diretório virtual. Por exemplo, o **pswa** na URL a seguir, representa o alias especificado nesta etapa: https://&lt;server_name&gt;/pswa.
+6.  No campo **Alias**, digite pswa ou forneça outro alias. O alias vira o nome do diretório virtual. Por exemplo, o **pswa** na URL a seguir, representa o alias especificado nesta etapa: https://&lt;nome_do_servidor&gt;/pswa.
 
 7.  No campo **Pool de Aplicativos**, selecione o pool de aplicativos criado na etapa 3.
 
@@ -460,7 +475,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 11. Abra uma sessão de navegador em um dispositivo cliente. Para obter mais informações sobre navegadores e dispositivos com suporte, consulte [Suporte para navegadores e dispositivos cliente](#BKMK_browser) neste tópico.
 
-12. Abra o novo site do Windows PowerShell Web Access, https://&lt; *gateway\_server\_name*&gt;/pswa.
+12. Abra o novo site do Windows PowerShell Web Access, https://&lt; *nome_do_servidor_do_gateway*&gt;/pswa.
 
     O navegador exibirá a página de entrada do console do Windows PowerShell Web Access.
 
@@ -480,7 +495,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
     </tbody>
     </table>
 
-13. Em uma sessão do Windows PowerShell, aberta com direitos do usuário elevados (Executar como Administrador), execute o script a seguir, no qual *application_pool_name* representa o nome do pool de aplicativos criado na etapa 3, para conferir ao pool de aplicativos direitos de acesso ao arquivo de autorização.
+13. Em uma sessão do Windows PowerShell, aberta com direitos de usuário elevados (Executar como Administrador), execute o script a seguir, no qual *application_pool_name* representa o nome do pool de aplicativos criado na etapa 3, para conferir ao pool de aplicativos direitos de acesso ao arquivo de autorização.
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_c1a80a93-8fcf-4beb-a025-5f81bfb8bdae'); "Copy to clipboard.")
 
@@ -508,11 +523,11 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 4.  Digite um nome para o site, por exemplo, **Windows PowerShell Web Access**.
 
-5.  Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Selecione o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
+5.  Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Escolha o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
 
 6.  Na caixa de texto **Caminho físico**, navegue até %*windir*%/Web/PowerShellWebAccess/wwwroot.
 
-7.  No campo **Tipo** da área **Associação**, selecione **https**.
+7.  No campo **Tipo** da área **Associação**, escolha **https**.
 
 8.  Atribua um número de porta a um site que ainda não seja usado por outro site ou aplicativo. Para localizar portas abertas, você pode executar o comando **netstat** em uma janela de Prompt de Comando. O número de porta padrão é 443.
 
@@ -524,7 +539,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 11. Clique em **OK** para fechar a caixa de diálogo **Adicionar Site**.
 
-12. Em uma sessão do Windows PowerShell, aberta com direitos do usuário elevados (Executar como Administrador), execute o script a seguir, no qual *application_pool_name* representa o nome do pool de aplicativos criado na etapa 4, para conferir ao pool de aplicativos direitos de acesso ao arquivo de autorização.
+12. Em uma sessão do Windows PowerShell, aberta com direitos de usuário elevados (Executar como Administrador), execute o script a seguir, no qual *application_pool_name* representa o nome do pool de aplicativos criado na etapa 4, para conferir ao pool de aplicativos direitos de acesso ao arquivo de autorização.
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_35ae9944-ca44-4af7-9c96-616083b3e3db'); "Copy to clipboard.")
 
@@ -544,7 +559,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 15. Abra o novo site do Windows PowerShell Web Access.
 
-    Como o site raiz aponta para a pasta do Windows PowerShell Web Access, o navegador exibirá a página de entrada do Windows PowerShell Web Access quando você abrir https://&lt; *gateway_server_name*&gt;. Não será preciso adicionar **/pswa** à URL.
+    Como o site raiz aponta para a pasta do Windows PowerShell Web Access, o navegador exibirá a página de entrada do Windows PowerShell Web Access quando você abrir https://&lt; *nome_do_servidor_do_gateway*&gt;. Não será preciso adicionar **/pswa** à URL.
 
     <table>
     <colgroup>
@@ -568,9 +583,9 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 ------------------------------------------------------------------------
 
-Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para obter mais informações sobre os cmdlets do Windows PowerShell Web Access, consulte os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](https://technet.microsoft.com/library/hh918342.aspx) (Cmdlets do Windows PowerShell Web Access).
+Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para saber mais sobre os cmdlets do Windows PowerShell Web Access, confira os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](https://technet.microsoft.com/library/hh918342.aspx) (Cmdlets do Windows PowerShell Web Access).
 
-Para obter mais detalhes sobre regras e segurança de autorização do Windows PowerShell Web Access, consulte [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de regras e segurança de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
+Para obter mais detalhes sobre as regras e a segurança de autorização do Windows PowerShell Web Access, confira [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de segurança e regras de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
 #### Para adicionar uma regra de autorização restritiva
 
@@ -594,7 +609,7 @@ Para obter mais detalhes sobre regras e segurança de autorização do Windows P
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Por exemplo, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**.
+4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
 
 Depois de configurar uma regra de autorização, você está pronto para que os usuários autorizados entrem no console baseado na web e comecem a usar o Windows PowerShell Web Access.
 
@@ -613,7 +628,7 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
 2.  No painel de conteúdo, clique duas vezes em **Certificados de Servidor**.
 
-3.  No painel **Ações**, siga um dos procedimentos a seguir. Para obter mais informações sobre como configurar certificados de servidor no IIS, consulte [Configuring Server Certificates in IIS 7 (Configurando certificados de servidor no IIS 7)](https://technet.microsoft.com/library/cc732230.aspx).
+3.  No painel **Ações**, siga um dos procedimentos a seguir. Para saber mais sobre como configurar certificados de servidor no IIS, confira [Configuring Server Certificates in IIS 7](https://technet.microsoft.com/library/cc732230.aspx) (Configurando certificados de servidor no IIS 7).
 
     -   Clique em **Importar** para importar um certificado existente válido de uma localização da sua rede.
 
@@ -625,7 +640,7 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
 5.  Na caixa de diálogo **Adicionar Associação do Site**, adicione uma associação **https** ao site, caso ainda nenhuma seja exibida. Se você não estiver usando um certificado autoassinado, especifique o nome do host da etapa 3 deste procedimento. Se estiver usando um certificado autoassinado, esta etapa não será necessária.
 
-6.  Selecione o certificado obtido ou criado na etapa 3 deste procedimento e clique em **OK**.
+6.  Escolha o certificado obtido ou criado na etapa 3 deste procedimento e clique em **OK**.
 
 <a href="" id="BKMK_using"></a>
 
@@ -634,38 +649,34 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
 ------------------------------------------------------------------------
 
-Depois que o Windows PowerShell Web Access é instalado e a configuração do gateway é concluída, como descrito neste tópico, o console do Windows PowerShell baseado na Web está pronto para uso. Para obter mais informações sobre como começar a usar o console baseado na Web, consulte [Use the Web-based Windows PowerShell Console](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx) (Usar o console do Windows PowerShell baseado na Web).
+Depois que o Windows PowerShell Web Access é instalado e a configuração do gateway é concluída, como descrito neste tópico, o console do Windows PowerShell baseado na Web está pronto para uso. Para saber mais sobre como começar a usar o console baseado na Web, confira [Use the Web-based Windows PowerShell Console (Usar o console do Windows PowerShell baseado na Web)](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx).
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
 <a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
 
-[Documentação dos Serviços de Informações da Internet (IIS) 7.0](https://technet.microsoft.com/library/cc753433.aspx)
+[Documentação do IIS (Serviços de informações da Internet) 7.0](https://technet.microsoft.com/library/cc753433.aspx)
 [Ajuda do Gerenciador do IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)
-[Configurar a segurança do Servidor Web (IIS 7)](https://technet.microsoft.com/library/cc731278.aspx)
-[Recursos de implantação de IPsec](https://technet.microsoft.com/network/bb531150)
+[Configurar a segurança do servidor Web (IIS 7)](https://technet.microsoft.com/library/cc731278.aspx)
+[Recursos de implantação do IPsec](https://technet.microsoft.com/network/bb531150)
 
 <span>Mostrar:</span> herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
-Sim
-Não
+Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span>
-Enviar
-Ignorar
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
 
-<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos seus comentários.</span>
+<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
 [Gerenciar o perfil](https://social.technet.microsoft.com/profile)
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários do site</a>
-Comentários do site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários sobre o Site</a> Comentários sobre o Site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -700,6 +711,8 @@ Código e scripts de terceiros, vinculados ou referenciados neste site, são lic
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

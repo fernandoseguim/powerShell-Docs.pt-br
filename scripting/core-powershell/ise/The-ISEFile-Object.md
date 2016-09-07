@@ -1,23 +1,30 @@
 ---
 title: O objeto ISEFile
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c1744841e23aa9c2fedf3eb92230ef422c36f0cd
+
 ---
+
 # O objeto ISEFile
   Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEFile. Este tópico lista os métodos e as propriedades do membro. O **$psISE.CurrentFile** e os arquivos da coleção de arquivos em uma guia do PowerShell são todas as instâncias da classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
 ## Métodos
 
-###  <a name="save-override"></a> Save( [saveEncoding] )
+###  <a name="save-override"></a> Save\( \[saveEncoding\] \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Salva o arquivo no disco.
 
- **[saveEncoding]** – opcional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional
  Um parâmetro de codificação de caractere opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
 
  **Exceções**
@@ -36,15 +43,14 @@ $myfile.Encoding
 
 ```
 
-###  <a name="saveas"></a> SaveAs(filename, [saveEncoding])
+###  <a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Salva o arquivo com o nome de arquivo e codificação especificados.
 
- **filename** \- String
- O nome a ser usado para salvar o arquivo.
+ **filename** – cadeia de caracteres, o nome a ser usado para salvar o arquivo.
 
- **[saveEncoding]** – opcional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional
  Um parâmetro de codificação de caractere opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
 
  **Exceções**
@@ -68,7 +74,7 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 ###  <a name="Displayname"></a> DisplayName
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém a cadeia que contém o nome de exibição deste arquivo. O nome é mostrado na guia **Arquivo** na parte superior do editor. A presença de um asterisco (*) ao final do nome indica que o arquivo tem alterações que não foram salvas.
+ A propriedade somente leitura que obtém a cadeia que contém o nome de exibição deste arquivo. O nome é mostrado na guia **Arquivo** na parte superior do editor. A presença de um asterisco \(\*\) ao final do nome indica que o arquivo tem alterações que não foram salvas.
 
 ```
 # Shows the display name of the file.
@@ -101,7 +107,7 @@ $psIse.CurrentFile.Encoding
 ###  <a name="FullPath"></a> FullPath
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém a cadeia que especifica o caminho completo do arquivo aberto.
+ A propriedade somente leitura que obtém a cadeia de caracteres que especifica o caminho completo do arquivo aberto.
 
 ```
 # Shows the full path for the file. 
@@ -112,7 +118,7 @@ $psIse.CurrentFile.FullPath
 ###  <a name="IsSaved"></a> IsSaved
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade booliana somente leitura que retornará **$true** se o arquivo foi salvo depois de ter sido modificado pela última vez.
+ A propriedade Boolean somente leitura que retornará **$true** se o arquivo foi salvo depois de ter sido modificado pela última vez.
 
 ```
 # Determines whether the file has been saved since it was last modified.
@@ -124,7 +130,7 @@ $myfile.IsSaved
 ###  <a name="IsUntitled"></a> IsUntitled
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que retorna **$true** se o arquivo nunca recebeu um título.
+ A propriedade somente leitura que retornará **$true** se o arquivo nunca recebeu um título.
 
 ```
 # Determines whether the file has never been given a title.
@@ -135,14 +141,15 @@ $psISE.CurrentFile.IsUntitled
 ```
 
 ## Consulte Também
- [O ISEFileCollectionObject](The-ISEFileCollection-Object.md) 
+ [O objeto ISEFileCollection](The-ISEFileCollection-Object.md) 
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

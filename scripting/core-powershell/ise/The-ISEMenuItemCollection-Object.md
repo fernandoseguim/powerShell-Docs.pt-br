@@ -1,18 +1,25 @@
 ---
 title: O objeto ISEMenuItemCollection
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 563bfc58e545a9e67eb9dd89d8d28e1aa2a33f1c
+
 ---
+
 # O objeto ISEMenuItemCollection
   Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Um exemplo é o objeto **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
 ## Método
 
-### Add(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut)
+### Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Adiciona um item de menu à coleção.
@@ -20,13 +27,13 @@ ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
  **DisplayName**
  O nome de exibição do menu a ser adicionado.
 
- **Ação**
+ **Action**
  O objeto **System.Management.Automation.ScriptBlock** que especifica a ação associada a este item de menu.
 
- **Atalho**
+ **Shortcut**
  O atalho de teclado desta ação.
 
- **Retorna**
+ **Returns**
  O objeto ISEMenuItem que acabou de ser adicionado.
 
 ```
@@ -35,7 +42,7 @@ ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
 $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get-process},"Alt+P")
 ```
 
-### Clear()
+### Limpar\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Remove todos os submenus do item de menu.
@@ -50,11 +57,12 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
  [O objeto ISEMenuItem](The-ISEMenuItem-Object.md) 
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

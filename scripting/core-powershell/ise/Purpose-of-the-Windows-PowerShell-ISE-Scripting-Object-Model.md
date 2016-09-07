@@ -1,12 +1,19 @@
 ---
 title: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 16bd9de4e5636431a192dc3d49e3310c816b997f
+
 ---
+
 # Objetivo do modelo de objeto de script do ISE do Windows PowerShell
   Objetos são associados com a forma e a função do ISE (Ambiente de Script Integrado) do Windows PowerShell. A referência de modelo de objeto fornece detalhes sobre as propriedades e os métodos de membros que esses objetos expõem. Exemplos são fornecidos para mostrar como você pode usar scripts para acessar diretamente esses métodos e propriedades. O modelo de objeto de script facilita a gama de tarefas a seguir.
 
@@ -23,7 +30,7 @@ ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
 
 -   Você pode configurar alertas. Essa configuração inclui advertências que são emitidas quando um arquivo é aberto em várias guias do PowerShell ou quando um script no arquivo é executado antes que o arquivo seja salvo.
 
--   Você pode alternar entre uma exibição em que o painel de Script e painel de Saída estão lado em uma exibição em que o painel Script está na parte superior do painel de Saída. Você pode encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
+-   Você pode alternar entre uma exibição em que o painel Script e Painel de saída estão lado em uma exibição em que o painel Script está na parte superior do Painel de saída. Você pode encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
 
 ## Melhorando a funcionalidade do ISE do Windows PowerShell
  Você pode usar o modelo de objeto para melhorar a funcionalidade do ISE do Windows PowerShell. Por exemplo, você pode:
@@ -64,13 +71,14 @@ ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
  Você pode usar o modelo de objeto de script para criar atalhos de teclado para operações frequentes.
 
 ## Consulte Também
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md) 
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md) 
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,12 +1,19 @@
 ---
 title: Preparando-se para usar o Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 52d55ff10a9118bea2a34a53452fd252d1e17580
+
 ---
+
 # Preparando-se para usar o Windows PowerShell
 Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes opções de configuração. Você pode executar essas tarefas a qualquer momento.
 
@@ -26,6 +33,7 @@ Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

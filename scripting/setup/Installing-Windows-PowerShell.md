@@ -1,7 +1,7 @@
 ---
 title: Instalar o Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
 translationtype: Human Translation
-ms.sourcegitcommit: f856f170c6e18be8758d52df9b50ac443531fdf2
-ms.openlocfilehash: 415e68b372c831ed8dd4535c2968e5a36b5cb65d
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 00249ec98e1624a949fe11fee8be9e93018578a9
 
 ---
 
@@ -45,9 +45,9 @@ Estas instruções explicam como instalar o Windows PowerShell 3.0 em computador
 
 #### Para instalar o Windows PowerShell 3.0
 
-1.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
+1.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Ou, instale o Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    Ou, instale a instalação completa do Microsoft .NET Framework 4.5.(dotNetFx45_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 2.  Instale o Windows Management Framework 3.0 do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
 
@@ -93,9 +93,9 @@ Em sistemas Windows Server 2008, o Windows Management Framework (Windows PowerSh
 
 2.  Instale o Windows Management Framework (Windows PowerShell 2.0, KB 968930) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkId=243035](http://go.microsoft.com/fwlink/?LinkId=243035).
 
-3.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
+3.  Instale a instalação completa do Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Ou, instale o Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    Ou, instale a instalação completa do Microsoft .NET Framework 4.5.(dotNetFx45_Full_setup.exe) do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 4.  Instale a "Proteção Estendida para Autenticação" (KB 968389) de [http://go.microsoft.com/fwlink/?LinkID=186398](http://go.microsoft.com/fwlink/?LinkID=186398).
 
@@ -107,6 +107,6 @@ Em sistemas Windows Server 2008, o Windows Management Framework (Windows PowerSh
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

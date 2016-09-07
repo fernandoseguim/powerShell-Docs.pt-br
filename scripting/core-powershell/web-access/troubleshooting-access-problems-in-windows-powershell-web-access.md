@@ -1,15 +1,15 @@
 ---
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 6366ec9c49f721b758b6a520f68cf2b3c5ee0caf
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: df935247806f108705c9528e4c5454ce499becef
 
 ---
 
@@ -141,9 +141,9 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 
 ------------------------------------------------------------------------
 
-[Regras de Autorização e Recursos de Segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
-[Usar o Console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-[about\_Remote\_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
+[Regras de autorização e recursos de segurança do Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
+[Usar o console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
+[about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
 
 <span>Mostrar:</span> herdado protegido
 
@@ -197,6 +197,6 @@ Código e scripts de terceiros, vinculados ou referenciados neste site, são lic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

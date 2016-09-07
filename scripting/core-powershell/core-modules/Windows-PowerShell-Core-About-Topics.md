@@ -1,12 +1,19 @@
 ---
 title: Windows PowerShell Core About Topics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 8b950138-9782-4dfe-bd5f-6bdcea7060da
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 4d33ebe2a067781d708ca3b0f8dc4dd2848ba4d4
+
 ---
+
 # Windows PowerShell Core About Topics
 Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Windows PowerShell ("Sobre") conceitual. Para obter os tópicos Sobre para outros módulos, consulte os tópicos da Ajuda para o módulo específico.
 
@@ -21,7 +28,7 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_Checkpoint-Workflow](https://technet.microsoft.com/en-us/library/3a309488-1e7a-4807-b83b-dedbeac3ee1c)|Descreve essa atividade de Checkpoint-Workflow, que usa um ponto de verificação em um fluxo de trabalho.|
 |[about_Command_Precedence [v4]](https://technet.microsoft.com/en-us/library/fb14a05e-d461-432d-a253-e9371b54bd2e)|Descreve como o Windows PowerShell determina qual comando deve ser executado.|
 |[about_Command_Syntax [v4]](https://technet.microsoft.com/en-us/library/f39782e8-fe76-46ea-b8b5-b50bbee8da4b)|Explica o formato do comando no Windows PowerShell.|
-|[about_Comment_Based_Help [v4]](https://technet.microsoft.com/en-us/library/c270e198-6da2-4825-b6eb-35d5c8a5cf3d)|Explica como escrever tópicos de ajuda baseados em comentário para funções e scripts.|
+|[about_Comment_Based_Help [v4]](https://technet.microsoft.com/en-us/library/c270e198-6da2-4825-b6eb-35d5c8a5cf3d)|Explica como escrever um comentário com base em tópicos de ajuda para funções e scripts.|
 |[about_CommonParameters [v4]](https://technet.microsoft.com/en-us/library/c3f5e229-8bfb-498e-bb84-b84444a323c4)|Descreve os parâmetros que podem ser usados com qualquer cmdlet.|
 |[about_Comparison_Operators [v4]](https://technet.microsoft.com/en-us/library/007cf70d-f090-4720-a282-77c6ecbfa711)|Descreve os operadores que comparam valores no Windows PowerShell.|
 |[about_Continue [v4]](https://technet.microsoft.com/en-us/library/a7d1e707-f9c7-4a15-9f92-bc530a40a91a)|Descreve a instrução **Continue**, que retorna imediatamente ao início de um loop de programa.|
@@ -31,7 +38,7 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_Debuggers [v4]](https://technet.microsoft.com/en-us/library/2b2ce8b3-f881-4528-bd30-f453dea06755)|Descreve o depurador de script do Windows PowerShell, um conjunto de cmdlets para depurar scripts e funções.|
 |[about_Do [v4]](https://technet.microsoft.com/en-us/library/d1f65c4e-6231-44e2-b21c-78a91845ad6c)|Descreve a instrução Do, que executa o bloco de script uma ou mais vezes sujeito à condição While ou Until.|
 |[about_Environment_Variables [v4]](https://technet.microsoft.com/en-us/library/998c8863-3794-42a8-8971-a5cadef72772)|Explica como acessar as variáveis de ambiente do Windows no Windows PowerShell.|
-|[about_Escape_Characters [v4]](https://technet.microsoft.com/en-us/library/576ca013-c4ca-4ade-bf46-b0d1ce2c778f)|Introduz o caractere de escape no Windows PowerShell (`) e explica o seu efeito.|
+|[about_Escape_Characters [v4]](https://technet.microsoft.com/en-us/library/576ca013-c4ca-4ade-bf46-b0d1ce2c778f)|Introduz o caractere de escape no Windows PowerShell (\`) e explica o seu efeito.|
 |[about_Eventlogs [v4]](https://technet.microsoft.com/en-us/library/8b5279cd-daf1-4ed1-8575-2df4baf7042d)|Descreve o log de eventos do Windows PowerShell no Visualizador de Eventos.|
 |[about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6)|Descreve as políticas de execução do Windows PowerShell e explica como gerenciá-las.|
 |[about_For [v4]](https://technet.microsoft.com/en-us/library/a2eb48d6-7d47-4087-a8d6-deb1d029a957)|Descreve o loop **For** no Windows PowerShell.|
@@ -66,8 +73,8 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_Parsing [v4]](https://technet.microsoft.com/en-us/library/df040a15-fb2c-461d-acdd-2a62a0a4d14d)|Explica como o Windows PowerShell analisa os comandos.|
 |[about_Path_Syntax [v4]](https://technet.microsoft.com/en-us/library/4d2789b0-8c37-4227-acf3-717a0bc155bc)|Descreve os formatos nome de caminho completo e relativo no Windows PowerShell.|
 |[about_Pipelines [v4]](https://technet.microsoft.com/en-us/library/f39a6658-4309-42a7-afe8-871bd4c6b01a)|Explica como combinar comandos em pipelines no Windows PowerShell.|
-|[about_PowerShell.exe](https://technet.microsoft.com/en-us/library/d5548671-5362-4b0b-b22c-4360c71d7f26)|Exibe a ajuda para a ferramenta de linha de comando PowerShell.exe.|
-|[about_PowerShell_Ise.exe](https://technet.microsoft.com/en-us/library/f78d2891-de05-4403-8c91-e856abbd4fb6)|Exibe a ajuda para a ferramenta de linha de comando PowerShell_ISE.exe.|
+|[about_PowerShell.exe](https://technet.microsoft.com/en-us/library/d5548671-5362-4b0b-b22c-4360c71d7f26)|Exibe a Ajuda para a ferramenta de linha de comando PowerShell.exe.|
+|[about_PowerShell_Ise.exe](https://technet.microsoft.com/en-us/library/f78d2891-de05-4403-8c91-e856abbd4fb6)|Exibe a Ajuda para a ferramenta de linha de comando PowerShell_ISE.exe.|
 |[about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b)|Descreve as variáveis de preferência que personalizam o Windows PowerShell.|
 |[about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054)|Explica como criar e usar um perfil no Windows PowerShell.|
 |[about_Prompts [v4]](https://technet.microsoft.com/en-us/library/251843dc-4db3-4e21-aac6-acd3135b3ef6)|Explica como criar e usar um perfil no Windows PowerShell.|
@@ -91,7 +98,7 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_Requires [v4]](https://technet.microsoft.com/en-us/library/0f9a5a00-f64c-4305-b2e7-076aab68ca6f)|Descreve a instrução **Requires**, que impede que um script seja executado sem os snap-ins e versões exigidos.|
 |[about_Reserved_Words [v4]](https://technet.microsoft.com/en-us/library/f3dc2da5-d6c3-4a28-8a13-51fbc61c4e51)|Lista palavras que são reservadas para o Windows PowerShell.|
 |[about_Return [v4]](https://technet.microsoft.com/en-us/library/5c4e116d-a8be-4e13-906c-c4f74bb06f46)|Sai do escopo atual, que pode ser uma função, um script ou um bloco de script.|
-|[about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb)|Explica como usar o recurso "Executar com o PowerShell" para executar um script clicando com o botão direito do mouse em sua entrada no Explorador de Arquivos.|
+|[about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb)|Explica como usar o recurso "Executar com o PowerShell" para executar um script clicando com o botão direito em sua entrada no Explorador de arquivos.|
 |[about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92)|Descreve trabalhos agendados e explica como usar e gerenciar trabalhos agendados no Windows PowerShell e no Agendador de Tarefas.|
 |[about_Scheduled_Jobs_Basics](https://technet.microsoft.com/en-us/library/859d8bfd-e655-4dc3-ab65-19813301eb57)|Explica como criar e gerenciar trabalhos agendados.|
 |[about_Scheduled_Jobs_Advanced](https://technet.microsoft.com/en-us/library/6aea5423-fb96-461c-a1cb-1fb705930eee)|Explica os tópicos avançados de trabalho agendado, incluindo a estrutura de arquivos que é subjacente aos trabalhos agendados.|
@@ -116,18 +123,18 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe)|Descreve o sistema de ajuda atualizável no Windows PowerShell.|
 |[about_Variables [v4]](https://technet.microsoft.com/en-us/library/0cb2aa2b-508a-4d25-999b-e066e99a9312)|Um tópico de visão geral que explica os tipos de variáveis no Windows PowerShell.|
 |[about_While [v4]](https://technet.microsoft.com/en-us/library/3a1a1329-2501-4e4e-8660-a2ca68c68541)|Descreve loops **While** no Windows PowerShell.|
-|[about_Wildcards [v4]](https://technet.microsoft.com/en-us/library/9fe09a23-afce-4547-9e2f-c38090f77636)|Explica como usar o caractere curinga (*) no Windows PowerShell.|
+|[about_Wildcards [v4]](https://technet.microsoft.com/en-us/library/9fe09a23-afce-4547-9e2f-c38090f77636)|Explica como usar o caractere curinga (\*) no Windows PowerShell.|
 |[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)|Descreve os recursos e as alterações que são novos para o Windows PowerShell 4.0.|
 |[about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)|Descreve o ISE (Ambiente de Script Integrado) do Windows PowerShell®.|
 |[about_Workflows](https://technet.microsoft.com/en-us/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)|Fornece uma breve introdução ao recurso de fluxo de trabalho do Windows PowerShell.|
 |[about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)|Descreve os parâmetros que são válidos em todos os comandos de fluxo de trabalho do Windows PowerShell.|
-|[about_WMI](https://technet.microsoft.com/en-us/library/32da7221-c213-48ad-8466-fad82285e4e8)|Descreve a WMI (Instrumentação de Gerenciamento do Windows), que é a implementação da Microsoft do padrão da indústria do WBEM (Web-Based Enterprise Management).|
+|[about_WMI](https://technet.microsoft.com/en-us/library/32da7221-c213-48ad-8466-fad82285e4e8)|Descreve a WMI (Instrumentação de Gerenciamento do Windows), que é a implementação da Microsoft do padrão da indústria do Web-Based Enterprise Management (WBEM).|
 |[about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)|Fornece informações de segundo plano sobre WMI (Instrumentação de Gerenciamento do Windows) e Windows PowerShell.|
 |[about_WQL](https://technet.microsoft.com/en-us/library/820b2d23-3473-46f5-a188-5910704c7905)|Descreve a linguagem WQL, que pode ser usada para obter objetos WMI no Windows PowerShell.|
 |[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Descreve os cmdlets no módulo Microsoft.WsMan.Management. Explica como usá-los juntos para gerenciar recursos de WS-Management, incluindo a unidade de provedor WSMan.|
 
 ## Consulte Também
-[Criando scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+[Scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 [Núcleo do Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
 [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
 [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92)
@@ -137,6 +144,7 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

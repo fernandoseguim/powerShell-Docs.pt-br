@@ -1,12 +1,19 @@
 ---
 title: O objeto ISEMenuItem
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: e067519d58ca381fc4e5c746fe9bbd16bdc68c60
+
 ---
+
 # O objeto ISEMenuItem
   Um objeto **ISEMenuItem** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItem. Todos os objetos de menu **Complementos** são instância da classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
 
@@ -15,7 +22,7 @@ ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
 ###  <a name="DisplayName"></a> DisplayName
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que recebe o nome de exibição do item de menu.
+ A propriedade somente leitura que obtém o nome de exibição do item de menu.
 
 ```
 # Get the display name of the Add-ons menu item
@@ -86,11 +93,12 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
  [O objeto ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md) 
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

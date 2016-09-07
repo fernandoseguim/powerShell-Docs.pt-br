@@ -1,3 +1,18 @@
+---
+title: desinstalar o windows powershell web access
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d54139714552943901f565a8525bb478ed308f09
+
+---
+
 #  Desinstalar o Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
@@ -35,7 +50,7 @@ Se você tiver especificado seu próprio nome de site personalizado, adicione o 
 
     -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas.
 
-    -   Na tela **Iniciar**, clique em **Windows PowerShell**.
+    -   Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
 
 2.  Digite **Uninstall-PswaWebApplication** e pressione **Enter**.
 
@@ -142,7 +157,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 5.  Desmarque a caixa de seleção do **Windows PowerShell Web Access** e clique em **Avançar**.
 
-6.  Na página **Confirmar seleções de remoção** clique em **Remover**.
+6.  Na página **Confirmar seleções de remoção**, clique em **Remover**.
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -155,23 +170,19 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 <span>Mostrar:</span> herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
-Sim
-Não
+Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span>
-Enviar
-Ignorar
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
 
-<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos seus comentários.</span>
+<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
 [Gerenciar o perfil](https://social.technet.microsoft.com/profile)
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários do site</a>
-Comentários do site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários sobre o Site</a> Comentários sobre o Site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -206,6 +217,8 @@ Código e scripts de terceiros, vinculados ou referenciados neste site, são lic
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

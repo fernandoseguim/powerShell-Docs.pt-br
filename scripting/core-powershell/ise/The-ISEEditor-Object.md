@@ -1,7 +1,7 @@
 ---
 title: O objeto ISEEditor
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 4812092dea24fa61245af7e06d1c5924ec812218
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 05255e63ae34e239003e5847c9f3b7fb2f4e3a0a
 
 ---
 
@@ -73,7 +73,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### GoToMatch\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave \- \(,\[,{ \- ou imediatamente após um parêntese de fechamento, colchete ou chave \- \),\],}.  O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará. Consulte [CanGoToMatch](#cangotomatch).
+ Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – \(,\[,{ – ou imediatamente após um parêntese de fechamento, colchete ou chave – \),\],}.  O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará. Consulte [CanGoToMatch](#cangotomatch).
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -84,7 +84,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Substitui a seleção por texto ou inserções de texto na posição do cursor atual.
 
- **text** \- Cadeia de caracteres O texto a ser inserido.
+ **text** – cadeia de caracteres, o texto a ser inserido.
 
  Veja o [Exemplo de script](#example), posteriormente neste tópico.
 
@@ -93,13 +93,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Seleciona o texto dos parâmetros **startLine**, **startColumn**, **endLine** e **endColumn**.
 
- **startLine** \- Inteiro A linha na qual a seleção começa.
+ **startLine** – inteiro, a linha na qual a seleção começa.
 
- **startColumn** \- Inteiro A coluna na linha inicial na qual a seleção começa.
+ **startColumn** – inteiro, a coluna na linha inicial na qual a seleção começa.
 
- **endLine** \- Inteiro A linha na qual a seleção é encerrada.
+ **endLine** – inteiro, a linha na qual a seleção é encerrada.
 
- **endColumn** \- Inteiro A coluna na linha final na qual a seleção é encerrada.
+ **endColumn** – inteiro, a coluna na linha final na qual a seleção é encerrada.
 
  Veja o [Exemplo de script](#example), posteriormente neste tópico.
 
@@ -121,9 +121,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Define a posição do cursor no número de linha e no número da coluna. Gera uma exceção se o número de linha do cursor ou o número da coluna do cursor estiverem fora de seus respectivos intervalos válidos.
 
- **lineNumber** \- Inteiro O número de linha do cursor do sistema.
+ **lineNumber** – inteiro, o número de linha do cursor do sistema.
 
- **columnNumber** \- Inteiro O número da coluna do cursor do sistema.
+ **columnNumber** – inteiro, o número da coluna do cursor do sistema.
 
 ```
 # Set the CaretPosition.
@@ -146,7 +146,7 @@ $psIse.CurrentFile.Editor.ToggleOutliningExpansion()
 ###  <a name="CanGoToMatch"></a> CanGoToMatch
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- A propriedade booliana de somente leitura para indicar se o cursor do sistema está ao lado de um parêntese, colchete ou chave – \(\), \[\], {}. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**. Caso contrário é **$false**.
+ A propriedade Boolean somente leitura para indicar se o cursor está ao lado de um parêntese, colchete ou chave – \(\), \[\], {}. Se o cursor estiver imediatamente antes do caractere de abertura ou imediatamente após o caractere de fechamento de um par, o valor da propriedade será **$true**. Caso contrário é **$false**.
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace
@@ -157,7 +157,7 @@ $psIse.CurrentFile.Editor.CanGoToMatch
 ###  <a name="CaretColumn"></a> CaretColumn
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que recebe o número da coluna que corresponde à posição do cursor do sistema.
+ A propriedade somente leitura que obtém o número da coluna que corresponde à posição do cursor.
 
 ```
 # Get the CaretColumn.
@@ -168,7 +168,7 @@ $psIse.CurrentFile.Editor.CaretColumn
 ###  <a name="CaretLine"></a> CaretLine
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém o número da linha que contém o cursor do sistema.
+ A propriedade somente leitura que obtém o número da linha que contém o cursor.
 
 ```
 # Get the CaretLine.
@@ -179,7 +179,7 @@ $psIse.CurrentFile.Editor.CaretLine
 ###  <a name="caretlinetext"></a> CaretLineText
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém a linha completa de texto que contém o cursor do sistema.
+ A propriedade somente leitura que obtém a linha completa de texto que contém o cursor.
 
 ```
 # Get all of the text on the line that contains the caret.
@@ -208,7 +208,7 @@ $psIse.CurrentFile.Editor.LineCount
 ###  <a name="Text"></a> Texto
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém ou define o texto no editor.
+ A propriedade de leitura/gravação que obtém ou define o texto no editor.
 
  Veja o [Exemplo de script](#example), posteriormente neste tópico.
 
@@ -253,6 +253,6 @@ $myEditor.InsertText($selection.ToLower())
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

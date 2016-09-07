@@ -1,16 +1,23 @@
 ---
 title: O objeto ISEAddOnTool
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
----
-# O objeto ISEAddOnTool
-  Um objeto **ISEAddonTool** representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell. Um exemplo é a ferramenta **Comandos** que você pode exibir clicando **Exibir**, em seguida, em **Mostrar Complemento de Comando**. Esta ferramenta fica, então, acessível a você, manipulando os vários objetos disponíveis **ISEAddOnTool**.
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6b3c739ef54596495dad65dd51c3bcb4404c3d94
 
- Cada ferramenta complementar pode ser associada com o painel vertical ou com o painel horizontal. O painel vertical é encaixado na borda direita do ISE do Windows PowerShell. O painel horizontal está encaixado na borda inferior.
+---
+
+# O objeto ISEAddOnTool
+  Um objeto **ISEAddonTool** representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell. Um exemplo é a ferramenta **Comandos** que você pode exibir clicando em **Exibir** e em **Mostrar Complemento de Comando**. Esta ferramenta fica, então, acessível a você, manipulando os vários objetos disponíveis **ISEAddOnTool**.
+
+ Cada ferramenta complementar pode ser associada ao painel vertical ou ao painel horizontal. O painel vertical é encaixado na borda direita do ISE do Windows PowerShell. O painel horizontal está encaixado na borda inferior.
 
  Cada guia PowerShell no ISE do Windows PowerShell pode ter seu próprio conjunto de ferramentas complementares instaladas. Consulte [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-ISEAddOnToolCollection-Object.md) e [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-ISEAddOnToolCollection-Object.md) para acessar a coleção de ferramentas disponíveis para a guia selecionada no momento ou as mesmas propriedades em qualquer um dos objetos **PowerShellTab** no objeto do conjunto [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).
 
@@ -22,7 +29,7 @@ ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
 ###  <a name="Control"></a> Control
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- A propriedade **Controle** fornece acesso de leitura para muitos dos detalhes da ferramenta complementar Comandos.
+ A propriedade **Control** fornece acesso de leitura a muitos dos detalhes da ferramenta complementar Comandos.
 
 ```
 # View the properties of the Commands add-on tool.
@@ -138,7 +145,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 ###  <a name="IsVisible"></a> IsVisible
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- A propriedade booliana que indica se a ferramenta complementar está atualmente visível no seu painel atribuído. Se estiver visível, você poderá definir a propriedade **IsVisible** como **$false** para ocultar a ferramenta ou definir a propriedade **IsVisible** como **$true** para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é oculta, ela não é mais acessível pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.
+ A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído. Se estiver visível, você poderá definir a propriedade **IsVisible** como **$false** para ocultar a ferramenta ou definir a propriedade **IsVisible** como **$true** para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.
 
 ```
 # Hide the current tool in the vertical tool pane
@@ -151,7 +158,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible=$true
 ###  <a name="name"></a> Nome
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- A propriedade somente leitura que recebe o nome da ferramenta complementar.
+ A propriedade somente leitura que obtém o nome da ferramenta complementar.
 
 ```
 # Gets the name of the visible vertical pane add-on tool.
@@ -164,9 +171,11 @@ Commands
  [O objeto ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md)
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

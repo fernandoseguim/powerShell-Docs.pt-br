@@ -1,7 +1,7 @@
 ---
 title: "Obtendo informações de ajuda detalhadas"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 1c514b101f708f11f095e1c95e12d7eff403e3bb
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 423be0f76788fa8f45356ca8446bad6754d38e1a
 
 ---
 
@@ -32,7 +32,7 @@ ou
 get-childitem -?
 ```
 
-Você pode até mesmo obter Ajuda para o cmdlet Get\-Help. Por exemplo:
+Você pode até mesmo obter ajuda para o cmdlet Get-Help. Por exemplo:
 
 ```
 get-help get-help
@@ -44,7 +44,7 @@ Para obter uma lista de todos os tópicos de Ajuda de cmdlet na sua sessão, dig
 get-help -category cmdlet
 ```
 
-Para exibir uma página de cada tópico da Ajuda por vez, use a função **help** ou seu alias **man**. Por exemplo, para exibir a Ajuda para o cmdlet Get\-ChildItem, digite
+Para exibir uma página de cada tópico da Ajuda por vez, use a função **help** ou seu alias **man**. Por exemplo, para exibir a Ajuda do cmdlet Get-ChildItem, digite
 
 ```
 man get-childitem
@@ -56,25 +56,25 @@ ou
 help get-childitem
 ```
 
-Para exibir informações detalhadas sobre um cmdlet, uma função ou um script, incluindo descrições de seus parâmetros e exemplos de uso, use o parâmetro *Detailed* do cmdlet Get\-Help. Por exemplo, para obter informações detalhadas sobre o cmdlet Get\-ChildItem, digite:
+Para exibir informações detalhadas sobre um cmdlet, uma função ou um script, incluindo descrições de seus parâmetros e exemplos de uso, use o parâmetro *Detailed* do cmdlet Get-Help. Por exemplo, para obter informações detalhadas sobre o cmdlet Get-ChildItem, digite:
 
 ```
 get-help get-childitem -detailed
 ```
 
-Para exibir todo o conteúdo do tópico da Ajuda, use o parâmetro *Full* do cmdlet Get\-Help. Por exemplo, para exibir todo o conteúdo do tópico da Ajuda para o cmdlet Get\-ChildItem, digite:
+Para exibir todo o conteúdo do tópico da Ajuda, use o parâmetro *Full* do cmdlet Get-Help. Por exemplo, para exibir todo o conteúdo do tópico de Ajuda para o cmdlet Get-ChildItem, digite:
 
 ```
 get-help get-childitem -full
 ```
 
-Para obter Ajuda detalhada para os parâmetros de um cmdlet, use o parâmetro *Parameter* do cmdlet Get\-Help. Por exemplo, para obter Ajuda detalhada para todos os parâmetros do cmdlet Get\-ChildItem, digite:
+Para obter Ajuda detalhada sobre os parâmetros de um cmdlet, use o parâmetro *Parameter* do cmdlet Get-Help. Por exemplo, para obter Ajuda detalhada para todos os parâmetros do cmdlet Get-ChildItem, digite:
 
 ```
 get-help get-childitem -parameter *
 ```
 
-Para exibir apenas os exemplos em um tópico da Ajuda, use o parâmetro *Example* de Get\-Help. Por exemplo, para exibir apenas os exemplos do tópico da Ajuda para o cmdlet Get\-ChildItem, digite:
+Para exibir apenas os exemplos em um tópico da Ajuda, use o parâmetro *Example* do Get-Help. Por exemplo, para exibir apenas os exemplos do tópico de Ajuda para o cmdlet Get-ChildItem, digite:
 
 ```
 get-help get-childitem -examples
@@ -83,7 +83,7 @@ get-help get-childitem -examples
 Para obter informações sobre como escrever tópicos da Ajuda para os cmdlets que você criar, consulte o tópico "Como criar Ajuda para cmdlets" no MSDN.
 
 ## Obtendo Ajuda conceitual
-O cmdlet Get\-Help exibe também informações sobre tópicos conceituais no Windows PowerShell, incluindo tópicos sobre a linguagem do Windows PowerShell. Tópicos conceituais da Ajuda começam com o prefixo “about\_”, como about\_line\_editing. (O nome do tópico conceitual deve ser inserido em inglês, mesmo em versões do Windows PowerShell em idiomas diferentes do inglês.)
+O cmdlet Get-Help exibe também informações sobre tópicos conceituais no Windows PowerShell, incluindo tópicos sobre a linguagem do Windows PowerShell. Tópicos de Ajuda conceituais começam com o prefixo "about_", como about_line_editing. (O nome do tópico conceitual deve ser inserido em inglês, mesmo em versões do Windows PowerShell em idiomas diferentes do inglês.)
 
 Para exibir uma lista de tópicos conceituais, digite:
 
@@ -97,10 +97,10 @@ Para exibir um tópico de Ajuda específico, digite o nome do tópico, como por 
 get-help about_command_syntax
 ```
 
-Os parâmetros de Get\-Help, como *Detailed*, *Parameter* e *Examples* não têm efeito sobre a exibição dos tópicos conceituais da Ajuda.
+Os parâmetros de Get-Help, como *Detailed*, *Parameter* e *Examples*, não têm efeito sobre a exibição dos tópicos de Ajuda conceitual.
 
 ## Obtendo Ajuda para provedores
-O cmdlet Get\-Help exibe informações sobre provedores do Windows PowerShell. Para obter Ajuda para um provedor, digite “Get\-Help” seguido pelo nome do provedor. Por exemplo, para obter Ajuda para o provedor de Registro, digite:
+O cmdlet Get-Help exibe informações sobre provedores do Windows PowerShell. Para obter Ajuda sobre um provedor, digite "Get-Help" seguido do nome do provedor. Por exemplo, para obter Ajuda para o provedor de Registro, digite:
 
 ```
 get-help registry
@@ -112,12 +112,12 @@ Para obter uma lista de todos os tópicos de Ajuda de provedor na sua sessão, d
 get-help -category provider
 ```
 
-Os parâmetros de Get\-Help, como *Detailed*, *Parameter* e *Examples* não têm efeito sobre a exibição dos tópicos da Ajuda referentes ao provedor.
+Os parâmetros de Get-Help, como *Detailed*, *Parameter* e *Examples*, não têm efeito sobre a exibição dos tópicos de Ajuda de provedor.
 
 ## Obtendo Ajuda para scripts e funções
-Muitos scripts e funções no Windows PowerShell têm tópicos da Ajuda. Use o cmdlet Get\-Help para exibir os tópicos da Ajuda para scripts e funções.
+Muitos scripts e funções no Windows PowerShell têm tópicos da Ajuda. Use o cmdlet Get-Help para exibir tópicos da Ajuda para scripts e funções.
 
-Para exibir a Ajuda para uma função, digite “get\-help” seguido pelo nome da função. Por exemplo, para obter Ajuda para a função Disable\-PSRemoting, digite:
+Para exibir a Ajuda para uma função, digite "get-help" seguido pelo nome da função. Por exemplo, para obter Ajuda para a função Disable-PSRemoting, digite:
 
 ```
 get-help disable-psremoting
@@ -125,30 +125,30 @@ get-help disable-psremoting
 
 Para exibir a Ajuda para um script, digite o caminho totalmente qualificado para o arquivo de script. Se o script estiver em um caminho listado na variável de ambiente Path, você poderá omitir o caminho do comando.
 
-Por exemplo, se você tiver um script chamado “TestScript.ps1” no diretório C:\\PS\-Test, para exibir o tópico da Ajuda para o script, digite:
+Por exemplo, se você tiver um script chamado "TestScript.ps1" no diretório C:\\PS-Test, para exibir o tópico da Ajuda do script, digite:
 
 ```
 get-help c:\ps-test\TestScript.ps1
 ```
 
-Os parâmetros que foram projetados para exibir o cmdlet Help, como *Detailed*, *Full*, *Examples* e *Parameter* funcionam tanto para o script quanto para a função Help. No entanto, ao exibir toda a Ajuda digitando “get\-help \*”, a Ajuda para funções e scripts não será exibida.
+Os parâmetros que foram projetados para exibir o cmdlet Help, como *Detailed*, *Full*, *Examples* e *Parameter* funcionam tanto para o script quanto para a função Help. No entanto, ao exibir toda a Ajuda digitando "get-help \*", a Ajuda de funções e scripts não é exibida.
 
 Para obter informações sobre como criar Ajuda para suas funções e scripts, consulte [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
 ## Obtendo Ajuda online
 Se você estiver conectado à Internet, uma das melhores maneiras de obter Ajuda será exibir os tópicos da Ajuda online. Como tópicos online são fáceis de atualizar, eles provavelmente fornecerão o conteúdo mais atual.
 
-Para obter Ajuda online, experimente o parâmetro *Online* do cmdlet Get\-Help. O parâmetro *Online* do cmdlet Get\-Help funciona somente para o cmdlet, a função e o script Help. Não é possível usar o parâmetro *Online* com tópicos de Ajuda conceitual (About) ou de provedor. Além disso, como esse recurso é opcional, ele não funciona para o tópico de Ajuda de todos os cmdlets, funções ou scripts.
+Para obter Ajuda online, experimente o parâmetro *Online* do cmdlet Get-Help. O parâmetro *Online* do cmdlet Get-Help funciona somente para Ajuda de cmdlet, Ajuda de função e Ajuda de script. Não é possível usar o parâmetro *Online* com tópicos de Ajuda conceitual (About) ou de provedor. Além disso, como esse recurso é opcional, ele não funciona para o tópico de Ajuda de todos os cmdlets, funções ou scripts.
 
 No entanto, todos os tópicos de Ajuda que acompanham o Windows PowerShell, incluindo tópicos de Ajuda de provedor e conceitual (About), estão disponíveis online na seção [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116) da Biblioteca do Microsoft TechNet.
 
-Para usar o parâmetro *Online* do cmdlet Get\-Help, use o formato de comando a seguir.
+Para usar o parâmetro *Online* do cmdlet Get-Help, use o seguinte formato de comando.
 
 ```
 get-help <command-name> -online
 ```
 
-Por exemplo, para obter a versão online do tópico da Ajuda para o cmdlet Get\-ChildItem, digite:
+Por exemplo, para obter a versão online do tópico da Ajuda para o cmdlet Get-ChildItem, digite:
 
 ```
 get-help get-childitem -online
@@ -158,7 +158,7 @@ Se uma versão online do tópico da Ajuda estiver disponível, ela será aberta 
 
 Se a Ajuda online tiver suporte em um tópico da Ajuda, você também poderá exibir a URL (o endereço de Internet) do tópico da Ajuda. O endereço de Internet é exibido na seção Links Relacionados de um tópico da Ajuda.
 
-Por exemplo, para ver a URL para a versão online do cmdlet Add\-Computer, digite:
+Por exemplo, para ver a URL da versão online do cmdlet Add-Computer, digite:
 
 ```
 get-help add-computer
@@ -181,6 +181,6 @@ Para obter informações sobre como dar suporte online aos seus tópicos de Ajud
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com impressoras
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 27d3d11b71b95cd79817449cf8bdb1a0a26936bd
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c013124d12a551245152c1703e5f1d8a3f8f5f70
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: 27d3d11b71b95cd79817449cf8bdb1a0a26936bd
 Você pode usar o Windows PowerShell para gerenciar impressoras usando o WMI e o objeto COM WScript.Network do WSH. Usaremos uma combinação das duas ferramentas para demonstrar as tarefas específicas.
 
 ### Listar conexões de impressora
-A maneira mais simples de listar as impressoras instaladas em um computador é usar a classe **Win32\_Printer** do WMI:
+A maneira mais simples de listar as impressoras instaladas em um computador é usar o a classe do WMI **Win32_Printer**:
 
 ```
 Get-WmiObject -Class Win32_Printer -ComputerName
@@ -40,7 +40,7 @@ Para adicionar uma nova impressora de rede, use **WScript.Network**:
 ```
 
 ### Configurar uma impressora padrão
-Para usar o WMI para definir a impressora padrão, encontre a impressora na coleção **Win32\_Printer** e invoque o método **SetDefaultPrinter**:
+Para usar o WMI para definir a impressora padrão, localize a impressora na coleção **Win32_Printer** e, em seguida, invoque o método **SetDefaultPrinter**:
 
 ```
 (Get-WmiObject -ComputerName . -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
@@ -62,6 +62,6 @@ Para remover uma conexão de impressora, use o método **WScript.Network RemoveP
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

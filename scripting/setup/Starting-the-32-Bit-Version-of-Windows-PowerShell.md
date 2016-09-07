@@ -1,7 +1,7 @@
 ---
 title: "Iniciando a versão de 32 bits do Windows PowerShell"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
 translationtype: Human Translation
-ms.sourcegitcommit: b6ab9bfdd779a865c1f543bf16e91ec17b43c4b0
-ms.openlocfilehash: 41bbdd302aa3aa0d253bc4c820fdbbeb1b827ccc
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 310f898a471ca60da4d9ebe5234ee86a636e44b5
 
 ---
 
 # Iniciando a versão de 32 bits do Windows PowerShell
-Quando você instala o Windows PowerShell em um computador de 64 bits, o **Windows PowerShell (x86)**, uma versão de 32 bits do Windows PowerShell é instalada juntamente com a versão de 64 bits. Quando você executa o Windows PowerShell, a versão de 64 bits é executada por padrão.
+Quando você instala o Windows PowerShell em um computador de 64 bits, o **Windows PowerShell (x86)**, uma versão de 32 bits do Windows PowerShell é instalada com a versão de 64 bits. Quando você executa o Windows PowerShell, a versão de 64 bits é executada por padrão.
 
-No entanto, ocasionalmente pode ser necessário executar o **Windows PowerShell (x86)**, como quando você estiver usando um módulo que requeira a versão de 32 bits ou quando você quiser se conectar remotamente a um computador de 32 bits.
+No entanto, ocasionalmente pode ser necessário executar o **Windows PowerShell (x86)**, como quando você estiver usando um módulo que requer a versão de 32 bits ou quando você quiser se conectar remotamente a um computador de 32 bits.
 
 Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos procedimentos a seguir.
 
@@ -63,6 +63,6 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,3 +1,18 @@
+---
+title: usar o console do windows powershell baseado na web
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 9c633d457db9d15621285b2662244c4190550f63
+
+---
+
 #  Usar o Console do Windows PowerShell baseado na Web
 
 Atualizado em: 24 de junho de 2013
@@ -74,7 +89,7 @@ Para usar o console do Windows PowerShell Web Access baseado na Web, os navegado
 
 ------------------------------------------------------------------------
 
-O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o endereço do site do gateway do Windows PowerShell Web Access da sua organização. Por padrão, o endereço do site é https://&lt;server_name&gt;/pswa. Antes de entrar no Windows PowerShell Web Access, tenha o nome ou o endereço IP do computador remoto que deseja gerenciar. Você deve ser um usuário autorizado no computador remoto e ele deve estar configurado para permitir gerenciamento remoto. Para obter mais informações sobre como configurar o computador para permitir o gerenciamento remoto, consulte [Enable and Use Remote Commands in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx) (Habilitar e usar comandos remotos no Windows PowerShell). O método mais simples de configurar o computador para permitir gerenciamento remoto é executar o cmdlet **Enable-PSRemoting -force** no computador, em uma sessão do Windows PowerShell aberta com direitos de usuário elevados (**Executar como Administrador**)).
+O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o endereço do site do gateway do Windows PowerShell Web Access da sua organização. Por padrão, o endereço do site é https://&lt;server_name&gt;/pswa. Antes de entrar no Windows PowerShell Web Access, tenha o nome ou o endereço IP do computador remoto que deseja gerenciar. Você deve ser um usuário autorizado no computador remoto e ele deve estar configurado para permitir gerenciamento remoto. Para obter mais informações sobre como configurar o computador para permitir o gerenciamento remoto, consulte [Enable and Use Remote Commands in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx) (Habilitar e usar comandos remotos no Windows PowerShell). O método mais simples de configurar o computador para permitir gerenciamento remoto é executar o cmdlet **Enable-PSRemoting -force** no computador, em uma sessão do Windows PowerShell aberta com direitos de usuário elevados (**Executar como Administrador**).
 
 ### Para entrar no Windows PowerShell Web Access
 
@@ -94,19 +109,19 @@ O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o 
     <tbody>
     <tr class="odd">
     <td><ul>
-    <li><p>Se o computador de destino estiver em um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>workgroup_name</em>&gt;\&lt;<em>user_name</em>&gt;.</p></li>
+    <li><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>nome_do_grupo_de_trabalho</em>&gt;\&It;<em>nome_de_usuário</em>&gt;.</p></li>
     <li><p>Se o computador de destino for o servidor de gateway, você poderá especificar <strong>localhost</strong> no campo <strong>Nome do computador</strong>.</p></li>
-    <li><p>Se o computador de destino for o servidor de gateway e o servidor de gateway estiver em um grupo de trabalho, você poderá usar <strong>localhost</strong> no campo <strong>Nome do computador</strong>, mas não usar localhost\&lt;<em>user_name</em>&gt; no campo <strong>Nome de usuário</strong>. Você deve usar &lt;<em>nome do grupo de trabalho</em>&gt;\&lt;<em>user_name</em>&gt;.</p></li>
+    <li><p>Se o computador de destino for o servidor de gateway e o servidor de gateway estiver em um grupo de trabalho, você poderá usar <strong>localhost</strong> no campo <strong>Nome do computador</strong>, mas não usar localhost\&It;<em>nome_de_usuário</em>&gt; no campo <strong>Nome de usuário</strong>. Você deve usar &lt;<em>nome do grupo de trabalho</em>&gt;\&It;<em>nome_de_usuário</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
     </table>
 
-3.  A seção **Configurações de Conexão Opcionais** está relacionada aos requisitos de autorização do computador remoto que você deseja gerenciar. Para obter mais informações sobre os parâmetros equivalentes às configurações de conexão opcionais, consulte [Enter-PSSession cmdlet Help](https://technet.microsoft.com/library/dd315384.aspx) (Ajuda do cmdlet Enter-PSSession).
+3.  A seção **Configurações de Conexão Opcionais** está relacionada aos requisitos de autorização do computador remoto que você deseja gerenciar. Para saber mais sobre os parâmetros equivalentes às configurações de conexão opcionais, confira [Ajuda do cmdlet Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx).
 
     Geralmente, as credenciais usadas para passar pelo gateway do Windows PowerShell Web Access são as mesmas reconhecidas pelo computador remoto que você deseja gerenciar. No entanto, se você desejar usar credenciais diferentes para gerenciar o computador remoto especificado na etapa 2, expanda a seção **Configurações de Conexão Opcionais** e forneça as credenciais alternativas. Caso contrário, ignore a etapa 6.
 
-4.  Se o administrador do Windows PowerShell Web Access tiver criado uma configuração de sessão personalizada para usuários do Windows PowerShell Web Access, digite o nome da configuração da sessão no campo **Nome da configuração**. Para obter mais informações sobre configurações de sessão, consulte [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx) no site da Microsoft.
+4.  Se o administrador do Windows PowerShell Web Access tiver criado uma configuração de sessão personalizada para usuários do Windows PowerShell Web Access, digite o nome da configuração da sessão no campo **Nome da configuração**. Para saber mais sobre configurações de sessão, confira [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx) no site da Microsoft.
 
 5.  Mantenha o **Tipo de autenticação** definido como **Padrão**, a menos que você tenha sido instruído a fazer o contrário pelo administrador do Windows PowerShell Web Access.
 
@@ -129,7 +144,7 @@ Qualquer uma das ações a seguir encerra uma sessão do Windows PowerShell base
 
 -   Tentar entrar para gerenciar um computador remoto diferente na mesma sessão de navegador ou em uma nova guia da mesma sessão de navegador. (Isso não se aplicará se o servidor de gateway estiver executando Windows Server 2012 R2; Windows PowerShell Web Access em execução em Windows Server 2012 R2 permite várias sessões de usuário em novas guias na mesma sessão do navegador.) Para obter mais informações sobre como usar mais de uma sessão ativa no mesmo computador, consulte “Connecting to multiple target computers simultaneously” (Conectando a vários computadores de destino simultaneamente) na seção [Limitations of the web-based console](#BKMK_limits) (Limitações do console baseado na Web) deste tópico.
 
--   20 minutos de inatividade na sessão. O administrador do gateway pode personalizar o período de tempo limite de inatividade. Para obter mais informações, consulte [Session management](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt) (Gerenciamento de sessão).
+-   20 minutos de inatividade na sessão. O administrador do gateway pode personalizar o período de tempo limite de inatividade. Para saber mais, confira [Gerenciamento de sessões](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt).
 
     -   Se os usuários forem desconectados de sessões no console baseado na Web por causa de erros de rede ou outros desligamentos não planejados ou falhas, e não porque você fechou a sessão, as sessões do Windows PowerShell Web Access continuam em execução, conectada ao computador de destino, até decorrer o tempo limite do lado do cliente. Por padrão, esse período de tempo limite é de 20 minutos e é configurado pelo administrador do gateway. A sessão é desconectada após um padrão de 20 minutos ou após o período de tempo limite especificado pelo administrador do gateway, o que for menor.
 
@@ -290,7 +305,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
 -   Os usuários que entraram em uma configuração de sessão **NoLanguage** ou em um runspace restrito no Windows PowerShell Web Access não podem executar o comando **Sair** para encerrar a sessão. Para sair, os usuários devem clicar em **Sair** na página do console.
 
--   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **ALT**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
+-   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **Alt**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
 
     Quando o gateway do Windows PowerShell Web Access estiver em execução no Windows Server 2012 R2, os usuários poderão abrir várias conexões com computadores remotos em guias diferentes do navegador. Se você quiser abrir mais de uma conexão a um computador remoto usando o console do Windows PowerShell baseado na Web, entre em contato com o administrador de gateway do Windows PowerShell Web Access para ver se este recurso tem suporte pelo servidor de gateway.
 
@@ -304,7 +319,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
     -   Altere a altura e largura das janelas do console com um cmdlet
 
-        A janela do console do Windows PowerShell Web Access pode ser configurada usando os cmdlets da seguinte forma. No exemplo a seguir, um usuário alterar a largura do console do Windows PowerShell Web Access para **20**.
+        A janela do console do Windows PowerShell Web Access pode ser configurada usando os cmdlets da seguinte forma. No exemplo a seguir, um usuário muda a largura do console do Windows PowerShell Web Access para **20**.
 
         [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_778d5e55-9195-4bd7-b313-d1fbca7876e4'); "Copy to clipboard.")
 
@@ -324,32 +339,28 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
 ------------------------------------------------------------------------
 
-[Referência de cmdlets do Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
+[Referência de cmdlet do Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
 [Windows PowerShell no Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-[Repositório da Central de Scripts do TechNet](http://gallery.technet.microsoft.com/scriptcenter)
-[Central de Scripts - Olá, pessoal de script!](https://technet.microsoft.com/scriptcenter)
+[Repositório Script Center no TechNet](http://gallery.technet.microsoft.com/scriptcenter)
+[Script Center – Hey, Scripting Guy!](https://technet.microsoft.com/scriptcenter)
 [Blog da equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/)
 
 <span>Mostrar:</span> herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
-Sim
-Não
+Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span>
-Enviar
-Ignorar
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
 
-<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos seus comentários.</span>
+<span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
 [Gerenciar o perfil](https://social.technet.microsoft.com/profile)
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários do site</a>
-Comentários do site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Comentários sobre o Site</a> Comentários sobre o Site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -384,6 +395,8 @@ Código e scripts de terceiros, vinculados ou referenciados neste site, são lic
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,12 +1,19 @@
 ---
 title: O objeto ObjectModelRoot
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 13fcf7ee-b18f-4499-a2b4-ccfc4484cd88
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 5d9b2492dbcade15c91d2b7687f5fc64998e2a9a
+
 ---
+
 # O objeto ObjectModelRoot
   O objeto **$psISE** que é o objeto raiz da entidade de segurança no ISE (Ambiente de Script Integrado) do Windows PowerShell® é uma instância da classe Microsoft.PowerShell.Host.ISE.ObjectModelRoot. Este tópico descreve as propriedades do objeto **ObjectModelRoot**.
 
@@ -15,7 +22,7 @@ ms.assetid: 13fcf7ee-b18f-4499-a2b4-ccfc4484cd88
 ### CurrentFile
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que recebe o arquivo, o que é associada ao objeto host que atualmente tem o foco.
+ A propriedade somente leitura que obtém o arquivo, que é associada ao objeto host que atualmente tem o foco.
 
 ### CurrentPowerShellTab
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
@@ -25,12 +32,12 @@ ms.assetid: 13fcf7ee-b18f-4499-a2b4-ccfc4484cd88
 ### CurrentVisibleHorizontalTool
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém a ferramenta complementar do ISE do Windows PowerShell localizado no painel de ferramentas horizontal na parte inferior do editor.
+ A propriedade somente leitura que obtém a ferramenta complementar do ISE do Windows PowerShell visível no momento que está localizada no painel de ferramentas horizontal na parte inferior do editor.
 
 ### CurrentVisibleVerticalTool
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade somente leitura que obtém a ferramenta complementar do ISE do Windows PowerShell visível no momento que ela está localizada no painel de ferramentas vertical no lado direito do editor.
+ A propriedade somente leitura que obtém a ferramenta complementar do ISE do Windows PowerShell visível no momento que está localizada no painel de ferramentas vertical no lado direito do editor.
 
 ### Opções
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
@@ -45,11 +52,12 @@ ms.assetid: 13fcf7ee-b18f-4499-a2b4-ccfc4484cd88
 ## Consulte Também
  [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+ [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 
