@@ -9,8 +9,8 @@ ms.date: 2016-06-22
 title: ARQUIVO LEIAME
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
-ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
+ms.sourcegitcommit: 8149f656f0aacbb23cacc8a1a9b45ed59866b92f
+ms.openlocfilehash: 7bb5635832e912b39ec387e8ac93ada24a434ff8
 
 ---
 
@@ -77,13 +77,13 @@ Descobrir como auditar e relatar todas as ações e a infraestrutura do JEA
 9.  Apêndices
   - [Conceitos fundamentais usados em todo este guia](key-concepts-used-throughout-this-guide.md)  
   -  [Criar um Controlador de Domínio](creating-a-domain-controller.md)  
-  -  [lista de bloqueios](on-blacklisting.md)  
+  -  [Sobre lista de bloqueios](on-blacklisting.md)  
   -  [Considerações sobre a limitação de comandos](considerations-when-limiting-commands.md)  
   -  [Armadilhas comuns de Capacidade de Função](common-role-capability-pitfalls.md)
 
 ## Começar a criar seus próprios pontos de extremidade de JEA
 É fácil criar um ponto de extremidade de JEA, tudo o que você precisa é um sistema habilitado para JEA e um editor de texto (como o ISE do PowerShell).
-Uma dica útil para começar é criar arquivos esqueleto usando `New-PSRoleCapabilityFile -Path <path>` e `New-PSSessionCapabilityFile -Path <Path>` sem outros argumentos.
+Uma dica útil para começar é criar arquivos esqueleto usando [`New-PSRoleCapabilityFile -Path <path>`](https://technet.microsoft.com/library/mt631422.aspx) e [`New-PSSessionConfigurationFile -Path <Path>`](https://technet.microsoft.com/library/mt631422.aspx) sem outros argumentos.
 Esses arquivos de esqueleto contêm todos os campos de configuração aplicáveis juntamente com comentários úteis para explicar a finalidade de cada campo.
 
 Para tornar a criação dos pontos de extremidade de JEA ainda mais fácil, confira o [Auxiliar do Kit de Ferramentas JEA](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) que fornece uma interface gráfica com a qual você pode criar arquivos de Configuração de Sessão e de Capacidade de Função.
@@ -92,6 +92,6 @@ Ela ainda dão suporte à geração de Capacidades de Função com base nos logs
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 29676d0bf51adf9176753d0056efe76687a40600
+ms.sourcegitcommit: 6c5f3d3321b7e50215cf58267e1864b7da827764
+ms.openlocfilehash: d84bb35ada3588367436e6f5e3c6696b90c3661b
 
 ---
 
@@ -45,7 +45,7 @@ Um script de configuração é composto por estas partes:
 - Um ou mais blocos de **Nó**. Definem os nós (computadores ou máquinas virtuais) que você está configurando. Na configuração acima, há um bloco de **Nó** que tem como destino um computador denominado "TEST-PC1".
 - Um ou mais blocos de recurso. É onde a configuração define as propriedades para os recursos que estão sendo configurados. Nesse caso, há dois blocos de recurso; cada um deles chama o recurso "WindowsFeature".
 
-Dentro de um bloco de **configuração**, é possível fazer qualquer coisa que normalmente poderia ser feita em uma função do PoweShell. No exemplo anterior, se você não quisesse embutir em código o nome do computador de destino na configuração, poderia adicionar um parâmetro para o nome do nó:
+Dentro de um bloco de **configuração**, é possível fazer qualquer coisa que normalmente poderia ser feita em uma função do PowerShell. No exemplo anterior, se você não quisesse embutir em código o nome do computador de destino na configuração, poderia adicionar um parâmetro para o nome do nó:
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -72,8 +72,9 @@ Neste exemplo, você especifica o nome do nó passando-o como o parâmetro $Comp
 Para poder aplicar uma configuração, você precisa compilá-la em um documento MOF. Chame a configuração como chamaria uma função do PowerShell.
 >__Observação:__ para chamar uma configuração, a função precisa estar no escopo global (como acontece com qualquer outra função do PowerShell). Isso pode ser feito por meio de "dot-sourcing" do script ou ao executar o script de configuração usando F5 ou clicando no botão __Executar Script__ no ISE. Para fazer o dot-source do script, execute o comando `. .\myConfig.ps1`, em que `myConfig.ps1` é o nome do arquivo de script que contém sua configuração.
 
-Quando você chama a configuração, ela cria:
+Quando você chama a configuração, ela:
 
+- Resolve todas as variáveis 
 - Uma pasta no diretório atual com o mesmo nome que a configuração.
 - Um arquivo chamado _NodeName_.mof no novo diretório, em que _NodeName_ é o nome do nó de destino da configuração. Se houver mais de um nó, será criado um arquivo MOF para cada nó.
 
@@ -136,6 +137,6 @@ Atualmente, a DSC vem com 12 recursos como parte do módulo PSDesiredStateConfig
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

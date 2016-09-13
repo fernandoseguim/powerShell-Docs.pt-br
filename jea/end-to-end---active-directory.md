@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: ponta a ponta Active Directory
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 0a262e2c83174db7041d3cf35d97542b1cac4386
+translationtype: Human Translation
+ms.sourcegitcommit: 33e92c7fd6039a1e3f5f784470c7bd0e43a7f030
+ms.openlocfilehash: e7ea3957ce3bbd3ce0fc072a82cd108606f05614
 
 ---
 
@@ -26,7 +27,7 @@ Esta seção guiará você pela criação de uma Configuração de Sessão e a C
 Para seguir esta seção passo a passo, você precisará estar operando em um controlador de domínio.
 Se não tiver acesso ao controlador de domínio, não se preocupe.
 Tente acompanhar trabalhando em outro cenário ou função com a qual você está familiarizado.
-Se você quiser configurar rapidamente um novo controlador de domínio, confira o apêndice [Criando um Controlador de Domínio](#creating-a-domain-controller).
+Se você quiser configurar rapidamente um novo controlador de domínio, confira o apêndice [Criar um Controlador de Domínio](.\creating-a-domain-controller.md).
 
 ## Etapas para criar uma nova Capacidade de Função e Configuração de Sessão
 
@@ -70,7 +71,7 @@ Tenha em mente que este é apenas um exemplo, os requisitos das suas organizaç�
 Agora que você tem sua lista de ações, precisará considerar os recursos de cada comando.
 Há dois motivos importantes para fazer isso:
 
-1.  É fácil expor para os usuários mais recursos do que você pretendia.
+1.  É fácil dar aos usuários mais recursos do que você pretendia.
 Por exemplo, `Set-ADUser` é um comando incrivelmente poderoso e flexível.
 É recomendável não expor tudo o que ele pode fazer para ajudar os usuários do suporte técnico.  
 
@@ -88,19 +89,19 @@ Depois de revisar cada comando, você decide restringir o seguinte:
 
 ### Etapa 3: Confirmar o trabalho de tarefas com JEA
 De fato suar esses cmdlets pode não ser simples no ambiente JEA restrito.
-O JEA é executado em modo *Sem Linguagem*, entre outras coisas, que impede que os usuários possam usar variáveis.
+O JEA é executado no modo *NoLanguage* que, entre outras coisas, impede os usuários de usar variáveis.
 Para garantir que os usuários finais tenham uma experiência positiva, é importante verificar algumas coisas.
 
 Por exemplo, considere `Set-ADAccountPassword`.
-O parâmetro "-NewPassword" requer uma cadeia de caracteres segura.
+O parâmetro -NewPassword requer uma cadeia de caracteres segura.
 Muitas vezes, os usuários criam uma cadeia de caracteres e passam-na como uma variável (como abaixo):
 
 ```PowerShell
-$newPassword = (Read-Host -Prompt "Specify a new password" -AsSecureString)
+$newPassword = Read-Host -Prompt "Specify a new password" -AsSecureString
 Set-ADAccountPassword -Identity mollyd -NewPassword $newPassword -Reset
 ```
 
-No entanto, o modo de linguagem não impede o uso de variáveis.
+No entanto, o modo *NoLanguage* impede o uso de variáveis.
 Você pode contornar essa restrição de duas maneiras:
 
 1.  Você pode exigir que os usuários executem o comando sem atribuir variáveis.
@@ -124,7 +125,7 @@ Nós o colocaremos no módulo Contoso_AD_Module criado na última seção.
 
 1. No ISE do PowerShell, abra "Contoso_AD_Module.psm1"
 ```PowerShell
-ISE 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1'
+ise 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1'
 ```
 
 2. Pressione CTRL + J para abrir o menu de trechos de código.
@@ -162,10 +163,10 @@ Set-ADUser -Identity $Identity -ChangePasswordAtLogon
 Agora, os usuários podem simplesmente chamar `Reset-ContosoUserPassword` e não precisam se lembrar a sintaxe para criar um cadeia de caracteres segura embutida.
 
 ## Etapa 4: Editar o arquivo de Capacidade de Função
-Na seção [Criação de Capacidade de Função](#role-capability-creation), você criou um arquivo de Capacidade de Função em branco.
+Na seção [Criação de Capacidade de Função](./role-capabilities.md#role-capability-creation), você criou um arquivo de Capacidade de Função em branco.
 Nesta seção, você preencherá os valores nesse arquivo.
 
-Comece abrindo o arquivo de capacidade de função no ISE.
+Comece abrindo o arquivo de capacidade de função no ISE do PowerShell.
 ```PowerShell
 ise 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities\ADHelpDesk.psrc'
 ```
@@ -193,7 +194,7 @@ Há algumas coisas a observar sobre o que foi indicado acima:
 1.  O PowerShell tentará carregar automaticamente os módulos necessários para a sua Capacidade de Função.
 Você precisará listar explicitamente nomes de módulo no campo "ModulesToImport" se você encontrar problemas com um módulo que não está sendo carregado automaticamente.
 
-2.  Se você não tiver certeza se um comando é uma função ou um cmdlet, execute `Get-Command` e examine o "CommandType"
+2.  Se você não tiver certeza se um comando é uma função ou um cmdlet, execute `Get-Command` e examine a propriedade "CommandType"
 
 3.  O ValidatePattern permite que você use uma expressão regular para restringir os argumentos do parâmetro se não for fácil de definir um conjunto de valores permitidos.
 Você não pode definir um ValidatePattern e ValidateSet para um único parâmetro.
@@ -210,7 +211,7 @@ Modifique os campos a seguir no arquivo PSSC.
 Se você estiver trabalhando em seu próprio ambiente, substitua "CONTOSO\JEA_NonAdmins_Helpdesk" por seu próprio usuário ou grupo não administrador.
 ```PowerShell
 # OLD: Description = ''
-Description = 'An endpoint for active directory tasks.'
+Description = 'An endpoint for Active Directory tasks.'
 
 # OLD: SessionType = 'Default'
 SessionType = 'RestrictedRemoteServer'
@@ -237,7 +238,7 @@ Se você acompanhou a seção [Configurar usuários e grupos](creating-a-domain-
 -   Nome de usuário = "HelpDeskUser"
 -   Senha = "pa$$w0rd"
 
-Conexão remota para o ponto de extremidade do Suporte Técnico de AD usando a credencial de não administrador:
+Conexão remota para o ponto de extremidade do Suporte Técnico de AD usando a credencial não administrativa:
 ```PowerShell
 Enter-PSSession -ComputerName . -ConfigurationName ADHelpDesk -Credential $HelpDeskCred
 ```
@@ -266,12 +267,12 @@ Para obter mais informações, execute `Get-Help about_Language_Modes`.
 Para obter mais informações, execute `Get-Help about_Functions`.
 
 **ValidateSet/ValidatePattern**: ao expor um comando, você pode restringir os argumentos válidos para os parâmetros específicos.
-Um ValidateSet é uma lista específica de comandos válidos.
+Um ValidateSet é uma lista específica de argumentos válidos.
 Um ValidatePattern é uma expressão regular à qual os argumentos para esse parâmetro devem corresponder.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
