@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: d367048eab0ba3fd67baed2ee27332ce0827d5ac
-ms.openlocfilehash: a09f228cf232ff9d7cf2ba20c73808fd92c9d560
+ms.sourcegitcommit: 7fb70aba7d4c3c44cc89b5f8c4f6ff5aeb3b14c9
+ms.openlocfilehash: 4830be14b105485c50446f06e9d36491b4c4fe44
 
 ---
 
@@ -296,8 +296,7 @@ SRV1   5          6/23/2016 4:36:51 PM  Success                                 
 
 ### Obtendo detalhes de eventos de DSC
 
-Com `Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure 
-in any of the operations using `Get-xDscOperation, você poderia rastrear essa operação para descobrir quais dos eventos causaram uma falha.
+Com `Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure in any of the operations using `Get-xDscOperation, você poderia rastrear essa operação para descobrir quais dos eventos causaram uma falha.
 
 Use o parâmetro `SequenceID` para obter os eventos de uma operação específica referente a um computador específico. Por exemplo, se você especificar um `SequenceID` de 9, `Trace-xDscOperaion` obterá o rastreamento para a operação de DSC que foi a 9ª da última operação:
 
@@ -446,18 +445,17 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Consistency engine was run successfull
 SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Job runs under the following LCM setting. ...
 SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull completed successfully.
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
+```
 
+## Meus recursos não são atualizados: como redefinir o cache
 
+O mecanismo de DSC armazena em cache os recursos implementados como um módulo do PowerShell para fins de eficiência. No entanto, isso pode causar problemas quando você está criando um recurso e testando-o simultaneamente, porque DSC carregará a versão armazenada em cache até o processo ser reiniciado. A única maneira de fazer a DSC carregar a versão mais recente é eliminar explicitamente o processo que hospeda o mecanismo de DSC.
 
-## My resources won’t update: How to reset the cache
+Da mesma forma, quando você executa `Start-DscConfiguration`, depois de adicionar e modificar um recurso personalizado, a modificação pode não ser executada a menos que, ou até que, o computador seja reinicializado. Isso ocorre porque a DSC é executada no Processo de Host do provedor WMI (WmiPrvSE) e, geralmente, há muitas instâncias do WmiPrvSE em execução ao mesmo tempo. Quando você reinicializa, o processo de host é reiniciado e o cache é limpo.
 
-The DSC engine caches resources implemented as a PowerShell module for efficiency purposes. However, this can cause problems when you are authoring a resource and testing it simultaneously because DSC will load the cached version until the process is restarted. The only way to make DSC load the newer version is to explicitly kill the process hosting the DSC engine.
+Para conseguir reciclar a configuração e limpar o cache sem reinicialização, você deve parar e reiniciar o processo de host. Isso pode ser feito por instância, ou seja, você identifica o processo, interrompe-o e reinicia-o. Ou pode usar `DebugMode`, conforme demonstrado abaixo, para recarregar o recurso de DSC do PowerShell.
 
-Similarly, when you run `Start-DscConfiguration`, after adding and modifying a custom resource, the modification may not execute unless, or until, the computer is rebooted. This is because DSC runs in the WMI Provider Host Process (WmiPrvSE), and usually, there are many instances of WmiPrvSE running at once. When you reboot, the host process is restarted and the cache is cleared.
-
-To successfully recycle the configuration and clear the cache without rebooting, you must stop and then restart the host process. This can be done on a per instance basis, whereby you identify the process, stop it, and restart it. Or, you can use `DebugMode`, as demonstrated below, to reload the PowerShell DSC resource.
-
-To identify which process is hosting the DSC engine and stop it on a per instance basis, you can list the process ID of the WmiPrvSE which is hosting the DSC engine. Then, to update the provider, stop the WmiPrvSE process using the commands below, and then run **Start-DscConfiguration** again.
+Para identificar o processo que está hospedando o mecanismo de DSC e interrompê-lo por instância, é possível listar a ID do processo do WmiPrvSE que está hospedando o mecanismo de DSC. Em seguida, para atualizar o provedor, interrompa o processo WmiPrvSE usando os comandos abaixo; depois, execute **Start-DscConfiguration** novamente.
 
 ```powershell
 ###
@@ -628,6 +626,6 @@ onlyProperty                            PSComputerName
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
