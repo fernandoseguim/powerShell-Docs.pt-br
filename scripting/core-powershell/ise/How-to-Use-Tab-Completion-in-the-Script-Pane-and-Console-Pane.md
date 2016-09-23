@@ -1,7 +1,7 @@
 ---
 title: Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 07f7fb6b4e5d94de31551566ca8faff263817383
+ms.sourcegitcommit: b14aaee5a66a80295420fe9b517ba1fc652c86bf
+ms.openlocfilehash: 290d9237e20b35ec603f0967854b1e0d193e6cbb
 
 ---
 
 # Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
-O preenchimento com Tab fornece Ajuda automática quando você estiver digitando no Painel de Script ou no Painel de Comando. Use as seguintes etapas para aproveitar esse recurso:
+O preenchimento com Tab fornece ajuda automática quando você está digitando no Painel de Script ou no Painel de Comando. Use as seguintes etapas para aproveitar esse recurso:
 
 ## Para preencher automaticamente uma entrada de comando
 No Painel de Comando ou Painel de Script, digite alguns caracteres de um comando e, em seguida, pressione TAB para selecionar o texto de preenchimento desejado. Se vários itens começam com o texto que você digitou inicialmente, continue a pressionar Tab até que o item desejado seja exibido. O preenchimento com Tab pode ajudar na digitação do nome de um cmdlet, nome de parâmetro, nome de variável, nome de propriedade do objeto ou um caminho de arquivo.
@@ -26,15 +26,15 @@ No Painel de Comando ou Painel de Script, digite alguns caracteres de um comando
 ## Para preencher automaticamente uma entrada de parâmetro de cmdlet
 No Painel de Comando ou Painel de Script, digite um cmdlet seguido por um traço e pressione TAB.
 
-Por exemplo, digite `get-process -` e pressione TAB várias vezes para exibir cada um dos parâmetros do cmdlet sucessivamente.
+Por exemplo, digite `Get-Process -` e pressione TAB várias vezes para exibir cada um dos parâmetros do cmdlet sucessivamente.
 
 ## Consulte Também
-[Usando o ISE do Windows PowerShell](using-the-windows-powershell-ise.md)
-[Como criar uma guia do PowerShell](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
+- [Usando o ISE do Windows PowerShell](using-the-windows-powershell-ise.md)
+- [Como criar uma guia do PowerShell](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

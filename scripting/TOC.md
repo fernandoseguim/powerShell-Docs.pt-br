@@ -74,8 +74,8 @@
 
 ### [Onde posso ir para saber mais?](getting-started/more-powershell-learning.md)
 
-## [PowerShell principal](core-powershell/core-powershell.md)
-### [Módulos principais](core-powershell/core-modules.md)
+## [PowerShell comum](core-powershell/core-powershell.md)
+### [Módulos comuns](core-powershell/core-modules.md)
 ####  [Módulo de arquivo](core-powershell/core-modules/Microsoft.PowerShell.Archive-Module.md)
 ####  [Módulo principal](core-powershell/core-modules/Microsoft.PowerShell.Core-Module.md)
 ####  [Lista de referência de módulos principais](core-powershell/core-modules/Windows-PowerShell-5.0.md)
@@ -106,6 +106,7 @@
 ####  [Como scripts de depuração no ISE do PowerShell](core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
 ####  [Como usar perfis no ISE do PowerShell](core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
 ####  [Como usar o painel de Console no ISE do PowerShell](core-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+####  [Como usar o preenchimento com Tab no Painel de Script e no Painel de Console](core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 ####  [Como gravar e executar scripts no ISE do Windows PowerShell](core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
 ####  [Apresentando o ISE do PowerShell](core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
 ####  [Módulo ISE](core-powershell/ise/ISE-Module.md)
@@ -123,7 +124,6 @@
 
 ### [Console](core-powershell/console-guide.md)
 ####  [Referência da linha de comando no console](core-powershell/console/PowerShell.exe-Command-Line-Help.md)
-####  [Como usar o preenchimento com Tab no Painel de Script e no Painel de Console](core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 ####  [Usando a expansão com Tab](core-powershell/console/Using-Tab-Expansion.md)
 
 ### [Executando comandos remotos](core-powershell/Running-Remote-Commands.md)
@@ -142,6 +142,6 @@
 ## [Glossário do PowerShell](Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

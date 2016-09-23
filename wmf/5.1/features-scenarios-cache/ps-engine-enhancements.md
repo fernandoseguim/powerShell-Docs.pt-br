@@ -2,8 +2,8 @@
 title: Aprimoramentos do mecanismo do PowerShell
 author: jasonsh
 translationtype: Human Translation
-ms.sourcegitcommit: 6813902aec214aee9ede27ff79dd291364e9f443
-ms.openlocfilehash: f864850128f118704d7545b09110835ab1d51b8e
+ms.sourcegitcommit: 47c963343c541d0f2ace194f365de5fcd809ccc5
+ms.openlocfilehash: 1b35a25312b44d14ec8771be9e17aaa43e270b61
 
 ---
 
@@ -19,7 +19,7 @@ O desempenho melhorou em algumas áreas importantes:
 1. Inicialização
 2. O pipelining para cmdlets como ForEach-Object e Where-Object é aproximadamente 50% mais rápido 
 
-Alguns exemplos de melhorias (os resultados podem variar dependendo de seu hardware): 
+Alguns exemplos de melhorias (os resultados podem variar dependendo do hardware): 
 
 | Cenário | Tempo de 5,0 (ms) | Tempo de 5,1 (ms) |
 | -------- | :---------------: | :---------------: |
@@ -28,7 +28,7 @@ Alguns exemplos de melhorias (os resultados podem variar dependendo de seu hardw
 | Built do cache de análise de comando: `powershell -command "Unknown-Command"` | 7000 | 520 |
 | <code>1..1000000 &#124; % { }</code> | 1400 | 750 |
   
-Uma alteração relacionada à inicialização pode afetar alguns cenários (sem suporte). O PowerShell não lê mais os arquivos `$pshome\*.ps1xml` – esses arquivos foram convertidos para C# para evitar alguma sobrecarga de arquivo e CPU do processamento dos arquivos xml. Os arquivos ainda existem para dar suporte à V2 lado a lado; portanto, se você alterar o conteúdo do arquivo, ele não terá qualquer efeito na V5, apenas na V2. Observe que alterar os conteúdos desses arquivos nunca foi um cenário com suporte.
+Uma alteração relacionada à inicialização pode afetar alguns cenários (sem suporte). O PowerShell não lê mais os arquivos `$pshome\*.ps1xml` – esses arquivos foram convertidos para C# para evitar alguma sobrecarga de arquivo e CPU do processamento dos arquivos XML. Os arquivos ainda existem para dar suporte à V2 lado a lado; portanto, se você alterar o conteúdo do arquivo, ele não terá qualquer efeito na V5, apenas na V2. Observe que alterar os conteúdos desses arquivos nunca foi um cenário com suporte.
 
 Outra alteração visível é como o PowerShell armazena em cache os comandos exportados e outras informações para módulos instalados em um sistema. Antes, esse cache era armazenado no diretório `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\CommandAnalysis`. No WMF 5.1, o cache é um único arquivo `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 Veja mais detalhes em [analysis_cache.md]().
@@ -49,7 +49,7 @@ O WMF 5.1 altera esse comportamento para honrar `$env:PSModulePath` completament
 
 ### Redirecionamento de arquivos não embute mais `-Encoding Unicode` ###
 
-Em versões anteriores do PowerShell, era impossível controlar a codificação do arquivo usada pelo operador de redirecionamento de arquivo, por exemplo, `get-childitem > out.txt`, porque o PowerShell adicionava `-Encoding Unicode`.
+Em versões anteriores do PowerShell, era impossível controlar a codificação do arquivo usada pelo operador de redirecionamento de arquivo, por exemplo, `Get-ChildItem > out.txt`, porque o PowerShell adicionava `-Encoding Unicode`.
 
 Do WMF 5.1 em diante, agora você pode alterar a codificação do arquivo de redirecionamento configurando `$PSDefaultParameterValues`, por exemplo,
 
@@ -66,14 +66,14 @@ Esse bug foi corrigido no WMF 5.1.
 ### Corrigidos alguns problemas com objetos COM ###
 
 O WMF5 introduziu um novo associador de COM para chamar métodos em objetos COM e o acesso às propriedades de objetos COM.
-Esse novo associador melhorou significativamente o desempenho, mas também introduziu alguns bugs que foram corrigidos no WMF 5.1.
+Esse novo associador melhorou consideravelmente o desempenho, mas também introduziu alguns bugs que foram corrigidos no WMF 5.1.
 
 #### Conversões de argumento não eram sempre executadas corretamente ####
 
 No exemplo a seguir:
 
 ```
-$obj = new-object -com wscript.shell
+$obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
@@ -100,7 +100,7 @@ No exemplo acima, o WMF5 gravou incorretamente Scripting.Dictionary no pipeline,
 
 ### `[ordered]` não era permitido dentro de classes ###
 
-O WMF5 introduziu classes com validação de literais de tipo usados em classes.  `[ordered]` parece um literal de tipo, mas não é um tipo .Net verdadeiro.  WMF5 relatou incorretamente um erro no `[ordered]` dentro de uma classe:
+O WMF5 introduziu classes com validação de literais de tipo usados em classes.  `[ordered]` parece um literal de tipo, mas não é um tipo .NET verdadeiro.  WMF5 relatou incorretamente um erro no `[ordered]` dentro de uma classe:
 
 ```
 class CThing
@@ -123,6 +123,6 @@ Get-Help não oferece uma maneira de especificar para qual versão você deseja 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

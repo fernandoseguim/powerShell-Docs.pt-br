@@ -1,19 +1,26 @@
 ---
 title: Como criar uma guia do PowerShell no ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
+translationtype: Human Translation
+ms.sourcegitcommit: d015dfae1990c66ea75aa45004b366d1609fb36f
+ms.openlocfilehash: 460ab6d82b694266d31b09779866f746b56c9f51
+
 ---
+
 # Como criar uma guia do PowerShell no ISE do Windows PowerShell
 As guias no ISE (Ambiente de Script Integrado) do Windows PowerShell® permitem criar e usar simultaneamente vários ambientes de execução dentro do mesmo aplicativo. Cada guia do PowerShell corresponde a uma sessão ou ambiente de execução separado.
 
 > [!NOTE]
 > Variáveis, funções e aliases que você criar em uma guia não serão transferidos para outra. Eles são sessões diferentes do Windows PowerShell.
 
-Use as etapas a seguir para abrir ou fechar uma guia no Windows PowerShell. Para renomear uma guia, defina a propriedade [DisplayName](https://technet.microsoft.com/en-us/library/a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) no objeto de script de guia do Windows PowerShell.
+Use as etapas a seguir para abrir ou fechar uma guia no Windows PowerShell. Para renomear uma guia, defina a propriedade [DisplayName](The-PowerShellTab-Object.md#Displayname) no objeto de script de guia do Windows PowerShell.
 
 ## Para criar e usar uma nova guia do PowerShell
 No menu **Arquivo**, clique em **Nova Guia do PowerShell**. A nova guia do PowerShell sempre é aberta como a janela ativa. Guias do PowerShell são numeradas incrementalmente na ordem em que são abertas. Cada guia é associada à sua própria janela de console do Windows PowerShell. Você pode ter até 32 guias do PowerShell com sua própria sessão aberta de cada vez (isso é limitado a 8 no ISE do Windows PowerShell 2.0.)
@@ -32,14 +39,15 @@ Para fechar uma guia, você pode usar qualquer uma das seguintes técnicas:
 
 -   No menu **Arquivo**, clique em **Fechar Guia do PowerShell** ou no botão Fechar (**X**) em uma guia para fechar a guia ativa.
 
-Se tiver arquivos não salvos abertos na guia do PowerShell que você está fechando, será solicitado salvá-los ou descartá-los. Para obter mais informações sobre como salvar um script, consulte [How to Save a Script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8) (Como salvar um script).
+Se tiver arquivos não salvos abertos na guia do PowerShell que você está fechando, será solicitado salvá-los ou descartá-los. Para obter mais informações sobre como salvar um script, consulte [Como salvar um script](https://technet.microsoft.com/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## Consulte Também
-[Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
-[Como usar o Painel de Console com o ISE do Windows PowerShell](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+- [Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
+- [Como usar o Painel de Console com o ISE do Windows PowerShell](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Sep16_HO3-->
 
 

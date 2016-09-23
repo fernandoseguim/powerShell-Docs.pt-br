@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 596bbd2a5c272918171833310fc8c8aa5353adb1
+ms.sourcegitcommit: 466b7169b81d773cc226adbf853b46fdb956c2f1
+ms.openlocfilehash: 852b927ba0f5edffa5c7943b45e0e7b1bdd273f5
 
 ---
 
 # Atalhos do teclado para o ISE do Windows PowerShell
-Use os seguintes atalhos de teclado para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell®. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
+Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell®. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## Atalhos de teclado para edição de texto
 Você pode usar os seguintes atalhos de teclado ao editar texto.
@@ -121,6 +121,6 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
