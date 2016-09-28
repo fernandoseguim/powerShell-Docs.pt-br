@@ -9,14 +9,18 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: f413ba6470985622e55bb4bd175d7c5d4b94c7d9
-ms.openlocfilehash: e545d49381a92ef3f7cc6a27316cbfc3a036a8c9
+ms.sourcegitcommit: 3dde62efa7ba595ed5160cc81b4e2b17a54e52a2
+ms.openlocfilehash: d4c9e88ddd6cfaec611527d19d00cbd4db9f5d1d
 
 ---
 
 #Problemas conhecidos no WMF 5.1 (Preview) #
 
 > Observação: essas informações são preliminares e estão sujeitas a alteração.
+
+##Iniciando o atalho do PowerShell como administrador
+Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".
+Abra novamente o atalho como não administrador. Em seguida, ele funcionará também como administrador.
 
 ##Pester
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
@@ -30,6 +34,6 @@ Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pe
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
