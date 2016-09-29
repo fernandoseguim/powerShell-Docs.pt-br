@@ -280,7 +280,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 -   Os seguintes cmdlets novos foram adicionados ao módulo PSDesiredStateConfiguration.
 
-    -   Um novo cmdlet Get-DscConfigurationStatus obtém informações de nível alto sobre status de configuração de um nó de destino. Você pode obter o status do última ou de todas as configurações.
+    -   Um novo cmdlet Get-DscConfigurationStatus obtém informações gerais sobre o status de configuração de um nó de destino. Você pode obter o status do última ou de todas as configurações.
 
     -   Um novo cmdlet Compare-DscConfiguration compara uma configuração especificada com o estado real de um ou mais nós de destino.
 
@@ -292,7 +292,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ### <a name="BKMK_newISE"></a>Novos recursos no ISE do Windows PowerShell
 
--   Agora você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que quer editar e executando **PSEdit <path and file name on the remote computer>**. Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
+-   Agora você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e executando **PSEdit <path and file name on the remote computer>**. Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
 
 -   Agora há suporte para o cmdlet Start-Transcript no ISE do Windows PowerShell.
 
@@ -341,13 +341,13 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 -   **Invoke-RestMethod** e **Invoke-WebRequest** agora permitem definir todos os cabeçalhos usando o parâmetro Headers. Embora esse parâmetro sempre tenha existido, ele era um dos diversos parâmetros dos cmdlets Web que resultavam em erros ou exceções.
 
--   **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName**, do tipo **ModuleSpecification\[]**. O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo usando o nome, versão e, opcionalmente, o GUID do módulo.
+-   **Get-Module** agora tem um novo parâmetro, o **FullyQualifiedName**, do tipo **ModuleSpecification\[]**. O parâmetro **FullyQualifiedName** do Get-Module agora permite especificar um módulo, usando o nome, a versão e, opcionalmente, o GUID do módulo.
 
 -   A configuração de política de execução padrão no Windows Server 2012 R2 é **RemoteSigned**. No Windows 8.1, não há nenhuma alteração da configuração padrão.
 
 -   No Windows PowerShell 4.0 há suporte para a invocação de método usando nomes de método dinâmico. Você pode usar uma variável para armazenar um nome de método e, em seguida, chamar o método dinamicamente ao chamar a variável.
 
--   Trabalhos de fluxo de trabalho assíncrono não são mais excluídos quando o período de tempo limite especificado pelo parâmetro **PSElapsedTimeoutSec** comum de fluxo de trabalho tiver sido atingido.
+-   Trabalhos de fluxo de trabalho assíncrono não são mais excluídos quando o período de tempo limite especificado pelo parâmetro **PSElapsedTimeoutSec** comum de fluxo de trabalho é atingido.
 
 -   Um novo parâmetro, **RepeatIndefinitely**, foi adicionado aos cmdlets **New-JobTrigger** e **Set-JobTrigger**. Esse parâmetro elimina a necessidade de especificar um valor **TimeSpan.MaxValue** para o parâmetro **RepetitionDuration** para executar um trabalho agendado repetidamente por um período indefinido.
 
@@ -377,7 +377,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 ### <a name="BKMK_workflow"></a>Novos recursos no Fluxo de Trabalho do Windows PowerShell
 
--   Foi adicionado suporte para um novo parâmetro comum **PipelineVariable** no contexto de pipelines iterativos, como os usados pelo System Center Orchestrator, ou seja, pipelines que executam comandos simplesmente da esquerda para a direita, em vez de intercalados em execução usando streaming.
+-   Foi adicionado suporte a um novo parâmetro comum **PipelineVariable** no contexto de pipelines iterativos, como os usados pelo System Center Orchestrator, ou seja, pipelines que executam comandos simplesmente da esquerda para a direita, em vez de intercalados em execução usando streaming.
 
 -   A associação de parâmetros foi aprimorada significativamente para trabalhar fora de cenários de preenchimento de guias, como com os comandos que não existem no runspace atual.
 
@@ -431,7 +431,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 -   Foi corrigido um problema no qual o ISE do Windows PowerShell usava muita memória ao executar um comando **Invoke-WebRequest**.
 
--   **Get-Module** agora exibe versões de módulo em um coluna **Version**.
+-   **Get-Module** agora exibe versões de módulo em uma coluna **Version**.
 
 -   Remove-Item –Recurse agora remove itens de subpastas conforme o esperado.
 
@@ -540,7 +540,7 @@ A seguir estão os benefícios do fluxo de trabalho do Windows PowerShell
 -   **Fluxo de trabalho e aceleração de conexão.** Execução de fluxo de trabalho e conexões para nós podem ser aceleradas, permitindo cenários de escalabilidade e alta disponibilidade.
 
 ### <a name="BKMK_WebAccess"></a>Windows PowerShell Web Access
-O Windows PowerShell® Web Access é um recurso do Windows Server 2012 que permite aos usuários executar comandos e scripts do Windows PowerShell em um console baseado na Web. Dispositivos que usam o console baseado na Web não requerem o Windows PowerShell, software de gerenciamento remoto ou instalações de plug-in de navegador. Basta um gateway do Windows PowerShell Web Access devidamente configurado e um navegador de dispositivo cliente que dê suporte a JavaScript® e aceite cookies.
+O Windows PowerShell® Web Access é um recurso do Windows Server 2012 que permite aos usuários executar comandos e scripts do Windows PowerShell em um console baseado na Web. Dispositivos que usam o console baseado na Web não exigem o Windows PowerShell, o software de gerenciamento remoto nem as instalações de plug-in de navegador. Basta um gateway do Windows PowerShell Web Access devidamente configurado e um navegador de dispositivo cliente que dê suporte a JavaScript® e aceite cookies.
 
 Para obter mais informações, consulte [Implantar o Windows PowerShell Web Access](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
