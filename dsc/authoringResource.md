@@ -32,6 +32,6 @@ Um recurso de DSC é um módulo do Windows PowerShell. O módulo contém o esque
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

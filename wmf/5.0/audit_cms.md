@@ -83,6 +83,6 @@ Para exibir certificados de criptografia de documento no provedor de certificado
 dir -DocumentEncryptionCert
 ```
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

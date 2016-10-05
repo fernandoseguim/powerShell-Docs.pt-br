@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 57049ff138604b0e13c8fd949ae14da05cb03a4b
-ms.openlocfilehash: 90d57af0c8b90e709769525455ae39557b9c7176
+ms.sourcegitcommit: be3659b02cb1bc58cc13aa9d8f92946b2afa37b1
+ms.openlocfilehash: 8a7774b36f15ff790c31d4c1a8bc69be257b8508
 
 ---
 
@@ -28,9 +28,9 @@ O WMF 5.1 altera esse comportamento para honrar `$env:PSModulePath` completament
 
 ### Redirecionamento de arquivos não embute mais `-Encoding Unicode` ###
 
-Em versões anteriores do PowerShell, era impossível controlar a codificação do arquivo usada pelo operador de redirecionamento de arquivo, por exemplo, `get-childitem > out.txt`, porque o PowerShell adicionava `-Encoding Unicode`.
+Em versões anteriores do PowerShell, era impossível controlar a codificação do arquivo usada pelo operador de redirecionamento de arquivo, por exemplo, `Get-ChildItem > out.txt`, porque o PowerShell adicionava `-Encoding Unicode`.
 
-Do WMF 5.1 em diante, agora você pode alterar a codificação do arquivo de redirecionamento configurando `$PSDefaultParameterValues`, por exemplo,
+Do WMF 5.1 em diante, agora é possível alterar a codificação do arquivo de redirecionamento configurando `$PSDefaultParameterValues`:
 
 ```
 $PSDefaultParameterValues["Out-File:Encoding"] = "Ascii"
@@ -44,15 +44,14 @@ Esse bug foi corrigido no WMF 5.1.
 
 ### Corrigidos alguns problemas com objetos COM ###
 
-O WMF 5.0 introduziu um novo associador de COM para chamar métodos em objetos COM e o acesso às propriedades de objetos COM.
-Esse novo associador melhorou significativamente o desempenho, mas também introduziu alguns bugs que foram corrigidos no WMF 5.1.
+O WMF 5.0 introduziu um novo associador de COM para chamar métodos em objetos COM e o acesso às propriedades de objetos COM. Esse novo associador melhorou consideravelmente o desempenho, mas também introduziu alguns bugs que foram corrigidos no WMF 5.1.
 
 #### Conversões de argumento não eram sempre executadas corretamente ####
 
 No exemplo a seguir:
 
 ```
-$obj = new-object -com wscript.shell
+$obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
@@ -74,13 +73,14 @@ function Get-COMDictionary
 $x = Get-COMDictionary
 ```
 
-No exemplo acima, o WMF 5.0 gravou incorretamente Scripting.Dictionary no pipeline, em vez de enumerar os pares de chave-valor.
+No exemplo acima, o WMF 5.0 gravou incorretamente Scripting.Dictionary no pipeline, em vez de enumerar os pares chave-valor.
 
-Esta alteração também trata os [problemas 1752224 no Connect](https://connect.microsoft.com/PowerShell/feedback/details/1752224)
+Esta alteração também aborda o [problema 1752224 no Connect](https://connect.microsoft.com/PowerShell/feedback/details/1752224)
 
 ### `[ordered]` não era permitido dentro de classes ###
 
-O WMF5 introduziu classes com validação de literais de tipo usados em classes.  `[ordered]` parece um literal de tipo, mas não é um tipo .Net verdadeiro.  WMF5 relatou incorretamente um erro no `[ordered]` dentro de uma classe:
+O WMF 5.0 introduziu classes com validação de literais de tipo usados em classes.  
+`[ordered]` parece um literal de tipo, mas não é um tipo .NET verdadeiro. O WMF 5.0 relatou incorretamente um erro no `[ordered]` dentro de uma classe:
 
 ```
 class CThing
@@ -99,10 +99,10 @@ Antes do WMF 5.1, se houvesse várias versões de um módulo instaladas e elas c
 
 O WMF 5.1 corrige isso retornando a ajuda para a versão mais recente do tópico.
 
-Get-Help não oferece uma maneira de especificar para qual versão você deseja obter ajuda. Para solucionar esse problema, navegue até o diretório de módulos e exibir a ajuda diretamente com uma ferramenta como seu editor favorito. 
+`Get-Help` não oferece uma maneira de especificar para qual versão você quer obter ajuda. Para solucionar esse problema, navegue até o diretório de módulos e exibir a ajuda diretamente com uma ferramenta como seu editor favorito. 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

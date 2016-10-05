@@ -1,3 +1,18 @@
+---
+title: guia de fluxos de trabalho
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 4f760ef9a62d16ec709f8d25e62c2a03b8d841a5
+ms.openlocfilehash: 4cdd2c913eb33d29e9734c3845994d7e776db2b1
+
+---
+
 # Módulo PSWorkflow
 Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui cmdlets que dão suporte ao recurso de fluxo de trabalho do Windows PowerShell. O módulo **PSWorkflow** é instalado com o Windows PowerShell.
 
@@ -18,8 +33,6 @@ Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui
 
 [about_Parallel](https://technet.microsoft.com/en-us/library/104559a8-e89a-49f5-8c08-e5bf72768cbf)
 
-[about_Foreach-Parallel](https://technet.microsoft.com/en-us/library/35704780-dde8-4f5f-9319-5b982148bba7)
-
 [about_Sequence](https://technet.microsoft.com/en-us/library/bda3f81a-be8a-43be-b0df-12bb7e193b9b)
 
 [about_Suspend-Workflow](https://technet.microsoft.com/en-us/library/be2ded75-1eca-493e-96c1-758f92b5f199)
@@ -27,6 +40,8 @@ Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui
 [Cmdlets do utilitário do fluxo de trabalho do PowerShell](https://technet.microsoft.com/en-us/library/a5a32019-0d68-4041-935f-1b1cacaf6d3d)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -153,7 +153,7 @@ Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão
 ### Formato MOF de configuração 
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e seus arquivos de soma de verificação associados na pasta **ConfigurationPath**.
 
->**Observação**: se você alterar o arquivo MOF de configuração de qualquer forma, também deverá recriar o arquivo de soma de verificação.
+>**Observação**: se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
 
 ## Ferramentas
 Para facilitar a configuração, validação e gerenciamento do servidor de pull, as ferramentas a seguir são incluídas como exemplos na versão mais recente do módulo xPSDesiredStateConfiguration:
@@ -187,6 +187,6 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

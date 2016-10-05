@@ -5,7 +5,7 @@
 ### [Melhorias no DSC (Configuração de Estado Desejado)](5.1/DSC-improvements.md)
 ### [Melhorias no Console do PowerShell](5.1/console-improvements.md)
 ### [Melhorias no Mecanismo do PowerShell](5.1/engine-improvements.md)
-### [Aprimoramentos ao Gerenciamento de Pacotes](5/1/package-management-improvements.md)
+### [Aprimoramentos ao Gerenciamento de Pacotes](5.1/package-management-improvements.md)
 ### [Bugs corrigidos no WMF 5.1](5.1/bugfixes.md)
 ## [Instalação e configuração](5.1/install-configure.md)
 ## [Problemas conhecidos](5.1/known-issues.md)
@@ -34,12 +34,12 @@
 ##### [Ajuda e suporte para configuração DSC](5.0/dsc_confighelp.md)
 ##### [Criando melhorias usando o ISE do PowerShell](5.0/dsc_authoring.md)
 ##### [Recursos duplicados idênticos permitidos em uma configuração](5.0/dsc_identicalduplicate.md)
-##### [Palavra-chave de Import-DscResource dá suporte ao parâmetro -moduleversion](5.0/dsc_importdscresource.md)
-##### [Suporte ao WOW64 para palavra-chave Configuration](5.0/dsc_wow64.md)
+##### [A palavra-chave Import-DscResource dá suporte ao parâmetro -ModuleVersion](5.0/dsc_importdscresource.md)
+##### [Suporte ao WOW64 para a palavra-chave Configuration](5.0/dsc_wow64.md)
 #### [Recursos]()
 ##### [Recursos DSC baseados em classe](5.0/dsc_classbasedresource.md)
 ##### [Depuração de script do recurso DSC](5.0/dsc_resourcedebugging.md)
-##### [Suporte automático de RunAs para recursos DSC](5.0/dsc_runas.md)
+##### [Suporte automático para RunAs em recursos DSC](5.0/dsc_runas.md)
 ##### [Suporte ao controle de versão lado a lado para recursos DSC](5.0/dsc_sxsresource.md)
 ##### [Novos recursos nativos](5.0/dsc_newresources.md)
 #### [Gerenciador de Configurações Local]()
@@ -47,7 +47,7 @@
 ###### [Suporte para RefreshModes misto](5.0/dsc_partialconfig_mixedmode.md)
 ##### [Configurar o mecanismo DSC com o novo atributo](5.0/dsc_metaconfiguration.md)
 ##### [Informações detalhadas sobre o estado do LCM](5.0/dsc_lcmstate.md)
-##### [As frequências de RefreshMode e ConfigurationMode não precisam ser múltiplos um do outro](5.0/dsc_freqnomultiple.md)
+##### [As frequências de RefreshMode e ConfigurationMode não precisam ser múltiplas uma da outra](5.0/dsc_freqnomultiple.md)
 ##### [Valor adicional para a propriedade de RefreshMode](5.0/dsc_refreshmode.md)
 #### [Cmdlets]()
 ##### [Detalhes sobre o status de configuração](5.0/dsc_getconfigurationstatus.md)
@@ -56,7 +56,7 @@
 ##### [Entregar o documento de configuração sem aplicação](5.0/dsc_publishconfig.md)
 ##### [Remover documentos DSC](5.0/dsc_removeconfigdoc.md)
 ##### [Representação de estado e status consistente e unificada](5.0/dsc_statestatus.md)
-##### [O cmdlet Set-DscLocalConfigurationManager dá suporte ao parâmetro -force](5.0/dsc_setdsclcm.md)
+##### [O cmdlet Set-DscLocalConfigurationManager dá suporte ao parâmetro -Force](5.0/dsc_setdsclcm.md)
 #### [Modo Pull]()
 ##### [PULL sob demanda de configurações DSC](5.0/dsc_updateconfig.md)
 ##### [Separação de IDs de nó e de configuração](5.0/dsc_nodeid.md)
@@ -65,7 +65,7 @@
 ### [Auditar o uso do PowerShell usando a transcrição e o registro](5.0/audit_overview.md)
 #### [Opções de transcrição avançada](5.0/audit_transcript.md)
 #### [Rastreamento e registro de scripts](5.0/audit_script.md)
-#### [Cmdlets da CMS (Sintaxe de Mensagem Criptografada)](5.0/audit_cms.md)\
+#### [Cmdlets da CMS (Sintaxe de Mensagem Criptografada)](5.0/audit_cms.md)
 ### [Descoberta, instalação e inventário de software com o PackageManagement](5.0/oneget_overview.md)
 #### [Cmdlets do PackageManagement](5.0/oneget_cmdlets.md)
 ### [Descoberta, instalação e inventário do módulo PowerShell com o PowerShellGet](5.0/psget_module_overview.md)
@@ -75,10 +75,10 @@
 #### [Cmdlets do PowerShellGet para Gerenciamento de Módulo](5.0/psget_modulecmdlets.md)
 ### [Descoberta, instalação e gerenciamento de script do PowerShell com o PowerShellGet](5.0/psget_script_overview.md)
 #### [Cmdlets do PowerShellGet para Gerenciamento de Script](5.0/psget_scriptcmdlets.md)
-### [Cmdlets novos e atualizados com base nos comentários da comunidade ](5.0/feedback_cmdlets.md)
-#### [Links simbólicos usando cmdlets Item](5.0/feedback_symbolic.md)
+### [Cmdlets novos e atualizados baseados nos comentários da comunidade](5.0/feedback_cmdlets.md)
+#### [Links simbólicos usando os cmdlets Item](5.0/feedback_symbolic.md)
 #### [Cmdlets Archive](5.0/feedback_archive.md)
-#### [Área de transferência de Cmdlets](5.0/feedback_clipboard.md)
+#### [Cmdlets Clipboard](5.0/feedback_clipboard.md)
 #### [Convert-String](5.0/feedback_convertstring.md)
 #### [Extrair e analisar objetos estruturados fora da cadeia de caracteres](5.0/feedback_convertfromString.md)
 #### [Format-Hex](5.0/feedback_formathex.md)
@@ -94,6 +94,6 @@
 ### [SIL (Log de Inventário de Software)](5.0/sil_overview.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

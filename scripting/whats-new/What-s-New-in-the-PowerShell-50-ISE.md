@@ -1,7 +1,7 @@
 ---
 title: "O que há de novo no ISE do PowerShell 50"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -236,6 +236,6 @@ Para mais informações sobre o ISE do Windows PowerShell no Windows PowerShell,
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: usando jea
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 3bac5932c3ed57713bdb08e3a9ed435b228518bc
+translationtype: Human Translation
+ms.sourcegitcommit: 88ce340c09efdbb3d81a72fe6113c1187a9152f2
+ms.openlocfilehash: 9db7a5a91d25d459313117da34af63016f03c241
 
 ---
 
@@ -49,7 +50,7 @@ Get-Command
 ```
 
 Como você pode ver, este é um subconjunto muito limitado de comandos disponíveis em uma janela normal do PowerShell (que geralmente pode incluir milhares de comandos).
-Especificamente, ela mostra apenas os sete cmdlets JEA padrão (Clear-Host, Exit-PSSession, Get-Command, Get-FormatData, Get-Help, Measure-Object, Out-Default e Select-Object) e os dois comandos explicitamente incluídos no arquivo de Capacidade de Função de manutenção.
+Especificamente, ela mostra os oito comandos JEA padrão (Clear-Host, Exit-PSSession, Get-Command, Get-FormatData, Get-Help, Measure-Object, Out-Default e Select-Object) e os dois comandos explicitamente incluídos no arquivo de Capacidade de Função de manutenção.
 
 Em seguida, abordaremos o contexto do usuário no qual esta sessão está operando invocando a função personalizada incluída no arquivo de Capacidade de Função de manutenção:
 
@@ -96,6 +97,6 @@ Isso se desconecta da sessão de comunicação remota do PowerShell.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

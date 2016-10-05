@@ -1,3 +1,18 @@
+---
+title: Escrevendo um recurso personalizado de DSC com MOF
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4d685e518acd3a18f4872417b645dbe66f758421
+
+---
+
 # Escrevendo um recurso personalizado de DSC com MOF
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -50,7 +65,7 @@ Observe o seguinte sobre o código anterior:
 * O qualificador de tipo, `[Key]`, em uma propriedade indica que essa propriedade identificará exclusivamente a instância do recurso. Pelo menos uma propriedade `[Key]` é necessária.
 * O qualificador `[Required]` indica que a propriedade é necessária (um valor deve ser especificado em qualquer script de configuração que usa esse recurso).
 * O qualificador `[write]` indica que essa propriedade é opcional ao usar o recurso personalizado em um script de configuração. O qualificador `[read]` indica que uma propriedade não pode ser definida por uma configuração e destina-se apenas para fins de relatório.
-* `Values` restringe os valores que podem ser atribuídos à propriedade para a lista de valores definidos em `ValueMap`. Para obter mais informações, consulte [ValueMap and Value Qualifiers](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx) (ValueMap e qualificadores de valor).
+* `Values` restringe os valores que podem ser atribuídos à propriedade para a lista de valores definidos em `ValueMap`. Para obter mais informações, consulte [ValueMap e Qualificadores de Valor](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
 * É recomendável incluir uma propriedade chamada `Ensure` com os valores `Present` e `Absent` em seu recurso como uma maneira de manter um estilo consistente com recursos internos de DSC.
 * Nomeie o arquivo de esquema para o recurso personalizado da seguinte maneira: `classname.schema.mof`, em que `classname` é o identificador que segue a palavra-chave `class` na definição do esquema.
 
@@ -154,7 +169,7 @@ function Set-TargetResource
 }
 ```
 
-Por fim, a função **Test-TargetResource** precisa utilizar o mesmo parâmetro configurado como **Get-TargetResource** e **Set-TargetResource**. Na implementação de **Test-TargetResource**, verifique o status da instância do recurso que está especificada nos parâmetros de chave. Se o estado real da instância do recurso não coincidir com os valores especificados no conjunto de parâmetros, gere **$false**. Caso contrário, retornará **$true**.
+Por fim, a função **Test-TargetResource** precisa utilizar o mesmo parâmetro configurado como **Get-TargetResource** e **Set-TargetResource**. Na implementação de **Test-TargetResource**, verifique o status da instância do recurso que está especificada nos parâmetros de chave. Se o estado real da instância do recurso não coincidir com os valores especificados no conjunto de parâmetros, gere **$false**. Caso contrário, gere **$true**.
 
 O código a seguir implementa a função **Test-TargetResource**.
 
@@ -207,7 +222,7 @@ $result
 
 ### Criando o manifesto de módulo
 
-Por fim, use o cmdlet **New-ModuleManifest** para definir um <ResourceName>arquivo .psd1 para o seu módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
+Por fim, use o cmdlet **New-ModuleManifest** para definir um arquivo <ResourceName>.psd1 para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'
@@ -262,6 +277,8 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 ```
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

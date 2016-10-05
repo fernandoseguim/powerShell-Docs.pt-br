@@ -10,6 +10,6 @@ Melhoramos a linguagem do PowerShell para definir classes e outros tipos definid
 -   Depurar tipos usando a linguagem do PowerShell
 -   Gerar e manipular exceções usando mecanismos formais e no nível certo
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

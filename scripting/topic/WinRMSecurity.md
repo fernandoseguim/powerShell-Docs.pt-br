@@ -1,7 +1,7 @@
 ---
 title: WinRMSecurityRedirect
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: eslesar
@@ -122,6 +122,6 @@ Para obter mais informações sobre ataques de roubo de credenciais, consulte [M
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
