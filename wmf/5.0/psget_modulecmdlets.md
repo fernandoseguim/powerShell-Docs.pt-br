@@ -279,6 +279,6 @@ PrivateData = @{
 ***Observação:*** só há suporte para DscResourcesToExport com a versão 5.0 mais recente do PowerShell. Nós não conseguiremos atualizar o campo se uma versão anterior do PowerShell estiver sendo executada.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

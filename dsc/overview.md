@@ -55,6 +55,6 @@ A DSC também inclui uma série de novas palavras-chave, cmdlets e ferramentas d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

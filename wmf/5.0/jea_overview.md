@@ -9,6 +9,6 @@ O JEA funciona por meio da permissão de criar pontos de extremidade restritos e
 2. O ponto de extremidade é bloqueado.  Isso significa que o PowerShell é executado no modo Sem Linguagem.  Apenas comandos, scripts e executáveis específicos são visíveis para o usuário.
 3. Diferentes usuários que se conectam veem um conjunto diferente de funcionalidades com base na associação a um grupo.  É possível fornecer funcionalidades diferentes a funções diferentes no mesmo ponto de extremidade.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

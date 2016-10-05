@@ -9,19 +9,19 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 0a53817d6af625822d9183d2a0d5bc7bf4d2b264
-ms.openlocfilehash: 058d18deeb3d4926970ea25a157f92ad14836e4b
+ms.sourcegitcommit: c88163b5a7d8805d0dea82d321796d8f41d17bb8
+ms.openlocfilehash: 26a325dc7a18ba167ddc56ca226fce3eded79f52
 
 ---
 
 # Instalar e configurar o WMF 5.1 (Preview) #
 
 ## Instale o .NET 4.6
-Você deve instalar o .NET Framework 4.6 para usar WMF 5.1. Isso é necessário para habilitar os novos recursos de assinatura de catálogo, que afetam várias áreas do carregamento de módulo e script no WMF 5.1. 
+É necessário instalar o .NET Framework 4.6 para usar o WMF 5.1. Isso é necessário para habilitar os novos recursos de assinatura de catálogo, que afetam várias áreas do carregamento de módulo e script no WMF 5.1. 
 
-O [.NET Framework 4.6 está disponível como 3045560 KB](https://support.microsoft.com/en-us/kb/3045560). Instruções de instalação estão disponíveis no local de download.
+O [.NET Framework 4.6 está disponível como a KB 3045560](https://support.microsoft.com/en-us/kb/3045560). Instruções de instalação estão disponíveis no local de download.
 
-> **Observação:** esse é um problema conhecido que o requisito do .NET 4.6 não é detectado pelo instalador da Preview do WMF 5.1, portanto você poderá instalar a Preview do WMF 5.1 antes de instalar o .NET 4.6. Nossos testes mostraram que você pode instalar o .NET 4.6 depois de instalar a Preview do WMF 5.1. A versão final do WMF 5.1 verificará corretamente essa exigência de pré-requisito antes da instalação. 
+> **Observação:** esse é um problema conhecido em que o requisito do .NET 4.6 não é detectado pelo instalador do WMF 5.1 Preview; portanto, você poderá instalar o WMF 5.1 Preview antes de instalar o .NET 4.6. Nossos testes mostraram que é possível instalar o .NET 4.6 após a instalação do WMF 5.1 Preview. A versão final do WMF 5.1 verificará corretamente essa exigência de pré-requisito antes da instalação. 
 
 ## Baixe e instale a Preview do WMF 5.1
 
@@ -42,7 +42,7 @@ Baixe o pacote do WMF 5.1 para o sistema operacional e a arquitetura em que voc�
 
 2. Clique duas vezes no MSU para executá-lo.
 
-## Instalar o WMF 5.1 do prompt de comando##
+## Instalar o WMF 5.1 por meio do Prompt de Comando##
 
 1. Depois de baixar o pacote correto para a arquitetura de seu computador, abra uma janela do Prompt de Comando com direitos de usuário elevados (Executar como Administrador). Nas opções de instalação Server Core do Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2 SP1, por padrão, o Prompt de Comando é aberto com direitos de usuário elevados.
 
@@ -60,13 +60,13 @@ Instalação do WMF 5.1 no Windows Server 2008 SP1 ou no Windows 7 SP1 exige a i
 - Service pack mais recente.
 - [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855)
 - O WMF 5.1 exige o [Microsoft .NET Framework 4.6](https://support.microsoft.com/en-us/kb/3045560). Você pode instalar o Microsoft .NET Framework 4.6, seguindo as instruções no local de download.
-- Atualização de segurança para [assinatura de código do SHA-2](https://technet.microsoft.com/en-us/library/security/3033929). Isso é necessário para usar novos cmdlets do PowerShell para os arquivos de catálogo do windows. 
+- Atualização de segurança para [assinatura de código do SHA-2](https://technet.microsoft.com/en-us/library/security/3033929). Isso é necessário para usar novos cmdlets do PowerShell para os arquivos de catálogo do Windows. 
 
-> **Dependência de WinRM** – a DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 e Windows 7. Para habilitar o WinRM, na sessão elevada do Windows PowerShell, execute `Set-WSManQuickConfig`.
-
-
+> **Dependência de WinRM** – a DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 e Windows 7. Execute `Set-WSManQuickConfig`, em uma sessão de privilégios elevados do Windows PowerShell, para habilitar o WinRM.
 
 
-<!--HONumber=Jul16_HO5-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 
