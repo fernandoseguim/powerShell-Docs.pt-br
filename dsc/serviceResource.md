@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: ce8d6c1c9e8005c5c4792ae0fa4c5030bb9a92ed
+ms.sourcegitcommit: bda348e6597f31b8dfa2014e5c34c5d3bc7bca15
+ms.openlocfilehash: 10123359213df7180388d9251e032c2bbb673143
 
 ---
 
@@ -31,6 +31,10 @@ Service [string] #ResourceName
     [ DependsOn = [string[]] ]
     [ StartupType = [string] { Automatic | Disabled | Manual }  ]
     [ State = [string] { Running | Stopped }  ]
+    [ Description = [string] ]
+    [ DisplayName = [string] ]
+    [ Ensure = [string] { Absent | Present } ]
+    [ Path = [string] ]
 }
 ```
 
@@ -44,21 +48,33 @@ Service [string] #ResourceName
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | StartupType| Indica o tipo de inicialização para o serviço. Os valores permitidos para essa propriedade são: **Automatic**, **Disabled** e **Manual**| 
 | Estado| Indica o estado que você deseja garantir para o serviço.| 
+| Descrição | Indica a descrição do serviço de destino.| 
+| DisplayName | Indica o nome de exibição do serviço de destino.| 
+| Ensure | Indica se o serviço de destino existe no sistema. Defina essa propriedade como **Ausente** para garantir que o serviço de destino não exista. Configurá-la como **Present** (o valor padrão) garante que o grupo exista.|
+| Caminho | Indica o caminho para o arquivo binário para um novo serviço.| 
 
 ## Exemplo
 
 ```powershell
-Service ServiceExample
+configuration ServiceTest
 {
-    Name = "TermService"
-    StartupType = "Manual"
-    State = "Running"
-} 
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+    Node localhost
+    {
+
+        Service ServiceExample
+        {
+            Name        = "TermService"
+            StartupType = "Manual"
+            State       = "Running"
+        } 
+    }
+}
 ```
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,6 +2,6 @@
 Para relatar problemas ou fornecer comentários, use o [site UserVoice do PowerShell](http://windowsserver.uservoice.com/forums/301869-powershell).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

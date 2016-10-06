@@ -7,6 +7,6 @@ Além de se estender para a transcrição, a própria funcionalidade de transcri
 As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser definidas com a configuração **Ativar Transcrição do PowerShell** Política de Grupo (em Modelos Administrativos -> Componentes do Windows -> Windows PowerShell).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 57049ff138604b0e13c8fd949ae14da05cb03a4b
-ms.openlocfilehash: 221b8095c15a810c032bd93aafe8ec886af233d9
+ms.sourcegitcommit: 749c1ca8bc617014dffacecce7d14a55adc38036
+ms.openlocfilehash: 2a17fdd4092adf734398f38bec915d53c1b3e566
 
 ---
 
@@ -47,16 +47,16 @@ Observe que as sequências de escape do VT100 têm suporte apenas a partir da at
 
 [PSReadline](https://github.com/lzybkr/PSReadLine) adiciona suporte para o modo vi. Para usar o modo vi, execute `Set-PSReadline -EditMode vi`.
 
-### Stdin redirecionado c/entrada interativa 
+### STDIN redirecionada com entrada interativa 
 
 Em versões anteriores, iniciar o PowerShell com `powershell -File -` era necessário quando stdin era redirecionado e você queria inserir comandos interativamente.
 
-Com 5.1 WMF, essa opção difícil de descobrir não é mais necessária, e você pode iniciar o PowerShell sem nenhuma opção, por exemplo, `powershell`.
+Com o WMF 5.1, essa opção difícil de descobrir não é mais necessária. Você pode iniciar o PowerShell sem nenhuma opção, por exemplo, `powershell`.
 
-Observe que o PSReadline atualmente não dá suporte a stdin redirecionado, e a experiência de edição de linha de comando interna com stdin redirecionado é extremamente limitada, por exemplo, as teclas de seta não funcionam.  Uma versão futura do PSReadline deve resolver esse problema.   
+Observe que, atualmente, o PSReadline não dá suporte à STDIN redirecionada, e a experiência de edição de linha de comando interna com STDIN redirecionada é extremamente limitada, por exemplo, as teclas de direção não funcionam. Uma versão futura do PSReadline deve resolver esse problema.   
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

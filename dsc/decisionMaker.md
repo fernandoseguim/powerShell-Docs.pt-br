@@ -53,6 +53,6 @@ A DSC também pode ser usada para gerenciar o Linux. Para obter mais informaçõ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

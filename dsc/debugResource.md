@@ -110,6 +110,6 @@ Depois de chamar [Enable DscDebug](https://technet.microsoft.com/en-us/library/m
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

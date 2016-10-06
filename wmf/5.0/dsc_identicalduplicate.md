@@ -86,6 +86,6 @@ Configuration WebApplication
 
 Essa configuração bem semelhante falhará porque os recursos WindowsFeature FE_IIS e WindowsFeature Worker_IIS não serão mais idênticos e, portanto, entrarão em conflito.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,7 +1,7 @@
 ---
 title: Criando scripts com o Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
@@ -32,6 +32,6 @@ O Windows PowerShell inclui os seguintes recursos:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

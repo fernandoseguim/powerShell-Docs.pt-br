@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "introdução"
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 46f4e5b231d09952f11387cec7c80fbfce9f9d4b
+translationtype: Human Translation
+ms.sourcegitcommit: e6b5107b7222708dcceff14bc26f0e12ef98d728
+ms.openlocfilehash: 00d568234b1453b9161b60d20117374ee4111ab3
 
 ---
 
@@ -21,7 +22,7 @@ Esse é um risco, pois os administradores são uma superfície de ataque.
 Ataques internos e roubo de credenciais são reais e comuns.
 
 ##  **Não é um novo problema**  
-Você provavelmente conhece muito bem o princípio de privilégios mínimos e pode usar alguma forma de RBAC (Controle de Acesso Baseado em Função) com aplicativos que o fornecem.
+Você provavelmente conhece muito bem o princípio de privilégio mínimo e pode usar alguma forma de RBAC (controle de acesso baseado em função) com aplicativos que o fornecem.
 No entanto, a eficiência e a gerenciabilidade dessas soluções geralmente são limitadas por seu escopo amplo e imprecisão.
 Além disso, existem lacunas na cobertura do RBAC.
 Por exemplo, no Windows, o acesso privilegiado é basicamente um comutador binário, o que força você a conceder permissões desnecessárias ao adicionar usuários ao grupo Administradores.
@@ -34,6 +35,6 @@ Isso permite que você preencha as lacunas entre suas soluções existentes de R
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

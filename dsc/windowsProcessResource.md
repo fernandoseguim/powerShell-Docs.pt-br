@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: d7bd873cde4a4bda12490d69acdd5e2b0ba8cdec
+ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
+ms.openlocfilehash: 0fe5e7d9679d44bb50c897badf8c6517b95049e2
 
 ---
 
@@ -40,7 +40,7 @@ WindowsProcess [string] #ResourceName
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Argumentos| Indica uma cadeia de caracteres de argumentos para passar para o processo no estado em que se encontra. Se você precisar passar vários argumentos, coloque todos nessa cadeia de caracteres.| 
-| Caminho| Indica o caminho até o executável do processo. Se você definir essa propriedade como o nome do executável, a DSC examinará a variável __Path__. Se você fornecer um nome de domínio totalmente qualificado, o processo deverá existir ali porque a DSC não verificará a variável __Path__ nesse caso.| 
+| Caminho| O caminho para o executável do processo. Se esse for o nome do arquivo do executável (não o caminho totalmente qualificado), o recurso DSC pesquisará a variável de ambiente **caminho** (`$env:Path`) para localizar o arquivo executável. Se o valor dessa propriedade for um caminho totalmente qualificado, o DSC não usará a variável de ambiente **Caminho** para encontrar o arquivo e emitirá um erro se o caminho não existir. Caminhos relativos não são permitidos.| 
 | Credential| Indica as credenciais para iniciar o processo.| 
 | Ensure| Indica se o processo existe. Defina essa propriedade como "Present" para garantir que o processo exista. Caso contrário, defina-a como "Absent". O padrão é "Present".| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
@@ -52,6 +52,6 @@ WindowsProcess [string] #ResourceName
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

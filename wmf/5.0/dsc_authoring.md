@@ -10,6 +10,6 @@ Criar configurações DSC no ISE do Windows PowerShell ficou muito mais fácil, 
 **Observação:** é necessário ter uma cadeia de caracteres vazia para valores de propriedade de recurso antes que seja possível usar Ctrl+Espaço para listar as opções. Pressionar **Tab** percorrerá as opções.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

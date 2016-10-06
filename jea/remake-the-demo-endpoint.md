@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "recriar o ponto de extremidade da demonstração"
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: dabb5023012e90ace3fbc5f347c17821abd92595
+translationtype: Human Translation
+ms.sourcegitcommit: d20ea8418cb7389d756de94ea752cf604b8d07af
+ms.openlocfilehash: acd2cfbd038250a26236c875d0e8b03a32cd84f9
 
 ---
 
@@ -91,7 +92,7 @@ O efeito dessas configurações é um ponto de partida mínimo e seguro para con
 Ele define quem pode fazer o que como uma conta privilegiada.
 Com este campo, você pode especificar a funcionalidade disponível para qualquer usuário conectado com base na associação de grupo.
 Esse é o núcleo da funcionalidade de RBAC do JEA.
-Neste exemplo, você está expondo o RoleCapability de "Demonstração" predefinido para membros do grupo "Contoso\JEA_NonAdmin_Operator".
+Neste exemplo, você está expondo o RoleCapability de "manutenção" predefinido para membros do grupo "Contoso\JEA_NonAdmin_Operator".
 
 3.  O campo *RunAsVirtualAccount* indica que PowerShell deve "Executar como" uma Conta Virtual neste ponto de extremidade.
 Por padrão, a Conta Virtual é um membro do grupo Administradores interno.
@@ -124,7 +125,7 @@ Parabéns! Você configurou o seu ponto de extremidade JEA.
 
 ## Testar seu ponto de extremidade
 Execute novamente as etapas listadas na seção [Usando o JEA](using-jea.md) no novo ponto de extremidade para confirmar se ele está funcionando conforme o esperado.
-Use o novo nome de ponto de extremidade (JEADemo2) ao fornecer o nome de configuração para Enter-PSSession.
+Use o novo nome de ponto de extremidade (JEADemo2) ao informar o nome de configuração para `Enter-PSSession`.
 
 ```PowerShell
 Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
@@ -152,6 +153,6 @@ Para obter mais informações sobre transcrições, confira este [post de blog](
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

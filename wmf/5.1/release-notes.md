@@ -4,13 +4,13 @@ ms.date: 2016-07-27
 keywords: PowerShell, DSC, WMF
 description: 
 ms.topic: article
-author: keithb
+author: jkeithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 5eb9eae6257cdb57f4f778b5dddf5aa7ef9d10bb
-ms.openlocfilehash: 12f2c084ab92134b733ee037c3d9fbd512af2e4c
+ms.sourcegitcommit: ebbd7d4d39cd335d994dd6cd3a06dd644df6d919
+ms.openlocfilehash: 83061e651b190bab3e5914bb6270a5857f7aa7a5
 
 ---
 
@@ -27,7 +27,7 @@ A Preview do WMF 5.1 inclui os componentes do PowerShell, WMI, o WinRM e o Inven
 
 **Observações importantes:**
 
-- **A Preview do WMF 5.1 exige o Windows Management Framework (WMF) 4.6**. Instalação terá êxito, mas ocorrerá falha nos principais recursos se o .NET 4.6 não estiver instalado. As instruções estão disponíveis no tópico [Instalar e Configurar WMF 5.1 (Preview)](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- **O WMF 5.1 Preview exige o .NET Framework 4.6**. A instalação terá êxito, mas ocorrerá falha nos principais recursos se o .NET 4.6 não estiver instalado. As instruções estão disponíveis no tópico [Instalar e Configurar WMF 5.1 (Preview)](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
 - **Não há suporte para a Preview do WMF 5.1 para implantações de produção** no momento. Ele destina-se a fornecer informações preliminares sobre o que há na versão e lhe dá a oportunidade de fornecer comentários à equipe do PowerShell.
 - A Preview do WMF 5.1 pode ser instalada diretamente pelo WMF 5.0.
 - Este é um problema conhecido que o WMF 4.0 atualmente é necessário para instalar a Preview do WMF 5.1 no Windows 7 e Windows Server 2008. Esse requisito deve ser removido antes da versão final.
@@ -35,6 +35,7 @@ A Preview do WMF 5.1 inclui os componentes do PowerShell, WMI, o WinRM e o Inven
 
 
 
-<!--HONumber=Jul16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -30,6 +30,6 @@ Os tópicos a seguir descrevem os recursos de DSC:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

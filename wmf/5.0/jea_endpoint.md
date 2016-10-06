@@ -138,6 +138,6 @@ Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
 Depois de se conectar à sessão JEA, você estará limitado à execução de comandos na lista de permissões nas Funcionalidades da Função às quais você tem acesso. Caso tente executar algum comando que não seja permitido para sua função, você encontrará um erro.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

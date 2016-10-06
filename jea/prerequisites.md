@@ -129,6 +129,6 @@ Observação: você também pode habilitar transcrição do PowerShell de todo o
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

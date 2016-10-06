@@ -85,6 +85,6 @@ No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, 
 Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

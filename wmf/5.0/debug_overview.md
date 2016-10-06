@@ -43,6 +43,6 @@ Agora é possível anexar a qualquer processo de computador que tenha o Windows 
 -   Enter-PSHostProcess
 -   Exit-PSHostProcess
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

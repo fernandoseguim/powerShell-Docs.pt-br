@@ -1,12 +1,19 @@
 ---
 title: Windows PowerShell 5.0
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 2ae52a0d-2eb5-4c71-971f-fb3f612d281b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8adf724740b2f09bff6d5cafb822566f4747780c
+
 ---
+
 # Windows PowerShell 5.0
 Este tópico lista os módulos de cmdlet e de função que acompanham o Windows PowerShell. Os módulos do Windows PowerShell na lista fornecem a funcionalidade básica do Windows PowerShell.
 
@@ -41,6 +48,7 @@ A tabela a seguir também mostra a versão mais recente publicada da Ajuda para 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

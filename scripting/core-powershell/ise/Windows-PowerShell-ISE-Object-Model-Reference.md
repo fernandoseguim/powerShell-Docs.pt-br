@@ -1,32 +1,39 @@
 ---
-title: Referência de modelo de objeto do ISE do Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Referência de modelo de objeto do ISE do Windows PowerShell"
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 9bfb74ba438dd27fc2799263fc12a20edd2bb8cb
+
 ---
+
 # Referência de modelo de objeto do ISE do Windows PowerShell
   
 ## Referência de modelo de objeto
- Esta seção fornece uma referência sobre as classes subjacentes que definem os vários objetos no ISE (Ambiente de Script Integrado) do Windows PowerShell®. Para ver os objetos organizados em sua hierarquia, consulte [The ISE Object Model Hierarchy](The-ISE-Object-Model-Hierarchy.md) (A hierarquia de modelo de objeto ISE).
+ Esta seção fornece uma referência sobre as classes subjacentes que definem os vários objetos no ISE (Ambiente de Script Integrado) do Windows PowerShell®. Para ver os objetos organizados em sua hierarquia, consulte [The ISE Object Model Hierarchy](The-ISE-Object-Model-Hierarchy.md) (A hierarquia do modelo de objeto ISE).
 
  [O objeto ISEAddOnTool](The-ISEAddOnTool-Object.md)
  Exemplos: $psISE.CurrentVisibleHorizontalTool, $psISE.CurrentVisibleVerticalTool.
 
  [O objeto ISEAddOnTool](The-ISEAddOnTool-Object.md)
-  [O objeto ISEEditor](The-ISEEditor-Object.md)
+  [O Objeto ISEEditor](The-ISEEditor-Object.md)
  Exemplos: $psISE.CurrentFile.Editor, $psISE.CurrentPowerShellTab.Output, $psISE.CurrentPowerShellTab.CommandPane.
 
  [O objeto ISEFile](The-ISEFile-Object.md)
- Exemplos: $psISE.CurrentFile, $psISE.PowerShellTabs.Files[0].
+ Exemplos: $psISE.CurrentFile, $psISE.PowerShellTabs.Files\[0\].
 
- [O objeto ISEFileCollection](The-ISEFileCollection-Object.md)
+ [O Objeto ISEFileCollection](The-ISEFileCollection-Object.md)
  Exemplos: $psISE.PowerShellTabs.Files.
 
- [O objeto ISEMenuItem](The-ISEMenuItem-Object.md)
- Exemplos: $psISE.CurrentPowerShellTab.AddOnsMenu, $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].
+ [O Objeto ISEMenuItem](The-ISEMenuItem-Object.md)
+ Exemplos: $psISE.CurrentPowerShellTab.AddOnsMenu, $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus\[0\].
 
  [O objeto ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md)
  Exemplo: $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.
@@ -35,10 +42,10 @@ ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
  Exemplos: $psISE.Options, $psISE.Options.DefaultOptions.
 
  [O objeto ObjectModelRoot](The-ObjectModelRoot-Object.md)
- Exemplo: o objeto $psISE raiz.
+ Exemplo: O objeto raiz $psISE.
 
  [O objeto PowerShellTab](The-PowerShellTab-Object.md)
- Exemplos: $psISE.CurrentPowerShellTab, $psISE.PowerShellTabs[0].
+ Exemplos: $psISE.CurrentPowerShellTab, $psISE.PowerShellTabs\[0\].
 
  [O objeto PowerShellTabCollection](The-PowerShellTabCollection-Object.md)
  Exemplo: $psISE.PowerShellTabs.
@@ -49,6 +56,7 @@ ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

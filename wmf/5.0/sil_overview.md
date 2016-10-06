@@ -11,6 +11,6 @@ Nenhum desses dados são enviados à Microsoft como parte da funcionalidade do r
 Para obter mais informações e documentação sobre os cmdlets do Log de Inventário de Software, veja os recursos online do Windows Server 2012 R2 em <http://technet.microsoft.com/library/dn383584.aspx>.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

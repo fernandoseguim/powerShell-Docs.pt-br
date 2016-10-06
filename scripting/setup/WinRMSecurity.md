@@ -1,15 +1,15 @@
 ---
 title: WinRMSecurity
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 7facb78962411d7b96ef6741e3ffa153d5537a0d
-ms.openlocfilehash: e1827e102a9b35ea214f89395f7ff3c5e0a58506
+ms.sourcegitcommit: 67ef350559f9b3d17232f3c93d67634b3e939c60
+ms.openlocfilehash: b1addddd50368fadcbb2581673d3ebc7cad8e32a
 
 ---
 
@@ -19,7 +19,7 @@ Comunicação remota do PowerShell é a maneira recomendada de gerenciar sistema
 
 ## O que é a comunicação remota do PowerShell?
 
-A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), que é a implementação do protocolo [WS-Managment (Serviços Web para Gerenciamento)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf) da Microsoft, para permitir que os usuários executem comandos do PowerShell em computadores remotos. Você pode encontrar mais informações sobre como usar a comunicação remota do PowerShell em [Executando comandos remotos](https://technet.microsoft.com/en-us/library/dd819505.aspx).
+A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), que é a implementação do protocolo [WS-Management (Serviços Web para Gerenciamento)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf) da Microsoft, para permitir que os usuários executem comandos do PowerShell em computadores remotos. Você pode encontrar mais informações sobre como usar a comunicação remota do PowerShell em [Executando comandos remotos](https://technet.microsoft.com/en-us/library/dd819505.aspx).
 
 A comunicação remota do PowerShell não é igual ao parâmetro **ComputerName** de um cmdlet para executá-lo em um computador remoto, que usa RPC (Chamada de Procedimento Remoto) como seu protocolo subjacente.
 
@@ -62,7 +62,7 @@ Quando um cliente se conecta a um servidor de domínio usando seu endereço IP, 
       
 No entanto, o protocolo NTLM não assegura a identidade do servidor. Como ocorre com todos os protocolos que usam NTLM para autenticação, um invasor com acesso a uma conta do computador ingressado do domínio pode invocar o controlador de domínio para computar uma chave de sessão NTLM e, assim, representar o servidor.
 
-A autenticação NTLM é desabilitada por padrão, mas pode ser permitida ao configurar SSL no servidor de destino, ou ao definir a configuração de WinRM TrustedHosts.
+A autenticação baseada em NTLM está desabilitada por padrão, mas pode ser permitida ao configurar SSL no servidor de destino, ou ao definir a configuração de WinRM TrustedHosts no cliente.
     
 #### Usando certificados SSL para validar a identidade do servidor durante conexões baseadas em NTLM
 
@@ -121,6 +121,6 @@ Para obter mais informações sobre ataques de roubo de credenciais, consulte [M
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

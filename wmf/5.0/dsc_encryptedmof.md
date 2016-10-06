@@ -11,6 +11,6 @@ Se já estiver usando o método de certificado para criptografar senhas ou se pr
 Essa criptografia se aplica somente a documentos MOF de configuração (pending.mof, current.mof, previous.mof e MOFs parciais). MOFs de metaconfiguração ainda são salvos em texto sem formatação, já que é menos provável que ele contenha segredos.
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

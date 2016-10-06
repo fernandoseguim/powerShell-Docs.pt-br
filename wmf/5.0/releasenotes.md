@@ -15,6 +15,6 @@ O WMF 5.0 RTM substitui a [Preview de Produção do WMF 5.0](http://blogs.msdn.c
 *Observação:* se estiver executando o Windows 10, será possível obter o mesmo conjunto de funcionalidades disponíveis no WMF 5.0 RTM pela atualização para a atualização de novembro do Windows 10 (Versão 1511). Se você não ainda atualizou seu sistema Windows 10, selecione o botão Iniciar e selecione Configurações > Atualização e segurança > Windows Update > Verificar atualizações. 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
