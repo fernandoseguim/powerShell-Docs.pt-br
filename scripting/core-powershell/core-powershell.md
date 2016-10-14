@@ -1,32 +1,31 @@
 ---
 title: powershell principal
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: PowerShell, cmdlet
 description: 
 ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: cd6e130d9f6f70449084d25eb386a3c0a2b84737
-ms.openlocfilehash: 4c22e1a2543690a971836813cb32ace74ababb4a
+ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
+ms.openlocfilehash: c8f97c3b565e0718b38a8e62a2b9cb9558451fc5
 
 ---
 
-#  PowerShell principal
+#  PowerShell comum
 Esta seção contém todos os materiais de referência e guias detalhados do PowerShell.  
 Encontre nesta seção:
--  O [Guia dos módulos do PowerShell Core](core-modules.md)
--  O [Guia do ISE (Ambiente de Script Integrado) do Windows PowerShell](ise-guide.md)
--  O [Guia da janela de Console do PowerShell](console-guide.md)
--  O [Guia de gerenciamento remoto do PowerShell](Running-Remote-Commands.md)
--  O [Guia de fluxos de trabalho do PowerShell](workflows-guide.md)
--  O [Guia do PowerShell Web Access](web-access.md)
+-  Os [módulos comuns do PowerShell](core-modules.md)
+-  O [ISE (Ambiente de Script Integrado) do PowerShell](ise-guide.md)
+-  A [janela do console do PowerShell](console-guide.md)
+-  O [gerenciamento remoto do PowerShell](Running-Remote-Commands.md)
+-  Os [fluxos de trabalho do PowerShell](workflows-guide.md)
+-  O [PowerShell Web Access](web-access.md)
 -  O [Glossário do PowerShell](../Windows-PowerShell-Glossary.md)
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

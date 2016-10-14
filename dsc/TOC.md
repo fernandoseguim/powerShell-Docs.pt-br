@@ -45,7 +45,7 @@
 ### [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
 ### [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md)
 ## [Usando um servidor de relatório de DSC](reportServer.md)
-## [Práticas recomendadas para o servidor de pull](secureServer.md)
+## [Práticas recomendadas do servidor de pull](secureServer.md)
 
 # [Solucionando problemas de DSC](troubleshooting.md)
 
@@ -91,6 +91,6 @@
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

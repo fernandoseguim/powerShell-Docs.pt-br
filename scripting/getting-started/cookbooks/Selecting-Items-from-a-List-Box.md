@@ -1,12 +1,19 @@
 ---
 title: Selecionando itens de uma caixa de listagem
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: PowerShell, cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 7e8fd05cfedd500c51f2d7e4f6adbb7d1f27cb00
+
 ---
+
 # Selecionando itens de uma caixa de listagem
 Use o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos usuários selecionar itens de um controle de caixa de listagem.
 
@@ -137,7 +144,7 @@ $listBox.Height = 80
 Na próxima seção, você deve especificar os valores que você deseja que a caixa de listagem mostre para os usuários.
 
 > [!NOTE]
-> A caixa de listagem criada por esse script permite somente uma seleção. Para criar um controle de caixa de listagem que permita várias seleções, especifique um valor para a propriedade **SelectionMode**, de forma semelhante à seguinte: `$listBox.SelectionMode = "MultiExtended"`. Para obter mais informações, consulte [Multiple-selection List Boxes](Multiple-selection-List-Boxes.md) (Caixas de listagem de seleção múltipla).
+> A caixa de listagem criada por esse script permite somente uma seleção. Para criar um controle de caixa de listagem que permita várias seleções, especifique um valor para a propriedade **SelectionMode**, de forma semelhante à seguinte: `$listBox.SelectionMode = "MultiExtended"`. Para obter mais informações, consulte [Caixas de listagem de seleção múltipla](Multiple-selection-List-Boxes.md).
 
 ```
 [void] $listBox.Items.Add("atl-dc-001")
@@ -173,12 +180,13 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Consulte Também
-[Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem](http://technet.microsoft.com/library/ff730949.aspx)
+[Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Por que esses exemplos de GUI do PowerShell não funcionam?)](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: Dave Wyatt's WinFormsExampleUpdates (As atualizações de exemplos de WinForms de Dave Wyatt)](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week:  Selecting Items from a List Box (Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem)](http://technet.microsoft.com/library/ff730949.aspx)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 
