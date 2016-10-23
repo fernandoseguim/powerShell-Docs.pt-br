@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 67ef350559f9b3d17232f3c93d67634b3e939c60
-ms.openlocfilehash: b1addddd50368fadcbb2581673d3ebc7cad8e32a
+ms.sourcegitcommit: 4ddd5099ce33263d43dcbad0930e654b573a8937
+ms.openlocfilehash: fa7e5c84ac82fa72836536ece507f1751e099077
 
 ---
 
@@ -86,10 +86,6 @@ Essa é a maneira mais segura de autenticar, mas como o computador remoto não t
 
 Há várias maneiras de evitar esse problema:
 
-### Delegação restrita de Kerberos
-
-Para servidores altamente confiáveis, você pode habilitar a [Delegação restrita de Kerberos](https://technet.microsoft.com/en-us/library/cc995228.aspx). Isso permite ao servidor remoto representar o usuário autenticado para uma lista especificada de computadores e serviços.
-
 ### Relação de confiança entre computadores remotos
 
 Se você confiar usuários conectados remotamente ao *Server1* aos recursos do *Server2*, poderá conceder explicitamente acesso do *Server1* a esses recursos.
@@ -121,6 +117,6 @@ Para obter mais informações sobre ataques de roubo de credenciais, consulte [M
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
