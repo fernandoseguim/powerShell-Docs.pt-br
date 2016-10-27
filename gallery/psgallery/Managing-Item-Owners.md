@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: "Gerenciando proprietários do item"
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 00fe57762c6b2bb690255ecaea642f97124f4328
+
+---
+
 # Gerenciando proprietários do item
 
 A propriedade de um item na Galeria do PowerShell é definida pelo usuário que publicou o item na galeria.
@@ -67,6 +84,9 @@ Se determinarmos que você deve ser o proprietário do item, nós mesmos usaremo
 Podemos fazer isso apenas depois de verificar que você deve ser um proprietário e o processo para essa verificação varia de acordo com as circunstâncias.
 Muitas vezes, usaremos a URL do Projeto do item para encontrar uma maneira de entrar em contato com o proprietário do projeto, mas também podemos usar o Twitter, email ou outros meios para entrar em contato com o proprietário do projeto.
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

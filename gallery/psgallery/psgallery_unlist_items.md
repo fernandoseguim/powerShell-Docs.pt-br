@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_unlist_items
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 95e0bb58eb110a9060615e409cb55fa9231d505f
+
+---
+
 # Removendo itens da lista
 
 **Por que a remoção de um item da Galeria do PowerShell não é exposta como uma opção?**
@@ -28,6 +45,7 @@ Para enviar uma Solicitação de Exclusão de Item aos Administradores da Galeri
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 

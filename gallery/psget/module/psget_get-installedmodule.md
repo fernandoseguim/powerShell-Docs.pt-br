@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_get installedmodule
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 40a79a74117f28407758367f4e27b7ae26917078
+
+---
+
 # Get-InstalledModule
 
 Obtém os módulos instalados em um computador.
@@ -115,6 +132,9 @@ Name          InstalledDate         UpdatedDate
 ContosoServer 2/29/2016 11:59:14 AM 2/29/2016 12:00:15 PM
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

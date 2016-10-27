@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_search_syntax
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: bb42496bdc9794b8d33dc9869f33771a241d31db
+
+---
+
 # Sintaxe de pesquisa da Galeria
 
 A Galeria do PowerShell oferece uma caixa de pesquisa de texto em que você pode usar palavras, frases e expressões de palavra-chave para refinar os resultados da pesquisa.
@@ -83,6 +100,7 @@ Por fim, se você usar um campo para o qual não há suporte, como "commands", v
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 

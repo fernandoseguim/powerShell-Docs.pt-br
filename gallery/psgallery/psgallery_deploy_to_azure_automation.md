@@ -1,3 +1,19 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_deploy_to_azure_automation
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: c028bf6145b41c13bccda9543a782b838bd730ff
+
+---
 
 Implantar na Automação do Azure
 ===========================
@@ -19,6 +35,7 @@ Para saber mais sobre a Automação do Azure, consulte o site da Automação do 
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 

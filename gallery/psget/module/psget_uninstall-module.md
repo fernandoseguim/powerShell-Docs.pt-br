@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: "módulo psget_uninstall"
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 9b5895b71e19671b99506bf371f2656c2a419832
+
+---
+
 # Uninstall-Module
 
 Desinstala um módulo que foi instalado usando cmdlets do PowerShellGet.
@@ -115,6 +132,9 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
     + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.UninstallPackage
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

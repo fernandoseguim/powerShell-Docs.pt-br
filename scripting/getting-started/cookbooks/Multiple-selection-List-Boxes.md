@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 1adae567893fb5dfcf5b5f675ca587a1d437d39a
+ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
+ms.openlocfilehash: 03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc
 
 ---
 
@@ -138,6 +138,7 @@ $listBox.Location = New-Object System.Drawing.Point(10,40)
 $listBox.Size = New-Object System.Drawing.Size(260,20)
 ```
 
+
 Veja como especificar que você deseja que os usuários selecionem múltiplos valores na lista.
 
 ```
@@ -184,13 +185,13 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Consulte Também
-[Hey Scripting Guy: Why don’t these PowerShell GUI examples work? (Por que esses exemplos de GUI do PowerShell não funcionam?)](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: Dave Wyatt's WinFormsExampleUpdates (As atualizações de exemplos de WinForms de Dave Wyatt)](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Windows PowerShell Tip of the Week:  Multi-Select List Boxes – And More! (Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla - e muito mais!)](http://technet.microsoft.com/library/ff730950.aspx)
+- [Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla – E muito mais!](http://technet.microsoft.com/library/ff730950.aspx)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

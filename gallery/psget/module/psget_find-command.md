@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: comando psget_find
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 7d46f02106785b0f94f73e60231fb4623002cfb6
+
+---
+
 # Find-Command
 
 Localiza comandos do PowerShell em módulos.
@@ -67,6 +84,9 @@ Find-Command -Tag Azure, DSC
 
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

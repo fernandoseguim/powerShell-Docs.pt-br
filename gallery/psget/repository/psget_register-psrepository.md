@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_register psrepository
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: c4ca4af826785fb0009afc1b06166e1888045e72
+
+---
+
 # Register-PSRepository
 
 Obtém os repositórios registrados em um computador.
@@ -104,6 +121,8 @@ ProviderOptions : {}
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

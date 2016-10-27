@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_find rolecapability
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: cdb675c32f62c5bd7acfb79357342f71960b50f4
+
+---
+
 # Find-RoleCapability
 
 Localiza capacidades de função em módulos.
@@ -67,6 +84,9 @@ Find-RoleCapability -Tag Azure, DSC
 
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

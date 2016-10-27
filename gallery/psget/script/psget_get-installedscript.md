@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_get installedscript
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: f809c5c8f5a28c01c67ee4c4453ecca7796838c4
+
+---
+
 # Get-InstalledScript
 
 Obtém os scripts instalados em um computador.
@@ -87,6 +104,9 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Scripts
 
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

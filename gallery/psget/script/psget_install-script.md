@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: script psget_install
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: df04c387f09ad603d001bb94ee4cdeabc6d9d5a6
+
+---
+
 # Install-Script
 
 Instala arquivos de script do PowerShell de repositórios online no computador local.
@@ -64,7 +81,7 @@ Para instalar vários módulos, especifique uma matriz de nomes de módulo, sepa
 
 Por padrão, os módulos são instalados na pasta Arquivos de Programas, para evitar confusão ao instalar recursos de DSC (Configuração de Estado Desejado) do Windows PowerShell. É possível redirecionar vários objetos PSGetItemInfo para Install-Script; esta é outra maneira de especificar vários módulos para serem instalados em um único comando.
 
-Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como melhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
+Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
 
 
 ## Sintaxe do cmdlet
@@ -889,6 +906,8 @@ Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

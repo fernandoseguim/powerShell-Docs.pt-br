@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_contacting_administrators
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 0268fed62bc4c30f5e299af0cc29a0f2316ce731
+
+---
+
 # Entrar em contato com os Administradores da Galeria
 
 ## Quando entrar em contato com os Administradores da Galeria
@@ -17,6 +34,8 @@ Você deverá entrar em contato com os administradores da galeria quando:
 3. Caso você tenha outras perguntas gerais referentes à Galeria, envie sua pergunta ao [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell)
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

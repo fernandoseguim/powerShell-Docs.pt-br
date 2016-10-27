@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_moduledependencypopulation
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: a6ace8faebd6f37d3c41ee5a3fef2bda70b8c651
+
+---
+
 # Lógica para preparar as dependências do módulo durante a operação de publicação
 1.  Módulos listados como parte de RequiredModules são considerados dependências.
 2.  Módulos listados como parte de NestedModules, cuja base do módulo não está sob a base do módulo especificado, são considerados dependências.
@@ -19,6 +36,8 @@
 *Certifique-se de que as dependências do seu módulo estejam disponíveis em $env:PSModulePath no sistema durante a operação de publicação.*
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

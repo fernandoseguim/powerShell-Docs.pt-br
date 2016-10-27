@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: modulewithpseditionsupport
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: dc8836607e2d2f03d34e5c90a8d20fe4cf0ae76f
+
+---
+
 # Módulos com as edições compatíveis do PowerShell
 Da versão 5.1 em diante, o PowerShell está disponível nas edições diferentes que denotam diferentes conjuntos de recursos e compatibilidade de plataforma.
 
@@ -232,6 +249,8 @@ Find-Module -Tag PSEditon_Core
 ### [Atualizar o manifesto de módulo] (./psget_update-modulemanifest.md)
 
 
-<!--HONumber=Sep16_HO2-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

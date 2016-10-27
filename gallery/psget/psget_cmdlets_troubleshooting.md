@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_cmdlets_troubleshooting
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 740c72620e1a5a114716f924f859c57cad125614
+
+---
+
 ## Como resolver o problema “AVISO: falha ao baixar o Pacote 'nome do pacote'”?
 
 
@@ -16,6 +33,8 @@ Update-Module Azure -Verbose
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

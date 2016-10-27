@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
+ms.sourcegitcommit: 27512f637dd44485eee38936fea4723cd17b6218
+ms.openlocfilehash: b67024fb27c08e1079caad891cfc3e621a354b27
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
 Shells de linha de comando geralmente fornecem uma maneira de preencher nomes longos de arquivos ou comandos automaticamente, acelerando a entrada de comandos e fornecendo dicas. O Windows PowerShell permite preencher os nomes de arquivo e nomes de cmdlet pressionando a tecla **Tab**.
 
 > [!NOTE]
-> A expansão com Tab é controlada pela função TabExpansion interna. Como essa função pode ser modificada ou substituída, essa discussão é um guia para o comportamento da configuração padrão do Windows PowerShell.
+> A expansão da guia é controlada pelas funções internas TabExpansion ou TabExpansion2. Como essa função pode ser modificada ou substituída, essa discussão é um guia para o comportamento da configuração padrão do Windows PowerShell.
 
 Para preencher automaticamente um nome de arquivo ou um caminho com as opções disponíveis automaticamente, digite parte do nome e pressione a tecla **Tab**. O Windows PowerShell expandirá automaticamente o nome da primeira correspondência que encontrar. Pressionar a tecla **Tab** repetidamente percorrerá todas as opções disponíveis.
 
@@ -54,6 +54,6 @@ PS> Get-Content C:\windows\actsetup.log
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

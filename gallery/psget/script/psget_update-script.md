@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: script psget_update
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 8c5211a51a9ff8bce641fde8deacd2d288916602
+
+---
+
 # Update-Script
 
 O cmdlet Update-Script permite a atualização in-loco dos arquivos de script que foram instalados usando o cmdlet Install-Script.
@@ -58,6 +75,7 @@ Version Name Type Repository Description
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 

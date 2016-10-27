@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_find dscresource
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 4ee5433547266e2665e1e33b9f120f505426c8f4
+
+---
+
 # Find-DscResource
 
 Localiza Recursos de DSC nos módulos.
@@ -81,6 +98,8 @@ Find-DscResource -Tag Azure, DSC
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

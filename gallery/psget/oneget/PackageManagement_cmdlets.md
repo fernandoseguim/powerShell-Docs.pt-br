@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: PackageManagement_cmdlets
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: d1906428d258cd8b43530d2cd024f6f9e52b81db
+
+---
+
 # Cmdlets do PackageManagement
 Esse é o núcleo do PackageManagement para dar suporte ao SDII (descoberta, instalação e inventário) de software. Experimente os cmdlets para essas operações:
 -   Find-Package
@@ -191,6 +208,7 @@ Unregister-PackageSource  -Name "NugetSource"
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 

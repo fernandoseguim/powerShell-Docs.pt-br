@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: script psget_publish
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: bcf1abe7021c9b48fa35f08762f4d4a0a710dfa3
+
+---
+
 # Publish-Script
 
 O cmdlet Publish-Script publica o script especificado na galeria online.
@@ -64,6 +81,9 @@ AdditionalMetadata : {description, developmentDependency, tags, PackageManagemen
 
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

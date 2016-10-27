@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_dispute_resolution
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 6d7015a14f0d0a75bc28e201dceefe6c9c682b31
+
+---
+
 # Solução de controvérsias
 
 Este documento é um processo de solução de controvérsias recomendado para membros da comunidade, a fim de ajudar a resolver controvérsias com outros editores da Galeria do PowerShell.
@@ -29,6 +46,8 @@ Se você encontrar um item que esteja violando qualquer um desses itens, clique 
 **Essa política está sujeita a alterações, a critério da Galeria do PowerShell.**
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

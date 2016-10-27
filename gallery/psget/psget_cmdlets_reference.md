@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_cmdlets_reference
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 21028dbbc5c7ac1c7e514a0a0887942f5c67c32a
+
+---
+
 # Referência de cmdlet do PowerShellGet
 
 - [Register-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517129)
@@ -27,6 +44,8 @@
 - [Publish-Script](http://go.microsoft.com/fwlink/?LinkId=619788)
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

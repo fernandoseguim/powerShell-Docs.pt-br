@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 9bfb74ba438dd27fc2799263fc12a20edd2bb8cb
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: bc65c69906a514a2490e6e7144a0cd4f377bec16
 
 ---
 
@@ -51,12 +51,12 @@ ms.openlocfilehash: 9bfb74ba438dd27fc2799263fc12a20edd2bb8cb
  Exemplo: $psISE.PowerShellTabs.
 
 ## Consulte Também
- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

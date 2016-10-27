@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet, galeria
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_unregister psrepository
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 7d9c24ebb20756a2f7852692532ac6ec7e558ca9
+
+---
+
 # Unregister-PSRepository
 
 Cancela o registro de um repositório.
@@ -45,6 +62,9 @@ At line:1 char:1
 Register-PSRepository -Default
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 
