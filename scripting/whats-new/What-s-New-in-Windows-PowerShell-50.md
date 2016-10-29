@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 666590df32157a7477d385961dd5665094275868
+ms.sourcegitcommit: 1d4062490ba76a8cc62faa8fb96eff92b49169b7
+ms.openlocfilehash: 966cab74cb2519893d4744e8bd0ca12f93f73136
 
 ---
 
@@ -19,7 +19,10 @@ O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem seu 
 
 O Windows PowerShell 5.0 é compatível com versões anteriores. Cmdlets, provedores, módulos, snap-ins, scripts, funções e perfis projetados para o Windows PowerShell 4.0, o Windows PowerShell 3.0 e o Windows PowerShell 2.0 geralmente funcionam no Windows PowerShell 5.0 sem alterações.
 
-O Windows PowerShell 5.0 está instalado por padrão no Windows Server® 2016 Technical Preview e Windows 10®. Para instalar o Windows PowerShell 5.0 em Windows Server 2012 R2, Windows 8.1 Enterprise ou Windows 8.1 Pro, baixe e instale o [Windows Management Framework 5.0](http://aka.ms/wmf5download). Certifique-se de ler os detalhes de download e atender a todos os requisitos de sistema antes de instalar o Windows Management Framework 5.0.
+# Instalar o Windows PowerShell
+O Windows PowerShell 5.0 está instalado por padrão no Windows Server® 2016 Technical Preview e Windows 10®. 
+
+Para instalar o Windows PowerShell 5.0 em Windows Server 2012 R2, Windows 8.1 Enterprise ou Windows 8.1 Pro, baixe e instale o [Windows Management Framework 5.0](http://aka.ms/wmf5download). Certifique-se de ler os detalhes de download e atender a todos os requisitos de sistema antes de instalar o Windows Management Framework 5.0.
 
 ## Neste tópico
 
@@ -38,7 +41,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
     -   O [Get-DscResource](http://technet.microsoft.com/library/dn521625.aspx) é mais rápido (especialmente no ISE).
 
-    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) tem um novo parâmetro, –UseExisting que reaplica a última configuração aplicada.
+    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) tem um novo parâmetro, -UseExisting, que reaplica a última configuração aplicada.
 
     -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) -Force foi corrigido.
 
@@ -170,9 +173,9 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 -   New-Item, Remove-Item e Get-ChildItem foram aprimorados para dar suporte à criação e ao gerenciamento de [links simbólicos](http://en.wikipedia.org/wiki/Symbolic_link). O parâmetro **ItemType** para New-Item aceita um novo valor, **SymbolicLink**. Agora, é possível criar links simbólicos em uma única linha simples com o cmdlet New-Item.
 
--   Get-ChildItem também terá um novo parâmetro, -Depth, que você pode usar com o parâmetro –Recurse para limitar a recursão. Por exemplo, Get-ChildItem –Recurse –Depth 2 retorna resultados da pasta atual, todas as pastas filho dentro da pasta atual e todas as pastas dentro das pastas filho.
+-   Get-ChildItem também tem um novo parâmetro, -Depth, que você pode usar com o parâmetro -Recurse para limitar a recursão. Por exemplo, Get-ChildItem -Recurse -Depth 2 retorna resultados da pasta atual, todas as pastas filho dentro da pasta atual e todas as pastas dentro das pastas filho.
 
--   Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que conectadas a computadores remotos (incluindo computadores que executam o [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione –Path e –Destination para especificar o caminho de origem e de destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+-   Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que conectadas a computadores remotos (incluindo computadores que executam o [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 -   A transcrição do Windows PowerShell foi aperfeiçoada para ser aplicada a todos os aplicativos de hospedagem (como o ISE do Windows PowerShell), além do host do console (**powershell.exe**). As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser configuradas habilitando a configuração Política de Grupo de **Ativar Transcrição do PowerShell** encontrada em Modelos Administrativos/Componentes do Windows/Windows PowerShell.
 
@@ -190,7 +193,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 -   Um novo cmdlet, New-TemporaryFile, permite criar um arquivo temporário como parte do script. Por padrão, o novo arquivo temporário é criado em ```C:\Users\<user name>\AppData\Local\Temp```.
 
--   Os cmdlets Out-File, Add-Content e Set-Content agora têm um novo parâmetro –NoNewline, que omite uma nova linha após a saída.
+-   Os cmdlets Out-File, Add-Content e Set-Content agora têm um novo parâmetro -NoNewline, que omite uma nova linha após a saída.
 
 -   O cmdlet New-Guid aproveita a nova classe Guid do .NET Framework para gerar um GUID, o que é útil quando você está escrevendo scripts ou recursos de DSC.
 
@@ -212,7 +215,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 -   Resultados do cmdlet Get-Command agora exibem uma coluna Version; uma nova propriedade Version foi adicionada à classe CommandInfo. Get-Command mostra os comandos de várias versões do mesmo módulo. A propriedade Version também faz parte de classes derivadas de CmdletInfo: CmdletInfo e ApplicationInfo.
 
--   Get-Command tem um novo parâmetro, -ShowCommandInfo, que retorna informações de ShowCommand como PSObjects. Essa é uma funcionalidade especialmente útil quando Show-Command é executado no ISE do Windows PowerShell usando a comunicação remota do Windows PowerShell. O parâmetro –ShowCommandInfo substitui a função Get-SerializedCommand existente no módulo Microsoft.PowerShell.Utility, mas o script Get-SerializedCommand ainda está disponível para dar suporte a scripts de nível inferior.
+-   Get-Command tem um novo parâmetro, -ShowCommandInfo, que retorna informações de ShowCommand como PSObjects. Essa é uma funcionalidade especialmente útil quando Show-Command é executado no ISE do Windows PowerShell usando a comunicação remota do Windows PowerShell. O parâmetro -ShowCommandInfo substitui a função Get-SerializedCommand existente no módulo Microsoft.PowerShell.Utility, mas o script Get-SerializedCommand ainda está disponível para dar suporte a scripts de nível inferior.
 
 -   Um novo cmdlet Get-ItemPropertyValue permite obter o valor de uma propriedade sem usar a notação de ponto. Por exemplo, nas versões mais antigas do Windows PowerShell, você pode executar o comando a seguir para obter o valor da propriedade Base do Aplicativo da chave do Registro do PowerShellEngine: **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. No Windows PowerShell 5.0, você pode executar **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 
@@ -367,7 +370,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 -   O valor de **$PSVersionTable.PSVersion** foi atualizado para 4.0.
 
--   O comportamento do operador **Where()** foi alterado. `Collection.Where('property –match name')` Não há mais suporte para aceitar uma expressão de cadeia de caracteres no formato `"Property –CompareOperator Value"`. No entanto, o operador **Where()** aceita expressões de cadeia de caracteres no formato de um scriptblock; ainda há suporte para isso.
+-   O comportamento do operador **Where()** foi alterado. `Collection.Where('property -match name')` Não há mais suporte para aceitar uma expressão de cadeia de caracteres no formato `"Property -CompareOperator Value"`. No entanto, o operador **Where()** aceita expressões de cadeia de caracteres no formato de um scriptblock; ainda há suporte para isso.
 
 ### <a name="BKMK_ise"></a>Novos recursos no Ambiente de Script Integrado (ISE) do Windows PowerShell
 
@@ -433,7 +436,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 -   **Get-Module** agora exibe versões de módulo em uma coluna **Version**.
 
--   Remove-Item –Recurse agora remove itens de subpastas conforme o esperado.
+-   Remove-Item -Recurse agora remove itens de subpastas conforme o esperado.
 
 -   Uma propriedade **UserName** foi adicionada aos objetos de saída de **Get-Process**.
 
@@ -752,13 +755,13 @@ O recurso **SharedHost** permite que vários usuários em vários computadores c
 Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath**, que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path**, incluindo os novos cmdlets [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
 
 ## Consulte Também
-[about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
-[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
-[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
+- [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
+- [about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
+- [Usando o Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO5-->
 
 
