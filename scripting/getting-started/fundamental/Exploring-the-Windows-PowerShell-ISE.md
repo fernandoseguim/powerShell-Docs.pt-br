@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c1f285a1d1beb35c931c17f5944d7ec697cb152e
+ms.sourcegitcommit: b59186234a513cf34d2615d90643ee749bd60d3f
+ms.openlocfilehash: d0f9c059f6f5286388af3cfc07995fe46e7321c3
 
 ---
 
@@ -76,11 +76,11 @@ Aumenta ou diminui o tamanho do texto na tela.
 A Ajuda para o ISE do Windows PowerShell está disponível na Web na Biblioteca do TechNet. Você pode abrir a Ajuda clicando em **Ajuda do ISE do Windows PowerShell** no menu **Ajuda** ou pressionando a tecla F1 em qualquer lugar, exceto quando o cursor estiver em um nome de cmdlet no Painel de Script ou no Painel de Console. No menu **Ajuda**, você também pode executar o cmdlet Update-Help e exibir a Janela Comando que auxilia na construção de comandos, mostrando todos os parâmetros para um cmdlet e permitindo preencher os parâmetros em um formulário de fácil utilização.
 
 ## Consulte Também
-[Usando o ISE do Windows PowerShell](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Usando o ISE do Windows PowerShell](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 
