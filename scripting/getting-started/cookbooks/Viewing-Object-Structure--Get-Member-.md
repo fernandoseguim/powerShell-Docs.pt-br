@@ -14,7 +14,7 @@ ms.openlocfilehash: acd52c1271013320dafa7f7bf5c72b752e07574b
 
 ---
 
-# Exibindo a estrutura do objeto (Get-Member)
+# <a name="viewing-object-structure-getmember"></a>Exibindo a estrutura do objeto (Get-Member)
 Como objetos representam um papel central no Windows PowerShell, há vários comandos nativos projetados para trabalhar com tipos de objetos arbitrários. O mais importante é o comando **Get-Member**.
 
 A técnica mais simples para analisar os objetos que um comando retorna é direcionar a saída desse comando para o cmdlet **Get-Member**. O cmdlet **Get-Member** mostra o nome formal do tipo de objeto e uma lista completa de seus membros. O número de elementos que são retornados, às vezes, pode ser imenso. Por exemplo, um objeto de processo pode ter mais de 100 membros.
@@ -77,6 +77,6 @@ Se você precisar examinar propriedades diferentes que o Windows PowerShell exib
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

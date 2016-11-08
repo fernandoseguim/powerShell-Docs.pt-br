@@ -14,12 +14,12 @@ ms.openlocfilehash: de9e8af7908ac6a72a100fd2c86b52c30c390c39
 
 ---
 
-# Obtendo objetos WMI (Get-WmiObject)
+# <a name="getting-wmi-objects-getwmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 
-## Obtendo objetos WMI (Get-WmiObject)
+## <a name="getting-wmi-objects-getwmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 O WMI (Instrumentação de Gerenciamento do Windows) é uma das principais tecnologias para a administração do sistema, pois ela expõe uma grande variedade de informações de maneira uniforme. Devido a quanto o WMI possibilita, o cmdlet do Windows PowerShell para acessar objetos WMI, **Get-WmiObject**, é um dos mais úteis para fazer o trabalho real. Vamos discutir como usar Get-WmiObject para acessar objetos WMI e como usar objetos WMI para fazer coisas específicas.
 
-### Listar classes WMI
+### <a name="listing-wmi-classes"></a>Listar classes WMI
 O primeiro problema que a maioria dos usuários do WMI encontram é tentar descobrir o que pode ser feito com o WMI. As classes WMI descrevem os recursos que podem ser gerenciados. Há centenas de classes WMI, algumas das quais contêm dezenas de propriedades.
 
 O **Get-WmiObject** cuida desse problema, possibilitando que o WMI possa ser descoberto. Você pode obter uma lista das classes WMI disponíveis no computador local digitando:
@@ -72,7 +72,7 @@ __Provider                              __Win32Provider
 ...
 ```
 
-### Exibir detalhes da classe WMI
+### <a name="displaying-wmi-class-details"></a>Exibir detalhes da classe WMI
 Se você já souber o nome de uma classe WMI, poderá usá-la para obter informações imediatamente. Por exemplo, uma das classes WMI geralmente usadas para recuperar informações sobre um computador é **Win32_OperatingSystem**.
 
 ```
@@ -109,7 +109,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ...
 ```
 
-#### Exibindo propriedades não padrão com cmdlets Format
+#### <a name="displaying-nondefault-properties-with-format-cmdlets"></a>Exibindo propriedades não padrão com cmdlets Format
 Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format**. Por exemplo, se você deseja exibir dados de memória disponível, digite:
 
 ```
@@ -139,6 +139,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

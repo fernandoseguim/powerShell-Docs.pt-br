@@ -14,7 +14,7 @@ ms.openlocfilehash: 28bc665c3ffb1b74a2ff922584c31a8657842a0f
 
 ---
 
-# Usando classes e métodos estáticos
+# <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:
 
 ```
@@ -32,10 +32,10 @@ At line:1 char:11
 
 Esses erros ocorrem porque não há nenhuma maneira de criar um novo objeto dessas classes. Essas classes são bibliotecas de referência de métodos e propriedades que não mudam de estado. Não é necessário criá-las, você simplesmente as usa. Classes e métodos como esses são chamados de *classes estáticas* porque não são criados, destruídos ou alterados. Para esclarecer esse ponto, forneceremos exemplos que usam classes estáticas.
 
-### Obtendo dados de ambiente com o System.Environment
+### <a name="getting-environment-data-with-systemenvironment"></a>Obtendo dados de ambiente com o System.Environment
 Normalmente, a primeira etapa ao trabalhar com um objeto no Windows PowerShell é usar Get-Member para descobrir quais membros ele contém. Com classes estáticas, o processo é um pouco diferente porque a classe real não é um objeto.
 
-#### Fazendo referência à classe estática System.Environment
+#### <a name="referring-to-the-static-systemenvironment-class"></a>Fazendo referência à classe estática System.Environment
 Você pode fazer referência a uma classe estática envolvendo o nome de classe entre colchetes. Por exemplo, você pode fazer referência a **System.Environment** digitando o nome entre colchetes. Isso exibe algumas informações de tipo genérico:
 
 ```
@@ -92,7 +92,7 @@ TickCount                               ExitCode
 
 Agora podemos selecionar propriedades a serem exibidas de System.Environment.
 
-#### Exibindo propriedades estáticas do System.Environment
+#### <a name="displaying-static-properties-of-systemenvironment"></a>Exibindo propriedades estáticas do System.Environment
 As propriedades do System.Environment também são estáticas e devem ser especificadas de forma diferente que as propriedades normais. Usamos **::** para indicar ao Windows PowerShell que queremos trabalhar com uma propriedade ou método estático. Para ver o comando que foi usado para iniciar o Windows PowerShell, verificamos a propriedade **CommandLine** digitando:
 
 ```
@@ -117,7 +117,7 @@ PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-### Fazendo cálculos com o System.Math
+### <a name="doing-math-with-systemmath"></a>Fazendo cálculos com o System.Math
 A classe estática System.Math é útil para executar algumas operações matemáticas. Os membros importantes do **System.Math** são em sua maioria métodos, que podemos exibir usando **Get-Member**.
 
 > [!NOTE]
@@ -190,6 +190,6 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 
