@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: c334a38d6686be45101f4569f38411e9703c8fea
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: 86cb3485445fdb00c9b99a20694b9bf12a6e8f2c
 
 ---
 
@@ -42,7 +42,7 @@ $psISE.CurrentPowerShellTab.Files.Add("$pshome\Examples\profile.ps1")
 
  **File** – cadeia de caracteres, o arquivo ISEFile que você deseja remover da coleção. Se o arquivo não tiver sido salvo, esse método disparará uma exceção. Use o parâmetro de comutador **Force** para forçar a remoção de um arquivo que não foi salvo.
 
- **\[Force\]** – booliano opcional, se definido como **$true**, concederá permissão para remover o arquivo mesmo se ele não tiver sido salvo após a última utilização. O padrão é **$false**.
+ **\[Force\]** – booliano opcional, se definido como **$true**, concederá permissão para remover o arquivo mesmo se ele não tiver sido salvo após o último uso. O padrão é **$false**.
 
 ```
 # Removes the first opened file from the file collection associated with the current PowerShell tab.
@@ -71,15 +71,15 @@ $psISE.CurrentPowerShellTab.Files.SetSelectedFile($firstfile)
 ```
 
 ## Consulte Também
- [O objeto ISEFile](The-ISEFile-Object.md) 
- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+- [O objeto ISEFile](The-ISEFile-Object.md) 
+- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

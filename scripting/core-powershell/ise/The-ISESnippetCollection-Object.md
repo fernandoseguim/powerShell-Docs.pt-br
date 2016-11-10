@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: ae974955-4282-4cbc-8c42-0fff1904ef32
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d7debb2ca5560839f7fdb986d26255dba930d8f5
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: 410cd4503883ea2cc02936044d7357b9cb029274
 
 ---
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: d7debb2ca5560839f7fdb986d26255dba930d8f5
 
  Carrega um arquivo .snippets.ps1xml que contém os trechos de código definidos pelo usuário. A maneira mais fácil de criar trechos de código é usar o novo cmdlet New-IseSnippet, que os armazena automaticamente em sua pasta de perfil para que sejam carregados sempre que você iniciar o ISE do Windows PowerShell.
 
- **FilePathName** – cadeia de caracteres, o caminho e o nome de arquivo para um arquivo .snippets.ps1xml que contém definições de trecho de código.
+ **FilePathName** – a cadeia de caracteres, o caminho e o nome de arquivo para um arquivo .snippets.ps1xml que contém definições de trecho de código.
 
 ```
 # Loads a custom snippet file into the current PowerShell tab.
@@ -33,15 +33,15 @@ $SnipFile = Join-Path ( Split-Path $profile) “Snippets\MySnips.snippets.ps1xml
 ```
 
 ## Consulte Também
- [O ISESnippetObject](The-ISESnippetObject.md) 
- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+- [O ISESnippetObject](The-ISESnippetObject.md) 
+- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

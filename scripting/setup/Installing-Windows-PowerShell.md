@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 00249ec98e1624a949fe11fee8be9e93018578a9
+ms.sourcegitcommit: 2aa04e8094fee4b0da3d5e7025cca215d542355e
+ms.openlocfilehash: 5b79069bdd57bb62f2cde2c92c981de98e898492
 
 ---
 
@@ -102,11 +102,11 @@ Em sistemas Windows Server 2008, o Windows Management Framework (Windows PowerSh
 5.  Instale o Windows Management Framework 3.0 do Centro de Download da Microsoft em [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
 
 ## Consulte Também
-[Requisitos do Sistema do Windows PowerShell](Windows-PowerShell-System-Requirements.md)
-[Iniciando o Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
+- [Requisitos do Sistema do Windows PowerShell](Windows-PowerShell-System-Requirements.md)
+- [Iniciando o Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 
