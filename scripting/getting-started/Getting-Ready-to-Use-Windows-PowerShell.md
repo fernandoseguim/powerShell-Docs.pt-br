@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 52d55ff10a9118bea2a34a53452fd252d1e17580
+ms.sourcegitcommit: 416d21d2a2fa3d837eba19b1023e4045a124e23c
+ms.openlocfilehash: 9229df48b00c125e04d0f97536697495d0ca01ed
 
 ---
 
@@ -28,12 +28,12 @@ Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes
     OBSERVAÇÃO: se a comunicação remota estiver habilitada em um computador que executa o Windows PowerShell 2.0, a comunicação remota ainda estará habilitada após a instalação do Windows Management Framework 3.0. No entanto, no Windows Server 2008 (não no Windows Server 2008 R2), você deve habilitar novamente a comunicação remota após instalar o Windows Management Framework 3.0.
 
 ## Consulte Também
-[Instalar o Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
-[Iniciando o Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
+- [Instalar o Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
+- [Iniciando o Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 
