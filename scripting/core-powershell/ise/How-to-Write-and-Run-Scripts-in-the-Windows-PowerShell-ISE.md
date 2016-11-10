@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6e58c298725254a84819856070b9702340fcf81d
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: 068ea5b8de5463c492c894d313ac1f266c449797
 
 ---
 
@@ -150,11 +150,11 @@ O ISE do Windows PowerShell dá suporte às seguintes opções de codificação:
 O ISE do Windows PowerShell não altera a codificação de scripts criados por outros editores, mesmo quando você usa os comandos Salvar ou Salvar Como no ISE do Windows PowerShell.
 
 ## Consulte Também
-[Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
+- [Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 
