@@ -3,13 +3,15 @@
 # [Configurações](configurations.md)
 ## [Aplicando configurações](enactingConfigurations.md)
 ## [Usando recursos com várias versões](sxsResource.md)
-## [Executar DSC com as credenciais do usuário](runAsUser.md)
+## [Executando DSC com as credenciais do usuário](runAsUser.md)
 ## [Especificando dependências de nó cruzado](crossNodeDependencies.md)
 ## [Dados de configuração](configData.md)
 ### [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 ## [Protegendo o arquivo MOF de configuração](secureMOF.md)
-## [Configurações Parciais](partialConfigs.md)
+## [Configurações parciais](partialConfigs.md)
 ## [Escrever ajuda para configurações de DSC](configHelp.md)
+## [Configurar uma máquina virtual na inicialização inicial usando DSC](bootstrapDsc.md)
+### [Chave do Registro de DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 
 # [Recursos](resources.md)
 ## [Recursos internos](builtInResource.md)
@@ -35,7 +37,7 @@
 ## [Depurando os recursos de DSC](debugResource.md)
 ## [Chamando métodos do recurso DSC diretamente](directCallResource.md)
 
-# [Configurando o Gerenciador de Configurações Local (LCM)](metaConfig.md)
+# [Configurando o LCM (Gerenciador de Configurações Local)](metaConfig.md)
 ## [Configurando o LCM no PowerShell 4.0](metaConfig4.md)
 
 # O modelo de pull de DSC
@@ -47,7 +49,7 @@
 ## [Usando um servidor de relatório de DSC](reportServer.md)
 ## [Práticas recomendadas do servidor de pull](secureServer.md)
 
-# [Solucionando problemas de DSC](troubleshooting.md)
+# [Solução de problemas do DSC](troubleshooting.md)
 
 # [Usando DSC no Nano Server](nanoDsc.md)
 
@@ -91,6 +93,6 @@
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 
