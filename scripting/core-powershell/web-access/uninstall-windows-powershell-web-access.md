@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d54139714552943901f565a8525bb478ed308f09
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d
 
 ---
 
@@ -74,17 +74,17 @@ Se você tiver especificado seu próprio nome de site personalizado, adicione o 
 
     -   Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
-2.  Digite o seguinte e pressione **Enter**, em que *computer_name* representa um servidor remoto do qual você deseja remover o Windows PowerShell Web Access. O parâmetro <span class="code">–Restart</span> reinicia automaticamente os servidores de destino se exigido pela remoção.
+2.  Digite o seguinte e pressione **Enter**, em que *computer_name* representa um servidor remoto do qual você deseja remover o Windows PowerShell Web Access. O parâmetro <span class="code">-Restart</span> reinicia automaticamente os servidores de destino se exigido pela remoção.
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_7b534520-f292-471f-89e3-a1079c03e369'); "Copy to clipboard.")
 
-        Uninstall-WindowsFeature –Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
+        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
 
     Para remover funções e recursos de um VHD offline, adicione os parâmetros <span class="code">ComputerName</span> e <span class="code">VHD</span>. O parâmetro <span class="code">-ComputerName</span> contém o nome do servidor em que será montado o VHD e o parâmetro <span class="code">-VHD</span> contém o caminho para o arquivo VHD no servidor especificado.
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_5d8f91ee-b91a-4653-b7df-e745187fd72d'); "Copy to clipboard.")
 
-        Uninstall-WindowsFeature –Name WindowsPowerShellWebAccess –VHD <path> -ComputerName <computer_name> -Restart
+        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart
 
 3.  Quando a remoção for concluída, verifique se você removeu o Windows PowerShell Web Access abrindo a página **Todos os Servidores** no Gerenciador do Servidor, selecionando um servidor do qual você removeu o recurso e exibindo o bloco **Funções e Recursos** na página do servidor selecionado. Você também pode executar o cmdlet <span class="code">Get-WindowsFeature</span> de destino no servidor selecionado (Get-WindowsFeature -ComputerName &lt;*computer_name*&gt;) para exibir uma lista de funções e recursos que estão instalados no servidor.
 
@@ -213,12 +213,12 @@ Fale mais
 
 © 2016 Microsoft
 
-Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso de ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
+Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

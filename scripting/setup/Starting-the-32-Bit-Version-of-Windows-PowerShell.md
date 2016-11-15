@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 310f898a471ca60da4d9ebe5234ee86a636e44b5
+ms.sourcegitcommit: fa0a541965b4121b8e8ac677b3c38e6f316b4553
+ms.openlocfilehash: 4e6a0e7f8935b905d1cb19576541d1b532fcba21
 
 ---
 
@@ -31,7 +31,7 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos p
 
 -   Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### No Windows Server 2012
+#### No Windows Server® 2012
 
 -   Na tela **Iniciar**, digite **PowerShell** e clique em **Windows PowerShell (x86)**.
 
@@ -41,7 +41,7 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos p
 
 -   Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### No Windows 8.1
+#### No Windows® 8.1
 
 -   Na tela **Iniciar**, clique em **Windows PowerShell (x86)**. Clique no bloco **Windows PowerShell x86**.
 
@@ -51,7 +51,7 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos p
    
 -   Por meio da linha de comando, digite: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### No Windows 8
+#### No Windows® 8
 
 -   Na tela **Iniciar**, mova o cursor para o canto superior direito, clique em **Configurações**, **Blocos** e mova o controle deslizante **Mostrar Ferramentas Administrativas** para Sim. Em seguida, digite **PowerShell** e clique em **Windows PowerShell (x86)**.
 
@@ -63,6 +63,6 @@ Para iniciar uma versão de 32 bits do Windows PowerShell, use qualquer um dos p
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

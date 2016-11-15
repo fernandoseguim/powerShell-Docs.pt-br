@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 061e22c26853664c89adc023d43802628859b9a6
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: bfb36e6313379080ee071ec1df41992b945d2d83
 
 ---
 
@@ -19,7 +19,7 @@ O ISE (Ambiente de Script Integrado) do Windows PowerShell é um dos dois hosts 
 
 O ISE permite executar comandos em um painel de console, mas também dá suporte a painéis que você pode usar para exibir o código-fonte do seu script e outras ferramentas que podem ser conectadas ao ISE simultaneamente. Você ainda pode abrir várias janelas de script ao mesmo tempo, o que é especialmente útil quando você estiver depurando um script que usa funções definidas em outros scripts ou módulos.
 
-## <a name="BKMK_NEW"></a>O que há de novo
+## O que há de novo
 Aqui estão alguns dos recursos que foram adicionados ao ISE nas versões mais recentes do PowerShell.
 
 ### Adicionado no PowerShell 3.0 (Windows Server 2012 e Windows 8)
@@ -35,7 +35,7 @@ O **IntelliSense** preenche automaticamente seus comandos exibindo menus de cmdl
 
 **Painel de Console mesclado**. Em versões anteriores do ISE, havia painéis separados de Comando e Saída. Agora eles são combinados em um único painel que reflete mais diretamente o que você vê no Console do Windows PowerShell.
 
-**Opções de linha de comando**. Várias opções de linha de comando novas oferecem mais controle sobre o funcionamento do ISE. -NoProfile inicia o ISE sem executar um script de perfil. –Help abre uma janela de ajuda com o ISE. -mta inicia o ISE em modo "multi-threaded apartment". O padrão é single-threaded.
+**Opções de linha de comando**. Várias opções de linha de comando novas oferecem mais controle sobre o funcionamento do ISE. -NoProfile inicia o ISE sem executar um script de perfil. -Help abre uma janela de ajuda com o ISE. -mta inicia o ISE no modo "multi-threaded apartment". O padrão é single-threaded.
 
 **Novos recursos do editor** facilitam criar e ler seu código:
 
@@ -64,12 +64,12 @@ O ISE está disponível em qualquer computador que execute o Windows PowerShell 
 > [!NOTE]
 > Como o ISE do Windows PowerShell requer uma interface do usuário gráfica, você não pode executá-lo em uma opção Server Core do Windows Server.
 
-## <a name="BKMK_LINKS"></a>Consulte também
-[Usando o Ambiente de Script Integrado do Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx)
+## Consulte também
+- [Usando o Ambiente de Script Integrado do Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

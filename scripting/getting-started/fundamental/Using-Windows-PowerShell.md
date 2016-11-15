@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 994e6c89f6fc20b95691f010deb3c48062cef310
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 9563e58d2840c7cc2120b58b041660aaeee12830
 
 ---
 
@@ -78,6 +78,6 @@ Os tópicos a seguir descrevem como você pode obter a Ajuda mais recente para o
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
