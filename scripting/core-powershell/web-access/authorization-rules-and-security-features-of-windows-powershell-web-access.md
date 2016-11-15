@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: dc50a729855a71d61c187da9d698bd294f740546
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: f62b1e0ec9f26e1b2bcb364c78a2ce39467655a5
 
 ---
 
@@ -212,15 +212,15 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_1079478f-cd51-4d35-8022-4b532a9d57a4'); "Copy to clipboard.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual tipicamente tem acesso, com acesso a uma configuração de sessão específica, voltada para as necessidades típicas de script e cmdlet do usuário. No exemplo a seguir, um usuário nomeado <span class="code">JSmith</span> no domínio <span class="code">Contoso</span> ganha acesso para gerenciar o computador <span class="code">Contoso_214</span> e usa uma configuração de sessão nomeada <span class="code">NewAdminsOnly</span>.
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4e760377-e401-4ef4-988f-7a0aec1b2a90'); "Copy to clipboard.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
+4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
 #### Para remover uma regra de autorização
 
@@ -265,7 +265,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
 
 -   Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define duas regras: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
 
--   Um administrador configurou um ambiente de teste privado e deseja permitir que todos os usuários da rede autorizados acessem todos os computadores na rede aos quais têm acesso normalmente, com acesso a todas as configurações de sessão que acessam tipicamente. Como esse é um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura. O administrador executa o cmdlet <span class="code">Add-PswaAuthorizationRule \* \* \*</span>, que usa o caractere curinga **\*** para representar todos os usuários, todos os computadores e todas as configurações. Essa regra é o equivalente ao seguinte: <span class="code">Add-PswaAuthorizationRule –UserName \* -ComputerName \* -ConfigurationName \*</span>.
+-   Um administrador configurou um ambiente de teste privado e deseja permitir que todos os usuários da rede autorizados acessem todos os computadores na rede aos quais têm acesso normalmente, com acesso a todas as configurações de sessão que acessam tipicamente. Como esse é um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura. O administrador executa o cmdlet <span class="code">Add-PswaAuthorizationRule \* \* \*</span>, que usa o caractere curinga **\*** para representar todos os usuários, todos os computadores e todas as configurações. Essa regra é o equivalente ao seguinte: <span class="code">Add-PswaAuthorizationRule -UserName \* -ComputerName \* -ConfigurationName \*</span>.
 
     <table>
     <colgroup>
@@ -287,7 +287,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
 
     [Cópia](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8d183d3d-1c19-44b8-9297-530b0efc7c79'); "Copy to clipboard.")
 
-        Add-PswaAuthorizationRule –userName PswaServer\chrisLocal –computerName srv1.contoso.com –configurationName Microsoft.PowerShell
+        Add-PswaAuthorizationRule -userName PswaServer\chrisLocal -computerName srv1.contoso.com -configurationName Microsoft.PowerShell
 
     O exemplo da regra anterior autentica Carlos no servidor de gateway e depois autoriza seu acesso ao *srv1*. Na página de entrada, Carlos deve fornecer um segundo conjunto de credenciais na área **Configurações de conexão opcional** (*contoso\\carlos*). O servidor de gateway usa o conjunto adicional de credenciais para efetuar a autenticação do usuário no computador de destino, *srv1.contoso.com*.
 
@@ -422,12 +422,12 @@ Fale mais
 
 © 2016 Microsoft
 
-Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso de ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
+Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

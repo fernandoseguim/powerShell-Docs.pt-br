@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: b6189e43fc9579a29d598deb705bb8e4e32e4a4f
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 34fc34fa752e8f67e9bdb015c234da83e80b7328
 
 ---
 
@@ -87,6 +87,6 @@ O pacote Windows Management Framework 3.0 que instala o Windows PowerShell 3.0 n
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
