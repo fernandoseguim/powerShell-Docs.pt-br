@@ -8,12 +8,12 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 8e486891a4e5db20389d6ae65d00c42e1308af35
-ms.openlocfilehash: 4ab20cdcac6f10dc9ecab6d85b38f413e0ade8b0
+ms.sourcegitcommit: 08f91852d698954d6c3211bf8a429fe3b4143084
+ms.openlocfilehash: 1c9a3ca18995621332cbd05a2147c7b0f71e619e
 
 ---
 
-# Configurando um servidor de pull da Web de DSC
+# <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -29,12 +29,12 @@ Requisitos para usar um servidor de pull:
 
 É possível adicionar a função de servidor do IIS e o Serviço de DSC com o assistente Adicionar funções e recursos no Gerenciador do Servidor ou usando PowerShell. Os scripts de exemplo incluídos neste tópico também cuidarão dessas duas etapas.
 
-## Usando o recurso xWebService
+## <a name="using-the-xwebservice-resource"></a>Usando o recurso xWebService
 A maneira mais fácil de configurar um servidor de pull da Web é usar o recurso xWebService, incluído no módulo xPSDesiredStateConfiguration. As etapas a seguir explicam como usar o recurso em uma configuração que configure o serviço Web.
 
 1. Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX. Instale o certificado no nó que se tornará o servidor de Pull de DSC no local padrão, que deve ser CERT: \LocalMachine\My. Anote a impressão digital do certificado.
-1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar uma usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, consulte a seção [Chave de Registro](#RegKey) abaixo.
+1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um, usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```' ou '```New-Guid```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, consulte a seção [Chave de Registro](#RegKey) abaixo.
 1. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta Example do módulo **xPSDesiredStateConfiguration** como Sample_xDscWebService.ps1). Esse script configura o servidor de pull.
   
 ```powershell
@@ -53,7 +53,8 @@ configuration Sample_xDscPullServer
      ) 
  
  
-     Import-DSCResource -ModuleName xPSDesiredStateConfiguration 
+     Import-DSCResource -ModuleName xPSDesiredStateConfiguration
+     Import-DSCResource –ModuleName PSDesiredStateConfiguration
 
      Node $NodeName 
      { 
@@ -65,15 +66,16 @@ configuration Sample_xDscPullServer
  
          xDscWebService PSDSCPullServer 
          { 
-             Ensure                  = 'Present' 
-             EndpointName            = 'PSDSCPullServer' 
-             Port                    = 8080 
-             PhysicalPath            = "$env:SystemDrive\inetpub\PSDSCPullServer" 
-             CertificateThumbPrint   = $certificateThumbPrint          
-             ModulePath              = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules" 
-             ConfigurationPath       = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" 
-             State                   = 'Started'
-             DependsOn               = '[WindowsFeature]DSCServiceFeature'                         
+             Ensure                   = 'Present' 
+             EndpointName             = 'PSDSCPullServer' 
+             Port                     = 8080 
+             PhysicalPath             = "$env:SystemDrive\inetpub\PSDSCPullServer" 
+             CertificateThumbPrint    = $certificateThumbPrint          
+             ModulePath               = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules" 
+             ConfigurationPath        = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" 
+             State                    = 'Started'
+             DependsOn                = '[WindowsFeature]DSCServiceFeature'     
+             UseSecurityBestPractices = $true
          } 
 
         File RegistrationKeyFile
@@ -102,7 +104,7 @@ Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301F
 Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
 ```
 
-## Chave de Registro
+## <a name="registration-key"></a>Chave de Registro
 Para permitir que nós clientes sejam registrados com o servidor para poderem utilizar nomes de configuração em vez de uma ID de configuração, uma chave de registro que foi criada pela configuração acima é salva em um arquivo chamado `RegistrationKeys.txt` em `C:\Program Files\WindowsPowerShell\DscService`. A chave de registro funciona como um segredo compartilhado usado durante o registro inicial pelo cliente com o servidor de pull. O cliente gerará um certificado autoassinado, que será usado para autenticar de modo exclusivo com o servidor de pull depois que o registro for concluído com êxito. A impressão digital do certificado é armazenada localmente e associada à URL do servidor de pull.
 > **Observação**: não há suporte para chaves do registro no PowerShell 4.0. 
 
@@ -144,20 +146,20 @@ A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração sign
 
 >**Observação**: em um cenário PUSH, existe um bug na versão atual que torna necessário definir uma propriedade ConfigurationID no arquivo de metaconfiguração para nós que nunca foram registrados com um servidor pull. Isso forçará o uso do protocolo de Servidor de Pull V1 e evitará mensagens de falha de registro.
 
-## Colocando configurações e recursos
+## <a name="placing-configurations-and-resources"></a>Colocando configurações e recursos
 Após a instalação do servidor pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente. 
 
-### Formato de pacote do módulo de recursos DSC
+### <a name="dsc-resource-module-package-format"></a>Formato de pacote do módulo de recursos DSC
 Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir: **{Nome do Módulo}_{Versão do Módulo}.zip**. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 Use `new-dscchecksum {module zip file}` para criar um arquivo de soma de verificação para o módulo adicionado recentemente.
 
-### Formato MOF de configuração 
+### <a name="configuration-mof-format"></a>Formato MOF de configuração 
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e seus arquivos de soma de verificação associados na pasta **ConfigurationPath**.
 
 >**Observação**: se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
 
-## Ferramentas
+## <a name="tooling"></a>Ferramentas
 Para facilitar a configuração, validação e gerenciamento do servidor de pull, as ferramentas a seguir são incluídas como exemplos na versão mais recente do módulo xPSDesiredStateConfiguration:
 1. Um módulo que ajudará com empacotamento de módulos de recursos DSC e arquivos de configuração para uso no servidor de pull. [PublishModulesAndMofsToPullServer.psm1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PublishModulesAndMofsToPullServer.psm1). Exemplos abaixo:
 
@@ -173,7 +175,7 @@ Para facilitar a configuração, validação e gerenciamento do servidor de pull
 1. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/Examples/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
 
-## Configuração do cliente de pull 
+## <a name="pull-client-configuration"></a>Configuração do cliente de pull 
 Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 
 * [Configurando um cliente de pull de DSC usando uma ID de configuração](pullClientConfigID.md)
@@ -181,7 +183,7 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 * [Configurações parciais](partialConfigs.md)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Aplicando configurações](enactingConfigurations.md)
 * [Usando um servidor de relatório de DSC](reportServer.md)
@@ -189,6 +191,6 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

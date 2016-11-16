@@ -8,18 +8,18 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 4c802002c6a03a27d02221dd713677911a77c30b
+ms.sourcegitcommit: 49ddf6faf98a51f7ad5252e9563b1543478ed113
+ms.openlocfilehash: 9090f4be2987b8a56ba4d839f54e05082a8bcfa0
 
 ---
 
-# Aplicando configurações
+# <a name="enacting-configurations"></a>Aplicando configurações
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Há duas maneiras de aplicar configurações da Configuração de Estado Desejado (DSC) do PowerShell: modo de push e modo de pull.
 
-## Modo de push
+## <a name="push-mode"></a>Modo de push
 
 ![Modo de push](images/Push.png "How push mode works")
 
@@ -27,10 +27,10 @@ O modo de push se refere a um usuário aplicando ativamente uma configuração a
 
 Depois de criar e compilar uma configuração, você pode aplicá-la no modo de push chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), definindo o parâmetro -Path do cmdlet para o caminho em que se encontra o MOF de configuração. Por exemplo, se o MOF da configuração estiver localizado em `C:\DSC\Configurations\localhost.mof`, você o aplicaria no computador local com o seguinte comando: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
-> __Observação__: por padrão, a DSC executa uma configuração como um trabalho em segundo plano. Para executar a configuração interativamente, chame o [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) com o parâmetro __-Wait__.
+> __Observação__: por padrão, a DSC executa uma configuração como um trabalho em segundo plano. Para executar a configuração interativamente, chame o [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) com o parâmetro __-Wait__.
 
 
-## Modo de pull
+## <a name="pull-mode"></a>Modo de pull
 
 ![Modo Pull](images/Pull.png "How pull mode works")
 
@@ -43,12 +43,12 @@ Se preferir tirar proveito de um serviço online para hospedar a funcionalidade 
 Os tópicos a seguir explicam como configurar clientes e servidores de pull:
 
 - [Configurando um servidor de pull da Web](pullServer.md)
-- [Configurando um servidor de pull SMB](pullServerSMB.md)
+- [Configurando um servidor de pull da Web e SMB](pullServerSMB.md)
 - [Configurando um cliente de pull](pullClientConfigID.md)
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
