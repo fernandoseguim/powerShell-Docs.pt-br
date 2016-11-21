@@ -14,10 +14,10 @@ ms.openlocfilehash: b81bcbd37cdfebc04fbc7ef92d76f0769c135713
 
 ---
 
-# Acessibilidade no ISE do Windows PowerShell
+# <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell® que podem ser úteis.
 
-* [Como alterar o tamanho e o local dos Painéis de Console e de Script](#bkmk_1)
+* [Como alterar o tamanho e o local dos Painéis de console e de script](#bkmk_1)
 * [Atalhos de teclado para edição de texto](#bkmk_2)
 * [Atalhos de teclado para execução de scripts](#bkmk_3)
 * [Atalhos de teclado para personalizar a exibição](#bkmk_4)
@@ -35,16 +35,16 @@ O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os defic
 
 -   Alteração do tamanho do texto
 
-## <a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script
+## <a name="a-namebkmk1ahow-to-change-the-size-and-location-of-the-console-and-script-panes"></a><a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script
 Você pode usar as etapas a seguir para alterar o tamanho e o local do Painel de Console e do Painel de Script. Quando você abrir o ISE do Windows PowerShell novamente, as alterações de tamanho e localização feitas serão mantidas.
 
-### Para redimensionar o Painel de Script e o Painel de Console
+### <a name="to-resize-the-script-pane-and-console-pane"></a>Para redimensionar o Painel de Script e o Painel de Console
 
 1.  Coloque o ponteiro na linha de divisão entre o Painel de Script e o Painel de Console.
 
 2.  Quando o ponteiro do mouse mudar para uma seta dupla, arraste a borda para alterar o tamanho do painel.
 
-### Para mover o Painel de Script e o Painel de Console
+### <a name="to-move-the-script-pane-and-console-pane"></a>Para mover o Painel de Script e o Painel de Console
 Realize um dos seguintes procedimentos:
 
 -   Para mover o Painel de Script acima do Painel Console, pressione **Ctrl+1** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Acima** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Acima**.
@@ -57,24 +57,24 @@ Realize um dos seguintes procedimentos:
 
 -   Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir**, clique para marcar a opção de menu **Mostrar Painel de Script**.
 
-## <a name="bkmk_2"></a>Atalhos de teclado para edição de texto
+## <a name="a-namebkmk2akeyboard-shortcuts-for-editing-text"></a><a name="bkmk_2"></a>Atalhos de teclado para edição de texto
 Você pode usar os seguintes atalhos de teclado ao editar texto.
 
 |Ação|Atalhos do teclado|Usar em|
 |----------|----------------------|----------|
-|**Cópia**|Ctrl+C|Painel de script, o painel de console|
+|**Copiar**|Ctrl+C|Painel de script, o painel de console|
 |**Recortar**|Ctrl+X|Painel de script, o painel de console|
-|**Localizar no Script**|Ctrl+F|Painel de Script|
-|**Localizar Próximo no Script**|F3|Painel de Script|
-|**Localizar Anterior no Script**|Shift+F3|Painel de Script|
+|**Localizar no script**|Ctrl+F|Painel de Script|
+|**Localizar próximo no script**|F3|Painel de Script|
+|**Localizar anterior no script**|Shift+F3|Painel de Script|
 |**Colar**|Ctrl+V|Painel de script, o painel de console|
 |**Refazer**|Ctrl+Y|Painel de script, o painel de console|
-|**Substituir no Script**|Ctrl+H|Painel de Script|
+|**Substituir no script**|Ctrl+H|Painel de Script|
 |**Salvar**|Ctrl+S|Painel de Script|
-|**Selecionar Tudo**|Ctrl+A|Painel de script, o painel de console|
+|**Selecionar tudo**|Ctrl+A|Painel de script, o painel de console|
 |**Desfazer**|Ctrl+Z|Painel de script, o painel de console|
 
-## <a name="bkmk_3"></a>Atalhos de teclado para execução de scripts
+## <a name="a-namebkmk3akeyboard-shortcuts-for-running-scripts"></a><a name="bkmk_3"></a>Atalhos de teclado para execução de scripts
 Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de Script.
 
 |Ação|Atalho do Teclado|
@@ -82,28 +82,28 @@ Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de
 |**Novo**|Ctrl+N|
 |**Abrir**|Ctrl+O|
 |**Executar**|F5|
-|**Executar Seleção**|F8|
-|**Parar Execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
+|**Executar seleção**|F8|
+|**Parar execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
 |**Tab** (para o próximo script)|Ctrl+Tab **Observação:** Tab para o próximo script só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
 |**Tab** (para o script anterior)|Ctrl+Shift+Tab **Observação:** Tab para o script anterior só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
 
-## <a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição
+## <a name="a-namebkmk4akeyboard-shortcuts-for-customizing-the-view"></a><a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição
 Você pode usar os seguintes atalhos de teclado para personalizar a exibição no ISE do Windows PowerShell. Eles são acessíveis de todos os painéis no aplicativo.
 
 |Ação|Atalho do Teclado|
 |----------|---------------------|
-|**Ir para Painel de Console**|Ctrl+D|
-|**Ir para o Painel de Script**|Ctrl+I|
-|**Mostrar Painel de Script**|Ctrl+R|
-|**Ocultar Painel de Script**|Ctrl+R|
+|**Ir para o Painel de console**|Ctrl+D|
+|**Ir para o Painel de script**|Ctrl+I|
+|**Mostrar Painel de script**|Ctrl+R|
+|**Ocultar Painel de script**|Ctrl+R|
 ||
-|**Mover o Painel de Script para cima**|Ctrl+1|
-|**Mover o Painel de Script para a direita**|Ctrl+2|
-|**Maximizar o Painel de Script**|Ctrl+3|
+|**Mover o Painel de script para cima**|Ctrl+1|
+|**Mover o Painel de script para a direita**|Ctrl+2|
+|**Maximizar o Painel de script**|Ctrl+3|
 |**Ampliar**|Ctrl+Sinal de adição|
 |**Reduzir**|Ctrl+Sinal de subtração|
 
-## <a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts
+## <a name="a-namebkmk5akeyboard-shortcuts-for-debugging-scripts"></a><a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts
 Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 
 |Ação|Atalho do Teclado|Usar em|
@@ -112,11 +112,11 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 |**Intervir**|F11|Painel de Script ao depurar um script|
 |**Contornar**|F10|Painel de Script ao depurar um script|
 |**Sair**|Shift+F11|Painel de Script ao depurar um script|
-|**Exibir Pilha de Chamadas**|Ctrl+Shift+D|Painel de Script ao depurar um script|
-|**Listar Pontos de Interrupção**|Ctrl+Shift+L|Painel de Script ao depurar um script|
-|**Alternar Ponto de Interrupção**|F9|Painel de Script ao depurar um script|
-|**Remover Todos os Pontos de Interrupção**|Ctrl+Shift+F9|Painel de Script ao depurar um script|
-|**Parar Depurador**|Shift+F5|Painel de Script ao depurar um script|
+|**Exibir pilha de chamadas**|Ctrl+Shift+D|Painel de Script ao depurar um script|
+|**Listar pontos de interrupção**|Ctrl+Shift+L|Painel de Script ao depurar um script|
+|**Alternar ponto de interrupção**|F9|Painel de Script ao depurar um script|
+|**Remover todos os pontos de interrupção**|Ctrl+Shift+F9|Painel de Script ao depurar um script|
+|**Parar depurador**|Shift+F5|Painel de Script ao depurar um script|
 
 > [!NOTE]
 > Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar Enter.
@@ -128,12 +128,12 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 |**Contornar**|V|Painel de Console ao depurar um script|
 |**Sair**|O|Painel de Console ao depurar um script|
 |**Repetir Último Comando** (para Intervir ou Contornar)|Enter|Painel de Console ao depurar um script|
-|**Exibir Pilha de Chamadas**|K|Painel de Console ao depurar um script|
-|**Parar Depuração**|Q|Painel de Console ao depurar um script|
-|**Listar o Script**|L|Painel de Console ao depurar um script|
-|**Exibir Comandos de Depuração do Console**|H ou ?|Painel de Console ao depurar um script|
+|**Exibir pilha de chamadas**|K|Painel de Console ao depurar um script|
+|**Parar depuração**|Q|Painel de Console ao depurar um script|
+|**Listar o script**|L|Painel de Console ao depurar um script|
+|**Exibir comandos de depuração do console**|H ou ?|Painel de Console ao depurar um script|
 
-## <a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell
+## <a name="a-namebkmk6akeyboard-shortcuts-for-windows-powershell-tabs"></a><a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell
 Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows PowerShell.
 
 |Ação|Atalho do Teclado|
@@ -143,7 +143,7 @@ Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows 
 |**Guia anterior do PowerShell**|Ctrl+Shift+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
 |**Próxima guia do Windows PowerShell**|Ctrl+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
 
-## <a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair
+## <a name="a-namebkmk7akeyboard-shortcuts-for-starting-and-exiting"></a><a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair
 Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.
 
 |Ação|Atalho do Teclado|
@@ -151,12 +151,12 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 |**Sair**|Alt+F4|
 |**Iniciar o PowerShell.exe** (console do Windows PowerShell)|Ctrl+Shift+P|
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Usando o ISE do Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
