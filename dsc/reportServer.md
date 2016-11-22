@@ -8,12 +8,12 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 59793e1701740dc783439cf1408c6efabd53cbcf
-ms.openlocfilehash: d541f37723d77cf0b52012bae143dc7d64efd65d
+ms.sourcegitcommit: 1e7bc38f03dd72fc29d004eb92bf130c416e490a
+ms.openlocfilehash: f7f2699287e76970d0b2565f7bbd45a5d75ac93a
 
 ---
 
-# Usando um servidor de relatório de DSC
+# <a name="using-a-dsc-report-server"></a>Usando um servidor de relatório de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: d541f37723d77cf0b52012bae143dc7d64efd65d
 
 O Gerenciador de Configurações Local (LCM) de um nó pode ser configurado para enviar relatórios sobre o status de configuração para um servidor de pull, que, por sua vez, pode ser consultado para recuperar dados. Cada vez que o nó verifica e aplica uma configuração, ele envia um relatório para o servidor de relatório. Esses relatórios são armazenados em um banco de dados no servidor e podem ser recuperados chamando o serviço Web de relatórios. Cada relatório contém informações como quais configurações foram aplicadas e se tiveram êxito, os recursos usados, os erros que foram lançados e os horários de início e término.
 
-## Configurando um nó para enviar relatórios
+## <a name="configuring-a-node-to-send-reports"></a>Configurando um nó para enviar relatórios
 
 Um nó é instruído a enviar relatórios para um servidor usando um bloco **ReportServerWeb** na configuração do LCM do nó (para obter informações sobre como configurar o LCM, confira [Configurando o Gerenciador de Configurações Local](metaConfig.md)). O servidor ao qual o nó envia relatórios deve ser configurado como servidor de pull da Web (não é possível enviar relatórios para um compartilhamento SMB). Para obter informações sobre a configuração de um servidor de pull, consulte [Configurando um servidor de pull da Web de DSC](pullServer.md). O servidor de relatório pode ser o mesmo serviço do qual o nó efetua pull de configurações e obtém recursos ou pode ser um serviço diferente.
  
@@ -94,7 +94,7 @@ PullClientConfig
 
 >**Observação:** você pode nomear o serviço Web que desejar ao configurar um servidor de pull, mas a propriedade **ServerURL** deve corresponder ao nome do serviço.
 
-## Obtendo dados de relatório
+## <a name="getting-report-data"></a>Obtendo dados de relatório
 
 Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço Web. Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web no relatório a seguir: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios. É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) no nó em questão.
 
@@ -105,8 +105,8 @@ O script a seguir gera os relatórios para o nó no qual é executado:
 ```powershell
 function GetReport
 {
-    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCReportServer.svc")
-    $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
+    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
+    $requestUri = "$serviceURL/Node(ConfigurationId= '$AgentId')/StatusReports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
                -ErrorAction SilentlyContinue -ErrorVariable ev
@@ -115,7 +115,7 @@ function GetReport
 }
 ```
     
-## Exibindo dados de relatório
+## <a name="viewing-report-data"></a>Exibindo dados de relatório
 
 Se você definir uma variável como o resultado da função **GetReport**, poderá exibir os campos individuais em um elemento da matriz que é gerada:
 
@@ -222,7 +222,7 @@ InDesiredState    : True
 
 Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer com os dados de relatório. Para obter uma introdução sobre como trabalhar com JSON no PowerShell, consulte [Playing with JSON and PowerShell (Brincando com JSON e PowerShell)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Configurando o Gerenciador de Configurações Local](metaConfig.md)
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
 - [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
@@ -230,6 +230,6 @@ Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer c
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
