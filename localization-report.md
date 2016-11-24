@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2196
+[ Handoff Success Files ](#handoff-success-list)| 2177
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 49
 [ Handback Failed Files ](#handback-failed-list)| 2
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 140
+[ In Sync Handback Files ](#insync-handback-success-list)| 159
 [ Ignored Files ](#ignored-list)| 36
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -23,8 +23,6 @@
  ----------- | ------ | ------- 
  [dsc\authoringResourceClass.md](https://github.com/PowerShell/powerShell-Docs/blob/b414a01bcd111143791a5fac77e61ce309a0a5c5/dsc/authoringResourceClass.md) | HandedOffSuccess | [Details](#b5de1100450a89796c20a5bbb2e71f7759374b029)
  [dsc\authoringResourceMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/b414a01bcd111143791a5fac77e61ce309a0a5c5/dsc/authoringResourceMOF.md) | HandedOffSuccess | [Details](#50b99917f15d290db30da1b1b752d668d886ec5011)
- [dsc\azureDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/azureDsc.md) | HandedOffSuccess | [Details](#b7e0e4e8dba43ff85c77446a2ec593f42316f46014)
- [dsc\bootstrapDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/7d7e4f9784456c897c4779e2bc275d8dc195a29e/dsc/bootstrapDsc.md) | HandedOffSuccess | [Details](#c8920239a3492421b1a5dc39d0ad599083bc466b15)
  [dsc\configData.md](https://github.com/PowerShell/powerShell-Docs/blob/787ac3c3d6ffaf7b1009fe3cfd64a0aefadc32d1/dsc/configData.md) | HandedOffSuccess | [Details](#8d305c67fb22e0d27dc1a36ba93369e9633680d317)
  [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs/blob/49ddf6faf98a51f7ad5252e9563b1543478ed113/dsc/configurations.md) | HandedOffSuccess | [Details](#567ab9528402c7d39d80a997bc14b6c6992cf77220)
  [dsc\DSCAutomationHostEnabled.md](https://github.com/PowerShell/powerShell-Docs/blob/260490003335923d4e1c6b6873b11ee71ba780c0/dsc/DSCAutomationHostEnabled.md) | HandedOffSuccess | [Details](#24842d755aa34ab29c6a5b4f973052476bc907e526)
@@ -33,13 +31,11 @@
  [dsc\logResource.md](https://github.com/PowerShell/powerShell-Docs/blob/62f993e3d3e6ef744fb07920d332d476dfd24fc6/dsc/logResource.md) | HandedOffSuccess | [Details](#60085295fa7df6179a81cd98859cd33e6923150f51)
  [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs/blob/140f60bf7344eae57e2b5d364464bc0b7c1a2220/dsc/metaConfig.md) | HandedOffSuccess | [Details](#5d37938869a71bea0d8a6349e680411b7d0200d953)
  [dsc\packageResource.md](https://github.com/PowerShell/powerShell-Docs/blob/62f993e3d3e6ef744fb07920d332d476dfd24fc6/dsc/packageResource.md) | HandedOffSuccess | [Details](#d07b11c148dfa747b3f9c0157191b83efb6c65df77)
- [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs/blob/7f0d3167538afb1e7f0003466254059372319789/dsc/pullClientConfigNames.md) | HandedOffSuccess | [Details](#03db9843209038f7a14b46cf8a27316f1c63a81983)
  [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4bc84787847c55658077ba0bb21784d59ca5bed7/dsc/pullServer.md) | HandedOffSuccess | [Details](#2d2573612da7388f01467ed2113cfc233e6f4dd684)
  [dsc\registryResource.md](https://github.com/PowerShell/powerShell-Docs/blob/62f993e3d3e6ef744fb07920d332d476dfd24fc6/dsc/registryResource.md) | HandedOffSuccess | [Details](#48b68a99baa489dad38e7072b171db10ee0f738687)
  [dsc\reportServer.md](https://github.com/PowerShell/powerShell-Docs/blob/1e7bc38f03dd72fc29d004eb92bf130c416e490a/dsc/reportServer.md) | HandedOffSuccess | [Details](#f7f2699287e76970d0b2565f7bbd45a5d75ac93a88)
  [dsc\scriptResource.md](https://github.com/PowerShell/powerShell-Docs/blob/62f993e3d3e6ef744fb07920d332d476dfd24fc6/dsc/scriptResource.md) | HandedOffSuccess | [Details](#6b060d17fb106089528b0737ab03cc7d592d412a92)
  [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/be32b4acbfca788532e1b173809a7879ac4ecba0/dsc/secureMOF.md) | HandedOffSuccess | [Details](#68a203ea1c445c3d0269c48ec92c02c407bcd5e193)
- [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/TOC.md) | HandedOffSuccess | [Details](#b60c45e5a779e36784b74589b8d1c1e8f97aff2f99)
  [dsc\troubleshooting.md](https://github.com/PowerShell/powerShell-Docs/blob/99c1ea706ca5c3fb008065e98cc99fef463b1011/dsc/troubleshooting.md) | HandedOffSuccess | [Details](#caf661fe58faf8cf24c789b408505051429df3f4100)
  [gallery\psgallery\contributing_to_psgallery_documentation.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/contributing_to_psgallery_documentation.md) | HandedOffSuccess | [Details](#0be96966d704752ab0fd9d68a8b88e525de0a34a110)
  [gallery\psgallery\Creating-and-Publishing-an-item.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/Creating-and-Publishing-an-item.md) | HandedOffSuccess | [Details](#70db6e1eafefa04eb5be969457275f149870a030111)
@@ -2098,8 +2094,6 @@
  [scripting\core-powershell\core-modules\PSLocalAccount5-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSLocalAccount5-Module.md) | HandedOffSuccess | [Details](#c4a8103deb3b3fc5e9e755cebeb8fe00e6f028692189)
  [scripting\core-powershell\core-modules\PSReadline-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSReadline-Module.md) | HandedOffSuccess | [Details](#6f2493487330c7aa8c5769826f717e1e07462c2f2190)
  [scripting\core-powershell\core-modules\PSScheduledJob-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSScheduledJob-Module.md) | HandedOffSuccess | [Details](#695bb6aa175dad47f786c9aa78c43edccdfb970e2191)
- [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md) | HandedOffSuccess | [Details](#6b5710be87f6362fb3274e333737e31ad477aaee2192)
- [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md) | HandedOffSuccess | [Details](#c935d6f066aed1496069681723aa7bd72edbb8e32194)
  [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md) | HandedOffSuccess | [Details](#39692bf9deda498e05742f0b746af0bd54cb07c32195)
  [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/ab536969fac8ded0e540da3eb138448b4f444f67/scripting/core-powershell/core-powershell.md) | HandedOffSuccess | [Details](#c8f97c3b565e0718b38a8e62a2b9cb9558451fc52196)
  [scripting\core-powershell\ise\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/d015dfae1990c66ea75aa45004b366d1609fb36f/scripting/core-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#460ab6d82b694266d31b09779866f746b56c9f512198)
@@ -2107,7 +2101,6 @@
  [scripting\core-powershell\ise\How-to-Use-Profiles-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/cb3db96ff87078756166df9f90d44d88cdfd155f/scripting/core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#3543503655cc506c4c0f8a7f3d1056c05a66ecba2200)
  [scripting\core-powershell\ise\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs/blob/b14aaee5a66a80295420fe9b517ba1fc652c86bf/scripting/core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) | HandedOffSuccess | [Details](#290d9237e20b35ec603f0967854b1e0d193e6cbb2201)
  [scripting\core-powershell\ise\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#9b638a69da953057a62cc5ad9e776e37024b68dd2202)
- [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#068ea5b8de5463c492c894d313ac1f266c4497972203)
  [scripting\core-powershell\ise\Introducing-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#07ec87200c8cc2db2c4d5695a2ca32a63bc470c82204)
  [scripting\core-powershell\ise\ISE-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/0737e1134d41f02afa42d34603a1456f18dfe1bb/scripting/core-powershell/ise/ISE-Module.md) | HandedOffSuccess | [Details](#272371dba97e62f51e352886aa9d33ef225699352205)
  [scripting\core-powershell\ise\Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#942d85f8b49282bf888bfcdb55c353073c0e62f32206)
@@ -2115,20 +2108,15 @@
  [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md) | HandedOffSuccess | [Details](#575ee3b8279ad50920df17ff92d4f65467d838302210)
  [scripting\core-powershell\ise\The-ISEAddOnTool-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/26d8bc85b78248e15558dbfef72d32cca7de9627/scripting/core-powershell/ise/The-ISEAddOnTool-Object.md) | HandedOffSuccess | [Details](#e63809763808836af9f468c2ac55ede42836d6b22209)
  [scripting\core-powershell\ise\The-ISEEditor-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/scripting/core-powershell/ise/The-ISEEditor-Object.md) | HandedOffSuccess | [Details](#bdf79567dcf53a3b78e91b44b3e1c3ba83876abe2211)
- [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFileCollection-Object.md) | HandedOffSuccess | [Details](#86cb3485445fdb00c9b99a20694b9bf12a6e8f2c2213)
- [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFile-Object.md) | HandedOffSuccess | [Details](#e4d830fa49157366fb20851f01b34d433b2965342212)
  [scripting\core-powershell\ise\The-ISEMenuItemCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItemCollection-Object.md) | HandedOffSuccess | [Details](#489c9492e8de213145b71a7963e180fe1a4ad5b62215)
  [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItem-Object.md) | HandedOffSuccess | [Details](#438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214)
  [scripting\core-powershell\ise\The-ISE-Object-Model-Hierarchy.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/scripting/core-powershell/ise/The-ISE-Object-Model-Hierarchy.md) | HandedOffSuccess | [Details](#21bf2a41e594f7485acbd278a23642ee3dd382452208)
  [scripting\core-powershell\ise\The-ISEOptions-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEOptions-Object.md) | HandedOffSuccess | [Details](#416f8f72df6f6fa4975f07f86fbe796d9221b0fd2216)
- [scripting\core-powershell\ise\The-ISESnippetCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISESnippetCollection-Object.md) | HandedOffSuccess | [Details](#410cd4503883ea2cc02936044d7357b9cb0292742217)
  [scripting\core-powershell\ise\The-ISESnippetObject.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISESnippetObject.md) | HandedOffSuccess | [Details](#04d650aca06977883c029684b37838da01b456aa2218)
- [scripting\core-powershell\ise\The-ObjectModelRoot-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ObjectModelRoot-Object.md) | HandedOffSuccess | [Details](#d51f5ab8b80bdf5e12a5b0f505f91eeeb4f3d48a2219)
  [scripting\core-powershell\ise\The-PowerShellTabCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-PowerShellTabCollection-Object.md) | HandedOffSuccess | [Details](#948c7347a4794a1d0cb8369a34e2d5c21ad782412221)
  [scripting\core-powershell\ise\The-PowerShellTab-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-PowerShellTab-Object.md) | HandedOffSuccess | [Details](#7a0ca395008106a6459f992103ecb7e5dc1d12a62220)
  [scripting\core-powershell\ise\The-Windows-PowerShell-ISE-Scripting-Object-Model.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) | HandedOffSuccess | [Details](#64f68d93821eff391189b02ef4a6bb78e90872892222)
  [scripting\core-powershell\ise\Using-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/Using-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#6363aff01a6018f1fc3a850c6e40ad96e485f5542223)
- [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md) | HandedOffSuccess | [Details](#bc65c69906a514a2490e6e7144a0cd4f377bec162224)
  [scripting\core-powershell\Running-Remote-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/core-powershell/Running-Remote-Commands.md) | HandedOffSuccess | [Details](#d36a862d27ed4bb8a4bed2ae58f9479ba1b29d212225)
  [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md) | HandedOffSuccess | [Details](#f62b1e0ec9f26e1b2bcb364c78a2ce39467655a52227)
  [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md) | HandedOffSuccess | [Details](#fe79ca70ff1f9a3960b79747221a70adc46b7c672228)
@@ -2149,7 +2137,6 @@
  [scripting\getting-started\cookbooks\Managing-Services.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Managing-Services.md) | HandedOffSuccess | [Details](#61c98c54ca1b555f6b2e827fb31228bf6a2cc71d2248)
  [scripting\getting-started\cookbooks\Managing-Windows-PowerShell-Drives.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/cookbooks/Managing-Windows-PowerShell-Drives.md) | HandedOffSuccess | [Details](#d266a109b1acd97c03594f988ce2fab3c697b80c2249)
  [scripting\getting-started\cookbooks\Manipulating-Items-Directly.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/cookbooks/Manipulating-Items-Directly.md) | HandedOffSuccess | [Details](#b21af4711cc5a846517c3e286c9e90f858612ccb2250)
- [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md) | HandedOffSuccess | [Details](#03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc2251)
  [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md) | HandedOffSuccess | [Details](#938e3e80b709a5f9a09cd52120fca41c60b5675d2252)
  [scripting\getting-started\cookbooks\Performing-Networking-Tasks.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/cookbooks/Performing-Networking-Tasks.md) | HandedOffSuccess | [Details](#39266e1e4ae2101de26277c20a98596f62cf223d2253)
  [scripting\getting-started\cookbooks\PowerShellGet-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/PowerShellGet-Module.md) | HandedOffSuccess | [Details](#16b3617b75b6aae25a92beaf5d6d2d6f2437ee132254)
@@ -2170,7 +2157,6 @@
  [scripting\getting-started\cookbooks\Working-with-Registry-Keys.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/cookbooks/Working-with-Registry-Keys.md) | HandedOffSuccess | [Details](#4809eb60ba1a5529343c2ab3c88493bf2c32389b2269)
  [scripting\getting-started\cookbooks\Working-with-Software-Installations.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/getting-started/cookbooks/Working-with-Software-Installations.md) | HandedOffSuccess | [Details](#4334a1ff099072c2287af299d65caed3f16032fe2270)
  [scripting\getting-started\fundamental\About-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/fundamental/About-Windows-PowerShell.md) | HandedOffSuccess | [Details](#548cb522ecf8f8f5e82fb43e709c6b8bf3a050962272)
- [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/b59186234a513cf34d2615d90643ee749bd60d3f/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#d0f9c059f6f5286388af3cfc07995fe46e7321c32273)
  [scripting\getting-started\fundamental\Getting-Detailed-Help-Information.md](https://github.com/PowerShell/powerShell-Docs/blob/b59186234a513cf34d2615d90643ee749bd60d3f/scripting/getting-started/fundamental/Getting-Detailed-Help-Information.md) | HandedOffSuccess | [Details](#c38edc68154ccfa9cd76ebdad5a94ddfb4f902c82274)
  [scripting\getting-started\fundamental\Getting-Information-About-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/getting-started/fundamental/Getting-Information-About-Commands.md) | HandedOffSuccess | [Details](#57ccd656e0b869da8aadece97e9bb871764c3f702275)
  [scripting\getting-started\fundamental\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/fundamental/Learning-Windows-PowerShell-Names.md) | HandedOffSuccess | [Details](#1dd7dade688b56e3ac544c0562ad6bad4a4284a72276)
@@ -2200,8 +2186,6 @@
  [scripting\setup\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/4ddd5099ce33263d43dcbad0930e654b573a8937/scripting/setup/WinRMSecurity.md) | HandedOffSuccess | [Details](#fa7e5c84ac82fa72836536ece507f1751e0990772304)
  [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/1fe4c9a63c6d7fa47357b068997c5d9ce8ef6c32/scripting/TOC.md) | HandedOffSuccess | [Details](#4916c6b7a1d93b5dc94f4ed54afd26b919061c3e2305)
  [scripting\whats-new\What-s-New-in-the-PowerShell-50-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-in-the-PowerShell-50-ISE.md) | HandedOffSuccess | [Details](#232b6a7020cbe3181a1fe722eae31d4d27d376692307)
- [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md) | HandedOffSuccess | [Details](#966cab74cb2519893d4744e8bd0ca12f93f731362308)
- [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-With-PowerShell.md) | HandedOffSuccess | [Details](#035fc8adc08df500069e800cfb94c5dcff46d88f2309)
  [scripting\Windows-PowerShell-Glossary.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/Windows-PowerShell-Glossary.md) | HandedOffSuccess | [Details](#5c6f660f9de9039355f3a991da440b75e97275eb2310)
  [wmf\5.0\audit_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/a5eb166c5badca2d7d926766ffa480b082355e86/wmf/5.0/audit_overview.md) | HandedOffSuccess | [Details](#20e6c97ad5dc845bc0ead973ed8a62b34af3e8242312)
  [wmf\5.0\dsc_removeconfigdoc.md](https://github.com/PowerShell/powerShell-Docs/blob/c21a99a9e9dbcb6c32794dbf5649d75b55021e52/wmf/5.0/dsc_removeconfigdoc.md) | HandedOffSuccess | [Details](#1b2cd2660993b2754f1b82d13fb5b87422bd18522340)
@@ -2209,14 +2193,11 @@
  [wmf\5.0\limitation_dsc.md](https://github.com/PowerShell/powerShell-Docs/blob/53708466896a0a80d8285dd7221ccd62c4094c36/wmf/5.0/limitation_dsc.md) | HandedOffSuccess | [Details](#c93c664f6970178cd05f0316b05e155ad1355a232371)
  [wmf\5.0\limitation_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/3e60ee1441f1f12b878b34deb4469a7df8bbc4f3/wmf/5.0/limitation_overview.md) | HandedOffSuccess | [Details](#ef8d306319a197df28afe41e2fbba547b589b3772372)
  [wmf\5.0\networkswitch_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/wmf/5.0/networkswitch_overview.md) | HandedOffSuccess | [Details](#540340775f8386d3baced6d14a1a75a8afbfd8362373)
- [wmf\5.1\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/5.1/catalog-cmdlets.md) | HandedOffSuccess | [Details](#72df0311a1d187dc6c7c1d29b0a3d2fd243848f02390)
  [wmf\5.1\DSC-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/270f2a458a40f005f462d3de5236defbb91a7362/wmf/5.1/DSC-improvements.md) | HandedOffSuccess | [Details](#c88c145c3585befcee194499f7e21aaeac67c0f32394)
  [wmf\5.1\install-configure.md](https://github.com/PowerShell/powerShell-Docs/blob/0c136264c9fe4e92771e4423011c2fa959f30e93/wmf/5.1/install-configure.md) | HandedOffSuccess | [Details](#21f26830cdc20a90ce48aa09bc7013d733242ae92396)
  [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md) | HandedOffSuccess | [Details](#bd01ff0d208717511505a1aedf9eeaa303d08dbe2397)
- [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md) | HandedOffSuccess | [Details](#b831555354d14bca22e5137afffadc1ed3b145542400)
  [wmf\5.1\package-management-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/0a5dcec1089bd07b968c61b18ca4e6d59d0afd3b/wmf/5.1/package-management-improvements.md) | HandedOffSuccess | [Details](#615bdf1a82dc5078ee2f37eec70a64e25b42bda22401)
  [wmf\5.1\release-notes.md](https://github.com/PowerShell/powerShell-Docs/blob/965669e580e5322889f75f8a7684174a017d89b8/wmf/5.1/release-notes.md) | HandedOffSuccess | [Details](#e3d71b09896865ab24032f4e069e486b448d937a2402)
- [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/TOC.md) | HandedOffSuccess | [Details](#2e9a995e56a68d2933241eb57d563914c9a7e2c62423)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
@@ -2288,6 +2269,8 @@
  [dsc\authoringResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResource.md) | InSyncHandedBackSuccess | [Details](#5b43723f7b14eb4bca06d0430b5981c3663c58018)
  [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs/blob/644d08a69a8bb70f49e12c1504aa46c4b57a51fc/dsc/authoringResourceMofCS.md) | InSyncHandedBackSuccess | [Details](#991a324945289b2eff0b706d093b2d345352fb1512)
  [dsc\authoringResourceMofDesigner.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResourceMofDesigner.md) | InSyncHandedBackSuccess | [Details](#be2141330dda803a22fdce6d65a1e379adf14fed13)
+ [dsc\azureDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/azureDsc.md) | InSyncHandedBackSuccess | [Details](#b7e0e4e8dba43ff85c77446a2ec593f42316f46014)
+ [dsc\bootstrapDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/7d7e4f9784456c897c4779e2bc275d8dc195a29e/dsc/bootstrapDsc.md) | InSyncHandedBackSuccess | [Details](#c8920239a3492421b1a5dc39d0ad599083bc466b15)
  [dsc\builtInResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/builtInResource.md) | InSyncHandedBackSuccess | [Details](#ea312b4e773cd8b0eceeca123e616957728eb1c616)
  [dsc\configDataCredentials.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/configDataCredentials.md) | InSyncHandedBackSuccess | [Details](#a750fb208e73ce2ebffb2fa86a55c825169d8ad818)
  [dsc\configHelp.md](https://github.com/PowerShell/powerShell-Docs/blob/f4dc0265246195cc2320bcaf9d7f9abf7b1405a3/dsc/configHelp.md) | InSyncHandedBackSuccess | [Details](#becacd2dcbc6fd0edd9154a45342edc5c536935b19)
@@ -2339,6 +2322,7 @@
  [dsc\overview.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/overview.md) | InSyncHandedBackSuccess | [Details](#1a796658eb30bdf5c37ea3677f94767260a34b4576)
  [dsc\pullClient.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullClient.md) | InSyncHandedBackSuccess | [Details](#95f49fecdf13a54049caf27345d2a48c98b8f09b80)
  [dsc\pullClientConfigID4.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullClientConfigID4.md) | InSyncHandedBackSuccess | [Details](#730f2f26e2811996e79cf0073a4ef65cad39068782)
+ [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs/blob/7f0d3167538afb1e7f0003466254059372319789/dsc/pullClientConfigNames.md) | InSyncHandedBackSuccess | [Details](#03db9843209038f7a14b46cf8a27316f1c63a81983)
  [dsc\pullServerSMB.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullServerSMB.md) | InSyncHandedBackSuccess | [Details](#35ac9b38086b12fb48844c56a488854f63529e2185)
  [dsc\queryServerNodes.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/queryServerNodes.md) | InSyncHandedBackSuccess | [Details](#02bb8458796d60991a05a8250f3bf8f3261ffce186)
  [dsc\resourceAuthoringChecklist.md](https://github.com/PowerShell/powerShell-Docs/blob/4a7c9bfa0f22930732776b510d5cc4b0275424ff/dsc/resourceAuthoringChecklist.md) | InSyncHandedBackSuccess | [Details](#b2900987b1102cf41880e5af0a0cc44bc6499ef589)
@@ -2347,6 +2331,7 @@
  [dsc\secureServer.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/secureServer.md) | InSyncHandedBackSuccess | [Details](#94944d7bd265aa788b77359ad44721f79870bfa094)
  [dsc\singleInstance.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/singleInstance.md) | InSyncHandedBackSuccess | [Details](#4b1e8a6d3fb4feca426a9d7861c40d194e612c2297)
  [dsc\sxsResource.md](https://github.com/PowerShell/powerShell-Docs/blob/01720794aa1d200428c2729463fba92970f9cb56/dsc/sxsResource.md) | InSyncHandedBackSuccess | [Details](#716ecd9b14976dd70b69a740850ab5367038795698)
+ [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/TOC.md) | InSyncHandedBackSuccess | [Details](#b60c45e5a779e36784b74589b8d1c1e8f97aff2f99)
  [dsc\userResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/userResource.md) | InSyncHandedBackSuccess | [Details](#5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c101)
  [dsc\whitepapers.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/whitepapers.md) | InSyncHandedBackSuccess | [Details](#434ebc17f2bc7b7ee868788e87dc5b34cef61529102)
  [dsc\windowsfeatureResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/windowsfeatureResource.md) | InSyncHandedBackSuccess | [Details](#522dbea958a60f76e98abe32e11e6491ea6d457c103)
@@ -2360,8 +2345,20 @@
  [jea\reporting-on-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/reporting-on-jea.md) | InSyncHandedBackSuccess | [Details](#d867a6462e9fa8b6e16c8c2103899c72b380116c191)
  [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md) | InSyncHandedBackSuccess | [Details](#a3dd4a217f5b1fd80e97adf802c65073ca015bbc192)
  [reference\README.md](https://github.com/PowerShell/powerShell-Docs/blob/6f2cc23f6fce9c267e793fa8653f292e6a6b98ec/reference/README.md) | InSyncHandedBackSuccess | [Details](#edafde9188cad3b21d0cd2b30cfaaf1bede9b1952174)
+ [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md) | InSyncHandedBackSuccess | [Details](#6b5710be87f6362fb3274e333737e31ad477aaee2192)
+ [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md) | InSyncHandedBackSuccess | [Details](#c935d6f066aed1496069681723aa7bd72edbb8e32194)
+ [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#068ea5b8de5463c492c894d313ac1f266c4497972203)
+ [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFileCollection-Object.md) | InSyncHandedBackSuccess | [Details](#86cb3485445fdb00c9b99a20694b9bf12a6e8f2c2213)
+ [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFile-Object.md) | InSyncHandedBackSuccess | [Details](#e4d830fa49157366fb20851f01b34d433b2965342212)
+ [scripting\core-powershell\ise\The-ISESnippetCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISESnippetCollection-Object.md) | InSyncHandedBackSuccess | [Details](#410cd4503883ea2cc02936044d7357b9cb0292742217)
+ [scripting\core-powershell\ise\The-ObjectModelRoot-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ObjectModelRoot-Object.md) | InSyncHandedBackSuccess | [Details](#d51f5ab8b80bdf5e12a5b0f505f91eeeb4f3d48a2219)
+ [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md) | InSyncHandedBackSuccess | [Details](#bc65c69906a514a2490e6e7144a0cd4f377bec162224)
+ [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md) | InSyncHandedBackSuccess | [Details](#03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc2251)
+ [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/b59186234a513cf34d2615d90643ee749bd60d3f/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#d0f9c059f6f5286388af3cfc07995fe46e7321c32273)
  [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb66397482278)
  [scripting\topic\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/afa259b8611f995bbf5b824179a12e3d8f15df86/scripting/topic/WinRMSecurity.md) | InSyncHandedBackSuccess | [Details](#207792452c563ec6cca5c17fbcd122372442d8ac2306)
+ [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md) | InSyncHandedBackSuccess | [Details](#966cab74cb2519893d4744e8bd0ca12f93f731362308)
+ [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-With-PowerShell.md) | InSyncHandedBackSuccess | [Details](#035fc8adc08df500069e800cfb94c5dcff46d88f2309)
  [wmf\5.0\audit_cms.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/audit_cms.md) | InSyncHandedBackSuccess | [Details](#2160a4b932075c98df6806c61d263d30f650b9f42311)
  [wmf\5.0\audit_script.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/audit_script.md) | InSyncHandedBackSuccess | [Details](#654c0d5e83b9832524298b5c96eae094f371330f2313)
  [wmf\5.0\audit_transcript.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/audit_transcript.md) | InSyncHandedBackSuccess | [Details](#61364255f33378d71724705658d9924a7730b74e2314)
@@ -2419,11 +2416,14 @@
  [wmf\5.0\requirements.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/requirements.md) | InSyncHandedBackSuccess | [Details](#02ce3d08b01e58d6d9506f90142f92cc16304e642386)
  [wmf\5.0\sil_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/sil_overview.md) | InSyncHandedBackSuccess | [Details](#edc1a0383cebfbe89b18b0238a13bb28e4d25c5a2387)
  [wmf\5.0\uninstall.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/uninstall.md) | InSyncHandedBackSuccess | [Details](#f97722883acccd0addb49cc473fc1cce5300c1842388)
+ [wmf\5.1\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/5.1/catalog-cmdlets.md) | InSyncHandedBackSuccess | [Details](#72df0311a1d187dc6c7c1d29b0a3d2fd243848f02390)
+ [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md) | InSyncHandedBackSuccess | [Details](#b831555354d14bca22e5137afffadc1ed3b145542400)
  [wmf\5.1\known-issues-cache\NetworkingSwitchCmdletInput.md](https://github.com/PowerShell/powerShell-Docs/blob/34337749a77f4379b841a8478d4e6e3bc97e7ada/wmf/5.1/known-issues-cache/NetworkingSwitchCmdletInput.md) | InSyncHandedBackSuccess | [Details](#180158033e0c960f73dba66a3d77b15765e3e3822398)
  [wmf\images\DscResourceDebugging.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/DscResourceDebugging.jpg) | InSyncHandedBackSuccess | [Details](#ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d2407)
  [wmf\images\Import-DscResource-Modversion.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/Import-DscResource-Modversion.jpg) | InSyncHandedBackSuccess | [Details](#e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc2408)
  [wmf\images\MOF_Encryption.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/MOF_Encryption.jpg) | InSyncHandedBackSuccess | [Details](#9a44a53029d37d4165bbffbdcaa79d9be76e5fac2410)
  [wmf\index.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/wmf/index.md) | InSyncHandedBackSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f082420)
+ [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/TOC.md) | InSyncHandedBackSuccess | [Details](#2e9a995e56a68d2933241eb57d563914c9a7e2c62423)
 
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
@@ -2656,27 +2656,27 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b7e0e4e8dba43ff85c77446a2ec593f42316f46014'></a> Source: [dsc\azureDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/azureDsc.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\azureDsc.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/dsc/azureDsc.md)
 * Handoff File: [azureDsc.6f808ff78c30999cc5e6427817b5ea85e0f23110.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/azureDsc.6f808ff78c30999cc5e6427817b5ea85e0f23110.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [azureDsc.6f808ff78c30999cc5e6427817b5ea85e0f23110.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/azureDsc.6f808ff78c30999cc5e6427817b5ea85e0f23110.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * [Back to Top](#report-top)
 
 ##### <a name='c8920239a3492421b1a5dc39d0ad599083bc466b15'></a> Source: [dsc\bootstrapDsc.md](https://github.com/PowerShell/powerShell-Docs/blob/7d7e4f9784456c897c4779e2bc275d8dc195a29e/dsc/bootstrapDsc.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\bootstrapDsc.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/dsc/bootstrapDsc.md)
 * Handoff File: [bootstrapDsc.bf70322a0205fe01fff5771c1c339ccbd2296594.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/bootstrapDsc.bf70322a0205fe01fff5771c1c339ccbd2296594.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [bootstrapDsc.bf70322a0205fe01fff5771c1c339ccbd2296594.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/bootstrapDsc.bf70322a0205fe01fff5771c1c339ccbd2296594.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * [Back to Top](#report-top)
 
 ##### <a name='ea312b4e773cd8b0eceeca123e616957728eb1c616'></a> Source: [dsc\builtInResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/builtInResource.md)
@@ -3628,18 +3628,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='03db9843209038f7a14b46cf8a27316f1c63a81983'></a> Source: [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs/blob/7f0d3167538afb1e7f0003466254059372319789/dsc/pullClientConfigNames.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/dsc/pullClientConfigNames.md)
 * Handoff File: [pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/6ea1e3bafad09304aa76a78c73a6a30db6788205/dsc/pullClientConfigNames.md)
-* Current Handback File: [pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/227970ec8696c4d63ef2a9d55126858ffbafe51b/ol-handback/PowerShell/powerShell-Docs.pt-br/live/pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf)
-* Current Handback Datetime: 2016-06-28 15:29:39
+* Handback File: [pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/227970ec8696c4d63ef2a9d55126858ffbafe51b/ol-handback/PowerShell/powerShell-Docs.pt-br/live/pullClientConfigNames.90531abb3b29bfd751ad2f3a115a4ba02024827e.pt-br.xlf)
 * Bilingual Datetime: 2016-06-28 15:32:53
 * [Back to Top](#report-top)
@@ -3871,18 +3868,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b60c45e5a779e36784b74589b8d1c1e8f97aff2f99'></a> Source: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/d87f81867181d6110532dc0afff1572ebc5bfff3/dsc/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/dsc/TOC.md)
 * Handoff File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/576377727120166c57c39a8f040b292cb04c0ae3/dsc/TOC.md)
-* Current Handback File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/70b98cd05b9741170074b77fa2aec2faa36470b9/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
-* Current Handback Datetime: 2016-07-19 17:18:19
+* Handback File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/70b98cd05b9741170074b77fa2aec2faa36470b9/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.b2a7935bce42ebc7e43bfe65f3058900e2942427.pt-br.xlf)
 * Bilingual Datetime: 2016-07-19 17:19:14
 * [Back to Top](#report-top)
@@ -29142,18 +29136,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='6b5710be87f6362fb3274e333737e31ad477aaee2192'></a> Source: [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md)
 * Handoff File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\core-modules\PSScriptAnalyzer-Module.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/scripting/core-powershell/core-modules/PSScriptAnalyzer-Module.md)
-* Current Handback File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:41:41
+* Handback File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29176,18 +29167,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c935d6f066aed1496069681723aa7bd72edbb8e32194'></a> Source: [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md)
 * Handoff File: [Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/aea2398e170a4a2f7fa50a2bd6d84d939f8d5b30/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md)
-* Current Handback File: [Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:06:05
+* Handback File: [Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-Core-About-Topics.2a5d5e1d8931655ca501f33cf2e7cce9dd120e9d.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29312,18 +29300,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='068ea5b8de5463c492c894d313ac1f266c4497972203'></a> Source: [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
 * Handoff File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/260dc69024dc05782a592031587cd39399eaf837/scripting/core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
-* Current Handback File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
-* Current Handback Datetime: 2016-05-20 11:30:15
+* Handback File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/487967ee507e2ef328455ef2ce20dccdb4e3250f/ol-handback/PowerShell/powerShell-Docs.pt-br/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29448,35 +29433,29 @@
 * [Back to Top](#report-top)
 
 ##### <a name='86cb3485445fdb00c9b99a20694b9bf12a6e8f2c2213'></a> Source: [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFileCollection-Object.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/The-ISEFileCollection-Object.md)
 * Handoff File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\The-ISEFileCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/9bb33f5884df8382f87b3ee90284e1a451f9be2b/scripting/core-powershell/ise/The-ISEFileCollection-Object.md)
-* Current Handback File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1d59d64cc0344826f53e38a75311cadfd5bd3e37/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf)
-* Current Handback Datetime: 2016-05-24 23:37:26
+* Handback File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1d59d64cc0344826f53e38a75311cadfd5bd3e37/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
 
 ##### <a name='e4d830fa49157366fb20851f01b34d433b2965342212'></a> Source: [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEFile-Object.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/The-ISEFile-Object.md)
 * Handoff File: [The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/aea2398e170a4a2f7fa50a2bd6d84d939f8d5b30/scripting/core-powershell/ise/The-ISEFile-Object.md)
-* Current Handback File: [The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:06:05
+* Handback File: [The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEFile-Object.a7b880ceb4f7e2dfbfcfaa86c3044310e3fd7d46.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29550,18 +29529,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='410cd4503883ea2cc02936044d7357b9cb0292742217'></a> Source: [scripting\core-powershell\ise\The-ISESnippetCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISESnippetCollection-Object.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\The-ISESnippetCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/The-ISESnippetCollection-Object.md)
 * Handoff File: [The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\The-ISESnippetCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/scripting/core-powershell/ise/The-ISESnippetCollection-Object.md)
-* Current Handback File: [The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:41:41
+* Handback File: [The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISESnippetCollection-Object.4366858d555daebfa9f274764bbadc76be4fb650.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29584,18 +29560,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='d51f5ab8b80bdf5e12a5b0f505f91eeeb4f3d48a2219'></a> Source: [scripting\core-powershell\ise\The-ObjectModelRoot-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ObjectModelRoot-Object.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\The-ObjectModelRoot-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/The-ObjectModelRoot-Object.md)
 * Handoff File: [The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\The-ObjectModelRoot-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/scripting/core-powershell/ise/The-ObjectModelRoot-Object.md)
-* Current Handback File: [The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:41:41
+* Handback File: [The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ObjectModelRoot-Object.a169b6b5ad03bb7bd4958b09a1583849d2d65179.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29669,18 +29642,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='bc65c69906a514a2490e6e7144a0cd4f377bec162224'></a> Source: [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
 * Handoff File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
-* Current Handback File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:41:41
+* Handback File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -30137,18 +30107,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc2251'></a> Source: [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md)
 * Handoff File: [Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/e9054bbd2181adfbd656c02e710ea2a88e923bb5/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md)
-* Current Handback File: [Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 09:22:38
+* Handback File: [Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Multiple-selection-List-Boxes.a647f0bae5e61f570951792f4be945b14d21dc9a.pt-br.xlf)
 * Bilingual Datetime: 2016-07-06 09:23:55
 * [Back to Top](#report-top)
@@ -30494,18 +30461,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='d0f9c059f6f5286388af3cfc07995fe46e7321c32273'></a> Source: [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/b59186234a513cf34d2615d90643ee749bd60d3f/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
 * Handoff File: [Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/9bb33f5884df8382f87b3ee90284e1a451f9be2b/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
-* Current Handback File: [Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1d59d64cc0344826f53e38a75311cadfd5bd3e37/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf)
-* Current Handback Datetime: 2016-05-24 23:37:26
+* Handback File: [Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1d59d64cc0344826f53e38a75311cadfd5bd3e37/ol-handback/PowerShell/powerShell-Docs.pt-br/live/Exploring-the-Windows-PowerShell-ISE.a3f992702bf0a10e452f02c0ce43f75d90f185dc.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -31095,35 +31059,29 @@
 * [Back to Top](#report-top)
 
 ##### <a name='966cab74cb2519893d4744e8bd0ca12f93f731362308'></a> Source: [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md)
 * Handoff File: [What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/1b7253fb06c11e6516836d3e68cde662443e9d29/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md)
-* Current Handback File: [What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9b1f0e4d55f51d34e08b84b2150c463857cbd0fa/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf)
-* Current Handback Datetime: 2016-06-28 21:14:17
+* Handback File: [What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9b1f0e4d55f51d34e08b84b2150c463857cbd0fa/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-in-Windows-PowerShell-50.c86af26f5e83de3e47d3ac33f24919d8e93982d7.pt-br.xlf)
 * Bilingual Datetime: 2016-06-28 21:19:10
 * [Back to Top](#report-top)
 
 ##### <a name='035fc8adc08df500069e800cfb94c5dcff46d88f2309'></a> Source: [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/1d4062490ba76a8cc62faa8fb96eff92b49169b7/scripting/whats-new/What-s-New-With-PowerShell.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/scripting/whats-new/What-s-New-With-PowerShell.md)
 * Handoff File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/e9054bbd2181adfbd656c02e710ea2a88e923bb5/scripting/whats-new/What-s-New-With-PowerShell.md)
-* Current Handback File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 09:22:38
+* Handback File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9ac31413307c4c3ae250281ec94a78955f4792d7/ol-handback/PowerShell/powerShell-Docs.pt-br/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.pt-br.xlf)
 * Bilingual Datetime: 2016-07-06 09:23:55
 * [Back to Top](#report-top)
@@ -32238,15 +32196,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='72df0311a1d187dc6c7c1d29b0a3d2fd243848f02390'></a> Source: [wmf\5.1\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/5.1/catalog-cmdlets.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\5.1\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/wmf/5.1/catalog-cmdlets.md)
 * Handoff File: [catalog-cmdlets.026a2348da823280cc8a149eddeea9d4bd50814c.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/catalog-cmdlets.026a2348da823280cc8a149eddeea9d4bd50814c.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [catalog-cmdlets.026a2348da823280cc8a149eddeea9d4bd50814c.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/catalog-cmdlets.026a2348da823280cc8a149eddeea9d4bd50814c.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * [Back to Top](#report-top)
 
 ##### <a name='a1e178e907a9edbe652b5da32ad286550f95076f2391'></a> Source: [wmf\5.1\community-resources.md](https://github.com/PowerShell/powerShell-Docs/blob/1f6f18e46537d4b9f5e64c9e808e46e82b2d3050/wmf/5.1/community-resources.md)
@@ -32354,18 +32312,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b831555354d14bca22e5137afffadc1ed3b145542400'></a> Source: [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/wmf/5.1/known-issues.md)
 * Handoff File: [known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/91e27389608bc1aaeaef95841435213e3aff179c/wmf/5.1/known-issues.md)
-* Current Handback File: [known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cd6f84ccea4fa14f39fe8d6ff97f8a5ec16225db/ol-handback/PowerShell/powerShell-Docs.pt-br/live/known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf)
-* Current Handback Datetime: 2016-07-22 14:07:00
+* Handback File: [known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cd6f84ccea4fa14f39fe8d6ff97f8a5ec16225db/ol-handback/PowerShell/powerShell-Docs.pt-br/live/known-issues.7fc7aa932b574dc3cc428850a7fbc702d58225ff.pt-br.xlf)
 * Bilingual Datetime: 2016-07-22 14:07:59
 * [Back to Top](#report-top)
@@ -32676,18 +32631,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='2e9a995e56a68d2933241eb57d563914c9a7e2c62423'></a> Source: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/8ef89fadeb45309d799dc5e96337d0b3fab74caa/wmf/TOC.md)
 * Handoff File: [TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/79d7d1d59f7ea8115d2f46073e2179a2b8d2e7d0/wmf/TOC.md)
-* Current Handback File: [TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b565c20064eca0bb92037cc8fe73f29789d68eb0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf)
-* Current Handback Datetime: 2016-08-05 06:24:32
+* Handback File: [TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/89801df42b3d189494eb2b66536220fd9fb50e2a/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf)
+* Handback Datetime: 2016-11-24 17:05:12
 * Bilingual File: [TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b565c20064eca0bb92037cc8fe73f29789d68eb0/ol-handback/PowerShell/powerShell-Docs.pt-br/live/TOC.60497266061c38453b3db893ec675eb65584af89.pt-br.xlf)
 * Bilingual Datetime: 2016-08-05 06:25:24
 * [Back to Top](#report-top)
