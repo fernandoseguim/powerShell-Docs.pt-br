@@ -9,31 +9,42 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 3dde62efa7ba595ed5160cc81b4e2b17a54e52a2
-ms.openlocfilehash: d4c9e88ddd6cfaec611527d19d00cbd4db9f5d1d
+ms.sourcegitcommit: 98a0e6d3c46a56cbed94de6a4bd68b88a79116ff
+ms.openlocfilehash: b831555354d14bca22e5137afffadc1ed3b14554
 
 ---
 
-#Problemas conhecidos no WMF 5.1 (Preview) #
+# Problemas conhecidos no WMF 5.1 (Preview) #
 
 > Observação: essas informações são preliminares e estão sujeitas a alteração.
 
-##Iniciando o atalho do PowerShell como administrador
+## Iniciando o atalho do PowerShell como administrador
 Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".
 Abra novamente o atalho como não administrador. Em seguida, ele funcionará também como administrador.
 
-##Pester
+## Pester
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
 
 * A execução de testes em relação ao Pester em si pode resultar em algumas falhas devido às diferenças entre FULL CLR e CORE CLR. Particularmente, o método Validate não está disponível no tipo XmlDocument. Seis testes que tentam validar o esquema dos logs de saída do NUnit são conhecidos por falharem. 
 * Um teste de cobertura de código falha atualmente porque o Recurso de DSC *WindowsFeature* não existe no Nano Server. No entanto, essas falhas geralmente são benignas e podem ser ignoradas com segurança.
 
-##Validação da operação 
+## Validação da operação 
 
 * Update-Help falhará no módulo Microsoft.PowerShell.Operation.Validation devido a um URI de ajuda que não funciona
 
+## DSC após desinstalar o WMF 
+* A desinstalação do WMF não exclui da pasta de configuração os documentos MOF da DSC. A DSC não funcionará corretamente se os documentos MOF contêm propriedades mais recentes, que não estão disponíveis nos sistemas mais antigos. Nesse caso, execute o seguinte script no console do PowerShell com privilégios elevados para limpar os estados da DSC.
+ ```PowerShell
+    $PreviousDSCStates = @("$env:windir\system32\configuration\*.mof",
+            "$env:windir\system32\configuration\*.mof.checksum",
+            "$env:windir\system32\configuration\PartialConfiguration\*.mof",
+            "$env:windir\system32\configuration\PartialConfiguration\*.mof.checksum"
+           )
+
+    $PreviousDSCStates | Remove-Item -ErrorAction SilentlyContinue -Verbose
+ ```  
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

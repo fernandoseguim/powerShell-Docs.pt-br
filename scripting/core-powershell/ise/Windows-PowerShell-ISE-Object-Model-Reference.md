@@ -14,9 +14,9 @@ ms.openlocfilehash: bc65c69906a514a2490e6e7144a0cd4f377bec16
 
 ---
 
-# Referência de modelo de objeto do ISE do Windows PowerShell
+# <a name="windows-powershell-ise-object-model-reference"></a>Referência de modelo de objeto do ISE do Windows PowerShell
   
-## Referência de modelo de objeto
+## <a name="object-model-reference"></a>Referência de modelo de objeto
  Esta seção fornece uma referência sobre as classes subjacentes que definem os vários objetos no ISE (Ambiente de Script Integrado) do Windows PowerShell®. Para ver os objetos organizados em sua hierarquia, consulte [The ISE Object Model Hierarchy](The-ISE-Object-Model-Hierarchy.md) (A hierarquia do modelo de objeto ISE).
 
  [O objeto ISEAddOnTool](The-ISEAddOnTool-Object.md)
@@ -50,13 +50,13 @@ ms.openlocfilehash: bc65c69906a514a2490e6e7144a0cd4f377bec16
  [O objeto PowerShellTabCollection](The-PowerShellTabCollection-Object.md)
  Exemplo: $psISE.PowerShellTabs.
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

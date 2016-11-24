@@ -14,7 +14,7 @@ ms.openlocfilehash: c935d6f066aed1496069681723aa7bd72edbb8e3
 
 ---
 
-# Windows PowerShell Core About Topics
+# <a name="windows-powershell-core-about-topics"></a>Windows PowerShell Core About Topics
 Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Windows PowerShell ("Sobre") conceitual. Para obter os tópicos Sobre para outros módulos, consulte os tópicos da Ajuda para o módulo específico.
 
 |Tópico|Descrição|
@@ -133,9 +133,9 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 |[about_WQL](https://technet.microsoft.com/en-us/library/820b2d23-3473-46f5-a188-5910704c7905)|Descreve a linguagem WQL, que pode ser usada para obter objetos WMI no Windows PowerShell.|
 |[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Descreve os cmdlets no módulo Microsoft.WsMan.Management. Explica como usá-los juntos para gerenciar recursos de WS-Management, incluindo a unidade de provedor WSMan.|
 
-## Consulte Também
-- [Criando scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-- [Núcleo do Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+## <a name="see-also"></a>Consulte Também
+- [Scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+- [Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
 - [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
 - [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92)
 - [about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)
@@ -145,6 +145,6 @@ Esta seção contém tópicos de Ajuda que se aplicam a todos os módulos do Win
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

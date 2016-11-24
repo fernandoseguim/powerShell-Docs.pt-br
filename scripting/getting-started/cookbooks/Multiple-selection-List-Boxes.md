@@ -14,10 +14,10 @@ ms.openlocfilehash: 03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc
 
 ---
 
-# Caixas de listagem de seleção múltipla
+# <a name="multiple-selection-list-boxes"></a>Caixas de listagem de seleção múltipla
 Use o Windows PowerShell 3.0 e versões posteriores para criar um controle de caixa de listagem de seleção múltipla em um formulário personalizado do Windows.
 
-## Criar controles de caixa de listagem que permitem seleção múltipla
+## <a name="create-list-box-controls-that-allow-multiple-selections"></a>Criar controles de caixa de listagem que permitem seleção múltipla
 Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```
@@ -184,14 +184,14 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Consulte Também
-- [Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+## <a name="see-also"></a>Consulte Também
+- [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla – E muito mais!](http://technet.microsoft.com/library/ff730950.aspx)
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

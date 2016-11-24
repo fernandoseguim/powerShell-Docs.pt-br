@@ -14,12 +14,12 @@ ms.openlocfilehash: e4d830fa49157366fb20851f01b34d433b296534
 
 ---
 
-# O objeto ISEFile
+# <a name="the-isefile-object"></a>O objeto ISEFile
   Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEFile. Este tópico lista os métodos e as propriedades do membro. O **$psISE.CurrentFile** e os arquivos da coleção de arquivos em uma guia do PowerShell são todas as instâncias da classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
-## Métodos
+## <a name="methods"></a>Métodos
 
-###  <a name="save-override"></a> Save\( \[saveEncoding\] \)
+###  <a name="a-namesave-overridea-save-saveencoding-"></a><a name="save-override"></a> Save\( \[saveEncoding\] \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Salva o arquivo no disco.
@@ -43,7 +43,7 @@ $myfile.Encoding
 
 ```
 
-###  <a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
+###  <a name="a-namesaveasa-saveasfilename-saveencoding"></a><a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Salva o arquivo com o nome de arquivo e codificação especificados.
@@ -69,9 +69,9 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 
 ```
 
-## Propriedades
+## <a name="properties"></a>Propriedades
 
-###  <a name="Displayname"></a> DisplayName
+###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a> DisplayName
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade somente leitura que obtém a cadeia que contém o nome de exibição deste arquivo. O nome é mostrado na guia **Arquivo** na parte superior do editor. A presença de um asterisco \(\*\) ao final do nome indica que o arquivo tem alterações que não foram salvas.
@@ -82,7 +82,7 @@ $psIse.CurrentFile.DisplayName
 
 ```
 
-###  <a name="Editor"></a> Editor
+###  <a name="a-nameeditora-editor"></a><a name="Editor"></a> Editor
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade somente leitura que obtém o [objeto editor](The-ISEEditor-Object.md) usado para o arquivo especificado.
@@ -93,7 +93,7 @@ $psIse.CurrentFile.Editor.Text
 
 ```
 
-###  <a name="Encoding"></a> Codificando
+###  <a name="a-nameencodinga-encoding"></a><a name="Encoding"></a> Codificação
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade somente leitura que obtém a codificação original do arquivo. Este é um objeto **System.Text.Encoding**.
@@ -104,7 +104,7 @@ $psIse.CurrentFile.Encoding
 
 ```
 
-###  <a name="FullPath"></a> FullPath
+###  <a name="a-namefullpatha-fullpath"></a><a name="FullPath"></a> FullPath
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade somente leitura que obtém a cadeia de caracteres que especifica o caminho completo do arquivo aberto.
@@ -115,7 +115,7 @@ $psIse.CurrentFile.FullPath
 
 ```
 
-###  <a name="IsSaved"></a> IsSaved
+###  <a name="a-nameissaveda-issaved"></a><a name="IsSaved"></a> IsSaved
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade Boolean somente leitura que retornará **$true** se o arquivo foi salvo depois de ter sido modificado pela última vez.
@@ -127,7 +127,7 @@ $myfile.IsSaved
 
 ```
 
-###  <a name="IsUntitled"></a> IsUntitled
+###  <a name="a-nameisuntitleda-isuntitled"></a><a name="IsUntitled"></a> IsUntitled
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade somente leitura que retornará **$true** se o arquivo nunca recebeu um título.
@@ -140,16 +140,16 @@ $psISE.CurrentFile.IsUntitled
 
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O ISEFileCollectionObject](The-ISEFileCollection-Object.md) 
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
-- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

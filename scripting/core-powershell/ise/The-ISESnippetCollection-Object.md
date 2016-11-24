@@ -14,12 +14,12 @@ ms.openlocfilehash: 410cd4503883ea2cc02936044d7357b9cb029274
 
 ---
 
-# O objeto ISESnippetCollection
+# <a name="the-isesnippetcollection-object"></a>O objeto ISESnippetCollection
   O objeto **ISESnippetCollection** é uma coleção de objetos **ISESnippet**. A coleção de arquivos associada a um objeto **PowerShellTab** é um membro dessa classe. Um exemplo é a coleção **$psISE.CurrentPowerShellTab.Files**.
 
-## Métodos
+## <a name="methods"></a>Métodos
 
-### Load\( FilePathName \)
+### <a name="load-filepathname-"></a>Load\( FilePathName \)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
  Carrega um arquivo .snippets.ps1xml que contém os trechos de código definidos pelo usuário. A maneira mais fácil de criar trechos de código é usar o novo cmdlet New-IseSnippet, que os armazena automaticamente em sua pasta de perfil para que sejam carregados sempre que você iniciar o ISE do Windows PowerShell.
@@ -32,16 +32,16 @@ $SnipFile = Join-Path ( Split-Path $profile) “Snippets\MySnips.snippets.ps1xml
 
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O ISESnippetObject](The-ISESnippetObject.md) 
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
-- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
