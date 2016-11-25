@@ -29474,8 +29474,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0e8a83635f534e62bb1eed5fd8d02208be019a01/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
 * Handback Datetime: 2016-11-25 14:44:39
-* Bilingual File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1d59d64cc0344826f53e38a75311cadfd5bd3e37/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
-* Bilingual Datetime: 2016-06-16 14:34:17
+* Bilingual File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0e8a83635f534e62bb1eed5fd8d02208be019a01/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
+* Bilingual Datetime: 2016-11-25 14:45:50
 * [Back to Top](#report-top)
 
 ##### <a name='438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214'></a> Source: [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItem-Object.md)

@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [scripting\core-powershell\ise\The-ISEMenuItemCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItemCollection-Object.md) | InSyncHandedBackSuccess | [Details](#489c9492e8de213145b71a7963e180fe1a4ad5b62215)
 
 ## Item Details
+##### <a name='489c9492e8de213145b71a7963e180fe1a4ad5b62215'></a> Source: [scripting\core-powershell\ise\The-ISEMenuItemCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItemCollection-Object.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\The-ISEMenuItemCollection-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/17e184866d711e9c724011184a965e8f53f247a8/scripting/core-powershell/ise/The-ISEMenuItemCollection-Object.md)
+* Handoff File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
+* Handoff Datetime: 2016-11-23 22:50:57
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0e8a83635f534e62bb1eed5fd8d02208be019a01/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
+* Handback Datetime: 2016-11-25 14:44:39
+* Bilingual File: [The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0e8a83635f534e62bb1eed5fd8d02208be019a01/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItemCollection-Object.8a411d565a2a9f4e068e86158280da6251f33aee.pt-br.xlf)
+* Bilingual Datetime: 2016-11-25 14:45:50
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
