@@ -5,10 +5,10 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2174
+[ Handoff Success Files ](#handoff-success-list)| 2172
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 49
-[ Handback Failed Files ](#handback-failed-list)| 4
+[ Handback Failed Files ](#handback-failed-list)| 6
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 160
 [ Ignored Files ](#ignored-list)| 36
@@ -2107,7 +2107,6 @@
  [scripting\core-powershell\ise\The-ISEAddOnToolCollection-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/ise/The-ISEAddOnToolCollection-Object.md) | HandedOffSuccess | [Details](#575ee3b8279ad50920df17ff92d4f65467d838302210)
  [scripting\core-powershell\ise\The-ISEAddOnTool-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/26d8bc85b78248e15558dbfef72d32cca7de9627/scripting/core-powershell/ise/The-ISEAddOnTool-Object.md) | HandedOffSuccess | [Details](#e63809763808836af9f468c2ac55ede42836d6b22209)
  [scripting\core-powershell\ise\The-ISEEditor-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/scripting/core-powershell/ise/The-ISEEditor-Object.md) | HandedOffSuccess | [Details](#bdf79567dcf53a3b78e91b44b3e1c3ba83876abe2211)
- [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItem-Object.md) | HandedOffSuccess | [Details](#438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214)
  [scripting\core-powershell\ise\The-ISE-Object-Model-Hierarchy.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/scripting/core-powershell/ise/The-ISE-Object-Model-Hierarchy.md) | HandedOffSuccess | [Details](#21bf2a41e594f7485acbd278a23642ee3dd382452208)
  [scripting\core-powershell\ise\The-ISEOptions-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEOptions-Object.md) | HandedOffSuccess | [Details](#416f8f72df6f6fa4975f07f86fbe796d9221b0fd2216)
  [scripting\core-powershell\ise\The-ISESnippetObject.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISESnippetObject.md) | HandedOffSuccess | [Details](#04d650aca06977883c029684b37838da01b456aa2218)
@@ -2121,7 +2120,6 @@
  [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md) | HandedOffSuccess | [Details](#3d2eb84bf706c935e978e78b84e221f9f68042f82229)
  [scripting\core-powershell\web-access\uninstall-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/web-access/uninstall-windows-powershell-web-access.md) | HandedOffSuccess | [Details](#d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d2230)
  [scripting\core-powershell\web-access\use-the-web-based-windows-powershell-console.md](https://github.com/PowerShell/powerShell-Docs/blob/fe3d7885b7c031a24a737f58523c8018cfc36146/scripting/core-powershell/web-access/use-the-web-based-windows-powershell-console.md) | HandedOffSuccess | [Details](#67426f6ad72967293f8aee1b3f098afc73067c592231)
- [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/workflows/PSWorkflow-Module.md) | HandedOffSuccess | [Details](#4bef4aa944dce5c15cd87ff3b256f2222a92daf02233)
  [scripting\core-powershell\workflows\PSWorkflowUtility-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/workflows/PSWorkflowUtility-Module.md) | HandedOffSuccess | [Details](#c49b8f4f5969faa017a858f8b66fe9bfc5515c362234)
  [scripting\getting-started\cookbooks\Appendix-1---Compatibility-Aliases.md](https://github.com/PowerShell/powerShell-Docs/blob/f1ecd7d8598ad4585285a5dc1c6d20f2d4fefe6e/scripting/getting-started/cookbooks/Appendix-1---Compatibility-Aliases.md) | HandedOffSuccess | [Details](#5ff999383d23aed2bdbb501e4974fd4543a0a2f52237)
  [scripting\getting-started\cookbooks\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/getting-started/cookbooks/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md) | HandedOffSuccess | [Details](#ceec1038516ddd4c29df770d14981c0a694374982238)
@@ -2257,6 +2255,8 @@
  [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md) | HandedBackFailed | [Details](#6631d60d7d82e71c315c26a0196aa3e4c1b60b1510)
  [dsc\DSCAutomationHostEnabled.md](https://github.com/PowerShell/powerShell-Docs/blob/260490003335923d4e1c6b6873b11ee71ba780c0/dsc/DSCAutomationHostEnabled.md) | HandedBackFailed | [Details](#24842d755aa34ab29c6a5b4f973052476bc907e526)
  [gallery\psgallery\PackageManagement_Architecture .md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/PackageManagement_Architecture%20.md) | HandedBackFailed | [Details](#c84ff58e4378feffa15c91485826b74f421c737e120)
+ [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItem-Object.md) | HandedBackFailed | [Details](#438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214)
+ [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/workflows/PSWorkflow-Module.md) | HandedBackFailed | [Details](#4bef4aa944dce5c15cd87ff3b256f2222a92daf02233)
  [scripting\getting-started\cookbooks\Managing-Services.md](https://github.com/PowerShell/powerShell-Docs/blob/f891988cce205b5729d0da6c4ce23da5fbd53b7f/scripting/getting-started/cookbooks/Managing-Services.md) | HandedBackFailed | [Details](#61c98c54ca1b555f6b2e827fb31228bf6a2cc71d2248)
 
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
@@ -29480,7 +29480,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214'></a> Source: [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/ise/The-ISEMenuItem-Object.md)
-* Status: HandedOffSuccess
+* Status: HandedBackFailed
 * Target File: 
 * Handoff File: [The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
@@ -29488,10 +29488,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/aea2398e170a4a2f7fa50a2bd6d84d939f8d5b30/scripting/core-powershell/ise/The-ISEMenuItem-Object.md)
-* Current Handback File: [The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:06:05
+* Handback Datetime: 2016-11-30 14:42:56
+* Handback Error: [handback_file_rejected](#438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214handback_file_rejected)
 * Bilingual File: [The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec2b10d17b161718e74574abed565abb29483b8e/ol-handback/PowerShell/powerShell-Docs.pt-br/live/The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -29791,7 +29789,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='4bef4aa944dce5c15cd87ff3b256f2222a92daf02233'></a> Source: [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/6c666e2e23cb74818e37293410dafc9033057733/scripting/core-powershell/workflows/PSWorkflow-Module.md)
-* Status: HandedOffSuccess
+* Status: HandedBackFailed
 * Target File: 
 * Handoff File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d9da5558c6db5e746520321e99e8631711f24431/ol-handoff/PowerShell/powerShell-Docs.pt-br/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf)
 * Handoff Datetime: 2016-11-23 22:50:57
@@ -29799,10 +29797,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs.pt-br/blob/2760cde35a9fe8536af3e22a9ae23772b121ca19/scripting/core-powershell/workflows/PSWorkflow-Module.md)
-* Current Handback File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf)
-* Current Handback Datetime: 2016-05-25 00:41:41
+* Handback Datetime: 2016-11-30 14:42:56
+* Handback Error: [handback_file_rejected](#4bef4aa944dce5c15cd87ff3b256f2222a92daf02233handback_file_rejected)
 * Bilingual File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d3173356a18da61447e58bc8310f7d423a7b4aa6/ol-handback/PowerShell/powerShell-Docs.pt-br/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf)
 * Bilingual Datetime: 2016-06-16 14:34:17
 * [Back to Top](#report-top)
@@ -32671,6 +32667,18 @@
 * Error Message: Handoff source file: reference\5.1\README.md transformed failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handoff_transform_failed","internal_error_message":"Handoff source file: reference\\5.1\\README.md transformed failed.","internal_error_retriable":false,"exception_message":"reference\\5.1\\README.md file with commit id 0914b7a791ec27eb70eb1b5408ada090922d067a can not be found","exception_type":"System.IO.FileNotFoundException","stack_trace":"   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass11_0.<CreateHandoffFiles>b__0(Tuple`5 handoff) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandoffCore.cs:line 276","extended_information":null}
+
+##### <a name='438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214handback_file_rejected'></a> Source: [scripting\core-powershell\ise\The-ISEMenuItem-Object.md](#438ea8016e76b4165cd9bda0fabbb7e7d041c27b2214)
+* Error Code: handback_file_rejected
+* Error Message: file The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf is out of handoff scope
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_file_rejected","internal_error_message":"file The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf is out of handoff scope","internal_error_retriable":false,"exception_message":"file The-ISEMenuItem-Object.14fd39d94a609a4d0fe1a1e747bc1b5b00a2c526.pt-br.xlf is out of handoff scope","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='4bef4aa944dce5c15cd87ff3b256f2222a92daf02233handback_file_rejected'></a> Source: [scripting\core-powershell\workflows\PSWorkflow-Module.md](#4bef4aa944dce5c15cd87ff3b256f2222a92daf02233)
+* Error Code: handback_file_rejected
+* Error Message: file PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf is out of handoff scope
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_file_rejected","internal_error_message":"file PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf is out of handoff scope","internal_error_retriable":false,"exception_message":"file PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.pt-br.xlf is out of handoff scope","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
 
 ##### <a name='61c98c54ca1b555f6b2e827fb31228bf6a2cc71d2248handback_file_rejected'></a> Source: [scripting\getting-started\cookbooks\Managing-Services.md](#61c98c54ca1b555f6b2e827fb31228bf6a2cc71d2248)
 * Error Code: handback_file_rejected
