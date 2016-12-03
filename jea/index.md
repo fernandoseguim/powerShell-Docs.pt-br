@@ -1,5 +1,1 @@
-# Arquivo de teste de índice para Publicação Aberta
-
-<!--HONumber=Aug16_HO3-->
-
-
+# <a name="index-test-file-for-open-publishing"></a>Arquivo de teste de índice para Publicação Aberta
