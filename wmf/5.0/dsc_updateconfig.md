@@ -1,4 +1,4 @@
-# PULL sob demanda de configurações DSC
+# <a name="on-demand-pull-of-dsc-configurations"></a>PULL sob demanda de configurações DSC
 
 O novo cmdlet Update-DscConfiguration dispara um pull do(s) servidor(es) de recepção definido(s) na metaconfiguração. Em geral, esse comportamento é conhecido como “Pull agora”. 
 
@@ -31,7 +31,3 @@ Update-DscConfiguration     -CimSession <CimSession[]>
                             [-Confirm] 
                             [<CommonParameters>]
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,13 +8,11 @@ author: jkeithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: ebbd7d4d39cd335d994dd6cd3a06dd644df6d919
-ms.openlocfilehash: 83061e651b190bab3e5914bb6270a5857f7aa7a5
-
+ms.openlocfilehash: 60350cdc816e3a480a033adb3721ad4dabddfff9
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Notas de Versão da Preview do Windows Management Framework (WMF) 5.1 #
+# <a name="windows-management-framework-wmf-51-preview-release-notes"></a>Notas de Versão da Preview do Windows Management Framework (WMF) 5.1 #
 
 A Preview do WMF 5.1 inclui os componentes do PowerShell, WMI, o WinRM e o Inventário de Software e Licenciamento (SIL), que estão sendo lançados com o Windows Server 2016. O WMF 5.1 pode ser instalado no Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 e 2012 R2 e fornece diversos aprimoramentos ao WMF 5.0 RTM, incluindo:
 
@@ -30,12 +28,6 @@ A Preview do WMF 5.1 inclui os componentes do PowerShell, WMI, o WinRM e o Inven
 - **O WMF 5.1 Preview exige o .NET Framework 4.6**. A instalação terá êxito, mas ocorrerá falha nos principais recursos se o .NET 4.6 não estiver instalado. As instruções estão disponíveis no tópico [Instalar e Configurar WMF 5.1 (Preview)](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
 - **Não há suporte para a Preview do WMF 5.1 para implantações de produção** no momento. Ele destina-se a fornecer informações preliminares sobre o que há na versão e lhe dá a oportunidade de fornecer comentários à equipe do PowerShell.
 - A Preview do WMF 5.1 pode ser instalada diretamente pelo WMF 5.0.
-- Este é um problema conhecido que o WMF 4.0 atualmente é necessário para instalar a Preview do WMF 5.1 no Windows 7 e Windows Server 2008. Esse requisito deve ser removido antes da versão final.
+- Este é um problema conhecido em que a instalação da Visualização do WMF 5.1 no Windows 7 e Windows Server 2008 R2 requer o WMF 4.0. Esse requisito deve ser removido antes da versão final.
 - A instalação de versões futuras do WMF 5.1, incluindo a versão RTM, exigirá a desinstalação da Preview do WMF 5.1.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: bc65c69906a514a2490e6e7144a0cd4f377bec16
-
+ms.openlocfilehash: 44d5f142c6d2c68c1a70b3a1017a8e6e57a58abe
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="windows-powershell-ise-object-model-reference"></a>Referência de modelo de objeto do ISE do Windows PowerShell
   
 ## <a name="object-model-reference"></a>Referência de modelo de objeto
@@ -54,9 +52,3 @@ ms.openlocfilehash: bc65c69906a514a2490e6e7144a0cd4f377bec16
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

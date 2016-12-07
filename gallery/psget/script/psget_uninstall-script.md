@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: script psget_uninstall
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: af3f3b0056d8f35650323ddbd1ff6979fd3e3a84
-
+ms.openlocfilehash: 9cc6ee62720bfca858e7f783753adabe8a53fb29
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Uninstall-Script
+# <a name="uninstall-script"></a>Uninstall-Script
 
 Desinstala um arquivo de script que foi instalado usando PowerShellGet.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Uninstall-Script desinstala os arquivos de script especificados que foram instalados do repositório online.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Uninstall-Script -Module PowerShellGet -Syntax
 ```
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Uninstall-Script](http://go.microsoft.com/fwlink/?LinkId=619789)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 Get-InstalledScript | Uninstall-Script -WhatIf
@@ -72,10 +70,4 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
 + CategoryInfo : ObjectNotFound: (Microsoft.Power...lets.GetPackage:GetPackage) [Get-Package], Exception
 + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.GetPackage
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

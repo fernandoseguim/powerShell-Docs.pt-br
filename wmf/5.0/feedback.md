@@ -1,7 +1,2 @@
-# Comentários
+# <a name="feedback"></a>Comentários
 Para relatar problemas ou fornecer comentários, use o [site UserVoice do PowerShell](http://windowsserver.uservoice.com/forums/301869-powershell).
-
-
-<!--HONumber=Aug16_HO3-->
-
-

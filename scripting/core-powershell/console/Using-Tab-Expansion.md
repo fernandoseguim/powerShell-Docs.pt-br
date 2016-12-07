@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
-translationtype: Human Translation
-ms.sourcegitcommit: 27512f637dd44485eee38936fea4723cd17b6218
-ms.openlocfilehash: b67024fb27c08e1079caad891cfc3e621a354b27
-
+ms.openlocfilehash: 8a9ae15003a298862e0b6ca84c8730c947214290
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Usando a expansão com Tab
+# <a name="using-tab-expansion"></a>Usando a expansão com Tab
 Shells de linha de comando geralmente fornecem uma maneira de preencher nomes longos de arquivos ou comandos automaticamente, acelerando a entrada de comandos e fornecendo dicas. O Windows PowerShell permite preencher os nomes de arquivo e nomes de cmdlet pressionando a tecla **Tab**.
 
 > [!NOTE]
@@ -50,10 +48,4 @@ PS> Get-Content C:\windows\actsetup.log
 
 > [!NOTE]
 > Uma limitação do processo de expansão de guia é que as guias são sempre interpretadas como tentativas de preencher uma palavra. Se você copiar e colar os exemplos de comando em um console do Windows PowerShell, verifique se o exemplo não contém guias; se isso acontecer, os resultados serão imprevisíveis e certamente não serão o que você pretendia.
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

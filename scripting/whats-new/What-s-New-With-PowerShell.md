@@ -7,12 +7,10 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 1d4062490ba76a8cc62faa8fb96eff92b49169b7
-ms.openlocfilehash: 035fc8adc08df500069e800cfb94c5dcff46d88f
-
+ms.openlocfilehash: e3c7634462800736f0f321481e8f26074359f40b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="what39s-new-with-powershell"></a>Novidades no PowerShell
 O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem e melhoram seu uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.  Os principais aprimoramentos são nas áreas de Configuração de Estado Desejado, segurança, desempenho, comunicação remota e aprimoramentos de linguagem.
 
@@ -31,10 +29,4 @@ O Windows PowerShell 5.0 está instalado por padrão no Windows Server® 2016 e 
 
 -   New features in Windows PowerShell 3.0
 -->
-
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

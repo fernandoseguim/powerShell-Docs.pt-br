@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 119b4d50423498e08383f02e56ae76653d06e555
-ms.openlocfilehash: e3cac149d549400b6a180b4a4fd6ff1a13a8130b
-
+ms.openlocfilehash: c9330b3f3a114d673b31e2b2053a02545dd13169
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Compreendendo Conceitos
+# <a name="understanding-concepts"></a>Compreendendo Conceitos
 
 *  Objetos no PowerShell  
 *  O pipeline
@@ -31,10 +29,4 @@ ms.openlocfilehash: e3cac149d549400b6a180b4a4fd6ff1a13a8130b
 *  Provedores
 *  Drivers
 *  Atualizando a Ajuda 
-
-
-
-
-<!--HONumber=Sep16_HO5-->
-
 
