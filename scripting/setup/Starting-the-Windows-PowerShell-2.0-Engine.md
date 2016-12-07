@@ -8,32 +8,30 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 094c3c9f240457fc884031e7d82dcdc1e81e582d
-
+ms.openlocfilehash: dedd8c3192c777faac82cd87fd333fd5ab8a4ebf
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Iniciando o Mecanismo do Windows PowerShell 2.0
+# <a name="starting-the-windows-powershell-20-engine"></a>Iniciando o Mecanismo do Windows PowerShell 2.0
 Esta seção explica como iniciar o Mecanismo Windows PowerShell 2.0 no Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, que inclui o Mecanismo Windows PowerShell 2.0 e em outros sistemas em que o Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 são instalados.
 
 Windows PowerShell 4.0 e Windows PowerShell 3.0 são projetados para serem compatíveis com o Windows PowerShell 2.0. Cmdlets, provedores, snap-ins, módulos e scripts escritos para o Windows PowerShell 2.0 são executados sem alteração no Windows PowerShell 4.0 e Windows PowerShell 3.0. No entanto, devido a uma mudança na política de ativação de tempo de execução no Microsoft .NET Framework 4, programas host do Windows PowerShell escritos para Windows PowerShell 2.0 e compilados com CLR (Common Language Runtime) 2.0 não podem ser executados sem modificação no Windows PowerShell 3.0 ou o Windows PowerShell 4.0, que são compilados com CLR 4.0. O Mecanismo Windows PowerShell 2.0 deve ser usado somente quando um programa de script ou host existente não puder ser executado porque é incompatível com o Windows PowerShell 4.0, Windows PowerShell 3.0 ou Microsoft .NET Framework 4. Tais casos devem ser raros.
 
 Muitos programas que exigem o Mecanismo Windows PowerShell 2.0 o inicia automaticamente. Essas instruções são incluídas para as raras situações em que você precisa iniciar o mecanismo manualmente.
 
-## Instalar e habilitar os programas necessários
+## <a name="installing-and-enabling-required-programs"></a>Instalar e habilitar os programas necessários
 Antes de iniciar o Mecanismo Windows PowerShell 2.0, habilite o Mecanismo Windows PowerShell 2.0 e o Microsoft .NET Framework 3.5 com o Service Pack 1. Para ver as instruções, consulte [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
 Sistemas nos quais o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0 estão instalados têm todos os componentes necessários. Nenhuma outra configuração é necessária. Para obter informações sobre como instalar o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0, confira [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
-## Como iniciar o Mecanismo Windows PowerShell 2.0
+## <a name="how-to-start-the-windows-powershell-20-engine"></a>Como iniciar o Mecanismo Windows PowerShell 2.0
 Ao iniciar o Windows PowerShell a versão mais recente é iniciada por padrão. Para iniciar o Windows PowerShell com o Mecanismo Windows PowerShell 2.0, use o parâmetro de Versão do PowerShell.exe. Você pode executar o comando no prompt de comando, incluindo o Windows PowerShell e Cmd.exe.
 
 ```
 PowerShell.exe -Version 2
 ```
 
-## Como iniciar uma sessão remota com o Mecanismo Windows PowerShell 2.0
+## <a name="how-to-start-a-remote-session-with-the-windows-powershell-20-engine"></a>Como iniciar uma sessão remota com o Mecanismo Windows PowerShell 2.0
 Para executar o Mecanismo Windows PowerShell 2.0 em uma sessão remota, crie uma configuração de sessão (também conhecida como "ponto de extremidade") no computador remoto que carrega o Mecanismo Windows PowerShell 2.0. A configuração da sessão é salva no computador remoto e pode ser usada por um usuário autorizado para criar sessões que utilizam o Mecanismo Windows PowerShell 2.0.
 
 Essa é uma tarefa avançada que normalmente é executada por um administrador do sistema.
@@ -42,7 +40,7 @@ O procedimento a seguir usa o parâmetro **PSVersion** do cmdlet [Register-PSSes
 
 Para obter mais informações sobre os arquivos de configuração de sessão, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Para obter mais informações sobre as configurações de sessão, incluindo instalação e segurança, consulte [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
-#### Para iniciar uma sessão remota do Windows PowerShell 2.0
+#### <a name="to-start-a-remote-windows-powershell-20-session"></a>Para iniciar uma sessão remota do Windows PowerShell 2.0
 
 1.  Para criar uma configuração de sessão que requer o Mecanismo Windows PowerShell 2.0, use o parâmetro **PSVersion** do cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) com um valor de "2.0". Execute este comando no computador no “lado do servidor” ou na extremidade de recebimento de uma conexão.
 
@@ -62,7 +60,7 @@ Para obter mais informações sobre os arquivos de configuração de sessão, co
     $s = New-PSSession -ComputerName Server01 -ConfigurationName PS2
     ```
 
-## Como iniciar um trabalho em segundo plano com o Mecanismo Windows PowerShell 2.0
+## <a name="how-to-start-a-background-job-with-the-windows-powershell-20-engine"></a>Como iniciar um trabalho em segundo plano com o Mecanismo Windows PowerShell 2.0
 Para iniciar um trabalho em segundo plano com o Mecanismo Windows PowerShell 2.0, use o parâmetro **PSVersion** do cmdlet [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
 
 O comando a seguir inicia um trabalho em segundo plano com o Mecanismo Windows PowerShell 2.0
@@ -72,10 +70,4 @@ Start-Job {Get-Process} -PSVersion 2.0
 ```
 
 Para obter mais informações sobre trabalhos em segundo plano, consulte [about_Jobs [v4]](https://technet.microsoft.com/en-us/library/7362512a-8a4e-4575-b2ea-a740e5c4f002).
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

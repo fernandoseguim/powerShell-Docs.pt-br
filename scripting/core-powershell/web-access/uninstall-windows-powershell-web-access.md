@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d
-
+ms.openlocfilehash: 9e03bca75eeb6acf3f1433a9baaed0c1674ab1be
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Desinstalar o Windows PowerShell Web Access
+#  <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -29,7 +27,7 @@ Antes de desinstalar o Windows PowerShell Web Access do servidor de gateway, exe
 
 A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado. O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação recomendada (rápida)</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação (rápida) recomendada</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -44,7 +42,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 Se você tiver especificado seu próprio nome de site personalizado, adicione o parâmetro <span class="code">WebsiteName</span> ao seu comando e especifique o nome do site. Se você tiver usado um aplicativo Web personalizado (não o aplicativo padrão, **pswa**), adicione o parâmetro <span class="code">WebApplicationName</span> ao seu comando e especifique o nome do aplicativo Web.
 
-#### Para excluir o site e os aplicativos Web usando o cmdlet Uninstall-PswaWebApplication
+#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstall-pswawebapplication-cmdlet"></a>Para excluir o site e os aplicativos Web usando o cmdlet Uninstall-PswaWebApplication
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell.
 
@@ -62,11 +60,11 @@ Se você tiver especificado seu próprio nome de site personalizado, adicione o 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: desinstalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
-#### Para desinstalar o Windows PowerShell Web Access usando cmdlets do Windows PowerShell
+#### <a name="to-uninstall-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Para desinstalar o Windows PowerShell Web Access usando cmdlets do Windows PowerShell
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados. Se já houver uma sessão aberta, vá para a etapa seguinte.
 
@@ -101,7 +99,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ------------------------------------------------------------------------
 
-#### Para excluir o site e os aplicativos Web do Windows PowerShell Web Access usando o Gerenciador do IIS
+#### <a name="to-delete-the-windows-powershell-web-access-website-and-web-applications-by-using-iis-manager"></a>Para excluir o site e os aplicativos Web do Windows PowerShell Web Access usando o Gerenciador do IIS
 
 1.  Abra o console do Gerenciador do IIS seguindo um destes procedimentos. Se já estiver aberto, vá para a etapa seguinte.
 
@@ -137,11 +135,11 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: desinstalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
-#### Para desinstalar o Windows PowerShell Web Access usando o Assistente para Remover Funções e Recursos
+#### <a name="to-uninstall-windows-powershell-web-access-by-using-the-remove-roles-and-features-wizard"></a>Para desinstalar o Windows PowerShell Web Access usando o Assistente para Remover Funções e Recursos
 
 1.  Se o Gerenciador do Servidor já estiver aberto, vá para a etapa seguinte. Se o Gerenciador do Servidor ainda não estiver aberto, abra-o de uma das maneiras a seguir.
 
@@ -159,7 +157,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 6.  Na página **Confirmar seleções de remoção**, clique em **Remover**.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -167,18 +165,18 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 [Instalar e usar o Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
 [Ajuda do Gerenciador do IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)
 
-<span>Mostrar:</span> herdado protegido
+<span>Mostrar</span>: herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
 Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isto
 
 <span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
-[Gerenciar o perfil](https://social.technet.microsoft.com/profile)
+[Gerenciar seu Perfil](https://social.technet.microsoft.com/profile)
 
 |
 
@@ -202,11 +200,11 @@ Fale mais
 -   |
 -   [Entre em contato conosco](https://technet.microsoft.com/cc512759.aspx)
 -   |
--   [Política de privacidade](https://privacy.microsoft.com/privacystatement)
+-   [Política de Privacidade](https://privacy.microsoft.com/privacystatement)
 -   |
--   [Termos de uso](https://technet.microsoft.com/cc300389.aspx)
+-   [Termos de Uso](https://technet.microsoft.com/cc300389.aspx)
 -   |
--   [Marcas](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
+-   [Marcas comerciais](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
 -   |
 
 © 2016 Microsoft
@@ -215,10 +213,4 @@ Fale mais
 
 Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

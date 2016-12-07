@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 4bc84787847c55658077ba0bb21784d59ca5bed7
-ms.openlocfilehash: 2d2573612da7388f01467ed2113cfc233e6f4dd6
-
+ms.openlocfilehash: e62d4bf50e122d2e381cebf8fa594dda4f888e47
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
@@ -187,10 +185,4 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Aplicando configurações](enactingConfigurations.md)
 * [Usando um servidor de relatório de DSC](reportServer.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

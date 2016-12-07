@@ -1,4 +1,4 @@
-# Convert-String
+# <a name="convert-string"></a>Convert-String
 **Convert-String** expõe a funcionalidade “replace by magic”. Forneça exemplos do tipo “antes e depois” de como deseja que o texto se assemelhe, e **Convert-String** formatará o texto automaticamente. Aqui está uma demonstração: usar o nome e sobrenome de alguém e substituí-lo pelo sobrenome, uma vírgula, a primeira inicial do sobrenome e um ponto. Experimente com um regex e veja quanto tempo isso leva.
 
 ```powershell
@@ -8,8 +8,3 @@ Holmes, L.
 Lee, S.
 Snover, J.
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,23 +8,15 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "Considerações sobre a limitação de comandos"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 9f3f79a29e0fb7ec5a5111284bb7985548e17749
-
+ms.openlocfilehash: 0b4396ee130d99c42f613c1b79193c236ad472e7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-### Considerações sobre a limitação de comandos
+### <a name="considerations-when-limiting-commands"></a>Considerações sobre a limitação de comandos
 Há um ponto importante sobre esta etapa.
 É fundamental que todos os recursos expostos por meio de JEA estejam localizados em áreas restritas pelo administrador.
 Os usuários não administradores não devem ter a capacidade de modificar os scripts usados por meio de pontos de extremidade JEA.
 
 Falando nisso, é essencial que você não conceda a usuários do JEA a capacidade de substituir configurações do JEA e scripts na lista de permissões dentro de suas sessões JEA.
 Tenha muito cuidado ao expor comandos como `Copy-Item`!
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

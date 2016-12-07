@@ -1,6 +1,6 @@
-# Separação de IDs de nó e de configuração
+# <a name="separation-of-node-and-configuration-ids"></a>Separação de IDs de nó e de configuração
 
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 Para proporcionar uma experiência mais flexível e simplificada ao usar o DSC no modo Pull, adicionamos uma série de recursos nesta versão. Esses recursos destinam-se a permitir que você tenha a flexibilidade de configurar e implantar configurações em vários nós com facilidade, ao mesmo tempo que acompanha as informações de status e relatório de cada nó individualmente. Esses recursos são os seguintes:
 
@@ -11,9 +11,4 @@ Para proporcionar uma experiência mais flexível e simplificada ao usar o DSC n
 **Observação:** esses recursos e funcionalidades foram adicionados e não substituem os conceitos e recursos existentes de pull. É possível usar esses novos recursos ou os antigos com o novo servidor de recepção fornecido nesta versão.
 
 Para obter mais informações, veja [Configurando um cliente de pull usando nomes de configuração](https://msdn.microsoft.com/powershell/dsc/pullclientconfignames)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

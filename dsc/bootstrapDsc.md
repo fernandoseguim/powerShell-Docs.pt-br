@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7d7e4f9784456c897c4779e2bc275d8dc195a29e
-ms.openlocfilehash: c8920239a3492421b1a5dc39d0ad599083bc466b
-
+ms.openlocfilehash: bf5b3da641facfdfa395aacf0eadcf773b8c4b02
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 >Aplica-se a: Windows PowerShell 5.0
 
 >**Observação:** a chave do Registro **DSCAutomationHostEnabled** descrita neste tópico não está disponível no PowerShell 4.0.
@@ -207,9 +205,3 @@ Por padrão, o valor da chave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cu
 - [Chave do Registro de DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 - [Configurando o LCM (Gerenciador de Configurações Local)](metaConfig.md)
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

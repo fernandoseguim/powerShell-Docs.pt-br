@@ -1,4 +1,4 @@
-# Chamar o método de classe base
+# <a name="call-base-class-method"></a>Chamar o método de classe base
 
 É possível substituir os métodos existentes nas subclasses. Para fazer isso, declare métodos usando o mesmo nome e a mesma assinatura:
 
@@ -46,7 +46,3 @@ $list = [MyIntList]::new()
 $list.Add(100)
 $list[0] # return 200
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

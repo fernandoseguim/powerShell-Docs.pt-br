@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 83ca45d507e39b77751ac7feb6a7b65ae2834280
 ms.openlocfilehash: e1922008a92f00c9ddab28598735839c25219d24
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Depurando os recursos de DSC
+# <a name="debugging-dsc-resources"></a>Depurando os recursos de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
 No PowerShell 5.0, foi introduzido um novo recurso na Configuração de Estado Desejado (DSC) que permite depurar um recurso de DSC como uma configuração que está sendo aplicada.
 
-## Habilitando a depuração de DSC
+## <a name="enabling-dsc-debugging"></a>Habilitando a depuração de DSC
 Para poder depurar um recurso, é preciso habilitar a depuração chamando o cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Esse cmdlet usa um parâmetro obrigatório, o **BreakAll**. 
 
 É possível verificar se a depuração foi habilitada analisando o resultado de uma chamada para o [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). A seguinte saída do PowerShell mostra o resultado de habilitar a depuração:
@@ -43,7 +41,7 @@ PS C:\DebugTest>
 ```
 
 
-## Iniciando uma configuração com a depuração habilitada
+## <a name="starting-a-configuration-with-debug-enabled"></a>Iniciando uma configuração com a depuração habilitada
 Para depurar um recurso de DSC, inicie uma configuração que chame esse recurso. Para este exemplo, analisaremos uma configuração simples que chame o recurso [WindowsFeature](windowsfeatureResource.md) a fim de garantir que o recurso "WindowsPowerShellWebAccess" seja instalado:
 
 ```powershell
@@ -85,7 +83,7 @@ Debug-Runspace -Id 9
 ```
 Nesse ponto, o LCM chama o recurso e vai até o primeiro ponto de interrupção. As três últimas linhas na saída mostram como anexar ao processo e iniciar a depuração do script do recurso.
 
-## Depurando o script de recurso
+## <a name="debugging-the-resource-script"></a>Depurando o script de recurso
 
 Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as três últimas linhas da saída `Start-DscConfiguration` como comandos, substituindo `<credentials>` por credenciais de usuário válidas. Agora você verá um prompt semelhante a:
 
@@ -96,20 +94,14 @@ Inicie uma nova instância do ISE do PowerShell. No painel do console, digite as
 O script de recurso será aberto no painel de script e o depurador será interrompido na primeira linha da função **Test-TargetResource** (o método **Test()** de um recurso baseado em classe).
 Agora você pode usar os comandos de depuração no ISE para percorrer o script de recurso, examinar os valores das variáveis, exibir a pilha de chamadas e assim por diante. Para obter informações sobre como depurar no ISE do PowerShell, confira [How to Debug Scripts in Windows PowerShell ISE (Como depurar scripts no ISE do Windows PowerShell)](https://technet.microsoft.com/en-us/library/dd819480.aspx). Lembre-se de que toda linha no script de recurso (ou classe) é definida como um ponto de interrupção.
 
-## Desabilitando a depuração de DSC
+## <a name="disabling-dsc-debugging"></a>Desabilitando a depuração de DSC
 
 Depois de chamar [Enable DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), todas as chamadas a [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) resultarão na interrupção do depurador pela configuração. Para permitir que as configurações sejam executadas normalmente, você deve desabilitar a depuração chamando o cmdlet [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
 
 >**Observação:** a reinicialização não altera o estado de depuração do LCM. Se a depuração estiver desabilitada, iniciar uma configuração ainda interromperá o depurador após uma reinicialização.
 
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
 - [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

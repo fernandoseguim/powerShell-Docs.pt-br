@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 140f60bf7344eae57e2b5d364464bc0b7c1a2220
-ms.openlocfilehash: 5d37938869a71bea0d8a6349e680411b7d0200d9
-
+ms.openlocfilehash: e978ee828fe3c91be52077442c5781b7a20e50be
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurando o Gerenciador de Configurações Local
+# <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -28,7 +26,7 @@ Um tipo especial de configuração é utilizado para configurar o LCM para espec
 
 > **Observação**: este tópico se aplica ao LCM introduzido no Windows PowerShell 5.0. Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, consulte o [Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0](metaconfig4.md).
 
-## Escrevendo e aplicando uma configuração do LCM
+## <a name="writing-and-enacting-an-lcm-configuration"></a>Escrevendo e aplicando uma configuração do LCM
 
 Para configurar o LCM, você cria e executa um tipo especial de configuração. Para especificar uma configuração do LCM, é necessário usar o atributo DscLocalConfigurationManager. Segue uma configuração simples que define o LCM para o modo de push.
 
@@ -57,7 +55,7 @@ Uma configuração do LCM pode conter blocos somente para um conjunto limitado d
 * **ReportServerWeb**: especifica um servidor de pull de HTTP para o qual os relatórios serão enviados.
 * **PartialConfiguration**: especifica configurações parciais.
 
-## Configurações básicas
+## <a name="basic-settings"></a>Configurações básicas
 
 Além de especificar servidores de pull e configurações parciais, todas as propriedades do LCM são configuradas em um bloco **Settings**. As seguintes propriedades estão disponíveis em um bloco **Settings**.
 
@@ -79,7 +77,7 @@ Além de especificar servidores de pull e configurações parciais, todas as pro
 | PartialConfigurations| CimInstance| Não foi implementado. Não use.| 
 | StatusRetentionTimeInDays | UInt32| O número de dias que o LCM mantém o status da configuração atual.| 
 
-## Servidores de pull
+## <a name="pull-servers"></a>Servidores de pull
 
 Um servidor de pull é um serviço Web OData ou um compartilhamento SMB que é usado como local central para arquivos de DSC. A configuração do LCM dá suporte para definir os seguintes tipos de servidores de pull:
 
@@ -89,7 +87,7 @@ Um servidor de pull é um serviço Web OData ou um compartilhamento SMB que é u
 
 Para obter informações sobre a configuração e o uso de servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).
 
-## Blocos do servidor de configuração
+## <a name="configuration-server-blocks"></a>Blocos do servidor de configuração
 
 Para definir um servidor de configuração baseado na Web, crie um bloco **ConfigurationRepositoryWeb**. Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 
@@ -108,7 +106,7 @@ Para definir um servidor de configuração baseado em SMB, crie um bloco **Confi
 |Credential|MSFT_Credential|A credencial usada para autenticar para o compartilhamento SMB.|
 |SourcePath|cadeia de caracteres|O caminho do compartilhamento SMB.|
 
-## Blocos do servidor de recurso
+## <a name="resource-server-blocks"></a>Blocos do servidor de recurso
 
 Para definir um servidor de recurso baseado na Web, crie um bloco **ResourceRepositoryWeb**. Um **ResourceRepositoryWeb** define as propriedades a seguir.
 
@@ -126,7 +124,7 @@ Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepo
 |Credential|MSFT_Credential|A credencial usada para autenticar para o compartilhamento SMB.|
 |SourcePath|cadeia de caracteres|O caminho do compartilhamento SMB.|
 
-## Blocos do servidor de relatório
+## <a name="report-server-blocks"></a>Blocos do servidor de relatório
 
 Um servidor de relatório deve ser um serviço Web OData. Para definir um servidor de relatório, crie um bloco **ReportServerWeb**. **ReportServerWeb** define as propriedades a seguir.
 
@@ -137,7 +135,7 @@ Um servidor de relatório deve ser um serviço Web OData. Para definir um servid
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o servidor de pull. Para obter mais informações, consulte Como registrar um nó com um servidor de pull de DSC.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
 
-## Configurações parciais
+## <a name="partial-configurations"></a>Configurações parciais
 
 Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**. Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](partialConfigs.md). **PartialConfiguration** define as propriedades a seguir.
 
@@ -150,23 +148,17 @@ Para definir uma configuração parcial, você cria um bloco **PartialConfigurat
 |RefreshMode|cadeia de caracteres|Especifica como o LCM obtém essa configuração parcial. Os valores possíveis são __"Disabled"__, __"Push(default)"__ e __"Pull"__. <ul><li>__Disabled__: esta configuração parcial está desabilitada.</li><li> __Push__: a configuração parcial é enviada por push para o nó ao chamar o cmdlet [Publish-DscConfiguration](https://technet.microsoft.com/en-us/library/mt517875.aspx). Depois que todas as configurações parciais para o nó são enviadas por push ou recebidas por pull de um servidor, a configuração pode ser iniciada chamando `Start-DscConfiguration –UseExisting`. Este é o valor padrão.</li><li>__Pull__: o nó é configurado para verificar regularmente a configuração parcial de um servidor de pull. Se essa propriedade for definida como __Pull__, você deverá especificar um servidor de pull em uma propriedade __ConfigurationSource__. Para obter mais informações sobre servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).</li></ul>|
 |ResourceModuleSource|string[]|Uma matriz de nomes de servidores de recurso por meio dos quais é possível baixar os recursos necessários para essa configuração parcial. Esses nomes devem se referir a servidores de recurso definidos previamente nos blocos **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
 
-## Consulte Também 
+## <a name="see-also"></a>Consulte Também 
 
-### Conceitos
+### <a name="concepts"></a>Conceitos
 [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
  
 [Configurando um servidor de pull de DSC](pullServer.md) 
 
 [Gerenciador de Configurações Local de Configuração de Estado Desejado do Windows PowerShell 4.0](metaConfig4.md) 
 
-### Outros recursos
+### <a name="other-resources"></a>Outros recursos
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
 
 [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md) 
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

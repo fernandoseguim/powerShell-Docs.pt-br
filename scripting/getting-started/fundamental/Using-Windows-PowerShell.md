@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
-translationtype: Human Translation
-ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
-ms.openlocfilehash: 9563e58d2840c7cc2120b58b041660aaeee12830
-
+ms.openlocfilehash: 0e5ee17b9c08edbcd46649fa2000c043a9c95776
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Usando o Windows PowerShell
+# <a name="using-windows-powershell"></a>Usando o Windows PowerShell
 O Windows PowerShell® é um shell de linha de comando e linguagem de scripts com base em tarefa, projetado especialmente para a administração de sistemas. Baseado no .NET Framework, o Windows PowerShell ajuda os profissionais de TI e os usuários avançados a controlar e automatizar a administração de sistemas operacionais Windows e de aplicativos que são executados no Windows.
 
 Os recursos nesta seção ajudam a aprender sobre o Windows PowerShell, os recursos que estão incluídos com o Windows PowerShell e o editor gráfico do Windows PowerShell, Ambiente de Script Integrado do Windows PowerShell.
 
-## O que há nesta seção
+## <a name="whats-in-this-section"></a>O que há nesta seção
 O conteúdo nesta seção pode ajudá-lo a saber mais sobre o Windows PowerShell, como usar o Windows PowerShell e quais são as novidades no Windows PowerShell nas versões mais recentes.
 
 -   [Novidades no Windows PowerShell](../../whats-new/What-s-New-in-Windows-PowerShell-50.md). Este tópico descreve as alterações para o Windows PowerShell 3.0 e o Windows PowerShell 4.0.
@@ -34,7 +32,7 @@ O conteúdo nesta seção pode ajudá-lo a saber mais sobre o Windows PowerShell
 
 -   [Glossário do Windows PowerShell](../../Windows-PowerShell-Glossary.md). Saiba mais sobre termos comuns usados no Windows PowerShell e sua documentação.
 
-## Tecnologias Relacionadas
+## <a name="related-technologies"></a>Tecnologias Relacionadas
 O Windows PowerShell faz parte de uma família de tecnologias de script relacionadas que ajudam você a automatizar o gerenciamento remoto de computadores baseados no Windows. Incluímos aqui links para obter mais informações sobre essas tecnologias.
 
 -   [Fluxo de trabalho do Windows PowerShell](http://technet.microsoft.com/library/jj134242.aspx). Introduzido pela primeira vez no Windows PowerShell 3.0, o fluxo de trabalho do Windows PowerShell permite que os profissionais de TI aproveitem os benefícios do [Windows Workflow Foundation](http://msdn.microsoft.com/library/ee342461.aspx) com as funcionalidades de automação e a facilidade de uso do Windows PowerShell.
@@ -49,7 +47,7 @@ O Windows PowerShell faz parte de uma família de tecnologias de script relacion
 
 -   O [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) inclui atualizações do Windows PowerShell, ISE do Windows PowerShell, Serviços Web do Windows PowerShell (Extensão IIS do Management OData), WinRM (Gerenciamento Remoto do Windows), WMI (Infraestrutura de Gerenciamento do Windows) e o provedor WMI do Gerenciador do Servidor. O Windows Management Framework 3.0 Preview permite a você instalar e usar essas tecnologias em computadores que executam o Windows® 7 SP1, Windows Server 2008 SP2 e Windows Server 2008 R2 SP1.
 
-## Aprendendo a usar o Windows PowerShell
+## <a name="learning-windows-powershell"></a>Aprendendo a usar o Windows PowerShell
 Para começar a conhecer o Windows PowerShell, inicie pelos seguintes recursos:
 
 -   [Microsoft Virtual Academy: introdução de início rápido ao PowerShell 3.0](https://mva.microsoft.com/en-us/training-courses/getting-started-with-powershell-3-0-jump-start-8276). Este início rápido foi projetado para ensinar aos profissionais de TI, administradores e pessoal do suporte técnico ocupados como usar o Windows PowerShell para melhorar as capacidades de gerenciamento, automatizar tarefas redundantes e gerenciar o ambiente em escala. Saiba como o Windows PowerShell funciona e como adaptar o Windows PowerShell para suas necessidades com os especialistas Jeffrey Snover, o inventor do Windows PowerShell e Jason Helmick, tecnólogo sênior da Concentrated Technology.
@@ -64,7 +62,7 @@ Para começar a conhecer o Windows PowerShell, inicie pelos seguintes recursos:
 
 -   [System Center Automation com Windows PowerShell](https://technet.microsoft.com/en-us/library/mt156962.aspx). Uma lista em ordem alfabética de tópicos de ajuda para os módulos do Windows PowerShell incluídos com os componentes do Microsoft System Center.
 
-## Baixando e atualizando a Ajuda do Windows PowerShell
+## <a name="downloading-and-updating-windows-powershell-help"></a>Baixando e atualizando a Ajuda do Windows PowerShell
 Os tópicos a seguir descrevem como você pode obter a Ajuda mais recente para o Windows PowerShell e exibi-lo no prompt de comando do Windows PowerShell.
 
 -   Cmdlet [Update-Help](http://technet.microsoft.com/library/hh849720.aspx). Um cmdlet do Windows PowerShell que baixa e instala as versões mais recentes dos tópicos de ajuda para módulos do Windows PowerShell no seu computador.
@@ -74,10 +72,4 @@ Os tópicos a seguir descrevem como você pode obter a Ajuda mais recente para o
 -   cmdlet [Get-Help](http://technet.microsoft.com/library/hh849696(v=wps.630).aspx). Um cmdlet do Windows PowerShell que você pode usar para aprender sobre os cmdlets e provedores instalados no sistema.
 
 -   Você pode obter notificação sobre as atualizações para os arquivos de Ajuda publicados assinando o seguinte RSS feed: [http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions](http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions).
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

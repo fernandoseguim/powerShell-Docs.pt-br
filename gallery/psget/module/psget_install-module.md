@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "módulo psget_install"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 68e7ba36a723b0cb863ed890834855fa5f531240
-
+ms.openlocfilehash: 82e4bb1ec76b1a51e1a99de85bc77a5429d46e26
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Install-Module
+# <a name="install-module"></a>Install-Module
 
 Instala módulos do PowerShell de repositórios online no computador local.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Install-Module baixa um ou mais módulos de uma galeria online, valida-os e instala-os no computador local com o escopo de instalação especificado.
 
@@ -35,7 +33,7 @@ Você pode filtrar os resultados com base nas versões mínima e exata dos módu
 - -Force reinstala o módulo instalado
 - RequiredVersion instala a versão especificada no SxS com as versões existentes no PowerShell versão 5.0 ou posterior.
 
-### Escopo
+### <a name="scope"></a>Escopo
 Especifica o escopo de instalação do módulo. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
 
 O escopo de instalação padrão é AllUsers.
@@ -44,7 +42,7 @@ O escopo AllUsers permite que os módulos sejam instalados em um local que seja 
 
 O escopo CurrentUser permite que módulos ser instalado somente em "$home\Documents\WindowsPowerShell\Modules", de modo que o módulo fica disponível somente para o usuário atual.
 
-## Observações
+## <a name="notes"></a>Observações
 
 Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 
@@ -61,16 +59,16 @@ Por padrão, os módulos são instalados na pasta Arquivos de Programas, para ev
 Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
 
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Install-Module -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Install-Module](http://go.microsoft.com/fwlink/?LinkID=398573)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 
@@ -111,7 +109,7 @@ Install-Module ContosoClient -Force
 Install-Module -Name 
 ```
 
-## Cmdlet Install-Module em operações de pipeline
+## <a name="install-module-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Module em operações de pipeline
 
 ```powershell
 
@@ -138,11 +136,11 @@ Get-InstalledModule
 
 ```
 
-## Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
 
 O PowerShellGet dá suporte à versão do módulo SxS (lado a lado) nos cmdlets Install-Module, Update-Module e Publish-Module executados no Windows PowerShell 5.0 ou mais recente.
 
-### Exemplos de Install-Module
+### <a name="install-module-examples"></a>Exemplos de Install-Module
 
 ```powershell
 # Install a version of the module
@@ -174,7 +172,7 @@ Version    Name                                Repository           Description
 
 ```
 
-## Instalar um módulo com dependências
+## <a name="install-module-with-its-dependencies"></a>Instalar um módulo com dependências
 
 ```powershell
 
@@ -268,7 +266,7 @@ Version    Name                                Repository           Description
 
 ```
 
-## Cenários de erro
+## <a name="error-scenarios"></a>Cenários de erro
 
 ```powershell
 
@@ -285,10 +283,4 @@ Install-Module ContosoClient,ContosoServer -RequiredVersion 2.0
 Install-Module ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

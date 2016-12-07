@@ -33,7 +33,7 @@ Remove-Item -Path $env:SystemRoot\system32\Configuration\DSCEngineCache.mof
 ```
 
 
-<a name="lcm-can-go-into-an-unstable-state-while-using-getdscconfiguration-in-debugmode"></a>O LCM pode entrar em um estado instável durante o uso de Get-DscConfiguration em DebugMode
+<a name="lcm-can-go-into-an-unstable-state-while-using-get-dscconfiguration-in-debugmode"></a>O LCM pode entrar em um estado instável durante o uso de Get-DscConfiguration em DebugMode
 -------------------------------------------------------------------------------
 
 Se o LCM estiver em DebugMode, pressionar CTRL+C para interromper o processamento de Get-DscConfiguration poderá fazer com que o LCM entre em um estado instável, a tal ponto em que a maioria dos cmdlets do DSC não funcionará.
@@ -41,7 +41,7 @@ Se o LCM estiver em DebugMode, pressionar CTRL+C para interromper o processament
 **Resolução:** não pressione CTRL+C durante a depuração do cmdlet Get-DscConfiguration.
 
 
-<a name="stopdscconfiguration-may-hang-in-debugmode"></a>Stop-DscConfiguration poderá parar de responder em DebugMode
+<a name="stop-dscconfiguration-may-hang-in-debugmode"></a>Stop-DscConfiguration poderá parar de responder em DebugMode
 ------------------------------------------------------------------------------------------------------------------------
 Se o LCM estiver em DebugMode, Stop-DscConfiguration poderá parar de responder durante a tentativa de interromper uma operação iniciada por Get-DscConfiguration
 
@@ -55,27 +55,27 @@ Se o LCM estiver em DebugMode, nenhuma mensagem de erro detalhada será exibida 
 **Resolução:** desabilite *DebugMode* para ver as mensagens detalhadas no recurso
 
 
-<a name="invokedscresource-operations-cannot-be-retrieved-by-getdscconfigurationstatus-cmdlet"></a>As operações Invoke-DscResource não podem ser recuperadas pelo cmdlet Get-DscConfigurationStatus
+<a name="invoke-dscresource-operations-cannot-be-retrieved-by-get-dscconfigurationstatus-cmdlet"></a>As operações Invoke-DscResource não podem ser recuperadas pelo cmdlet Get-DscConfigurationStatus
 --------------------------------------------------------------------------------------
 Depois de usar o cmdlet Invoke-DscResource para invocar diretamente os métodos de qualquer recurso, os registros dessa operação não poderão ser recuperados por meio de Get-DscConfigurationStatus em um momento posterior.
 
 **Resolução:** nenhuma.
 
 
-<a name="getdscconfigurationstatus-returns-pull-cycle-operations-as-type-consistency"></a>Get-DscConfigurationStatus retorna operações de ciclo de pull como o tipo *Consistência*
+<a name="get-dscconfigurationstatus-returns-pull-cycle-operations-as-type-consistency"></a>Get-DscConfigurationStatus retorna operações de ciclo de pull como o tipo *Consistência*
 ---------------------------------------------------------------------------------
 Quando um nó é definido como o modo de atualização por PULL, para cada operação de recepção realizada, o cmdlet Get-DscConfigurationStatus relata o tipo de operação como *Consistência* em vez de *Inicial*
 
 **Resolução:** nenhuma.
 
-<a name="invokedscresource-cmdlet-does-not-return-message-in-the-order-they-were-produced"></a>O cmdlet Invoke-DscResource não retorna as mensagens na ordem em que foram produzidas
+<a name="invoke-dscresource-cmdlet-does-not-return-message-in-the-order-they-were-produced"></a>O cmdlet Invoke-DscResource não retorna as mensagens na ordem em que foram produzidas
 ---------------------------------------------------------------------------------
 O cmdlet Invoke-DscResource não retorna mensagens detalhadas, de aviso e de erro na ordem em que foram produzidas pelo LCM ou pelo recurso DSC.
 
 **Resolução:** nenhuma.
 
 
-<a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invokedscresource"></a>Os Recursos DSC não podem ser depurados com facilidade quando usados com Invoke-DscResource
+<a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invoke-dscresource"></a>Os Recursos DSC não podem ser depurados com facilidade quando usados com Invoke-DscResource
 -----------------------------------------------------------------------
 Quando o LCM estiver sendo executado no modo de depuração (veja [Depurando recursos DSC](https://msdn.microsoft.com/powershell/dsc/debugresource) para obter mais detalhes), o cmdlet Invoke-DscResource não fornecerá informações sobre o runspace para se conectar para realizar a depuração.
 **Resolução:** descubra e anexe-se ao runspace usando os cmdlets **Get-PSHostProcessInfo**, **Enter-PSHostProcess**, **Get-Runspace** e **Debug-Runspace** para depurar o recurso DSC.
@@ -114,7 +114,7 @@ Para várias configurações parciais que são implantadas em um único nó, nom
 **Resolução:** use nomes diferentes até para os mesmos recursos em configurações parciais diferentes.
 
 
-<a name="startdscconfiguration-useexisting-does-not-work-with-credential"></a>–UseExisting de Start-DscConfiguration não funciona com –Credential
+<a name="start-dscconfiguration-useexisting-does-not-work-with--credential"></a>–UseExisting de Start-DscConfiguration não funciona com –Credential
 ------------------------------------------------------------------
 
 Ao usar Start-DscConfiguration com o parâmetro –UseExisting, o parâmetro –Credential é ignorado. O DSC usa a identidade de processo padrão para continuar a operação. Isso causa erros quando uma credencial diferente é necessária para continuar no nó remoto.
@@ -133,14 +133,14 @@ Nesta versão, não há suporte para endereços IPv6 como nomes de nó em script
 **Resolução:** nenhuma.
 
 
-<a name="debugging-of-classbased-dsc-resources"></a>Depuração de recursos DSC baseados em classe
+<a name="debugging-of-class-based-dsc-resources"></a>Depuração de recursos DSC baseados em classe
 --------------------------------------
 Nesta versão, não há suporte para a depuração de recursos DSC baseados em classe.
 
 **Resolução:** nenhuma.
 
 
-<a name="variables-functions-defined-in-script-scope-in-dsc-classbased-resource-are-not-preserved-across-multiple-calls-to-a-dsc-resource"></a>As variáveis e funções definidas no escopo de $script no Recurso DSC Baseado em Classe não são preservadas em várias chamadas para um Recurso DSC 
+<a name="variables-functions-defined-in-script-scope-in-dsc-class-based-resource-are-not-preserved-across-multiple-calls-to-a-dsc-resource"></a>As variáveis e funções definidas no escopo de $script no Recurso DSC Baseado em Classe não são preservadas em várias chamadas para um Recurso DSC 
 -------------------------------------------------------------------------------------------------------------------------------------
 
 Várias chamadas consecutivas para Start-DSCConfiguration falharão se a configuração estiver usando qualquer recurso baseado em classe que tenha variáveis ou funções definidas no escopo de $script.
@@ -161,7 +161,7 @@ Nesta versão, não há suporte para a depuração do Recurso DSC quando um recu
 **Resolução:** use a propriedade Credential se estiver disponível. ServiceSet e WindowsFeatureSet de exemplo
 
 
-<a name="getdscresource-syntax-does-not-reflect-psdscrunascredential-correctly"></a>*Get-DscResource -Syntax* não reflete PsDscRunAsCredential corretamente
+<a name="get-dscresource--syntax-does-not-reflect-psdscrunascredential-correctly"></a>*Get-DscResource -Syntax* não reflete PsDscRunAsCredential corretamente
 -------------------------------------------------------------------------
 Get-DscResource -Syntax não reflete PsDscRunAsCredential corretamente quando o recurso o marca como obrigatório ou não dá suporte a ele.
 
@@ -173,7 +173,7 @@ Get-DscResource -Syntax não reflete PsDscRunAsCredential corretamente quando o 
 
 O recurso DSC de WindowsOptionalFeature não está disponível no Windows 7. Este recurso exige o módulo DISM e os cmdlets do DISM que estão disponíveis começando do Windows 8 e versões mais recentes do sistema operacional Windows.
 
-<a name="for-classbased-dsc-resources-importdscresource-moduleversion-may-not-work-as-expected"></a>Para obter recursos de DSC baseados em classes, Import-DscResource -ModuleVersion pode não funcionar como esperado   
+<a name="for-class-based-dsc-resources-import-dscresource--moduleversion-may-not-work-as-expected"></a>Para obter recursos de DSC baseados em classes, Import-DscResource -ModuleVersion pode não funcionar como esperado   
 ------------------------------------------------------------------------------------------
 Se o nó compilação tiver várias versões de um módulo de recurso de DSC baseado em classes, o `Import-DscResource -ModuleVersion` não selecionará a versão especificada e resulta no seguinte erro de compilação.
 
@@ -226,8 +226,3 @@ Configuration $configName
     }
 }
 ```
-
-
-<!--HONumber=Nov16_HO2-->
-
-

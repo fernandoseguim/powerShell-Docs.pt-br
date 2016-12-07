@@ -8,19 +8,17 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 749c1ca8bc617014dffacecce7d14a55adc38036
-ms.openlocfilehash: 2a17fdd4092adf734398f38bec915d53c1b3e566
-
+ms.openlocfilehash: 574fec8e1f4948021988d8489532d7325277fed6
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="console-improvements-in-wmf-51-preview"></a>Melhorias do Console no WMF 5.1 (Preview)#
 
-# Melhorias do Console no WMF 5.1 (Preview)#
-
-## Melhorias do console do PowerShell
+## <a name="powershell-console-improvements"></a>Melhorias do console do PowerShell
 
 As seguintes alterações foram feitas ao powershell.exe no WMF 5.1 para melhorar a experiência do console:
 
-###Suporte a VT100
+###<a name="vt100-support"></a>Suporte a VT100
 
 O Windows 10 adicionou suporte para [sequências de escape VT100](https://msdn.microsoft.com/en-us/library/windows/desktop/mt638032(v=vs.85).aspx).
 PowerShell ignorará determinadas sequências de escape de formatação do VT100 ao calcular larguras da tabela.
@@ -43,20 +41,14 @@ Salve o exemplo em um arquivo chamado `MatchInfo.format.ps1xml`, então, para us
 
 Observe que as sequências de escape do VT100 têm suporte apenas a partir da atualização de Aniversário do Windows 10; elas não têm suporte em sistemas anteriores.   
 
-### Suporte ao modo vi em PSReadline
+### <a name="vi-mode-support-in-psreadline"></a>Suporte ao modo vi em PSReadline
 
 [PSReadline](https://github.com/lzybkr/PSReadLine) adiciona suporte para o modo vi. Para usar o modo vi, execute `Set-PSReadline -EditMode vi`.
 
-### STDIN redirecionada com entrada interativa 
+### <a name="redirected-stdin-with-interactive-input"></a>STDIN redirecionada com entrada interativa 
 
 Em versões anteriores, iniciar o PowerShell com `powershell -File -` era necessário quando stdin era redirecionado e você queria inserir comandos interativamente.
 
 Com o WMF 5.1, essa opção difícil de descobrir não é mais necessária. Você pode iniciar o PowerShell sem nenhuma opção, por exemplo, `powershell`.
 
 Observe que, atualmente, o PSReadline não dá suporte à STDIN redirecionada, e a experiência de edição de linha de comando interna com STDIN redirecionada é extremamente limitada, por exemplo, as teclas de direção não funcionam. Uma versão futura do PSReadline deve resolver esse problema.   
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

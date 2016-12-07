@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 730f2f26e2811996e79cf0073a4ef65cad390687
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0
+# <a name="setting-up-a-pull-client-using-configuration-id-in-powershell-40"></a>Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -48,10 +46,10 @@ Para aplicar a configuração, use **Set-DscLocalConfigurationManager** com par�
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path . –Verbose.
 ```
 
-## ID de configuração
+## <a name="configuration-id"></a>ID de configuração
 O script define a propriedade **ConfigurationID** do LCM para um GUID criado anteriormente para essa finalidade (você pode criar um GUID usando o cmdlet **New-Guid**). O **ConfigurationID** é usado pelo LCM para localizar a configuração apropriada no servidor de pull. O arquivo MOF de configuração no servidor de pull deve ser nomeado como `ConfigurationID.mof`, em que *ConfigurationID* é o valor da propriedade **ConfigurationID** do nó de destino do LCM.
 
-## Efetuando pull de um servidor de SMB
+## <a name="pulling-from-an-smb-server"></a>Efetuando pull de um servidor de SMB
 
 Se o servidor de pull é configurado como um compartilhamento de arquivos SMB em vez de como um serviço Web, especifique o **DscFileDownloadManager** em vez de **WebDownLoadManager**.
 O **DscFileDownloadManager** usa uma propriedade **SourcePath** em vez de **ServerUrl**. O seguinte script configura o LCM para efetuar pull de configurações de um compartilhamento SMB denominado "SmbDscShare" em um servidor denominado "CONTOSO-SERVER":
@@ -74,14 +72,8 @@ Configuration SimpleMetaConfigurationForPull
 SimpleMetaConfigurationForPull -Output "."
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
 - [Configurando um servidor de pull de SMB para DSC](pullServerSMB.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

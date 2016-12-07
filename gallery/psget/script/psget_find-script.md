@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: script psget_find
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 5651989acde9d47a7a07fac9284aebae84f28174
-
+ms.openlocfilehash: 09f4d6eca9cf04d03fddbe23beea6a5bc0243657
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-Script
+# <a name="find-script"></a>Find-Script
 
 Localiza os arquivos de script do PowerShell de uma galeria online que correspondem aos critérios especificados.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 Find-Script descobre os arquivos de script de repositórios registrados que correspondem aos critérios especificados.
 Para cada script encontrado, Find-Script retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Install-Script para instalar os scripts.
@@ -37,17 +35,17 @@ O cmdlet Find-Script permite descobrir os arquivos de script com critérios de p
 
 **OBSERVAÇÃO:** PSRepository registrado deve ter um ScriptSourceLocation válido. Você pode usar Set-PSRepository para definir o valor de ScriptSourceLocation.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Find-Script -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Find-Script](http://go.microsoft.com/fwlink/?LinkId=619785)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 # Find a script from the registered repository with ScriptSourceLocation
@@ -157,10 +155,4 @@ Cmdlet                         {}
 
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

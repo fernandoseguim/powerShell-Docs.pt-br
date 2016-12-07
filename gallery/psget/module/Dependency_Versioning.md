@@ -9,17 +9,7 @@ ms.date: 2016-10-14
 contributor: manikb
 title: Dependency_Versioning
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 4e8b42fdf28f09105351f9b00b16ab5228299a4c
-
+ms.openlocfilehash: 9b8edc7597e5e72ef8cd085b5d523ddecd578edb
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

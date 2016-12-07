@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 1fe624c2532e44ed675762f3c141934fb4f0b60d
-
+ms.openlocfilehash: 97d97a36830088d6ee1296cda5310e087fc41893
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Chamando métodos do recurso DSC diretamente
+# <a name="calling-dsc-resource-methods-directly"></a>Chamando métodos do recurso DSC diretamente
 
 >Aplica-se a: Windows PowerShell 5.0
 
@@ -25,7 +23,7 @@ Ao chamar o cmdlet **Invoke-DscResource**, você especifica qual método ou fun�
 
 A seguir, exemplos de chamada direta aos métodos do recurso:
 
-## Certificar-se de que um arquivo está presente
+## <a name="ensure-a-file-is-present"></a>Certificar-se de que um arquivo está presente
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
@@ -34,7 +32,7 @@ $result = Invoke-DscResource -Name File -Method Set -Property @{
 $result | fl
 ```
 
-## Testar se um arquivo está presente
+## <a name="test-that-a-file-is-present"></a>Testar se um arquivo está presente
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
@@ -43,7 +41,7 @@ $result = Invoke-DscResource -Name File -Method Test -Property @{
 $result | fl
 ```
 
-## Obter o conteúdo do arquivo
+## <a name="get-the-contents-of-file"></a>Obter o conteúdo do arquivo
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
@@ -54,14 +52,8 @@ $result.ItemValue | fl
 
 >**Observação:** não é permitido chamar diretamente métodos de recurso de composição. Em vez disso, chame os métodos de recursos subjacentes que compõem o recurso de composição.
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
 - [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
 - [Depurando os recursos de DSC](debugResource.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

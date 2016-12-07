@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 67426f6ad72967293f8aee1b3f098afc73067c59
-
+ms.openlocfilehash: a62e258812960ce59f050e59d2ef3acc296663a2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Usar o Console do Windows PowerShell baseado na Web
+#  <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
 Atualizado em: 24 de junho de 2013
 
@@ -25,7 +23,7 @@ Este tópico não descreve como usar o Windows PowerShell ou executar cmdlets ou
 
 Neste tópico:
 
--   [Navegadores e dispositivos clientes compatíveis](#BKMK_browser)
+-   [Navegadores e dispositivos cliente compatíveis](#BKMK_browser)
 
 -   [Entrando no Windows PowerShell Web Access](#BKMK_sign)
 
@@ -40,7 +38,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de desktop compatíveis</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de computador desktop compatíveis</span></a>
 
 ------------------------------------------------------------------------
 
@@ -56,17 +54,17 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Dispositivos ou navegadores móveis minimamente testados</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores ou dispositivos móveis minimamente testados</span></a>
 
 ------------------------------------------------------------------------
 
 -   Windows Phone 7 e 7.5
 
--   Navegador Google Android WebKit 3.1 Android 2.2.1 (Kernel 2.6)
+-   Navegador Google Android WebKit 3.1 Android 2.2.1 (Kernel 2.6)
 
 -   Apple Safari para iPhone com sistema operacional 5.0.1
 
--   Apple Safari para iPad 2 com sistema operacional 5.0.1
+-   Apple Safari para iPad 2 com sistema operacional 5.0.1
 
 ###
 
@@ -91,7 +89,7 @@ Para usar o console do Windows PowerShell Web Access baseado na Web, os navegado
 
 O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o endereço do site do gateway do Windows PowerShell Web Access da sua organização. Por padrão, o endereço do site é https://&lt;server_name&gt;/pswa. Antes de entrar no Windows PowerShell Web Access, tenha o nome ou o endereço IP do computador remoto que deseja gerenciar. Você deve ser um usuário autorizado no computador remoto e ele deve estar configurado para permitir gerenciamento remoto. Para obter mais informações sobre como configurar o computador para permitir o gerenciamento remoto, consulte [Enable and Use Remote Commands in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx) (Habilitar e usar comandos remotos no Windows PowerShell). O método mais simples de configurar o computador para permitir gerenciamento remoto é executar o cmdlet **Enable-PSRemoting -force** no computador, em uma sessão do Windows PowerShell aberta com direitos de usuário elevados (**Executar como Administrador**).
 
-### Para entrar no Windows PowerShell Web Access
+### <a name="to-sign-in-to-windows-powershell-web-access"></a>Para entrar no Windows PowerShell Web Access
 
 1.  Abra o site do Windows PowerShell Web Access em uma janela ou guia do navegador da Internet.
 
@@ -109,9 +107,9 @@ O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o 
     <tbody>
     <tr class="odd">
     <td><ul>
-    <li><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>nome_do_grupo_de_trabalho</em>&gt;\&It;<em>nome_de_usuário</em>&gt;.</p></li>
+    <li><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador:&lt;<em>nome_do_grupo_de_trabalho</em>&gt;\&lt;<em>nome_de_usuário</em>&gt;.</p></li>
     <li><p>Se o computador de destino for o servidor de gateway, você poderá especificar <strong>localhost</strong> no campo <strong>Nome do computador</strong>.</p></li>
-    <li><p>Se o computador de destino for o servidor de gateway e o servidor de gateway estiver em um grupo de trabalho, você poderá usar <strong>localhost</strong> no campo <strong>Nome do computador</strong>, mas não usar localhost\&It;<em>nome_de_usuário</em>&gt; no campo <strong>Nome de usuário</strong>. Você deve usar &lt;<em>nome do grupo de trabalho</em>&gt;\&It;<em>nome_de_usuário</em>&gt;.</p></li>
+    <li><p>Se o computador de destino for o servidor de gateway e o servidor de gateway estiver em um grupo de trabalho, você poderá usar <strong>localhost</strong> no campo <strong>Nome do computador</strong>, mas não usar localhost\&lt;<em>nome_de_usuário</em>&gt; no campo <strong>Nome de usuário</strong>. Você deve usar &lt;<em>nome do grupo de trabalho</em>&gt;\&lt;<em>nome_de_usuário</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
@@ -175,7 +173,7 @@ Depois de entrar no Windows PowerShell Web Access, um console do Windows PowerSh
 
 A maioria das funcionalidades do host do Windows PowerShell está disponível no console baseado na Web do Windows PowerShell Web Access, mas há alguns recursos que não estão disponíveis.
 
--   <span class="label">Exibição do andamento aninhado.</span>  O Windows PowerShell Web Access exibe uma GUI de andamento para os cmdlets que informam o andamento, mas apenas informações de andamento de nível superior são exibidas.
+-   <span class="label">Exibições do andamento aninhado.</span>  O Windows PowerShell Web Access exibe uma GUI de andamento para os cmdlets que informam o andamento, mas apenas informações de andamento de nível superior são exibidas.
 
 -   <span class="label">Modificação da cor de entrada.</span>  A cor de entrada (do primeiro plano e da tela de fundo) não pode ser alterada. É possível alterar o estilo das mensagens de saída, de aviso, detalhadas e de erro executando um script.
 
@@ -305,7 +303,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
 -   Os usuários que entraram em uma configuração de sessão **NoLanguage** ou em um runspace restrito no Windows PowerShell Web Access não podem executar o comando **Sair** para encerrar a sessão. Para sair, os usuários devem clicar em **Sair** na página do console.
 
--   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **Alt**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
+-   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **Alt**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
 
     Quando o gateway do Windows PowerShell Web Access estiver em execução no Windows Server 2012 R2, os usuários poderão abrir várias conexões com computadores remotos em guias diferentes do navegador. Se você quiser abrir mais de uma conexão a um computador remoto usando o console do Windows PowerShell baseado na Web, entre em contato com o administrador de gateway do Windows PowerShell Web Access para ver se este recurso tem suporte pelo servidor de gateway.
 
@@ -334,7 +332,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
         Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
 <a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -345,18 +343,18 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 [Script Center – Hey, Scripting Guy!](https://technet.microsoft.com/scriptcenter)
 [Blog da equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/)
 
-<span>Mostrar:</span> herdado protegido
+<span>Mostrar</span>: herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
 Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isto
 
 <span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
-[Gerenciar o perfil](https://social.technet.microsoft.com/profile)
+[Gerenciar seu Perfil](https://social.technet.microsoft.com/profile)
 
 |
 
@@ -380,11 +378,11 @@ Fale mais
 -   |
 -   [Entre em contato conosco](https://technet.microsoft.com/cc512759.aspx)
 -   |
--   [Política de privacidade](https://privacy.microsoft.com/privacystatement)
+-   [Política de Privacidade](https://privacy.microsoft.com/privacystatement)
 -   |
--   [Termos de uso](https://technet.microsoft.com/cc300389.aspx)
+-   [Termos de Uso](https://technet.microsoft.com/cc300389.aspx)
 -   |
--   [Marcas](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
+-   [Marcas comerciais](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
 -   |
 
 © 2016 Microsoft
@@ -393,10 +391,4 @@ Fale mais
 
 Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

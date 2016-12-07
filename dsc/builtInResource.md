@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: ea312b4e773cd8b0eceeca123e616957728eb1c6
-
+ms.openlocfilehash: 1cbe3ac8de217d659f717cb960b4b57cb2d4fdd9
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
+# <a name="built-in-windows-powershell-desired-state-configuration-resources"></a>Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -31,10 +29,4 @@ A Configuração de Estado Desejado (DSC) do Windows PowerShell vem com um conju
 * [Recurso User](userResource.md)
 * [Recurso WindowsFeature](windowsfeatureResource.md)
 * [Recurso WindowsProcess](windowsProcessResource.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

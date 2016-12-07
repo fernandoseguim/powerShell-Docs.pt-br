@@ -9,17 +9,7 @@ ms.date: 2016-10-14
 contributor: manikb
 title: Module_Versioning
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 3b72210adccf1368a845c8b4ebd9feb87e798f8a
-
+ms.openlocfilehash: a971f2b1536ad35bb1f2d9e85698a9e877a46e6f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

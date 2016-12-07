@@ -1,9 +1,5 @@
-# Suporte automático de RunAs para recursos DSC
+# <a name="automatic-runas-support-for-dsc-resources"></a>Suporte automático de RunAs para recursos DSC
 
 O WMF 5.0 inclui suporte para a execução de **qualquer** recurso de DSC em um conjunto de credenciais especificado usando a propriedade `PsDscRunAsCredential`. 
 
 Para obter mais informações, veja [Executando o DSC com as credenciais do usuário](https://msdn.microsoft.com/powershell/dsc/runasuser).
-
-<!--HONumber=Aug16_HO3-->
-
-

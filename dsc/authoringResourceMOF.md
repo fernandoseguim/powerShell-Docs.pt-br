@@ -7,23 +7,21 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: b414a01bcd111143791a5fac77e61ce309a0a5c5
-ms.openlocfilehash: 50b99917f15d290db30da1b1b752d668d886ec50
-
+ms.openlocfilehash: 1fc28589633d6279d0428179a70e7e561d753ea8
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Escrevendo um recurso personalizado de DSC com MOF
+# <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrevendo um recurso personalizado de DSC com MOF
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Neste tópico, definiremos o esquema para um recurso personalizado de Configuração de Estado Desejado (DSC) do Windows PowerShell em um arquivo MOF, além de implementar o recurso em um arquivo de script do Windows PowerShell. Esse recurso personalizado serve para criar e manter um site da web.
 
-## Criando o esquema MOF
+## <a name="creating-the-mof-schema"></a>Criando o esquema MOF
 
 O esquema define as propriedades do recurso que pode ser configurado por um script de configuração DSC.
 
-### Estrutura de pastas para um recurso MOF
+### <a name="folder-structure-for-a-mof-resource"></a>Estrutura de pastas para um recurso MOF
 
 Para implementar um recurso personalizado de DSC com esquema MOF, crie a seguinte estrutura de pastas. O esquema MOF é definido no arquivo Demo_IISWebsite.schema.mof e o script de recurso é definido no Demo_IISWebsite.psm1. Opcionalmente, você pode criar um arquivo de manifesto do módulo (psd1).
 
@@ -39,7 +37,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 Observe que é necessário criar uma pasta chamada DSCResources na pasta de nível superior e que a pasta para cada recurso deve ter o mesmo nome que o recurso.
 
-### O conteúdo do arquivo MOF
+### <a name="the-contents-of-the-mof-file"></a>O conteúdo do arquivo MOF
 
 Segue um exemplo de arquivo MOF que pode ser usado para um recurso de sites personalizados. Para seguir esse exemplo, salve o esquema em um arquivo e chame o arquivo de *Demo_IISWebsite.schema.mof*.
 
@@ -69,7 +67,7 @@ Observe o seguinte sobre o código anterior:
 * É recomendável incluir uma propriedade chamada `Ensure` com os valores `Present` e `Absent` em seu recurso como uma maneira de manter um estilo consistente com recursos internos de DSC.
 * Nomeie o arquivo de esquema para o recurso personalizado da seguinte maneira: `classname.schema.mof`, em que `classname` é o identificador que segue a palavra-chave `class` na definição do esquema.
 
-### Escrevendo o script de recurso
+### <a name="writing-the-resource-script"></a>Escrevendo o script de recurso
 
 O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de “propriedades de recursos”. Armazene essas três funções em um arquivo chamado <ResourceName>.psm1. No exemplo a seguir, as funções são armazenadas em um arquivo chamado Demo_IISWebsite.psm1.
 
@@ -220,7 +218,7 @@ $result
 
 **Observação**: para uma depuração mais fácil, use o cmdlet **Write-Verbose** na implementação das três funções anteriores. Esse cmdlet escreve o texto para o fluxo de mensagem detalhada. Por padrão, o fluxo de mensagem detalhada não é exibido, mas você pode exibi-lo alterando o valor da variável **$VerbosePreference** ou usando o parâmetro **Verbose** nos cmdlets DSC = novo.
 
-### Criando o manifesto de módulo
+### <a name="creating-the-module-manifest"></a>Criando o manifesto de módulo
 
 Por fim, use o cmdlet **New-ModuleManifest** para definir um arquivo <ResourceName>.psd1 para o módulo de recurso personalizado. Quando invocar esse cmdlet, faça referência ao arquivo de módulo do script (.psm1) descrito na seção anterior. Inclua **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** na lista de funções para exportar. Segue um exemplo de arquivo de manifesto.
 
@@ -275,10 +273,4 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 # HelpInfoURI = ''
 }
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 49ddf6faf98a51f7ad5252e9563b1543478ed113
-ms.openlocfilehash: 567ab9528402c7d39d80a997bc14b6c6992cf772
-
+ms.openlocfilehash: 01af336f34928aec63cac7402c1ab20c701579fe
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="dsc-configurations"></a>Configurações DSC
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -133,10 +131,4 @@ Atualmente, a DSC vem com 12 recursos como parte do módulo PSDesiredStateConfig
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Recursos de DSC](resources.md)
 * [Configurando o Gerenciador de Configurações Local](metaConfig.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

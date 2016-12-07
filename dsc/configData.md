@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 787ac3c3d6ffaf7b1009fe3cfd64a0aefadc32d1
-ms.openlocfilehash: 8d305c67fb22e0d27dc1a36ba93369e9633680d3
-
+ms.openlocfilehash: 72555a36819c9717fafdd3daede8fa2f02c692b2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="separating-configuration-and-environment-data"></a>Separando Dados de Configuração e de Ambiente
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -356,8 +354,3 @@ MyWebApp -ConfigurationData DevProdEnvData.psd1
 ## <a name="see-also"></a>Consulte Também
 - [Opções de credenciais nos dados de configuração](configDataCredentials.md)
 - [Configurações DSC](configurations.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-

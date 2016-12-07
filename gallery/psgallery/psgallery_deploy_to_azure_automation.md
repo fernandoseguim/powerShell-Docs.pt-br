@@ -9,13 +9,11 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_deploy_to_azure_automation
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: c028bf6145b41c13bccda9543a782b838bd730ff
-
+ms.openlocfilehash: 20b0dd53b5d10f36089a884a99209a575332a91a
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-Implantar na Automação do Azure
+<a name="deploy-to-azure-automation"></a>Implantar na Automação do Azure
 ===========================
 
 O botão Implantar na Automação do Azure na página de detalhes do item implantará o item da Galeria do PowerShell para a Automação do Azure.
@@ -32,10 +30,4 @@ Se você implantar um módulo, ele será exibido na seção Módulos da Automaç
 O botão Implantar na Automação do Azure pode ser desabilitado adicionando a marca AzureAutomationNotSupported aos metadados do item.
 
 Para saber mais sobre a Automação do Azure, consulte o site da Automação do Azure [Site da Automação do Azure](http://azure.microsoft.com/en-us/services/automation/).
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

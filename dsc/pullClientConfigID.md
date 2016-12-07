@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: f6569220fbafdba49bac9ac9dca3e6036a7aad08
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurando um cliente de pull usando uma ID de configuração
+# <a name="setting-up-a-pull-client-using-configuration-id"></a>Configurando um cliente de pull usando uma ID de configuração
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -52,11 +50,11 @@ Depois de ser executado, esse script cria uma nova pasta de saída denominada **
 
 Para aplicar a configuração, chame o cmdlet **Set-DscLocalConfigurationManager**, com **Path** definido como a localização do arquivo MOF de metaconfiguração. Por exemplo: `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
 
-## ID de configuração
+## <a name="configuration-id"></a>ID de configuração
 
 O script define a propriedade **ConfigurationID** do LCM para um GUID criado anteriormente para essa finalidade (você pode criar um GUID usando o cmdlet **New-Guid**). O **ConfigurationID** é usado pelo LCM para localizar a configuração apropriada no servidor de pull. O arquivo MOF de configuração no servidor de pull deve ser nomeado como _ConfigurationID_.mof, em que _ConfigurationID_ é o valor da propriedade **ConfigurationID** do nó de destino do LCM.
 
-## Servidor de pull de SMB
+## <a name="smb-pull-server"></a>Servidor de pull de SMB
 
 Para configurar um cliente para efetuar o pull de configurações de um servidor SMB, use um bloco **ConfigurationRepositoryShare**. Em um bloco **ConfigurationRepositoryShare**, especifique o caminho para o servidor definindo a propriedade **SourcePath**. A metaconfiguração a seguir configura o nó de destino para efetuar o pull de um servidor de pull de SMB chamado **SMBPullServer**.
 
@@ -83,7 +81,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-## Servidores de recurso e relatório
+## <a name="resource-and-report-servers"></a>Servidores de recurso e relatório
 
 Se você especificar apenas um bloco **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** em sua configuração LCM (como no exemplo anterior), o cliente de pull efetuará pull dos recursos do servidor especificado, mas não enviará relatórios a ele. Você pode usar um único servidor de pull para emissão de relatórios, recursos e configurações, mas é preciso criar um bloco **ReportRepositoryWeb** para configurar o relatório. 
 
@@ -157,13 +155,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 
 * [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

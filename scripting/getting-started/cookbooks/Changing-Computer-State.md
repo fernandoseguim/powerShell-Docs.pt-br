@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 1779b9de13a30a43236e24793e5196261a7db77f
-
+ms.openlocfilehash: 60652b67a98179f0dab137e3360766d2e6936d81
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Alterando o estado do computador
+# <a name="changing-computer-state"></a>Alterando o estado do computador
 Para redefinir um computador no Windows PowerShell, use uma ferramenta de linha de comando padrão ou uma classe WMI. Embora você esteja usando o Windows PowerShell somente para executar a ferramenta, aprender como alterar o estado de energia do computador no Windows PowerShell ilustra alguns dos detalhes importantes sobre como trabalhar com ferramentas externas no Windows PowerShell.
 
-### Bloquear um computador
+### <a name="locking-a-computer"></a>Bloquear um computador
 A única maneira de bloquear um computador diretamente com as ferramentas padrão disponíveis é chamar a função **LockWorkstation ()** em **user32.dll**:
 
 ```
@@ -30,7 +28,7 @@ Quando você bloqueia uma estação de trabalho enquanto a Troca Rápida de Usu�
 
 Para encerrar uma sessão específica em um Servidor de Terminal, use a ferramenta de linha de comando **tsshutdn.exe**.
 
-### Sair da sessão atual
+### <a name="logging-off-the-current-session"></a>Sair da sessão atual
 Você pode usar várias técnicas diferentes para sair de uma sessão no sistema local. A maneira mais simples é usar a ferramenta de linha de comando Área de Trabalho Remota/Serviços de Terminal, **logoff.exe** (para obter mais detalhes, no prompt do Windows PowerShell, digite **logoff /?**). Para fazer logoff da sessão ativa atual, digite **logoff** sem argumentos.
 
 Você também pode usar a ferramenta **shutdown.exe** com a opção de fazer logoff:
@@ -47,7 +45,7 @@ Uma terceira opção é usar o WMI. A classe Win32_OperatingSystem tem um métod
 
 Para saber mais e para localizar outros recursos do método Win32Shutdown, confira "Método Win32Shutdown da Classe Win32_OperatingSystem" no MSDN.
 
-### Desligar ou reiniciar um computador
+### <a name="shutting-down-or-restarting-a-computer"></a>Desligar ou reiniciar um computador
 Desligar e reiniciar computadores geralmente são os mesmos tipos de tarefa. Ferramentas que desligam um computador geralmente também o reiniciam e vice-versa. Há duas opções simples para reiniciar um computador do Windows PowerShell. Use Tsshutdn.exe ou Shutdown.exe com os argumentos apropriados. Obtenha informações de uso detalhadas em **tsshutdn.exe /?** ou **shutdown.exe /?**.
 
 Você também pode executar as operações de desligamento e reinicialização usando **Win32_OperatingSystem** diretamente do Windows PowerShell.
@@ -63,10 +61,4 @@ Para reiniciar sistema operacional, use o método Win32Shutdown com o sinalizado
 ```
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

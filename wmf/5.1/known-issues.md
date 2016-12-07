@@ -8,31 +8,29 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 98a0e6d3c46a56cbed94de6a4bd68b88a79116ff
-ms.openlocfilehash: b831555354d14bca22e5137afffadc1ed3b14554
-
+ms.openlocfilehash: e2f19ed2fa2d2070860438b128513a463d95adae
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Problemas conhecidos no WMF 5.1 (Preview) #
+# <a name="known-issues-in-wmf-51-preview"></a>Problemas conhecidos no WMF 5.1 (Preview) #
 
 > Observação: essas informações são preliminares e estão sujeitas a alteração.
 
-## Iniciando o atalho do PowerShell como administrador
+## <a name="starting-powershell-shortcut-as-administrator"></a>Iniciando o atalho do PowerShell como administrador
 Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".
 Abra novamente o atalho como não administrador. Em seguida, ele funcionará também como administrador.
 
-## Pester
+## <a name="pester"></a>Pester
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
 
 * A execução de testes em relação ao Pester em si pode resultar em algumas falhas devido às diferenças entre FULL CLR e CORE CLR. Particularmente, o método Validate não está disponível no tipo XmlDocument. Seis testes que tentam validar o esquema dos logs de saída do NUnit são conhecidos por falharem. 
 * Um teste de cobertura de código falha atualmente porque o Recurso de DSC *WindowsFeature* não existe no Nano Server. No entanto, essas falhas geralmente são benignas e podem ser ignoradas com segurança.
 
-## Validação da operação 
+## <a name="operation-validation"></a>Validação da operação 
 
 * Update-Help falhará no módulo Microsoft.PowerShell.Operation.Validation devido a um URI de ajuda que não funciona
 
-## DSC após desinstalar o WMF 
+## <a name="dsc-after-uninstall-wmf"></a>DSC após desinstalar o WMF 
 * A desinstalação do WMF não exclui da pasta de configuração os documentos MOF da DSC. A DSC não funcionará corretamente se os documentos MOF contêm propriedades mais recentes, que não estão disponíveis nos sistemas mais antigos. Nesse caso, execute o seguinte script no console do PowerShell com privilégios elevados para limpar os estados da DSC.
  ```PowerShell
     $PreviousDSCStates = @("$env:windir\system32\configuration\*.mof",
@@ -43,8 +41,3 @@ Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pe
 
     $PreviousDSCStates | Remove-Item -ErrorAction SilentlyContinue -Verbose
  ```  
-
-
-<!--HONumber=Nov16_HO4-->
-
-

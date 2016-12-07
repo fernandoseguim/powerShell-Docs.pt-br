@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: be32b4acbfca788532e1b173809a7879ac4ecba0
-ms.openlocfilehash: 68a203ea1c445c3d0269c48ec92c02c407bcd5e1
-
+ms.openlocfilehash: 395ebe88fcf1f4d79c4eb91bf10c63c82cb1d799
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -445,10 +443,4 @@ function Get-EncryptionCertificate
 
 Start-CredentialEncryptionExample
 ```
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

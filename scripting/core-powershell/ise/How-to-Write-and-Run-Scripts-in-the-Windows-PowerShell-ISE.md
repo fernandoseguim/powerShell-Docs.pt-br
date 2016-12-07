@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 068ea5b8de5463c492c894d313ac1f266c449797
-
+ms.openlocfilehash: f38c9f310c528a9daff2784ab3a686309e624ecb
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 Este tópico descreve como criar, editar, executar e salvar scripts no Painel de Script.
 
@@ -151,10 +149,4 @@ O ISE do Windows PowerShell não altera a codificação de scripts criados por o
 
 ## <a name="see-also"></a>Consulte Também
 - [Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
-
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

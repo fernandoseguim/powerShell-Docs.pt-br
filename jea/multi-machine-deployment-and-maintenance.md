@@ -8,24 +8,22 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "manutenção e implantação de vários computadores"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 784806197a64eb30af1ecea4af55575434ce7b87
-
+ms.openlocfilehash: 8117d0d12c062b460cb7117b54c138c8db5a1d0c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Manutenção e implantação de vários computador
+# <a name="multi-machine-deployment-and-maintenance"></a>Manutenção e implantação de vários computador
 Neste ponto, você já implantou o JEA para sistemas locais várias vezes.
 Como seu ambiente de produção provavelmente consiste em mais de um computador, é importante seguir as etapas essenciais no processo de implantação que deve ser repetido em cada computador.
 
-## Etapas de alto nível:
+## <a name="high-level-steps"></a>Etapas de alto nível:
 1.  Copie seus módulos (com Capacidades de Função) para cada nó.
 2.  Copie os arquivos de configuração de sessão para cada nó.
 3.  Execute `Register-PSSessionConfiguration` com sua sessão de configuração.
 4.  Mantenha uma cópia da sua configuração de sessão e kits de ferramentas em um local seguro.
 Ao fazer modificações, é recomendável ter uma "única fonte verdadeira".
 
-## Script de Exemplo
+## <a name="example-script"></a>Script de Exemplo
 Veja este exemplo de script de implantação.
 Para usá-lo em seu ambiente, você terá que usar os nomes ou caminhos de compartilhamentos de arquivo reais e módulos.
 ```PowerShell
@@ -55,20 +53,14 @@ Invoke-Command –ComputerName 'Node1', 'Node2', 'Node3', 'NodeN' -FilePath 'C:\
 Remove-Item -Path '\\FileShare\JEA\Demo.pssc'
 Remove-Item -Path '\\FileShare\JEA\SomeModule' -Recurse
 ```
-## Modificar Capacidades
+## <a name="modifying-capabilities"></a>Modificar Capacidades
 Ao lidar com vários computadores, é importante que as modificações sejam distribuídas de maneira consistente.
 Uma vez que JEA tem um recurso de DSC, isso ajuda a garantir que seu ambiente esteja sincronizado.
 Até lá, é altamente recomendável manter uma cópia mestra de suas configurações de sessão e implantar novamente cada vez que fizer uma alteração.
 
-## Remover Capacidades
+## <a name="removing-capabilities"></a>Remover Capacidades
 Para remover a configuração de JEA de seus sistemas, use o seguinte comando em cada computador:
 ```PowerShell
 Unregister-PSSessionConfiguration -Name JEADemo
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

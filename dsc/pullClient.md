@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 95f49fecdf13a54049caf27345d2a48c98b8f09b
-
+ms.openlocfilehash: c6cc140d838c2a2bab35772d2a345d1d665964ec
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurando um cliente de pull de DSC
+# <a name="setting-up-a-dsc-pull-client"></a>Configurando um cliente de pull de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -26,10 +24,4 @@ Os tópicos a seguir explicam como configurar clientes de pull:
 * [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md)
 
 > **Observação**: estes tópicos se aplicam ao PowerShell 5.0. Para configurar um cliente de pull no PowerShell 4.0, consulte [Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

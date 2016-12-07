@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-translationtype: Human Translation
-ms.sourcegitcommit: d015dfae1990c66ea75aa45004b366d1609fb36f
-ms.openlocfilehash: 460ab6d82b694266d31b09779866f746b56c9f51
-
+ms.openlocfilehash: fb568b1194a3d123913e635d26b5fbd2ad76c531
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como criar uma guia do PowerShell no ISE do Windows PowerShell
 As guias no ISE (Ambiente de Script Integrado) do Windows PowerShell® permitem criar e usar simultaneamente vários ambientes de execução dentro do mesmo aplicativo. Cada guia do PowerShell corresponde a uma sessão ou ambiente de execução separado.
 
@@ -44,10 +42,4 @@ Se tiver arquivos não salvos abertos na guia do PowerShell que você está fech
 ## <a name="see-also"></a>Consulte Também
 - [Usando o ISE do Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
 - [Como usar o Painel de Console com o ISE do Windows PowerShell](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

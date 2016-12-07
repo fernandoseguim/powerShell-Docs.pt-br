@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: f62b1e0ec9f26e1b2bcb364c78a2ce39467655a5
-
+ms.openlocfilehash: 984323731b2cd0c4f3c26fe100e4b680082881f5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Regras de autorização e recursos de segurança do Windows PowerShell Web Access
+# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -198,7 +196,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 </tbody>
 </table>
 
-#### Para adicionar uma regra de autorização restritiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -222,7 +220,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 
 4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-#### Para remover uma regra de autorização
+#### <a name="to-remove-an-authorization-rule"></a>Para remover uma regra de autorização
 
 1.  Se uma sessão do Windows PowerShell ainda não estiver aberta, consulte a etapa 1 de [Para adicionar uma regra de autorização não restritiva](#BKMK_arar) nesta seção.
 
@@ -273,7 +271,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
     </tr>
     </thead>
     <tbody>
@@ -367,7 +365,7 @@ No Windows PowerShell Web Access em execução no Windows Server 2012 R2, as ses
 
 Se o servidor de gateway estiver executando Windows Server 2012 R2, o Windows PowerShell Web Access permitirá que os usuários se reconectem a sessões salvas mais tarde, mas quando erros de rede, desligamentos não planejados ou outras falhas desconectam as sessões, os usuários não podem ver nem se reconectar a sessões salvas até ter expirado o tempo limite especificado pelo administrador do gateway.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
 <a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -383,11 +381,11 @@ Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isto
 
 <span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
-[Gerenciar o perfil](https://social.technet.microsoft.com/profile)
+[Gerenciar seu Perfil](https://social.technet.microsoft.com/profile)
 
 |
 
@@ -411,11 +409,11 @@ Fale mais
 -   |
 -   [Entre em contato conosco](https://technet.microsoft.com/cc512759.aspx)
 -   |
--   [Política de privacidade](https://privacy.microsoft.com/privacystatement)
+-   [Política de Privacidade](https://privacy.microsoft.com/privacystatement)
 -   |
--   [Termos de uso](https://technet.microsoft.com/cc300389.aspx)
+-   [Termos de Uso](https://technet.microsoft.com/cc300389.aspx)
 -   |
--   [Marcas](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
+-   [Marcas comerciais](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
 -   |
 
 © 2016 Microsoft
@@ -424,10 +422,4 @@ Fale mais
 
 Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

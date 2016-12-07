@@ -1,4 +1,4 @@
-# Declarar a interface implementada
+# <a name="declare-implemented-interface"></a>Declarar a interface implementada
 
 Será possível declarar interfaces implementadas após tipos base, ou imediatamente após dois-pontos (:), se não houver nenhum tipo base especificado. Separe todos os nomes de tipo usando vírgulas. Isso é muito semelhante à sintaxe do C#.
 
@@ -19,7 +19,3 @@ class MyComparableBar : bar, system.IComparable
     }
 }
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

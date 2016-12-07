@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_find rolecapability
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: cdb675c32f62c5bd7acfb79357342f71960b50f4
-
+ms.openlocfilehash: 3f005bf0a9201c3762ca6399a78d4ff983409656
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-RoleCapability
+# <a name="find-rolecapability"></a>Find-RoleCapability
 
 Localiza capacidades de função em módulos.
 
-## Descrição
+## <a name="description"></a>Descrição
 O cmdlet Find-RoleCapability localiza capacidades de função do PowerShell em módulos. Find-RoleCapability faz pesquisas em módulos em repositórios registrados. Para cada capacidade de função localizada, esse cmdlet retorna um objeto PSGetRoleCapabilityInfo. Você pode passar um objeto PSGetRoleCapabilityInfo para o cmdlet Install-Module para instalar o módulo que contém a capacidade de função.
 As capacidades de função do PowerShell definem quais comandos, aplicativos e assim por diante ficam disponíveis para um usuário em um ponto de extremidade do tipo JEA ("Administração Suficiente"). As capacidades de função são definidas por arquivos com uma extensão .psrc.
 
@@ -32,16 +30,16 @@ As capacidades de função do PowerShell definem quais comandos, aplicativos e a
 - Find-RoleCapability pode filtrar na linguagem de pesquisa específica do repositório com o parâmetro -Filter.
 - Find-RoleCapability pode filtrar módulos de todos ou de alguns dos repositórios registrados.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 ```powershell
 
 # Find a specific role capability
@@ -83,10 +81,4 @@ Find-RoleCapability -Filter RBAC
 Find-RoleCapability -Tag Azure, DSC
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

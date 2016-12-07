@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "módulo psget_save"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: ee03101cc5b54ac515cfdcc318b97d9c3178cda1
-
+ms.openlocfilehash: 9e83f1eeeb8e4bee666aeb845702f6562a487d6b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Save-Module
+# <a name="save-module"></a>Save-Module
 
 Salva um módulo localmente sem instalá-lo.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Save-Module salva um módulo localmente do repositório especificado para inspeção. O módulo não é instalado.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Save-Module -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Save-Module](http://go.microsoft.com/fwlink/?LinkId=531351)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 Save-Module -Repository MSPSGallery -Name ModuleWithDependencies2 -Path C:\MySavedModuleLocation
@@ -60,10 +58,4 @@ Find-Command -Name "Get-NestedRequiredModule4" -Repository "INT" | Save-Module -
 Find-RoleCapability -Name Maintenance,MyJeaRole | Save-Module -Path C:\MyModulesPath
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

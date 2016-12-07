@@ -36,7 +36,7 @@ Ao instalar o WMF 5.0 em um Windows Server 2012 R2 que já está executando o SI
 
 **Resolução:** execute o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso de Log de Inventário de Software.
 
-<a name="getchilditem-does-not-work-if-literalpath-and-recurse-are-used-together"></a>Get-ChildItem não funcionará se -LiteralPath e -Recurse forem usados juntos
+<a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>Get-ChildItem não funcionará se -LiteralPath e -Recurse forem usados juntos
 --------------------------------------------------------------------------
 
 Caso um nome de diretório contenha um caractere curinga inválido, Get-ChildItem não produzirá os resultados esperados quando -LiteralPath e -Recurse são usados juntos.
@@ -105,8 +105,3 @@ Há duas soluções para este problema, dependendo da versão do Windows Server 
       * Assume que sua cópia editada de Generalize.xml foi copiado no C:\.
 
   10.   Generalize.xml é atualizado com a solução alternativa. Executar o Sysprep com a opção Generalizar habilitada.
-
-
-<!--HONumber=Oct16_HO5-->
-
-

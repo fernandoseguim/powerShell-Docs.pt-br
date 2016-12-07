@@ -1,4 +1,4 @@
-# Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
 
 Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](http://tools.ietf.org/html/rfc5652).
 
@@ -82,7 +82,3 @@ Para exibir certificados de criptografia de documento no provedor de certificado
 ```powershell
 dir -DocumentEncryptionCert
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

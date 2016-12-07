@@ -7,12 +7,10 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 1e7bc38f03dd72fc29d004eb92bf130c416e490a
 ms.openlocfilehash: f7f2699287e76970d0b2565f7bbd45a5d75ac93a
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="using-a-dsc-report-server"></a>Usando um servidor de relatório de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
@@ -226,10 +224,4 @@ Observe que esses exemplos destinam-se a dar uma ideia do que você pode fazer c
 - [Configurando o Gerenciador de Configurações Local](metaConfig.md)
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
 - [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

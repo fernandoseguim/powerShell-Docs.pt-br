@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_get installedmodule
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 40a79a74117f28407758367f4e27b7ae26917078
-
+ms.openlocfilehash: a3c7c96bcb288dcc44aa1e4039d85def4ddb014e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Get-InstalledModule
+# <a name="get-installedmodule"></a>Get-InstalledModule
 
 Obtém os módulos instalados em um computador.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Get-InstalledModule obtém os módulos do PowerShell que foram instalados no computador usando o cmdlet Install-Module.
 
@@ -32,16 +30,16 @@ Para cada módulo instalado, Get-InstalledModule retorna um objeto PSRepositoryI
   - Se o parâmetro RequiredVersion não for especificado, Get-InstalledModule retornará a versão mais recente do módulo instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do módulo se nenhuma versão mínima tiver sido especificada. 
   - Se o parâmetro RequiredVersion for especificado, Get-InstalledModule retornará apenas a versão do módulo instalado que corresponde exatamente à versão especificada.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Get-InstalledModule -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Get-InstalledModule](http://go.microsoft.com/fwlink/?LinkId=526863)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 
@@ -105,7 +103,7 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Modules\DJoin\1.
 
 
 
-## Propriedades InstalledDate e UpdatedDate no objeto PSGetRepositoryItemInfo
+## <a name="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object"></a>Propriedades InstalledDate e UpdatedDate no objeto PSGetRepositoryItemInfo
 
     During the install operation:
         InstalledDate: current DateTime (Get-Date) value
@@ -131,10 +129,4 @@ Name          InstalledDate         UpdatedDate
 ----          -------------         -----------
 ContosoServer 2/29/2016 11:59:14 AM 2/29/2016 12:00:15 PM
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

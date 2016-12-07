@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: b414a01bcd111143791a5fac77e61ce309a0a5c5
-ms.openlocfilehash: b5de1100450a89796c20a5bbb2e71f7759374b02
-
+ms.openlocfilehash: a8c2094cbef1bb14c4a9082ff78fae78ec0c2e65
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Escrevendo um recurso personalizado de DSC com classes do PowerShell
+# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Escrevendo um recurso personalizado de DSC com classes do PowerShell
 
 > Aplica-se a: Windows Windows PowerShell 5.0
 
@@ -25,7 +23,7 @@ Neste tópico, criaremos um recurso simples chamado **FileResource**, que gerenc
 
 Para obter mais informações sobre recursos de DSC, consulte [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
 
-## Estrutura de pastas para um recurso de classe
+## <a name="folder-structure-for-a-class-resource"></a>Estrutura de pastas para um recurso de classe
 
 Para implementar um recurso personalizado de DSC com uma classe do PowerShell, crie a seguinte estrutura de pastas. A classe é definida em **MyDscResource.psm1** e o manifesto de módulo é definido em **MyDscResource.psd1**.
 
@@ -36,7 +34,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
            MyDscResource.psd1 
 ```
 
-## Criar a classe
+## <a name="create-the-class"></a>Criar a classe
 
 A palavra-chave class é utilizada para criar uma classe do PowerShell. Para especificar que uma classe é um recurso de DSC, use o atributo **DscResource()**. O nome da classe é o nome do recurso de DSC.
 
@@ -46,7 +44,7 @@ class FileResource {
 }
 ```
 
-### Declarar propriedades
+### <a name="declare-properties"></a>Declarar propriedades
 
 O esquema do recurso de DSC é definido como propriedades da classe. Declaramos três propriedades da seguinte maneira.
 
@@ -81,7 +79,7 @@ enum Ensure
 }
 ```
 
-### Implementando os métodos
+### <a name="implementing-the-methods"></a>Implementando os métodos
 
 Os métodos **Get()**, **Set()** e **Test()** são análogos às funções **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** em um recurso de script.
 
@@ -218,7 +216,7 @@ Esse código também inclui a função CopyFile (), uma função auxiliar que co
     }
 ```
 
-### O arquivo completo
+### <a name="the-complete-file"></a>O arquivo completo
 Segue o arquivo de classe completo.
 
 ```powershell
@@ -417,7 +415,7 @@ class FileResource
 ```
 
 
-## Criar um manifesto
+## <a name="create-a-manifest"></a>Criar um manifesto
 
 Para disponibilizar um recurso baseado em classes para o mecanismo de DSC, você precisa incluir uma declaração **DscResourcesToExport** no arquivo de manifesto que instrui o módulo para exportar recursos. Nosso manifesto tem essa aparência:
 
@@ -455,7 +453,7 @@ PowerShellVersion = '5.0'
 } 
 ```
 
-## Testar o recurso
+## <a name="test-the-resource"></a>Testar o recurso
 
 Depois de salvar a classe e os arquivos de manifesto na estrutura de pastas, conforme descrito anteriormente, você pode criar uma configuração que use o novo recurso. Para obter informações sobre como executar uma configuração DSC, consulte [Impondo configurações](enactingConfigurations.md). A configuração a seguir verificará se o arquivo em `c:\test\test.txt` existe e, em caso negativo, copia o arquivo de `c:\test.txt` (você deve criar `c:\test.txt` antes de executar a configuração).
 
@@ -474,13 +472,7 @@ Test
 Start-DscConfiguration -Wait -Force Test
 ```
 
-## Consulte Também
-### Conceitos
+## <a name="see-also"></a>Consulte Também
+### <a name="concepts"></a>Conceitos
 [Criar recursos personalizados de configuração de estado desejado do Windows PowerShell](authoringResource.md)
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

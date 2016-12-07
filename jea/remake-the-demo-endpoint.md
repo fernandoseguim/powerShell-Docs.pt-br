@@ -8,17 +8,15 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "recriar o ponto de extremidade da demonstração"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: d20ea8418cb7389d756de94ea752cf604b8d07af
-ms.openlocfilehash: acd2cfbd038250a26236c875d0e8b03a32cd84f9
-
+ms.openlocfilehash: 4a56272b6f995500d443d441f5e03db85dac6f96
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recriar o Ponto de Extremidade de Demonstração
+# <a name="remake-the-demo-endpoint"></a>Recriar o Ponto de Extremidade de Demonstração
 Nesta seção, você aprenderá como gerar uma réplica exata do ponto de extremidade de demonstração usado na seção acima.
 Ela apresentará os conceitos fundamentais que são necessários para compreender o JEA, incluindo as Configurações de Sessão e Capacidades de Função do PowerShell.
 
-## Configurações de Sessão do PowerShell
+## <a name="powershell-session-configurations"></a>Configurações de Sessão do PowerShell
 Ao usar o JEA na seção acima, você começou executando o seguinte comando:
 
 ```PowerShell
@@ -41,14 +39,14 @@ Você pode ver que todas as Configurações de Sessão registradas executando o 
 Get-PSSessionConfiguration
 ```
 
-## Arquivos de Configuração de Sessão do PowerShell
+## <a name="powershell-session-configuration-files"></a>Arquivos de Configuração de Sessão do PowerShell
 Você pode criar novas Configurações de Sessão registrando novos *Arquivos de Configuração de Sessão do PowerShell*.
 Arquivos de Configuração de Sessão têm extensões de arquivo “.pssc”.
 Você pode gerar os Arquivos de Configuração de Sessão com o cmdlet New-PSSessionConfigurationFile.
 
 Em seguida, você criará e registrará uma nova Configuração de Sessão para JEA.
 
-## Gerar e modificar a Configuração de Sessão do PowerShell
+## <a name="generate-and-modify-your-powershell-session-configuration"></a>Gerar e modificar a Configuração de Sessão do PowerShell
 Execute o seguinte comando para gerar um arquivo “esqueleto” de Configuração de Sessão do PowerShell.
 
 ```PowerShell
@@ -107,7 +105,7 @@ Transcrições são apenas um pouco mais legíveis.
 
 Por fim, salve suas alterações em *JEADemo2.pssc*.
 
-## Aplique a Configuração de Sessão do PowerShell
+## <a name="apply-the-powershell-session-configuration"></a>Aplique a Configuração de Sessão do PowerShell
 
 Para criar um ponto de extremidade de um arquivo de Configuração de Sessão, você precisa registrar o arquivo.
 Isso requer algumas informações:
@@ -123,7 +121,7 @@ Register-PSSessionConfiguration -Name 'JEADemo2' -Path "$env:ProgramData\JEAConf
 
 Parabéns! Você configurou o seu ponto de extremidade JEA.
 
-## Testar seu ponto de extremidade
+## <a name="test-out-your-endpoint"></a>Testar seu ponto de extremidade
 Execute novamente as etapas listadas na seção [Usando o JEA](using-jea.md) no novo ponto de extremidade para confirmar se ele está funcionando conforme o esperado.
 Use o novo nome de ponto de extremidade (JEADemo2) ao informar o nome de configuração para `Enter-PSSession`.
 
@@ -131,7 +129,7 @@ Use o novo nome de ponto de extremidade (JEADemo2) ao informar o nome de configu
 Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
 ```
 
-## Conceitos Principais
+## <a name="key-concepts"></a>Conceitos Principais
 **Configuração de Sessão do PowerShell**: às vezes chamado de *Ponto de Extremidade do PowerShell*, esse é o "local" figurado em que os usuários se conectam e obtém acesso à funcionalidade do PowerShell.
 Você pode listar as Configurações de Sessão registradas no sistema executando `Get-PSSessionConfiguration`.
 Quando configurado de forma específica, uma Configuração de Sessão do PowerShell pode ser chamada de *Ponto de Extremidade JEA*.
@@ -149,10 +147,4 @@ Para pontos de extremidade JEA, é necessário definir isso como RestrictedRemot
 **Transcrição de PowerShell**: um arquivo que contém uma exibição "Over The Shoulder" de uma sessão do PowerShell.
 Você pode configurar o PowerShell para gerar transcrições para sessões JEA usando o campo TranscriptDirectory.
 Para obter mais informações sobre transcrições, confira este [post de blog](https://technet.microsoft.com/en-us/magazine/ff687007.aspx).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -94,8 +94,3 @@
 ### [Gerar cmdlets do PowerShell com base em um ponto de extremidade OData](5.0/odata_overview.md)
 ### [Gerenciamento de comutador de rede com o PowerShell](5.0/networkswitch_overview.md)
 ### [SIL (Log de Inventário de Software)](5.0/sil_overview.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

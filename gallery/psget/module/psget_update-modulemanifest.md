@@ -9,32 +9,30 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_update modulemanifest
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 9ade4e89a28b777266f48556c910092bfab67227
-
+ms.openlocfilehash: 85153872326c5af8f869bc2254040eca1a152f8b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Update-ModuleManifest
+# <a name="update-modulemanifest"></a>Update-ModuleManifest
 Atualiza um arquivo de manifesto do módulo.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Update-ModuleManifest atualiza um arquivo de manifesto do módulo (.psd1).
 
-### Observações
+### <a name="notes"></a>Observações
     - DscResourcesToExport tem suporte somente na versão mais recente do PowerShell 5.0. Nós não poderemos atualizar o campo se você estiver executando em versões anteriores do PowerShell.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 Esse novo cmdlet é usado para ajudar a atualizar o arquivo de manifesto com valores de propriedade de entrada. Ele usa todos os parâmetros usados por New-ModuleManifest.
 
@@ -121,10 +119,4 @@ PrivateData = @{
     } # End of PSData hashtable
 } # End of PrivateData hashtable
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

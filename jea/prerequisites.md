@@ -8,15 +8,13 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "pré-requisitos"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: ac9231a475ba84e9051bbd06a65f3f20c9e49846
-
+ms.openlocfilehash: 6cd57c2fab63d2184cb5c792b63df99dbd782235
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="prerequisites"></a>Pré-requisitos
 
-# Pré-requisitos
-
-## Estado Inicial
+## <a name="initial-state"></a>Estado Inicial
 Antes de iniciar esta seção, verifique o seguinte:
 
 1. O JEA está disponível no seu sistema. Confira o [LEIAME](./README.md) para ver os sistemas operacionais com suporte e os downloads necessários.
@@ -24,7 +22,7 @@ Antes de iniciar esta seção, verifique o seguinte:
 3. O computador está ingressado no domínio.
 Consulte a seção [Criando um Controlador de Domínio](#creating-a-domain-controller) para configurar rapidamente um novo domínio em um servidor se você ainda não tiver um.
 
-## Habilitar a Comunicação Remota do PowerShell
+## <a name="enable-powershell-remoting"></a>Habilitar a Comunicação Remota do PowerShell
 O gerenciamento com o JEA ocorre por meio da comunicação remota do PowerShell.
 Execute o seguinte em uma janela de Administrador do PowerShell para verificar se está habilitado e configurado corretamente:
 
@@ -34,7 +32,7 @@ Enable-PSRemoting
 
 Se você não estiver familiarizado com a comunicação remota do PowerShell, seria uma boa ideia executar `Get-Help about_Remote` para saber mais sobre esse importante conceito básico.
 
-## Identificar os Usuários ou Grupos
+## <a name="identify-your-users-or-groups"></a>Identificar os Usuários ou Grupos
 Para demonstrar o JEA em ação, você precisa identificar os outros usuários e grupos não administradores que serão usados em todo este guia.
 
 Se você estiver usando um domínio existente, identifique ou crie alguns grupos e usuários não privilegiados.
@@ -45,7 +43,7 @@ Se você criou um novo domínio do zero, será muito mais fácil.
 Use a seção [Configurar usuários e grupos](creating-a-domain-controller.md#set-up-users-and-groups) no apêndice para criar usuários e grupos não administradores.
 Os valores padrão de `$NonAdministrator` serão os grupos criados nessa seção.
 
-## Configurar o arquivo de Capacidade de Função de manutenção
+## <a name="set-up-maintenance-role-capability-file"></a>Configurar o arquivo de Capacidade de Função de manutenção
 Execute os seguintes comandos do PowerShell para criar o arquivo de Capacidade de Função de demonstração que usaremos para a próxima seção.
 Posteriormente neste guia, você aprenderá sobre o que esse arquivo faz.
 
@@ -68,7 +66,7 @@ New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapa
 New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc" @MaintenanceRoleCapabilityCreationParams
 ```
 
-## Criar e registrar um arquivo de configuração de sessão de demonstração
+## <a name="create-and-register-demo-session-configuration-file"></a>Criar e registrar um arquivo de configuração de sessão de demonstração
 Execute os seguintes comandos para criar e registrar o arquivo de Configuração de Sessão de demonstração que usaremos na próxima seção.
 Posteriormente neste guia, você aprenderá sobre o que esse arquivo faz.
 
@@ -110,7 +108,7 @@ New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEADemo.
 Register-PSSessionConfiguration -Name $sessionName -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc"
 ```
 
-## Habilitar o registro em log do Módulo do PowerShell (opcional)
+## <a name="enable-powershell-module-logging-optional"></a>Habilitar o registro em log do Módulo do PowerShell (opcional)
 As etapas a seguir habilitam o log para todas as ações do PowerShell em seu sistema.
 Você não precisa habilitar isso para que o JEA funcione, mas será útil na seção [Relatando no JEA](reporting-on-jea.md).
 
@@ -124,11 +122,5 @@ Você não precisa habilitar isso para que o JEA funcione, mas será útil na se
 
 Observação: você também pode habilitar transcrição do PowerShell de todo o sistema por meio da Política de Grupo.
 
-**Parabéns, você configurou seu computador com o ponto de extremidade de demonstração e está pronto para começar a usar JEA!**
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+**Parabéns, você configurou seu computador com o ponto de extremidade de demonstração e está pronto para começar a usar o JEA!**
 

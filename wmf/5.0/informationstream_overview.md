@@ -1,4 +1,4 @@
-# Fluxo de informações
+# <a name="information-stream"></a>Fluxo de informações
 
 Um novo Fluxo de informações estruturado agora pode ser usado para transmitir dados estruturados entre um script e seu host. **Write-Host** também foi atualizado para emitir a saída para o Fluxo de informações, em que agora é possível capturar ou silenciá-lo. O novo cmdlet **Write-Information** (juntamente com uma API WriteInformation correspondente) usado com os parâmetros comuns **-InformationVariable** e **-InformationAction** permite mais flexibilidade e capacidade.
 
@@ -112,8 +112,3 @@ ProcessId       : 4008
 NativeThreadId  : 2276
 ManagedThreadId : 14
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

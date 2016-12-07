@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 04aa6292dee991060669e1ac770cf98cbba41bfc
-ms.openlocfilehash: f4c64d3603fd01f29a63f8b180057714bf3d1197
-
+ms.openlocfilehash: c99ef444027a82d3adeba6a060f60fba3a0fe530
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Especificando dependências de nó cruzado
+# <a name="specifying-cross-node-dependencies"></a>Especificando dependências de nó cruzado
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -23,7 +21,7 @@ O DSC fornece recursos especiais, **WaitForAll**, **WaitForAny**, e **WaitForSom
 * **WaitForAny**: terá êxito se o recurso especificado estiver no estado desejado em pelo menos um dos nós de destino definidos na propriedade **NodeName**.
 * **WaitForSome**: especifica uma propriedade **NodeCount** além de uma propriedade **NodeName**. O recurso terá êxito se estiver no estado desejado em um número mínimo de nós (especificado por **NodeCount**) definido pela propriedade **NodeName**. 
 
-## Usando os recursos WaitForXXXX
+## <a name="using-waitforxxxx-resources"></a>Usando os recursos WaitForXXXX
 
 Para usar os recursos **WaitForXXXX**, você cria um bloco de recursos desse tipo de recurso que especifica o recurso DSC e os nós a serem esperados. Em seguida, use a propriedade **DependsOn** em quaisquer outros blocos de recursos em sua configuração para aguardar que as condições especificadas no nó **WaitForXXXX** sejam bem-sucedidas.
 
@@ -59,14 +57,8 @@ Configuration JoinDomain
 
 >**Observação:** por padrão, os recursos WaitForXXX tentam uma vez e, em seguida, falham. Embora não seja obrigatório, você geralmente deve especificar um intervalo de repetição e uma contagem.
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 * [Configurações DSC](configurations.md)
 * [Recursos de DSC](resources.md)
 * [Configurando o Gerenciador de Configurações Local](metaConfig.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

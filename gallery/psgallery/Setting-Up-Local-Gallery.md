@@ -9,17 +9,7 @@ ms.date: 2016-10-14
 contributor: manikb
 title: Configurando a galeria local
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: dad964227a913d386897df4bf38e21a5dd844a46
-
+ms.openlocfilehash: 3b05e9b52c745ee1d8f6fa201e98cca52ebfcc96
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

@@ -9,17 +9,7 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "Referência de ModuleManifest"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: ff1a93e90bfb0349eca3027716029c2858b74269
-
+ms.openlocfilehash: 4611fa0bc02a3c24bacec226d61c83be47411b7f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

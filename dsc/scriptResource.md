@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
-ms.openlocfilehash: 6b060d17fb106089528b0737ab03cc7d592d412a
-
+ms.openlocfilehash: 56eb7ef230d84cc5f5679f39e13e2019205c65f5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recurso Script de DSC
+# <a name="dsc-script-resource"></a>Recurso Script de DSC
 
  
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -29,7 +27,7 @@ O bloco de script `SetScript` deve modificar o nó. Ele será chamado pelo DSC, 
 Se você precisa usar variáveis do seu script de configuração nos blocos de script `GetScript`, `TestScript` ou `SetScript`, use o escopo `$using:` (consulte abaixo para obter um exemplo).
 
 
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 Script [string] #ResourceName
@@ -42,7 +40,7 @@ Script [string] #ResourceName
 }
 ```
 
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -52,7 +50,7 @@ Script [string] #ResourceName
 | Credential| Indica as credenciais que devem ser usadas para executar esse script, caso sejam necessárias.| 
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.
 
-## Exemplo 1
+## <a name="example-1"></a>Exemplo 1
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -74,7 +72,7 @@ Configuration ScriptTest
 }
 ```
 
-## Exemplo 2
+## <a name="example-2"></a>Exemplo 2
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -106,10 +104,4 @@ Configuration ScriptTest
 ```
 
 Este recurso está gravando a versão da configuração em um arquivo de texto. Esta versão está disponível no computador cliente, mas não está em nenhum dos nós, por isso deve ser passada para cada um dos blocos de script do recurso `Script` com o escopo `using` do PowerShell. Quando gera o arquivo MOF do nó, o valor da variável `$version` é lido de um arquivo de texto no computador cliente. O DSC substitui as variáveis `$using:version` em cada bloco de script pelo valor da variável `$version`.
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

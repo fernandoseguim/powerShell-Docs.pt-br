@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 6b001c12885022006003ef3ffe91b7aede07bd17
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recursos Internos de Configuração de Estado Desejado para Linux
+# <a name="built-in-desired-state-configuration-resources-for-linux"></a>Recursos Internos de Configuração de Estado Desejado para Linux
 
 Os recursos são blocos de construção que você pode usar para escrever um script de Configuração de Estado Desejado (DSC) do PowerShell. A DSC para Linux vem com um conjunto de funcionalidade interna para configurar recursos, como arquivos e pastas, pacotes, variáveis de ambiente, serviços e processos.
 
-## Recursos internos 
+## <a name="built-in-resources"></a>Recursos internos 
 
 A tabela a seguir fornece uma lista desses recursos e links para tópicos que os descrevem detalhadamente.
 
@@ -32,9 +30,3 @@ A tabela a seguir fornece uma lista desses recursos e links para tópicos que os
 * [Recurso nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md) — gerencia chaves ssh públicas para um usuário do Linux. 
 * [Recurso nxUser](lnxUserResource.md) — gerencia usuários locais do Linux. 
   
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,25 +8,23 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "capacidades de função"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 81fd386d58576a8930093b4f18ce36a4ff6cecd0
-ms.openlocfilehash: a3dd4a217f5b1fd80e97adf802c65073ca015bbc
-
+ms.openlocfilehash: d5f6311d74e47f2fa1a93909c244cddf114b0229
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="role-capabilities"></a>Capacidades de Função
 
-# Capacidades de Função
-
-## Visão geral
+## <a name="overview"></a>Visão geral
 Na seção acima, você aprendeu que o campo “RoleDefinitions” definiu quais grupos tinham acesso a quais Capacidades de Função.
 Você pode se perguntar: “o que são as Capacidades de Função?"
 Esta seção responderá essa pergunta.  
 
-## Apresentando as Capacidades de Função do PowerShell
+## <a name="introducing-powershell-role-capabilities"></a>Apresentando as Capacidades de Função do PowerShell
 Capacidades de Função do PowerShell definem "o que" um usuário pode fazer em um ponto de extremidade JEA.
 Eles fornecem detalhes sobre uma lista de permissões de coisas como comandos visíveis, aplicativos visíveis e muito mais.
 Capacidades de Função são definidas por arquivos com uma extensão ".psrc".
 
-## Conteúdo do Capacidade de Função
+## <a name="role-capability-contents"></a>Conteúdo do Capacidade de Função
 Começamos examinando e modificando o arquivo de Capacidade de Função usado anteriormente.
 Imagine que você implantou sua Configuração de Sessão no seu ambiente, mas recebeu comentários de que precisa alterar os recursos expostos aos usuários.
 Operadores precisam ser capazes de reinicializar os computadores e também desejam poder obter informações sobre as configurações de rede.
@@ -102,7 +100,7 @@ Saia da sessão quando tiver terminado.
 Exit-PSSession
 ```
 
-## Criação de Capacidade de Função
+## <a name="role-capability-creation"></a>Criação de Capacidade de Função
 Na próxima seção, você criará um ponto de extremidade JEA para os usuários do suporte técnico do AD.
 Para preparar isso, criaremos um arquivo de Capacidade de Função em branco para preencher essa seção.
 As Capacidades de Função devem ser criadas dentro de uma pasta "RoleCapabilities" dentro de um módulo do PowerShell válido para ser resolvido quando uma sessão é iniciada.
@@ -133,7 +131,7 @@ New-PSRoleCapabilityFile -Path 'C:\Program Files\WindowsPowerShell\Modules\Conto
 Parabéns, você criou um arquivo de Capacidade de Função em branco.
 Ele será usado na próxima seção.
 
-## Conceitos Principais
+## <a name="key-concepts"></a>Conceitos Principais
 **Capacidade de Função (.psrc)**: um arquivo que define "o que" um usuário pode fazer em um ponto de extremidade JEA.
 Ele fornece detalhes sobre uma lista de permissões de coisas como comandos visíveis, aplicativos de console visíveis e muito mais.
 Para que o PowerShell detecte as Capacidades de Função, você deve colocá-los em uma pasta "RoleCapabilities" em um módulo do PowerShell válido.
@@ -141,10 +139,4 @@ Para que o PowerShell detecte as Capacidades de Função, você deve colocá-los
 **Módulo do PowerShell**: um pacote da funcionalidade do PowerShell.
 Ele podem conter funções, cmdlets, recursos da DSC, Capacidades de Função do PowerShell e muito mais.
 Para ser carregado automaticamente, módulos do PowerShell devem estar localizados em um caminho em `$env:PSModulePath`.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

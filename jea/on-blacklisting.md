@@ -8,13 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: sobre a lista de bloqueios
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf
-
+ms.openlocfilehash: e823cc0b130500fb7ea60e65acf27f90ad3f3802
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-### Sobre lista de bloqueios
+### <a name="on-blacklisting"></a>Sobre lista de bloqueios
 Depois de explorar o JEA, você pode estar se perguntando se é possível colocar comandos na lista de bloqueios.
 Essa é uma solicitação compreensível, mas ela não está planejada para JEA pelos seguintes motivos:
 
@@ -32,10 +30,4 @@ Você deve compreender as capacidades dos comandos que são expostos por meio do
 A menos que você compreenda todos os comandos que estiver expondo, é impossível assegurar que uma determinada ação não será possível.
 Cabe a você entender os comandos que você está expondo, seja usando uma lista de permissões ou uma lista de bloqueios.
 O número de comandos que uma lista de bloqueios poderia expor é impossível de gerenciar, portanto o JEA é implementado usando listas de permissões.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

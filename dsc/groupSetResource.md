@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: bf36abde6a3bfff4c2e49868465e089cc886d031
-ms.openlocfilehash: 45fe96c43a834566d398820e3d94e3be923bb385
-
+ms.openlocfilehash: 6e5ea98febfe7541f35a84c37df73df580654340
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recurso de GroupSet DSC
+# <a name="dsc-groupset-resource"></a>Recurso de GroupSet DSC
 
 > Aplica-se a: Windows Windows PowerShell 5.0
 
@@ -21,7 +19,7 @@ O recurso **GroupSet** na DSC (Configuração de Estado Desejado) do Windows Pow
 
 Use esse recurso quando desejar adicionar e/ou remover a mesma lista de membros para mais de um grupo, remova mais de um grupo ou adicionar mais de um grupo com a mesma lista de membros.
 
-##Sintaxe##
+##<a name="syntax"></a>Sintaxe##
 ```
 Group [string] #ResourceName
 {
@@ -34,7 +32,7 @@ Group [string] #ResourceName
 }
 ```
 
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -46,7 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário *Domínio*\\*NomeDoUsuário*. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 
-## Exemplo 1
+## <a name="example-1"></a>Exemplo 1
 
 O exemplo a seguir mostra como garantir que dois grupos chamados "myGroup" e "myOtherGroup" estejam presentes. 
 
@@ -81,11 +79,5 @@ GroupSetTest -ConfigurationData $cd
 ```
 
 >**Observação:** este exemplo usa as credenciais de texto sem formatação para manter a simplicidade. Para obter informações sobre como criptografar credenciais no arquivo MOF de configuração, consulte [Protegendo o Arquivo MOF](secureMOF.md).
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

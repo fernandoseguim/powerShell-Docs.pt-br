@@ -9,13 +9,11 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_cmdlets_reference
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 21028dbbc5c7ac1c7e514a0a0887942f5c67c32a
-
+ms.openlocfilehash: d96506a70861a013b6383b6327225eb341fd164d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Referência de cmdlet do PowerShellGet
+# <a name="powershellget-cmdlet-reference"></a>Referência de cmdlet do PowerShellGet
 
 - [Register-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517129)
 - [Get-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517127)
@@ -42,10 +40,4 @@ ms.openlocfilehash: 21028dbbc5c7ac1c7e514a0a0887942f5c67c32a
 - [Test-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619791)
 - [Update-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619793)
 - [Publish-Script](http://go.microsoft.com/fwlink/?LinkId=619788)
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 
