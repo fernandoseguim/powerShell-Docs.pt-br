@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d90bf940a1047b629f7b59d239aab50a78748251
-
+ms.openlocfilehash: 34e641329388436074f2d0f05647ec4fa7efdf83
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Compreendendo o Pipeline do Windows PowerShell
+# <a name="understanding-the-windows-powershell-pipeline"></a>Compreendendo o Pipeline do Windows PowerShell
 O redirecionamento funciona praticamente em qualquer lugar no Windows PowerShell. Embora você veja o texto na tela, o Windows PowerShell não redireciona o texto entre comandos. Em vez disso, ele redireciona os objetos.
 
 A notação usada para as pipelines é semelhante àquela usada em outros shells, então à primeira vista, pode não ser aparente que o Windows PowerShell apresenta algo novo. Por exemplo, se você usar o cmdlet **Out-Host** para forçar uma exibição de página a página da saída de outro comando, a saída parecerá ser apenas o texto normal exibido na tela, dividida em páginas:
@@ -66,10 +64,4 @@ Na verdade, a saída das informações de cabeçalho do cmdlet **Get-Location** 
 Considerando que pode haver mais saída de informações de um comando do Windows PowerShell do que é exibido na janela do console, como podemos recuperar os elementos não visíveis? Como exibir os dados extras? E se você desejar exibir os dados em um formato diferente do que o Windows PowerShell normalmente usa?
 
 O restante deste capítulo discute como é possível pode descobrir a estrutura de objetos específicos do Windows PowerShell selecionando itens específicos e formatando-os para exibição mais fácil, bem como enviar essas informações para locais de saída alternativos, como arquivos e impressoras.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

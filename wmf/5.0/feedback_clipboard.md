@@ -1,4 +1,4 @@
-# Área de transferência de Cmdlets
+# <a name="clipboard-cmdlets"></a>Área de transferência de Cmdlets
 **Get-Clipboard** e **Set-Clipboard** facilitam a transferência do conteúdo de e para uma sessão do Windows PowerShell. Por exemplo, se você usar o Windows Explorer para copiar três arquivos na área de transferência (selecionando-os e pressionando `ctrl-c`, por exemplo), poderá facilmente acessar o conteúdo da área de transferência como uma lista de arquivos:
 
 ```powershell 
@@ -19,8 +19,3 @@ Mode LastWriteTime Length Name
 
 
 Os cmdlets Clipboard dão suporte a imagens, arquivos de áudio, listas de arquivo e texto.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

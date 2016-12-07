@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-translationtype: Human Translation
-ms.sourcegitcommit: c1e210afa664304fa38f7dead444ab4a206be64f
-ms.openlocfilehash: f560b955f8f817caf96dba40900844b98a0e92a9
-
+ms.openlocfilehash: 9510e13156b0dd0da8e5c4f94cfaf7b3152f3ad0
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="windows-powershell-system-requirements"></a>Requisitos do Sistema do Windows PowerShell
 Este tópico lista os requisitos do sistema para o Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 e recursos especiais, como o ISE (Ambiente de Script Integrado) do Windows PowerShell, comandos CIM e fluxos de trabalho.
 
@@ -70,7 +68,7 @@ Para instalar a instalação completa do Microsoft .NET Framework 4 (dotNetFx40_
 ## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
 O Windows PowerShell 5.0 requer que o Windows Management Framework 4.0 esteja pré-instalado no Windows Server 2008 R2 SP1 e Windows 7 SP1.
 
-## <a name="wsmanagement-30"></a>WS-Management 3.0
+## <a name="ws-management-30"></a>WS-Management 3.0
 O Windows PowerShell 3.0 e Windows PowerShell 4.0 requerem o WS-Management 3.0, que dá suporte ao serviço WinRM e ao protocolo WSMan. Esse programa está incluído no Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.
 
 ## <a name="windows-management-instrumentation-30"></a>Instrumentação de Gerenciamento do Windows 3.0
@@ -130,10 +128,4 @@ Além disso, o serviço do **WinRM** não está presente no Windows PE.
 - [Introdução ao Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Iniciando o Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
-
-
-
-
-<!--HONumber=Oct16_HO4-->
-
 

@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 28bc665c3ffb1b74a2ff922584c31a8657842a0f
-
+ms.openlocfilehash: 1d8b45bbfe14bdca7ddfa3fd26d1e66a0a82efbc
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:
 
@@ -186,10 +184,4 @@ PS> [System.Math]::Truncate(9.3)
 PS> [System.Math]::Truncate(-9.3)
 -9
 ```
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

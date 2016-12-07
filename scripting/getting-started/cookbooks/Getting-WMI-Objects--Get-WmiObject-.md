@@ -8,15 +8,13 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: de9e8af7908ac6a72a100fd2c86b52c30c390c39
-
+ms.openlocfilehash: 517b07a9ebca91029381684beaec95d37934f3ce
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 
-# <a name="getting-wmi-objects-getwmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
-
-## <a name="getting-wmi-objects-getwmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
+## <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 O WMI (Instrumentação de Gerenciamento do Windows) é uma das principais tecnologias para a administração do sistema, pois ela expõe uma grande variedade de informações de maneira uniforme. Devido a quanto o WMI possibilita, o cmdlet do Windows PowerShell para acessar objetos WMI, **Get-WmiObject**, é um dos mais úteis para fazer o trabalho real. Vamos discutir como usar Get-WmiObject para acessar objetos WMI e como usar objetos WMI para fazer coisas específicas.
 
 ### <a name="listing-wmi-classes"></a>Listar classes WMI
@@ -109,7 +107,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ...
 ```
 
-#### <a name="displaying-nondefault-properties-with-format-cmdlets"></a>Exibindo propriedades não padrão com cmdlets Format
+#### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Exibindo propriedades não padrão com cmdlets Format
 Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format**. Por exemplo, se você deseja exibir dados de memória disponível, digite:
 
 ```
@@ -135,10 +133,4 @@ FreePhysicalMemory     : 301876
 FreeVirtualMemory      : 2056724
 FreeSpaceInPagingFiles : 1556644
 ```
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

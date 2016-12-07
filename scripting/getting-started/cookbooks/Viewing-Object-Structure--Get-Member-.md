@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: acd52c1271013320dafa7f7bf5c72b752e07574b
-
+ms.openlocfilehash: 041b58f5fcfdf2225704adcb943de864c94502c1
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# <a name="viewing-object-structure-getmember"></a>Exibindo a estrutura do objeto (Get-Member)
+# <a name="viewing-object-structure-get-member"></a>Exibindo a estrutura do objeto (Get-Member)
 Como objetos representam um papel central no Windows PowerShell, há vários comandos nativos projetados para trabalhar com tipos de objetos arbitrários. O mais importante é o comando **Get-Member**.
 
 A técnica mais simples para analisar os objetos que um comando retorna é direcionar a saída desse comando para o cmdlet **Get-Member**. O cmdlet **Get-Member** mostra o nome formal do tipo de objeto e uma lista completa de seus membros. O número de elementos que são retornados, às vezes, pode ser imenso. Por exemplo, um objeto de processo pode ter mais de 100 membros.
@@ -73,10 +71,4 @@ Há mais de 60 propriedades para um processo. O motivo que faz o Windows PowerSh
 > O Windows PowerShell determina como exibir um tipo de objeto usando informações armazenadas em arquivos XML que têm nomes que terminam com .format.ps1xml. Os dados de formatação para objetos de processo, que são objetos .NET System.Diagnostics.Process, são armazenados em PowerShellCore.format.ps1xml.
 
 Se você precisar examinar propriedades diferentes que o Windows PowerShell exibe por padrão, deverá formatar os dados de saída por conta própria. Isso pode ser feito usando os cmdlets de formato.
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c013124d12a551245152c1703e5f1d8a3f8f5f70
-
+ms.openlocfilehash: 2142d7ef1d1cc9b20ecc1ab35b9685817c838347
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Trabalhando com impressoras
+# <a name="working-with-printers"></a>Trabalhando com impressoras
 Você pode usar o Windows PowerShell para gerenciar impressoras usando o WMI e o objeto COM WScript.Network do WSH. Usaremos uma combinação das duas ferramentas para demonstrar as tarefas específicas.
 
-### Listar conexões de impressora
+### <a name="listing-printer-connections"></a>Listar conexões de impressora
 A maneira mais simples de listar as impressoras instaladas em um computador é usar o a classe do WMI **Win32_Printer**:
 
 ```
@@ -32,14 +30,14 @@ Você também pode listar as impressoras usando o objeto COM **WScript.Network**
 
 Como esse comando retorna uma coleção simples de cadeia de caracteres de nomes de portas e nomes de dispositivo de impressora sem qualquer distinção rótulos, por isso não é fácil interpretar.
 
-### Adicionar uma impressora de rede
+### <a name="adding-a-network-printer"></a>Adicionar uma impressora de rede
 Para adicionar uma nova impressora de rede, use **WScript.Network**:
 
 ```
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
 ```
 
-### Configurar uma impressora padrão
+### <a name="setting-a-default-printer"></a>Configurar uma impressora padrão
 Para usar o WMI para definir a impressora padrão, localize a impressora na coleção **Win32_Printer** e, em seguida, invoque o método **SetDefaultPrinter**:
 
 ```
@@ -52,16 +50,10 @@ Para usar o WMI para definir a impressora padrão, localize a impressora na cole
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')
 ```
 
-### Remover a conexão da impressora
+### <a name="removing-a-printer-connection"></a>Remover a conexão da impressora
 Para remover uma conexão de impressora, use o método **WScript.Network RemovePrinterConnection**:
 
 ```
 (New-Object -ComObject WScript.Network).RemovePrinterConnection("\\Printserver01\Xerox5")
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c3f7c226fcb496e5bb51ba601429c54b43de9d52
-
+ms.openlocfilehash: be0960062182bbce161fdb26340825a7f6360382
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Trabalhando com arquivos e pastas
+# <a name="working-with-files-and-folders"></a>Trabalhando com arquivos e pastas
 Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Abordaremos como lidar com tarefas específicas de manipulação de arquivo e pasta nesta seção.
 
-### Listar todos os arquivos e pastas dentro de uma pasta
+### <a name="listing-all-the-files-and-folders-within-a-folder"></a>Listar todos os arquivos e pastas dentro de uma pasta
 Você pode obter todos os itens diretamente em uma pasta usando **Get-ChildItem**. Adicione o parâmetro opcional **Force** para exibir itens ocultos ou do sistema. Por exemplo, este comando exibe o conteúdo direto da unidade do Windows PowerShell C (que é a mesma que a unidade física C do Windows):
 
 ```
@@ -38,7 +36,7 @@ O comando a seguir localiza todos os executáveis na pasta Arquivos de Programa 
 Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -FilterScript {($_.LastWriteTime -gt "2005-10-01") -and ($_.Length -ge 1m) -and ($_.Length -le 10m)}
 ```
 
-### Copiar arquivos e pastas
+### <a name="copying-files-and-folders"></a>Copiar arquivos e pastas
 A cópia é feita com **Copy-Item**. O comando a seguir faz backup de C:\\boot.ini em C:\\boot.bak:
 
 ```
@@ -71,7 +69,7 @@ Você ainda pode usar outras ferramentas para realizar cópias do sistema de arq
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile("c:\boot.ini", "c:\boot.bak")
 ```
 
-### Criar arquivos e pastas
+### <a name="creating-files-and-folders"></a>Criar arquivos e pastas
 Criar novos itens funciona da mesma forma em todos os provedores do Windows PowerShell. Se um provedor do Windows PowerShell tiver mais de um tipo de item, por exemplo, se o provedor do Sistema de Arquivos do Windows PowerShell fizer distinção entre arquivos e diretórios, você precisará especificar o tipo de item.
 
 Este comando cria uma nova pasta C:\\temp\\Nova Pasta:
@@ -86,7 +84,7 @@ Este comando cria um novo arquivo vazio C:\\temp\\New Folder\\file.txt
 New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType "file"
 ```
 
-### Remover todos os arquivos e pastas dentro de uma pasta
+### <a name="removing-all-files-and-folders-within-a-folder"></a>Remover todos os arquivos e pastas dentro de uma pasta
 É possível remover os itens contidos usando **Remove-Item**, mas você será solicitado a confirmar a remoção se o item contiver qualquer outra coisa. Por exemplo, se você tentar excluir a pasta C:\\temp\\DeleteMe que contém outros itens, o Windows PowerShell solicitará sua confirmação antes de excluí-la:
 
 ```
@@ -106,7 +104,7 @@ Se você não quiser ser solicitado para cada item contido, especifique o parâm
 Remove-Item C:\temp\DeleteMe -Recurse
 ```
 
-### Mapear uma pasta local como uma Unidade Acessível do Windows
+### <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapear uma pasta local como uma Unidade Acessível do Windows
 Você também pode mapear uma pasta local usando o comando **subst**. O comando a seguir cria uma unidade local P: com raiz no diretório de Arquivos de Programa local:
 
 ```
@@ -115,7 +113,7 @@ subst p: $env:programfiles
 
 Assim como ocorre com unidades de rede, unidades mapeadas no Windows PowerShell usando **subst** ficam imediatamente visíveis para o shell do Windows PowerShell.
 
-### Ler um arquivo de texto em uma matriz
+### <a name="reading-a-text-file-into-an-array"></a>Ler um arquivo de texto em uma matriz
 Um dos formatos mais comuns de armazenamento para dados de texto é em um arquivo com linhas separadas, tratadas como elementos de dados distintos. O cmdlet **Get-Content** pode ser usado para ler um arquivo inteiro em uma única etapa, como mostrado aqui:
 
 ```
@@ -144,10 +142,4 @@ $Computers = Get-Content -Path C:\temp\DomainMembers.txt
 ```
 
 **$Computers** agora é uma matriz que contém um nome do computador em cada elemento.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

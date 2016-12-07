@@ -1,12 +1,10 @@
 ---
 title: Falha de cmdlets do Gerenciador de Comutador de Rede
 contributor: vaibch
-translationtype: Human Translation
-ms.sourcegitcommit: 34337749a77f4379b841a8478d4e6e3bc97e7ada
-ms.openlocfilehash: 180158033e0c960f73dba66a3d77b15765e3e382
-
+ms.openlocfilehash: e32e31762b665a7e2c6f6938fe494cb6127d4264
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 Os cmdlets do Gerenciador de Comutador de Rede podem ser usados para gerenciar os comutadores de rede em WSMAN. Alguns cmdlets do módulo são capazes de aceitar valores de pipelines. Na Preview do 5.1 WMF, os cmdlets que podem aceitar o valor de pipeline não poderão ser executados quando os valores não forem passados pelos pipelines.
 
 Se o parâmetro "InputObject" não for usado, o cmdlet deverá continuar a execução sem falhas.
@@ -24,7 +22,7 @@ Aqui está a lista dos cmdlets afetados, ou seja, esses cmdlets pode aceitar o v
 - Remove-NetworkSwitchVlan
 - Set-NetworkSwitchVlanProperty
 
-### Resolução
+### <a name="resolution"></a>Resolução
 Os cmdlets funcionam bem quando o valor do parâmetro InputObject é passado pelo pipeline. Alguns exemplos que funcionam para os cmdlets acima são:
 
 - Disable-NetworkSwitchEthernetPo
@@ -77,9 +75,3 @@ $properties = @{Caption = "New Caption"}
 $vlan = Get-CimInstance -ClassName CIM_NetworkVlan -Namespace root/interop -CimSession $cimSession | Select-Object -First 1
 $vlan | Set-NetworkSwitchVlanProperty -Property $properties -CimSession $cimSession
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -9,18 +9,9 @@ ms.date: 2016-10-14
 contributor: manikb
 title: Criando e publicando um item
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 70db6e1eafefa04eb5be969457275f149870a030
-
+ms.openlocfilehash: ca37d95fe30732ba935c8f8d009aef583820541c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Criar e publicar um item
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
+# <a name="creating-and-publishing-an-item"></a>Criar e publicar um item
 

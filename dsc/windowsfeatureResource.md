@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 522dbea958a60f76e98abe32e11e6491ea6d457c
-
+ms.openlocfilehash: 98c39d11122d26502723a302ebd7ad4cff0be35d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recurso WindowsFeature de DSC
+# <a name="dsc-windowsfeature-resource"></a>Recurso WindowsFeature de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso **WindowsFeature** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para garantir que funções e recursos sejam adicionados ou removidos em um nó de destino.
 
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 WindowsFeature [string] #ResourceName
@@ -34,7 +32,7 @@ WindowsFeature [string] #ResourceName
 }
 ```
 
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -46,7 +44,7 @@ WindowsFeature [string] #ResourceName
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | Origem| Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário.| 
 
-## Exemplo
+## <a name="example"></a>Exemplo
 ```powershell
 WindowsFeature RoleExample
 {
@@ -55,10 +53,4 @@ WindowsFeature RoleExample
     Name = "Web-Server" # Use the Name property from Get-WindowsFeature  
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

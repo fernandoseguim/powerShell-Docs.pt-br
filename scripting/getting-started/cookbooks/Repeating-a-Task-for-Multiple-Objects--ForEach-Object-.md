@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 8dd7904611fb697f9b398161e12765454b4f3441
-
+ms.openlocfilehash: 4b219e4499482eafa6eddf1461b74c62ba091d1a
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Repetir uma tarefa para vários objetos (ForEach-Object)
+# <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Repetir uma tarefa para vários objetos (ForEach-Object)
 O cmdlet **ForEach-Object** usa blocos de script e o descritor $_ do objeto de pipeline atual para que você possa executar um comando em cada objeto no pipeline. Isso pode ser usado para executar algumas tarefas complicadas.
 
 Uma situação em que isso pode ser útil é manipular dados para torná-los mais úteis. Por exemplo, a classe Win32_LogicalDisk do WMI pode ser usada para retornar informações de espaço livre para cada disco local. Contudo, os dados são retornados em bytes, o que dificulta a leitura:
@@ -53,10 +51,4 @@ eeSpace = ($_.FreeSpace)/1024.0/1024.0}
 ```
 
 Você pode reorganizar os dados usando algumas técnicas avançadas, mas uma abordagem mais simples é criar um novo objeto usando **Select-Object**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

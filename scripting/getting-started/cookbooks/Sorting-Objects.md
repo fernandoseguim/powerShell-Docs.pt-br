@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 88753c43124cfce3581af2259449be5f01579ae8
-
+ms.openlocfilehash: 99ca62261f8302673f886149a7715ce06efa16cb
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Classificação de objetos
+# <a name="sorting-objects"></a>Classificação de objetos
 É possível organizar os dados exibidos para facilitar a verificação usando o cmdlet **Sort-Object**. O **Sort-Object** obtém o nome de uma ou mais propriedades para classificar e retorna os dados classificados pelos valores dessas propriedades.
 
 Considere o problema de listagem das instâncias do Win32_SystemDriver. Se quisermos classificar por **Estado** e depois por **Nome**, poderemos fazer isso digitando:
@@ -54,10 +52,4 @@ wdmaud         Running    True Microsoft WINMM WDM Audio Compatibility Driver
 Wanarp         Running    True Remote Access IP ARP Driver
 ...
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 
