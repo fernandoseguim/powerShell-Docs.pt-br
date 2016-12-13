@@ -8,13 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: b32cb86b7a18fee929cc81360d81f479571a74c2
-ms.openlocfilehash: a7ef0ddf4d093a89f32f3484dfbef78fb159f0c2
-
+ms.openlocfilehash: eacd33d2a0a92977a3990132e23eef9871a7f0dc
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Windows Management Framework
+# <a name="windows-management-framework"></a>Windows Management Framework
 
 O WMF (Windows Management Framework) é o mecanismo de entrega que fornece uma interface de gerenciamento consistente entre as várias versões do Windows e do Windows Server.
 Com a instalação do WMF, os clientes obtêm uma maneira perfeita de interoperar entre combinações de sistemas operacionais em seu ambiente.
@@ -31,19 +29,19 @@ A instalação do WMF adiciona e/ou atualiza os seguintes recursos:
 - SIL (Log de Inventário de Software)
 - Provedor CIM do Gerenciador do Servidor
 
-## Notas de versão do WMF
+## <a name="wmf-release-notes"></a>Notas de versão do WMF
 Para saber mais sobre os vários aprimoramentos do PowerShell e outros componentes de um determinado WMF, consulte os links abaixo para examinar as notas de versão:
 
 
-- [WMF 5.1 (Preview)](5.1/release-notes.md)
-- [WMF 5.0](5.0/releasenotes.md)
+- [WMF 5.1 (Visualização)](5.1/release-notes.md)
+- [Windows Management Framework 5.0](5.0/releasenotes.md)
 
 
-## Disponibilidade do WMF entre sistemas operacionais Windows
+## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilidade do WMF entre sistemas operacionais Windows
 
 >TODO: adicionar links ao DLC do WMF específico no cabeçalho da coluna
 
-| Versão do sistema operacional | [Preview do WMF 5.1*]() | [WMF 5.0]() | [WMF 4.0]() |  [WMF 3.0]() | [WMF (2.0)]() |
+| Versão do sistema operacional | [Visualização do WMF 5.1*]() | [Windows Management Framework 5.0]() | [Windows Management Framework 4.0]() |  [WMF 3.0]() | [WMF (2.0)]() |
 | ------------------------ | ----------- | ----------- | ----------- | ------------ |  ------------- |
 | Windows Server 2016 | É fornecido na caixa* | É fornecido na caixa* |  |  |  |
 | Windows 10 | É fornecido na caixa* | É fornecido na caixa*  | | | |  
@@ -59,9 +57,3 @@ Para saber mais sobre os vários aprimoramentos do PowerShell e outros component
 | Windows XP | | | |  | Sim |
 
 >TODO: explicar * na tabela acima
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-
