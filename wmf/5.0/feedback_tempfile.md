@@ -1,4 +1,4 @@
-# New-TemporaryFile
+# <a name="new-temporaryfile"></a>New-TemporaryFile
 Às vezes, em seus scripts, é necessário criar um arquivo temporário. Você pode isso com facilidade com o cmdlet **New-TemporaryFile**:
 
 PS C:\\&gt; $tempFile = New-TemporaryFile
@@ -6,8 +6,3 @@ PS C:\\&gt; $tempFile = New-TemporaryFile
 PS C:\\&gt; $tempFile.FullName
 
 C:\\Users\\slee\\AppData\\Local\\Temp\\tmp375.tmp
-
-
-<!--HONumber=Aug16_HO3-->
-
-

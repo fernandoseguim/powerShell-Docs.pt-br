@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 489c9492e8de213145b71a7963e180fe1a4ad5b6
-
+ms.openlocfilehash: 89f62e1dc70886bd4c3bf84a3ffc27dfdcba7a3e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# O objeto ISEMenuItemCollection
+# <a name="the-isemenuitemcollection-object"></a>O objeto ISEMenuItemCollection
   Um objeto **ISEMenuItemCollection** é uma coleção de objetos **ISEMenuItem**. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Um exemplo é o objeto **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** que é usado para personalizar o menu **Complemento** no ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
-## Método
+## <a name="method"></a>Método
 
-### Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
+### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a>Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Adiciona um item de menu à coleção.
@@ -42,7 +40,7 @@ ms.openlocfilehash: 489c9492e8de213145b71a7963e180fe1a4ad5b6
 $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get-process},"Alt+P")
 ```
 
-### Limpar\(\)
+### <a name="clear"></a>Clear\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Remove todos os submenus do item de menu.
@@ -53,16 +51,10 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O objeto ISEMenuItem](The-ISEMenuItem-Object.md) 
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md) 
-- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
+- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: bc3300e4-9c17-4f00-a621-c8867126e3b3
-translationtype: Human Translation
-ms.sourcegitcommit: 53d9bf77ef39c878d3e729548181d91f01a50ea2
-ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
-
+ms.openlocfilehash: 8e192fa1a1a7b43852296ed23b8729feabc55dc5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# A hierarquia de modelo do objeto do ISE
+# <a name="the-ise-object-model-hierarchy"></a>A hierarquia de modelo do objeto do ISE
   Este tópico mostra a hierarquia de objetos que fazem parte do ISE (Ambiente de Script Integrado) do Windows PowerShell. O ISE do Windows PowerShell está incluído no Windows PowerShell 3.0 e no Windows PowerShell 4.0. Clique um objeto para levá-lo até a documentação de referência da classe que define o objeto.
 
-##  <a name="psISE"></a> **Objeto $psISE**
+##  <a name="a-namepsisea-psise-object"></a><a name="psISE"></a>**Objeto $psISE**
  O objeto **$psISE** é o [objeto raiz](The-ObjectModelRoot-Object.md) da hierarquia de objeto ISE do Windows PowerShell. Localizado no nível superior, disponibiliza os seguintes objetos para script:
 
 -   **[$psISE.CurrentFile](#currentfile)**
@@ -32,14 +30,14 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
 -   **[$psISE.PowerShellTabs](#powershelltabs)**
 
-##  <a name="CurrentFile"></a> **[$psISE.CurrentFile](The-ISEFile-Object.md)**
+##  <a name="a-namecurrentfilea-psisecurrentfilethe-isefile-objectmd"></a><a name="CurrentFile"></a> **[$psISE.CurrentFile](The-ISEFile-Object.md)**
  O objeto **$psISE.CurrentFile** é uma instância da classe [ISEFile](The-ISEFile-Object.md) e disponibiliza os seguintes objetos para script:
 
 -   **[$psISE.CurrentFile.DisplayName](The-ISEFile-Object.md#Displayname)**
 
 -   **[$psISE.CurrentFile.Editor](The-ISEEditor-Object.md)** Este objeto é uma instância da classe [ISEEditor](The-ISEEditor-Object.md) e disponibiliza os seguintes objetos para script:
 
-    -   **[$psISE.CurrentFile.Editor.CanGoToMatch](The-ISEEditor-Object.md#cangotomatch)**
+    -   **[$psISE.CurrentFile.Editor.CanGoToMatch](The-ISEEditor-Object.md#CanGoToMatch)**
 
     -   **[CaretColumn](The-ISEEditor-Object.md#CaretColumn)**
 
@@ -51,9 +49,9 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
     -   **[SelectedText](The-ISEEditor-Object.md#SelectedText)**
 
-    -   **[Texto](The-ISEEditor-Object.md#Text)**
+    -   **[Text](The-ISEEditor-Object.md#Text)**
 
--   **[Codificando](The-ISEFile-Object.md#Encoding)**
+-   **[Encoding](The-ISEFile-Object.md#Encoding)**
 
 -   **[FullPath](The-ISEFile-Object.md#FullPath)**
 
@@ -61,7 +59,7 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
 -   **[IsUntitled](The-ISEFile-Object.md#IsUntitled)**
 
-##  <a name="CurrentPowerShellTab"></a> **[$psISE.CurrentPowerShellTab](The-PowerShellTab-Object.md)**
+##  <a name="a-namecurrentpowershelltaba-psisecurrentpowershelltabthe-powershelltab-objectmd"></a><a name="CurrentPowerShellTab"></a> **[$psISE.CurrentPowerShellTab](The-PowerShellTab-Object.md)**
  O objeto **$psISE.CurrentPowerShellTab** é uma instância da classe [PowerShellTab](The-PowerShellTab-Object.md) e disponibiliza os seguintes objetos para script:
 
 -   **[$psISE.CurrentPowerShellTab.AddOnsMenu](The-ISEMenuItem-Object.md)** Este objeto é uma instância da classe [ISEMenuItem](The-ISEMenuItem-Object.md) e disponibiliza os seguintes objetos para scripts:
@@ -78,7 +76,7 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
 -   **[$psISE.CurrentPowerShellTab.ConsolePane](The-ISEEditor-Object.md)** Este objeto é uma instância da classe [ISEEditor](The-ISEEditor-Object.md) e disponibiliza os seguintes objetos para scripts:
 
-    -   **[$psISE.CurrentPowerShellTab.ConsolePane.CanGoToMatch](The-ISEEditor-Object.md#cangotomatch)**
+    -   **[$psISE.CurrentPowerShellTab.ConsolePane.CanGoToMatch](The-ISEEditor-Object.md#CanGoToMatch)**
 
     -   **[CaretColumn](The-ISEEditor-Object.md#CaretColumn)**
 
@@ -90,7 +88,7 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
     -   **[SelectedText](The-ISEEditor-Object.md#SelectedText)**
 
-    -   **[Texto](The-ISEEditor-Object.md#Text)**
+    -   **[Text](The-ISEEditor-Object.md#Text)**
 
 -   **[$psISE.CurrentPowerShellTab.DisplayName](The-PowerShellTab-Object.md#Displayname)**
 
@@ -118,25 +116,25 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
 -   **[$psISE.CurrentPowerShellTab.VisibleVerticalAddOnTools](The-ISEAddOnToolCollection-Object.md)**
 
-##  <a name="CurrentVisibleHorizontalTool"></a> **$psISE.CurrentVisibleHorizontalTool**
+##  <a name="a-namecurrentvisiblehorizontaltoola-psisecurrentvisiblehorizontaltool"></a><a name="CurrentVisibleHorizontalTool"></a> **$psISE.CurrentVisibleHorizontalTool**
  O objeto **$psISE.CurrentVisibleHorizontalTool** é uma instância da classe [ISEAddOnTool](The-ISEAddOnTool-Object.md). Ele representa a ferramenta complementar instalada que está encaixada atualmente na borda superior da janela do ISE do Windows PowerShell. Esse objeto disponibiliza os seguintes objetos para script:
 
--   **[$psISE.CurrentVisibleHorizontalTool.Control](The-ISEAddOnTool-Object.md#control)**
+-   **[$psISE.CurrentVisibleHorizontalTool.Control](The-ISEAddOnTool-Object.md#Control)**
 
--   **[$psISE.CurrentVisibleHorizontalTool.IsVisible](The-ISEAddOnTool-Object.md#isvisible)**
+-   **[$psISE.CurrentVisibleHorizontalTool.IsVisible](The-ISEAddOnTool-Object.md#IsVisible)**
 
 -   **[$psISE.CurrentVisibleHorizontalTool.Name](The-ISEAddOnTool-Object.md#name)**
 
-##  <a name="CurrentVisibleVerticalTool"></a> **$psISE.CurrentVisibleVerticalTool**
+##  <a name="a-namecurrentvisibleverticaltoola-psisecurrentvisibleverticaltool"></a><a name="CurrentVisibleVerticalTool"></a> **$psISE.CurrentVisibleVerticalTool**
  O objeto **$psISE.CurrentVisibleHorizontalTool** é uma instância da classe [ISEAddOnTool](The-ISEAddOnTool-Object.md). Ele representa a ferramenta complementar instalada que está encaixada atualmente na borda superior direita da janela do ISE do Windows PowerShell. Esse objeto disponibiliza os seguintes objetos para script:
 
--   **[$psISE.CurrentVisibleHorizontalTool.Control](The-ISEAddOnTool-Object.md#control)**
+-   **[$psISE.CurrentVisibleHorizontalTool.Control](The-ISEAddOnTool-Object.md#Control)**
 
--   **[$psISE.CurrentVisibleHorizontalTool.IsVisible](The-ISEAddOnTool-Object.md#isvisible)**
+-   **[$psISE.CurrentVisibleHorizontalTool.IsVisible](The-ISEAddOnTool-Object.md#IsVisible)**
 
 -   **[$psISE.CurrentVisibleHorizontalTool.Name](The-ISEAddOnTool-Object.md#name)**
 
-##  <a name="Options"></a> **$psISE.Options**
+##  <a name="a-nameoptionsa-psiseoptions"></a><a name="Options"></a> **$psISE.Options**
  O objeto **$psISE.Options** disponibiliza os seguintes objetos para script:
 
 -   **[$psISE.Options.AutoSaveMinuteInterval](The-ISEOptions-Object.md#asmi)**
@@ -209,16 +207,10 @@ ms.openlocfilehash: 12a47e57d461f1e57cd9c7b20365627378d7e87a
 
 -   **[$psISE.Options.Zoom](The-ISEOptions-Object.md#z)**
 
-##  <a name="PowerShellTabs"></a> **[$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md)**
+##  <a name="a-namepowershelltabsa-psisepowershelltabsthe-powershelltabcollection-objectmd"></a><a name="PowerShellTabs"></a> **[$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md)**
  O objeto **$psISE.PowerShellTabs** é uma instância da classe [PowerShellTabCollection](The-PowerShellTabCollection-Object.md). É uma coleção de todas as guias do PowerShell abertas no momento que representam os ambientes de execução disponíveis do Windows PowerShell no computador local ou em computadores remotos conectados. Cada membro da coleção é uma instância da classe [PowerShellTab](The-PowerShellTab-Object.md).
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md)
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
 

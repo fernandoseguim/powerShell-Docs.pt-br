@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: f9eb975845f6ccabcac80e2591fd987f80f81331
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
+# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método PerformRequiredConfigurationChecks da classe MSFT_DSCLocalConfigurationManager
 
 Inicia uma verificação de consistência usando o Agendador de Tarefas.
 
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -27,7 +24,7 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *Flags* \[in\]  
@@ -40,23 +37,23 @@ Um bitmask que especifica o tipo de verificação de consistência a ser executa
 |**4** | A configuração deve ser extraída do servidor de pull especificado na metaconfiguração do nó. Esse valor deve sempre ser combinado com **1**, para um valor de **5**. |
 |**8** | Envie status para o servidor de relatório. |
 
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -66,11 +63,5 @@ Esse é um método estático.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

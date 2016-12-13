@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: 6fffd6406a7570e06fc4403cd238804ef0f51360
-
+ms.openlocfilehash: f7e27957db90430b4f550e56df18c227b2971a0d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Criando uma caixa de entrada personalizada
+# <a name="creating-a-custom-input-box"></a>Criando uma caixa de entrada personalizada
 Script de uma caixa de entrada gráfica personalizada usando recursos de criação de formulário do Microsoft .NET Framework no Windows PowerShell 3.0 e versões posteriores.
 
-## Criar uma caixa de entrada gráfica personalizada
+## <a name="create-a-custom-graphical-input-box"></a>Criar uma caixa de entrada gráfica personalizada
 Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```
@@ -159,14 +157,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Consulte Também
-- [Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+## <a name="see-also"></a>Consulte Também
+- [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da Semana do Windows PowerShell: criar uma caixa de entrada personalizada](http://technet.microsoft.com/library/ff730941.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
+- [Windows PowerShell Tip of the Week: Creating a Custom Input Box](http://technet.microsoft.com/library/ff730941.aspx) (Dica da Semana do Windows PowerShell: criar uma caixa de entrada personalizada)
 

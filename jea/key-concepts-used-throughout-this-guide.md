@@ -8,13 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: conceitos fundamentais usados neste guia
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 178fea44987b0c457b8e5d23fbe851ee12f03b31
-
+ms.openlocfilehash: 873ab19fdf43ec4ac41cc546aa94b64fbc607984
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Conceitos fundamentais usados em todo este guia
+# <a name="key-concepts-used-throughout-this-guide"></a>Conceitos fundamentais usados em todo este guia
 **O que exatamente é o JEA?**
 
 O JEA é uma extensão de [pontos de extremidade restritos](http://blogs.technet.com/b/heyscriptingguy/archive/2014/03/31/introduction-to-powershell-endpoints.aspx) do PowerShell que adiciona definições de função, contas virtuais e vários outros aprimoramentos para facilitar ainda mais o bloqueio dos seus pontos de extremidade de gerenciamento.
@@ -53,10 +51,4 @@ Além disso, se um comando/script permitido tentar acessar recursos fora do comp
 
 **Usuário "Conectado"**: o usuário não administrador que se conecta ao ponto de extremidade JEA e ao qual são atribuídas as funções.
 Quaisquer comandos executado por esse usuário são executados sob o contexto do usuário RunAs ou conta virtual.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

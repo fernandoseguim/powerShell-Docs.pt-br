@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 96ad921e-1a57-463e-8e60-424faf8b6ef8
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 61eac49bc710a2435117409b74ba02798cf720da
-
+ms.openlocfilehash: fc715f9ba2a1dc61d2549d5370371fe2b29fa063
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Apêndice 1: Alias de compatibilidade
+# <a name="appendix-1---compatibility-aliases"></a>Apêndice 1: Alias de compatibilidade
 O Windows PowerShell tem vários aliases de transição que permitem aos usuários do UNIX e do Cmd usar nomes de comando familiares no Windows PowerShell. Os aliases mais comuns são mostrados na tabela a seguir, junto com o comando do Windows PowerShell por trás do alias e o alias padrão do Windows PowerShell, se houver.
 
 Você pode encontrar o comando do Windows PowerShell para o qual qualquer alias aponta de dentro do Windows PowerShell usando o cmdlet Get-Alias. Por exemplo, digite **get-alias cls**.
@@ -28,20 +26,14 @@ Alias           cls                             Clear-Host
 |Comando do CMD|Comando UNIX|Comando PS|PS Alias|
 |---------------|----------------|--------------|------------|
 |**dir**|**ls**|**Get-ChildItem**|**gci**|
-|**cls**|**clear**|**Clear-Host** (função)|N/D|
+|**cls**|**clear**|**Clear-Host** (função)|**cls**|
 |**del, erase, rmdir**|**rm**|**Remove-Item**|**ri**|
 |**copy**|**cp**|**Copy-Item**|**ci**|
 |**move**|**mv**|**Move-Item**|**mi**|
 |**rename**|**mv**|**Rename-Item**|**rni**|
-|**tipo**|**cat**|**Get-Content**|**gc**|
+|**type**|**cat**|**Get-Content**|**gc**|
 |**cd**|**cd**|**Set-Location**|**sl**|
 |**md**|**mkdir**|**New-Item**|**ni**|
-|N/D|**pushd**|**Push-Location**|N/D|
-|N/D|**popd**|**Pop-Location**|N/D|
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
+|**pushd**|**pushd**|**Push-Location**|**pushd**|
+|**popd**|**popd**|**Pop-Location**|**popd**|
 

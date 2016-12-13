@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: e3899a183cb1c8652adff7d01ffc09efde7f49b4
-
+ms.openlocfilehash: 25c6dcbc2c79cb62d26aad60c7e3277ef039564f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Criando um seletor de data gráfico
+# <a name="creating-a-graphical-date-picker"></a>Criando um seletor de data gráfico
 Use o Windows PowerShell 3.0 e versões posteriores para criar um formulário com um controle de calendário de estilo gráfico, que permite aos usuários selecionar um dia do mês.
 
-## Crie um controle de seletor de data gráfico
+## <a name="create-a-graphical-date-picker-control"></a>Crie um controle de seletor de data gráfico
 Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```
@@ -137,14 +135,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Consulte Também
-- [Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+## <a name="see-also"></a>Consulte Também
+- [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da Semana do Windows PowerShell: criar um seletor de data gráfico](http://technet.microsoft.com/library/ff730942.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
+- [Windows PowerShell Tip of the Week: Creating a Graphical Date Picker](http://technet.microsoft.com/library/ff730942.aspx) (Dica da Semana do Windows PowerShell: criar um seletor de data gráfico)
 

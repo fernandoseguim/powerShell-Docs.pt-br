@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 57ccd656e0b869da8aadece97e9bb871764c3f70
-
+ms.openlocfilehash: b91b68f6d7bfee668edc4731f23b21233d9367d5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Obtendo informações sobre comandos
+# <a name="getting-information-about-commands"></a>Obtendo informações sobre comandos
 O cmdlet **Get-Command** do Windows PowerShell obtém todos os comandos que estão disponíveis na sessão atual. Quando você digita **Get-Command** em um prompt do Windows PowerShell, uma saída semelhante à seguinte é exibida:
 
 ```
@@ -49,7 +47,7 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### Exibindo tipos de comando disponíveis
+### <a name="displaying-available-command-types"></a>Exibindo tipos de comando disponíveis
 O comando **Get-Command** não lista todos os comandos disponíveis no Windows PowerShell. Em vez disso, o comando **Get-Command** lista somente os cmdlets da sessão atual. Na verdade, o Windows PowerShell oferece suporte a vários outros tipos de comandos. Aliases, funções e scripts também são comandos do Windows PowerShell, embora eles não sejam discutidos em detalhes no Guia do Usuário do Windows PowerShell. Arquivos externos executáveis ou que possuem um manipulador do tipo de arquivo registrado também são classificados como comandos.
 
 Para obter todos os comandos na sessão, digite:
@@ -82,10 +80,4 @@ Para exibir os scripts no caminho de pesquisa do Windows PowerShell, digite:
 ```
 Get-Command -CommandType Script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

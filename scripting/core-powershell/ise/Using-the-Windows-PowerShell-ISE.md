@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0
-translationtype: Human Translation
-ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
-ms.openlocfilehash: 78e9875815adfbe18f675023e9d9d0742aca2786
-
+ms.openlocfilehash: 818183e7bbaa5b0e05cca4a32e49987525dfa321
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Usando o ISE do Windows PowerShell
+# <a name="using-the-windows-powershell-ise"></a>Usando o ISE do Windows PowerShell
 Estes tópicos neste documento descrevem como é possível usar recursos do ISE (Ambiente de Script Integrado) do Windows PowerShell® para ser mais produtivo.
 
 [Como usar o preenchimento com Tab no Painel de Script e no Painel de Console](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Fornece as etapas para executar o preenchimento com Tab no Painel de Script e no Painel de Console.
@@ -29,14 +27,8 @@ Estes tópicos neste documento descrevem como é possível usar recursos do ISE 
 
 [Como usar perfis no ISE do Windows PowerShell](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) Fornece informações e as etapas para criar e usar perfis no ISE do Windows PowerShell.
 
-## Consulte Também
-[Explorando o ISE do Windows PowerShell](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
-[Acessibilidade no ISE do Windows PowerShell](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
-[O modelo de objeto de script do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
+## <a name="see-also"></a>Consulte Também
+- [Explorando o ISE do Windows PowerShell](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
+- [Acessibilidade no ISE do Windows PowerShell](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
+- [O modelo de objeto de script do ISE do Windows PowerShell](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
 

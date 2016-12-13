@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 39266e1e4ae2101de26277c20a98596f62cf223d
-
+ms.openlocfilehash: 5fbe64a5720bf76565452a271dbcb34ffe6563de
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Executando tarefas de rede
+# <a name="performing-networking-tasks"></a>Executando tarefas de rede
 Como TCP/IP é o protocolo de rede mais frequentemente usado, a maioria das tarefas de administração de protocolo de rede de baixo nível envolve TCP/IP. Nesta seção, usamos o Windows PowerShell e o WMI para realizar essas tarefas.
 
-### Listando de endereços IP para um computador
+### <a name="listing-ip-addresses-for-a-computer"></a>Listando de endereços IP para um computador
 Para obter todos os endereços IP em uso no computador local, use o seguinte comando:
 
 ```
@@ -26,7 +24,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -C
 
 A saída desse comando é diferente da maioria das listas de propriedades, porque os valores são colocados entre chaves:
 
-<pre>IPAddress
+<a name="preipaddress"></a><pre>IPAddress
 ---------
 {192.168.1.80} {192.168.148.1} {192.168.171.1} {0.0.0.0}</pre>
 
@@ -36,7 +34,7 @@ Para entender por que as chaves são exibidas, use o cmdlet Get-Member para exam
 
 A propriedade IPAddress para cada adaptador de rede na verdade é uma matriz. As chaves na definição indicam que **IPAddress** não é um valor de **System.String**, mas sim uma matriz de valores **System.String**.
 
-### Listando dados de configuração de IP
+### <a name="listing-ip-configuration-data"></a>Listando dados de configuração de IP
 Para exibir dados detalhados de configuração de IP de cada adaptador de rede, use o seguinte comando:
 
 ```
@@ -53,7 +51,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -C
 
 Esse comando retorna informações detalhadas sobre o DHCP, DNS, roteamento e outras propriedades de configuração de IP secundárias.
 
-### Executando ping em computadores
+### <a name="pinging-computers"></a>Executando ping em computadores
 Você pode executar um ping simples em um computador usando **Win32_PingStatus**. O comando a seguir executa o ping, mas retorna uma saída longa:
 
 ```
@@ -89,14 +87,14 @@ Observe que essa técnica para a geração de um intervalo de endereços também
 
 `$ips = 1..254 | ForEach-Object -Process {"192.168.1." + $_}`
 
-### Recuperando propriedades do adaptador de rede
+### <a name="retrieving-network-adapter-properties"></a>Recuperando propriedades do adaptador de rede
 Mencionamos anteriormente neste guia do usuário que você pode recuperar propriedades de configuração geral usando **Win32_NetworkAdapterConfiguration**. Embora não sejam estritamente informações TCP/IP, informações do adaptador de rede, como endereços MAC e tipos de adaptador podem ser úteis para entender o que está acontecendo com um computador. Para obter um resumo dessas informações, use o seguinte comando:
 
 ```
 Get-WmiObject -Class Win32_NetworkAdapter -ComputerName .
 ```
 
-### Atribuindo o domínio DNS a um adaptador de rede
+### <a name="assigning-the-dns-domain-for-a-network-adapter"></a>Atribuindo o domínio DNS a um adaptador de rede
 Para atribuir o domínio DNS à resolução de nome automática, use o método **Win32_NetworkAdapterConfiguration SetDNSDomain**. Como você atribui o domínio DNS para cada configuração de adaptador de rede independentemente, é necessário usar uma instrução **ForEach-Object** para atribuir o domínio a cada adaptador:
 
 ```
@@ -111,10 +109,10 @@ Você pode filtrar o comando usando o cmdlet **Where-Object** em vez de usar o f
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -ComputerName . | Where-Object -FilterScript {$_.IPEnabled} | ForEach-Object -Process {$_.SetDNSDomain("fabrikam.com")}
 ```
 
-### Executar tarefas de configuração de DHCP
+### <a name="performing-dhcp-configuration-tasks"></a>Executar tarefas de configuração de DHCP
 Modificar os detalhes de DHCP envolve trabalhar com um conjunto de adaptadores de rede, assim como na configuração do DNS. Existem várias ações diferentes que você pode executar usando o WMI, e abordaremos algumas delas.
 
-#### Determinação dos adaptadores habilitados para DHCP
+#### <a name="determining-dhcp-enabled-adapters"></a>Determinação dos adaptadores habilitados para DHCP
 Para localizar os adaptadores habilitados para DHCP em um computador, use o seguinte comando:
 
 ```
@@ -127,14 +125,14 @@ Para excluir adaptadores com problemas de configuração de IP, você pode recup
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=true and DHCPEnabled=true" -ComputerName .
 ```
 
-#### Recuperando propriedades de DHCP
+#### <a name="retrieving-dhcp-properties"></a>Recuperando propriedades de DHCP
 Como as propriedades relacionadas a DHCP para um adaptador geralmente começam com "DHCP", você pode usar o parâmetro de propriedade de Format-Table para exibir somente as propriedades:
 
 ```
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName . | Format-Table -Property DHCP*
 ```
 
-#### Habilitando o DHCP em cada adaptador
+#### <a name="enabling-dhcp-on-each-adapter"></a>Habilitando o DHCP em cada adaptador
 Para habilitar o DHCP em todos os adaptadores, use o seguinte comando:
 
 ```
@@ -143,7 +141,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -C
 
 Você pode usar a instrução de **Filter** "IPEnabled=true e DHCPEnabled=false" para evitar habilitar o DHCP onde ele já estiver habilitado, porém omitir essa etapa não causará erros.
 
-#### Liberar e renovar concessões de DHCP nos adaptadores específicos
+#### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>Liberar e renovar concessões de DHCP nos adaptadores específicos
 A classe **Win32_NetworkAdapterConfiguration** tem os métodos **ReleaseDHCPLease** e **RenewDHCPLease**. Ambos são usados da mesma maneira. Em geral, use esses métodos se você só precisar liberar ou renovar endereços para um adaptador em uma sub-rede específica. A maneira mais fácil de filtrar os adaptadores em uma sub-rede é escolher apenas as configurações de adaptador que usam o gateway para essa sub-rede. Por exemplo, o comando a seguir libera todas as concessões DHCP nos adaptadores no computador local que estão obtendo concessões de DHCP do 192.168.1.254:
 
 ```
@@ -159,7 +157,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=true a
 > [!NOTE]
 > Ao usar esses métodos em um computador remoto, lembre-se de que você poderá perder o acesso ao sistema remoto se estiver conectado a ele por meio do adaptador com a concessão liberada ou renovada.
 
-#### Liberar e renovar concessões de DHCP em todos os adaptadores
+#### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>Liberar e renovar concessões de DHCP em todos os adaptadores
 Você pode executar liberações ou renovações de endereço DHCP globais em todos os adaptadores usando os métodos **Win32_NetworkAdapterConfiguration**, **ReleaseDHCPLeaseAll** e **RenewDHCPLeaseAll**. No entanto, o comando deve ser aplicado à classe WMI, em vez de um adaptador específico, pois liberações e renovações de concessões globais são executada na classe, não em um adaptador específico.
 
 Você pode obter uma referência a uma classe WMI, em vez de instâncias de classe, listando todas as classes WMI e selecionando somente a classe desejada por nome. Por exemplo, o comando a seguir retorna a classe Win32_NetworkAdapterConfiguration:
@@ -180,7 +178,7 @@ Você pode usar o mesmo formato de comando para invocar o método **RenewDHCPLea
 ( Get-WmiObject -List | Where-Object -FilterScript {$_.Name -eq "Win32_NetworkAdapterConfiguration"} ).RenewDHCPLeaseAll()
 ```
 
-### Criando um compartilhamento de rede
+### <a name="creating-a-network-share"></a>Criando um compartilhamento de rede
 Para criar um compartilhamento de rede, use o método **Win32_Share Create**:
 
 ```
@@ -193,7 +191,7 @@ Você também pode criar o compartilhamento usando **net share** no Windows Powe
 net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 ```
 
-### Removendo um compartilhamento de rede
+### <a name="removing-a-network-share"></a>Removendo um compartilhamento de rede
 É possível remover um compartilhamento de rede com o **Win32_Share**, mas o processo é ligeiramente diferente da criação de um compartilhamento, pois você precisa recuperar o compartilhamento específico a ser removido em vez da classe **Win32_Share**. A instrução a seguir exclui o compartilhamento "TempShare":
 
 ```
@@ -207,7 +205,7 @@ PS> net share tempshare /delete
 tempshare was deleted successfully.
 ```
 
-### Conectando-se a uma unidade de rede acessível do Windows
+### <a name="connecting-a-windows-accessible-network-drive"></a>Conectando-se a uma unidade de rede acessível do Windows
 Os novos cmdlets **New-PSDrive** criam uma unidade do Windows PowerShell, porém unidades criadas dessa forma estão disponíveis somente para o Windows PowerShell. Para criar uma nova unidade em rede, você pode usar o objeto COM **WScript.Network**. O comando a seguir mapeia o compartilhamento \\\\FPS01\\users para a unidade B local:
 
 ```
@@ -221,10 +219,4 @@ net use B: \\FPS01\users
 ```
 
 Unidades mapeadas com um **WScript.Network** ou net use ficam disponíveis imediatamente para o Windows PowerShell.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,25 +8,23 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
-translationtype: Human Translation
-ms.sourcegitcommit: 26d8bc85b78248e15558dbfef72d32cca7de9627
-ms.openlocfilehash: e63809763808836af9f468c2ac55ede42836d6b2
-
+ms.openlocfilehash: 450fca8e190a175995ff91f9b32ee0695af14045
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# O objeto ISEAddOnTool
+# <a name="the-iseaddontool-object"></a>O objeto ISEAddOnTool
   Um objeto **ISEAddonTool** representa uma ferramenta complementar instalada que fornece funcionalidade adicional ao ISE do Windows PowerShell. Um exemplo é a ferramenta **Comandos** que você pode exibir clicando em **Exibir** e em **Mostrar Complemento de Comando**. Esta ferramenta fica, então, acessível a você, manipulando os vários objetos disponíveis **ISEAddOnTool**.
 
  Cada ferramenta complementar pode ser associada ao painel vertical ou ao painel horizontal. O painel vertical é encaixado na borda direita do ISE do Windows PowerShell. O painel horizontal está encaixado na borda inferior.
 
  Cada guia PowerShell no ISE do Windows PowerShell pode ter seu próprio conjunto de ferramentas complementares instaladas. Consulte [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-ISEAddOnToolCollection-Object.md) e [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-ISEAddOnToolCollection-Object.md) para acessar a coleção de ferramentas disponíveis para a guia selecionada no momento ou as mesmas propriedades em qualquer um dos objetos **PowerShellTab** no objeto do conjunto [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).
 
-## Métodos
+## <a name="methods"></a>Métodos
  Não há métodos específicos de ISE do Windows PowerShell disponíveis para objetos desta classe.
 
-## Propriedades
+## <a name="properties"></a>Propriedades
 
-###  <a name="Control"></a> Control
+###  <a name="a-namecontrola-control"></a><a name="Control"></a> Control
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  A propriedade **Control** fornece acesso de leitura a muitos dos detalhes da ferramenta complementar Comandos.
@@ -142,7 +140,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 ```
 
-###  <a name="IsVisible"></a> IsVisible
+###  <a name="a-nameisvisiblea-isvisible"></a><a name="IsVisible"></a> IsVisible
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  A propriedade Boolean que indica se a ferramenta complementar está atualmente visível no seu painel atribuído. Se estiver visível, você poderá definir a propriedade **IsVisible** como **$false** para ocultar a ferramenta ou definir a propriedade **IsVisible** como **$true** para tornar uma ferramenta complementar visível em sua guia PowerShell. Observe que depois que uma ferramenta complementar é ocultada, ela não poderá mais ser acessada pelos objetos **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool** e, portanto, não pode ser tornada visível usando esta propriedade no objeto.
@@ -155,7 +153,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible=$true
 
 ```
 
-###  <a name="name"></a> Nome
+###  <a name="a-namenamea-name"></a><a name="name"></a> Name
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  A propriedade somente leitura que obtém o nome da ferramenta complementar.
@@ -167,15 +165,9 @@ Commands
 
 ```
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [O objeto ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
 - [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md)
-- [A hierarquia de modelo do objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+- [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)
 

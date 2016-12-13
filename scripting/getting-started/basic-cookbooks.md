@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: e1c94c281a39b3ae026bbeea9811ecc71b9cdb1c
-
+ms.openlocfilehash: 0a5460dd8b3d94745c1350d4c88ac4ba2420eb03
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  [Referência de guias básicos](cookbooks/basic-cookbooks-reference.md)
+#  <a name="basic-cookbooks-referencecookbooksbasic-cookbooks-referencemd"></a>[Referência de guias básicos](cookbooks/basic-cookbooks-reference.md)
 
 -  [Alterando o estado do computador](cookbooks/Changing-Computer-State.md)
 -  [Coletando informações sobre computadores](cookbooks/Collecting-Information-About-Computers.md)
@@ -22,36 +20,30 @@ ms.openlocfilehash: e1c94c281a39b3ae026bbeea9811ecc71b9cdb1c
 -  [Criando objetos .NET e COM New Object ](cookbooks/Creating-.NET-and-COM-Objects--New-Object-.md)
 -  [Criando uma caixa de entrada personalizada](cookbooks/Creating-a-Custom-Input-Box.md)
 -  [Criando um seletor de data gráfico](cookbooks/Creating-a-Graphical-Date-Picker.md)
--  [Obtendo objetos WMI com Get WmiObject ](cookbooks/Getting-WMI-Objects--Get-WmiObject-.md)
+-  [Obtendo objetos WMI Get WmiObject ](cookbooks/Getting-WMI-Objects--Get-WmiObject-.md)
 -  [Gerenciando o local atual](cookbooks/Managing-Current-Location.md)
 -  [Gerenciando processos com os Cmdlets de processo](cookbooks/Managing-Processes-with-Process-Cmdlets.md)
 -  [Gerenciamento de serviços](cookbooks/Managing-Services.md)
 -  [Gerenciando unidades do Windows PowerShell](cookbooks/Managing-Windows-PowerShell-Drives.md)
 -  [Manipulando itens diretamente](cookbooks/Manipulating-Items-Directly.md)
--  [Caixas de lista de seleções múltiplas](cookbooks/Multiple-selection-List-Boxes.md)
+-  [Caixas de listagem de seleção múltipla](cookbooks/Multiple-selection-List-Boxes.md)
 -  [Outros objetos de script úteis](cookbooks/Other-Useful-Scripting-Objects.md)
 -  [Executando tarefas de rede](cookbooks/Performing-Networking-Tasks.md)
 -  [Módulo PowerShellGet](cookbooks/PowerShellGet-Module.md)
 -  [Redirecionamento de dados com cmdlets Out](cookbooks/Redirecting-Data-with-Out---Cmdlets.md)
--  [Removendo objetos do pipeline com Where Object ](cookbooks/Removing-Objects-from-the-Pipeline--Where-Object-.md)
--  [Repetindo uma tarefa para vários objetos com ForEach Object ](cookbooks/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)
+-  [Removendo objetos do pipeline Where-Object ](cookbooks/Removing-Objects-from-the-Pipeline--Where-Object-.md)
+-  [Repetir uma tarefa para vários objetos ForEach Object ](cookbooks/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)
 -  [Selecionando itens de uma caixa de listagem](cookbooks/Selecting-Items-from-a-List-Box.md)
 -  [Selecionando partes de objetos com Select Object ](cookbooks/Selecting-Parts-of-Objects--Select-Object-.md)
 -  [Classificação de objetos](cookbooks/Sorting-Objects.md)
 -  [Usando comandos de formatação para alterar a exibição de saída](cookbooks/Using-Format-Commands-to-Change-Output-View.md)
 -  [Usando classes e métodos estáticos](cookbooks/Using-Static-Classes-and-Methods.md)
--  [Exibindo a estrutura do objeto com Get Member ](cookbooks/Viewing-Object-Structure--Get-Member-.md)
+-  [Exibindo a estrutura do objeto Get Member ](cookbooks/Viewing-Object-Structure--Get-Member-.md)
 -  [Trabalhando com arquivos e pastas](cookbooks/Working-with-Files-and-Folders.md)
--  [Trabalhando com pastas de arquivos e chaves de Registro](cookbooks/Working-With-Files-Folders-and-Registry-Keys.md)
+-  [Trabalhando com arquivos, pastas e chaves do Registro](cookbooks/Working-With-Files-Folders-and-Registry-Keys.md)
 -  [Trabalhando com objetos](cookbooks/Working-with-Objects.md)
 -  [Trabalhando com impressoras](cookbooks/Working-with-Printers.md)
 -  [Trabalhando com entradas do Registro](cookbooks/Working-with-Registry-Entries.md)
 -  [Trabalhando com chaves do Registro](cookbooks/Working-with-Registry-Keys.md)
 -  [Trabalhando com instalações de software](cookbooks/Working-with-Software-Installations.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

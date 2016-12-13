@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b3b97b9dcf01094fe1fadbac355c92df35feaee2
-
+ms.openlocfilehash: edd8614879c1781a065eb76025799893f10cc1ab
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Conceitos fundamentais
+#  <a name="fundamental-concepts"></a>Conceitos fundamentais
 
 -  [Sobre o Windows PowerShell](fundamental/About-Windows-PowerShell.md)
 -  [Explorando o ISE do Windows PowerShell](fundamental/Exploring-the-Windows-PowerShell-ISE.md)
@@ -21,7 +19,7 @@ ms.openlocfilehash: b3b97b9dcf01094fe1fadbac355c92df35feaee2
 -  [Obtendo informações sobre comandos](fundamental/Getting-Information-About-Commands.md)
 -  [Aprendendo a usar nomes do Windows PowerShell](fundamental/Learning-Windows-PowerShell-Names.md)
 -  [Pipeline de objeto](fundamental/Object-Pipeline.md)
--  [Criando scripts com o Windows PowerShell](fundamental/Scripting-with-Windows-PowerShell.md)
+-  [Scripts com o Windows PowerShell](fundamental/Scripting-with-Windows-PowerShell.md)
 -  [Compreendendo conceitos importantes do Windows PowerShell](fundamental/Understanding-Important-Windows-PowerShell-Concepts.md)
 -  [Compreendendo o Pipeline do Windows PowerShell](fundamental/Understanding-the-Windows-PowerShell-Pipeline.md)
 -  [Usando nomes familiares de comando](fundamental/Using-Familiar-Command-Names.md)
@@ -30,10 +28,4 @@ ms.openlocfilehash: b3b97b9dcf01094fe1fadbac355c92df35feaee2
 -  [Usando o Windows PowerShell](fundamental/Using-Windows-PowerShell.md)
 -  [Noções básicas do Windows PowerShell](fundamental/Windows-PowerShell-Basics.md)
 -  [ISE (Ambiente de Script Integrado) do Windows PowerShell ](fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

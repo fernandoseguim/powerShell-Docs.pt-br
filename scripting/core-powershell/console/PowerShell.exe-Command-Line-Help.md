@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-translationtype: Human Translation
-ms.sourcegitcommit: 763dc6bb0410ec09fc237d41b96842895b15d142
-ms.openlocfilehash: c3b263110a908c28569cf3048a94d48da8316684
-
+ms.openlocfilehash: f2a682671bb39de943fac47488e2a1c651423b53
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Ajuda da linha de comando do PowerShell.exe
+# <a name="powershellexe-command-line-help"></a>Ajuda da linha de comando do PowerShell.exe
 Inicia uma sessão do Windows PowerShell. Você pode usar o PowerShell.exe para iniciar uma sessão do Windows PowerShell na linha de comando de outra ferramenta, como Cmd.exe, ou usá-lo na linha de comando do Windows PowerShell para iniciar uma nova sessão. Use os parâmetros para personalizar a sessão.
 
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 PowerShell[.exe]
@@ -40,15 +38,15 @@ PowerShell[.exe]
 PowerShell[.exe] -Help | -? | /?
 ```
 
-## Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-### -EncodedCommand <Base64EncodedCommand>
+### <a name="-encodedcommand-base64encodedcommand"></a>-EncodedCommand <Base64EncodedCommand>
 Aceita uma versão de cadeia de caracteres com codificação de base 64 de um comando. Use esse parâmetro para enviar comandos ao Windows PowerShell que exigem aspas complexas ou chaves.
 
-### -ExecutionPolicy <ExecutionPolicy>
+### <a name="-executionpolicy-executionpolicy"></a>-ExecutionPolicy <ExecutionPolicy>
 Define a política de execução padrão para a sessão atual e o salva-a na variável de ambiente $env:PSExecutionPolicyPreference. Esse parâmetro não altera a política de execução do Windows PowerShell que está definida no Registro. Para saber mais sobre as políticas de execução do Windows PowerShell, incluindo uma lista de valores válidos, confira about_Execution_Policies (http://go.microsoft.com/fwlink/?LinkID=135170).
 
-### -File <FilePath> \[<Parameters>]
+### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
 Executa o script especificado no escopo local ("dot-sourced") para que as funções e variáveis que o script criar estejam disponíveis na sessão atual. Insira o caminho do arquivo de script e quaisquer parâmetros. **File** deve ser o último parâmetro no comando, pois todos os caracteres digitados após nome do parâmetro **File** são interpretados como o caminho do arquivo de script seguido pelos parâmetros do script e seus valores.
 
 Você pode incluir os parâmetros de um script e os valores de parâmetro no valor do parâmetro **File**. Por exemplo: `-File .\Get-Script.ps1 -Domain Central`
@@ -57,44 +55,44 @@ Normalmente, os parâmetros de opção de um script são incluídos ou omitidos.
 
 Em casos raros, pode ser necessário fornecer um valor booliano para um parâmetro de opção. Para fornecer um valor booliano para um parâmetro de opção no valor do parâmetro **File**, coloque o nome do parâmetro e o valor entre chaves, desta forma: `-File .\Get-Script.ps1 {-All:$False}`
 
-### -InputFormat {Text | XML}
+### <a name="-inputformat-text-xml"></a>-InputFormat {Text | XML}
 Descreve o formato dos dados enviados ao Windows PowerShell. Os valores válidos são "Text" (cadeias de caracteres de texto) ou "XML" (formato CLIXML serializado).
 
-### -Mta
+### <a name="-mta"></a>-Mta
 Inicia o Windows PowerShell usando um multi-threaded apartment. Este parâmetro é introduzido no Windows PowerShell 3.0. No Windows PowerShell 3.0, o STA (Single-Threaded Apartment) é o padrão. No Windows PowerShell 2.0, o MTA (Multi-Threaded Apartment) é o padrão.
 
-### -NoExit
+### <a name="-noexit"></a>-NoExit
 Não é encerrado depois de executar comandos de inicialização.
 
-### -NoLogo
+### <a name="-nologo"></a>-NoLogo
 Oculta a faixa de direitos autorais na inicialização.
 
-### -NonInteractive
+### <a name="-noninteractive"></a>-NonInteractive
 Não exibe um prompt interativo para o usuário.
 
-### -NoProfile
+### <a name="-noprofile"></a>-NoProfile
 Não carrega o perfil do Windows PowerShell.
 
-### -OutputFormat {Text | XML}
+### <a name="-outputformat-text-xml"></a>-OutputFormat {Text | XML}
 Determina como a saída do Windows PowerShell é formatada. Os valores válidos são "Text" (cadeias de caracteres de texto) ou "XML" (formato CLIXML serializado).
 
-### -PSConsoleFile <FilePath>
+### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>
 Carrega o arquivo do console do Windows PowerShell especificado. Insira o caminho e o nome do arquivo de console. Para criar um arquivo de console, use o cmdlet [Export-Console](https://technet.microsoft.com/en-us/library/4bab1c02-9e61-4aaf-9957-11d1934ef4ef) do Windows PowerShell.
 
-### -Sta
+### <a name="-sta"></a>-Sta
 Inicia o Windows PowerShell usando um single-threaded apartment. No Windows PowerShell 3.0, o STA (Single-Threaded Apartment) é o padrão. No Windows PowerShell 2.0, o MTA (Multi-Threaded Apartment) é o padrão.
 
-### -Version <Windows PowerShell Version>
+### <a name="-version-windows-powershell-version"></a>-Version <Windows PowerShell Version>
 Inicia a versão especificada do Windows PowerShell. A versão que você especificar deve estar instalada no sistema. Se o Windows PowerShell 3.0 estiver instalado no computador, os valores válidos serão "3.0" e "2.0". O valor padrão é “3.0”.
 
 Se o Windows PowerShell 3.0 não estiver instalado, o único valor válido será "2.0". Outros valores são ignorados.
 
 Para obter mais informações, consulte "Instalar o Windows PowerShell" na [Introdução ao Fluxo de Trabalho do Windows PowerShell [MSDN ANTIGO]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
 
-### -WindowStyle <Window style>
+### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
 Define o estilo da janela da sessão. Os valores válidos são Normal, Minimized, Maximized e Hidden.
 
-### -Command
+### <a name="-command"></a>-Command
 Executa os comandos especificados (e quaisquer parâmetros) da maneira como eles foram digitados no prompt de comando do Windows PowerShell e, em seguida, encerra a sessão, a menos que o parâmetro NoExit seja especificado.
 
 O valor do Comando pode ser "-", uma cadeia de caracteres. ou um bloco de script. Se o valor do comando for "-", o texto do comando será lido da entrada padrão.
@@ -111,13 +109,13 @@ Para gravar uma cadeia de caracteres que executa um comando do Windows PowerShel
 
 no qual as aspas indicam uma cadeia de caracteres e o operador de invocação (&) faz com que o comando seja executado.
 
-### -Help, -?, /?
+### <a name="-help---"></a>-Help, -?, /?
 Mostra esta mensagem. Se você estiver digitando um comando do PowerShell.exe no Windows PowerShell, adicione um hífen (-) ao início dos parâmetros do comando, não uma barra (/). Você pode usar um hífen ou uma barra "/" no Cmd.exe.
 
 > [!NOTE]
 > Observação de solução de problemas: no Windows PowerShell 2.0, a inicialização de alguns programas no console do Windows PowerShell falha com um LastExitCode 0xc0000142.
 
-## EXEMPLOS
+## <a name="examples"></a>EXEMPLOS
 
 ```
 PowerShell -PSConsoleFile sqlsnapin.psc1
@@ -137,10 +135,4 @@ $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
 $encodedCommand = [Convert]::ToBase64String($bytes)
 powershell.exe -encodedCommand $encodedCommand
 ```
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
 

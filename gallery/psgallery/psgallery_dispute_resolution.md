@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_dispute_resolution
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 6d7015a14f0d0a75bc28e201dceefe6c9c682b31
-
+ms.openlocfilehash: b7a76a6d8746b4a22154f8a8c7dde89d61046116
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Solução de controvérsias
+# <a name="dispute-resolution"></a>Solução de controvérsias
 
 Este documento é um processo de solução de controvérsias recomendado para membros da comunidade, a fim de ajudar a resolver controvérsias com outros editores da Galeria do PowerShell.
 
-## Processo
+## <a name="process"></a>Processo
 
 1. Entre em contato com os proprietários do item ao qual se refere a controvérsia usando o link **Entrar em contato com os proprietários** na página de detalhes do item.
 Explique o problema de forma cordial e direta.
@@ -28,7 +26,7 @@ Explique o problema de forma cordial e direta.
 A equipe de suporte do PowerShellGallery.com se mobilizará e tentará resolver o problema.
 
 
-## Uso proibido
+## <a name="prohibited-use"></a>Uso proibido
 
 Os procedimentos a seguir não são permitidos na Galeria pública do PowerShell e serão removidos imediatamente sem discussão.  Os proprietários do item serão notificados caso seus itens sejam removidos.
 
@@ -44,10 +42,4 @@ Publique o código e comece a usá-lo ou conceda o nome para alguém que realmen
 Se você encontrar um item que esteja violando qualquer um desses itens, clique no link “Relatar abuso” na página de detalhes do item e envie um relatório.
 
 **Essa política está sujeita a alterações, a critério da Galeria do PowerShell.**
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

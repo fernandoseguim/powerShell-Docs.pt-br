@@ -1,4 +1,4 @@
-# Instalação de dependências de módulo
+# <a name="installation-of-module-dependencies"></a>Instalação de dependências de módulo
 
 Agora há suporte à versão do módulo SxS (lado a lado) nos cmdlets Install-Module, Update-Module e Publish-Module executados no Windows PowerShell 5.0 ou mais recente.
 Além disso, adicionamos um parâmetro -RequiredVersion ao cmdlet Publish-Module para especificar a versão a ser publicada. O parâmetro Path agora dá suporte ao caminho base do módulo com a pasta de versão.
@@ -192,7 +192,3 @@ _------ ---- ---------- -----------
 1.5 ContosoServer LocalRepo ContosoServer module
 2.0 ContosoServer LocalRepo ContosoServer module
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

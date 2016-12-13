@@ -7,22 +7,20 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
-ms.openlocfilehash: 3bee547fc53d1164d3cbf17f033083d4f1099ae7
-
+ms.openlocfilehash: cd31c0b058a09aca3fd9125a8495f31600924ac1
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Os módulos comuns do PowerShell
+#  <a name="the-powershell-common-modules"></a>Os módulos comuns do PowerShell
 
 Os módulos comuns do PowerShell fornecem a funcionalidade básica do PowerShell.
 As principais áreas que esses módulos abrangem são:
 
--  [Módulo de arquivo](core-modules/Microsoft.PowerShell.Archive-Module.md)
--  [Core About Topics](core-modules/Windows-PowerShell-Core-About-Topics.md)
+-  [Módulo de arquivo morto](core-modules/Microsoft.PowerShell.Archive-Module.md)
+-  [Tópicos de ajuda do Core](core-modules/Windows-PowerShell-Core-About-Topics.md)
 -  [Módulo principal](core-modules/Microsoft.PowerShell.Core-Module.md)
--  [Principal do PowerShell 5.0](core-modules/Windows-PowerShell-5.0.md)
--  [Core Providers](core-modules/Windows-PowerShell-Core-Providers.md)
+-  [PowerShell 5.0 Core](core-modules/Windows-PowerShell-5.0.md)
+-  [Provedores do Core](core-modules/Windows-PowerShell-Core-Providers.md)
 -  [Módulo de diagnóstico](core-modules/Microsoft.PowerShell.Diagnostics-Module.md)
 -  [Módulo do host](core-modules/Microsoft.PowerShell.Host-Module.md)
 -  [Módulo de conta local](core-modules/PSLocalAccount5-Module.md)
@@ -34,9 +32,3 @@ As principais áreas que esses módulos abrangem são:
 -  [Módulo de trabalho agendado](core-modules/PSScheduledJob-Module.md)
 -  [Módulo ScriptAnalyzer](core-modules/PSScriptAnalyzer-Module.md)
 -  [Módulo de utilitário](core-modules/Microsoft.PowerShell.Utility-Module.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

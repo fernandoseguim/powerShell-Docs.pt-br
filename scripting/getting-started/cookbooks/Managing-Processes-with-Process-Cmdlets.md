@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: 3812d0492da1879df50538533740ff857af7b15d
-
+ms.openlocfilehash: 7f7097966aff6ae73b50521b86f932ffdfadf937
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gerenciando processos com os Cmdlets de processo
+# <a name="managing-processes-with-process-cmdlets"></a>Gerenciando processos com os Cmdlets de processo
 Você pode usar os cmdlets de processo do Windows PowerShell para gerenciar processos locais e remotos no Windows PowerShell.
 
-## Obtendo processos (Get-Process)
+## <a name="getting-processes-get-process"></a>Obtendo processos (Get-Process)
 Para obter os processos em execução no computador local, execute um **Get-Process** sem parâmetros.
 
 Você pode obter processos específicos definindo seus nomes de processo ou IDs de processo. O comando a seguir obtém o processo Idle:
@@ -103,7 +101,7 @@ Handles  NPM(K)  PM(K) WS(K) VM(M) CPU(s)  Id ProcessName  MachineName
     605       9  30668 29800   155 7.11    3052 powershell Server02
 ```
 
-## Parando processos (Stop-Process)
+## <a name="stopping-processes-stop-process"></a>Parando processos (Stop-Process)
 O Windows PowerShell oferece flexibilidade para listar processos, mas como podemos interromper um processo?
 
 O cmdlet **Stop-Process** obtém um Name ou ID para especificar um processo que você deseja interromper. A capacidade de parar os processos depende das suas permissões. Alguns processos não podem ser interrompidos. Por exemplo, se você tentar interromper o processo ocioso, você receberá um erro:
@@ -150,7 +148,7 @@ O cmdlet Stop-Process não tem um parâmetro ComputerName. Portanto, para execut
 Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
 ```
 
-## Parar todas as outras sessões do Windows PowerShell
+## <a name="stopping-all-other-windows-powershell-sessions"></a>Parar todas as outras sessões do Windows PowerShell
 Ocasionalmente, pode ser útil poder parar a execução de todas as sessões do Windows PowerShell que não sejam a sessão atual. Se uma sessão usar muitos recursos ou estiver inacessível (ela pode estar em execução remotamente ou em outra sessão de área de trabalho), poderá não ser possível pará-la diretamente. Se você tentar interromper todas as sessões, no entanto, a sessão atual talvez seja encerrada.
 
 Cada sessão do Windows PowerShell tem uma variável de ambiente PID que contém a ID do processo do Windows PowerShell. Você pode verificar o $PID com a ID de cada sessão e encerrar somente sessões do Windows PowerShell que têm uma ID diferente. O comando de pipeline a seguir faz isso e retorna a lista de sessões finalizadas (devido ao uso do parâmetro **PassThru**):
@@ -168,19 +166,13 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     287       9    21044      26928   143     1.02   3672 powershell
 ```
 
-## Iniciando, depuração e aguardando a processos
+## <a name="starting-debugging-and-waiting-for-processes"></a>Iniciando, depuração e aguardando a processos
 O Windows PowerShell também inclui cmdlets para iniciar (ou reiniciar), depurar um processo e aguardar a conclusão de um processo antes de executar um comando. Para obter informações sobre esses cmdlets, consulte o tópico de Ajuda do cmdlet para cada cmdlet.
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Get-Process [m2]](https://technet.microsoft.com/en-us/library/27a05dbd-4b69-48a3-8d55-b295f6225f15)
 - [Stop-Process [m2]](https://technet.microsoft.com/en-us/library/12454238-9881-457a-bde4-fb6cd124deec)
 - [Start-Process](https://technet.microsoft.com/en-us/library/41a7e43c-9bb3-4dc2-8b0c-f6c32962e72c)
 - [Wait-Process](https://technet.microsoft.com/en-us/library/9222af7a-789d-4a09-aa90-09d7c256c799)
 - [Debug-Process](https://technet.microsoft.com/en-us/library/eea1dace-3913-4dbd-b659-5a94a610eee1)
 - [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462)
-
-
-
-<!--HONumber=Oct16_HO3-->
-
-

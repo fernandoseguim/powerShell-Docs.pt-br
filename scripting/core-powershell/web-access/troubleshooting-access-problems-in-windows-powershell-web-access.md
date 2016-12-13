@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 3d2eb84bf706c935e978e78b84e221f9f68042f8
-
+ms.openlocfilehash: e22fa0d8712321e8b0f61b849d46c0c610049c86
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Solucionando problemas de acesso no Windows PowerShell Web Access
+#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -69,7 +67,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 </tr>
 <tr class="odd">
 <td><p>Não é possível conectar a um computador de grupo de trabalho remoto</p></td>
-<td><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>nome_grupotrabalho</em>&gt;\&lt;<em>usuário_nome</em>&gt;</p></td>
+<td><p>Se o computador de destino for membro de um grupo de trabalho, use a sintaxe a seguir para fornecer seu nome de usuário e entrar no computador: &lt;<em>workgroup_name</em>&gt;\&lt;<em>user_name</em>&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Não é possível encontrar as ferramentas de gerenciamento do Servidor Web (IIS), embora a função esteja instalada</p></td>
@@ -136,7 +134,8 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 </tbody>
 </table>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Consulte Também</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">
+Consulte também</span></a>
 <a href="/en-us/library/dn282395(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -145,18 +144,18 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 [Usar o console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
 [about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
 
-<span>Mostrar:</span> herdado protegido
+<span>Mostrar</span>: herdado protegido
 
 <span class="stdr-votetitle">Esta página foi útil?</span>
 Sim Não
 
 Comentários adicionais?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isso
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caracteres restantes</span> Enviar Ignorar isto
 
 <span class="stdr-thankyou">Obrigado!</span> <span class="stdr-appreciate">Agradecemos os seus comentários.</span>
 
-[Gerenciar o perfil](https://social.technet.microsoft.com/profile)
+[Gerenciar seu Perfil](https://social.technet.microsoft.com/profile)
 
 |
 
@@ -180,11 +179,11 @@ Fale mais
 -   |
 -   [Entre em contato conosco](https://technet.microsoft.com/cc512759.aspx)
 -   |
--   [Política de privacidade](https://privacy.microsoft.com/privacystatement)
+-   [Política de Privacidade](https://privacy.microsoft.com/privacystatement)
 -   |
--   [Termos de uso](https://technet.microsoft.com/cc300389.aspx)
+-   [Termos de Uso](https://technet.microsoft.com/cc300389.aspx)
 -   |
--   [Marcas](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
+-   [Marcas comerciais](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/)
 -   |
 
 © 2016 Microsoft
@@ -193,10 +192,4 @@ Fale mais
 
 Código e scripts de terceiros, vinculados ou referenciados neste site, são licenciados por terceiros que têm tal código, não pela Microsoft. Consulte os termos de uso do ASP.NET Ajax CDN – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

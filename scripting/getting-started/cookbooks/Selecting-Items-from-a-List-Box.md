@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: ce74f3c7cb26632269e42dfddb941fee11dcdc87
-
+ms.openlocfilehash: 08df13411c1998b0db6a4af9b8bd2bacca1dc643
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Selecionando itens de uma caixa de listagem
+# <a name="selecting-items-from-a-list-box"></a>Selecionando itens de uma caixa de listagem
 Use o Windows PowerShell 3.0 e versões posteriores para criar uma caixa de diálogo que permite aos usuários selecionar itens de um controle de caixa de listagem.
 
-## Criar um controle de caixa de listagem e selecionar itens dela
+## <a name="create-a-list-box-control-and-select-items-from-it"></a>Criar um controle de caixa de listagem e selecionar itens dela
 Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).
 
 ```
@@ -179,14 +177,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Consulte Também
-- [Hey Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
+## <a name="see-also"></a>Consulte Também
+- [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem](http://technet.microsoft.com/library/ff730949.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
+- [Windows PowerShell Tip of the Week: Selecting Items from a List Box](http://technet.microsoft.com/library/ff730949.aspx) (Dica da semana do Windows PowerShell: selecionando itens de uma caixa de listagem)
 

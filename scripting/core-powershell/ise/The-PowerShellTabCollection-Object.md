@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 4456b1e165130fd52249ffdbd7c22ff591061a8e
-
+ms.openlocfilehash: 79edc4e41522b187cd6421be0bd897663b42bb44
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# O objeto PowerShellTabCollection
+# <a name="the-powershelltabcollection-object"></a>O objeto PowerShellTabCollection
   O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab**. Cada objeto **PowerShellTab** funciona como um ambiente de tempo de execução separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto **$psISE.PowerShellTabs**.
 
-## Métodos
+## <a name="methods"></a>Métodos
 
-### Add\(\)
+### <a name="add"></a>Add\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Adiciona uma nova guia do PowerShell à coleção. Retorna a guia recém-adicionada.
@@ -29,7 +27,7 @@ $NewTab=$psISE.PowerShellTabs.Add()
 $newTab.DisplayName="Brand New Tab"
 ```
 
-### Remove\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
+### <a name="removemicrosoftpowershellhostisepowershelltab-pstab"></a>Remove\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Remove a guia especificada pelo parâmetro **psTab**.
@@ -46,7 +44,7 @@ sleep 5
 $psISE.PowerShellTabs.Remove($newTab)
 ```
 
-### SetSelectedPowerShellTab\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
+### <a name="setselectedpowershelltabmicrosoftpowershellhostisepowershelltab-pstab"></a>SetSelectedPowerShellTab\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  Seleciona a guia do PowerShell que é especificada pelo parâmetro **psTab** para torná-la a guia ativa do PowerShell no momento.
@@ -65,16 +63,10 @@ $newTab.DisplayName="Brand New Tab"
 $psISE.PowerShellTabs.SelectedPowerShellTab=$oldtab
 ```
 
-## Consulte Também
- [O objeto PowerShellTab](The-PowerShellTab-Object.md) 
- [O modelo de objeto de script do ISE do Windows PowerShell](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Referência de modelo de objeto do ISE do Windows PowerShell](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [A hierarquia de modelo de objeto do ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
+## <a name="see-also"></a>Consulte Também
+- [O objeto PowerShellTab](The-PowerShellTab-Object.md) 
+- [O modelo de objeto de script do ISE do Windows PowerShell](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+- [Referência de modelo de objeto do ISE do Windows PowerShell](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [A hierarquia de modelo de objeto do ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

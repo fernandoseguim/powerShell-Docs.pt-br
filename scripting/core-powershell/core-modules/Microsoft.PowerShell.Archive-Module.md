@@ -8,28 +8,20 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 71a727b5-49a5-47a9-8034-161c86cf042b
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 249a0ece77a11fd9aa54a6ff4170e44f42b377c9
-
+ms.openlocfilehash: f1c54761db169a3f79efb06124be916185c3fb28
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Módulo Microsoft.PowerShell.Archive
+# <a name="microsoftpowershellarchive-module"></a>Módulo Microsoft.PowerShell.Archive
 Esta seção contém os tópicos de ajuda para os cmdlets que são instalados com o módulo **Microsoft.PowerShell.Archive** do Windows PowerShell. O módulo de arquivamento contém cmdlets que permitem criar e extrair o arquivo ou arquivos ZIP.
 
-## Cmdlets do Microsoft.PowerShell.Archive
+## <a name="microsoftpowershellarchive-cmdlets"></a>Cmdlets do Microsoft.PowerShell.Archive
 
 |||
 |-|-|
 |[Compress-Archive](http://technet.microsoft.com/library/dn841358.aspx)|Compacta um ou mais arquivos ou pastas especificadas em um arquivo morto.|
 |[Expand-Archive](http://technet.microsoft.com/library/dn841359.aspx)|Extrai os arquivos de conteúdo do arquivo (ou ZIP) para um destino especificado.|
 
-## Consulte Também
-[Módulos principais no Windows PowerShell](http://technet.microsoft.com/library/hh847741.aspx)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+## <a name="see-also"></a>Consulte Também
+- [Módulos principais no Windows PowerShell](http://technet.microsoft.com/library/hh847741.aspx)
 

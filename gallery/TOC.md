@@ -18,13 +18,13 @@
 
 # [PowerShellGet](psget/overview.md)
 ## Módulo
-### [Encontrar Módulos](psget/module/psget_find-module.md)
-### [Encontrar Recursos DSC](psget/module/psget_find-dscresource.md)
-### [Encontrar Capacidades de Função](psget/module/psget_find-rolecapability.md)
-### [Encontrar Comandos](psget/module/psget_find-command.md)
+### [Localizar Módulos](psget/module/psget_find-module.md)
+### [Localizar Recursos DSC](psget/module/psget_find-dscresource.md)
+### [Localizar Capacidades de Função](psget/module/psget_find-rolecapability.md)
+### [Localizar Comandos](psget/module/psget_find-command.md)
 ### [Salvar](psget/module/psget_save-module.md)
 ### [Instalar](psget/module/psget_install-module.md)
-### [Atualização](psget/module/psget_update-module.md)
+### [Atualizar](psget/module/psget_update-module.md)
 ### [Desinstalar](psget/module/psget_uninstall-module.md)
 ### [Obter os módulos instalados](psget/module/psget_get-installedmodule.md)
 ### [Atualizar o manifesto de módulo](psget/module/psget_update-modulemanifest.md)
@@ -33,14 +33,14 @@
 ### [Solução de problemas](psget/psget_cmdlets_troubleshooting.md)
 
 ## script
-### [Encontrar](psget/script/psget_find-script.md)
+### [Localizar](psget/script/psget_find-script.md)
 ### [Salvar](psget/script/psget_save-script.md)
 ### [Instalar](psget/script/psget_install-script.md)
-### [Atualização](psget/script/psget_update-script.md)
+### [Atualizar](psget/script/psget_update-script.md)
 ### [Desinstalar](psget/script/psget_uninstall-script.md)
 ### [Obter os scripts instalados](psget/script/psget_get-installedscript.md)
 ### [Criar arquivo de script com metadados](psget/script/psget_new-scriptfileinfo.md)
-### [Metadados de arquivo de script de teste](psget/script/psget_test-scriptfileinfo.md)
+### [Testar metadados de arquivo de script](psget/script/psget_test-scriptfileinfo.md)
 ### [Atualizar metadados de arquivo de script](psget/script/psget_update-scriptfileinfo.md)
 ### [Publicar](psget/script/psget_publish-script.md)
 ### [Scripts com PSEditions](psget/script/scriptwithpseditionsupport.md)
@@ -52,9 +52,4 @@
 ### [Modificando o repositório registrado](psget/repository/psget_set-psrepository.md)
 ### [Cancelando o registro do repositório](psget/repository/psget_unregister-psrepository.md)
 
-## [Cmdlets de PackageManagement](psget/oneget/PackageManagement_cmdlets.md)
-
-
-<!--HONumber=Sep16_HO2-->
-
-
+## [Cmdlets do PackageManagement](psget/oneget/PackageManagement_cmdlets.md)

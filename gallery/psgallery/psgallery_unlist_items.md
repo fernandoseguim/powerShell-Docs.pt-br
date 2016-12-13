@@ -9,13 +9,11 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_unlist_items
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 95e0bb58eb110a9060615e409cb55fa9231d505f
-
+ms.openlocfilehash: ede07cce7b65b795f48d16cb2862880f84c3eda2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Removendo itens da lista
+# <a name="unlisting-items"></a>Removendo itens da lista
 
 **Por que a remoção de um item da Galeria do PowerShell não é exposta como uma opção?**
 
@@ -41,11 +39,5 @@ Os cenários de exclusão válidos são:
 - O item contém dados confidenciais.
 
 Para enviar uma Solicitação de Exclusão de Item aos Administradores da Galeria do PowerShell, visite a página de detalhes do item e selecione Entrar em Contato com o Suporte.  
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
 
 

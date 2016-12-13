@@ -9,21 +9,19 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_gettingstarted
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: d6f36a62c95a4444f456cf7c14f7f3dc08236447
-
+ms.openlocfilehash: 4c06d1ebd4417da4bd58e3536d123f8285ba189e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="get-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
-# Introdução à Galeria do PowerShell
-
-## O que é a Galeria do PowerShell?
+## <a name="what-is-the-powershell-gallery"></a>O que é a Galeria do PowerShell?
 
 A Galeria do PowerShell é o repositório central de conteúdo do PowerShell.
 Nela, você pode encontrar módulos úteis do PowerShell que contêm comandos do PowerShell e recursos de DSC (Configuração de Estado Desejado). Você também pode encontrar scripts do PowerShell, alguns dos quais podem conter fluxos de trabalho do PowerShell e que descrevem um conjunto de tarefas e fornecem o sequenciamento para essas tarefas.
 Alguns desses itens são criados pela Microsoft e outros são criados pela comunidade do PowerShell.
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 Baixar itens da Galeria do PowerShell para o seu sistema requer o módulo [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Você pode encontrar o módulo PowerShellGet em qualquer um dos recursos indicados a seguir. Não é necessário entrar para baixar itens da Galeria do PowerShell.
 
@@ -51,7 +49,7 @@ Para obter mais informações, consulte <http://oneget.org/>.
 Observação: devido a alterações nos formatos de empacotamento, é recomendável atualizar para a versão mais recente do PowerShellGet e do PackageManagement para instalar itens que foram atualizados recentemente. O PowerShellGet está incluído no Windows 10; você pode aprender mais sobre ele [aqui](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409).
 O PowerShellGet também faz parte do WMF (Windows Management Framework) 5.0, que você pode baixar [aqui](http://go.microsoft.com/fwlink/?LinkId=398175).
 
-## Descobrindo itens da Galeria do PowerShell
+## <a name="discovering-items-from-the-powershell-gallery"></a>Descobrindo itens da Galeria do PowerShell
 
 Você pode encontrar itens na Galeria do PowerShell usando o controle **Pesquisar** no site ou navegando pelas páginas de Módulos e Scripts. Você também pode encontrar itens da Galeria do PowerShell executando os cmdlets [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), dependendo do tipo de item, com **-Repository PSGallery**.
 
@@ -71,7 +69,7 @@ A filtragem de resultados da Galeria pode ser feita usando os seguintes parâmet
 Se estiver interessado apenas em descobrir recursos de DSC específicos na galeria, você poderá executar o cmdlet [**Find-DscResource**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
 [**Find-DscResource**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) retorna dados de recursos de DSC contidos na Galeria. Como os recursos de DSC sempre são fornecidos como parte de um módulo, você ainda precisa executar [Install-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) para instalar esses recursos.
 
-## Aprendendo sobre itens na Galeria do PowerShell
+## <a name="learning-about-items-in-the-powershell-gallery"></a>Aprendendo sobre itens na Galeria do PowerShell
 
 Depois de identificar um item no qual tem interesse, talvez você queira aprender mais sobre ele. Você pode fazer isso examinando a página específica do item na Galeria. Nessa página, você poderá ver todos os metadados carregados com o item. Esses metadados do item são fornecidos pelo autor do item e não são verificados pela Microsoft. O Proprietário do item está intimamente ligado à conta da Galeria usada para publicar o item e é mais confiável do que o campo Autor.
 
@@ -79,11 +77,11 @@ Se você descobrir que um item que acredita que não tenha sido publicado de boa
 
 Se estiver executando [Find-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou [Find-Script](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), você poderá exibir esses dados no objeto PSGetModuleInfo retornado. Por exemplo, executar [**Find-Module -Name PSReadLine -Repository PSGallery | Get-Member**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) retorna dados do módulo PSReadLine na Galeria.
 
-## Baixando itens da Galeria do PowerShell
+## <a name="downloading-items-from-the-powershell-gallery"></a>Baixando itens da Galeria do PowerShell
 
 Recomendamos o processo a seguir para baixar itens da Galeria do PowerShell:
 
-### Inspecionar
+### <a name="inspect"></a>Inspecionar
 
 Para baixar um item da Galeria para inspeção, execute o cmdlet [**Save-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou [**Save-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), dependendo do tipo de item. Isso permite que você salve o item localmente sem instalá-lo e inspecione o conteúdo do item. Lembre-se de excluir o item salvo manualmente.
 
@@ -91,7 +89,7 @@ Alguns desses itens são criados pela Microsoft e outros são criados pela comun
 
 Se você descobrir que um item que acredita que não tenha sido publicado de boa fé, clique em **Relatar Abuso** na página do item.
 
-### Instalar
+### <a name="install"></a>Instalar
 
 Para instalar um item da Galeria para uso, execute o cmdlet [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), dependendo do tipo de item.
 
@@ -101,13 +99,13 @@ Para instalar um item da Galeria para uso, execute o cmdlet [**Install-Module**]
 
 Por padrão, [Install-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [Install-Script](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) instalam a versão mais recente de um item. Para instalar uma versão mais antiga do item, adicione o parâmetro **-RequiredVersion**.
 
-### Implantar
+### <a name="deploy"></a>Implantar
 
 Para implantar um item da Galeria do PowerShell na Automação do Azure, clique em **Implantar na Automação do Azure** na página de detalhes do item. Você será redirecionado ao Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure. Observe que implantar itens com dependências implantará todas as dependências na Automação do Azure. O botão Implantar na Automação do Azure pode ser desabilitado adicionando a marca **AzureAutomationNotSupported** aos metadados do item.
 
 Para saber mais sobre a Automação do Azure, consulte o [Site da Automação do Azure](http://azure.microsoft.com/en-us/services/automation/).
 
-## Atualizando itens da Galeria do PowerShell
+## <a name="updating-items-from-the-powershell-gallery"></a>Atualizando itens da Galeria do PowerShell
 
 Para atualizar itens instalados da Galeria do PowerShell, execute o cmdlet [Update-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou [Update-Script](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Quando executado sem parâmetros adicionais, [Update-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) também tenta atualizar cada módulo instalado executando [Install-Module](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
 Para atualizar módulos seletivamente, adicione o parâmetro **-Name**.
@@ -115,15 +113,9 @@ Para atualizar módulos seletivamente, adicione o parâmetro **-Name**.
 De forma semelhante, quando executado sem parâmetros adicionais, [Update-Script](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) também tenta atualizar cada script instalado executando [Install-Script](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
 Para atualizar scripts seletivamente, adicione o parâmetro **-Name**.
 
-## Listar itens que você instalou da Galeria do PowerShell
+## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a>Listar itens que você instalou da Galeria do PowerShell
 
 Para descobrir quais módulos você instalou da Galeria do PowerShell, execute o cmdlet [**Get-InstalledModule**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Esse comando lista todos os módulos no seu sistema que foram instalados diretamente da Galeria do PowerShell.
 
 De forma semelhante, para descobrir quais scripts você instalou da Galeria do PowerShell, execute o cmdlet [**Get-InstalledScript**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Esse comando lista todos os scripts no seu sistema que foram instalados diretamente da Galeria do PowerShell.
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

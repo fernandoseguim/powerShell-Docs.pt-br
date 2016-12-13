@@ -7,17 +7,15 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: b38cfd053cc2356fa7ca99605dbd84190d342327
-ms.openlocfilehash: fc6307be4dafb378350b6d9667b2b6aca0e2e6d4
-
+ms.openlocfilehash: e5ad9190ae620e511258675ad7e65ec59018d89f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  PowerShell
+#  <a name="powershell"></a>PowerShell
 
 Interno ao .NET Framework, o Windows PowerShell é uma linguagem de scripts e shell de linha de comando baseado em tarefas. Ele foi desenvolvido especificamente para administradores de sistema e usuários avançados, com a finalidade de automatizar rapidamente a administração de vários sistemas operacionais (Linux, OSX, Unix e Windows) e os processos relacionados aos aplicativos executados nesses sistemas operacionais.
 
-###  O PowerShell agora é um software livre
+###  <a name="powershell-is-now-open-source"></a>O PowerShell agora é um software livre
 
 O código-fonte base do PowerShell agora está disponível no GitHub e está aberto para contribuições da comunidade; consulte [PowerShell](https://github.com/powershell/powershell).
 
@@ -27,19 +25,19 @@ Ou, talvez, com um tour rápido em [Guia de Introdução](https://github.com/Pow
 >  **Observação:**  
 >  todos os links sobre o PowerShell no GitHub levarão você ao GitHub.
 
-#  Documentação
+#  <a name="documentation"></a>Documentação
 
 O conjunto de documentação é organizado em torno de 4 seções principais:
 
-##  [Novidades no PowerShell](whats-new/What-s-New-With-PowerShell.md)
+##  <a name="whats-new-with-powershellwhats-newwhat-s-new-with-powershellmd"></a>[Novidades no PowerShell](whats-new/What-s-New-With-PowerShell.md)
 Nesta seção, você encontrará todos os comunicados sobre o produto (por versão e lançamento por versão).
 
-##  [Instalação do PowerShell](setup/setup-reference.md)
+##  <a name="powershell-setupsetupsetup-referencemd"></a>[Instalação do PowerShell](setup/setup-reference.md)
 Nesta seção, você encontrará tudo que você precisa saber para instalar todas as versões do PowerShell, em todos os ambientes com suporte.  
 
 Você também encontrará informações sobre como configurar para: segurança, acessibilidade, gerenciamento e acesso remoto, fluxos de trabalho e acesso via Web.
 
-##  [Introdução ao PowerShell](getting-started/Getting-Started-with-Windows-PowerShell.md)
+##  <a name="getting-started-with-powershellgetting-startedgetting-started-with-windows-powershellmd"></a>[Introdução ao PowerShell](getting-started/Getting-Started-with-Windows-PowerShell.md)
 Esta seção é para que usuários novos no PowerShell obtenham todas as informações necessárias para começar a usar o produto.  
 Nesta seção:
 -   A seção [Preparando-se para Usar o Windows PowerShell](getting-started/Getting-Ready-to-Use-Windows-PowerShell.md) explica as etapas necessárias para configurar o PowerShell para executar e tentar todos os trechos de código e comandos apresentados na seção 'Introdução ao PowerShell'.
@@ -48,7 +46,7 @@ Nesta seção:
 -  Uma série de tópicos de '[guia básico de &lt;uso&gt;](getting-started/cookbooks/basic-cookbooks-reference.md)' que fornecem informações para executar tarefas padrão em arquivos, sistema de arquivos, registros, processos, serviços e assuntos diários semelhantes.
 -  Um guia estruturado para outras fontes para [aprendizado sobre o PowerShell](getting-started/more-powershell-learning.md).
 
-##  [PowerShell comum](core-powershell/core-powershell.md)
+##  <a name="common-powershellcore-powershellcore-powershellmd"></a>[PowerShell comum](core-powershell/core-powershell.md)
 Esta seção contém todos os materiais de referência do PowerShell.  
 Encontre nesta seção:
 -  Os [Módulos comuns do PowerShell](core-powershell/core-modules.md)
@@ -58,9 +56,3 @@ Encontre nesta seção:
 -  Os [Fluxos de trabalho do PowerShell](core-powershell/workflows-guide.md)
 -  O [PowerShell Web Access](core-powershell/web-access.md)
 -  O [Glossário do PowerShell](Windows-PowerShell-Glossary.md)
-
-
-
-<!--HONumber=Aug16_HO4-->
-
-

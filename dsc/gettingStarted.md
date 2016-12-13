@@ -7,18 +7,16 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: c5ee7f7e7678b60700edb1ab1b66139791ea67c6
-
+ms.openlocfilehash: 3a59f76919c0a63f269ca587d358020825412be4
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Introdução à Configuração de Estado Desejado do PowerShell #
+# <a name="getting-started-with-powershell-desired-state-configuration"></a>Introdução à Configuração de Estado Desejado do PowerShell #
 
 Este guia descreve como começar a criar documentos de Configuração de Estado Desejado do PowerShell e aplicá-los aos computadores. Assume que há uma familiaridade básica com cmdlets, módulos e funções do PowerShell. 
 
 
-## Criar uma configuração ##
+## <a name="create-a-configuration"></a>Criar uma configuração ##
 
 [**Configurações**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) são documentos que descrevem um ambiente. Os ambientes consistem em "**nós**", que normalmente são máquinas virtuais ou físicas. 
 
@@ -41,7 +39,7 @@ configuration MyFirstConfiguration
 
 }
 ```
-## Partes de uma Configuração ##
+## <a name="parts-of-a-configuration"></a>Partes de uma Configuração ##
 **Configuration** é uma palavra-chave que foi adicionada ao PowerShell 4.0. Significa um tipo especial de função do PowerShell usado pela Configuração de Estado Desejado. Neste exemplo, a função é chamada de myFirstConfiguration. 
 
 A próxima linha é uma instrução de importação, semelhante à importação de um módulo. Será discutida posteriormente.
@@ -71,10 +69,4 @@ Start-DscConfiguration -Path ./myFirstConfiguration
 ```powershell
 Start-DscConfiguration -Path ./myFirstConfiguration -Wait
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

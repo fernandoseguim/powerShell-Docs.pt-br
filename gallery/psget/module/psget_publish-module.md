@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "módulo psget_publish"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: c62ab4b7ab5266d7285d4c444105f0a8291563c1
-
+ms.openlocfilehash: a21351837d0cc63e56254911a1a436175a2734cd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Publish-Module
+# <a name="publish-module"></a>Publish-Module
 
 Publica um módulo especificado do computador local em uma galeria online.
 
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet **Publish-Module** publica um módulo em uma galeria online baseada em NuGet usando uma chave de API, armazenada como parte do perfil do usuário na galeria. Você pode especificar o módulo a ser publicado usando o nome do módulo ou o caminho para a pasta que contém o módulo.
 
@@ -31,16 +29,16 @@ O parâmetro RequiredVersion permite que você especifique a versão exata de um
 O parâmetro Path também dá suporte ao caminho base do módulo com a pasta de versão.
 O parâmetro de opção Force no cmdlet Publish-Module inicializa o NuGet.exe sem avisar.
 
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Publish-Module -Module PowerShellGet -Syntax
 ```
 
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Publish-Module](http://go.microsoft.com/fwlink/?LinkID=398575)
 
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 ContosoServer module with different versions to be published.
@@ -72,9 +70,9 @@ _------ ---- ---------- -----------
 2.0 ContosoServer LocalRepo ContosoServer module
 ```
 
-## Publicando um módulo com dependências
+## <a name="publishing-a-module-with-dependencies"></a>Publicando um módulo com dependências
 
-### Crie um módulo com dependências e um intervalo de versão que são especificados na propriedade RequiredModules do manifesto do módulo.
+### <a name="create-a-module-with-dependencies-and-version-range-specified-in-requiredmodules-property-of-its-module-manifest"></a>Crie um módulo com dependências e um intervalo de versão que são especificados na propriedade RequiredModules do manifesto do módulo.
 
 **Observação:**
   - \* tem suporte apenas em MaximumVersion e também deve estar no final da cadeia de caracteres de versão. 
@@ -88,13 +86,13 @@ PS C:\windows\system32> cd C:\MyModules\ModuleWithDependencies
 PS C:\MyModules\ModuleWithDependencies> New-ModuleManifest -Path .\ModuleWithDependencies.psd1 -ModuleVersion 1.0 -RequiredModules $requiredModules -Description 'ModuleWithDependencies demo module'
 ```
 
-### Publique o módulo ModuleWithDependencies com dependências no repositório.
+### <a name="publish-modulewithdependencies-module-with-dependencies-to-the-repository"></a>Publique o módulo ModuleWithDependencies com dependências no repositório.
 
 ```powershell
 PS C:\MyModules\ModuleWithDependencies> Publish-Module -Path C:\MyModules\ModuleWithDependencies -Repository LocalRepo
 ```
 
-### Encontre o módulo ModuleWithDependencies com suas dependências especificando -IncludeDependencies
+### <a name="find-modulewithdependencies-module-with-its-dependencies-by-specifying--includedependencies"></a>Encontre o módulo ModuleWithDependencies com suas dependências especificando -IncludeDependencies
 
 ```powershell
 PS C:\MyModules\ModuleWithDependencies> Find-Module -Name ModuleWithDependencies -Repository LocalRepo -IncludeDependencies
@@ -106,7 +104,7 @@ Version    Name                                Type       Repository           D
 1.5        RequiredModule2                     Module     localrepo            RequiredModule2 module
 ```
 
-### Instale o módulo ModuleWithDependencies com dependências.
+### <a name="install-the-modulewithdependencies-module-with-dependencies"></a>Instale o módulo ModuleWithDependencies com dependências.
 Observe que os intervalos de versão são considerados durante a instalação de dependências.
 
 ```powershell
@@ -123,7 +121,7 @@ Version    Name                                Type       Repository           D
 1.5        RequiredModule2                     Module     localrepo            RequiredModule2 module
 ```
 
-### Conteúdo do arquivo de manifesto do módulo ModuleWithDependencies2
+### <a name="contents-of-modulewithdependencies2-module-manifest-file"></a>Conteúdo do arquivo de manifesto do módulo ModuleWithDependencies2
 
 ```powershell
 @{
@@ -178,17 +176,11 @@ PrivateData = @{
 ```
 
 
-### Dependências externas
+### <a name="external-dependencies"></a>Dependências externas
 Algumas dependências de módulo podem ser gerenciadas externamente. Nesse caso, elas devem ser adicionadas à entrada ExternalModuleDependencies na seção PSData do manifesto do módulo.
 
 Se "SnippetPx" não estiver disponível no repositório, o erro abaixo será gerado.
 ```powershell
 Publish-PSArtifactUtility : PowerShellGet cannot resolve the module dependency 'SnippetPx' of the module 'TypePx' on the repository 'LocalRepo'. Verify that the dependent module 'SnippetPx' is available in the repository 'LocalRepo'. If this dependent 'SnippetPx' is managed externally, add it to the ExternalModuleDependencies entry in the PSData section of the module manifest.
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

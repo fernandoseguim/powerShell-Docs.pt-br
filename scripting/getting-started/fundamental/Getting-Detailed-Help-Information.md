@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-translationtype: Human Translation
-ms.sourcegitcommit: b59186234a513cf34d2615d90643ee749bd60d3f
-ms.openlocfilehash: c38edc68154ccfa9cd76ebdad5a94ddfb4f902c8
-
+ms.openlocfilehash: 983876d805404857392565d4273e4dc38752a094
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Obtendo informações de ajuda detalhadas
+# <a name="getting-detailed-help-information"></a>Obtendo informações de ajuda detalhadas
 O Windows PowerShell inclui tópicos detalhados que explicam os conceitos do Windows PowerShell e a linguagem do Windows PowerShell. Também há tópicos da Ajuda para cada cmdlet e tópicos de provedor e de Ajuda para muitas funções e scripts.
 
 Você pode exibir esses tópicos da Ajuda no prompt de comando ou exibir as versões mais atualizadas dos seguintes tópicos na Biblioteca do Microsoft TechNet. Muitos programas que hospedam o Windows PowerShell, como o Ambiente de Script Integrado do Windows PowerShell, fornecem recursos adicionais de Ajuda, como a Ajuda contextual e o arquivo de Ajuda compilado (.chm).
 
-## Obtendo Ajuda para os cmdlets
+## <a name="getting-help-for-cmdlets"></a>Obtendo Ajuda para os cmdlets
 Para obter Ajuda para cmdlets do Windows PowerShell, use o cmdlet [Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2). Por exemplo, para obter Ajuda para o cmdlet [Get-ChildItem [m2]](https://technet.microsoft.com/en-us/library/4b270d63-c995-45b8-b5b4-3f8887efbfcc), digite:
 
 ```
@@ -82,7 +80,7 @@ get-help get-childitem -examples
 
 Para obter informações sobre como escrever tópicos da Ajuda para os cmdlets que você criar, consulte o tópico "Como criar Ajuda para cmdlets" no MSDN.
 
-## Obtendo Ajuda conceitual
+## <a name="getting-conceptual-help"></a>Obtendo Ajuda conceitual
 O cmdlet Get-Help exibe também informações sobre tópicos conceituais no Windows PowerShell, incluindo tópicos sobre a linguagem do Windows PowerShell. Tópicos de Ajuda conceituais começam com o prefixo "about_", como about_line_editing. (O nome do tópico conceitual deve ser inserido em inglês, mesmo em versões do Windows PowerShell em idiomas diferentes do inglês.)
 
 Para exibir uma lista de tópicos conceituais, digite:
@@ -99,7 +97,7 @@ get-help about_command_syntax
 
 Os parâmetros de Get-Help, como *Detailed*, *Parameter* e *Examples*, não têm efeito sobre a exibição dos tópicos de Ajuda conceitual.
 
-## Obtendo Ajuda para provedores
+## <a name="getting-help-about-providers"></a>Obtendo Ajuda para provedores
 O cmdlet Get-Help exibe informações sobre provedores do Windows PowerShell. Para obter Ajuda sobre um provedor, digite "Get-Help" seguido do nome do provedor. Por exemplo, para obter Ajuda para o provedor de Registro, digite:
 
 ```
@@ -114,7 +112,7 @@ get-help -category provider
 
 Os parâmetros de Get-Help, como *Detailed*, *Parameter* e *Examples*, não têm efeito sobre a exibição dos tópicos de Ajuda de provedor.
 
-## Obtendo Ajuda para scripts e funções
+## <a name="getting-help-about-scripts-and-functions"></a>Obtendo Ajuda para scripts e funções
 Muitos scripts e funções no Windows PowerShell têm tópicos da Ajuda. Use o cmdlet Get-Help para exibir tópicos da Ajuda para scripts e funções.
 
 Para exibir a Ajuda para uma função, digite "get-help" seguido pelo nome da função. Por exemplo, para obter Ajuda para a função Disable-PSRemoting, digite:
@@ -135,7 +133,7 @@ Os parâmetros que foram projetados para exibir o cmdlet Help, como *Detailed*, 
 
 Para obter informações sobre como criar Ajuda para suas funções e scripts, consulte [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
-## Obtendo Ajuda online
+## <a name="getting-help-online"></a>Obtendo Ajuda online
 Se você estiver conectado à Internet, uma das melhores maneiras de obter Ajuda será exibir os tópicos da Ajuda online. Como tópicos online são fáceis de atualizar, eles provavelmente fornecerão o conteúdo mais atual.
 
 Para obter Ajuda online, experimente o parâmetro *Online* do cmdlet Get-Help. O parâmetro *Online* do cmdlet Get-Help funciona somente para Ajuda de cmdlet, Ajuda de função e Ajuda de script. Não é possível usar o parâmetro *Online* com tópicos de Ajuda conceitual (About) ou de provedor. Além disso, como esse recurso é opcional, ele não funciona para o tópico de Ajuda de todos os cmdlets, funções ou scripts.
@@ -172,15 +170,9 @@ Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 
 Para obter informações sobre como dar suporte online aos seus tópicos de Ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e consulte "Como criar Ajuda para cmdlets" ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) na Biblioteca do MSDN (Microsoft Developer Network).
 
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
 - [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af)
 - [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
 - [Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 
