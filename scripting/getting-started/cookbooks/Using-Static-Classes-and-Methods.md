@@ -1,15 +1,16 @@
 ---
-title: "Usando classes e métodos estáticos"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Usando classes e métodos estáticos"
+ms.technology: powershell
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: 1d8b45bbfe14bdca7ddfa3fd26d1e66a0a82efbc
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 999b87744ae8478658b2cc33b48956594f48588d
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos

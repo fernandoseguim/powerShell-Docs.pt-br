@@ -1,14 +1,15 @@
 ---
-title: "O que há de novo no PowerShell"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e3c7634462800736f0f321481e8f26074359f40b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "O que há de novo no PowerShell"
+ms.technology: powershell
+ms.openlocfilehash: 2791d61e7d69b8f82ec4cb9a67440e7d7cb15290
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="what39s-new-with-powershell"></a>Novidades no PowerShell

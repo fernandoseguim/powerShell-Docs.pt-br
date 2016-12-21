@@ -1,15 +1,16 @@
 ---
-title: "Criando um seletor de data gráfico"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Criando um seletor de data gráfico"
+ms.technology: powershell
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 25c6dcbc2c79cb62d26aad60c7e3277ef039564f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 299e90777b0bd353e83ddaf762904656c86192ba
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="creating-a-graphical-date-picker"></a>Criando um seletor de data gráfico

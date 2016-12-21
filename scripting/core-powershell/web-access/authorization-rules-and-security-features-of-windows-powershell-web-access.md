@@ -1,14 +1,15 @@
 ---
-title: "regras de autorização e recursos de segurança do windows powershell web access"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 984323731b2cd0c4f3c26fe100e4b680082881f5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "regras de autorização e recursos de segurança do windows powershell web access"
+ms.technology: powershell
+ms.openlocfilehash: f2ed4355536ed92048dde66617d36d36958fd75f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access

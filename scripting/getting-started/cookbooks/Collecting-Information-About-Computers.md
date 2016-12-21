@@ -1,15 +1,16 @@
 ---
-title: "Coletando informações sobre computadores"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Coletando informações sobre computadores"
+ms.technology: powershell
 ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: 4f53fb9bd096b63e23763e737dae03da2126ec56
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: ba81489749ba51ec19febb9de81de1b2a5150aa4
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="collecting-information-about-computers"></a>Coletando informações sobre computadores

@@ -1,15 +1,16 @@
 ---
-title: Gerenciando unidades do Windows PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Gerenciando unidades do Windows PowerShell
+ms.technology: powershell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: 776e55de817dd200142965e19ce84bbe776fcb9d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: aa2e116589d93bc160f697b25666838bbbe5cb6b
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="managing-windows-powershell-drives"></a>Gerenciando unidades do Windows PowerShell

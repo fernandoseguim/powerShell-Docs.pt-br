@@ -1,15 +1,16 @@
 ---
-title: Requisitos do Sistema do Windows PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Requisitos do Sistema do Windows PowerShell
+ms.technology: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 9510e13156b0dd0da8e5c4f94cfaf7b3152f3ad0
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a3cb7f421fdb3c3023a783434f257d92609e1127
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos do Sistema do Windows PowerShell

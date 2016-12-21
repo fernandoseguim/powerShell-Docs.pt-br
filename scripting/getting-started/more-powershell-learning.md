@@ -1,14 +1,15 @@
 ---
-title: Mais aprendizado sobre o PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: bef7edde1286946ddfa1dbe79cb718ac231b152c
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Mais aprendizado sobre o PowerShell
+ms.technology: powershell
+ms.openlocfilehash: ab8413a2489cb96e7d9c9b524d371f55f505acc4
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="more-powershell-learning"></a>Mais aprendizado sobre o PowerShell

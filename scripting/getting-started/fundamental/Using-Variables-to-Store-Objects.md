@@ -1,15 +1,16 @@
 ---
-title: "Usando variáveis para armazenar objetos"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Usando variáveis para armazenar objetos"
+ms.technology: powershell
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: 5f37f66a34a98a4da28f4e36f115272d44ae5fc4
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 232296f8db3ea665fcdf14dfe4962b96d230d733
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="using-variables-to-store-objects"></a>Usando variáveis para armazenar objetos

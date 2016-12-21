@@ -1,15 +1,16 @@
 ---
-title: Windows PowerShell Core About Topics
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Windows PowerShell Core About Topics
+ms.technology: powershell
 ms.assetid: 8b950138-9782-4dfe-bd5f-6bdcea7060da
-ms.openlocfilehash: 5343cf633d74171037ed3cdc9fcaa04495f4aaf7
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 08f62a8e54e1342a01e76dafd02b745c59a1e3f8
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="windows-powershell-core-about-topics"></a>Windows PowerShell Core About Topics

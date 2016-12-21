@@ -1,14 +1,15 @@
 ---
-title: usar o console do windows powershell baseado na web
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: a62e258812960ce59f050e59d2ef3acc296663a2
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: usar o console do windows powershell baseado na web
+ms.technology: powershell
+ms.openlocfilehash: ea530d346ec36000da331b287f51d8f732947629
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
@@ -60,11 +61,11 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 -   Windows Phone 7 e 7.5
 
--   Navegador Google Android WebKit 3.1 Android 2.2.1 (Kernel 2.6)
+-   Navegador Google Android WebKit 3.1 Android 2.2.1 (Kernel 2.6)
 
 -   Apple Safari para iPhone com sistema operacional 5.0.1
 
--   Apple Safari para iPad 2 com sistema operacional 5.0.1
+-   Apple Safari para iPad 2 com sistema operacional 5.0.1
 
 ###
 
@@ -303,7 +304,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
 -   Os usuários que entraram em uma configuração de sessão **NoLanguage** ou em um runspace restrito no Windows PowerShell Web Access não podem executar o comando **Sair** para encerrar a sessão. Para sair, os usuários devem clicar em **Sair** na página do console.
 
--   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **Alt**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
+-   <span class="label">Conectando a vários computadores de destino simultaneamente.</span>   Se o servidor de gateway estiver executando o Windows Server 2012, o Windows PowerShell Web Access permitirá apenas uma conexão de computador remoto por sessão de navegador; ele não permitirá que os usuários entrem uma vez e se conectem a vários computadores remotos usando guias separadas do navegador. Ao abrir uma nova guia ou uma nova janela de navegador, o Windows PowerShell Web Access solicita que você desconecte a sessão atual e inicie uma nova sessão, de forma que possa se conectar ao novo (ou ao mesmo) computador remoto. No entanto, se duas ou mais sessões separadas para computadores remotos diferentes forem desejadas, um recurso no Internet Explorer permitirá criar uma nova sessão. Para iniciar uma nova sessão de navegador no Internet Explorer, pressione **Alt**, abra o menu **Arquivo** e selecione **Nova Sessão**. Em seguida, abra o site do Windows PowerShell Web Access na nova sessão e entre para acessar outro computador remoto.
 
     Quando o gateway do Windows PowerShell Web Access estiver em execução no Windows Server 2012 R2, os usuários poderão abrir várias conexões com computadores remotos em guias diferentes do navegador. Se você quiser abrir mais de uma conexão a um computador remoto usando o console do Windows PowerShell baseado na Web, entre em contato com o administrador de gateway do Windows PowerShell Web Access para ver se este recurso tem suporte pelo servidor de gateway.
 

@@ -1,9 +1,18 @@
-
 ---
-título: módulo PowerShellGet ms.date: palavras-chave 2016-05-11: descrição do powershell, cmdlet:  
-ms.topic: autor do artigo: jpjofre manager: dongill ms.prod: ms.assetid powershell: e4d6867f-a32a-4564-9e43-409babee97a7
+description: 
+manager: carmonm
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Módulo PowerShellGet"
+ms.technology: powershell
+ms.assetid: e4d6867f-a32a-4564-9e43-409babee97a7
+ms.openlocfilehash: 036319dff3e4c5e957e2f71bbcb57378ac35318f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
+translationtype: HT
 ---
-
 # <a name="powershellget-module"></a>Módulo PowerShellGet
 Esta seção contém os tópicos de ajuda para o módulo **PowerShellGet**. O módulo **PowerShellGet** é instalado com o Windows PowerShell 5.0 e versões posteriores do Windows PowerShell.
 

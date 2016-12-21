@@ -1,15 +1,16 @@
 ---
-title: WinRMSecurityRedirect
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
-author: eslesar
-manager: dongill
+author: jpjofre
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: WinRMSecurity
+ms.technology: powershell
 redirect_url: https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity
-ms.openlocfilehash: cacf45175dff2b12b332d62d0580469f9eadc747
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 161eae06ef088685fc4f9b8667380b4a81f79212
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell

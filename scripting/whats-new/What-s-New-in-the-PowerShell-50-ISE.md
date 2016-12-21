@@ -1,15 +1,16 @@
 ---
-title: "O que há de novo no ISE do PowerShell 50"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "O que há de novo no ISE do PowerShell 50"
+ms.technology: powershell
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 957bf31c4d1d78e1df627fbddf03ce7d97083f1b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8b1ebcbf3c4aff811356c48f965b3473247b055a
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell

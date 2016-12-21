@@ -1,15 +1,16 @@
 ---
-title: Apresentando o Windows PowerShell ISE
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Apresentando o Windows PowerShell ISE
+ms.technology: powershell
 ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
-ms.openlocfilehash: e12348d8230549766a04d9995acaaee7213d8808
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 208ffd38e255c082499abdc2dd45fd2c893e7f5f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="introducing-the-windows-powershell-ise"></a>Apresentando o Windows PowerShell ISE

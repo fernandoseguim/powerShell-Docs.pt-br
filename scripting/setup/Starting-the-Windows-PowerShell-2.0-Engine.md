@@ -1,15 +1,16 @@
 ---
-title: Iniciando o Mecanismo do Windows PowerShell 2.0
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Iniciando o Mecanismo do Windows PowerShell 2.0
+ms.technology: powershell
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: dedd8c3192c777faac82cd87fd333fd5ab8a4ebf
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 4f388bc2e397d12b73718e6bc326bb448ed3ae16
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Iniciando o Mecanismo do Windows PowerShell 2.0

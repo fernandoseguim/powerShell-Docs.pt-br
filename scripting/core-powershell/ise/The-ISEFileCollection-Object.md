@@ -1,15 +1,16 @@
 ---
-title: O objeto ISEFileCollection
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: O objeto ISEFileCollection
+ms.technology: powershell
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
-ms.openlocfilehash: 01de8e108c5b54a192462779a31b0d8b07687705
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: eb88b6256d1d053e4c5c28439d3a80552883204f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="the-isefilecollection-object"></a>O objeto ISEFileCollection

@@ -1,15 +1,16 @@
 ---
-title: Manipulando itens diretamente
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Manipulando itens diretamente
+ms.technology: powershell
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: f462f195e1128cd67be8073fe0755b5158fee970
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: e99ea91b6e17ab898815480d615b23cbd29061d5
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="manipulating-items-directly"></a>Manipulando itens diretamente

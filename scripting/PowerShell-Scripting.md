@@ -1,14 +1,15 @@
 ---
-title: Scripts do PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e5ad9190ae620e511258675ad7e65ec59018d89f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Scripts do PowerShell
+ms.technology: powershell
+ms.openlocfilehash: 2dde8bdf8dda74648ea8ea7891dd3c7b96393e8a
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="powershell"></a>PowerShell
@@ -56,3 +57,4 @@ Encontre nesta seção:
 -  Os [Fluxos de trabalho do PowerShell](core-powershell/workflows-guide.md)
 -  O [PowerShell Web Access](core-powershell/web-access.md)
 -  O [Glossário do PowerShell](Windows-PowerShell-Glossary.md)
+

@@ -1,15 +1,16 @@
 ---
-title: Criando uma caixa de entrada personalizada
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Criando uma caixa de entrada personalizada
+ms.technology: powershell
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-ms.openlocfilehash: f7e27957db90430b4f550e56df18c227b2971a0d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 7fcb3246e685d4f939ad6232d3afbd56feea96fe
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="creating-a-custom-input-box"></a>Criando uma caixa de entrada personalizada

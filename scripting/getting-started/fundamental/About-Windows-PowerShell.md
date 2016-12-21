@@ -1,15 +1,16 @@
 ---
-title: Sobre o Windows PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Sobre o Windows PowerShell
+ms.technology: powershell
 ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
-ms.openlocfilehash: 7c2c69b128aca00235330796c1f8a46cb81a3c5f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f00627072543ca2b2ddcd27ea4220f9368046afd
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="about-windows-powershell"></a>Sobre o Windows PowerShell

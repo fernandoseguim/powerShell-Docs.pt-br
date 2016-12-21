@@ -1,15 +1,16 @@
 ---
-title: Instalar o Mecanismo do Windows PowerShell 2.0
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Instalar o Mecanismo do Windows PowerShell 2.0
+ms.technology: powershell
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: 7bb4a7458bb035a16ccb650fa422d9c318eab01a
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a59cc4ff26d6c5d5d05b4186cec1fb909751418e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Mecanismo do Windows PowerShell 2.0

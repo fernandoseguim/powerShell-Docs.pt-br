@@ -1,15 +1,16 @@
 ---
-title: Novidades no Windows PowerShell 50
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Novidades no Windows PowerShell 50
+ms.technology: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
-ms.openlocfilehash: b3823319cef457c7d04ebdaf521857f1f3e096b9
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f5413c0638ff297d4505ba2b25fcbd203f56530d
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="what39s-new-in-windows-powershell"></a>Novidades no Windows PowerShell
