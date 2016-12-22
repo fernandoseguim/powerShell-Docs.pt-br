@@ -85,7 +85,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_repo.en-us",
-      "url": "https://github.com/PowerShell/PowerShell-Docs",
+      "url": "https://github.com/PowerShell/powerShell-Docs",
       "branch": "live",
       "branch_mapping": {
         "live": "live",
