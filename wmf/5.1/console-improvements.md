@@ -1,5 +1,5 @@
 ---
-title: Melhorias do Console no WMF 5.1 (Preview)
+title: Melhorias do Console no WMF 5.1
 ms.date: 2016-07-13
 keywords: PowerShell, DSC, WMF
 description: 
@@ -8,11 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 574fec8e1f4948021988d8489532d7325277fed6
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: d3f38b7f5d77717e0bec46132a3a521c2d4c0d12
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
-# <a name="console-improvements-in-wmf-51-preview"></a>Melhorias do Console no WMF 5.1 (Preview)#
+# <a name="console-improvements-in-wmf-51"></a>Melhorias do Console no WMF 5.1#
 
 ## <a name="powershell-console-improvements"></a>Melhorias do console do PowerShell
 

@@ -1,15 +1,16 @@
 ---
-title: ISE (Ambiente de Script Integrado) do Windows PowerShell
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: ISE (Ambiente de Script Integrado) do Windows PowerShell
+ms.technology: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 411d7cce5c93d274ab1f10d77f5efba2154c74a8
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: ce6f084ee1f7e8f086ef5c3a6202cbf7070431db
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Ambiente de script integrado do Windows PowerShell (ISE)

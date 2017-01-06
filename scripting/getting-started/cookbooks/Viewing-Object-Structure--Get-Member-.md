@@ -1,15 +1,16 @@
 ---
-title: Exibindo a estrutura do objeto com Get Member
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Exibindo a estrutura do objeto Get Member
+ms.technology: powershell
 ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
-ms.openlocfilehash: 041b58f5fcfdf2225704adcb943de864c94502c1
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f260db2ad638e8448198de43a348a879942f27dc
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="viewing-object-structure-get-member"></a>Exibindo a estrutura do objeto (Get-Member)

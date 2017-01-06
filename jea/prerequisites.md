@@ -1,126 +1,103 @@
 ---
-description: 
-manager: dongill
+manager: carmonm
 ms.topic: article
-author: jpjofre
+author: rpsqrd
+ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-06-22
-title: "pré-requisitos"
+ms.date: 2016-12-05
+title: "Pré-requisitos do JEA"
 ms.technology: powershell
-ms.openlocfilehash: 6cd57c2fab63d2184cb5c792b63df99dbd782235
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: c709b3692705db327245e4e1b3fde800ac7d57a9
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
-## <a name="initial-state"></a>Estado Inicial
-Antes de iniciar esta seção, verifique o seguinte:
+> Aplica-se a: Windows PowerShell 5.0
 
-1. O JEA está disponível no seu sistema. Confira o [LEIAME](./README.md) para ver os sistemas operacionais com suporte e os downloads necessários.
-2. Você tem direitos administrativos no computador no qual está experimentando o JEA.
-3. O computador está ingressado no domínio.
-Consulte a seção [Criando um Controlador de Domínio](#creating-a-domain-controller) para configurar rapidamente um novo domínio em um servidor se você ainda não tiver um.
+O Just Enough Administration é um recurso incluído com o Windows PowerShell 5.0 e posteriores.
+Este tópico descreve os pré-requisitos que devem ser atendidos para começar a usar o JEA.
+
+## <a name="install-jea"></a>Instalar o JEA
+O JEA está disponível com o Windows PowerShell 5.0 e posteriores, mas para a funcionalidade completa é recomendado que você instale a versão mais recente do PowerShell disponível para o seu sistema.
+A tabela a seguir descreve a disponibilidade do JEA em cada sistema operacional com suporte.
+
+Sistema operacional          | Disponibilidade do JEA
+--------------------------|------------------------------------------------------
+Windows Server 2016       | Pré-instalado
+Windows Server 2012 R2    | Funcionalidade completa com o WMF 5.1
+Windows Server 2012       | Funcionalidade completa com o WMF 5.1
+Windows Server 2008 R2    | Funcionalidade completa com o WMF 5.1
+Windows 10 1607           | Pré-instalado
+Windows 10 1603, 1511     | Pré-instalado, com funcionalidade reduzida<sup>1</sup>
+Windows 10 1507           | Não disponível
+Windows 8, 8.1            | Funcionalidade completa com o WMF 5.1
+Windows 7                 | Funcionalidade limitada<sup>2</sup> com o WMF 5.1
+
+<sup>1</sup> As versões 1511 e 1603 do Windows 10 não oferecem suporte aos seguintes recursos do JEA: execução como uma conta de serviço gerenciado de grupo, regras de acesso condicional nas configurações de sessão, a unidade do usuário e a concessão de acesso a contas de usuário local.
+Para obter suporte para esses recursos, atualize o Windows para a versão 1607 (Atualização de Aniversário) ou superior.
+
+<sup>2</sup> O JEA não pode ser configurado para usar contas virtuais no Windows 7.
+
+### <a name="check-which-version-of-powershell-is-installed"></a>Verificar qual versão do PowerShell que está instalada
+Para verificar qual a versão do PowerShell que está instalada em seu sistema, verifique a variável `$PSVersionTable` em um prompt do Windows PowerShell.
+
+```powershell
+PS C:\> $PSVersionTable.PSVersion
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      14393  1000
+```
+
+Você está pronto para usar o JEA se a versão *Principal* for maior ou igual a **5**.
+Para obter a melhor experiência e ter acesso a todos os recursos mais recentes, é recomendável que você atualize para a versão **5.1** do PowerShell assim que possível.
+
+### <a name="install-windows-management-framework"></a>Instalar o Windows Management Framework
+Se estiver executando uma versão mais antiga do PowerShell, você precisará atualizar o sistema com a atualização mais recente do WMF (Windows Management Framework).
+Os pacotes de atualização e um link para as notas de versão mais recentes do WMF estão disponíveis no [Centro de Download](https://aka.ms/WMF5).
+
+É altamente recomendável que você teste a compatibilidade da sua carga de trabalho com WMF antes de atualizar todos os seus servidores.
+
+Os usuários do Windows 10 devem instalar as atualizações mais recentes do recurso para obter a versão atual do Windows PowerShell.
 
 ## <a name="enable-powershell-remoting"></a>Habilitar a Comunicação Remota do PowerShell
-O gerenciamento com o JEA ocorre por meio da comunicação remota do PowerShell.
-Execute o seguinte em uma janela de Administrador do PowerShell para verificar se está habilitado e configurado corretamente:
+A Comunicação Remota do PowerShell fornece a base na qual o JEA é criado.
+Portanto, é necessário garantir que a comunicação remota do PowerShell esteja habilitada e [devidamente protegida](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) em seu sistema antes de usar o JEA.
 
-```PowerShell
+A Comunicação Remota do PowerShell é habilitada por padrão no Windows Server 2012, 2012 R2 e 2016.
+Você pode habilitar a Comunicação Remota do PowerShell executando o seguinte comando em uma janela elevada do PowerShell.
+
+```powershell
 Enable-PSRemoting
 ```
 
-Se você não estiver familiarizado com a comunicação remota do PowerShell, seria uma boa ideia executar `Get-Help about_Remote` para saber mais sobre esse importante conceito básico.
-
-## <a name="identify-your-users-or-groups"></a>Identificar os Usuários ou Grupos
-Para demonstrar o JEA em ação, você precisa identificar os outros usuários e grupos não administradores que serão usados em todo este guia.
-
-Se você estiver usando um domínio existente, identifique ou crie alguns grupos e usuários não privilegiados.
-Você concederá acesso para esses usuários não administradores ao JEA.
-Sempre que você consultar a variável `$NonAdministrator` na parte superior de um script, atribua-a aos usuários ou grupos de não administradores selecionados.
-
-Se você criou um novo domínio do zero, será muito mais fácil.
-Use a seção [Configurar usuários e grupos](creating-a-domain-controller.md#set-up-users-and-groups) no apêndice para criar usuários e grupos não administradores.
-Os valores padrão de `$NonAdministrator` serão os grupos criados nessa seção.
-
-## <a name="set-up-maintenance-role-capability-file"></a>Configurar o arquivo de Capacidade de Função de manutenção
-Execute os seguintes comandos do PowerShell para criar o arquivo de Capacidade de Função de demonstração que usaremos para a próxima seção.
-Posteriormente neste guia, você aprenderá sobre o que esse arquivo faz.
-
-```PowerShell
-# Fields in the role capability
-$MaintenanceRoleCapabilityCreationParams = @{
-    Author = 'Contoso Admin'
-    CompanyName = 'Contoso'
-    VisibleCmdlets = 'Restart-Service'
-    FunctionDefinitions =
-            @{ Name = 'Get-UserInfo'; ScriptBlock = { $PSSenderInfo } }
-}
-
-# Create the demo module, which will contain the maintenance Role Capability File
-New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module" -ItemType Directory
-New-ModuleManifest -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\Demo_Module.psd1"
-New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities" -ItemType Directory
-
-# Create the Role Capability file
-New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc" @MaintenanceRoleCapabilityCreationParams
-```
-
-## <a name="create-and-register-demo-session-configuration-file"></a>Criar e registrar um arquivo de configuração de sessão de demonstração
-Execute os seguintes comandos para criar e registrar o arquivo de Configuração de Sessão de demonstração que usaremos na próxima seção.
-Posteriormente neste guia, você aprenderá sobre o que esse arquivo faz.
-
-```PowerShell
-# Determine domain
-$domain = (Get-CimInstance -ClassName Win32_ComputerSystem).Domain
-
-# Replace with your non-admin group name
-$NonAdministrator = "$domain\JEA_NonAdmin_Operator"
-
-# Specify the settings for this JEA endpoint
-# Note: You will not be able to use a virtual account if you are using WMF 5.0 on Windows 7 or Windows Server 2008 R2
-$JEAConfigParams = @{
-    SessionType = 'RestrictedRemoteServer'
-    RunAsVirtualAccount = $true
-    RoleDefinitions = @{
-        $NonAdministrator = @{ RoleCapabilities = 'Maintenance' }
-    }
-    TranscriptDirectory = "$env:ProgramData\JEAConfiguration\Transcripts"
-}
-
-# Set up a folder for the Session Configuration files
-if (-not (Test-Path "$env:ProgramData\JEAConfiguration"))
-{
-    New-Item -Path "$env:ProgramData\JEAConfiguration" -ItemType Directory
-}
-
-# Specify the name of the JEA endpoint
-$sessionName = 'JEA_Demo'
-
-if (Get-PSSessionConfiguration -Name $sessionName -ErrorAction SilentlyContinue)
-{
-    Unregister-PSSessionConfiguration -Name $sessionName -ErrorAction Stop
-}
-
-New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc" @JEAConfigParams
-
-# Register the session configuration
-Register-PSSessionConfiguration -Name $sessionName -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc"
-```
-
-## <a name="enable-powershell-module-logging-optional"></a>Habilitar o registro em log do Módulo do PowerShell (opcional)
+## <a name="enable-powershell-module-and-script-block-logging-optional"></a>Habilitar o módulo do PowerShell e o registro em log de bloco de script (opcional)
 As etapas a seguir habilitam o log para todas as ações do PowerShell em seu sistema.
-Você não precisa habilitar isso para que o JEA funcione, mas será útil na seção [Relatando no JEA](reporting-on-jea.md).
+O registro em log do Módulo do PowerShell não é necessário para o JEA, no entanto é altamente recomendável que você o ative para garantir que os comandos que os usuários executam sejam registrados em um local central.
 
-1. Abra o Editor de diretiva de Grupo Local
-2. Navegue para “Configuração do Computador\Modelos Administrativos\Componentes do Windows\Windows PowerShell”
-3. Clique duas vezes em "Ativar o Registro de Log de Módulo"
-4. Clique em “Habilitado”
-5. Na seção Opções, clique em "Mostrar" ao lado dos Nomes de Módulo
-6. Digite “\*” na janela pop-up. Isso significa que o PowerShell registrará comandos de todos os módulos.
-7. Clique em OK e aplique a política
+Você pode configurar a política de Registro em Log do Módulo do PowerShell usando a Política de Grupo.
 
-Observação: você também pode habilitar transcrição do PowerShell de todo o sistema por meio da Política de Grupo.
+1. Abra o Editor de Política de Grupo Local em uma estação de trabalho ou um Objeto de Política de Grupo no Console de Gerenciamento de Política de Grupo em um Controlador de Domínio do Active Directory
+2. Navegue até **Configuração do Computador\\Modelos Administrativos\\Componentes do Windows\\Windows PowerShell**
+3. Clique duas vezes em **Habilitar o Log de Módulo**
+4. Clique em **Habilitado**
+5. Na seção Opções, clique em **Mostrar** ao lado dos Nomes de Módulo
+6. Digite "**\***" na janela pop-up. Isso instrui o PowerShell a registrar comandos de todos os módulos.
+7. Clique em **OK** para definir a política
+8. Clique duas vezes em **Ativar Registro de Bloco de Script do PowerShell**
+9. Clique em **Habilitado**
+10. Clique em **OK para definir a política
+11. (Somente em computadores ingressados no domínio) Execute **gpupdate** ou aguarde a Política de Grupo processar a política atualizada e aplicar as configurações
 
-**Parabéns, você configurou seu computador com o ponto de extremidade de demonstração e está pronto para começar a usar o JEA!**
+Você também pode habilitar transcrição do PowerShell de todo o sistema por meio da Política de Grupo.
 
+## <a name="next-steps"></a>Próximas etapas
+
+- [Criar um arquivo de capacidade de função](role-capabilities.md)
+- [Criar um arquivo de configuração de sessão](session-configurations.md)
+
+## <a name="see-also"></a>Consulte também
+- [Informações adicionais sobre a Comunicação Remota do PowerShell e segurança do WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
+- [Postagem de blog sobre segurança *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)

@@ -1,15 +1,16 @@
 ---
-title: Criando objetos .NET e COM New Object
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Criando objetos .NET e COM New Object
+ms.technology: powershell
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
-ms.openlocfilehash: f35cfa6b547c63fc94c370f21ee83987468a894d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: b56bb7fe2f5371590f8bcfde4c1fdc54e0bce044
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Criando objetos .NET e COM (New-Object)

@@ -1,15 +1,16 @@
 ---
-title: "Apêndice 2   Criar um atalho do PowerShell personalizado"
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: "Apêndice 2 Criar um atalho do PowerShell personalizado"
+ms.technology: powershell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: da02415aaaf0e308abb3a9c96bb19591701e3408
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 299c0721162621b72d032e0bb5603d535d341fb9
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Apêndice 2: Criar um atalho do PowerShell personalizado

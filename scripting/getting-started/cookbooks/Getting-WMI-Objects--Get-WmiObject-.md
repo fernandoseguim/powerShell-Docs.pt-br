@@ -1,15 +1,16 @@
 ---
-title: Obtendo objetos WMI com Get WmiObject
-ms.date: 2016-05-11
-keywords: PowerShell, cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: PowerShell, cmdlet
+ms.date: 2016-12-12
+title: Obtendo objetos WMI Get WmiObject
+ms.technology: powershell
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: 517b07a9ebca91029381684beaec95d37934f3ce
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a19739cf857dbe8ef6f0f4759454a1c960343861
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)

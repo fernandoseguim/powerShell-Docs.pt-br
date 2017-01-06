@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 64fc906cf0328d7be3aba7d5d6819640b4dcb4fa
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: cec3aaf4e57d1efc3e29880e4a7f078bd1840901
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0
@@ -21,7 +21,7 @@ O Gerenciador de Configurações Local (LCM) é o mecanismo de Configuração de
 O exemplo a seguir lista as propriedades do Gerenciador de Configurações Local que podem ser definidas ou recuperadas.
  
 * **AllowModuleOverwrite**: controla se as novas configurações baixadas do servidor de configuração têm permissão para substituir as antigas no nó de destino. Os valores possíveis são True e False.
-* **CertificateID**: um GUID é o certificado usado para proteger credenciais para acessar a configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)
+* **CertificateID**: a impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)
 * **ConfigurationID**: indica um GUID que é usado para obter um arquivo de configuração específico de um servidor configurado como um servidor de “pull”. O GUID garante que o arquivo de configuração correto seja acessado.
 * **ConfigurationMode**: especifica como o Gerenciador de Configurações Local realmente aplica a configuração aos nós de destino. Pode usar os seguintes valores:
     - **ApplyOnly**: com essa opção, a DSC aplicará a configuração e não fará nada além disso, a menos que uma nova configuração seja detectada quando você enviar uma nova configuração diretamente para o destino de nó (“push”) ou se tiver configurado um servidor de “pull” e a DSC descobrir uma nova configuração quando verificar com o servidor de “pull”. Nenhuma ação será executada se a configuração de destino estiver dessincronizada.

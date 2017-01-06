@@ -1,5 +1,5 @@
 ---
-title: Problemas conhecidos no WMF 5.1 (Preview)
+title: Problemas conhecidos no WMF 5.1
 ms.date: 2016-07-13
 keywords: PowerShell, DSC, WMF
 description: 
@@ -8,13 +8,13 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: e2f19ed2fa2d2070860438b128513a463d95adae
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8f1b550e92c3c280b84664e0b1f9695172370522
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
-# <a name="known-issues-in-wmf-51-preview"></a>Problemas conhecidos no WMF 5.1 (Preview) #
+# <a name="known-issues-in-wmf-51"></a>Problemas conhecidos no WMF 5.1 #
 
-> Observação: essas informações são preliminares e estão sujeitas a alteração.
+> Observação: essas informações estão sujeitas a alteração.
 
 ## <a name="starting-powershell-shortcut-as-administrator"></a>Iniciando o atalho do PowerShell como administrador
 Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".

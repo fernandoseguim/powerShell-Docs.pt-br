@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e62d4bf50e122d2e381cebf8fa594dda4f888e47
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f419394b7699544567bf17945a55773ed3024f24
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
@@ -145,10 +145,12 @@ A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração sign
 >**Observação**: em um cenário PUSH, existe um bug na versão atual que torna necessário definir uma propriedade ConfigurationID no arquivo de metaconfiguração para nós que nunca foram registrados com um servidor pull. Isso forçará o uso do protocolo de Servidor de Pull V1 e evitará mensagens de falha de registro.
 
 ## <a name="placing-configurations-and-resources"></a>Colocando configurações e recursos
+
 Após a instalação do servidor pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente. 
 
 ### <a name="dsc-resource-module-package-format"></a>Formato de pacote do módulo de recursos DSC
-Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir: **{Nome do Módulo}_{Versão do Módulo}.zip**. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
+
+Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 Use `new-dscchecksum {module zip file}` para criar um arquivo de soma de verificação para o módulo adicionado recentemente.
 

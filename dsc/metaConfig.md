@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e978ee828fe3c91be52077442c5781b7a20e50be
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 13ff9acefa048e3b01c64150d67a2f14ec501284
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
@@ -66,7 +66,7 @@ Além de especificar servidores de pull e configurações parciais, todas as pro
 | ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Os valores possíveis são __"ApplyOnly"__,__"ApplyandMonitior"(default)__ e __"ApplyandAutoCorrect"__. <ul><li>__ApplyOnly__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando o pull de uma nova configuração for efetuado de um servidor. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyOnly__ entre em vigor. </li><li> __ApplyAndMonitor__: este é o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyAndMonitor__ entre em vigor.</li><li>__ApplyAndAutoCorrect__: a DSC aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.</li></ul>| 
 | ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são __"ContinueConfiguration(default)"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continue a aplicar a configuração atual após a reinicialização do computador.</li><li>__StopConfiguration__: interrompa a configuração atual após a reinicialização do computador.</li></ul>| 
 | RefreshMode| cadeia de caracteres| Especifica como o LCM obtém as configurações. Os valores possíveis são __"Disabled"__, __"Push(default)"__ e __"Pull"__. <ul><li>__Disabled__: as configurações DSC estão desabilitadas para este nó.</li><li> __Push__: as configurações são iniciadas chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). A configuração é aplicada imediatamente ao nó. Este é o valor padrão.</li><li>__Pull__: o nó está configurado para verificar regularmente as configurações de um servidor de pull. Se essa propriedade estiver definida como __Pull__, você deverá especificar um servidor de pull em um bloco __ConfigurationRepositoryWeb__ ou __ConfigurationRepositoryShare__. Para obter mais informações sobre servidores de pull, consulte [Configurando um servidor de pull de DSC](pullServer.md).</li></ul>| 
-| CertificateID| cadeia de caracteres| Um GUID que especifica um certificado usado para proteger credenciais para acessar a configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
+| CertificateID| cadeia de caracteres| A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
 | ConfigurationID| cadeia de caracteres| Um GUID que identifica o arquivo de configuração que deve ser obtido de um servidor de pull no modo de pull. O nó efetuará o pull das configurações no servidor de pull se o nome do MOF de configuração for ConfigurationID.mof.<br> __Observação:__ se você definir essa propriedade, registrar o nó com um servidor de pull usando __RegistrationKey__ não funcionará. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).| 
 | RefreshFrequencyMins| Uint32| O intervalo de tempo, em minutos, em que o LCM verifica um servidor de pull para obter configurações atualizadas. Esse valor será ignorado se o LCM não estiver configurado no modo de pull. O valor padrão é 30.<br> __Observação:__ o valor dessa propriedade deve ser um múltiplo do valor da propriedade __ConfigurationModeFrequencyMins__ ou o valor da propriedade __ConfigurationModeFrequencyMins__ deve ser um múltiplo do valor dessa propriedade.| 
 | AllowModuleOverwrite| bool| __$TRUE__ se as novas configurações baixadas do servidor de configuração tiverem permissão para substituir as antigas no nó de destino. Caso contrário, $FALSE.| 
@@ -94,7 +94,7 @@ Para definir um servidor de configuração baseado na Web, crie um bloco **Confi
 |Propriedade|Tipo|Descrição|
 |---|---|---| 
 |AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
-|CertificateID|cadeia de caracteres|Um GUID que representa o certificado usado para autenticar o servidor.|
+|CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |ConfigurationNames|String[]|Uma matriz de nomes de configurações que serão retiradas por pull pelo nó de destino. Serão usadas apenas se o nó for registrado com o servidor de pull usando uma **RegistrationKey**. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).|
 |RegistrationKey|cadeia de caracteres|Um GUID que registra o nó com o servidor de pull. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
@@ -113,7 +113,7 @@ Para definir um servidor de recurso baseado na Web, crie um bloco **ResourceRepo
 |Propriedade|Tipo|Descrição|
 |---|---|---|
 |AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
-|CertificateID|cadeia de caracteres|Um GUID que representa o certificado usado para autenticar o servidor.|
+|CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o servidor de pull. Para obter mais informações, consulte Como registrar um nó com um servidor de pull de DSC.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
  
@@ -121,7 +121,7 @@ Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepo
 
 |Propriedade|Tipo|Descrição|
 |---|---|---|
-|Credential|MSFT_Credential|A credencial usada para autenticar para o compartilhamento SMB.|
+|Credential|MSFT_Credential|A credencial usada para autenticar para o compartilhamento SMB. Para obter um exemplo de passagem de credenciais, consulte [Configurando um servidor de pull de SMB para DSC](pullServerSMB.md)|
 |SourcePath|cadeia de caracteres|O caminho do compartilhamento SMB.|
 
 ## <a name="report-server-blocks"></a>Blocos do servidor de relatório
@@ -131,7 +131,7 @@ Um servidor de relatório deve ser um serviço Web OData. Para definir um servid
 |Propriedade|Tipo|Descrição|
 |---|---|---| 
 |AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
-|CertificateID|cadeia de caracteres|Um GUID que representa o certificado usado para autenticar o servidor.|
+|CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |RegistrationKey|cadeia de caracteres|Um GUID que identifica o nó para o servidor de pull. Para obter mais informações, consulte Como registrar um nó com um servidor de pull de DSC.|
 |ServerURL|cadeia de caracteres|A URL do servidor de configuração.|
 

@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 35ac9b38086b12fb48844c56a488854f63529e21
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: df994500ce5f46d62f143af07d8ce86dddf44c3e
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurando um servidor de pull de SMB para DSC
@@ -135,7 +135,7 @@ O arquivo MOF de configuração no servidor de pull deve ser nomeado como _Confi
 
 >**Observação:** você deverá usar IDs de configuração se estiver usando um servidor de pull de SMB. Não há suporte para nomes de configuração para SMB.
 
-Todos os recursos exigidos pelo cliente devem ser colocados na pasta de compartilhamento de SMB como arquivos `.zip` arquivados.  
+Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta de compartilhamento SMB. 
 
 ## <a name="creating-the-mof-checksum"></a>Criando a soma de verificação de MOF
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta.
@@ -143,6 +143,67 @@ Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma 
 O arquivo de soma de verificação deve estar presente no mesmo diretório em que o arquivo MOF de configuração (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` por padrão) e ter o mesmo nome com a extensão `.checksum` anexada.
 
 >**Observação**: se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
+
+## <a name="setting-up-a-pull-client-for-smb"></a>Configurando um cliente de pull para SMB
+
+Para configurar um cliente que recebe as configurações e/ou recursos de um compartilhamento SMB, você configura o LCM (Gerenciador de Configurações Local) com blocos **ConfigurationRepositoryShare** e **ResourceRepositoryShare** que especificam o compartilhamento do qual efetuar o pull.
+
+Para obter mais informações sobre como configurar um LCM, consulte [Configurando um cliente de pull usando a ID de configuração](pullClientConfigID.md).
+
+>**Observação:** para simplificar, este exemplo usa o **PSDscAllowPlainTextPassword** para permitir a passagem de uma senha de texto não criptografado para o parâmetro **Credencial**. Para obter informações sobre como passar credenciais de forma mais segura, consulte [Opções de Credenciais nos Dados de Configuração](configDataCredentials.md).
+
+>**Observação:** você deve especificar uma **ConfigurationID** no bloco **Configurações** de uma metaconfiguração de um servidor de pull de SMB, mesmo que só esteja extraindo recursos.
+
+```powershell
+$secpasswd = ConvertTo-SecureString “Pass1Word” -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential (“TestUser”, $secpasswd)
+
+[DSCLocalConfigurationManager()]
+configuration SmbCredTest
+{
+    Node $AllNodes.NodeName
+    {
+        Settings
+        {
+            RefreshMode = 'Pull'
+            RefreshFrequencyMins = 30 
+            RebootNodeIfNeeded = $true
+            ConfigurationID    = '16db7357-9083-4806-a80c-ebbaf4acd6c1'
+        }
+         
+         ConfigurationRepositoryShare SmbConfigShare      
+        {
+            SourcePath = '\\WIN-E0TRU6U11B1\DscSmbShare'
+            Credential = $mycreds
+        }
+
+        ResourceRepositoryShare SmbResourceShare
+        {
+            SourcePath = '\\WIN-E0TRU6U11B1\DscSmbShare'
+            Credential = $mycreds
+            
+        }      
+    }
+}
+
+$ConfigurationData = @{
+
+    AllNodes = @(
+
+        @{
+
+            #the "*" means "all nodes named in ConfigData" so we don't have to repeat ourselves
+
+            NodeName="localhost"
+
+            PSDscAllowPlainTextPassword = $true
+
+        })
+
+        
+
+}
+```
 
 ## <a name="acknowledgements"></a>Agradecimentos
 
