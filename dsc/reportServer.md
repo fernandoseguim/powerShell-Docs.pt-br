@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 81b8a150e35728d35af34b75493f9288c39a411d
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 17b56a0ce25d3154e21f18269926a0c41aae833b
+ms.sourcegitcommit: d7b28f28a09caa7fa48b0f66c5c437f128ce316f
 translationtype: HT
 ---
 # <a name="using-a-dsc-report-server"></a>Usando um servidor de relatório de DSC
@@ -94,7 +94,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Obtendo dados de relatório
 
-Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço Web. Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web no relatório a seguir: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID= 'MyNodeAgentId')/Reports` em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios. É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) no nó em questão.
+Relatórios enviados para o servidor de pull são inseridos em um banco de dados no servidor. Os relatórios estão disponíveis por meio de chamadas para o serviço Web. Para recuperar os relatórios de um nó específico, envie uma solicitação HTTP para o serviço Web no relatório a seguir: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` em que `MyNodeAgentId` é a AgentId do nó para o qual você deseja obter relatórios. É possível obter a AgentID para um nó chamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) no nó em questão.
 
 Os relatórios são gerados como uma matriz de objetos JSON.
 
@@ -104,7 +104,7 @@ O script a seguir gera os relatórios para o nó no qual é executado:
 function GetReport
 {
     param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
-    $requestUri = "$serviceURL/Nodes(AgentID= '$AgentId')/Reports"
+    $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
                -ErrorAction SilentlyContinue -ErrorVariable ev
