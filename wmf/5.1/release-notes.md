@@ -8,8 +8,8 @@ author: jkeithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 15de6aca52624134998b2d08fcfff9e1bcc1af7b
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 0a499bbfd2517c1f44e41f1096cda0c23b1c3df8
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="windows-management-framework-wmf-51-release-notes"></a>Notas de versão do Windows Management Framework (WMF) 5.1 #
@@ -25,7 +25,7 @@ O WMF 5.1 inclui os componentes do PowerShell, WMI, do WinRM e do SIL (Inventár
 
 **Observações importantes:**
 
-- **O WMF 5.1 exige o .NET Framework 4.5**. A instalação terá êxito, mas ocorrerá falha nos principais recursos se o .NET 4.5 não estiver instalado. As instruções estão disponíveis no tópico [Instalar e Configurar WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- **O WMF 5.1 exige o .NET Framework 4.6**. A instalação terá êxito, mas ocorrerá falha nos principais recursos se o .NET 4.6 não estiver instalado. As instruções estão disponíveis no tópico [Instalar e Configurar WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
 - A visualização do WMF 5.1 deve ser desinstalada antes de instalar a versão RTM do WMF 5.1.
 - O WMF 5.1 pode ser instalado diretamente sobre o WMF 5.0 ou o WMF 4.0.
 - Não é __necessário__ instalar o WMF 4.0 antes de instalar o WMF 5.1 no Windows 7 e no Windows Server 2008 R2. Este era um problema na versão de visualização do WMF 5.1 e ele foi resolvido.  

@@ -8,8 +8,8 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 8f1b550e92c3c280b84664e0b1f9695172370522
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: b341f57592feb183eb0e7228cdc08460e370369f
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="known-issues-in-wmf-51"></a>Problemas conhecidos no WMF 5.1 #
@@ -18,7 +18,7 @@ translationtype: HT
 
 ## <a name="starting-powershell-shortcut-as-administrator"></a>Iniciando o atalho do PowerShell como administrador
 Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".
-Abra novamente o atalho como não administrador. Em seguida, ele funcionará também como administrador.
+Abra novamente o atalho como não administrador. Agora ele funciona até mesmo como administrador.
 
 ## <a name="pester"></a>Pester
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
@@ -28,7 +28,7 @@ Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pe
 
 ## <a name="operation-validation"></a>Validação da operação 
 
-* Update-Help falhará no módulo Microsoft.PowerShell.Operation.Validation devido a um URI de ajuda que não funciona
+* O Update-Help falha no módulo Microsoft.PowerShell.Operation.Validation devido a um URI de ajuda que não funciona
 
 ## <a name="dsc-after-uninstall-wmf"></a>DSC após desinstalar o WMF 
 * A desinstalação do WMF não exclui da pasta de configuração os documentos MOF da DSC. A DSC não funcionará corretamente se os documentos MOF contêm propriedades mais recentes, que não estão disponíveis nos sistemas mais antigos. Nesse caso, execute o seguinte script no console do PowerShell com privilégios elevados para limpar os estados da DSC.

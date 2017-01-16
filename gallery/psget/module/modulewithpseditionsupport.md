@@ -9,8 +9,8 @@ ms.date: 2016-10-14
 contributor: manikb
 title: modulewithpseditionsupport
 ms.technology: powershell
-ms.openlocfilehash: d502427a3685467bdafb875ea84b9389483746e4
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 042df39b52cfb1cce9a44689ca40b42763321853
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com as edições compatíveis do PowerShell
@@ -40,12 +40,12 @@ SerializationVersion           1.1.0.1
 
 ```powershell
 New-ModuleManifest -Path .\TestModuleWithEdition.psd1 -CompatiblePSEditions Desktop,Core -PowerShellVersion 5.1
-$moduleInfo = Test-ModuleManifest -Path \TestModuleWithEdition.psd1
-$moduleInfo.CompatiblePSEditions
+$ModuleInfo = Test-ModuleManifest -Path .\TestModuleWithEdition.psd1
+$ModuleInfo.CompatiblePSEditions
 Desktop
 Core
 
-$moduleInfo | Get-Member CompatiblePSEditions
+$ModuleInfo | Get-Member CompatiblePSEditions
 
    TypeName: System.Management.Automation.PSModuleInfo
 
@@ -74,7 +74,7 @@ Core
 ## <a name="module-authors-can-publish-a-single-module-targeting-to-either-or-both-powershell-editions-desktop-and-core"></a>Os autores de módulo podem publicar um único módulo destinado a uma ou ambas as edições do PowerShell (Desktop e Core) 
 
 Um único módulo pode trabalhar em edições de Desktop e Core, nesse módulo, o autor tem que adicionar a lógica necessária em qualquer RootModule ou no manifesto do módulo usando a variável $PSEdition.
-Os módulos podem ter dois conjuntos de dlls compilados visando o CoreCLR e FullCLR.
+Os módulos podem ter dois conjuntos de DLLs compilados visando o CoreCLR e FullCLR.
 Aqui estão as duas opções para empacotar seu módulo com a lógica de carregamento de dlls apropriadas.
 
 ### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>Opção 1: empacotando um módulo para o direcionamento de várias versões e várias edições do PowerShell
