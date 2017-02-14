@@ -38,20 +38,6 @@
       }
     },
     {
-      "docset_name": "PowerShell_PowerShell-docs_reference",
-      "build_source_folder": "reference",
-      "build_output_subfolder": "reference",
-      "locale": "pt-br",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "op"
-    },
-    {
       "docset_name": "PowerShell_PowerShell-docs_scripting",
       "build_source_folder": "scripting",
       "build_output_subfolder": "scripting",
@@ -85,7 +71,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_repo.en-us",
-      "url": "https://github.com/PowerShell/powerShell-Docs",
+      "url": "https://github.com/PowerShell/PowerShell-Docs",
       "branch": "live",
       "branch_mapping": {
         "live": "live",
