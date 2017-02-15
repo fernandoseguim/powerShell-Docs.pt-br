@@ -1,8 +1,8 @@
 ---
 title: Falha de cmdlets do Gerenciador de Comutador de Rede
 contributor: vaibch
-ms.openlocfilehash: e32e31762b665a7e2c6f6938fe494cb6127d4264
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
+ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
 translationtype: HT
 ---
 Os cmdlets do Gerenciador de Comutador de Rede podem ser usados para gerenciar os comutadores de rede em WSMAN. Alguns cmdlets do módulo são capazes de aceitar valores de pipelines. Na Preview do 5.1 WMF, os cmdlets que podem aceitar o valor de pipeline não poderão ser executados quando os valores não forem passados pelos pipelines.
@@ -30,6 +30,7 @@ Os cmdlets funcionam bem quando o valor do parâmetro InputObject é passado pel
 $port = Get-CimInstance -Namespace root/interop -ClassName CIM_EthernetPort -CimSession $cimSession | Select-Object -First 1
 $port | Disable-NetworkSwitchEthernetPort -CimSession $cimSession
 ```
+
 - Enable-NetworkSwitchEthernetPort
 ```powershell
 $port = Get-CimInstance -Namespace root/interop -ClassName CIM_EthernetPort -CimSession $cimSession | Select-Object -First 1

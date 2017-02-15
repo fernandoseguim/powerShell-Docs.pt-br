@@ -1,6 +1,6 @@
 ---
 title: WMF (Windows Management Framework)
-ms.date: 2016-12-07
+ms.date: 2017-02-14
 keywords: PowerShell, WMF
 description: 
 ms.topic: article
@@ -8,8 +8,8 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: b652613561655c4cbd63342b0fcc495195f83a80
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 749dd8b19592cb5f40a5aed32d28edeb5cb2dfc9
+ms.sourcegitcommit: bb2c52577a519c0599a0b3c961f749fe0df70a45
 translationtype: HT
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
@@ -33,8 +33,10 @@ A instalação do WMF adiciona e/ou atualiza os seguintes recursos:
 
 Para saber mais sobre os vários aprimoramentos do PowerShell e outros componentes de um determinado WMF, consulte os links abaixo para examinar as notas de versão:
 
-- [WMF 5.1 (Visualização)](5.1/release-notes.md)
+- [Windows Management Framework 5.1](5.1/release-notes.md)
 - [Windows Management Framework 5.0](5.0/releasenotes.md)
+- [Windows Management Framework 4.0](https://download.microsoft.com/download/3/D/6/3D61D262-8549-4769-A660-230B67E15B25/Windows%20Management%20Framework%204%200%20Release%20Notes.docx)
+- [WMF 3.0](https://download.microsoft.com/download/E/7/6/E76850B8-DA6E-4FF5-8CCE-A24FC513FD16/WMF%203%20Release%20Notes.docx)
 
 ## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilidade do WMF entre sistemas operacionais Windows
 
