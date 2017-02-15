@@ -81,7 +81,6 @@
     "master-oldev",
     "live-oldev"
   ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/PowerShell/PowerShell-Docs",
   "skip_source_output_uploading": false,
   "dependent_repositories": [
     {
