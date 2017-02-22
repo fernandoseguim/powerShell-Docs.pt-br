@@ -8,11 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 581d80d476e918a78775291521abfd254703a7b7
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
+ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
 translationtype: HT
 ---
-#<a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
+# <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
 ## <a name="dsc-class-resource-improvements"></a>Melhorias de recursos de classe da DSC
 
@@ -25,7 +25,6 @@ No 5.1 WMF, corrigimos os seguintes problemas conhecidos:
 
 
 ## <a name="dsc-resource-debugging-improvements"></a>Melhorias de depuração de recursos da DSC
-
 No WMF 5.0, o depurador do PowerShell não interrompeu o método de recurso baseado em classe (Get/Set/Test) diretamente.
 No WMF 5.1, o depurador interromperá o método de recurso baseado em classe da mesma forma que faz com os métodos de recursos baseados em MOF.
 
@@ -37,16 +36,26 @@ Anteriormente, o cliente pull da DSC dava suporte apenas para SSL3.0 e TLS1.0 po
 Nas versões anteriores do WMF, as solicitações simultâneas de registros/relatórios em um servidor de pull da DSC durante o uso do banco de dados ESENT provocavam uma falha de registro e/ou relatório do LCM. Nesses casos, os logs de eventos no servidor de pull terão o erro "O nome da instância já está em uso."
 Isso ocorria porque um padrão incorreto era usado para acessar o banco de dados ESENT em um cenário Multi-Threaded. No WMF 5.1, esse problema foi corrigido. Os registros ou relatórios simultâneos (que envolvem o banco de dados ESENT) funcionarão bem no WMF 5.1. Esse problema é aplicável somente ao banco de dados ESENT e não se aplica ao banco de dados OLEDB. 
 
-##<a name="pull-partial-configuration-naming-convention"></a>Convenção de nomenclatura de configuração parcial de pull
+## <a name="enable-circular-log-on-esent-database-instance"></a>Habilitar o log Circular na instância do banco de dados ESENT
+Na versão anterior da DSC-PullServer, os arquivos de log do banco de dados ESENT preenchiam o espaço em disco do pullserver porque a instância do banco de dados estava sendo criada sem log circular. Nesta versão, o cliente terá a opção para controlar o comportamento de log circular da instância usando o web.config do pullserver. Por padrão, o CircularLogging será configurado como VERDADEIRO.
+```
+<appSettings>
+     <add key="dbprovider" value="ESENT" />
+    <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
+    <add key="CheckpointDepthMaxKB" value="512" />
+    <add key="UseCircularESENTLogs" value="TRUE" />
+  </appSettings>
+```
+## <a name="pull-partial-configuration-naming-convention"></a>Convenção de nomenclatura de configuração parcial de pull
 Na versão anterior, a convenção de nomenclatura para uma configuração parcial era que o nome do arquivo MOF no servidor de pull/serviço deveria ser compatível com o nome de configuração parcial especificado nas configurações do gerenciador de configuração local que, por sua vez, deve ser compatível com o nome de configuração inserido no arquivo MOF. 
 
 Confira os instantâneos abaixo:
 
-•   Definições da configuração local, que determina uma configuração parcial que um nó está autorizado a receber.
+•    Definições da configuração local, que determina uma configuração parcial que um nó está autorizado a receber.
 
 ![Metaconfiguração de exemplo](../images/MetaConfigPartialOne.png)
 
-•   Definição da configuração parcial de exemplo 
+•    Definição da configuração parcial de exemplo 
 
 ```PowerShell
 Configuration PartialOne
@@ -63,11 +72,11 @@ Configuration PartialOne
 PartialOne
 ```
 
-•   “ConfigurationName” inserido no arquivo MOF gerado.
+•    “ConfigurationName” inserido no arquivo MOF gerado.
 
 ![Arquivo mof de exemplo gerado](../images/PartialGeneratedMof.png)
 
-•   FileName no repositório de configuração de pull 
+•    FileName no repositório de configuração de pull 
 
 ![FileName no Repositório de Configuração](../images/PartialInConfigRepository.png)
 

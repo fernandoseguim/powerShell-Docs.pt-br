@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: f419394b7699544567bf17945a55773ed3024f24
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 802f9b0cde5d56ed3da327593753aedcf89e00f6
+ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
@@ -32,7 +32,7 @@ A maneira mais fácil de configurar um servidor de pull da Web é usar o recurso
 
 1. Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX. Instale o certificado no nó que se tornará o servidor de Pull de DSC no local padrão, que deve ser CERT: \LocalMachine\My. Anote a impressão digital do certificado.
-1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um, usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```' ou '```New-Guid```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, consulte a seção [Chave de Registro](#RegKey) abaixo.
+1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um, usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```' ou '```New-Guid```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para saber mais, veja a seção Chave de Registro abaixo.
 1. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta Example do módulo **xPSDesiredStateConfiguration** como Sample_xDscWebService.ps1). Esse script configura o servidor de pull.
   
 ```powershell

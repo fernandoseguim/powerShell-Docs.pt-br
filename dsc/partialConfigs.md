@@ -7,13 +7,13 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 02f1cc45f30c0892e777a9e05d87f440f628fbf5
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: fba9b3ed183d82cf532e2431de4a9e2c30243197
+ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
 translationtype: HT
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais da Configuração de Estado Desejado do PowerShell
 
->Aplica-se a: Windows PowerShell 5.0
+>Aplica-se a: Windows PowerShell 5.0 e posterior.
 
 No PowerShell 5.0, a Configuração de Estado Desejado (DSC) permite que as configurações sejam entregues em fragmentos e de várias fontes. O Gerenciador de Configurações Local (LCM) no nó de destino reúne os fragmentos antes de aplicá-los como uma única configuração. Essa capacidade permite compartilhar o controle de configuração entre equipes ou pessoas. Por exemplo, se duas ou mais equipes de desenvolvedores estiverem colaborando em um serviço, cada uma poderá querer criar configurações para gerenciar sua parte do serviço. Cada uma dessas configurações pode ser extraída de servidores de pull diferentes e adicionada em diferentes estágios do desenvolvimento. Configurações parciais também permitem que diferentes pessoas ou equipes controlem diferentes aspectos da configuração de nós sem a necessidade de coordenar a edição de um documento único de configuração. Por exemplo, uma equipe pode ser responsável por implantar uma VM e o sistema operacional, enquanto outra equipe pode implantar outros aplicativos e serviços em tal VM. Com configurações parciais, cada equipe pode criar sua própria configuração, sem complicações desnecessárias.
 
@@ -53,7 +53,7 @@ O **RefreshMode** para cada configuração parcial é definido como "Push". Os n
 
 ### <a name="publishing-and-starting-push-mode-partial-configurations"></a>Publicando e iniciando configurações parciais no modo de push
 
-A seguir, chame [Publish-DSCConfiguration](/reference/5.0/PSDesiredStateconfiguration/Publish-DscConfiguration.md) para cada configuração, passando as pastas que contêm os documentos de configuração como os parâmetros **Path**. O `Publish-DSCConfiguration` coloca os arquivos MOF de configuração para os nós de destino. Depois de publicar as duas configurações, é possível chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
+A seguir, chame [Publish-DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) para cada configuração, passando as pastas que contêm os documentos de configuração como os parâmetros **Path**. O `Publish-DSCConfiguration` coloca os arquivos MOF de configuração para os nós de destino. Depois de publicar as duas configurações, é possível chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
 
 Por exemplo, se você compilou os seguintes documentos MOF de configuração no nó de criação:
 
@@ -98,8 +98,7 @@ Id     Name            PSJobTypeName   State         HasMoreData     Location   
 17     Job17           Configuratio... Running       True            TestVM            Start-DscConfiguration...
 ```
 
->**Observação:** o usuário que executa as 
-
+>**Observação:** o usuário que estiver executando o cmdlet [Publish-DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) deve ter privilégios de administrador no nó de destino.
 
 ## <a name="partial-configurations-in-pull-mode"></a>Configurações parciais no modo de pull
 
@@ -194,7 +193,16 @@ Depois de criar a metaconfiguração, deve executá-la para criar um documento d
 
 ### <a name="naming-and-placing-the-configuration-documents-on-the-pull-server-configurationnames"></a>Nomeando e colocando os documentos de configuração no servidor de pull (ConfigurationNames)
 
-Os documentos de configuração parcial devem ser colocados na pasta especificada como o **ConfigurationPath** no arquivo `web.config` para o servidor de pull (geralmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Os documentos de configuração devem ser nomeados da seguinte maneira: `ConfigurationName.mof`, em que _ConfigurationName_ é o nome da configuração parcial. Para nosso exemplo, os documentos de configuração devem ser nomeados da seguinte maneira:
+Os documentos de configuração parcial devem ser colocados na pasta especificada como o **ConfigurationPath** no arquivo `web.config` para o servidor de pull (geralmente `C:\Program Files\WindowsPowerShell\DscService\Configuration`). 
+
+#### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-51"></a>Como nomear os documentos de configuração no servidor de pull no PowerShell 5.1
+
+Se você estiver extraindo somente uma configuração parcial de um servidor de pull individual, o documento de configuração poderá ter qualquer nome. Se você está extraindo mais de uma configuração parcial de um servidor de pull, o documento de configuração pode ser denominado `<ConfigurationName>.mof`, onde _ConfigurationName_ é o nome da configuração parcial, ou `<ConfigurationName>.<NodeName>.mof`, onde _ConfigurationName_ é o nome da configuração parcial, e _NodeName_ é o nome do nó de destino. Isso permite extrair configurações do servidor de pull de DSC de Automação do Azure.
+
+
+#### <a name="naming-configuration-documents-on-the-pull-server-in-powershell-50"></a>Como nomear os documentos de configuração no servidor de pull no PowerShell 5.0
+
+Os documentos de configuração devem ser nomeados da seguinte maneira: `ConfigurationName.mof`, em que _ConfigurationName_ é o nome da configuração parcial. Para nosso exemplo, os documentos de configuração devem ser nomeados da seguinte maneira:
 
 ```
 ServiceAccountConfig.mof
@@ -222,7 +230,7 @@ Depois que o LCM no nó de destino tiver sido configurado e os documentos de con
 
 ## <a name="partial-configurations-in-mixed-push-and-pull-modes"></a>Configurações parciais nos modos de push e pull combinados
 
-Também é possível combinar os modos de push e pull para configurações parciais. Ou seja, você pode ter uma configuração parcial que é extraída por pull de um servidor de pull, enquanto outra configuração parcial é enviada por push. Trate cada configuração parcial como quiser, dependendo do modo de atualização, conforme descrito nas seções anteriores. Por exemplo, a metaconfiguração a seguir descreve o mesmo exemplo, com a configuração parcial da conta de serviço no modo de pull e a configuração parcial do SharePoint no modo de push.
+Também é possível combinar os modos de push e pull para configurações parciais. Ou seja, você pode ter uma configuração parcial que é extraída por pull de um servidor de pull, enquanto outra configuração parcial é enviada por push. Especifique o modo de atualização para cada configuração parcial conforme descrito nas seções anteriores. Por exemplo, a metaconfiguração a seguir descreve o mesmo exemplo, com a configuração parcial da `ServiceAccountConfig` no modo de pull e a configuração parcial do `SharePointConfig` no modo de push.
 
 ### <a name="mixed-push-and-pull-modes-using-configurationnames"></a>Modos de pull e push mistos usando ConfigurationNames
 
@@ -301,7 +309,7 @@ configuration PartialConfigDemo
 PartialConfigDemo 
 ```
 
-Observe que o **RefreshMode** especificado no bloco Settings é “Pull”, mas o **RefreshMode** para a configuração parcial de SharePointConfig é “Push”.
+Observe que o **RefreshMode** especificado no bloco Settings é "Pull", mas o **RefreshMode** para a configuração parcial `SharePointConfig` é "Push".
 
 É necessário nomear e localizar os documentos do MOF de configuração, conforme descrito acima, para os respectivos modos de atualização. Chame **Publish-DSCConfiguration** para publicar a configuração parcial de `SharePointConfig` e aguarde até que a configuração de `ServiceAccountConfig` seja extraída do servidor de pull ou force uma atualização chamando [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
 

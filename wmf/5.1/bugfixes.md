@@ -8,8 +8,8 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 09316fef0594697a60a1bd4acabf39588f75edc2
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 8957f4709c95ccb5b72c4fa9b42c9fe9ef93dffe
+ms.sourcegitcommit: 58e5e77050ba32717ce3e31e314f0f25cb7b2979
 translationtype: HT
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Correções de Bug no WMF 5.1#
@@ -98,3 +98,16 @@ Antes do WMF 5.1, se houvesse várias versões de um módulo instaladas e elas c
 O WMF 5.1 corrige isso retornando a ajuda para a versão mais recente do tópico.
 
 `Get-Help` não oferece uma maneira de especificar para qual versão você quer obter ajuda. Para solucionar esse problema, navegue até o diretório de módulos e exibir a ajuda diretamente com uma ferramenta como seu editor favorito. 
+
+### <a name="powershellexe-reading-from-stdin-stopped-working"></a>A leitura do powershell.exe do STDIN parou de funcionar
+
+Os clientes usam o `powershell -command -` de aplicativos nativos para executar o PowerShell passando o script por meio do STDIN, mas infelizmente isso não está funcionando devido a outras alterações no host do console.
+
+https://windowsserver.uservoice.com/forums/301869-powershell/suggestions/15854689-powershell-exe-command-is-broken-on-windows-10
+
+### <a name="powershellexe-creates-spike-in-cpu-usage-on-startup"></a>O powershell.exe cria um pico no uso da CPU durante a inicialização
+
+O PowerShell usa uma consulta de WMI para verificar se ele foi iniciado por meio de Política de Grupo para evitar um atraso no logon.
+A consulta de WMI acaba injetando o tzres.mui.dll em cada processo no sistema, uma vez que a classe Win32_Process de WMI tenta recuperar informações do fuso horário local.
+Isso resulta em um grande aumento no uso da CPU no wmiprvse (o host de provedor de WMI).
+A correção é usar chamadas de API do Win32 para obter as mesmas informações em vez de usar o WMI.

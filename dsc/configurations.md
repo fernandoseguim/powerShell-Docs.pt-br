@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 01af336f34928aec63cac7402c1ab20c701579fe
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f833eed14a30d80b1fcc3a9e5e67811c53096bf5
+ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
 translationtype: HT
 ---
 # <a name="dsc-configurations"></a>Configurações DSC
@@ -30,7 +30,9 @@ Configuration MyDscConfiguration {
             Name = "Bitlocker"
         }
     }
-}
+} 
+
+MyDscConfiguration 
 ```
 
 Salve o script como um arquivo .ps1.
@@ -62,12 +64,14 @@ Configuration MyDscConfiguration {
         }
     }
 }
+
+MyDscConfiguration 
 ```
 
-Neste exemplo, você especifica o nome do nó passando-o como o parâmetro $ComputerName quando [compila a configuração](# Compiling the configuration). O nome padrão é "localhost".
+Neste exemplo, você especifica o nome do nó passando-o como o parâmetro $ComputerName quando compila a configuração. O nome padrão é "localhost".
 
 ## <a name="compiling-the-configuration"></a>Compilando a configuração
-Para poder aplicar uma configuração, você precisa compilá-la em um documento MOF. Chame a configuração como chamaria uma função do PowerShell.
+Para poder aplicar uma configuração, você precisa compilá-la em um documento MOF. Chame a configuração como chamaria uma função do PowerShell.  A última linha do exemplo contendo somente o nome da configuração, chama a configuração.
 >__Observação:__ para chamar uma configuração, a função precisa estar no escopo global (como acontece com qualquer outra função do PowerShell). Isso pode ser feito por meio de "dot-sourcing" do script ou ao executar o script de configuração usando F5 ou clicando no botão __Executar Script__ no ISE. Para fazer o dot-source do script, execute o comando `. .\myConfig.ps1`, em que `myConfig.ps1` é o nome do arquivo de script que contém sua configuração.
 
 Quando você chama a configuração, ela:
@@ -119,6 +123,8 @@ Configuration DependsOnExample {
         }
     }
 }
+
+DependsOnExample
 ```
 
 ## <a name="using-new-resources-in-your-configuration"></a>Usando Novos Recursos na sua Configuração
