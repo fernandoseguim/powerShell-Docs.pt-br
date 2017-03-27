@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: "Pré-requisitos do JEA"
 ms.technology: powershell
-ms.openlocfilehash: d463e6cdfeb78a32eab9055b035747928d38e783
-ms.sourcegitcommit: cfe32f213819ae76de05da564c3e2c4b7ecfda2f
+ms.openlocfilehash: e4ae3ebd0b2c330a76d3183e6c9c1106f769feb3
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="prerequisites"></a>Pré-requisitos
@@ -20,6 +20,7 @@ O Just Enough Administration é um recurso incluído com o Windows PowerShell 5.
 Este tópico descreve os pré-requisitos que devem ser atendidos para começar a usar o JEA.
 
 ## <a name="install-jea"></a>Instalar o JEA
+
 O JEA está disponível com o Windows PowerShell 5.0 e posteriores, mas para a funcionalidade completa é recomendado que você instale a versão mais recente do PowerShell disponível para o seu sistema.
 A tabela a seguir descreve a disponibilidade do JEA no Windows Server:
 
@@ -46,6 +47,7 @@ Para obter suporte para esses recursos, atualize o Windows para a versão 1607 (
 <sup>2</sup> O JEA não pode ser configurado para usar contas virtuais no Windows 7.
 
 ### <a name="check-which-version-of-powershell-is-installed"></a>Verificar qual versão do PowerShell que está instalada
+
 Para verificar qual a versão do PowerShell que está instalada em seu sistema, verifique a variável `$PSVersionTable` em um prompt do Windows PowerShell.
 
 ```powershell
@@ -60,6 +62,7 @@ Você está pronto para usar o JEA se a versão *Principal* for maior ou igual a
 Para obter a melhor experiência e ter acesso a todos os recursos mais recentes, é recomendável que você atualize para a versão **5.1** do PowerShell assim que possível.
 
 ### <a name="install-windows-management-framework"></a>Instalar o Windows Management Framework
+
 Se estiver executando uma versão mais antiga do PowerShell, você precisará atualizar o sistema com a atualização mais recente do WMF (Windows Management Framework).
 Os pacotes de atualização e um link para as notas de versão mais recentes do WMF estão disponíveis no [Centro de Download](https://aka.ms/WMF5).
 
@@ -68,6 +71,7 @@ Os pacotes de atualização e um link para as notas de versão mais recentes do 
 Os usuários do Windows 10 devem instalar as atualizações mais recentes do recurso para obter a versão atual do Windows PowerShell.
 
 ## <a name="enable-powershell-remoting"></a>Habilitar a Comunicação Remota do PowerShell
+
 A Comunicação Remota do PowerShell fornece a base na qual o JEA é criado.
 Portanto, é necessário garantir que a comunicação remota do PowerShell esteja habilitada e [devidamente protegida](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) em seu sistema antes de usar o JEA.
 
@@ -79,6 +83,7 @@ Enable-PSRemoting
 ```
 
 ## <a name="enable-powershell-module-and-script-block-logging-optional"></a>Habilitar o módulo do PowerShell e o registro em log de bloco de script (opcional)
+
 As etapas a seguir habilitam o log para todas as ações do PowerShell em seu sistema.
 O registro em log do Módulo do PowerShell não é necessário para o JEA, no entanto é altamente recomendável que você o ative para garantir que os comandos que os usuários executam sejam registrados em um local central.
 
@@ -104,5 +109,6 @@ Você também pode habilitar transcrição do PowerShell de todo o sistema por m
 - [Criar um arquivo de configuração de sessão](session-configurations.md)
 
 ## <a name="see-also"></a>Consulte também
+
 - [Informações adicionais sobre a Comunicação Remota do PowerShell e segurança do WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
 - [Postagem de blog sobre segurança *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)

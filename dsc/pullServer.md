@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 802f9b0cde5d56ed3da327593753aedcf89e00f6
-ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
+ms.openlocfilehash: 6916432b0978cd1cda76a2dab997b10873de5899
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
@@ -172,7 +172,7 @@ Para facilitar a configuração, validação e gerenciamento do servidor de pull
      Publish-DSCModuleAndMof -Source C:\LocalDepot -Force
 ```
 
-1. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/Examples/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
+1. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
 
 ## <a name="pull-client-configuration"></a>Configuração do cliente de pull 
