@@ -5,10 +5,10 @@ keywords: powershell,DSC
 description: 
 ms.topic: article
 author: eslesar
-manager: dongill
+manager: carmonm
 ms.prod: powershell
-ms.openlocfilehash: b84b70edeafca3112356224c9ae14c6497170ac5
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: af86f1f93a1035ec52a8b029acdd826e8463e2c2
+ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
 translationtype: HT
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
@@ -117,13 +117,12 @@ Será necessário um nome do servidor para ser usado durante a configuração de
 
 Um DNS CNAME permite a criação de um alias para se referir ao seu registro de host (A). O objetivo do registro de nome adicional é o aumento da flexibilidade, caso uma alteração seja necessária no futuro. Um CNAME pode ajudar a isolar a configuração do cliente de maneira que as alterações no ambiente de servidor, como a substituição de um servidor de pull ou adição de servidores de pull, não exijam uma alteração correspondente na configuração do cliente.
 
-Ao escolher um nome para o registro DNS, lembre-se da arquitetura da solução. Se estiver usando o balanceamento de carga, o certificado usado para proteger o tráfego por meio de HTTPS precisará compartilhar o mesmo nome do registro DNS. Da mesma forma, se estiver usando um compartilhamento de arquivos de alta disponibilidade, o nome virtual do cluster será usado.
+Ao escolher um nome para o registro DNS, lembre-se da arquitetura da solução. Se estiver usando o balanceamento de carga, o certificado usado para proteger o tráfego por meio de HTTPS precisará compartilhar o mesmo nome do registro DNS. 
 
 Cenário |Prática recomendada
 :---|:---
 Ambiente de Teste |Reproduzir o ambiente de produção planejado, se possível. Um nome do host do servidor é adequado para configurações simples. Se o DNS não estiver disponível, um endereço IP poderá ser usado no lugar do nome do host.|
 Implantação de Nó único |Criar um registro DNS CNAME que aponta para o nome do host do servidor.|
-Implantação de Alta Disponibilidade |Se os clientes se conectarão por meio de uma solução de balanceamento de carga, crie um nome do host para o IP virtual e um registro CNAME que faz referência a esse nome do host. Se o round robin de DNS será usado para distribuir solicitações de cliente entre servidores de pull, é necessário configurar os registros de nome para incluir os nomes do host de todas as instâncias de servidor de pull implantadas.|
 
 Para obter mais informações, consulte [Configuração de Round Robin de DNS no Windows Server](https://technet.microsoft.com/en-us/library/cc787484(v=ws.10).aspx).
 
@@ -154,13 +153,6 @@ Você estabeleceu um nome DNS para o ambiente de servidor de pull que pode ser u
 
 Um servidor de pull pode ser implantado usando um serviço Web hospedado no IIS ou em um compartilhamento de arquivos SMB. Na maioria das situações, a opção de serviço Web fornecerá maior flexibilidade. Não é incomum que o tráfego HTTPS atravesse os limites da rede, enquanto que o tráfego SMB é geralmente filtrado ou bloqueado entre redes. O serviço Web também oferece a opção de incluir um Servidor de Conformidade ou um Reporting Manager da Web (esses dois tópicos serão abordados em uma versão futura deste documento) que fornecem um mecanismo para os clientes reportarem o status a um servidor para uma visibilidade centralizada. O SMB fornece uma opção para ambientes em que a política determina que um servidor Web não deve ser utilizado e para outros requisitos de ambientes em que uma função de servidor Web não é desejada. Em ambos os casos, lembre-se de avaliar os requisitos para assinatura e criptografia de tráfego. O HTTPS, a assinatura SMB e as políticas IPSEC são opções que vale a pena considerar.
 
-#### <a name="designing-for-high-availability"></a>Criando para alta disponibilidade  
-A função de servidor de pull pode ser implantada em uma arquitetura de alta disponibilidade. A função de serviço Web pode ser com balanceamento de carga e os arquivos e pastas que incluem módulos de DSC e configurações DSC podem ser localizados em armazenamentos com alta disponibilidade.
-
-Tenha em mente que quando as configurações e os módulos são entregues a um nó de destino, todos os dados necessários para executar testes e definir configurações são armazenados localmente em cada nó. Somente as alterações são entregues do servidor de pull. Uma interrupção de serviço de um servidor de pull não seria uma interrupção, a menos que as implantações estejam ativas.  Normalmente, a alta disponibilidade só é garantida para os maiores ambientes.
-
-A configuração de um ambiente de servidor de pull com alta disponibilidade requer decisões sobre como distribuir solicitações de cliente através de vários nós de servidor e como compartilhar os arquivos de servidor necessários entre esses nós.
-
 #### <a name="load-balancing"></a>Balanceamento de carga  
 Os clientes interagindo com o serviço Web fazem uma solicitação de informações que é retornada em uma única resposta. Não são necessárias solicitações sequenciais, portanto, não é necessário que a plataforma de balanceamento de carga garanta que as sessões sejam mantidas em um único servidor em qualquer ponto no tempo.
 
@@ -173,17 +165,6 @@ Quais informações serão necessárias para a solicitação?|
 Você precisará solicitar um IP adicional ou a equipe responsável pelo balanceamento de carga cuidará disso?|
 Você tem os registros DNS necessários e isso será solicitado pela equipe responsável por configurar a solução de balanceamento de carga?|
 A solução de balanceamento de carga necessita que o PKI seja manipulado pelo dispositivo ou ele pode balancear a carga de tráfego HTTPS desde que não haja requisitos de sessão?|
-
-### <a name="shared-storage"></a>Armazenamento compartilhado
-
-Em um cenário de alta disponibilidade, em que vários servidores são configurados como servidores de pull e as conexões têm a carga balanceada entre eles, é essencial que os recursos e configurações disponíveis desses servidores sejam idênticos. A melhor maneira de fazer isso é armazenar esse conteúdo em um local de alta disponibilidade como um compartilhamento de arquivos clusterizado. O local do compartilhamento pode ser especificado na configuração de cada servidor. Para obter mais informações sobre as opções de armazenamento compartilhado, consulte a Visão geral sobre Servidor de Arquivos de Escalabilidade Horizontal para dados de aplicativos.
-
-Tarefa de planejamento|
----|
-Qual solução será usada para hospedar o compartilhamento de alta disponibilidade?|
-Que manipulará a solicitação de um novo compartilhamento de alta disponibilidade?|
-Qual é o tempo médio de resposta para um compartilhamento de alta disponibilidade estar pronto para ser usado?|
-Quais informações serão necessárias às equipes responsáveis pelo armazenamento e/ou clusterização?|
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Configurações e módulos de preparo no servidor de pull
 
