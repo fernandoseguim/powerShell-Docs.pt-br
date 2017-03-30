@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 162ae26dec67e8259661bb58c1b713818627220b
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: e6ea0992f90a72da6426d9112950c925ab6cd32b
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
@@ -82,10 +82,8 @@ configuration unencryptedPasswordDemo
             Ensure = "Present"
             MembersToInclude = "User1"
         }
-
     }
 
-    
     Node "TestMachine2"
     {
         # Now we'll use a node-specific password to this machine
@@ -112,7 +110,6 @@ configuration unencryptedPasswordDemo
             Ensure = "Present"
             MembersToInclude = "User2"
         }
-      
     }
 
 }
@@ -160,7 +157,8 @@ Esse exemplo usa um recurso [Group](https://msdn.microsoft.com/en-us/powershell/
 Pode criar grupos locais e adicionar ou remover membros.
 Ele aceita a propriedade `Credential` e a propriedade `PsDscRunAsCredential` automática.
 No entanto, o recurso usa apenas a propriedade `Credential`.
-Leia mais sobre `PsDscRunAsCredential` nas [Notas de Versão do WMF](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_runas).
+
+Para saber mais sobre a propriedade `PsDscRunAsCredential`, veja [Execução do DSC com as credenciais do usuário](runAsUser.md).
 
 ## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade de credencial do recurso Group
 
@@ -279,7 +277,7 @@ O uso de uma conta local elimina a possível exposição das credenciais de dom�
 
 **Ao usar credenciais com recursos de DSC, prefira uma conta local a uma conta de domínio, quando possível.**
 
-Se houver um '\'' ou um ''@'' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
+Se houver um '\'' ou um '@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser

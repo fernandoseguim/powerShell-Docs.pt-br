@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-08
 title: "Configurações de Sessão de JEA"
 ms.technology: powershell
-ms.openlocfilehash: 32602293afd3a94767682d32a053281ec021cc33
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: e98214d1777a1530b5a18ac9df1a6185d6d73979
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-session-configurations"></a>Configurações de Sessão de JEA
@@ -175,55 +175,13 @@ Conforme mostrado no exemplo acima, os recursos de função são referenciados p
 Se vários recursos de função estão disponíveis no sistema com o mesmo nome simples, o PowerShell usará sua ordem de pesquisa implícita para selecionar o arquivo de capacidade de função efetivo.
 Ele **não** dará acesso a todos os arquivos de capacidade de função com o mesmo nome.
 
-A ordem de pesquisa de recursos de função JEA é determinada pela ordem dos caminhos em `$env:PSModulePath` e o nome do módulo pai.
-O caminho padrão do módulo no PowerShell é o seguinte:
+A JEA usa a variável de ambiente do `$env:PSModulePath` para determinar quais caminhos verificar para os arquivos de capacidade da função.
+Em cada um desses caminhos, a JEA procurará módulos válidos do PowerShell que contenham uma subpasta "RoleCapabilities".
+Como com a importação de módulos, a JEA prefere as capacidades de função que são fornecidas com o Windows para capacidades de função personalizadas com o mesmo nome.
+Para todos os outros conflitos de nomenclatura, a precedência é determinada pela ordem na qual o Windows enumera os arquivos no diretório (não é garantido que seja em ordem alfabética).
+O primeiro arquivo de capacidade de função encontrado que corresponder ao nome será usado para o usuário que está se conectando.
 
-```powershell
-PS C:\> $env:PSModulePath
-
-
-C:\Users\Alice\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\
-```
-
-Os caminhos que aparecem antes (à esquerda) na lista PSModulePath tem precedência mais alta que os caminhos à direita.
-
-Dentro de cada caminho, pode haver 0 ou mais módulos do PowerShell.
-Os recursos de função são selecionados no primeiro módulo, em ordem alfabética, que contém um arquivo de capacidade de função que corresponda ao nome desejado.
-
-Para ajudar a ilustrar essa precedência, considere o exemplo a seguir, no qual o sinal de adição (+) indica uma pasta e o sinal de subtração (-) indica um arquivo.
-
-```
-+ C:\Program Files\WindowsPowerShell\Modules
-    + ContosoMaintenance
-        - ContosoMaintenance.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - DnsOperator.psrc
-            - DnsAuditor.psrc
-    + FabrikamModule
-        - FabrikamModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - FileServerAdmin.psrc
-
-+ C:\Windows\System32\WindowsPowerShell\v1.0\Modules
-    + BuiltInModule
-        - BuiltInModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - OtherBuiltinRole.psrc
-```
-
-Há vários arquivos de capacidade de função instalados neste sistema.
-O que acontece se um arquivo de configuração de sessão fornece acesso à função de "DnsAdmin" a um usuário?
-
-
-O arquivo de capacidade de função efetivo será o que está localizado em "C:\\Arquivos de Programa\\WindowsPowerShell\\Módulos\\ContosoMaintenance\\RoleCapabilities\\DnsAdmin.psrc".
-
-Se você estiver se perguntando por que, lembre-se das duas ordens de precedência:
-
-1. A variável `$env:PSModulePath` tem a pasta Arquivos de Programas listada antes da pasta System32, então ela dará preferência a arquivos da pasta Arquivos de Programas.
-2. Em ordem alfabética, o módulo ContosoMaintenance vem antes do FabrikamModule, portanto, ela selecionará a função DnsAdmin do ContosoMaintenance.
+Como a ordem de pesquisa de capacidade de função não é determinista quando duas ou mais capacidades de função compartilham o mesmo nome, é **altamente recomendável** garantir que as capacidades de função tenham nomes exclusivos em seu computador.
 
 ### <a name="conditional-access-rules"></a>Regras de acesso condicional
 

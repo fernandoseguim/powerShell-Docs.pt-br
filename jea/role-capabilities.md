@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: "Recursos de Função JEA"
 ms.technology: powershell
-ms.openlocfilehash: e67b38344e2d1d0d347c7850f2097e31c0945e15
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 49623e69b186fd09679bf7e0186dec3961e719ba
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
@@ -236,7 +236,6 @@ A lógica mais complexa de mesclagem afeta cmdlets e funções, que podem ter se
 
 As regras são as seguintes:
 
-
 1. Se um cmdlet só for visível em uma função, será visível para o usuário com qualquer restrição de parâmetro aplicável.
 2. Se um cmdlet se torna visível em mais de uma função e cada função tem as mesmas restrições sobre o cmdlet, o cmdlet será visível para o usuário com essas restrições.
 3. Se um cmdlet se torna visível em mais de uma função e cada função permite um conjunto diferente de parâmetros, o cmdlet e todos os parâmetros definidos em cada função serão visíveis ao usuário. Se uma função não tem restrições nos parâmetros, todos os parâmetros serão permitidos.
@@ -245,19 +244,29 @@ As regras são as seguintes:
 6. Se um padrão de validação for definido para o mesmo parâmetro de cmdlet em mais de uma função, qualquer valor que corresponde a qualquer dos padrões será permitido.
 7. Se um conjunto de validação for definido em uma ou mais funções e um padrão de validação for definido em outra função para o mesmo parâmetro de cmdlet, o conjunto de validação será ignorado e a regra (6) se aplica aos padrões de validação restantes.
 
-A tabela a seguir mostra alguns exemplos dessa lógica na prática, usando duas funções A e B, que são atribuídas a um usuário em uma sessão JEA.
+O exemplo abaixo mostra como as funções são mescladas de acordo com essas regras:
 
-Regra | VisibleCmdlets da função A                                                                          | VisibleCmdlets da função B                                                                             | Permissões efetivas de usuário
------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------
-1    | `Get-Service`                                                                                  | N/D                                                                                               | `Get-Service`
-1    | N/D                                                                                            | `Get-Service`                                                                                     | `Get-Service`
-2    | `Get-Service`                                                                                  | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'Name' }}`                                       | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }, @{ Name = 'Name' }}`
-4    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                                | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`
-5    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DHCP Client' }}`   | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DHCP Client' }}`
-6    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' }}`  | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = '(DNS.*)\|(contoso.*)' }}`
-7    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = '(DNS.*)\|(contoso.*)' }}`
+```powershell
+# Role A Visible Cmdlets
+$roleA = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' } }
+}
+
+# Role B Visible Cmdlets
+$roleB = @{
+    VisibleCmdlets = @{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' } },
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
+}
+
+# Resulting permisisons for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
+$mergedAandB = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
+}
+```
 
 
 

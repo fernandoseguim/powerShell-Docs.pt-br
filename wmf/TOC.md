@@ -12,6 +12,7 @@
 ## [Instalação e configuração](5.1/install-configure.md)
 ## [Problemas conhecidos](5.1/known-issues.md)
 ## [Compatibilidade](5.1/Compatibility.md)
+## [Compatibilidade do Produto](5.1/productincompat.md)
 
 # [Windows Management Framework 5.0](5.0/releasenotes.md)
 ## [Detalhes da instalação](5.0/requirements.md)
