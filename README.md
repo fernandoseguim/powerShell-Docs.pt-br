@@ -25,5 +25,5 @@ Cada pasta neste repositório publica no [MSDN](https://msdn.microsoft.com/en-us
 
 Ativamente mesclamos contribuições neste repositório via [solicitação pull](https://help.github.com/articles/using-pull-requests/) para o branch de *preparo*. Observe que antes de enviar uma solicitação pull, você deve [assinar um Contrato de Licença de Contribuição](https://cla.microsoft.com/) para garantir que a comunidade está livre para usar seus envios.
 Para obter mais informações sobre a contribuição, leia nosso [guia de contribuições](CONTRIBUTING.md).
-Há um rascunho de [guia de estilo](./style.md) que deve ser analisado antes de fazer contribuições.
+Há um rascunho de [guia de estilo](./STYLE.md) que deve ser analisado antes de fazer contribuições.
 Use os modelos de Solicitação Pull e de Problemas para ajudar a manter a consistência da documentação em diferentes versões. 
