@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: d215289675ee9c2b7121fa3d785549c48733d2e8
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
+ms.openlocfilehash: ec773688540a3f4a2f128f66d311926fd5b9a935
+ms.sourcegitcommit: 6d27d6db5ab0e2d5b6c7229e2e2d2e57915ea22d
 translationtype: HT
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Visão Geral da Configuração de Estado Desejado do Windows PowerShell 
@@ -18,8 +18,8 @@ translationtype: HT
 A DSC é uma plataforma de gerenciamento no PowerShell que permite que você gerencie sua infraestrutura de desenvolvimento e TI com configuração como código.
 
 - Para obter uma visão geral dos benefícios comerciais de usar a DSC, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](decisionMaker.md).
-- Para obter uma visão geral dos benefícios de engenharia de usar a DSC, confira [Visão Geral da Configuração do Estado Desejado para Engenheiros]DscForEngineers.md).
-- Para começar a usar a DSC rapidamente, veja [Início rápido da DSC]quickStart.md.
+- Para obter uma visão geral dos benefícios de engenharia ao usar a DSC, confira [Visão Geral da Configuração do Estado Desejado para Engenheiros](DscForEngineers.md).
+- Para começar a usar a DSC rapidamente, veja [Início rápido da DSC](quickStart.md).
 
 ## <a name="key-concepts"></a>Conceitos Principais
 
