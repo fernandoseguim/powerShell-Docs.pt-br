@@ -7,13 +7,13 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 1bb0e73a1aae6926040373e017494c2ef5e5fd3e
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a920e02d891492c170e672db2f0771950dcb758c
+ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
 translationtype: HT
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Recurso do WindowsFeatureSet DSC
 
-> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Aplica-se a: Windows PowerShell 5.0
 
 O recurso **WindowsFeatureSet** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para garantir que funções e recursos sejam adicionados ou removidos em um nó de destino.
 Esse recurso é um [recurso composto](authoringResourceComposite.md) que chama o [recurso WindowsFeature](windowsfeatureResource.md) para cada recurso especificado na propriedade `Name`.
