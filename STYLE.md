@@ -40,7 +40,7 @@ Header 2
 * Não inicie comandos do PowerShell com "C:\ PS>"
 * A saída gerada pelos comandos do PowerShell deve ser comentada para impedir que ela receba realce de sintaxe
 * Os nomes de propriedades e nomes de parâmetros devem estar em **negrito**
-
+* O cmdlets do PowerShell seguem a capitalização"[Pascal Case](https://en.wikipedia.org/wiki/PascalCase)". Os verbos são separados dos substantivos por um hífen.
 
 ## <a name="lists"></a>Listas
 

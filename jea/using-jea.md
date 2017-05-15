@@ -8,9 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-12-05
 title: Usando JEA
 ms.technology: powershell
-ms.openlocfilehash: 4f1fad1d28b9ced462c392210449d73af325b132
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: 62e5f74d60b2fd09e302ecc12996f97e90b73f2f
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="using-jea"></a>Usando JEA
 
@@ -134,7 +136,6 @@ Se estiver compilando um aplicativo C#, você pode criar um runspace do PowerShe
 ```csharp
 
 // using System.Management.Automation;
-
 var computerName = "SERVER01";
 var configName   = "JEAMaintenance";
 var creds        = // create a PSCredential object here (https://msdn.microsoft.com/en-us/library/system.management.automation.pscredential(v=vs.85).aspx)
@@ -146,7 +147,6 @@ WSManConnectionInfo connectionInfo = new WSManConnectionInfo(
                     "/wsman",              // WSMan Path
                     string.Format(CultureInfo.InvariantCulture, "http://schemas.microsoft.com/powershell/{0}", configName),  // Connection URI with config name
                     creds);                // Credentials
-
 // Now, use the connection info to create a runspace where you can run the commands
 using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 {
@@ -173,7 +173,7 @@ using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 
 ## <a name="using-jea-with-powershell-direct"></a>Usando o JEA com o PowerShell Direct
 
-O Hyper-V no Windows 10 e o Windows Server 2016 oferecem o [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), um recurso que permite aos administradores do Hyper-V gerenciar máquinas virtuais com o PowerShell, mesmo que a VM esteja em uma rede diferente.
+O Hyper-V no Windows 10 e o Windows Server 2016 oferecem o [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), um recurso que permite aos administradores do Hyper-V gerenciar máquinas virtuais com o PowerShell, independentemente da configuração da rede ou das configurações de gerenciamento remoto na máquina virtual.
 
 É possível usar o PowerShell Direct com o JEA para conceder acesso limitado a um administrador de Hyper-V à sua VM, o que pode ser útil se a conectividade de rede com sua VM for perdida e for necessário que um administrador de datacenter corrija as configurações de rede.
 
@@ -190,6 +190,6 @@ Enter-PSSession -VMId $vm.VMId -ConfigurationName 'NICMaintenance' -Credential '
 ```
 
 É altamente recomendável que você crie um usuário local dedicado, sem outros direitos para gerenciar o sistema, para ser usado pelos administradores do Hyper-V.
-Lembre-se que até mesmo um usuário sem privilégios pode fazer logon em um computador Windows por padrão e, inclusive, usar o PowerShell irrestrito.
+Lembre-se de que até mesmo um usuário sem privilégios pode fazer logon em um computador Windows por padrão e, inclusive, usar o PowerShell irrestrito.
 Isso lhes permite navegar (em parte do) sistema de arquivos e saber mais sobre o ambiente do sistema operacional.
-Para bloquear um administrador do Hyper-V para somente acessar uma VM usando o PowerShell Direct com JEA, você negará direitos de logon local à conta JEA do administrador do Hyper-V.
+Para bloquear um administrador do Hyper-V para somente acessar uma VM usando o PowerShell Direct com JEA, você precisará negar direitos de logon local à conta JEA do administrador do Hyper-V.

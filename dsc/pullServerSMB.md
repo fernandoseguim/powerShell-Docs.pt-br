@@ -7,15 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: df994500ce5f46d62f143af07d8ce86dddf44c3e
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: f16af7664ac5d07b5884070534bed20e8cf2fcd9
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurando um servidor de pull de SMB para DSC
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Um servidor de pull do [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) para DSC é um compartilhamento de arquivos SMB que disponibiliza arquivos de configuração DSC e/ou recursos de DSC para nós de destino quando esses nós os solicitam.
+Um servidor de pull do [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) é um computador que hospeda compartilhamentos de arquivo SMB que disponibilizam arquivos de configuração DSC e/ou recursos de DSC para nós de destino quando esses nós os solicitam.
 
 Para usar um servidor de pull de SMB para DSC, você precisa:
 - Configurar um compartilhamento de arquivos SMB em um servidor executando o PowerShell 4.0 ou superior
@@ -146,7 +148,7 @@ O arquivo de soma de verificação deve estar presente no mesmo diretório em qu
 
 ## <a name="setting-up-a-pull-client-for-smb"></a>Configurando um cliente de pull para SMB
 
-Para configurar um cliente que recebe as configurações e/ou recursos de um compartilhamento SMB, você configura o LCM (Gerenciador de Configurações Local) com blocos **ConfigurationRepositoryShare** e **ResourceRepositoryShare** que especificam o compartilhamento do qual efetuar o pull.
+Para configurar um cliente que recebe as configurações e/ou recursos de um compartilhamento SMB, você configura o LCM (Gerenciador de Configurações Local) do cliente com blocos **ConfigurationRepositoryShare** e **ResourceRepositoryShare** que especificam o compartilhamento do qual efetuar o configurações de pull e recursos DSC.
 
 Para obter mais informações sobre como configurar um LCM, consulte [Configurando um cliente de pull usando a ID de configuração](pullClientConfigID.md).
 

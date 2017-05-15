@@ -8,9 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2017-03-07
 title: "Pré-requisitos do JEA"
 ms.technology: powershell
-ms.openlocfilehash: e4ae3ebd0b2c330a76d3183e6c9c1106f769feb3
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: a38c9e948190b9384c62eec3e40758a782c9f72b
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -29,22 +31,23 @@ Sistema operacional de servidor   | Disponibilidade do JEA
 Windows Server 2016       | Pré-instalado
 Windows Server 2012 R2    | Funcionalidade completa com o WMF 5.1
 Windows Server 2012       | Funcionalidade completa com o WMF 5.1
-Windows Server 2008 R2    | Funcionalidade completa com o WMF 5.1
+Windows Server 2008 R2    | Funcionalidade reduzida<sup>1</sup> com WMF 5.1
 
 Você também pode usar o JEA no seu computador residencial ou do trabalho:
 
 Sistema Operacional do Cliente   | Disponibilidade do JEA
 --------------------------|-----------------------------------------------------
-Windows 10 1607           | Pré-instalado
-Windows 10 1603, 1511     | Pré-instalado, com funcionalidade reduzida<sup>1</sup>
+Windows 10 1607+          | Pré-instalado
+Windows 10 1603, 1511     | Pré-instalado, com funcionalidade reduzida<sup>2</sup>
 Windows 10 1507           | Não disponível
 Windows 8, 8.1            | Funcionalidade completa com o WMF 5.1
-Windows 7                 | Funcionalidade limitada<sup>2</sup> com o WMF 5.1
+Windows 7                 | Funcionalidade reduzida<sup>1</sup> com WMF 5.1
 
-<sup>1</sup> As versões 1511 e 1603 do Windows 10 não oferecem suporte aos seguintes recursos do JEA: execução como uma conta de serviço gerenciado de grupo, regras de acesso condicional nas configurações de sessão, a unidade do usuário e a concessão de acesso a contas de usuário local.
+<sup>1</sup> O JEA não pode ser configurado para usar contas de serviço gerenciado por grupo no Windows Server 2008 R2 ou Windows 7.
+*Há suporte* para contas virtuais e outros recursos de JEA.
+
+<sup>2</sup> As versões 1511 e 1603 do Windows 10 não oferecem suporte aos seguintes recursos do JEA: execução como uma conta de serviço gerenciado de grupo, regras de acesso condicional nas configurações de sessão, a unidade do usuário e a concessão de acesso a contas de usuário local.
 Para obter suporte para esses recursos, atualize o Windows para a versão 1607 (Atualização de Aniversário) ou superior.
-
-<sup>2</sup> O JEA não pode ser configurado para usar contas virtuais no Windows 7.
 
 ### <a name="check-which-version-of-powershell-is-installed"></a>Verificar qual versão do PowerShell que está instalada
 
@@ -98,7 +101,7 @@ Você pode configurar a política de Registro em Log do Módulo do PowerShell us
 7. Clique em **OK** para definir a política
 8. Clique duas vezes em **Ativar Registro de Bloco de Script do PowerShell**
 9. Clique em **Habilitado**
-10. Clique em **OK para definir a política
+10. Clique em **OK** para definir a política
 11. (Somente em computadores ingressados no domínio) Execute **gpupdate** ou aguarde a Política de Grupo processar a política atualizada e aplicar as configurações
 
 Você também pode habilitar transcrição do PowerShell de todo o sistema por meio da Política de Grupo.

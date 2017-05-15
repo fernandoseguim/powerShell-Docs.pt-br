@@ -9,9 +9,11 @@ ms.date: 2016-12-12
 title: ISE (Ambiente de Script Integrado) do Windows PowerShell
 ms.technology: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: ce6f084ee1f7e8f086ef5c3a6202cbf7070431db
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 6b10e9ee610235cb17795a371fe05e4c2a81c3bb
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Ambiente de script integrado do Windows PowerShell (ISE)
 O ISE (Ambiente de Script Integrado) do Windows PowerShell é um dos dois hosts para o mecanismo do Windows PowerShell e a linguagem idioma. Com ele você pode gravar, executar e testar scripts de maneiras que não estão disponíveis no Console do Windows PowerShell. O ISE adiciona cores de sintaxe, preenchimento com Tab, IntelliSense, depuração visual e ajuda contextual.
@@ -54,7 +56,7 @@ O **IntelliSense** preenche automaticamente seus comandos exibindo menus de cmdl
 
 -   **Seleção de blocos**. Você pode selecionar uma parte do texto em bloco segurando a tecla Alt enquanto seleciona o texto no painel de script com o mouse ou pressionando **Alt+Shift+Seta**.
 
-### <a name="added-in-powershell-20-windows-server-2008-r2-windows-7"></a>Adicionado no PowerShell 2.0 (Windows Server 2008 R2 e Windows 7
+### <a name="added-in-powershell-20-windows-server-2008-r2-windows-7"></a>Adicionado ao PowerShell 2.0 (Windows Server 2008 R2 e Windows 7)
 O ISE foi introduzido com o PowerShell v2.0.
 
 ## <a name="requirements-for-running-the-windows-powershell-ise"></a>Requisitos de execução do ISE do Windows PowerShell

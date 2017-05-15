@@ -8,9 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
-ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
-translationtype: HT
+ms.openlocfilehash: 4c5dfaaf368097c18a2788a9df15632ce116dbbb
+ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -26,21 +28,21 @@ No 5.1 WMF, corrigimos os seguintes problemas conhecidos:
 
 ## <a name="dsc-resource-debugging-improvements"></a>Melhorias de depuração de recursos da DSC
 No WMF 5.0, o depurador do PowerShell não interrompeu o método de recurso baseado em classe (Get/Set/Test) diretamente.
-No WMF 5.1, o depurador interromperá o método de recurso baseado em classe da mesma forma que faz com os métodos de recursos baseados em MOF.
+No WMF 5.1, o depurador interrompe o método de recurso baseado em classe da mesma forma que faz com os métodos de recursos baseados em MOF.
 
 ## <a name="dsc-pull-client-supports-tls-11-and-tls-12"></a>O cliente pull da DSC dá suporte para TLS 1.1 e para TLS 1.2 
 Anteriormente, o cliente pull da DSC dava suporte apenas para SSL3.0 e TLS1.0 por meio de conexões HTTPS. Se fosse forçado a usar protocolos mais seguros, o cliente pull pararia de funcionar. No WMF 5.1, o cliente pull da DSC não dá mais suporte a SSL 3.0 e adiciona suporte a protocolos mais seguros TLS 1.1 e TLS 1.2.  
 
 ## <a name="improved-pull-server-registration"></a>Registro do servidor de pull aprimorado ##
 
-Nas versões anteriores do WMF, as solicitações simultâneas de registros/relatórios em um servidor de pull da DSC durante o uso do banco de dados ESENT provocavam uma falha de registro e/ou relatório do LCM. Nesses casos, os logs de eventos no servidor de pull terão o erro "O nome da instância já está em uso."
-Isso ocorria porque um padrão incorreto era usado para acessar o banco de dados ESENT em um cenário Multi-Threaded. No WMF 5.1, esse problema foi corrigido. Os registros ou relatórios simultâneos (que envolvem o banco de dados ESENT) funcionarão bem no WMF 5.1. Esse problema é aplicável somente ao banco de dados ESENT e não se aplica ao banco de dados OLEDB. 
+Nas versões anteriores do WMF, as solicitações simultâneas de registros/relatórios em um servidor de pull da DSC durante o uso do banco de dados ESENT provocavam uma falha de registro e/ou relatório do LCM. Nesses casos, os logs de eventos no servidor de pull têm o erro "O nome da instância já está em uso."
+Isso ocorria porque um padrão incorreto era usado para acessar o banco de dados ESENT em um cenário Multi-Threaded. No WMF 5.1, esse problema foi corrigido. Os registros ou relatórios simultâneos (que envolvem o banco de dados ESENT) funcionam bem no WMF 5.1. Esse problema é aplicável somente ao banco de dados ESENT e não se aplica ao banco de dados OLEDB. 
 
 ## <a name="enable-circular-log-on-esent-database-instance"></a>Habilitar o log Circular na instância do banco de dados ESENT
-Na versão anterior da DSC-PullServer, os arquivos de log do banco de dados ESENT preenchiam o espaço em disco do pullserver porque a instância do banco de dados estava sendo criada sem log circular. Nesta versão, o cliente terá a opção para controlar o comportamento de log circular da instância usando o web.config do pullserver. Por padrão, o CircularLogging será configurado como VERDADEIRO.
+Na versão anterior da DSC-PullServer, os arquivos de log do banco de dados ESENT preenchiam o espaço em disco do pullserver porque a instância do banco de dados estava sendo criada sem log circular. Nesta versão, você tem a opção de controlar o comportamento de log circular da instância usando o web.config do pullserver. Por padrão, o CircularLogging está definido como VERDADEIRO.
 ```
 <appSettings>
-     <add key="dbprovider" value="ESENT" />
+    <add key="dbprovider" value="ESENT" />
     <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
     <add key="CheckpointDepthMaxKB" value="512" />
     <add key="UseCircularESENTLogs" value="TRUE" />
@@ -80,7 +82,7 @@ PartialOne
 
 ![FileName no Repositório de Configuração](../images/PartialInConfigRepository.png)
 
-O nome do serviço da Automação do Azure gerou arquivos MOF como `<ConfigurationName>.<NodeName>.mof`. Portanto, a configuração abaixo será compilada para PartialOne.localhost.mof.
+O nome do serviço da Automação do Azure gerou arquivos MOF como `<ConfigurationName>.<NodeName>.mof`. Portanto, a configuração abaixo é compilada para PartialOne.localhost.mof.
 
 Ela tornou impossível a extração de uma de suas configurações parciais do serviço da Automação do Azure.
 
@@ -99,9 +101,9 @@ Configuration PartialOne
 PartialOne
 ```
 
-No WMF 5.1, a configuração parcial no servidor de pull/serviço pode ser nomeada `<ConfigurationName>.<NodeName>.mof`. Além disso, se um computador estiver extraindo uma única configuração de um servidor de pull/serviço, então, o arquivo de configuração no repositório de configuração do servidor de pull poderá ter qualquer nome de arquivo. Esta flexibilidade de nomenclatura permite que você gerencie seus nós parcialmente pelo serviço da Automação do Azure, no qual algumas configurações do nó chegarão da DSC de Automação do Azure e você terá uma configuração parcial que poderá ser gerenciada localmente.
+No WMF 5.1, uma configuração parcial no servidor de pull/serviço pode ser nomeada `<ConfigurationName>.<NodeName>.mof`. Além disso, se um computador estiver extraindo uma única configuração de um servidor de pull/serviço, então, o arquivo de configuração no repositório de configuração do servidor de pull poderá ter qualquer nome de arquivo. Esta flexibilidade de nomenclatura permite que você gerencie seus nós parcialmente pelo serviço da Automação do Azure, no qual algumas configurações do nó chegarão da DSC de Automação do Azure e uma configuração parcial gerenciada localmente.
 
-A metaconfiguração abaixo configurará um nó para ser gerenciado tanto localmente quanto pelo serviço da Automação do Azure.
+A metaconfiguração abaixo configura um nó para ser gerenciado tanto localmente quanto pelo serviço da Automação do Azure.
 
 ```PowerShell
   [DscLocalConfigurationManager()]
@@ -136,14 +138,14 @@ A metaconfiguração abaixo configurará um nó para ser gerenciado tanto localm
    }
 
    RegistrationMetaConfig
-   slcm -Path .\RegistrationMetaConfig -Verbose
+   Set-DscLocalConfigurationManager -Path .\RegistrationMetaConfig -Verbose
  ```
 
 # <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usando a PsDscRunAsCredential com os recursos de composição da DSC   
 
 Adicionamos um suporte para usar a [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) com os recursos de [Composição](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) da DSC.    
 
-Os usuários agora podem especificar o valor para a PsDscRunAsCredential ao usarem recursos de composição nas configurações. Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs. Se o recurso de composição chamar outro recurso de composição, todos os seus recursos também serão executados como usuário RunAs. As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição. Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para a PsDscRunAsCredential, ocorrerá um erro de mesclagem durante a compilação da configuração.
+Agora, você pode especificar o valor para a PsDscRunAsCredential ao usar recursos de composição nas configurações. Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs. Se o recurso de composição chamar outro recurso de composição, todos os seus recursos também serão executados como usuário RunAs. As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição. Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para a PsDscRunAsCredential, ocorrerá um erro de mesclagem durante a compilação da configuração.
 
 Este exemplo mostra o uso com o recurso de composição [WindowsFeatureSet](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_newresources) incluído no módulo PSDesiredStateConfiguration. 
 
@@ -187,7 +189,7 @@ InstallWindowsFeature -ConfigurationData $configData
 ##<a name="dsc-module-and-configuration-signing-validations"></a>Validações do módulo de DSC e da assinatura de configuração
 Na DSC, as configurações e os módulos são distribuídos para computadores gerenciados do servidor de pull. Se o servidor de pull estiver comprometido, um invasor possivelmente poderá modificar as configurações e os módulos no servidor de pull e distribuí-los para todos os nós gerenciados, comprometendo todos eles. 
 
- No WMF 5.1, a DSC dá suporte para a validação de assinaturas digitais no catálogo e nos arquivos de configuração (.MOF). Este recurso evitará que os nós executem as configurações ou os arquivos de módulo que não são assinados por um signatário confiável ou que foram violados depois de assinados por um signatário confiável. 
+ No WMF 5.1, a DSC dá suporte para a validação de assinaturas digitais no catálogo e nos arquivos de configuração (.MOF). Este recurso evita que os nós executem as configurações ou os arquivos de módulo que não são assinados por um signatário confiável ou que foram violados depois de assinados por um signatário confiável. 
 
 
 
@@ -223,7 +225,7 @@ Configuration EnableSignatureValidation
       RegistrationKey = 'd6750ff1-d8dd-49f7-8caf-7471ea9793fc' # Replace this with correct registration key.
     }
     SignatureValidation validations{
-        # By default, LCM will use default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM will use this custom store for retrieving the trusted publishers to validate the content.
+        # By default, LCM uses the default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM uses this custom store for retrieving the trusted publishers to validate the content.
         TrustedStorePath = 'Cert:\LocalMachine\DSCStore'            
         SignedItemType = 'Configuration','Module'         # This is a list of DSC artifacts, for which LCM need to verify their digital signature before executing them on the node.       
     }
@@ -233,7 +235,7 @@ EnableSignatureValidation
 Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose 
  ```
 
-A definição da metaconfiguração acima em um nó habilita a validação da assinatura nas configurações e nos módulos baixados. O Gerenciador de Configurações Local executará as seguintes etapas para verificar as assinaturas digitais.
+A definição da metaconfiguração acima em um nó habilita a validação da assinatura nas configurações e nos módulos baixados. O Gerenciador de Configurações Local executa as seguintes etapas para verificar as assinaturas digitais.
 
 1. Verifique se a assinatura em um arquivo de configuração (. MOF) é válida. 
    Ela usa o cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) do PowerShell, que é estendido na versão 5.1 para dar suporte à validação de assinatura do MOF.
@@ -251,12 +253,12 @@ Se a verificação tiver falhado em qualquer estágio, por exemplo, se a configu
 
 ![Configuração de Saída de Erro de Exemplo](../images/PullUnsignedConfigFail.png)
 
-Da mesma forma, a extração de um módulo cujo catálogo não está assinado resultará no seguinte erro:
+Da mesma forma, a extração de um módulo cujo catálogo não está assinado resulta no seguinte erro:
 
 ![Módulo de Saída de Erro de Exemplo](../images/PullUnisgnedCatalog.png)
 
 ####<a name="push"></a>Push
-Uma configuração entregue com o uso de push pode ser violada em sua origem antes de ser entregue para o nó. O Gerenciador de Configurações Local executará etapas semelhantes de validação de assinatura para as configurações enviadas por push ou publicadas.
+Uma configuração entregue com o uso de push pode ser violada em sua origem antes de ser entregue para o nó. O Gerenciador de Configurações Local executa etapas semelhantes de validação de assinatura para as configurações enviadas por push ou publicadas.
 Veja abaixo um exemplo completo de validação de assinatura para envio por push.
 
 * Habilite a validação da assinatura no nó.
