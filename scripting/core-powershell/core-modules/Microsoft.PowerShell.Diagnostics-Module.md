@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: "Módulo Microsoft.PowerShell.Diagnostics"
-ms.technology: powershell
 ms.assetid: f5aab004-d759-4f8b-9064-a30095ad4257
-ms.openlocfilehash: 7e3c4a3ac549f874e060441f1ec12f65c3f69496
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 38f8e4100539fcac738f4f54d56b0fa74b0aca22
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="microsoftpowershelldiagnostics-module"></a>Módulo Microsoft.PowerShell.Diagnostics
 Esta seção contém os tópicos de ajuda para o módulo **Microsoft.PowerShell.Diagnostics**. O módulo **Microsoft.PowerShell.Diagnostics** contém cmdlets que gerenciam logs de eventos, contadores de desempenho e ETW (Rastreamento de Eventos para Windows). Ele é instalado com o Windows PowerShell.

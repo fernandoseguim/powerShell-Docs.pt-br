@@ -1,16 +1,12 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: guia de fluxos de trabalho
-ms.technology: powershell
-ms.openlocfilehash: 59b31a94ad73bb723ade296cbb5faf147e663df1
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 9eb5ae1d665ed6e4319ede62e7f7a27e6ce5b04f
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="psworkflow-module"></a>Módulo PSWorkflow
 Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui cmdlets que dão suporte ao recurso de fluxo de trabalho do Windows PowerShell. O módulo **PSWorkflow** é instalado com o Windows PowerShell.

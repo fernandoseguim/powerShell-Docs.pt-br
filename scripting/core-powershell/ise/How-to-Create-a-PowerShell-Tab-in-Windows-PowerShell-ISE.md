@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Como criar uma guia do PowerShell no ISE do Windows PowerShell
-ms.technology: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 1c57e557e2fefbdf67b6a3c71721cd2a916a0ec5
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 7dc92275c30ad783ad71b2a4825e9cc0d26d1691
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como criar uma guia do PowerShell no ISE do Windows PowerShell
 As guias no ISE (Ambiente de Script Integrado) do Windows PowerShell® permitem criar e usar simultaneamente vários ambientes de execução dentro do mesmo aplicativo. Cada guia do PowerShell corresponde a uma sessão ou ambiente de execução separado.

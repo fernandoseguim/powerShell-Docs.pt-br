@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Gerenciando processos com os Cmdlets de processo
-ms.technology: powershell
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
-ms.openlocfilehash: 418c175e6ed0b71b420c4aa2d545ff177122fa0a
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 3786fb77167746d6a477dffdd4ea13e863c99964
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Gerenciando processos com os Cmdlets de processo
 Você pode usar os cmdlets de processo do Windows PowerShell para gerenciar processos locais e remotos no Windows PowerShell.

@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Trabalhando com objetos
-ms.technology: powershell
 ms.assetid: 7ecc94a4-015c-4459-ae58-85289ea09030
-ms.openlocfilehash: 9d5a1bb6c33d8314d46f771a4a35a522c87ca49b
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: ab06e0a9b79323d58d8ab45d492c66ece15cbdd1
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="working-with-objects"></a>Trabalhando com objetos
 Discutimos como o Windows PowerShell usa objetos para transferir dados entre cmdlets e demonstramos algumas maneiras de exibir informações detalhadas sobre os objetos usando os cmdlets Get-Member e Format para exibir propriedades específicas de objetos.

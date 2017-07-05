@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: "Módulo Microsoft.PowerShell.Utility"
-ms.technology: powershell
 ms.assetid: 35c7701f-8e26-442f-8dc7-cf0c89f2c337
-ms.openlocfilehash: 9bc3f6ba1610e36df21960f76764f33b13e5f777
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: a7b1beaf192fb71a07ebe861c818e8de9ebbe93d
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="microsoftpowershellutility-module"></a>Módulo Microsoft.PowerShell.Utility
 Esta seção contém os tópicos de ajuda para o módulo **Microsoft.PowerShell.Utility**. O módulo **Microsoft.PowerShell.Utility** é instalado com o Windows PowerShell.

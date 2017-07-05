@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Sobre o Windows PowerShell
-ms.technology: powershell
 ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
-ms.openlocfilehash: f00627072543ca2b2ddcd27ea4220f9368046afd
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 5e6d1bb4d8915ba3c83ba0020b959e444b5211cd
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="about-windows-powershell"></a>Sobre o Windows PowerShell
 O Windows PowerShell foi projetado para melhorar o ambiente de script e de linha de comando eliminando problemas antigos e adicionando novos recursos.
