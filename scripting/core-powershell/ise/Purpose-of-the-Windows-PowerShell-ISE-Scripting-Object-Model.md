@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
-ms.technology: powershell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
-ms.openlocfilehash: 079b23ca1338fdb888e13cc187e9498a141916aa
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 65535948d681ec63c6cc36583c6d145cfa19b937
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objetivo do modelo de objeto de script do ISE do Windows PowerShell
   Objetos são associados com a forma e a função do ISE (Ambiente de Script Integrado) do Windows PowerShell. A referência de modelo de objeto fornece detalhes sobre as propriedades e os métodos de membros que esses objetos expõem. Exemplos são fornecidos para mostrar como você pode usar scripts para acessar diretamente esses métodos e propriedades. O modelo de objeto de script facilita a gama de tarefas a seguir.

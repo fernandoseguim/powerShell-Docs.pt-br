@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: "Módulo PSWorkflowUtility"
-ms.technology: powershell
 ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
-ms.openlocfilehash: dbc092b18df05ad37ed6860f1c21c17f767bb619
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 2b3fd8227cc5ef3bde5c9b1c253cf0b27602139b
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="psworkflowutility-module"></a>Módulo PSWorkflowUtility
 Esta seção contém os tópicos de ajuda do módulo **PSWorkflowUtility**, que inclui comandos que gerenciam o recurso do fluxo de trabalho do Windows PowerShell. O módulo **PSWorkflowUtility** é instalado com o Windows PowerShell.

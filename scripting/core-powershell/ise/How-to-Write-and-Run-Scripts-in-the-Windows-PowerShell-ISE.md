@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Como gravar e executar scripts no ISE do Windows PowerShell
-ms.technology: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 2478db382639ef315574bb7c79faec7cf2ae1c96
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 Este tópico descreve como criar, editar, executar e salvar scripts no Painel de Script.
@@ -22,7 +18,7 @@ Este tópico descreve como criar, editar, executar e salvar scripts no Painel de
 
 -   [Como salvar um script](#bkmk_3)
 
-## <a name="a-namebkmk1ahow-to-create-and-run-scripts"></a><a name="bkmk_1"></a>Como criar e executar scripts
+## <a name="bkmk_1"></a>Como criar e executar scripts
 Você pode abrir e editar arquivos do Windows PowerShell® no Painel de Script. Tipos de arquivos específicos de interesse no Windows PowerShell® são arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1). Esses tipos de arquivo são coloridos por sintaxe no editor do Painel de Script. Outros tipos de arquivo comuns que você pode abrir no Painel de Script são arquivos de configuração (.ps1xml), arquivos XML e arquivos de texto.
 
 > [!NOTE]
@@ -58,7 +54,7 @@ Na barra de ferramentas, clique em **Executar Script** ou, no menu **Arquivo**, 
 ### <a name="to-stop-a-running-script"></a>Para interromper um script em execução
 Na barra de ferramentas, clique em **Parar Operação**, pressione Ctrl+Break ou, no menu **Arquivo**, clique em **Parar Operação**. Pressionar **Ctrl+C** também funciona, a menos que algum texto esteja selecionado no momento, quando então **Ctrl+C** é mapeado para a função de cópia do texto selecionado.
 
-## <a name="a-namebkmk2ahow-to-write-and-edit-text-in-the-script-pane"></a><a name="bkmk_2"></a>Como gravar e editar texto no Painel de Script
+## <a name="bkmk_2"></a>Como gravar e editar texto no Painel de Script
 Use as etapas a seguir para editar texto no Painel de Script. Você pode copiar, recortar, colar, localizar e substituir texto. Você também pode desfazer e refazer a última ação que você acabou de executar. Os atalhos de teclado para executar essas ações são os mesmos usados para todos os aplicativos do Windows.
 
 ### <a name="to-enter-text-in-the-script-pane"></a>Para inserir texto no Painel de Script
@@ -107,7 +103,7 @@ Pressione **Ctrl+Z** ou, na barra de ferramentas, clique no ícone **Desfazer** 
 ### <a name="to-redo-an-action-in-the-script-pane"></a>Para refazer uma ação no Painel de Script
 Pressione **Ctrl+Y** ou, na barra de ferramentas, clique no ícone **Refazer** ou, no menu **Editar**, clique em **Refazer**.
 
-## <a name="a-namebkmk3ahow-to-save-a-script"></a><a name="bkmk_3"></a>Como salvar um script
+## <a name="bkmk_3"></a>Como salvar um script
 Use as etapas a seguir para salvar e nomear um script. Um asterisco é exibido ao lado do nome do script para marcar um arquivo que não foi salvo desde que ele foi alterado. O asterisco desaparece quando o arquivo é salvo.
 
 ### <a name="to-save-a-script"></a>Para salvar um script

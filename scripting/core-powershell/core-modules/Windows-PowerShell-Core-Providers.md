@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Windows PowerShell Core Providers
-ms.technology: powershell
 ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
-ms.openlocfilehash: dbb49a7e6bce4fe1383aab8a3b28e85adafb2643
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: fdfdfee86884d3ac18a33ac424828faa96ecd8bd
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="windows-powershell-core-providers"></a>Windows PowerShell Core Providers
 Esta seção contém tópicos de ajuda que descrevem os provedores do Windows PowerShell no módulo **Microsoft.PowerShell.Core**.

@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Como depurar scripts no ISE do Windows PowerShell
-ms.technology: powershell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: 8574754ccdf4717d29c4076f88d41691501da471
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: db8847e2cc9abeec729ed8d939fc170529a93846
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar scripts no ISE do Windows PowerShell
 Este tópico descreve como depurar scripts em um computador local usando os recursos de depuração visual do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
@@ -21,7 +17,7 @@ Este tópico descreve como depurar scripts em um computador local usando os recu
 [Como contornar, intervir e sair durante a depuração](#bkmk_3)
 [Como exibir os valores de variáveis durante a depuração](#bkmk_4)
 
-## <a name="a-namebkmk1ahow-to-manage-breakpoints"></a><a name="bkmk_1"></a>Como gerenciar pontos de interrupção
+## <a name="bkmk_1"></a>Como gerenciar pontos de interrupção
 Um ponto de interrupção é um ponto designado em um script em que você deseja pausar a operação para poder examinar o estado atual das variáveis e o ambiente no qual o script está sendo executado. Depois de o script ser pausado por um ponto de interrupção, você pode executar comandos no Painel de Console para examinar o estado do script.  Você pode gerar variáveis ou executar outros comandos. Você ainda pode modificar o valor de todas as variáveis que estão visíveis para o contexto do script em execução no momento. Após examinar o que deseja ver, você pode retomar a operação do script.
 
 É possível definir três tipos de pontos de interrupção no ambiente de depuração do Windows PowerShell:
@@ -72,7 +68,7 @@ O script a seguir é um exemplo de como remover todos os pontos de interrupção
 Get-PSBreakpoint | Remove-PSBreakpoint
 ```
 
-### <a name="a-namebkmkdisableadisable-a-breakpoint"></a><a name="bkmk_disable"></a>Desabilitar um ponto de interrupção
+### <a name="bkmk_disable"></a>Desabilitar um ponto de interrupção
 Desabilitar um ponto de interrupção não o remove; ele é desativado até ele ser habilitado.  Para desabilitar um ponto de interrupção de linha específico, clique com o botão direito do mouse na linha na qual você quer desabilitar um ponto de interrupção e clique em **Desabilitar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja desabilitar um ponto de interrupção e pressione **F9** ou, no menu **Depurar**, clique em **Desabilitar Ponto de Interrupção**. O script a seguir é um exemplo de como é possível remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ``` PowerShell
@@ -106,7 +102,7 @@ Para habilitar todos os pontos de interrupção definidos na sessão atual, no m
 Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
-## <a name="a-namebkmk2ahow-to-manage-a-debugging-session"></a><a name="bkmk_2"></a>Como gerenciar uma sessão de depuração
+## <a name="bkmk_2"></a>Como gerenciar uma sessão de depuração
 Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
 
 ### <a name="to-start-debugging"></a>Para iniciar a depuração
@@ -123,7 +119,7 @@ Enquanto está em pausa, para ver a pilha de chamadas atual, pressione **Ctrl+Sh
 ### <a name="to-stop-debugging"></a>Para interromper a depuração
 Pressione **Shift+F5** ou, no menu **Depurar**, clique em **Parar Depurador** ou então, no Painel Console, digite **Q** e pressione **Enter**.
 
-## <a name="a-namebkmk3ahow-to-step-over-step-into-and-step-out-while-debugging"></a><a name="bkmk_3"></a>Como contornar, intervir e sair durante a depuração
+## <a name="bkmk_3"></a>Como contornar, intervir e sair durante a depuração
 Passo a passo é o processo de executar uma instrução de cada vez. Você pode parar em uma linha de código e examinar os valores de variáveis e o estado do sistema. A tabela a seguir descreve as tarefas comuns de depuração como contornar, intervir e sair.
 
 | Tarefa de Depuração | Descrição | Como fazer isso no ISE do PowerShell |
@@ -133,7 +129,7 @@ Passo a passo é o processo de executar uma instrução de cada vez. Você pode 
 | **Sair** | Sairá da função atual e subirá um nível se a função for aninhada. Se estiver no corpo principal, o script será executado ao final ou no próximo ponto de interrupção. As instruções ignoradas são executadas, mas não percorridas. | Pressione **Shift+F11** ou, no menu **Depurar**, clique em **Sair** ou então, no Painel Console, digite **O** e pressione **Enter**. |
 | **Continuar** | Continua a execução até o final ou até o próximo ponto de interrupção. As funções e invocações ignoradas são executadas, mas não são percorridas. | Pressione **F5** ou, no menu **Depurar**, clique em **Executar/Continuar** ou então, no Painel Console, digite **C** e pressione **Enter**. |
 
-## <a name="a-namebkmk4ahow-to-display-the-values-of-variables-while-debugging"></a><a name="bkmk_4"></a>Como exibir os valores de variáveis durante a depuração
+## <a name="bkmk_4"></a>Como exibir os valores de variáveis durante a depuração
 Você pode exibir os valores atuais das variáveis no script ao percorrer o código.
 
 ### <a name="to-display-the-values-of-standard-variables"></a>Para exibir os valores das variáveis padrão

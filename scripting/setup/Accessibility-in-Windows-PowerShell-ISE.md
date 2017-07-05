@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Acessibilidade no ISE do Windows PowerShell
-ms.technology: powershell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 0c9877e9de958405be7ade4ab6470b1d97b916fc
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 1231271067f32ff888504344bc324b13aade9c33
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell® que podem ser úteis.
@@ -34,7 +30,7 @@ O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os defic
 
 -   Alteração do tamanho do texto
 
-## <a name="a-namebkmk1ahow-to-change-the-size-and-location-of-the-console-and-script-panes"></a><a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script
+## <a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script
 Você pode usar as etapas a seguir para alterar o tamanho e o local do Painel de Console e do Painel de Script. Quando você abrir o ISE do Windows PowerShell novamente, as alterações de tamanho e localização feitas serão mantidas.
 
 ### <a name="to-resize-the-script-pane-and-console-pane"></a>Para redimensionar o Painel de Script e o Painel de Console
@@ -56,7 +52,7 @@ Realize um dos seguintes procedimentos:
 
 -   Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir**, clique para marcar a opção de menu **Mostrar Painel de Script**.
 
-## <a name="a-namebkmk2akeyboard-shortcuts-for-editing-text"></a><a name="bkmk_2"></a>Atalhos de teclado para edição de texto
+## <a name="bkmk_2"></a>Atalhos de teclado para edição de texto
 Você pode usar os seguintes atalhos de teclado ao editar texto.
 
 |Ação|Atalhos do teclado|Usar em|
@@ -73,7 +69,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 |**Selecionar tudo**|Ctrl+A|Painel de script, o painel de console|
 |**Desfazer**|Ctrl+Z|Painel de script, o painel de console|
 
-## <a name="a-namebkmk3akeyboard-shortcuts-for-running-scripts"></a><a name="bkmk_3"></a>Atalhos de teclado para execução de scripts
+## <a name="bkmk_3"></a>Atalhos de teclado para execução de scripts
 Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de Script.
 
 |Ação|Atalho do Teclado|
@@ -86,7 +82,7 @@ Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de
 |**Tab** (para o próximo script)|Ctrl+Tab **Observação:** Tab para o próximo script só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
 |**Tab** (para o script anterior)|Ctrl+Shift+Tab **Observação:** Tab para o script anterior só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
 
-## <a name="a-namebkmk4akeyboard-shortcuts-for-customizing-the-view"></a><a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição
+## <a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição
 Você pode usar os seguintes atalhos de teclado para personalizar a exibição no ISE do Windows PowerShell. Eles são acessíveis de todos os painéis no aplicativo.
 
 |Ação|Atalho do Teclado|
@@ -102,7 +98,7 @@ Você pode usar os seguintes atalhos de teclado para personalizar a exibição n
 |**Ampliar**|Ctrl+Sinal de adição|
 |**Reduzir**|Ctrl+Sinal de subtração|
 
-## <a name="a-namebkmk5akeyboard-shortcuts-for-debugging-scripts"></a><a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts
+## <a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts
 Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 
 |Ação|Atalho do Teclado|Usar em|
@@ -132,7 +128,7 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 |**Listar o script**|L|Painel de Console ao depurar um script|
 |**Exibir comandos de depuração do console**|H ou ?|Painel de Console ao depurar um script|
 
-## <a name="a-namebkmk6akeyboard-shortcuts-for-windows-powershell-tabs"></a><a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell
+## <a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell
 Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows PowerShell.
 
 |Ação|Atalho do Teclado|
@@ -142,7 +138,7 @@ Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows 
 |**Guia anterior do PowerShell**|Ctrl+Shift+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
 |**Próxima guia do Windows PowerShell**|Ctrl+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
 
-## <a name="a-namebkmk7akeyboard-shortcuts-for-starting-and-exiting"></a><a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair
+## <a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair
 Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.
 
 |Ação|Atalho do Teclado|
