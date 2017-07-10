@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_dispute_resolution
-ms.technology: powershell
-ms.openlocfilehash: b7a76a6d8746b4a22154f8a8c7dde89d61046116
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 640d20371a51b08a5627b9beff1bb0ada4f06dd8
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dispute-resolution"></a>Solução de controvérsias
+<a id="dispute-resolution" class="xliff"></a>
+# Solução de controvérsias
 
 Este documento é um processo de solução de controvérsias recomendado para membros da comunidade, a fim de ajudar a resolver controvérsias com outros editores da Galeria do PowerShell.
 
-## <a name="process"></a>Processo
+<a id="process" class="xliff"></a>
+## Processo
 
 1. Entre em contato com os proprietários do item ao qual se refere a controvérsia usando o link **Entrar em contato com os proprietários** na página de detalhes do item.
 Explique o problema de forma cordial e direta.
@@ -26,7 +25,8 @@ Explique o problema de forma cordial e direta.
 A equipe de suporte do PowerShellGallery.com se mobilizará e tentará resolver o problema.
 
 
-## <a name="prohibited-use"></a>Uso proibido
+<a id="prohibited-use" class="xliff"></a>
+## Uso proibido
 
 Os procedimentos a seguir não são permitidos na Galeria pública do PowerShell e serão removidos imediatamente sem discussão.  Os proprietários do item serão notificados caso seus itens sejam removidos.
 

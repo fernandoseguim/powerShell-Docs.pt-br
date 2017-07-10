@@ -1,4 +1,16 @@
-# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 9556f0d9a12807cbfe38aaade6798088f051596d
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="cryptographic-message-syntax-cms-cmdlets" class="xliff"></a>
+# Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
 
 Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](http://tools.ietf.org/html/rfc5652).
 
@@ -82,3 +94,4 @@ Para exibir certificados de criptografia de documento no provedor de certificado
 ```powershell
 dir -DocumentEncryptionCert
 ```
+

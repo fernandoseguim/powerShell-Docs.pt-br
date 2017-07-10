@@ -1,19 +1,17 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: Excluindo itens
-ms.technology: powershell
-ms.openlocfilehash: 0bc8261992802c75463c454dd990dccdbfb2eb12
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 00452f9b6625a51e95f3f46dbd66291fa20e17ad
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="deleting-items"></a>Excluindo itens
+<a id="deleting-items" class="xliff"></a>
+# Excluindo itens
 
 A Galeria do PowerShell não dá suporte à exclusão permanente de itens, porque isso interromperia qualquer usuário que dependesse da disponibilidade desses itens.
 

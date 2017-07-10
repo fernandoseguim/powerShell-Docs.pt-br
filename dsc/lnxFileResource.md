@@ -1,21 +1,22 @@
 ---
-title: Recurso nxFile de DSC para Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 2ba44df5dd6c91371cbbfe95d48184a4ff4a7738
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso nxFile de DSC para Linux
+ms.openlocfilehash: 14f1ae31a8409b8874d76a91b8b29595e30fbb46
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxfile-resource"></a>Recurso nxFile de DSC para Linux
+<a id="dsc-for-linux-nxfile-resource" class="xliff"></a>
+# Recurso nxFile de DSC para Linux
 
 O recurso **nxFile** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar arquivos e diretórios em um nó do Linux.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 nxFile <string> #ResourceName
@@ -37,7 +38,8 @@ nxFile <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -54,7 +56,8 @@ nxFile <string> #ResourceName
 | Modo| Especifica as permissões desejadas para o recurso, na notação octal ou simbólica. (por exemplo, 777 ou rwxrwxrwx). Se usar notação simbólica, não forneça o primeiro caractere que indica o diretório ou arquivo.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="additional-information"></a>Informações adicionais
+<a id="additional-information" class="xliff"></a>
+## Informações adicionais
 
 
 Linux e Windows usam diferentes caracteres de quebra de linha em arquivos de texto por padrão; isso pode causar resultados inesperados ao configurar alguns arquivos em um computador Linux com __nxFile__. Há várias maneiras de gerenciar o conteúdo de um arquivo do Linux e, ao mesmo tempo, evitar problemas causados por caracteres de quebra de linha inesperada:
@@ -132,7 +135,8 @@ nxFile resolvConf
 }
 ```
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir garante que o diretório `/opt/mydir` exista e que um arquivo com conteúdo especificado exista nesse diretório.
 

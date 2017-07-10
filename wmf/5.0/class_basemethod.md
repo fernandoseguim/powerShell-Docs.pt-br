@@ -1,4 +1,16 @@
-# <a name="call-base-class-method"></a>Chamar o método de classe base
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 28da6d12d3f7a59777425e1cc4531a609a793ddb
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="call-base-class-method" class="xliff"></a>
+# Chamar o método de classe base
 
 É possível substituir os métodos existentes nas subclasses. Para fazer isso, declare métodos usando o mesmo nome e a mesma assinatura:
 
@@ -46,3 +58,4 @@ $list = [MyIntList]::new()
 $list.Add(100)
 $list[0] # return 200
 ```
+

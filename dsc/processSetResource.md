@@ -1,23 +1,24 @@
 ---
-title: Recurso ProcessSet da DSC
-ms.date: 2016-05-23
-keywords: PowerShell, DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: f9754be3f803d3232189985faa41fb209bfcfe46
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso ProcessSet da DSC
+ms.openlocfilehash: b713d1a9c34eab6966de4f342991ead32c19df5d
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-windowsprocess-resource"></a>Recurso WindowsProcess de DSC
+<a id="dsc-windowsprocess-resource" class="xliff"></a>
+# Recurso WindowsProcess de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
 O recurso **ProcessSet** na DSC (Configuração de Estado Desejado) do Windows PowerShell fornece um mecanismo para configurar processos em um nó de destino. Esse recurso é um [recurso composto](authoringResourceComposite.md) que chama o [Recurso do WindowsProcess](windowsProcessResource.md) para cada grupo especificado no parâmetro `GroupName`.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 WindowsProcess [string] #ResourceName
@@ -34,7 +35,8 @@ WindowsProcess [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Argumentos| Uma cadeia de caracteres que contém os argumentos a serem passados ao processo no estado em que se encontram. Se você precisar passar vários argumentos, coloque todos nessa cadeia de caracteres.| 

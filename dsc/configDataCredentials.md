@@ -1,20 +1,21 @@
 ---
-title: "Opções de Credenciais nos Dados de Configuração"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: e6ea0992f90a72da6426d9112950c925ab6cd32b
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Opções de Credenciais nos Dados de Configuração"
+ms.openlocfilehash: 7fadce447c418b229a534e92d12bc2131365a37a
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
+<a id="credentials-options-in-configuration-data" class="xliff"></a>
+# Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
 
-## <a name="plain-text-passwords-and-domain-users"></a>Senhas de Texto Sem Formatação e Usuários do Domínio
+<a id="plain-text-passwords-and-domain-users" class="xliff"></a>
+## Senhas de Texto Sem Formatação e Usuários do Domínio
 
 As configurações DSC que contêm uma credencial sem criptografia gerarão mensagens de erro sobre senhas de texto sem formatação.
 Além disso, a DSC gerará um aviso quando usar credenciais de domínio.
@@ -124,7 +125,8 @@ unencryptedPasswordDemo -ConfigurationData $ConfigurationData
 Start-DscConfiguration ./unencryptedPasswordDemo -verbose -wait -force
 ```
 
-## <a name="handling-credentials-in-dsc"></a>Lidando com Credenciais na DSC
+<a id="handling-credentials-in-dsc" class="xliff"></a>
+## Lidando com Credenciais na DSC
 
 Os recursos de configuração DSC são executados como `Local System` por padrão.
 Contudo, alguns recursos precisam de uma credencial, como quando o recurso `Package` precisa instalar um software em uma conta de usuário específica.
@@ -160,7 +162,8 @@ No entanto, o recurso usa apenas a propriedade `Credential`.
 
 Para saber mais sobre a propriedade `PsDscRunAsCredential`, veja [Execução do DSC com as credenciais do usuário](runAsUser.md).
 
-## <a name="example-the-group-resource-credential-property"></a>Exemplo: a propriedade de credencial do recurso Group
+<a id="example-the-group-resource-credential-property" class="xliff"></a>
+## Exemplo: a propriedade de credencial do recurso Group
 
 A DSC é executada em `Local System`; portanto, já tem permissões para alterar os usuários locais e grupos.
 Se o membro adicionado for uma conta local, nenhuma credencial será necessária.
@@ -170,7 +173,8 @@ Não são permitidas consultas anônimas ao Active Directory.
 A propriedade `Credential` do recurso `Group` é a conta de domínio usada para consultar o Active Directory.
 Em geral, pode ser uma conta de usuário genérica, porque, por padrão, os usuários podem *ler* a maioria dos objetos no Active Directory.
 
-## <a name="example-configuration"></a>Exemplo de Configuração
+<a id="example-configuration" class="xliff"></a>
+## Exemplo de Configuração
 
 O exemplo de código a seguir usa DSC para preencher um grupo local com um usuário de domínio:
 
@@ -225,7 +229,8 @@ Esse exemplo tem dois problemas:
 1.  Um erro explica que senhas de texto sem formatação não são recomendadas
 2.  Um aviso alerta para não usar uma credencial de domínio
 
-## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
+<a id="psdscallowplaintextpassword" class="xliff"></a>
+## PsDscAllowPlainTextPassword
 
 A primeira mensagem de erro tem uma URL com a documentação.
 Esse link explica como criptografar senhas usando uma estrutura [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e um certificado.
@@ -270,7 +275,8 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 
 **A Microsoft avisa para evitar senhas de texto sem formatação devido ao risco de segurança significativo.**
 
-## <a name="domain-credentials"></a>Credenciais de Domínio
+<a id="domain-credentials" class="xliff"></a>
+## Credenciais de Domínio
 
 Executar o script de configuração de exemplo novamente (com ou sem criptografia) ainda gera um aviso de que o uso de uma conta de domínio para uma credencial não é recomendado.
 O uso de uma conta local elimina a possível exposição das credenciais de domínio que podem ser usadas em outros servidores.
@@ -280,7 +286,8 @@ O uso de uma conta local elimina a possível exposição das credenciais de dom�
 Se houver um '\'' ou um '@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.
 
-## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
+<a id="psdscallowdomainuser" class="xliff"></a>
+## PSDscAllowDomainUser
 
 No exemplo do recurso `Group` da DSC acima, a consulta de um domínio do Active Directory *exige* uma conta de domínio.
 Nesse caso, adicione a propriedade `PSDscAllowDomainUser` ao bloco `ConfigurationData` conforme segue:

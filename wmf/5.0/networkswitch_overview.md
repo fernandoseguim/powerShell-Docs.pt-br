@@ -1,4 +1,16 @@
-# <a name="network-switch-management-with-powershell"></a>Gerenciamento de comutador de rede com o PowerShell
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 80852bf750700d549de24e150ffd89ac55b7bf88
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="network-switch-management-with-powershell" class="xliff"></a>
+# Gerenciamento de comutador de rede com o PowerShell
 
 O cmdlet **Get-NetworkSwitchEthernetPort** agora retorna as seguintes informações adicionais com instâncias:
 
@@ -7,7 +19,8 @@ O cmdlet **Get-NetworkSwitchEthernetPort** agora retorna as seguintes informaç�
 - AccessVLAN – a ID da VLAN associada a essa porta no modo de acesso
 - TrunkedVLANList – uma lista de IDs de VLANs associadas a essa porta no modo de tronco
 
-## <a name="fundamental-network-switch-management-with-windows-powershell"></a>Gerenciamento fundamental de comutador de rede com o Windows PowerShell
+<a id="fundamental-network-switch-management-with-windows-powershell" class="xliff"></a>
+## Gerenciamento fundamental de comutador de rede com o Windows PowerShell
 
 Os cmdlets Network Switch, introduzidos no WMF 5.0, permitem aplicar a configuração do comutador, da VLAN (LAN virtual) e a configuração básica de porta do comutador de rede da Camada 2 a comutadores de rede certificados com o logotipo do Windows Server 2012 R2. A Microsoft mantém seu compromisso em dar suporte à visão da DAL (Camada de [Abstração de Datacenter](http://technet.microsoft.com/en-us/cloud/dal.aspx)) e em mostrar o valor para nossos clientes e parceiros neste espaço. Com esses cmdlets, é possível executar:
 
@@ -59,3 +72,4 @@ PS> Get-Command *-NetworkSwitch*
 ```
 
 Mais informações estão disponíveis na postagem no blog de Jeffrey Snover sobre o comunicado da Preview do WMF 5.0: <http://blogs.technet.com/b/windowsserver/archive/2014/04/03/windows-management-framework-v5-preview.aspx>
+

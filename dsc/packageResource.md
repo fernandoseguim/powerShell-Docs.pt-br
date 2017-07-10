@@ -1,23 +1,24 @@
 ---
-title: Recurso Package de DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 343bd3c625e2df9f34480ea8065e3039d6069d61
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso Package de DSC
+ms.openlocfilehash: f7bcbd387db422037614feee7c4a00d93b3cec4e
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-package-resource"></a>Recurso Package de DSC
+<a id="dsc-package-resource" class="xliff"></a>
+# Recurso Package de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso **Package** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para instalar ou desinstalar pacotes, tais como os pacotes do Windows Installer e setup.exe, em um nó de destino.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 Package [string] #ResourceName
@@ -34,7 +35,8 @@ Package [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Nome| Indica o nome do pacote para o qual você deseja garantir um estado específico.| 
@@ -47,7 +49,8 @@ Package [string] #ResourceName
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 | ReturnCode| Indica o código de retorno esperado. Se o código de retorno real não corresponder ao valor esperado fornecido aqui, a configuração gerará um erro.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 Este exemplo executa o instalador .msi que está localizado no caminho especificado e tem a ID do produto especificado.
 

@@ -1,4 +1,16 @@
-# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a>Descoberta, instalação e gerenciamento de script do PowerShell com o PowerShellGet
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: a5d1bff0b39cbbac7d83c44c232a2721c340caa8
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="powershell-script-discovery-install-and-management-with-powershellget" class="xliff"></a>
+# Descoberta, instalação e gerenciamento de script do PowerShell com o PowerShellGet
 
 O recurso de Compartilhamento de script do PowerShell foi adicionado ao PowerShellGet na versão WMF 5.0 RTM.
 Os novos cmdlets a seguir foram adicionados ao módulo PowerShellGet para dar suporte aos Scripts do PowerShell.
@@ -66,3 +78,4 @@ Sintaxe dos Cmdlets de compartilhamento de script:
 
 **Publish-Script** -LiteralPath &lt;string&gt; \[-NuGetApiKey &lt;string&gt;\] \[-Repository &lt;string&gt;\] \[-WhatIf\] \[-Confirm\] \[&lt;CommonParameters&gt;\]
 ```
+

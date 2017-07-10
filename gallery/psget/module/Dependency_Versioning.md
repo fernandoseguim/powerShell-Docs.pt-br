@@ -1,15 +1,12 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
 title: Dependency_Versioning
-ms.technology: powershell
-ms.openlocfilehash: 9b8edc7597e5e72ef8cd085b5d523ddecd578edb
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: ea3e125c9e3198e551b47ea187ccda8496eb3d28
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---

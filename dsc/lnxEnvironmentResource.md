@@ -1,21 +1,22 @@
 ---
-title: Recurso nxEnvironment de DSC para Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 0a7ab24ff278defd7fc0a80f1dbd45bfa0e16427
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso nxEnvironment de DSC para Linux
+ms.openlocfilehash: 3d09c9642f35627e939460c9c13dfe48d14030c3
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxenvironment-resource"></a>Recurso nxEnvironment de DSC para Linux
+<a id="dsc-for-linux-nxenvironment-resource" class="xliff"></a>
+# Recurso nxEnvironment de DSC para Linux
 
 O recurso **nxEnvironment** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar as variáveis de ambiente do sistema em um nó do Linux.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 nxEnvironment <string> #ResourceName
@@ -29,7 +30,8 @@ nxEnvironment <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -39,12 +41,14 @@ nxEnvironment <string> #ResourceName
 | Caminho| Define a variável de ambiente que está sendo configurada. Defina essa propriedade como **$true** se a variável for a variável **Path**; caso contrário, defina-a como **$false**. O padrão é **$false**. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="additional-information"></a>Informações adicionais
+<a id="additional-information" class="xliff"></a>
+## Informações adicionais
 
 * Se **Path** estiver ausente ou configurado como **$false**, as variáveis de ambiente serão gerenciadas em `/etc/environment`. Seus programas ou scripts poderão exigir uma configuração para fornecer o arquivo `/etc/environment` para acessar as variáveis de ambiente gerenciadas.
 * Se **Path** estiver definido como **$true**, a variável de ambiente será gerenciada no arquivo `/etc/profile.d/DSCenvironment.sh`. Esse arquivo será criado se não existir. Se **Ensure** estiver definido com "Absent" e **Path** estiver definido como **$true**, uma variável de ambiente existente será removida apenas de `/etc/profile.d/DSCenvironment.sh` e não de outros arquivos.
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir mostra como usar o recurso **nxEnvironment** para garantir que **TestEnvironmentVariable** esteja presente e tenha o valor "Test-Value". Se **TestEnvironmentVariable** não estiver presente, será criado.
 

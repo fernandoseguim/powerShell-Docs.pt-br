@@ -1,38 +1,41 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_update modulemanifest
-ms.technology: powershell
-ms.openlocfilehash: 85153872326c5af8f869bc2254040eca1a152f8b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Update-ModuleManifest
+ms.openlocfilehash: ce3f6f173535d98648eb51adb1dbf84764e4f434
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-modulemanifest"></a>Update-ModuleManifest
+<a id="update-modulemanifest" class="xliff"></a>
+# Update-ModuleManifest
 Atualiza um arquivo de manifesto do módulo.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Update-ModuleManifest atualiza um arquivo de manifesto do módulo (.psd1).
 
-### <a name="notes"></a>Observações
+<a id="notes" class="xliff"></a>
+### Observações
     - DscResourcesToExport tem suporte somente na versão mais recente do PowerShell 5.0. Nós não poderemos atualizar o campo se você estiver executando em versões anteriores do PowerShell.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 Esse novo cmdlet é usado para ajudar a atualizar o arquivo de manifesto com valores de propriedade de entrada. Ele usa todos os parâmetros usados por New-ModuleManifest.
 

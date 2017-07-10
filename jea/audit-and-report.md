@@ -1,18 +1,17 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.topic: conceptual
+keywords: "jea,powershell,segurança"
 title: "Auditoria e relatórios no JEA (Just Enough Administration)"
-ms.technology: powershell
-ms.openlocfilehash: 865055e873a065aef16a95d0f3297e550e40bc98
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
-translationtype: HT
+ms.openlocfilehash: 60bc7a4213c75735628207bb21078bf90f7b1ca3
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="auditing-and-reporting-on-jea"></a>Auditoria e relatórios no JEA (Just Enough Administration)
+<a id="auditing-and-reporting-on-jea" class="xliff"></a>
+# Auditoria e relatórios no JEA (Just Enough Administration)
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -21,7 +20,8 @@ Isso ajudará a avaliar se as pessoas corretas têm acesso ao ponto de extremida
 
 Este tópico descreve as várias maneiras para fazer auditoria em um ponto de extremidade JEA.
 
-## <a name="find-registered-jea-sessions-on-a-machine"></a>Encontre sessões JEA registradas em um computador
+<a id="find-registered-jea-sessions-on-a-machine" class="xliff"></a>
+## Encontre sessões JEA registradas em um computador
 
 Para verificar quais sessões JEA estão registradas em um computador, use o cmdlet [Get-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration).
 
@@ -50,7 +50,8 @@ $jea = Get-PSSessionConfiguration -Name 'JEAMaintenance'
 $jea.RoleDefinitions.GetEnumerator() | Select-Object Name, @{ Name = 'Role Capabilities'; Expression = { $_.Value.RoleCapabilities } }
 ```
 
-## <a name="find-available-role-capabilities-on-the-machine"></a>Encontre recursos de função disponíveis no computador
+<a id="find-available-role-capabilities-on-the-machine" class="xliff"></a>
+## Encontre recursos de função disponíveis no computador
 
 Os arquivos de capacidade da função serão usados pelo JEA somente se estiverem armazenados em uma pasta "RoleCapabilities" dentro de um módulo de PowerShell válido.
 Você pode localizar todos os recursos de função disponíveis em um computador, pesquisando a lista de módulos disponíveis.
@@ -75,7 +76,8 @@ function Find-LocalRoleCapability {
 > [!NOTE]
 > A ordem dos resultados dessa função não é, necessariamente, a ordem na qual os recursos de função serão selecionados se vários recursos de função compartilham o mesmo nome.
 
-## <a name="check-effective-rights-for-a-specific-user"></a>Verifique os direitos efetivos de um usuário específico
+<a id="check-effective-rights-for-a-specific-user" class="xliff"></a>
+## Verifique os direitos efetivos de um usuário específico
 
 Depois de configurar um ponto de extremidade JEA, convém verificar quais comandos estão disponíveis a um usuário específico em uma sessão JEA.
 Você pode usar [Get-PSSessionCapability](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Get-PSSessionCapability) para enumerar todos os comandos aplicáveis a um usuário se os usuários fossem iniciar uma sessão JEA com suas associações de grupo atual.
@@ -89,7 +91,8 @@ Se os usuários não forem membros permanentes de grupos que concederiam a eles 
 Esse é normalmente o caso ao usar sistemas de gerenciamento de acesso privilegiado just-in-time para permitir que os usuários pertençam temporariamente a um grupo de segurança.
 Sempre avalie cuidadosamente o mapeamento de usuários para as funções e os conteúdos de cada função para garantir que os usuários obtenham acesso apenas à quantidade mínima de comandos necessários para realizar seus trabalhos com êxito.
 
-## <a name="powershell-event-logs"></a>Logs de eventos do PowerShell
+<a id="powershell-event-logs" class="xliff"></a>
+## Logs de eventos do PowerShell
 
 Se você habilitou o log de módulo e/ou o registro em log de bloco de script no sistema, poderá encontrar eventos nos logs de eventos do Windows para cada comando executado por um usuário em suas sessões JEA.
 Para localizar esses eventos, abra o Visualizador de Eventos do Windows, navegue até o log de eventos **Microsoft-Windows-PowerShell/Operational** e procure eventos com a ID do evento **4104**.
@@ -98,7 +101,8 @@ Cada entrada de log de eventos incluirá informações sobre a sessão na qual o
 Para sessões JEA, isso inclui informações importantes sobre o **ConnectedUser**, que é o usuário real que criou a sessão JEA, bem como o **RunAsUser**, que identifica a conta JEA usada para executar o comando.
 Os logs de eventos do aplicativo mostrarão as alterações feitas pelo RunAsUser, portanto, habilitar as transcrições ou o registro em log de módulo/script é crucial para poder rastrear uma invocação de comando específica de um usuário.
 
-## <a name="application-event-logs"></a>Logs de eventos do aplicativo
+<a id="application-event-logs" class="xliff"></a>
+## Logs de eventos do aplicativo
 
 Quando você executa um comando em uma sessão JEA que interage com um aplicativo ou um serviço externo, esses aplicativos podem registrar eventos em seus próprios logs de eventos.
 Diferentemente dos logs e transcrições do PowerShell, outros mecanismos de registro em log não capturarão o usuário conectado da sessão JEA e, em vez disso, registrarão somente a conta de serviço gerenciado de grupo ou o usuário virtual Run As.
@@ -107,7 +111,8 @@ Para determinar quem executou o comando, você precisará consultar uma [transcr
 O log WinRM também pode ajudar a correlacionar os usuários Run As, em um log de eventos do aplicativo, com o usuário que está se conectando.
 A ID do evento **193** no log **Microsoft-Windows-Windows Remote Management/Operational** registra o SID (identificador de segurança) e o nome de conta do usuário que está se conectando e do usuário Run As, sempre que uma sessão JEA é criada.
 
-## <a name="session-transcripts"></a>Transcrições de sessão
+<a id="session-transcripts" class="xliff"></a>
+## Transcrições de sessão
 
 Se você configurou o JEA para criar uma transcrição para cada sessão de usuário, uma cópia do texto de todas as ações de usuário será armazenada na pasta especificada.
 
@@ -149,7 +154,9 @@ No exemplo acima, você pode ver que o parâmetro "Nome" foi fornecido com o val
 A saída de cada comando também disparará um CommandInvocation, geralmente para Out-Default. O InputObject do Out-Default é o objeto do PowerShell retornado pelo comando.
 Os detalhes desse objeto estão impressos algumas linhas abaixo, imitando de perto o que o usuário veria.
 
-## <a name="see-also"></a>Consulte também
+<a id="see-also" class="xliff"></a>
+## Consulte também
 
 - [Auditar ações de usuário em uma sessão JEA](audit-and-report.md)
 - [Postagem de blog sobre segurança *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
+

@@ -1,21 +1,22 @@
 ---
-title: Recurso nxUser de DSC para Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 9d27299aca8dee3e0390c9c8fc900832eb7e960c
-ms.sourcegitcommit: b3724fac99e52c712b18c4effbb9ee13711d0238
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso nxUser de DSC para Linux
+ms.openlocfilehash: d708edcee592835ce448752465125d451afbd45b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxuser-resource"></a>Recurso nxUser de DSC para Linux
+<a id="dsc-for-linux-nxuser-resource" class="xliff"></a>
+# Recurso nxUser de DSC para Linux
 
 O recurso **nxUser** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar usuários locais em um nó do Linux.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 nxUser <string> #ResourceName
@@ -34,7 +35,8 @@ nxUser <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade |  Indica o nome da conta para a qual você deseja garantir um estado específico. | 
 |---|---|
@@ -49,7 +51,8 @@ nxUser <string> #ResourceName
 | GroupID| A ID primária de grupo do usuário.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for "ResourceName" e seu tipo for "ResourceType", a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir garante que o usuário "monuser" exista e seja membro do grupo "DBusers".
 

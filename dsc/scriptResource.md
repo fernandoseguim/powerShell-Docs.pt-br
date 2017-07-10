@@ -1,17 +1,17 @@
 ---
-title: Recurso Script de DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 56eb7ef230d84cc5f5679f39e13e2019205c65f5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso Script de DSC
+ms.openlocfilehash: 81718de0b0c8463189e33e565dc9ff39692dbe8b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-script-resource"></a>Recurso Script de DSC
+<a id="dsc-script-resource" class="xliff"></a>
+# Recurso Script de DSC
 
  
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -27,7 +27,8 @@ O bloco de script `SetScript` deve modificar o nó. Ele será chamado pelo DSC, 
 Se você precisa usar variáveis do seu script de configuração nos blocos de script `GetScript`, `TestScript` ou `SetScript`, use o escopo `$using:` (consulte abaixo para obter um exemplo).
 
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 Script [string] #ResourceName
@@ -40,7 +41,8 @@ Script [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -50,7 +52,8 @@ Script [string] #ResourceName
 | Credential| Indica as credenciais que devem ser usadas para executar esse script, caso sejam necessárias.| 
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.
 
-## <a name="example-1"></a>Exemplo 1
+<a id="example-1" class="xliff"></a>
+## Exemplo 1
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -72,7 +75,8 @@ Configuration ScriptTest
 }
 ```
 
-## <a name="example-2"></a>Exemplo 2
+<a id="example-2" class="xliff"></a>
+## Exemplo 2
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -84,7 +88,7 @@ Configuration ScriptTest
     {
         GetScript = { 
             $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
-            return @{ 'Result' = "Version: $currentVersion" }
+            return @{ 'Version' = "$currentVersion" }
         }          
         TestScript = { 
             $state = $GetScript

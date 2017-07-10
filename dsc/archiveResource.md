@@ -1,23 +1,24 @@
 ---
-title: Recurso Archive da DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 77398d26f59975469e7c752a8d7f4f8bbbe4f553
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso Archive da DSC
+ms.openlocfilehash: 035f7cc1b7f21f7a0df2d72db0ba83bc0688356c
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-archive-resource"></a>Recurso Archive da DSC
+<a id="dsc-archive-resource" class="xliff"></a>
+# Recurso Archive da DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso Archive na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para descompactar arquivos mortos (.zip) em um caminho específico.
 
-## <a name="syntax"></a>Sintaxe 
+<a id="syntax" class="xliff"></a>
+## Sintaxe 
 ```MOF
 Archive [string] #ResourceName
 {
@@ -31,7 +32,8 @@ Archive [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -43,7 +45,8 @@ Archive [string] #ResourceName
 | Validar| Usa a propriedade Checksum para determinar se o arquivo corresponde à assinatura. Se você especificar Checksum sem Validate, ocorrerá uma falha na configuração. Se você especificar Validate sem Checksum, uma soma de verificação SHA-256 será usada por padrão.| 
 | Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade Force substitui esses erros. O valor padrão é False.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir mostra como usar o recurso Archive para garantir que o conteúdo de um arquivo morto chamado Test.zip exista e seja extraído em um destino específico.
 

@@ -1,25 +1,25 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.topic: conceptual
+keywords: "jea,powershell,segurança"
 title: "Registrando Configurações de JEA"
-ms.technology: powershell
-ms.openlocfilehash: 2dcf541f1ed9975a680b31ca5e00e0fbbbddb22e
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: 0684a1c7acffbccbedab9dba4689611a24c8ae25
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
+<a id="registering-jea-configurations" class="xliff"></a>
+# Registrando Configurações de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
 A última etapa antes de usar o JEA, depois que você tiver criado os [recursos de função](role-capabilities.md) e os [arquivo de configuração de sessão](session-configurations.md), é registrar o ponto de extremidade JEA.
 Esse processo aplica as informações de configuração de sessão no sistema e torna o ponto de extremidade disponível para uso pelos usuários e pelos mecanismos de automação.
 
-## <a name="single-machine-configuration"></a>Configuração de computador único
+<a id="single-machine-configuration" class="xliff"></a>
+## Configuração de computador único
 
 Em ambientes pequenos, você pode implantar o JEA ao registrar o arquivo de configuração de sessão usando o cmdlet [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
@@ -58,7 +58,8 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 Se o registro foi bem-sucedido, você estará pronto para [usar o JEA](using-jea.md).
 Você pode excluir o arquivo de configuração de sessão a qualquer momento; ele não é mais usado depois do registro.
 
-## <a name="multi-machine-configuration-with-dsc"></a>Configuração de vários computadores com o DSC
+<a id="multi-machine-configuration-with-dsc" class="xliff"></a>
+## Configuração de vários computadores com o DSC
 
 Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples é usar o recurso [Configuração de Estado Desejado](https://msdn.microsoft.com/en-us/powershell/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
 
@@ -118,7 +119,8 @@ Essa configuração pode ser aplicada em um sistema [invocando diretamente o Ger
 O recurso DSC também permite que você substitua o ponto de extremidade de comunicação remota padrão Microsoft.PowerShell.
 Se você fizer isso, o recurso registrará automaticamente um ponto de extremidade irrestrito de backup chamado "Microsoft.PowerShell.Restricted", que tem a ACL do WinRM padrão (permitindo que Usuários de Gerenciamento Remoto e membros do grupo local de Administradores o acessem).
 
-## <a name="unregistering-jea-configurations"></a>Cancelando o registro de configurações de JEA
+<a id="unregistering-jea-configurations" class="xliff"></a>
+## Cancelando o registro de configurações de JEA
 
 Para remover um ponto de extremidade JEA em um sistema, use o cmdlet [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
 O cancelamento do registro de um ponto de extremidade JEA impedirá que novos usuários criem novas sessões de JEA no sistema.
@@ -134,6 +136,8 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 > Isso interromperá a maioria das operações de gerenciamento remotas em andamento, incluindo outras sessões do PowerShell, invocações de WMI e algumas ferramentas de gerenciamento.
 > Cancele o registro de pontos de extremidade do PowerShell somente durante janelas de manutenção planejadas.
 
-## <a name="next-steps"></a>Próximas etapas
+<a id="next-steps" class="xliff"></a>
+## Próximas etapas
 
 - [Testar o ponto de extremidade JEA](using-jea.md)
+

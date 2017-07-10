@@ -1,22 +1,23 @@
 ---
-title: "Introdução à Configuração de Estado Desejado do PowerShell"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 3a59f76919c0a63f269ca587d358020825412be4
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Introdução à Configuração de Estado Desejado do PowerShell"
+ms.openlocfilehash: 403badd11749cfa5c6a5d07e1b537fa3a5f954da
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="getting-started-with-powershell-desired-state-configuration"></a>Introdução à Configuração de Estado Desejado do PowerShell #
+<a id="getting-started-with-powershell-desired-state-configuration" class="xliff"></a>
+# Introdução à Configuração de Estado Desejado do PowerShell #
 
 Este guia descreve como começar a criar documentos de Configuração de Estado Desejado do PowerShell e aplicá-los aos computadores. Assume que há uma familiaridade básica com cmdlets, módulos e funções do PowerShell. 
 
 
-## <a name="create-a-configuration"></a>Criar uma configuração ##
+<a id="create-a-configuration" class="xliff"></a>
+## Criar uma configuração ##
 
 [**Configurações**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) são documentos que descrevem um ambiente. Os ambientes consistem em "**nós**", que normalmente são máquinas virtuais ou físicas. 
 
@@ -39,7 +40,8 @@ configuration MyFirstConfiguration
 
 }
 ```
-## <a name="parts-of-a-configuration"></a>Partes de uma Configuração ##
+<a id="parts-of-a-configuration" class="xliff"></a>
+## Partes de uma Configuração ##
 **Configuration** é uma palavra-chave que foi adicionada ao PowerShell 4.0. Significa um tipo especial de função do PowerShell usado pela Configuração de Estado Desejado. Neste exemplo, a função é chamada de myFirstConfiguration. 
 
 A próxima linha é uma instrução de importação, semelhante à importação de um módulo. Será discutida posteriormente.

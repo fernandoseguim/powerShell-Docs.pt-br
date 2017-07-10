@@ -1,24 +1,25 @@
 ---
-title: "Configurar uma máquina virtual na inicialização inicial usando DSC"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 38751d62a56dc90ff69fe3ab6e92829fb33edb2b
-ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Configurar uma máquina virtual na inicialização inicial usando DSC"
+ms.openlocfilehash: a3592c50fa7f2232538fbec07129fac86c1d00b5
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
 >Aplica-se a: Windows PowerShell 5.0
 
 >**Observação:** a chave do Registro **DSCAutomationHostEnabled** descrita neste tópico não está disponível no PowerShell 4.0.
 Para obter informações sobre como configurar novas máquinas virtuais na inicialização inicial no PowerShell 4.0, veja [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/) (Deseja configurar seus computadores automaticamente usando DSC na inicialização inicial?)
 
-# <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurar uma máquina virtual na inicialização inicial usando DSC
+<a id="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc" class="xliff"></a>
+# Configurar uma máquina virtual na inicialização inicial usando DSC
 
-## <a name="requirements"></a>Requisitos
+<a id="requirements" class="xliff"></a>
+## Requisitos
 
 Para executar esses exemplos, você precisará de:
 
@@ -39,7 +40,8 @@ Se você não quiser que o DSC seja executado no momento da inicialização, def
 >**Observação:** você pode inserir tanto `Pending.mof` quanto `MetaConfig.mof` em um computador simultaneamente.
 Se ambos os arquivos estiverem presentes, as configurações especificadas em `MetaConfig.mof` têm precedência.
 
-## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Inserir um documento MOF de configuração em um VHD
+<a id="inject-a-configuration-mof-document-into-a-vhd" class="xliff"></a>
+## Inserir um documento MOF de configuração em um VHD
 
 Para aplicar uma configuração na inicialização inicial, você pode inserir um documento MOF configuração compilado no VHD como seu arquivo `Pending.mof`.
 Se a chave do Registro **DSCAutomationHostEnabled** estiver definida como 2 (o valor padrão), o DSC aplicará a configuração definida por `Pending.mof` quando o computador for inicializado pela primeira vez.
@@ -62,7 +64,8 @@ Configuration SampleIISInstall
 }
 ```
 
-### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Para inserir o documento de configuração de MOF no VHD
+<a id="to-inject-the-configuration-mof-document-on-the-vhd" class="xliff"></a>
+### Para inserir o documento de configuração de MOF no VHD
 
 1. Chamando o cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx), monte o VHD no qual você deseja inserir a configuração. Por exemplo:
 
@@ -95,7 +98,8 @@ Renomear e mover esse arquivo para o local apropriado no VHD como `Pending.mof`,
 7. Crie uma VM usando o VHD no qual você instalou o documento MOF do DSC. Após a inicialização inicial e instalação do sistema operacional, o IIS será instalado.
 Você pode verificar isso chamando o cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Inserir uma metaconfiguração DSC em um VHD
+<a id="inject-a-dsc-metaconfiguration-into-a-vhd" class="xliff"></a>
+## Inserir uma metaconfiguração DSC em um VHD
 
 Você também pode configurar um computador para receber uma configuração na inicialização inicial, inserindo uma metaconfiguração (veja [Configuring the Local Configuration Manager (LCM)](metaConfig.md) (Configurando o LCM (Gerenciador de Configurações Local)) no VHD como seu arquivo `MetaConfig.mof`.
 Se a chave do Registro **DSCAutomationHostEnabled** estiver definida como 2 (o valor padrão), o DSC aplicará a metaconfiguração definida por `MetaConfig.mof` ao LCM quando o computador for inicializado pela primeira vez.
@@ -126,7 +130,8 @@ configuration PullClientBootstrap
 }
 ```
 
-### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Para inserir o documento MOF de metaconfiguração no VHD
+<a id="to-inject-the-metaconfiguration-mof-document-on-the-vhd" class="xliff"></a>
+### Para inserir o documento MOF de metaconfiguração no VHD
 
 1. Chamando o cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx), monte o VHD no qual você deseja inserir a metaconfiguração. Por exemplo:
 
@@ -164,7 +169,8 @@ Renomear e mover esse arquivo para o local apropriado no VHD como `MetaConfig.mo
 Após a inicialização inicial e a instalação do sistema operacional, a DSC efetuará pull da configuração do servidor de pull e o IIS será instalado.
 Você pode verificar isso chamando o cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-## <a name="disable-dsc-at-boot-time"></a>Desabilite a DSC no momento da inicialização
+<a id="disable-dsc-at-boot-time" class="xliff"></a>
+## Desabilite a DSC no momento da inicialização
 
 Por padrão, o valor da chave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** é definido como 2, o que permitirá que uma configuração DSC seja executada se o computador estiver no estado atual ou pendente. Se não desejar que uma configuração seja executada na inicialização inicial, você precisará definir o valor desta chave como 0:
 
@@ -199,9 +205,11 @@ Por padrão, o valor da chave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cu
     reg unload HKLM\Vhd
     ```
 
-## <a name="see-also"></a>Consulte Também
+<a id="see-also" class="xliff"></a>
+## Consulte Também
 
 - [Configurações DSC](configurations.md)
 - [Chave do Registro de DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 - [Configurando o LCM (Gerenciador de Configurações Local)](metaConfig.md)
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
+

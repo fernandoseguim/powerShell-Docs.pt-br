@@ -1,29 +1,30 @@
 ---
-title: Recurso do WindowsOptionalFeature DSC
-ms.date: 2016-05-24
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 26d140d68760ec92b3b6cbc31d0735eaaf671d9c
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso do WindowsOptionalFeature DSC
+ms.openlocfilehash: 388fbe1bc430098d6680902e0b5643243fbf7f4c
+ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/26/2017
 ---
-# <a name="dsc-windowsoptionalfeature-resource"></a>Recurso do WindowsOptionalFeature DSC
+<a id="dsc-windowsoptionalfeature-resource" class="xliff"></a>
+# Recurso do WindowsOptionalFeature DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
 O recurso **WindowsOptionalFeature** na DSC (Configuração de Estado Desejado) do Windows PowerShell oferece um mecanismo para garantir que os recursos opcionais sejam habilitados em um nó de destino.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 WindowsOptionalFeature [string] #ResourceName
 {
     Name = [string]
-    [ Ensure = [string] { Absent | Present }  ]
+    [ Ensure = [string] { Enable | Disable }  ]
     [ Source = [string] ]
     [ NoWindowsUpdateCheck = [bool] ]
     [ RemoveFilesOnDisable = [bool] ]
@@ -34,12 +35,13 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Nome| Indica o nome do recurso que você deseja garantir que esteja habilitado ou desabilitado.| 
-| Ensure| Especifica se o recurso está habilitado. Para garantir que o recurso esteja habilitado, defina essa propriedade para "Presente"; para garantir que o recurso esteja desabilitado, defina a propriedade como "Ausente".|
+| Ensure| Especifica se o recurso está habilitado. Para garantir que o recurso esteja habilitado, defina essa propriedade para "Habilitado" Para garantir que o recurso esteja desabilitado, defina a propriedade como "Desabilitado".|
 | Origem| Não foi implementado.|
 | NoWindowsUpdateCheck| Especifica se o DISM contata o WU (Windows Update) ao procurar os arquivos de origem para habilitar um recurso. Se $true, DISM não contatará WU.|
 | RemoveFilesOnDisable| Definido como **$true** para remover todos os arquivos associados ao recurso quando estiver desabilitado (isto é, quando **Garantir** estiver definido como "Ausente").|

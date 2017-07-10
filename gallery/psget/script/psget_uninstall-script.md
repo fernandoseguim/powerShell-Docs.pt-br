@@ -1,36 +1,38 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: script psget_uninstall
-ms.technology: powershell
-ms.openlocfilehash: 9cc6ee62720bfca858e7f783753adabe8a53fb29
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Uninstall-Script
+ms.openlocfilehash: 7973524cf9268d629b5375f0726fe70164bdeddb
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="uninstall-script"></a>Uninstall-Script
+<a id="uninstall-script" class="xliff"></a>
+# Uninstall-Script
 
 Desinstala um arquivo de script que foi instalado usando PowerShellGet.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Uninstall-Script desinstala os arquivos de script especificados que foram instalados do repositório online.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Uninstall-Script -Module PowerShellGet -Syntax
 ```
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Uninstall-Script](http://go.microsoft.com/fwlink/?LinkId=619789)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 ```powershell
 Get-InstalledScript | Uninstall-Script -WhatIf

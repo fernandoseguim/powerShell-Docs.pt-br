@@ -1,17 +1,17 @@
 ---
-title: Recurso do WindowsFeatureSet DSC
-ms.date: 2016-05-24
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a920e02d891492c170e672db2f0771950dcb758c
-ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso do WindowsFeatureSet DSC
+ms.openlocfilehash: 3cdabc36ef35c2bf912ac54393fe40024a8e8bc0
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-windowsfeatureset-resource"></a>Recurso do WindowsFeatureSet DSC
+<a id="dsc-windowsfeatureset-resource" class="xliff"></a>
+# Recurso do WindowsFeatureSet DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -20,7 +20,8 @@ Esse recurso é um [recurso composto](authoringResourceComposite.md) que chama o
 
 Use esse recurso quando desejar configurar vários Recursos do Windows para o mesmo estado.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -36,7 +37,8 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -48,7 +50,8 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | Origem| Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 A configuração a seguir garante que os recursos **Servidor Web** (IIS) e **Servidor SMTP** e todos os sub-recursos de cada um sejam instalados.
 

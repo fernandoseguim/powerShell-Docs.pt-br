@@ -1,4 +1,16 @@
-# <a name="installation-of-module-dependencies"></a>Instalação de dependências de módulo
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 06a1ae284975a56d092c708f8bb57e2ae8b46e54
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="installation-of-module-dependencies" class="xliff"></a>
+# Instalação de dependências de módulo
 
 Agora há suporte à versão do módulo SxS (lado a lado) nos cmdlets Install-Module, Update-Module e Publish-Module executados no Windows PowerShell 5.0 ou mais recente.
 Além disso, adicionamos um parâmetro -RequiredVersion ao cmdlet Publish-Module para especificar a versão a ser publicada. O parâmetro Path agora dá suporte ao caminho base do módulo com a pasta de versão.
@@ -192,3 +204,4 @@ _------ ---- ---------- -----------
 1.5 ContosoServer LocalRepo ContosoServer module
 2.0 ContosoServer LocalRepo ContosoServer module
 ```
+

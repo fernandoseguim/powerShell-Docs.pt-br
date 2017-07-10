@@ -1,6 +1,18 @@
-# <a name="software-inventory-logging-sil"></a>SIL (Log de Inventário de Software)
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 4a2dfd651f1c74e7441e5f5e357c1c26453adc07
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="software-inventory-logging-sil" class="xliff"></a>
+# SIL (Log de Inventário de Software)
 
-**IMPORTANTE: ** *ao instalar o WMF 5.0 em um Windows Server 2012 R2 Server que já esteja executando o SIL, será necessário executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso Log de Inventário de Software.*
+**IMPORTANTE: ** *ao instalar o WMF 5.0 em um Windows Server 2012 R2 Server que já esteja executando o SIL, será necessário executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso de Log de Inventário de Software.*
 
 O Log de Inventário de Software ajuda a reduzir os custos operacionais da obtenção de informações precisas sobre o software Microsoft instalado localmente em um servidor, mas especialmente em vários servidores em um ambiente de TI (presumindo-se que ele foi instalado e está em execução em todo o ambiente de TI). Desde que um esteja configurado, é possível encaminhar esses dados para um servidor de agregação e coletar os dados de log em um único local usando um processo uniforme e automático.
 
@@ -9,3 +21,4 @@ Embora também seja possível registrar em log os dados de inventário de softwa
 Nenhum desses dados são enviados à Microsoft como parte da funcionalidade do recurso. Os dados e a funcionalidade do Log de Inventário de Software destinam-se para utilização exclusiva do proprietário e administradores autorizados do software do servidor.
 
 Para obter mais informações e documentação sobre os cmdlets do Log de Inventário de Software, veja os recursos online do Windows Server 2012 R2 em <http://technet.microsoft.com/library/dn383584.aspx>.
+

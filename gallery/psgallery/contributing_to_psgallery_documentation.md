@@ -1,17 +1,14 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: contributing_to_psgallery_documentation
-ms.technology: powershell
-ms.openlocfilehash: e4db8bdf728f7ce8b5635c92aaae2e34844daad6
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 64d4576625503ba0e1ce6a157dea48b58d9e0f41
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
 Quem pode contribuir com a documentação
 

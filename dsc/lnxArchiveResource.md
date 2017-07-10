@@ -1,21 +1,22 @@
 ---
-title: Recurso nxArchive de DSC para Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 2edbc1d11dfc7c84369430688a8b0d773277e864
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso nxArchive de DSC para Linux
+ms.openlocfilehash: da647432e14d2a4a3ceb2a36c7dee2dbfd350116
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxarchive-resource"></a>Recurso nxArchive de DSC para Linux
+<a id="dsc-for-linux-nxarchive-resource" class="xliff"></a>
+# Recurso nxArchive de DSC para Linux
 
 O recurso **nxArchive** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para descompactar arquivos mortos (.tar, .zip) em um caminho específico em um nó do Linux.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 nxArchive <string> #ResourceName
@@ -29,7 +30,8 @@ nxArchive <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -40,7 +42,8 @@ nxArchive <string> #ResourceName
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | Ensure| Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination**. Defina essa propriedade como "Present" para garantir que o conteúdo exista. Defina-a como "Absent" para garantir que não exista. O valor padrão é "Present".| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir mostra como usar o recurso **nxArchive** para garantir que o conteúdo de um arquivo morto chamado `website.tar` exista e seja extraído em um destino específico.
 

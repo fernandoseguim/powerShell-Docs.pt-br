@@ -1,20 +1,17 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2017-04-25
+ms.topic: conceptual
+keywords: "jea,powershell,segurança"
 title: "Configurações de Sessão de JEA"
-ms.technology: powershell
-ms.openlocfilehash: 8773096627217663362e61fb158cc900aea20f43
-ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.openlocfilehash: 0a8931ae15caf04a3639ab46f130e5f5b0498d8c
+ms.sourcegitcommit: 0733db9a05e89e6a23f6b52b9edd784fcbe8beec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/22/2017
 ---
-# <a name="jea-session-configurations"></a>Configurações de Sessão de JEA
+<a id="jea-session-configurations" class="xliff"></a>
+# Configurações de Sessão de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -24,7 +21,8 @@ Elas também definem configurações globais que se aplicam aos usuários de qua
 
 Este tópico descreve como criar um arquivo de configuração de sessão do PowerShell e registrar um ponto de extremidade JEA.
 
-## <a name="create-a-session-configuration-file"></a>Criar um arquivo de configuração de sessão
+<a id="create-a-session-configuration-file" class="xliff"></a>
+## Criar um arquivo de configuração de sessão
 
 Para registrar um ponto de extremidade JEA, você precisa especificar como esse ponto de extremidade deve ser configurado.
 Há muitas opções a serem considerados aqui e as mais importantes delas são: quem devem ter acesso ao ponto de extremidade JEA, quais funções serão atribuídas a eles, qual identidade será usada pelo JEA nos bastidores e qual será o nome do ponto de extremidade JEA.
@@ -58,12 +56,14 @@ Não estão disponíveis provedores de PowerShell, nem programas externos (execu
 Há vários outros campos que você pode configurar para a sessão JEA.
 Eles são abordados nas seções a seguir.
 
-### <a name="choose-the-jea-identity"></a>Escolha a identidade JEA
+<a id="choose-the-jea-identity" class="xliff"></a>
+### Escolha a identidade JEA
 
 Nos bastidores, o JEA precisa de uma identidade (conta) para usar ao executar os comandos do usuário conectado.
 Você pode decidir qual identidade JEA será usada no arquivo de configuração de sessão.
 
-#### <a name="local-virtual-account"></a>Conta Virtual Local
+<a id="local-virtual-account" class="xliff"></a>
+#### Conta Virtual Local
 
 Se as funções com suporte nesse ponto de extremidade JEA são usadas para gerenciar o computador local e uma conta de administrador local for suficiente para executar os comandos com êxito, você deverá configurar o JEA para usar uma conta virtual local.
 As contas virtuais são contas temporárias exclusivas para um usuário específico e permanecem ativas apenas durante a sessão do PowerShell.
@@ -86,7 +86,8 @@ RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
 
-#### <a name="group-managed-service-account"></a>Conta de Serviço Gerenciado de Grupo
+<a id="group-managed-service-account" class="xliff"></a>
+#### Conta de Serviço Gerenciado de Grupo
 
 
 Para cenários que exigem que o usuário JEA acesse recursos de rede, como outros computadores ou serviços Web, uma gMSA (conta de serviço gerenciado de grupo) é uma identidade mais apropriada a ser usada.
@@ -96,7 +97,7 @@ Você não terá automaticamente direitos de administrador em todos os computado
 
 ```powershell
 # Configure JEA sessions to use the gMSA account in the local computer's domain with the sAMAccountName of 'MyJEAgMSA'
-GroupManagedServiceAccount = 'MyJEAgMSA'
+GroupManagedServiceAccount = 'Domain\MyJEAgMSA'
 ```
 
 As contas gMSA só devem ser usadas quando for necessário o acesso aos recursos de rede por alguns motivos:
@@ -109,11 +110,13 @@ As contas gMSA só devem ser usadas quando for necessário o acesso aos recursos
 > As contas de serviço gerenciado de grupo estão disponíveis apenas no Windows PowerShell 5.1 ou mais recente e em computadores que ingressaram no domínio.
 
 
-#### <a name="more-information-about-run-as-users"></a>Mais informações sobre usuários Run As
+<a id="more-information-about-run-as-users" class="xliff"></a>
+#### Mais informações sobre usuários Run As
 
 Informações adicionais sobre identidades Run As e como elas influenciam na segurança de uma sessão JEA podem ser encontradas no artigo [considerações de segurança](security-considerations.md).
 
-### <a name="session-transcripts"></a>Transcrições de sessão
+<a id="session-transcripts" class="xliff"></a>
+### Transcrições de sessão
 
 É recomendável configurar um arquivo de configuração de sessão JEA para registrar automaticamente as transcrições de sessões de usuários.
 As transcrições de sessão do PowerShell contêm informações sobre o usuário conectado, a identidade Run As atribuída a ele e os comandos executados pelo usuário.
@@ -129,7 +132,8 @@ A pasta especificada deve ser configurada para impedir que os usuários modifiqu
 As transcrições são gravadas na pasta pela conta Sistema Local, que requer acesso de leitura e gravação no diretório.
 Os usuários padrão não devem ter nenhum acesso à pasta e um conjunto limitado de administradores de segurança deve ter acesso para auditar as transcrições.
 
-### <a name="user-drive"></a>Unidade de usuário
+<a id="user-drive" class="xliff"></a>
+### Unidade de usuário
 
 Se os usuários que estão se conectando precisarem copiar arquivos do ou para o ponto de extremidade JEA para executar um comando, você poderá habilitar a unidade do usuário no arquivo de configuração de sessão.
 A unidade de usuário é um [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) que é mapeada para uma pasta exclusiva para cada usuário que está se conectando.
@@ -154,7 +158,8 @@ Se quiser que os dados na unidade de usuário não sejam persistentes, você pod
 > [!NOTE]
 > A unidade de usuário só está disponível no Windows PowerShell 5.1 ou mais recente.
 
-### <a name="role-definitions"></a>Definições de função
+<a id="role-definitions" class="xliff"></a>
+### Definições de função
 
 As definições de função em um arquivo de configuração de sessão definem o mapeamento de *usuários* para as *funções*.
 Cada usuário ou grupo incluído nesse campo automaticamente receberá permissão para o ponto de extremidade JEA quando ele for registrado.
@@ -181,7 +186,8 @@ RoleDefinitions = @{
 }
 ```
 
-### <a name="role-capability-search-order"></a>Ordem de pesquisa de capacidade de função
+<a id="role-capability-search-order" class="xliff"></a>
+### Ordem de pesquisa de capacidade de função
 Conforme mostrado no exemplo acima, os recursos de função são referenciados pelo nome simples (nome sem a extensão) do arquivo de capacidade de função.
 Se vários recursos de função estão disponíveis no sistema com o mesmo nome simples, o PowerShell usará sua ordem de pesquisa implícita para selecionar o arquivo de capacidade de função efetivo.
 Ele **não** dará acesso a todos os arquivos de capacidade de função com o mesmo nome.
@@ -194,7 +200,8 @@ O primeiro arquivo de capacidade de função encontrado que corresponder ao nome
 
 Como a ordem de pesquisa de capacidade de função não é determinista quando duas ou mais capacidades de função compartilham o mesmo nome, é **altamente recomendável** garantir que as capacidades de função tenham nomes exclusivos em seu computador.
 
-### <a name="conditional-access-rules"></a>Regras de acesso condicional
+<a id="conditional-access-rules" class="xliff"></a>
+### Regras de acesso condicional
 
 Todos os usuários e grupos incluídos no campo RoleDefinitions recebem automaticamente acesso a pontos de extremidade JEA.
 As regras de acesso condicional permitem que você refine esse acesso e exigem que os usuários façam parte de grupos de segurança adicionais, o que não afeta as funções atribuídas a eles.
@@ -219,18 +226,21 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > [!NOTE]
 > As regras de acesso condicional só estão disponíveis no Windows PowerShell 5.1 ou mais recente.
 
-### <a name="other-properties"></a>Outras propriedades
+<a id="other-properties" class="xliff"></a>
+### Outras propriedades
 Os arquivos de configuração de sessão também podem fazer tudo o que um arquivo de recurso de função pode fazer, mas sem a capacidade de fornecer aos usuários que estão se conectando o acesso a comandos diferentes.
 Se quiser permitir que todos os usuários acessem provedores, funções ou cmdlets específicos, você poderá fazer isso diretamente no arquivo de configuração de sessão.
 Para obter uma lista completa das propriedades com suporte no arquivo de configuração de sessão, execute `Get-Help New-PSSessionConfigurationFile -Full`.
 
-## <a name="testing-a-session-configuration-file"></a>Testando um arquivo de configuração de sessão
+<a id="testing-a-session-configuration-file" class="xliff"></a>
+## Testando um arquivo de configuração de sessão
 
 Você pode testar uma configuração de sessão usando o cmdlet [Test-PSSessionConfigurationFile](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/test-pssessionconfigurationfile).
 É altamente recomendável que você teste o arquivo de configuração de sessão caso tenha editado o arquivo pssc manualmente usando um editor de texto, a fim de garantir que a sintaxe está correta.
 Se um arquivo de configuração de sessão não passar nesse teste, não poderá ser registrado com êxito no sistema.
 
-## <a name="sample-session-configuration-file"></a>Arquivo de configuração de sessão de exemplo
+<a id="sample-session-configuration-file" class="xliff"></a>
+## Arquivo de configuração de sessão de exemplo
 
 Abaixo há um exemplo completo que mostra como criar e validar uma configuração de sessão para o JEA.
 Observe que as definições de função são criadas e armazenadas na variável `$roles` para conveniência e legibilidade.
@@ -247,12 +257,15 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\JEACo
 Test-PSSessionConfigurationFile -Path .\JEAConfig.pssc # should yield True
 ```
 
-## <a name="updating-session-configuration-files"></a>Atualizando arquivos de configuração de sessão
+<a id="updating-session-configuration-files" class="xliff"></a>
+## Atualizando arquivos de configuração de sessão
 
 Se você precisar alterar as propriedades de uma configuração de sessão JEA, incluindo o mapeamento de usuários às funções, você deverá [cancelar o registro](register-jea.md#unregistering-jea-configurations) e [registrar novamente](register-jea.md) a configuração de sessão JEA.
 Quando registrar novamente a configuração da sessão JEA, use um arquivo de configuração de sessão do PowerShell atualizado que inclui as alterações desejadas.
 
-## <a name="next-steps"></a>Próximas etapas
+<a id="next-steps" class="xliff"></a>
+## Próximas etapas
 
 - [Registrar uma configuração de JEA](register-jea.md)
 - [Funções de autor de JEA](role-capabilities.md)
+

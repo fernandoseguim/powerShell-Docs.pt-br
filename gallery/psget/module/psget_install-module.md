@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: "módulo psget_install"
-ms.technology: powershell
-ms.openlocfilehash: 82e4bb1ec76b1a51e1a99de85bc77a5429d46e26
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Install-Module
+ms.openlocfilehash: 37e07cd32e7b2fd4a7a8e6cab179aecc3251baf3
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="install-module"></a>Install-Module
+<a id="install-module" class="xliff"></a>
+# Install-Module
 
 Instala módulos do PowerShell de repositórios online no computador local.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Install-Module baixa um ou mais módulos de uma galeria online, valida-os e instala-os no computador local com o escopo de instalação especificado.
 
@@ -33,7 +32,8 @@ Você pode filtrar os resultados com base nas versões mínima e exata dos módu
 - -Force reinstala o módulo instalado
 - RequiredVersion instala a versão especificada no SxS com as versões existentes no PowerShell versão 5.0 ou posterior.
 
-### <a name="scope"></a>Escopo
+<a id="scope" class="xliff"></a>
+### Escopo
 Especifica o escopo de instalação do módulo. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
 
 O escopo de instalação padrão é AllUsers.
@@ -42,7 +42,8 @@ O escopo AllUsers permite que os módulos sejam instalados em um local que seja 
 
 O escopo CurrentUser permite que módulos ser instalado somente em "$home\Documents\WindowsPowerShell\Modules", de modo que o módulo fica disponível somente para o usuário atual.
 
-## <a name="notes"></a>Observações
+<a id="notes" class="xliff"></a>
+## Observações
 
 Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 
@@ -59,16 +60,19 @@ Por padrão, os módulos são instalados na pasta Arquivos de Programas, para ev
 Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
 
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Install-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Install-Module](http://go.microsoft.com/fwlink/?LinkID=398573)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 ```powershell
 
@@ -109,7 +113,8 @@ Install-Module ContosoClient -Force
 Install-Module -Name 
 ```
 
-## <a name="install-module-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Module em operações de pipeline
+<a id="install-module-cmdlet-in-pipeline-operations" class="xliff"></a>
+## Cmdlet Install-Module em operações de pipeline
 
 ```powershell
 
@@ -136,11 +141,13 @@ Get-InstalledModule
 
 ```
 
-## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
+<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
+## Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
 
 O PowerShellGet dá suporte à versão do módulo SxS (lado a lado) nos cmdlets Install-Module, Update-Module e Publish-Module executados no Windows PowerShell 5.0 ou mais recente.
 
-### <a name="install-module-examples"></a>Exemplos de Install-Module
+<a id="install-module-examples" class="xliff"></a>
+### Exemplos de Install-Module
 
 ```powershell
 # Install a version of the module
@@ -172,7 +179,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="install-module-with-its-dependencies"></a>Instalar um módulo com dependências
+<a id="install-module-with-its-dependencies" class="xliff"></a>
+## Instalar um módulo com dependências
 
 ```powershell
 
@@ -266,7 +274,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="error-scenarios"></a>Cenários de erro
+<a id="error-scenarios" class="xliff"></a>
+## Cenários de erro
 
 ```powershell
 

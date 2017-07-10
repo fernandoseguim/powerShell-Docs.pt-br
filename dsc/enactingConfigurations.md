@@ -1,23 +1,24 @@
 ---
-title: "Aplicando configurações"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 7059d0a0ac3ad81353d1e758bc24fc236656c199
-ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Aplicando configurações"
+ms.openlocfilehash: db82788650186eb82f67b30b24cd45b719bbe314
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="enacting-configurations"></a>Aplicando configurações
+<a id="enacting-configurations" class="xliff"></a>
+# Aplicando configurações
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Há duas maneiras de aplicar configurações da Configuração de Estado Desejado (DSC) do PowerShell: modo de push e modo de pull.
 
-## <a name="push-mode"></a>Modo de push
+<a id="push-mode" class="xliff"></a>
+## Modo de push
 
 ![Modo de push](images/Push.png "Como funciona o modo de push")
 
@@ -28,7 +29,8 @@ Depois de criar e compilar uma configuração, você pode aplicá-la no modo de 
 > __Observação__: por padrão, a DSC executa uma configuração como um trabalho em segundo plano. Para executar a configuração interativamente, chame o [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) com o parâmetro __-Wait__.
 
 
-## <a name="pull-mode"></a>Modo de pull
+<a id="pull-mode" class="xliff"></a>
+## Modo de pull
 
 ![Modo de pull](images/Pull.png "Como funciona o modo de pull")
 

@@ -1,6 +1,19 @@
-# <a name="separation-of-node-and-configuration-ids"></a>Separação de IDs de nó e de configuração
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 5b9eea1c90bfd5a8cee3897d832bf7775a750308
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="separation-of-node-and-configuration-ids" class="xliff"></a>
+# Separação de IDs de nó e de configuração
 
-## <a name="overview"></a>Visão geral
+<a id="overview" class="xliff"></a>
+## Visão geral
 
 Para proporcionar uma experiência mais flexível e simplificada ao usar o DSC no modo Pull, adicionamos uma série de recursos nesta versão. Esses recursos destinam-se a permitir que você tenha a flexibilidade de configurar e implantar configurações em vários nós com facilidade, ao mesmo tempo que acompanha as informações de status e relatório de cada nó individualmente. Esses recursos são os seguintes:
 

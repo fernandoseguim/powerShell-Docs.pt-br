@@ -1,17 +1,17 @@
 ---
-title: "Configurando um cliente de pull usando nomes de configuração"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 03db9843209038f7a14b46cf8a27316f1c63a819
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Configurando um cliente de pull usando nomes de configuração"
+ms.openlocfilehash: 9bfcac87300d30a59b66e60ed24add32e2420e21
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="setting-up-a-pull-client-using-configuration-names"></a>Configurando um cliente de pull usando nomes de configuração
+<a id="setting-up-a-pull-client-using-configuration-names" class="xliff"></a>
+# Configurando um cliente de pull usando nomes de configuração
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -73,7 +73,8 @@ Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Ve
 Você ainda deve usar **ConfigurationID** com um servidor de pull de SMB.
 Para obter informações sobre como configurar um servidor de pull usando **ConfigurationID**, consulte [Configurando um cliente de pull usando uma ID de configuração](PullClientConfigNames.md)
 
-## <a name="resource-and-report-servers"></a>Servidores de recurso e relatório
+<a id="resource-and-report-servers" class="xliff"></a>
+## Servidores de recurso e relatório
 
 Se você especificar apenas um bloco **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** em sua configuração LCM (como no exemplo anterior), o cliente de pull efetuará pull dos recursos do servidor especificado, mas não enviará relatórios a ele.
 Você pode usar um único servidor de pull para emissão de relatórios, recursos e configurações, mas é preciso criar um bloco **ReportRepositoryWeb** para configurar o relatório.
@@ -148,7 +149,9 @@ configuration PullClientConfigNames
 PullClientConfigNames
 ```
 
-## <a name="see-also"></a>Consulte Também
+<a id="see-also" class="xliff"></a>
+## Consulte Também
 
 * [Configurando um cliente de pull com uma ID de configuração](PullClientConfigNames.md)
 * [Configurando um servidor de pull da Web de DSC](pullServer.md)
+

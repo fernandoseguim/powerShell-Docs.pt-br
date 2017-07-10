@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: "módulo psget_update"
-ms.technology: powershell
-ms.openlocfilehash: 3f843bcf667bdb40f45613911647acf464cbbf29
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Update-Module
+ms.openlocfilehash: 343c296dad2a3df35f13393b3796a1d484f5f535
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-module"></a>Update-Module
+<a id="update-module" class="xliff"></a>
+# Update-Module
 
 Baixa e instala a versão mais recente dos módulos especificados de uma galeria online para o computador local.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Update-Module instala uma versão mais recente de um módulo do Windows PowerShell que foi instalado da galeria online executando Install-Module no computador local.
 
@@ -25,7 +24,8 @@ Por padrão, a versão mais recente do módulo especificado disponível na galer
 
 Executar Update-Module sem o parâmetro de nome atualiza todos os módulos que podem ser atualizados no computador local.
 
-### <a name="notes"></a>Observações
+<a id="notes" class="xliff"></a>
+### Observações
 
 - Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 - Se o módulo especificado com o parâmetro de nome não tiver sido instalado usando Install-Module, ocorrerá um erro. Você só pode executar Update-Module em módulos que foram instalados da galeria online executando Install-Module.
@@ -33,17 +33,20 @@ Executar Update-Module sem o parâmetro de nome atualiza todos os módulos que p
 - No PowerShell 5.0 ou em versões mais recentes, quando Update-Module atualiza um módulo, ele adiciona a versão mais recente (ou especificada) do módulo, portanto, as versões mais antigas e mais recentes ficam lado a lado no mesmo diretório. Seria útil dizer isso e mostrar um exemplo da saída desses comandos.
 
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Update-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Update-Module](http://go.microsoft.com/fwlink/?LinkID=398576)
 
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 ```powershell
 PS C:\\windows\\system32> Update-Module -Name ContosoServer -RequiredVersion 1.5
@@ -87,7 +90,8 @@ Version Name Repository Description
 ```
 
 
-###  <a name="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies"></a>Atualize o módulo TestDepWithNestedRequiredModules1 com dependências.
+<a id="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies" class="xliff"></a>
+###  Atualize o módulo TestDepWithNestedRequiredModules1 com dependências.
 ```powershell
 Find-Module -Name TestDepWithNestedRequiredModules1 -Repository LocalRepo -AllVersions
 

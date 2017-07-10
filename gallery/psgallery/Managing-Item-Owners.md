@@ -1,30 +1,30 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: "Gerenciando proprietários do item"
-ms.technology: powershell
-ms.openlocfilehash: 36a3a3079bce642b16f0512ead2b0778b43e5d2d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: fcd538148f9ff1ac96324b567d54d643f1756c93
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="managing-item-owners"></a>Gerenciando proprietários do item
+<a id="managing-item-owners" class="xliff"></a>
+# Gerenciando proprietários do item
 
 A propriedade de um item na Galeria do PowerShell é definida pelo usuário que publicou o item na galeria.
 Às vezes, esses metadados precisam ser gerenciados além da publicação de item inicial, o que significa que os metadados de proprietário precisam ser mutáveis, enquanto o próprio item não é mutável.
 
 Todos os proprietários de item são pares. Isso significa que qualquer proprietário do item pode publicar uma nova versão de um item. Isso também significa que qualquer proprietário do item pode remover qualquer proprietário do item. Nenhum proprietário tem mais autoridade que outros proprietários.  
 
-## <a name="setting-an-items-initial-owner"></a>Configurando o proprietário inicial de um item 
+<a id="setting-an-items-initial-owner" class="xliff"></a>
+## Configurando o proprietário inicial de um item 
 
 Quando um novo item é publicado na Galeria do PowerShell, o proprietário inicial é definido pelo usuário que publicou o item. Isso é determinado pela chave de API de quem foi usada no cmdlet Publish-Module.
 
-## <a name="adding-owners"></a>Adicionando proprietários
+<a id="adding-owners" class="xliff"></a>
+## Adicionando proprietários
 
 Quando um item tiver sido publicado na Galeria do PowerShell, é fácil convidar outros usuários para se tornarem proprietários de um item.
 
@@ -43,7 +43,8 @@ Esse processo de convites impede que os usuários adicionem outros usuários err
 Observe que os metadados de “Autores” são meramente texto de forma livre; somente “Proprietários” são controlados.
 
 
-## <a name="removing-owners"></a>Removendo proprietários
+<a id="removing-owners" class="xliff"></a>
+## Removendo proprietários
 Quando um item tem vários proprietários e um deles precisa ser removido, o processo é simples:
 
 1. [Faça logon](https://powershellgallery.com/users/account/LogOn) na Galeria do PowerShell com a conta que é o proprietário atual de um item;
@@ -53,7 +54,8 @@ Quando um item tem vários proprietários e um deles precisa ser removido, o pro
 
 
 
-## <a name="transferring-item-ownership"></a>Transferindo a propriedade do item
+<a id="transferring-item-ownership" class="xliff"></a>
+## Transferindo a propriedade do item
 Às vezes, recebemos solicitações de suporte para transferir a propriedade do item de um usuário para outro, mas quase sempre você pode fazer isso sozinho.
 Transferir a propriedade de um usuário para outro é simplesmente uma combinação dos dois recursos acima.
 
@@ -66,7 +68,8 @@ Essa solicitação chegou de diversas maneiras, mas o processo funciona da mesma
 * O item foi publicado acidentalmente usando a conta errada
 
 
-## <a name="orphaned-items"></a>Itens órfãos
+<a id="orphaned-items" class="xliff"></a>
+## Itens órfãos
 Um último cenário ocorreu, mas não com muita frequência.
 Alguns itens se tornaram órfãos e a única conta de proprietário do item não pode ser usada para adicionar novos proprietários.
 Estes são alguns exemplos desse cenário:

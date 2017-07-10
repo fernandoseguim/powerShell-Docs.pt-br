@@ -1,17 +1,17 @@
 ---
-title: Recursos File de DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: ba625f5130e806b3b8e14a0f6ed91fd5a1aabc54
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recursos File de DSC
+ms.openlocfilehash: f16bfbc31489ef7d1b0e5e4ec3a4f30069c24c79
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-file-resource"></a>Recursos File de DSC
+<a id="dsc-file-resource" class="xliff"></a>
+# Recursos File de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -20,7 +20,8 @@ O recurso File na Configuração de Estado Desejado (DSC) do Windows PowerShell 
 >**Observação:** se a propriedade **MatchSource** estiver definida como **$false** (que é o valor padrão), o conteúdo a ser copiado será armazenado em cache na primeira vez que a configuração for aplicada. 
 >Os aplicativos subsequentes da configuração não verificarão arquivos e/ou pastas atualizados no caminho especificado pelo **SourcePath**. Se você quiser verificar se há atualizações para os arquivos e/ou pastas em **SourcePath** toda vez que a configuração for aplicada, defina **MatchSource** como **$true**. 
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 ```
 File [string] #ResourceName
 {
@@ -39,7 +40,8 @@ File [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -56,7 +58,8 @@ File [string] #ResourceName
 | Tipo| Indica se o recurso que está sendo configurado é um diretório ou um arquivo. Defina essa propriedade como "Directory" para indicar que o recurso é um diretório. Defina-a como "File" para indicar que o recurso é um arquivo. O valor padrão é “File”.| 
 | MatchSource| Se definida como o valor padrão de __$false__, em seguida, todos os arquivos de origem (digamos, arquivos A, B e C) serão adicionados ao destino na primeira vez em que a configuração for aplicada. Se for adicionado um novo arquivo (D) à origem, ele não será adicionado ao destino, mesmo quando a configuração for reaplicada posteriormente. Se o valor for __$true__, em seguida, cada vez que a configuração for aplicada, os novos arquivos subsequentemente encontrados na origem (como arquivo D, neste exemplo) serão adicionados ao destino. O valor padrão é **$false**.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 O exemplo a seguir mostra como usar o recurso Files para garantir que um diretório com o caminho `C:\Users\Public\Documents\DSCDemo\DemoSource` em um computador de origem (como o servidor de “pull”) também esteja presente (juntamente com todos os subdiretórios) no nó de destino. Também escreve uma mensagem de confirmação no log quando for concluído e inclui uma declaração para garantir que a operação de verificação de arquivos seja executada antes da operação de registro em log.
 

@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_find rolecapability
-ms.technology: powershell
-ms.openlocfilehash: 3f005bf0a9201c3762ca6399a78d4ff983409656
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Find-RoleCapability
+ms.openlocfilehash: 77c5b492d9681fa05315401fba410c508af1d13b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="find-rolecapability"></a>Find-RoleCapability
+<a id="find-rolecapability" class="xliff"></a>
+# Find-RoleCapability
 
 Localiza capacidades de função em módulos.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 O cmdlet Find-RoleCapability localiza capacidades de função do PowerShell em módulos. Find-RoleCapability faz pesquisas em módulos em repositórios registrados. Para cada capacidade de função localizada, esse cmdlet retorna um objeto PSGetRoleCapabilityInfo. Você pode passar um objeto PSGetRoleCapabilityInfo para o cmdlet Install-Module para instalar o módulo que contém a capacidade de função.
 As capacidades de função do PowerShell definem quais comandos, aplicativos e assim por diante ficam disponíveis para um usuário em um ponto de extremidade do tipo JEA ("Administração Suficiente"). As capacidades de função são definidas por arquivos com uma extensão .psrc.
 
@@ -30,16 +29,19 @@ As capacidades de função do PowerShell definem quais comandos, aplicativos e a
 - Find-RoleCapability pode filtrar na linguagem de pesquisa específica do repositório com o parâmetro -Filter.
 - Find-RoleCapability pode filtrar módulos de todos ou de alguns dos repositórios registrados.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 ```powershell
 
 # Find a specific role capability

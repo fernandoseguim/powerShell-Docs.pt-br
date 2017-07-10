@@ -1,4 +1,16 @@
-# <a name="powershell-module-discovery-install-and-inventory-with-powershellget"></a>Descoberta, instalação e inventário do módulo PowerShell com o PowerShellGet
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 2c7e718bc518b332cb4303ef73b1bf5c924ca471
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="powershell-module-discovery-install-and-inventory-with-powershellget" class="xliff"></a>
+# Descoberta, instalação e inventário do módulo PowerShell com o PowerShellGet
  
 O PowerShellGet está incluído nesta versão do WMF:
 -   Find-Module pode filtrar nos metadados do módulo com o parâmetro -Tag
@@ -7,7 +19,8 @@ O PowerShellGet está incluído nesta versão do WMF:
 -   Find-DscResource permite a descoberta de recursos DSC individuais nos repositórios
 -   Suporte para instalação desde compartilhamentos de arquivos e publicação neles com o NuGet
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 ```powershell
 \# Find all modules with tags Azure or DSC
 Find-Module -Tag Azure, DSC
@@ -42,7 +55,8 @@ Find-Module -Filter Cookbook -Repository PSGallery
 Find-Module -Filter RBAC -Repository PSGallery
 ```
 
-## <a name="new-features-in-powershellget"></a>Novos recursos no PowerShellGet
+<a id="new-features-in-powershellget" class="xliff"></a>
+## Novos recursos no PowerShellGet
 -   Suporte à versão lado a lado no Windows PowerShell 5.0 ou mais recente
 -   Suporte à instalação de dependências do módulo
 -   Três novos cmdlets

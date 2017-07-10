@@ -1,4 +1,16 @@
-# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar objetos estruturados fora da cadeia de caracteres
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="extract-and-parse-structured-objects-out-of-string" class="xliff"></a>
+# Extrair e analisar objetos estruturados fora da cadeia de caracteres
 Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-String:
 
 -   Por padrão, remove a propriedade de texto de extensão. É possível incluí-la com o parâmetro -IncludeExtent.
@@ -8,7 +20,8 @@ Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-S
 -   Um novo parâmetro -UpdateTemplate para salvar os resultados do algoritmo de aprendizado em um comentário no arquivo de modelo. Isso faz com que o processo de aprendizado (a etapa mais lenta) seja de custo único. A execução de Convert-String com um modelo que contém o algoritmo de aprendizado codificado agora é quase instantânea.
 
 
-<a name="extract-and-parse-structured-objects-out-of-string-content"></a>Extrair e analisar objetos estruturados fora do conteúdo da cadeia de caracteres
+<a id="extract-and-parse-structured-objects-out-of-string-content" class="xliff"></a>
+Extrair e analisar objetos estruturados fora do conteúdo da cadeia de caracteres
 ----------------------------------------------------------
 
 Em colaboração com o [Microsoft Research](http://research.microsoft.com/), um novo cmdlet **ConvertFrom-String** foi adicionado.
@@ -17,8 +30,7 @@ Esse cmdlet dá suporte a dois modos: análise delimitada básica e análise ori
 
 A análise delimitada, por padrão, divide a entrada no espaço em branco e atribui nomes de propriedade aos grupos resultantes. É possível personalizar o delimitador:
 
-> 1 \[C:\\temp\]
-> &gt;&gt; "Hello World" | ConvertFrom-String | Format-Table -Auto
+> 1 \[C:\\temp\] &gt;&gt; "Hello World" | ConvertFrom-String | Format-Table -Auto
 
 P1    P2
 --    --

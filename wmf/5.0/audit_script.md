@@ -1,4 +1,16 @@
-# <a name="script-tracing-and-logging"></a>Rastreamento e registro de scripts
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 2c3cc6d5d226daf22c7ee83a1b7068d6a08b7f45
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="script-tracing-and-logging" class="xliff"></a>
+# Rastreamento e registro de scripts
 
 Embora o Windows PowerShell já tenha a configuração **LogPipelineExecutionDetails** da Política de Grupo para registrar em log a invocação de cmdlets, a linguagem de scripts do PowerShell traz vários recursos que talvez você queira registrar em log e/ou auditar. O novo recurso de Rastreamento de Script Detalhado permite habilitar o acompanhamento detalhado e a análise de uso de scripts do Windows PowerShell em um sistema. Depois de habilitar o rastreamento de script detalhado, o Windows PowerShell registra em log todos os blocos de script no log de eventos do ETW, **Microsoft-Windows-PowerShell/Operational**. Caso um bloco de script crie outro bloco de script (por exemplo, um script que chama o cmdlet Invoke-Expression em uma cadeia de caracteres), esse bloco de script resultante também será registrado em log.
 
@@ -96,3 +108,4 @@ $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
 Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior. Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os logs de eventos para fora do computador assim que possível.
+

@@ -1,4 +1,16 @@
-# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Permitindo recursos duplicados idênticos em uma configuração
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: d3a625d05eaf4e7448b4abf90499f6a94e2f7718
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="allowing-for-identical-duplicate-resources-in-a-configuration" class="xliff"></a>
+# Permitindo recursos duplicados idênticos em uma configuração
 
 O DSC não permite nem manipula definições de recursos conflitantes dentro de uma configuração. Em vez de tentar resolver o conflito, ele simplesmente falha. Como a reutilização de configuração é cada mais utilizada por meio de recursos de composição, etc., os conflitos ocorrerão com mais frequência. Quando definições de recursos conflitantes forem idênticas, o DSC deverá ter inteligência para permiti-las. Com esta versão, damos suporte a várias instâncias de recursos com definições idênticas:
 
@@ -85,3 +97,4 @@ Configuration WebApplication
 ```
 
 Essa configuração bem semelhante falhará porque os recursos WindowsFeature FE_IIS e WindowsFeature Worker_IIS não serão mais idênticos e, portanto, entrarão em conflito.
+

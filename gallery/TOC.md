@@ -8,6 +8,9 @@
 ### [Itens com PSEditions compatível](psgallery/psgallery_pseditions.md)
 ### [Exibição FileList](psgallery/psgallery_filelist_feature.md)
 ### [Implantar na Automação do Azure](psgallery/psgallery_deploy_to_azure_automation.md)
+### [Creating a PowerShellGallery Account](psgallery/psgallery_creating_an_account.md) (Criando uma conta da Galeria do PowerShell)
+### [Criando e publicando itens](psgallery/Creating-and-Publishing-an-item.md)
+### [Publishing guidelines and best practices](psgallery/psgallery-PublishingGuidelines.md) (Diretrizes e práticas recomendadas de publicação)
 ### [Removendo itens da lista](psgallery/psgallery_unlist_items.md)
 ### [Excluindo itens](psgallery/Deleting-Items.md)
 ### [Gerenciando proprietários do item](psgallery/Managing-Item-Owners.md)
@@ -15,8 +18,11 @@
 ### [Solução de controvérsias](psgallery/psgallery_dispute_resolution.md)
 ### [Entrando em contato com os proprietários do item](psgallery/psgallery_contacting_item_owners.md)
 ### [Entrando em contato com os administradores](psgallery/psgallery_contacting_administrators.md)
+### [Fornecendo comentários por meio de mídia social ou do recurso Comentários](psgallery/psgallery-SocialMediaFeedback.md)
 
 # [PowerShellGet](psget/overview.md)
+## [Módulo Get PowerShellGet](psget/get_psget_module.md)
+
 ## Módulo
 ### [Localizar Módulos](psget/module/psget_find-module.md)
 ### [Localizar Recursos DSC](psget/module/psget_find-dscresource.md)

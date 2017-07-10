@@ -1,20 +1,21 @@
 ---
-title: "Aprimoramentos no recurso JEA (Administração Suficiente)"
-ms.date: 2016-05-16
-keywords: PowerShell, DSC, Windows Management Framework, JEA
-description: 
-ms.topic: article
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
 contributor: ryanpu
-manager: dongill
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 1b054b67bfd7b3660bac134bc8b023baf5644507
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+title: "Aprimoramentos no recurso JEA (Administração Suficiente)"
+ms.openlocfilehash: 2811b4deb3f4fca513791c7389ee5f9f877dbfe8
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
+<a id="improvements-to-just-enough-administration-jea" class="xliff"></a>
+# Aprimoramentos no recurso JEA (Administração Suficiente)
 
-## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>Cópia de arquivo restrito de/para pontos de extremidade JEA
+<a id="constrained-file-copy-tofrom-jea-endpoints" class="xliff"></a>
+## Cópia de arquivo restrito de/para pontos de extremidade JEA
 
 Agora, você pode remotamente copiar arquivos de/para um ponto de extremidade JEA ficar tranquilo que o usuário conectado não poderá copiar *nenhum* arquivo em seu sistema.
 Isso é possível ao configurar seu arquivo PSSC para montar uma unidade de usuário para conectar usuários.
@@ -47,7 +48,8 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 Em seguida, você pode escrever funções personalizadas para processar os dados armazenados na unidade do usuário e disponibilizar esses para os usuários no arquivo de Capacidade de Função.
 
-## <a name="support-for-group-managed-service-accounts"></a>Suporte para Contas de Serviço Gerenciado de Grupo
+<a id="support-for-group-managed-service-accounts" class="xliff"></a>
+## Suporte para Contas de Serviço Gerenciado de Grupo
 
 Em alguns casos, uma tarefa que um usuário precisa para executar em uma sessão JEA precisará acessar recursos fora do computador local.
 Quando uma sessão JEA é configurada para usar uma conta virtual, qualquer tentativa de acessar esses recursos parecem que serão provenientes da identidade do computador local, não da conta virtual ou do usuário conectado.
@@ -69,7 +71,8 @@ RunAsVirtualAccount = $false
 > Cada usuário conectado compartilha a mesma identidade de gMSA, que pode ter permissões em toda a empresa.
 > Tenha muito cuidado ao optar por usar uma gMSA, e sempre prefira contas virtuais que são limitadas no computador local, quando possível.
 
-## <a name="conditional-access-policies"></a>Políticas de acesso condicional
+<a id="conditional-access-policies" class="xliff"></a>
+## Políticas de acesso condicional
 
 O JEA é excelente para limitar o que alguém pode fazer quando ele se conecta a um sistema para gerenciá-lo, mas e se você também desejar limitar *quando* alguém pode usar JEA?
 Adicionamos opções de configuração aos arquivos de configuração de sessão (.pssc) para permitir que você especifique grupos de segurança aos quais um usuário deve pertencer para estabelecer uma sessão JEA.
@@ -91,6 +94,8 @@ RequiredGroups = @{ Or = '2FA-logon', 'smartcard-logon' }
 RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon' }}
 ```
 
-## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Corrigido: contas virtuais agora têm suporte no Windows Server 2008 R2
+<a id="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2" class="xliff"></a>
+## Corrigido: contas virtuais agora têm suporte no Windows Server 2008 R2
 No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de recursos entre o Windows Server 2008 R2 - 2016.
 Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.
+

@@ -1,23 +1,24 @@
 ---
+ms.date: 2017-06-12
+author: eslesar
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
 title: Recurso PackageManagement de DSC
-ms.date: 
-keywords: powershell,DSC
-description: 
-ms.topic: article
-author: brywang-msft
-manager: kriscv
-ms.prod: powershell
-ms.openlocfilehash: 33775be230a4e92e22784d991338510510f69889
-ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
-translationtype: HT
+ms.openlocfilehash: a984fbf5db561a696d89b60dde8b92096c6e4924
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-packagemanagement-resource"></a>Recurso PackageManagement de DSC
+<a id="dsc-packagemanagement-resource" class="xliff"></a>
+# Recurso PackageManagement de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso **PackageManagement** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para instalar ou desinstalar pacotes de Gerenciamento de Pacotes em um nó de destino. Este recurso requer o módulo **PackageManagement**, disponível em http://PowerShellGallery.com.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 PackageManagement [string] #ResourceName
@@ -34,7 +35,8 @@ PackageManagement [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Nome| Especifica o nome do Pacote a ser instalado ou desinstalado.| 
@@ -47,14 +49,16 @@ PackageManagement [string] #ResourceName
 | ProviderName| Especifica um nome de provedor de pacote para o qual definir o escopo de sua pesquisa de pacote. Você pode obter os nomes de provedores de pacote executando o cmdlet Get-PackageProvider.| 
 | AdditionalParameters| Parâmetros específicos do provedor que são transmitidos como uma tabela de hash. Por exemplo, para o provedor do NuGet, você pode transmitir parâmetros adicionais, como DestinationPath.| 
 
-## <a name="additional-parameters"></a>Parâmetros Adicionais
+<a id="additional-parameters" class="xliff"></a>
+## Parâmetros Adicionais
 A tabela a seguir lista as opções para a propriedade AdditionalParameters.
 |  Parâmetro  | Descrição   | 
 |---|---|
 | DestinationPath| Usada por provedores como o Nuget interno. Especifica o local de um arquivo onde você deseja que o pacote seja instalado.|
 | InstallationPolicy| Usada por provedores como o Nuget interno. Determina se você confia na origem do pacote. Um destes: "Não confiável", "Confiável".|
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 Este exemplo instala o pacote do NuGet **JQuery** e o módulo do PowerShell **GistProvider** usando o recurso de DSC **PackageManagement**. Este exemplo primeiro garante que as origens dos pacotes necessários estejam disponíveis e, em seguida, define o estado esperado dos pacotes **JQuery** e **GistProvider** (NuGet e PowerShell, respectivamente).
 
@@ -97,3 +101,4 @@ Configuration PackageTest
     }
 }
 ```
+

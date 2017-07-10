@@ -1,19 +1,17 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_deploy_to_azure_automation
-ms.technology: powershell
-ms.openlocfilehash: 20b0dd53b5d10f36089a884a99209a575332a91a
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 91f48fb43d7fb099e34ce5d3b3b632e3cb119d64
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-<a name="deploy-to-azure-automation"></a>Implantar na Automação do Azure
+<a id="deploy-to-azure-automation" class="xliff"></a>
+Implantar na Automação do Azure
 ===========================
 
 O botão Implantar na Automação do Azure na página de detalhes do item implantará o item da Galeria do PowerShell para a Automação do Azure.

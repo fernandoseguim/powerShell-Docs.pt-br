@@ -1,4 +1,16 @@
-# <a name="reporting-on-jea"></a>Relatando no JEA
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: f3c218fc668e35fa50047459d8031d77cdf985a2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="reporting-on-jea" class="xliff"></a>
+# Relatando no JEA
 Para relatar o estado da configuração JEA, é possível usar:
 1.  **Get-PSSessionConfiguration** para retornar uma lista de todos os pontos de extremidade registrados em determinado computador.
 2.  **Get-PSSessionCapability** para relatar as funcionalidades que determinado usuário tem em relação a um ponto de extremidade específico.
@@ -32,3 +44,4 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 Para relatar as _ações_ executadas pelos usuários durante uma sessão JEA, é possível:
 1. Habilitar as transcrições “over the shoulder” para o ponto de extremidade JEA e consultar o diretório de transcrições para obter um log completo das ações de cada usuário
 2. Ativar o registro de módulo PowerShell e inspecionar os logs de eventos do PowerShell.
+

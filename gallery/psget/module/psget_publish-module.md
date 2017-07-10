@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: "módulo psget_publish"
-ms.technology: powershell
-ms.openlocfilehash: a21351837d0cc63e56254911a1a436175a2734cd
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Publish-Module
+ms.openlocfilehash: 53fca3d6756ebf698023152ce5b58b45eb0ef757
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="publish-module"></a>Publish-Module
+<a id="publish-module" class="xliff"></a>
+# Publish-Module
 
 Publica um módulo especificado do computador local em uma galeria online.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet **Publish-Module** publica um módulo em uma galeria online baseada em NuGet usando uma chave de API, armazenada como parte do perfil do usuário na galeria. Você pode especificar o módulo a ser publicado usando o nome do módulo ou o caminho para a pasta que contém o módulo.
 
@@ -29,16 +28,19 @@ O parâmetro RequiredVersion permite que você especifique a versão exata de um
 O parâmetro Path também dá suporte ao caminho base do módulo com a pasta de versão.
 O parâmetro de opção Force no cmdlet Publish-Module inicializa o NuGet.exe sem avisar.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Publish-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Publish-Module](http://go.microsoft.com/fwlink/?LinkID=398575)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 ```powershell
 ContosoServer module with different versions to be published.
@@ -70,9 +72,11 @@ _------ ---- ---------- -----------
 2.0 ContosoServer LocalRepo ContosoServer module
 ```
 
-## <a name="publishing-a-module-with-dependencies"></a>Publicando um módulo com dependências
+<a id="publishing-a-module-with-dependencies" class="xliff"></a>
+## Publicando um módulo com dependências
 
-### <a name="create-a-module-with-dependencies-and-version-range-specified-in-requiredmodules-property-of-its-module-manifest"></a>Crie um módulo com dependências e um intervalo de versão que são especificados na propriedade RequiredModules do manifesto do módulo.
+<a id="create-a-module-with-dependencies-and-version-range-specified-in-requiredmodules-property-of-its-module-manifest" class="xliff"></a>
+### Crie um módulo com dependências e um intervalo de versão que são especificados na propriedade RequiredModules do manifesto do módulo.
 
 **Observação:**
   - \* tem suporte apenas em MaximumVersion e também deve estar no final da cadeia de caracteres de versão. 
@@ -86,13 +90,15 @@ PS C:\windows\system32> cd C:\MyModules\ModuleWithDependencies
 PS C:\MyModules\ModuleWithDependencies> New-ModuleManifest -Path .\ModuleWithDependencies.psd1 -ModuleVersion 1.0 -RequiredModules $requiredModules -Description 'ModuleWithDependencies demo module'
 ```
 
-### <a name="publish-modulewithdependencies-module-with-dependencies-to-the-repository"></a>Publique o módulo ModuleWithDependencies com dependências no repositório.
+<a id="publish-modulewithdependencies-module-with-dependencies-to-the-repository" class="xliff"></a>
+### Publique o módulo ModuleWithDependencies com dependências no repositório.
 
 ```powershell
 PS C:\MyModules\ModuleWithDependencies> Publish-Module -Path C:\MyModules\ModuleWithDependencies -Repository LocalRepo
 ```
 
-### <a name="find-modulewithdependencies-module-with-its-dependencies-by-specifying--includedependencies"></a>Encontre o módulo ModuleWithDependencies com suas dependências especificando -IncludeDependencies
+<a id="find-modulewithdependencies-module-with-its-dependencies-by-specifying--includedependencies" class="xliff"></a>
+### Encontre o módulo ModuleWithDependencies com suas dependências especificando -IncludeDependencies
 
 ```powershell
 PS C:\MyModules\ModuleWithDependencies> Find-Module -Name ModuleWithDependencies -Repository LocalRepo -IncludeDependencies
@@ -104,7 +110,8 @@ Version    Name                                Type       Repository           D
 1.5        RequiredModule2                     Module     localrepo            RequiredModule2 module
 ```
 
-### <a name="install-the-modulewithdependencies-module-with-dependencies"></a>Instale o módulo ModuleWithDependencies com dependências.
+<a id="install-the-modulewithdependencies-module-with-dependencies" class="xliff"></a>
+### Instale o módulo ModuleWithDependencies com dependências.
 Observe que os intervalos de versão são considerados durante a instalação de dependências.
 
 ```powershell
@@ -121,7 +128,8 @@ Version    Name                                Type       Repository           D
 1.5        RequiredModule2                     Module     localrepo            RequiredModule2 module
 ```
 
-### <a name="contents-of-modulewithdependencies2-module-manifest-file"></a>Conteúdo do arquivo de manifesto do módulo ModuleWithDependencies2
+<a id="contents-of-modulewithdependencies2-module-manifest-file" class="xliff"></a>
+### Conteúdo do arquivo de manifesto do módulo ModuleWithDependencies2
 
 ```powershell
 @{
@@ -176,7 +184,8 @@ PrivateData = @{
 ```
 
 
-### <a name="external-dependencies"></a>Dependências externas
+<a id="external-dependencies" class="xliff"></a>
+### Dependências externas
 Algumas dependências de módulo podem ser gerenciadas externamente. Nesse caso, elas devem ser adicionadas à entrada ExternalModuleDependencies na seção PSData do manifesto do módulo.
 
 Se "SnippetPx" não estiver disponível no repositório, o erro abaixo será gerado.

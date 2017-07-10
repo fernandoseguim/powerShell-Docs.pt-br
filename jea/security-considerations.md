@@ -1,18 +1,17 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2017-03-07
+ms.topic: conceptual
+keywords: "jea,powershell,segurança"
 title: "Considerações sobre segurança de JEA"
-ms.technology: powershell
-ms.openlocfilehash: 02384465e3c1b6d9633cc346ba88a2566fea1af1
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: f85b342625d4dba0890619ef9680eaccbbde5224
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="jea-security-considerations"></a>Considerações sobre segurança de JEA
+<a id="jea-security-considerations" class="xliff"></a>
+# Considerações sobre segurança de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -23,7 +22,8 @@ Como o JEA permite a execução de comandos de administrador sem ter diretamente
 
 Este tópico descreve o modelo de segurança JEA e as práticas recomendadas mais detalhadamente.
 
-## <a name="run-as-account"></a>Conta Executar como
+<a id="run-as-account" class="xliff"></a>
+## Conta Executar como
 
 Cada ponto de extremidade JEA tem uma conta "Run As" designada, que é a conta na qual são executadas as ações do usuário que está se conectando.
 Essa conta é configurável no [arquivo de configuração de sessão](session-configurations.md) e a conta que você escolher tem uma influência significativa sobre a segurança de seu ponto de extremidade.
@@ -81,7 +81,8 @@ Isso significa que as definições de função deixarão de funcionar conforme o
 
 Você não deve usar um RunAsCredential em um ponto de extremidade JEA devido a dificuldade no rastreamento de ações até usuários específicos e devido à falta de suporte para mapeamento de usuários às funções.
 
-## <a name="winrm-endpoint-acl"></a>ACL do Ponto de Extremidade do WinRM
+<a id="winrm-endpoint-acl" class="xliff"></a>
+## ACL do Ponto de Extremidade do WinRM
 
 Assim como acontece com pontos de extremidade regulares de comunicação remota do PowerShell, cada ponto de extremidade JEA tem uma ACL (lista de controle de acesso) separada definida na configuração do WinRM que controla quem pode autenticar no ponto de extremidade JEA.
 Se for configurada incorretamente, usuários confiáveis poderão não acessar o ponto de extremidade JEA e/ou usuários não confiáveis poderão acessar.
@@ -115,7 +116,8 @@ Se usuários adicionais tiverem permissão para acessar o ponto de extremidade J
 Você pode auditar as permissões de usuário em um ponto de extremidade JEA executando o `Get-PSSessionCapability`.
 Confira o artigo [Auditoria e relatórios no JEA](audit-and-report.md) para obter mais informações sobre a auditoria de quais comandos um usuário tem acesso em um ponto de extremidade JEA.
 
-## <a name="least-privilege-roles"></a>Funções de privilégio mínimo
+<a id="least-privilege-roles" class="xliff"></a>
+## Funções de privilégio mínimo
 
 Durante a criação de funções JEA, é importante lembrar que a conta virtual ou a conta de serviço gerenciado de grupo em execução em segundo plano geralmente tem acesso irrestrito para gerenciar o computador local.
 Os recursos de função do JEA ajudam a restringir o uso que pode ser feito por essa conta, limitando os comandos e os aplicativos que podem ser executados usando o contexto privilegiado.
@@ -144,7 +146,8 @@ Uma versão muito mais segura desse mesma capacidade de função seria:
 
 Evite usar curingas em recursos de função e não se esqueça de [auditar as permissões efetivas de usuário](audit-and-report.md#check-effective-rights-for-a-specific-user) regularmente para entender a quais comandos um usuário tem acesso.
 
-## <a name="jea-does-not-protect-against-admins"></a>O JEA não protege contra administradores
+<a id="jea-does-not-protect-against-admins" class="xliff"></a>
+## O JEA não protege contra administradores
 
 Um aos princípios básicos do JEA é que ele permite que não administradores executem *algumas* tarefas de administração.
 O JEA não protege contra aqueles que já têm privilégios de administrador.
@@ -155,3 +158,4 @@ Portanto, é importante avaliar as permissões estendidas dos usuários de JEA p
 
 Uma prática comum é usar o JEA para a manutenção de rotina e usar uma solução de gerenciamento de acesso privilegiado "just in time" que permita que os usuários sejam temporariamente administradores locais em situações de emergência.
 Isso ajuda a garantir que os usuários não sejam administradores permanentes no sistema, mas possam obter esses direitos se e somente quando concluírem um fluxo de trabalho que documente o uso dessas permissões.
+

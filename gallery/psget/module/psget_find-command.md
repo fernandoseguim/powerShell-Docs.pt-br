@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: comando psget_find
-ms.technology: powershell
-ms.openlocfilehash: 99091130ea89023495e5e3aacafb292f67f2db30
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Find-Command
+ms.openlocfilehash: f867f12b1c6efad30a04581c6f36c5a77a2fb2ae
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="find-command"></a>Find-Command
+<a id="find-command" class="xliff"></a>
+# Find-Command
 
 Localiza comandos do PowerShell em módulos.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 O cmdlet Find-Command localiza comandos do PowerShell, como cmdlets, aliases, funções e fluxos de trabalho. Find-Command faz pesquisas em módulos em repositórios registrados.
 Para cada comando que localiza, esse cmdlet retorna um objeto PSGetCommandInfo. Você pode passar um objeto PSGetCommandInfo para o cmdlet Install-Module para instalar o módulo que contém o comando.
 
@@ -30,16 +29,19 @@ Para cada comando que localiza, esse cmdlet retorna um objeto PSGetCommandInfo. 
 - Find-Command pode filtrar a linguagem de pesquisa específica do repositório com o parâmetro -Filter.
 - Find-Command pode filtrar módulos de todos ou de alguns dos repositórios registrados.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 ```powershell
 
 # Find a specific command

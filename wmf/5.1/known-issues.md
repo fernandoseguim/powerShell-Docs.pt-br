@@ -1,36 +1,39 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
 title: Problemas conhecidos no WMF 5.1
-ms.date: 2016-07-13
-keywords: PowerShell, DSC, WMF
-description: 
-ms.topic: article
-author: krishna
-manager: dongill
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 260a3bc443302f2d582f455aafb30ed717d95c84
-ms.sourcegitcommit: cfe32f213819ae76de05da564c3e2c4b7ecfda2f
-translationtype: HT
+ms.openlocfilehash: 93113962781f1cc84a80f8f97f56ffd7622fec6b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="known-issues-in-wmf-51"></a>Problemas conhecidos no WMF 5.1 #
+<a id="known-issues-in-wmf-51" class="xliff"></a>
+# Problemas conhecidos no WMF 5.1 #
 
 > Observação: essas informações estão sujeitas a alteração.
 
-## <a name="starting-powershell-shortcut-as-administrator"></a>Iniciando o atalho do PowerShell como administrador
+<a id="starting-powershell-shortcut-as-administrator" class="xliff"></a>
+## Iniciando o atalho do PowerShell como administrador
 Na instalação do Windows Media Format, se você tentar iniciar o PowerShell no atalho como administrador, poderá receber uma mensagem de "Erro não especificado".
 Abra novamente o atalho como não administrador. Agora ele funciona até mesmo como administrador.
 
-## <a name="pester"></a>Pester
+<a id="pester" class="xliff"></a>
+## Pester
 Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pester no Nano Server:
 
 * A execução de testes em relação ao Pester em si pode resultar em algumas falhas devido às diferenças entre FULL CLR e CORE CLR. Particularmente, o método Validate não está disponível no tipo XmlDocument. Seis testes que tentam validar o esquema dos logs de saída do NUnit são conhecidos por falharem. 
 * Um teste de cobertura de código falha atualmente porque o Recurso de DSC *WindowsFeature* não existe no Nano Server. No entanto, essas falhas geralmente são benignas e podem ser ignoradas com segurança.
 
-## <a name="operation-validation"></a>Validação da operação 
+<a id="operation-validation" class="xliff"></a>
+## Validação da operação 
 
 * O Update-Help falha no módulo Microsoft.PowerShell.Operation.Validation devido a um URI de ajuda que não funciona
 
-## <a name="dsc-after-uninstall-wmf"></a>DSC após desinstalar o WMF 
+<a id="dsc-after-uninstall-wmf" class="xliff"></a>
+## DSC após desinstalar o WMF 
 * A desinstalação do WMF não exclui da pasta de configuração os documentos MOF da DSC. A DSC não funcionará corretamente se os documentos MOF contêm propriedades mais recentes, que não estão disponíveis nos sistemas mais antigos. Nesse caso, execute o seguinte script no console do PowerShell com privilégios elevados para limpar os estados da DSC.
  ```PowerShell
     $PreviousDSCStates = @("$env:windir\system32\configuration\*.mof",
@@ -42,7 +45,8 @@ Nesta versão, há dois problemas dos quais você deve estar ciente ao usar o Pe
     $PreviousDSCStates | Remove-Item -ErrorAction SilentlyContinue -Verbose
  ```  
 
-## <a name="jea-virtual-accounts"></a>Contas Virtuais JEA
+<a id="jea-virtual-accounts" class="xliff"></a>
+## Contas Virtuais JEA
 As configurações de sessão e pontos de extremidade JEA configurados para usar contas virtuais no WMF 5.0 não serão configuradas para usar uma conta virtual após a atualização para o WMF 5.1.
 Isso significa que os comandos executados em sessões JEA serão executados sob a identidade do usuário conectado, em vez de uma conta de administrador temporária, impedindo potencialmente que o usuário execute comandos que exijam privilégios elevados.
 Para restaurar as contas virtuais, você precisa cancelar o registro e registrar novamente as configurações de sessão que usam contas virtuais.
@@ -63,3 +67,4 @@ Register-PSSessionConfiguration -Name $jea.Name -Path $pssc.FullName -Force
 # Ensure the access policies remain the same
 Set-PSSessionConfiguration -Name $newjea.Name -SecurityDescriptorSddl $jea.SecurityDescriptorSddl
 ```
+

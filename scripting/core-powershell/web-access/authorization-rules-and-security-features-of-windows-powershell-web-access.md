@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: "regras de autorização e recursos de segurança do windows powershell web access"
-ms.technology: powershell
-ms.openlocfilehash: f2ed4355536ed92048dde66617d36d36958fd75f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 706830f618173879185f5b84570fdc7782434d59
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
-# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
+<a id="authorization-rules-and-security-features-of-windows-powershell-web-access" class="xliff"></a>
+# Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -27,7 +24,7 @@ Windows PowerShell® Web Access em Windows Server® 2012 R2 e Windows Server® 2
 
 Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do Windows PowerShell Web Access é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Para saber mais sobre os cmdlets do Windows PowerShell Web Access, confira os tópicos de referência de cmdlet [Windows PowerShell Web Access Cmdlets](https://technet.microsoft.com/library/hh918342.aspx) (Cmdlets do Windows PowerShell Web Access).
 
-Os administradores podem definir as regras de autenticação 0-*n* para o Windows PowerShell Web Access. A segurança padrão é restritiva, não permissiva. Se não houver regras de autenticação, significa que nenhum usuário tem acesso a coisa alguma.
+Os administradores podem definir de 0 a *n* regras de autenticação para o Windows PowerShell Web Access. A segurança padrão é restritiva, não permissiva. Se não houver regras de autenticação, significa que nenhum usuário tem acesso a coisa alguma.
 
 Add-PswaAuthorizationRule e Test-PswaAuthorizationRule no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de dentro de uma sessão ativa do Windows PowerShell Web Access. Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Credential, você pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx).
 
@@ -39,7 +36,7 @@ Regras de autenticação do Windows PowerShell Web Access são regras da lista d
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
 </tr>
 </thead>
 <tbody>
@@ -197,7 +194,8 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 </tbody>
 </table>
 
-#### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
+<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
+#### Para adicionar uma regra de autorização restritiva
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -221,7 +219,8 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 
 4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-#### <a name="to-remove-an-authorization-rule"></a>Para remover uma regra de autorização
+<a id="to-remove-an-authorization-rule" class="xliff"></a>
+#### Para remover uma regra de autorização
 
 1.  Se uma sessão do Windows PowerShell ainda não estiver aberta, consulte a etapa 1 de [Para adicionar uma regra de autorização não restritiva](#BKMK_arar) nesta seção.
 
@@ -252,7 +251,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 <a href="" id="BKMK_others"></a>
 ####
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Outros exemplos de cenários de regras de autorização</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Outros exemplos de cenário de regras de autorização</span></a>
 
 ------------------------------------------------------------------------
 

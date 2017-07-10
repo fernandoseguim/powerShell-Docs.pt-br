@@ -1,17 +1,17 @@
 ---
-title: Recurso do ServiceSet DSC
-ms.date: 2016-05-23
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 798609d7e1e7d88e7a9f76f5fff12f63c6109c76
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso do ServiceSet DSC
+ms.openlocfilehash: 92fa4a442eb42e89195162b7831f1a96d40b84f5
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-serviceset-resource"></a>Recurso do ServiceSet DSC
+<a id="dsc-serviceset-resource" class="xliff"></a>
+# Recurso do ServiceSet DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -20,7 +20,8 @@ O recurso **ServiceSet** na DSC (Configuração de Estado Desejado) do Windows P
 
 Use esse recurso quando desejar configurar vários serviços para o mesmo estado.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 
 ```
 Service [string] #ResourceName
@@ -36,7 +37,8 @@ Service [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -50,7 +52,8 @@ Service [string] #ResourceName
 
 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 A configuração a seguir inicia os serviços "Áudio do Windows" e "Serviços de Área de Trabalho Remota".
 

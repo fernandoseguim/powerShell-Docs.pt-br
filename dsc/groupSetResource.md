@@ -1,17 +1,18 @@
 ---
-title: Recurso de GroupSet DSC
-ms.date: 2016-05-16
-keywords: powershell, DSC, interno, recurso
-description: "Oferece um mecanismo para gerenciar grupos locais no nó de destino."
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6e5ea98febfe7541f35a84c37df73df580654340
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+description: "Oferece um mecanismo para gerenciar grupos locais no nó de destino."
+title: Recurso de GroupSet DSC
+ms.openlocfilehash: 0907a968bfc660adc873c28e8be6572d1d5cb993
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-groupset-resource"></a>Recurso de GroupSet DSC
+<a id="dsc-groupset-resource" class="xliff"></a>
+# Recurso de GroupSet DSC
 
 > Aplica-se a: Windows Windows PowerShell 5.0
 
@@ -19,7 +20,8 @@ O recurso **GroupSet** na DSC (Configuração de Estado Desejado) do Windows Pow
 
 Use esse recurso quando desejar adicionar e/ou remover a mesma lista de membros para mais de um grupo, remova mais de um grupo ou adicionar mais de um grupo com a mesma lista de membros.
 
-##<a name="syntax"></a>Sintaxe##
+<a id="syntax" class="xliff"></a>
+##Sintaxe##
 ```
 Group [string] #ResourceName
 {
@@ -32,7 +34,8 @@ Group [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -44,7 +47,8 @@ Group [string] #ResourceName
 | MembersToInclude| Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário *Domínio*\\*NomeDoUsuário*. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 
-## <a name="example-1"></a>Exemplo 1
+<a id="example-1" class="xliff"></a>
+## Exemplo 1
 
 O exemplo a seguir mostra como garantir que dois grupos chamados "myGroup" e "myOtherGroup" estejam presentes. 
 

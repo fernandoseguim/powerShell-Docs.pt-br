@@ -1,18 +1,17 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2017-03-07
+ms.topic: conceptual
+keywords: "jea,powershell,segurança"
 title: "Recursos de Função JEA"
-ms.technology: powershell
-ms.openlocfilehash: 49623e69b186fd09679bf7e0186dec3961e719ba
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: 10f5f390daccbb012be6ee7272041e777810ee12
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="jea-role-capabilities"></a>Recursos de Função JEA
+<a id="jea-role-capabilities" class="xliff"></a>
+# Recursos de Função JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -21,7 +20,8 @@ Uma capacidade de função é um arquivo de dados do PowerShell com a extensão 
 
 Este tópico descreve como criar um arquivo da capacidade de função do PowerShell para seus usuários JEA.
 
-## <a name="determine-which-commands-to-allow"></a>Determinar quais comandos permitir
+<a id="determine-which-commands-to-allow" class="xliff"></a>
+## Determinar quais comandos permitir
 
 A primeira etapa ao criar um arquivo de capacidade de função é considerar o que os usuários que recebem a função precisarão acessar.
 Esse processo de coleta de requisitos pode levar algum tempo, mas é um processo muito importante.
@@ -41,14 +41,16 @@ A seleção cuidadosa de comandos disponíveis é importante para garantir que o
 Abaixo estão alguns exemplos de comandos que podem ser usados maliciosamente se forem permitidos em um estado sem restrições.
 Observe que essa não é uma lista completa e só deve ser usada como um ponto de partida preventivo.
 
-### <a name="examples-of-potentially-dangerous-commands"></a>Exemplos de comandos potencialmente perigosos
+<a id="examples-of-potentially-dangerous-commands" class="xliff"></a>
+### Exemplos de comandos potencialmente perigosos
 
 Risco | Exemplo | Comandos relacionados
 -----|---------|-----------------
 Concedendo privilégios de administrador ao usuário que está se conectando, para ignorar o JEA | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`
 Execução de código arbitrário, como malware, explorações ou scripts personalizados para ignorar proteções | `Start-Process -FilePath '\\san\share\malware.exe'` | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob`
 
-## <a name="create-a-role-capability-file"></a>Criar um arquivo de capacidade de função
+<a id="create-a-role-capability-file" class="xliff"></a>
+## Criar um arquivo de capacidade de função
 
 Você pode criar um novo arquivo de capacidade de função do PowerShell com o cmdlet [New-PSRoleCapabilityFile](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSRoleCapabilityFile).
 
@@ -59,7 +61,8 @@ New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 O arquivo de capacidade de função resultante pode ser aberto em um editor de texto e modificado para permitir os comandos desejados para a função.
 A documentação de ajuda do PowerShell contém vários exemplos de como você pode configurar o arquivo.
 
-### <a name="allowing-powershell-cmdlets-and-functions"></a>Permitir cmdlets e funções do PowerShell
+<a id="allowing-powershell-cmdlets-and-functions" class="xliff"></a>
+### Permitir cmdlets e funções do PowerShell
 
 Para autorizar usuários a executar funções ou cmdlets do PowerShell, adicione o nome do cmdlet ou da função nos campos VisbibleCmdlets ou VisibleFunctions.
 Se você não tiver certeza se um comando é um cmdlet ou uma função, você poderá executar `Get-Command <name>` e verificar a propriedade "CommandType" na saída.
@@ -115,7 +118,8 @@ Se isso acontecer, o ValidatePattern substituirá o ValidateSet.
 
 Para obter mais informações sobre ValidatePattern, dê uma olhada [nessa postagem *Hey, Scripting Guy!*](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e no conteúdo de referência [Expressões regulares do PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
 
-### <a name="allowing-external-commands-and-powershell-scripts"></a>Permitindo comandos externos e scripts do PowerShell
+<a id="allowing-external-commands-and-powershell-scripts" class="xliff"></a>
+### Permitindo comandos externos e scripts do PowerShell
 
 Para permitir que os usuários executem scripts do PowerShell (.ps1) e arquivos executáveis em uma sessão JEA, é necessário adicionar o caminho completo para cada programa no campo VisibleExternalCommands.
 
@@ -134,7 +138,8 @@ Uma abordagem melhor é permitir o [Get-SmbShare](https://technet.microsoft.com/
 
 Ao disponibilizar comandos externos aos usuários em uma sessão JEA, sempre especifique o caminho completo para o executável para garantir que um programa nomeado da mesma forma (e potencialmente mal-intencionado) colocado em outro lugar no sistema não seja executado em vez disso.
 
-### <a name="allowing-access-to-powershell-providers"></a>Permitindo acesso aos provedores do PowerShell
+<a id="allowing-access-to-powershell-providers" class="xliff"></a>
+### Permitindo acesso aos provedores do PowerShell
 
 Por padrão, nenhum provedor de PowerShell está disponível em sessões JEA.
 
@@ -151,7 +156,8 @@ Para tarefas simples que exigem acesso ao sistema de arquivos, Registro, reposit
 Funções, cmdlets e programas externos que estão disponíveis em uma sessão JEA não estão sujeitos às mesmas restrições que o JEA. Eles podem acessar qualquer provedor por padrão.
 Considere também usar a [unidade de usuário](session-configurations.md#user-drive) quando for necessário copiar arquivos para/de um ponto de extremidade JEA.
 
-### <a name="creating-custom-functions"></a>Criando funções personalizadas
+<a id="creating-custom-functions" class="xliff"></a>
+### Criando funções personalizadas
 
 Você pode criar funções personalizadas em um arquivo de capacidade de função para simplificar tarefas complexas para os seus usuários finais.
 As funções personalizadas também são úteis quando você precisar de lógica de validação avançada para valores de parâmetro de cmdlet.
@@ -189,7 +195,8 @@ Qualquer cmdlet restrito em uma sessão JEA exibirá o mesmo comportamento ao se
 Se você estiver escrevendo muitas funções personalizadas, poderá ser mais fácil colocá-las em um [Módulo de Script do PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
 Em seguida, você pode tornar essas funções visíveis na sessão JEA, usando o campo VisibleFunctions, assim como faria com módulos internos e de terceiros.
 
-## <a name="place-role-capabilities-in-a-module"></a>Colocar recursos de função em um módulo
+<a id="place-role-capabilities-in-a-module" class="xliff"></a>
+## Colocar recursos de função em um módulo
 
 Para que o PowerShell localize um arquivo de capacidade de função, ele deve ser armazenado em uma pasta "RoleCapabilities" em um módulo do PowerShell.
 O módulo pode ser armazenado em qualquer pasta incluída na variável de ambiente `$env:PSModulePath`, porém você não deve colocá-lo na System32 (reservada para módulos internos) ou uma pasta em que os usuários não confiáveis que estejam se conectando poderiam modificar os arquivos.
@@ -212,7 +219,8 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 
 Consulte [Noções básicas sobre um Módulo do PowerShell](https://msdn.microsoft.com/en-us/library/dd878324.aspx) para obter mais informações sobre módulos do PowerShell, manifestos de módulo e sobre a variável de ambiente PSModulePath.
 
-## <a name="updating-role-capabilities"></a>Atualizando recursos de função
+<a id="updating-role-capabilities" class="xliff"></a>
+## Atualizando recursos de função
 
 
 Você pode atualizar um arquivo de capacidade de função a qualquer momento, bastando salvar as alterações no arquivo de capacidade de função.
@@ -225,7 +233,8 @@ Se um usuário não confiável puder alterar os arquivos de capacidade de funç�
 
 Para os administradores que desejam bloquear o acesso às capacidades de função, verifique se a Sistema Local tem acesso de leitura aos arquivos de capacidade de função e aos módulos nesses arquivos.
 
-## <a name="how-role-capabilities-are-merged"></a>Como os recursos de função são mesclados
+<a id="how-role-capabilities-are-merged" class="xliff"></a>
+## Como os recursos de função são mesclados
 
 Os usuários podem ter acesso a vários recursos de função quando ingressam em uma sessão JEA, dependendo dos mapeamentos de função no [arquivo de configuração de sessão](session-configurations.md).
 Quando isso acontece, o JEA tenta conceder ao usuário o conjunto *mais permissivo* de comandos, permitido por qualquer uma das funções.
@@ -279,6 +288,8 @@ Verifique com cuidado se o conjunto combinado de provedores de um capacidade de 
 Por exemplo, se uma função permite o cmdlet `Remove-Item` e outra função permite o provedor `FileSystem`, haverá um risco de um usuário JEA excluir arquivos arbitrários no seu computador.
 Informações adicionais sobre como identificar as permissões efetivas dos usuários podem ser encontradas no [tópico auditoria do JEA](audit-and-report.md).
 
-## <a name="next-steps"></a>Próximas etapas
+<a id="next-steps" class="xliff"></a>
+## Próximas etapas
 
 - [Criar um arquivo de configuração de sessão](session-configurations.md)
+

@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_find dscresource
-ms.technology: powershell
-ms.openlocfilehash: afd13e1dd791794d62be4601477bcc77448586c5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Find-DscResource
+ms.openlocfilehash: 37ba7925d6f73c453126f25e0818b3f8839d3b3b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="find-dscresource"></a>Find-DscResource
+<a id="find-dscresource" class="xliff"></a>
+# Find-DscResource
 
 Localiza Recursos de DSC nos módulos.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Find-DscResource localiza recursos de [DSC (Configuração de Estado Desejado)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contidos em módulos que correspondam aos critérios especificados dos repositórios registrados.
 Para cada módulo que localiza, o cmdlet Find-DscResource retorna um objeto PSGetDscResourceInfo que você pode redirecionar para Install-Module para instalar os módulos que contêm os recursos que esse cmdlet retorna.
@@ -37,16 +36,19 @@ Um recurso pode modelar algo tão genérico quanto um arquivo ou tão específic
 - Find-DscResource pode filtrar na linguagem de pesquisa específica do repositório com o parâmetro -Filter.
 - Find-DscResource pode filtrar módulos de todos ou de alguns dos repositórios registrados.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Find-DscResource -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Find-DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 ```powershell
 
 # Find a specific DSC Resource

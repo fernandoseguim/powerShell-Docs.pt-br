@@ -1,17 +1,17 @@
 ---
-title: Recurso User de DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 0953000ba7930116679e4371f6acad5298725fdb
-ms.sourcegitcommit: 55b2457a19a2fa679fda8dc17a747ef21a98adc1
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso User de DSC
+ms.openlocfilehash: a4e4e8af4fcfe5c997c460613174d8583261dedf
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-#<a name="dsc-user-resource"></a>Recurso User de DSC#
+<a id="dsc-user-resource" class="xliff"></a>
+#Recurso do usuário de DSC#
 
  
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -20,7 +20,8 @@ translationtype: HT
 O recurso __User__ na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para contas de usuário locais no nó de destino.
 
 
-##<a name="syntax"></a>Sintaxe##
+<a id="syntax" class="xliff"></a>
+##Sintaxe##
 
 ```
 User [string] #ResourceName
@@ -38,7 +39,8 @@ User [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | UserName| Indica o nome da conta para a qual você deseja garantir um estado específico.| 
@@ -52,7 +54,8 @@ User [string] #ResourceName
 | PasswordNeverExpires| Indica se a senha vai expirar. Para garantir que a senha para essa conta nunca expire, defina essa propriedade como __$true__; defina-a como __$false__ caso a senha vá expirar. O valor padrão é __$false__.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Exemplo
+<a id="example" class="xliff"></a>
+## Exemplo
 
 ```powershell
 User UserExample

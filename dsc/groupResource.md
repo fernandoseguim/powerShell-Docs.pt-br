@@ -1,25 +1,24 @@
 ---
-title: Recurso Group de DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: db2a12141ab1eaca73bf958b5a27ef2a356d5b8f
-ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: Recurso Group de DSC
+ms.openlocfilehash: 6fb6c5f9593687d7204ff31fddd9bca978ed2707
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-group-resource"></a>Recurso Group de DSC
+<a id="dsc-group-resource" class="xliff"></a>
+# Recurso Group de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso Group na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para gerenciar grupos locais no nó de destino.
 
-## <a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+## Sintaxe
 ```
 Group [string] #ResourceName
 {
@@ -34,7 +33,8 @@ Group [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriedades
+<a id="properties" class="xliff"></a>
+## Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -47,7 +47,8 @@ Group [string] #ResourceName
 | MembersToInclude| Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário *Domínio*\\*NomeDoUsuário*. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 
-## <a name="example-1"></a>Exemplo 1
+<a id="example-1" class="xliff"></a>
+## Exemplo 1
 
 O exemplo a seguir mostra como garantir que um grupo chamado "TestGroup" esteja ausente. 
 
@@ -60,7 +61,8 @@ Group GroupExample
     GroupName = "TestGroup"
 }
 ```
-## <a name="example-2"></a>Exemplo 2
+<a id="example-2" class="xliff"></a>
+## Exemplo 2
 O exemplo a seguir mostra como adicionar um usuário do Active Directory ao grupo de administradores locais como parte de um build de laboratório com vários computadores, em que você já está usando um PSCredential para a conta de Administrador Local. Como isso também é usado para a conta de administrador do domínio (após a promoção do domínio), precisamos converter esse PSCredential existente em uma credencial de domínio amigável para adicionar um usuário de domínio ao grupo de Administradores Locais no servidor membro.
 
 ```powershell
@@ -90,7 +92,8 @@ Group AddADUserToLocalAdminGroup
         }
 ```
 
-## <a name="example-3"></a>Exemplo 3
+<a id="example-3" class="xliff"></a>
+## Exemplo 3
 O exemplo a seguir mostra como verificar se um grupo local, TigerTeamAdmins, no servidor TigerTeamSource.Contoso.Com, não contém uma conta de domínio específico, Contoso\JerryG.  
 
 ```powershell
@@ -109,3 +112,4 @@ Configuration SecureTigerTeamSrouce
   }
 }
 ```
+

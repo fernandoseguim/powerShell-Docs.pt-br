@@ -1,21 +1,22 @@
 ---
-title: "Método de reversão da classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 771a9c7b50aba26f89dbf6b24eb3df67bafeac0a
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Método de reversão da classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: b8597e3eb7872d9894863fb02d927c9f475da44c
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método de reversão da classe MSFT_DSCLocalConfigurationManager
+<a id="rollback-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Método de reversão da classe MSFT_DSCLocalConfigurationManager
 
 Reverte a configuração a uma versão anterior.
 
-<a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+Sintaxe
 ------
 
 ```mof
@@ -24,29 +25,34 @@ uint32 RollBack(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
+<a id="parameters" class="xliff"></a>
+Parâmetros
 ----------
 
 *configurationNumber* \[in\]  
 Especifica a configuração solicitada. 
 
-## <a name="return-value"></a>Retornar valor
+<a id="return-value" class="xliff"></a>
+## Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-## <a name="remarks"></a>Comentários
+<a id="remarks" class="xliff"></a>
+## Comentários
 
 Esse é um método estático.
 
-## <a name="requirements"></a>Requisitos
+<a id="requirements" class="xliff"></a>
+## Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Consulte também
+<a id="see-also" class="xliff"></a>
+## Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

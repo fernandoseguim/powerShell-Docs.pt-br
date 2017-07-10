@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: usar o console do windows powershell baseado na web
-ms.technology: powershell
-ms.openlocfilehash: ea530d346ec36000da331b287f51d8f732947629
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 48ed1646c00f909c4e950f197f51a30205060ef0
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
-#  <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
+<a id="use-the-web-based-windows-powershell-console" class="xliff"></a>
+#  Usar o Console do Windows PowerShell baseado na Web
 
 Atualizado em: 24 de junho de 2013
 
@@ -90,7 +87,8 @@ Para usar o console do Windows PowerShell Web Access baseado na Web, os navegado
 
 O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o endereço do site do gateway do Windows PowerShell Web Access da sua organização. Por padrão, o endereço do site é https://&lt;server_name&gt;/pswa. Antes de entrar no Windows PowerShell Web Access, tenha o nome ou o endereço IP do computador remoto que deseja gerenciar. Você deve ser um usuário autorizado no computador remoto e ele deve estar configurado para permitir gerenciamento remoto. Para obter mais informações sobre como configurar o computador para permitir o gerenciamento remoto, consulte [Enable and Use Remote Commands in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx) (Habilitar e usar comandos remotos no Windows PowerShell). O método mais simples de configurar o computador para permitir gerenciamento remoto é executar o cmdlet **Enable-PSRemoting -force** no computador, em uma sessão do Windows PowerShell aberta com direitos de usuário elevados (**Executar como Administrador**).
 
-### <a name="to-sign-in-to-windows-powershell-web-access"></a>Para entrar no Windows PowerShell Web Access
+<a id="to-sign-in-to-windows-powershell-web-access" class="xliff"></a>
+### Para entrar no Windows PowerShell Web Access
 
 1.  Abra o site do Windows PowerShell Web Access em uma janela ou guia do navegador da Internet.
 

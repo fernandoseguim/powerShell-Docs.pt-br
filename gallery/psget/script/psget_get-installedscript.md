@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_get installedscript
-ms.technology: powershell
-ms.openlocfilehash: d755ed5dbcee279f943d56832ffd7689e4cc6f04
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: galeria,powershell,cmdlet,psget
+title: Get-InstalledScript
+ms.openlocfilehash: f35e57cdadd1448bd9032ab007d692003c4cf4a2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="get-installedscript"></a>Get-InstalledScript
+<a id="get-installedscript" class="xliff"></a>
+# Get-InstalledScript
 
 Obtém os scripts instalados em um computador.
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+## Descrição
 
 O cmdlet Get-InstalledScript obtém scripts do PowerShell instalados em um computador.
 
@@ -30,17 +29,20 @@ Para cada script instalado, Get-InstalledScript retorna um objeto PSRepositoryIt
   - Se o parâmetro RequiredVersion não for especificado, Get-InstalledScript retorna a versão mais recente do script instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do script se nenhuma versão mínima tiver sido especificada. 
   - Se o parâmetro RequiredVersion for especificado, Get-InstalledScript retorna apenas a versão do script instalado que corresponde exatamente à versão especificada.
 
-## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Get-InstalledScript -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Referência da ajuda online sobre cmdlets
 
 [Get-InstalledScript](http://go.microsoft.com/fwlink/?LinkId=619790)
 
-## <a name="example-commands"></a>Comandos de exemplo
+<a id="example-commands" class="xliff"></a>
+## Comandos de exemplo
 
 ```powershell
 

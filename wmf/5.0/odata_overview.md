@@ -1,5 +1,18 @@
-# <a name="generate-powershell-cmdlets-based-on-odata-endpoint"></a>Gerar cmdlets do PowerShell com base em um ponto de extremidade OData
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: 11891587f59dc8a38e4ce267018160f7f9a28178
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="generate-powershell-cmdlets-based-on-odata-endpoint" class="xliff"></a>
+# Gerar cmdlets do PowerShell com base em um ponto de extremidade OData
+<a id="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint" class="xliff"></a>
+Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData
 --------------------------------------------------------------
 
 **Export-ODataEndpointProxy** é um cmdlet que gera um conjunto de cmdlets do Windows PowerShell com base na funcionalidade exposta por determinado ponto de extremidade OData.
@@ -40,7 +53,8 @@ Ainda há partes de casos de uso básico em desenvolvimento para essa funcionali
 -   Associações
 -   Fluxos para passar argumentos
 
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData com ODataUtils
+<a id="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils" class="xliff"></a>
+Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData com ODataUtils
 ------------------------------------------------------------------------------
 O módulo ODataUtils permite a geração de cmdlets do Windows PowerShell de pontos de extremidade REST que dão suporte a OData. As seguintes melhorias incrementais estão no módulo Microsoft.PowerShell.ODataUtils do Windows PowerShell.
 -   Informações adicionais do canal do ponto de extremidade do lado do servidor para o do lado do cliente.
@@ -98,3 +112,4 @@ O cmdlet Export-ODataEndpointProxy, bem como os cmdlets do proxy gerados por ele
 
 Export-ODataEndpointProxy -Uri $endPointUri -OutputModule $generatedProxyModuleDir -Force -AllowUnSecureConnection -Verbose -Headers @{'subscription-key'='XXXX'}
 ```
+

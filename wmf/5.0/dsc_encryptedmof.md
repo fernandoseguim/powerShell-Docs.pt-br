@@ -1,4 +1,16 @@
-# <a name="mof-documents-are-encrypted-by-default"></a>Documentos MOF são criptografados por padrão
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: "wmf,powershell,instalação"
+ms.openlocfilehash: d19f3c47af858eb18a39847050f80ffa013c59bb
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
+---
+<a id="mof-documents-are-encrypted-by-default" class="xliff"></a>
+# Documentos MOF são criptografados por padrão
 
 Documentos de configuração contêm informações confidenciais. Nas versões anteriores do DSC, era necessário distribuir e gerenciar certificados para proteger as credenciais em uma configuração. Para muitas pessoas, essa era uma carga de gerenciamento significativa e, mesmo com todo o trabalho necessário para fazer isso, ainda faltavam algumas informações de configuração que não eram e não poderiam ser protegidas. 
 
@@ -9,3 +21,4 @@ Isso não acontece mais, pois **todos os MOFs de configuração são protegidos 
 Se já estiver usando o método de certificado para criptografar senhas ou se precisar de segurança adicional para suas senhas, o [método existente de criptografia baseada em certificado](https://msdn.microsoft.com/en-us/powershell/dsc/securemof) continuará funcionando. O resultado será um documento MOF totalmente criptografado usando os DPAPIs e que, além disso, terá senhas criptografadas internas.
 
 Essa criptografia se aplica somente a documentos MOF de configuração (pending.mof, current.mof, previous.mof e MOFs parciais). MOFs de metaconfiguração ainda são salvos em texto sem formatação, já que é menos provável que ele contenha segredos.
+
