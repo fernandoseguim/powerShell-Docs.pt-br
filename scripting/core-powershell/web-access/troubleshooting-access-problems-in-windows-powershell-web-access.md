@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-ms.date: 2016-12-12
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
-ms.technology: powershell
-ms.openlocfilehash: 26de977d2c85e26f445eecb1278e6a7278e7dfd6
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: c10e19b177110ff62d44f28b6a523380b55b79e0
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
-#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
+<a id="troubleshooting-access-problems-in-windows-powershell-web-access" class="xliff"></a>
+#  Solucionando problemas de acesso no Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -79,7 +76,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 <td><p>Se o recurso IE ESC (Configuração de Segurança Aprimorada do Internet Explorer) estiver habilitado, você poderá adicionar o site do Windows PowerShell Web Access à lista de sites confiáveis ou desabilitar o IE ESC. Você pode desabilitar o IE ESC no bloco <strong>Propriedades</strong> na página <strong>Servidor Local</strong> no Gerenciador do Servidor.</p></td>
 </tr>
 <tr class="even">
-<td><p>A seguinte mensagem de erro é exibida ao tentar se conectar quando o servidor de gateway é o computador de destino e também está em um grupo de trabalho: <strong>Falha de autorização. Verifique se que você está autorizado a conectar-se ao computador de destino.</strong></p></td>
+<td><p>A seguinte mensagem de erro é exibida ao tentar se conectar quando o servidor de gateway é o computador de destino e também está em um grupo de trabalho: <strong>Falha de autorização. Verifique se você está autorizado a se conectar ao computador de destino.</strong></p></td>
 <td><p>Quando o servidor de gateway também é o servidor de destino, e está em um grupo de trabalho, especifique o nome do usuário, o nome do computador e o nome do grupo de usuários como mostrado na tabela a seguir. Não use um ponto (.) sozinho para representar o nome do computador.</p>
 <div>
 <table>
@@ -135,8 +132,7 @@ A tabela a seguir identifica alguns problemas comuns que os usuários podem enfr
 </tbody>
 </table>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">
-Consulte também</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
 <a href="/en-us/library/dn282395(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------

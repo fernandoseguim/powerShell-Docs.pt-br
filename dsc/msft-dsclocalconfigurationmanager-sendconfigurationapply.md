@@ -1,21 +1,22 @@
 ---
-title: "Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 701063dfa37fe4ba8b014cadadd10339b7fd1bf7
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: 9552fd5b5feb862fbe8ef95a7746776e7fe2f5c8
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+<a id="sendconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Método SendConfigurationApply da classe MSFT_DSCLocalConfigurationManager
 
 Envia o documento de configuração para o nó gerenciado e usa o Agente de Configuração para aplicar a configuração.
 
-<a name="syntax"></a>Sintaxe
+<a id="syntax" class="xliff"></a>
+Sintaxe
 ------
 
 ```mof
@@ -25,7 +26,8 @@ uint32 SendConfigurationApply(
 );
 ```
 
-<a name="parameters"></a>Parâmetros
+<a id="parameters" class="xliff"></a>
+Parâmetros
 ----------
 
 *ConfigurationData* \[in\]  
@@ -34,23 +36,27 @@ Dados do ambiente para a configuração.
 *force* \[in\]  
 **true** para forçar a configuração a parar.
 
-## <a name="return-value"></a>Retornar valor
+<a id="return-value" class="xliff"></a>
+## Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-## <a name="remarks"></a>Comentários
+<a id="remarks" class="xliff"></a>
+## Comentários
 
 Esse é um método estático.
 
-## <a name="requirements"></a>Requisitos
+<a id="requirements" class="xliff"></a>
+## Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Consulte também
+<a id="see-also" class="xliff"></a>
+## Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
