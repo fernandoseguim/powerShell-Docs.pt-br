@@ -9,18 +9,16 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershell-module-discovery-install-and-inventory-with-powershellget" class="xliff"></a>
-# Descoberta, instalação e inventário do módulo PowerShell com o PowerShellGet
+# <a name="powershell-module-discovery-install-and-inventory-with-powershellget"></a><span data-ttu-id="ba427-102">Descoberta, instalação e inventário do módulo PowerShell com o PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="ba427-102">PowerShell Module Discovery, Install and Inventory with PowerShellGet</span></span>
  
-O PowerShellGet está incluído nesta versão do WMF:
--   Find-Module pode filtrar nos metadados do módulo com o parâmetro -Tag
--   Find-Module pode filtrar na linguagem de pesquisa específica do repositório com o parâmetro -Filter
--   Find-Module pode filtrar no conteúdo do módulo com os parâmetros -Command, -DscResource e -Includes
--   Find-DscResource permite a descoberta de recursos DSC individuais nos repositórios
--   Suporte para instalação desde compartilhamentos de arquivos e publicação neles com o NuGet
+<span data-ttu-id="ba427-103">O PowerShellGet está incluído nesta versão do WMF:</span><span class="sxs-lookup"><span data-stu-id="ba427-103">PowerShellGet is included in this release of WMF:</span></span>
+-   <span data-ttu-id="ba427-104">Find-Module pode filtrar nos metadados do módulo com o parâmetro -Tag</span><span class="sxs-lookup"><span data-stu-id="ba427-104">Find-Module can filter on module metadata with the -Tag parameter</span></span>
+-   <span data-ttu-id="ba427-105">Find-Module pode filtrar na linguagem de pesquisa específica do repositório com o parâmetro -Filter</span><span class="sxs-lookup"><span data-stu-id="ba427-105">Find-Module can filter on repository-specific search language with the -Filter parameter</span></span>
+-   <span data-ttu-id="ba427-106">Find-Module pode filtrar no conteúdo do módulo com os parâmetros -Command, -DscResource e -Includes</span><span class="sxs-lookup"><span data-stu-id="ba427-106">Find-Module can filter based on module contents with the -Command, -DscResource, and -Includes parameters</span></span>
+-   <span data-ttu-id="ba427-107">Find-DscResource permite a descoberta de recursos DSC individuais nos repositórios</span><span class="sxs-lookup"><span data-stu-id="ba427-107">Find-DscResource allows discovery of individual DSC resources in repositories</span></span>
+-   <span data-ttu-id="ba427-108">Suporte para instalação desde compartilhamentos de arquivos e publicação neles com o NuGet</span><span class="sxs-lookup"><span data-stu-id="ba427-108">Support for installing from and publishing to file shares with NuGet</span></span>
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="ba427-109">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="ba427-109">Example commands</span></span>
 ```powershell
 \# Find all modules with tags Azure or DSC
 Find-Module -Tag Azure, DSC
@@ -55,12 +53,11 @@ Find-Module -Filter Cookbook -Repository PSGallery
 Find-Module -Filter RBAC -Repository PSGallery
 ```
 
-<a id="new-features-in-powershellget" class="xliff"></a>
-## Novos recursos no PowerShellGet
--   Suporte à versão lado a lado no Windows PowerShell 5.0 ou mais recente
--   Suporte à instalação de dependências do módulo
--   Três novos cmdlets
-    -   Get-InstalledModule
-    -   Uninstall-Module
-    -   Save-Module
+## <a name="new-features-in-powershellget"></a><span data-ttu-id="ba427-110">Novos recursos no PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="ba427-110">New features in PowerShellGet</span></span>
+-   <span data-ttu-id="ba427-111">Suporte à versão lado a lado no Windows PowerShell 5.0 ou mais recente</span><span class="sxs-lookup"><span data-stu-id="ba427-111">Side-by-side version support on Windows PowerShell 5.0 or newer</span></span>
+-   <span data-ttu-id="ba427-112">Suporte à instalação de dependências do módulo</span><span class="sxs-lookup"><span data-stu-id="ba427-112">Module dependency installation support</span></span>
+-   <span data-ttu-id="ba427-113">Três novos cmdlets</span><span class="sxs-lookup"><span data-stu-id="ba427-113">Three new cmdlets</span></span>
+    -   <span data-ttu-id="ba427-114">Get-InstalledModule</span><span class="sxs-lookup"><span data-stu-id="ba427-114">Get-InstalledModule</span></span>
+    -   <span data-ttu-id="ba427-115">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="ba427-115">Uninstall-Module</span></span>
+    -   <span data-ttu-id="ba427-116">Save-Module</span><span class="sxs-lookup"><span data-stu-id="ba427-116">Save-Module</span></span>
     

@@ -9,17 +9,17 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="ise-module"></a>Módulo ISE
-Esta seção contém tópicos da ajuda para o módulo **ISE**, que inclui comandos que podem ser usados no ISE (Ambiente de Script Integrado) do Windows PowerShell. O módulo **ISE** é instalado com o Windows PowerShell.
+# <a name="ise-module"></a><span data-ttu-id="8fd97-103">Módulo ISE</span><span class="sxs-lookup"><span data-stu-id="8fd97-103">ISE Module</span></span>
+<span data-ttu-id="8fd97-104">Esta seção contém tópicos da ajuda para o módulo **ISE**, que inclui comandos que podem ser usados no ISE (Ambiente de Script Integrado) do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="8fd97-104">This section contains the help topics for the **ISE** module, which includes commands that you can use in Windows PowerShell Integrated Scripting Environment (ISE).</span></span> <span data-ttu-id="8fd97-105">O módulo **ISE** é instalado com o Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="8fd97-105">The **ISE** module is installed with Windows PowerShell.</span></span>
 
-## <a name="help-topics"></a>Tópicos da Ajuda
-[ISE Cmdlets](http://go.microsoft.com/fwlink/?LinkID=254686) (Cmdlets do ISE)
+## <a name="help-topics"></a><span data-ttu-id="8fd97-106">Tópicos da Ajuda</span><span class="sxs-lookup"><span data-stu-id="8fd97-106">Help Topics</span></span>
+[<span data-ttu-id="8fd97-107">ISE Cmdlets</span><span class="sxs-lookup"><span data-stu-id="8fd97-107">ISE Cmdlets</span></span>](http://go.microsoft.com/fwlink/?LinkID=254686) (Cmdlets do ISE)
 
-## <a name="see-also"></a>Consulte Também
-- [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)
-- [Windows PowerShell 3.0 Integrated Scripting Environment](http://go.microsoft.com/fwlink/?LinkId=254681) (Ambiente de Script Integrado do Windows PowerShell 3.0)
-- [Windows PowerShell 2.0 Integrated Scripting Environment](http://go.microsoft.com/fwlink/?LinkID=238569) (Ambiente de Script Integrado do Windows PowerShell 2.0)
-- [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
-- [Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
-- [Scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+## <a name="see-also"></a><span data-ttu-id="8fd97-108">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="8fd97-108">See Also</span></span>
+- [<span data-ttu-id="8fd97-109">about_Windows_PowerShell_ISE [v3]</span><span class="sxs-lookup"><span data-stu-id="8fd97-109">about_Windows_PowerShell_ISE [v3]</span></span>](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)
+- [<span data-ttu-id="8fd97-110">Windows PowerShell 3.0 Integrated Scripting Environment</span><span class="sxs-lookup"><span data-stu-id="8fd97-110">Windows PowerShell 3.0 Integrated Scripting Environment</span></span>](http://go.microsoft.com/fwlink/?LinkId=254681) (Ambiente de Script Integrado do Windows PowerShell 3.0)
+- [<span data-ttu-id="8fd97-111">Windows PowerShell 2.0 Integrated Scripting Environment</span><span class="sxs-lookup"><span data-stu-id="8fd97-111">Windows PowerShell 2.0 Integrated Scripting Environment</span></span>](http://go.microsoft.com/fwlink/?LinkID=238569) (Ambiente de Script Integrado do Windows PowerShell 2.0)
+- [<span data-ttu-id="8fd97-112">Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="8fd97-112">Windows PowerShell 5.0</span></span>](../core-modules/Windows-PowerShell-5.0.md)
+- [<span data-ttu-id="8fd97-113">Windows PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="8fd97-113">Windows PowerShell Core</span></span>](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+- [<span data-ttu-id="8fd97-114">Scripts com o Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="8fd97-114">Scripting with Windows PowerShell</span></span>](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 

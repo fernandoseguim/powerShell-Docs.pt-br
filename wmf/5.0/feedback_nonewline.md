@@ -9,9 +9,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="nonewline-parameter" class="xliff"></a>
-# Parâmetro NoNewLine
-**Out-File**, **Add-Content** e **Set-Content** agora têm uma nova opção **–NoNewline**, que simplesmente omite uma nova linha após a saída.
+# <a name="nonewline-parameter"></a><span data-ttu-id="b84ad-102">Parâmetro NoNewLine</span><span class="sxs-lookup"><span data-stu-id="b84ad-102">NoNewLine parameter</span></span>
+<span data-ttu-id="b84ad-103">**Out-File**, **Add-Content** e **Set-Content** agora têm uma nova opção **–NoNewline**, que simplesmente omite uma nova linha após a saída.</span><span class="sxs-lookup"><span data-stu-id="b84ad-103">**Out-File**, **Add-Content**, and **Set-Content** now have a new **–NoNewline** switch which simply omits a new line after the output.</span></span>
 ```PowerShell
 PS C:\> "This is " | Out-File -FilePath Example.txt -NoNewline
 
@@ -23,7 +22,7 @@ PS C:\> Get-Content .\Example.txt
 
 This is a single sentence.
 ```
-Sem **–NoNewline** especificado, cada fragmento ficaria em uma linha separada:
+<span data-ttu-id="b84ad-104">Sem **–NoNewline** especificado, cada fragmento ficaria em uma linha separada:</span><span class="sxs-lookup"><span data-stu-id="b84ad-104">Without **–NoNewline** specified, each fragment would be on a separate line:</span></span>
 ```PowerShell
 PS C:\> "This is " | Out-File -FilePath Example.txt
 

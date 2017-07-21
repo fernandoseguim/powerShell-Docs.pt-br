@@ -10,44 +10,37 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="save-script" class="xliff"></a>
-# Save-Script
+# <a name="save-script"></a><span data-ttu-id="253d0-103">Save-Script</span><span class="sxs-lookup"><span data-stu-id="253d0-103">Save-Script</span></span>
 
-O cmdlet Save-Script permite examinar o arquivo de script salvando-o em um local especificado.
+<span data-ttu-id="253d0-104">O cmdlet Save-Script permite examinar o arquivo de script salvando-o em um local especificado.</span><span class="sxs-lookup"><span data-stu-id="253d0-104">Save-Script cmdlet lets you to review the script file by saving it to a specified location.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a><span data-ttu-id="253d0-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="253d0-105">Description</span></span>
 
-O cmdlet Save-Script salva o script especificado.
+<span data-ttu-id="253d0-106">O cmdlet Save-Script salva o script especificado.</span><span class="sxs-lookup"><span data-stu-id="253d0-106">The Save-Script cmdlet saves the specified script.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="253d0-107">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="253d0-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Save-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="253d0-108">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="253d0-108">Cmdlet online help reference</span></span>
 
-[Save-Script](http://go.microsoft.com/fwlink/?LinkId=619786)
+[<span data-ttu-id="253d0-109">Save-Script</span><span class="sxs-lookup"><span data-stu-id="253d0-109">Save-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619786)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="253d0-110">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="253d0-110">Example commands</span></span>
 
-<a id="example-1-save-a-script-from-a-repository" class="xliff"></a>
-### Exemplo 1: Salvar um script de um repositório
-Este comando salva a versão mais recente do script Fabrikam-ClientScript do repositório GalleryINT na pasta local C:\ScriptSharingDemo
+### <a name="example-1-save-a-script-from-a-repository"></a><span data-ttu-id="253d0-111">Exemplo 1: Salvar um script de um repositório</span><span class="sxs-lookup"><span data-stu-id="253d0-111">Example 1: Save a script from a repository</span></span>
+<span data-ttu-id="253d0-112">Este comando salva a versão mais recente do script Fabrikam-ClientScript do repositório GalleryINT na pasta local C:\ScriptSharingDemo</span><span class="sxs-lookup"><span data-stu-id="253d0-112">This command saves the latest version of the script Fabrikam-ClientScript from GalleryINT repository to the local folder C:\ScriptSharingDemo</span></span>
 
 ```powershell
 Save-Script -Name Fabrikam-ClientScript -Repository GalleryINT -Path C:\ScriptSharingDemo
 ```
 
-<a id="example-2-save-a-version-of-a-script-by-piping-from-the-find-script-cmdlet" class="xliff"></a>
-### Exemplo 2: Salvar uma versão de um script por tubulação do cmdlet Find-Script
+### <a name="example-2-save-a-version-of-a-script-by-piping-from-the-find-script-cmdlet"></a><span data-ttu-id="253d0-113">Exemplo 2: Salvar uma versão de um script por tubulação do cmdlet Find-Script</span><span class="sxs-lookup"><span data-stu-id="253d0-113">Example 2: Save a version of a script by piping from the Find-Script cmdlet</span></span>
 
-O primeiro comando localiza a versão 1.5 de Fabrikam-ClientScript do repositório GalleryINT e a salva na pasta C:\ScriptSharingDemo
+<span data-ttu-id="253d0-114">O primeiro comando localiza a versão 1.5 de Fabrikam-ClientScript do repositório GalleryINT e a salva na pasta C:\ScriptSharingDemo</span><span class="sxs-lookup"><span data-stu-id="253d0-114">The first command finds version 1.5 of Fabrikam-ClientScript from the repository GalleryINT and saves it to the folder C:\ScriptSharingDemo</span></span>
 
-O segundo comando valida os metadados do script salvo.
+<span data-ttu-id="253d0-115">O segundo comando valida os metadados do script salvo.</span><span class="sxs-lookup"><span data-stu-id="253d0-115">The second command validates the saved script metadata.</span></span>
 
 ```powershell
 Find-Script -Name Fabrikam-ClientScript -Repository GalleryINT -RequiredVersion 1.5 | Save-Script -Path C:\\ScriptSharingDemo

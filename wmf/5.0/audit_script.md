@@ -9,43 +9,42 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="script-tracing-and-logging" class="xliff"></a>
-# Rastreamento e registro de scripts
+# <a name="script-tracing-and-logging"></a><span data-ttu-id="30dc4-102">Rastreamento e registro de scripts</span><span class="sxs-lookup"><span data-stu-id="30dc4-102">Script Tracing and Logging</span></span>
 
-Embora o Windows PowerShell já tenha a configuração **LogPipelineExecutionDetails** da Política de Grupo para registrar em log a invocação de cmdlets, a linguagem de scripts do PowerShell traz vários recursos que talvez você queira registrar em log e/ou auditar. O novo recurso de Rastreamento de Script Detalhado permite habilitar o acompanhamento detalhado e a análise de uso de scripts do Windows PowerShell em um sistema. Depois de habilitar o rastreamento de script detalhado, o Windows PowerShell registra em log todos os blocos de script no log de eventos do ETW, **Microsoft-Windows-PowerShell/Operational**. Caso um bloco de script crie outro bloco de script (por exemplo, um script que chama o cmdlet Invoke-Expression em uma cadeia de caracteres), esse bloco de script resultante também será registrado em log.
+<span data-ttu-id="30dc4-103">Embora o Windows PowerShell já tenha a configuração **LogPipelineExecutionDetails** da Política de Grupo para registrar em log a invocação de cmdlets, a linguagem de scripts do PowerShell traz vários recursos que talvez você queira registrar em log e/ou auditar.</span><span class="sxs-lookup"><span data-stu-id="30dc4-103">While Windows PowerShell already has the **LogPipelineExecutionDetails** Group Policy setting to log the invocation of cmdlets, PowerShell’s scripting language has plenty of features that you might want to log and/or audit.</span></span> <span data-ttu-id="30dc4-104">O novo recurso de Rastreamento de Script Detalhado permite habilitar o acompanhamento detalhado e a análise de uso de scripts do Windows PowerShell em um sistema.</span><span class="sxs-lookup"><span data-stu-id="30dc4-104">The new Detailed Script Tracing feature lets you enable detailed tracking and analysis of Windows PowerShell scripting use on a system.</span></span> <span data-ttu-id="30dc4-105">Depois de habilitar o rastreamento de script detalhado, o Windows PowerShell registra em log todos os blocos de script no log de eventos do ETW, **Microsoft-Windows-PowerShell/Operational**.</span><span class="sxs-lookup"><span data-stu-id="30dc4-105">After you enable detailed script tracing, Windows PowerShell logs all script blocks to the ETW event log, **Microsoft-Windows-PowerShell/Operational**.</span></span> <span data-ttu-id="30dc4-106">Caso um bloco de script crie outro bloco de script (por exemplo, um script que chama o cmdlet Invoke-Expression em uma cadeia de caracteres), esse bloco de script resultante também será registrado em log.</span><span class="sxs-lookup"><span data-stu-id="30dc4-106">If a script block creates another script block (for example, a script that calls the Invoke-Expression cmdlet on a string), that resulting script block is logged as well.</span></span>
 
-O registro desses eventos pode ser habilitado por meio da configuração **Ativar Registro de Bloco de Script do PowerShell** da Política de Grupo (em Modelos Administrativos -> Componentes do Windows -> Windows PowerShell).
+<span data-ttu-id="30dc4-107">O registro desses eventos pode ser habilitado por meio da configuração **Ativar Registro de Bloco de Script do PowerShell** da Política de Grupo (em Modelos Administrativos -> Componentes do Windows -> Windows PowerShell).</span><span class="sxs-lookup"><span data-stu-id="30dc4-107">Logging of these events can be enabled through the **Turn on PowerShell Script Block Logging** Group Policy setting (in Administrative Templates -> Windows Components -> Windows PowerShell).</span></span>
 
-Os eventos são:
+<span data-ttu-id="30dc4-108">Os eventos são:</span><span class="sxs-lookup"><span data-stu-id="30dc4-108">The events are:</span></span>
 
-| Canal | Operacional                                 |
+| <span data-ttu-id="30dc4-109">Canal</span><span class="sxs-lookup"><span data-stu-id="30dc4-109">Channel</span></span> | <span data-ttu-id="30dc4-110">Operacional</span><span class="sxs-lookup"><span data-stu-id="30dc4-110">Operational</span></span>                                 |
 |---------|---------------------------------------------|
-| Nível   | Verbose                                     |
-| Opcode  | Criar                                      |
-| Tarefa    | CommandStart                                |
-| Palavra-chave | Runspace                                    |
-| EventId | Engine_ScriptBlockCompiled (0x1008 = 4104)  |
-| Mensagem | Criando texto Scriptblock (%1 de %2): </br> %3 </br> ID de ScriptBlock: %4 |
+| <span data-ttu-id="30dc4-111">Nível</span><span class="sxs-lookup"><span data-stu-id="30dc4-111">Level</span></span>   | <span data-ttu-id="30dc4-112">Verbose</span><span class="sxs-lookup"><span data-stu-id="30dc4-112">Verbose</span></span>                                     |
+| <span data-ttu-id="30dc4-113">Opcode</span><span class="sxs-lookup"><span data-stu-id="30dc4-113">Opcode</span></span>  | <span data-ttu-id="30dc4-114">Criar</span><span class="sxs-lookup"><span data-stu-id="30dc4-114">Create</span></span>                                      |
+| <span data-ttu-id="30dc4-115">Tarefa</span><span class="sxs-lookup"><span data-stu-id="30dc4-115">Task</span></span>    | <span data-ttu-id="30dc4-116">CommandStart</span><span class="sxs-lookup"><span data-stu-id="30dc4-116">CommandStart</span></span>                                |
+| <span data-ttu-id="30dc4-117">Palavra-chave</span><span class="sxs-lookup"><span data-stu-id="30dc4-117">Keyword</span></span> | <span data-ttu-id="30dc4-118">Runspace</span><span class="sxs-lookup"><span data-stu-id="30dc4-118">Runspace</span></span>                                    |
+| <span data-ttu-id="30dc4-119">EventId</span><span class="sxs-lookup"><span data-stu-id="30dc4-119">EventId</span></span> | <span data-ttu-id="30dc4-120">Engine_ScriptBlockCompiled (0x1008 = 4104)</span><span class="sxs-lookup"><span data-stu-id="30dc4-120">Engine_ScriptBlockCompiled (0x1008 = 4104)</span></span>  |
+| <span data-ttu-id="30dc4-121">Mensagem</span><span class="sxs-lookup"><span data-stu-id="30dc4-121">Message</span></span> | <span data-ttu-id="30dc4-122">Criando texto Scriptblock (%1 de %2):</span><span class="sxs-lookup"><span data-stu-id="30dc4-122">Creating Scriptblock text (%1 of %2):</span></span> </br> <span data-ttu-id="30dc4-123">%3</span><span class="sxs-lookup"><span data-stu-id="30dc4-123">%3</span></span> </br> <span data-ttu-id="30dc4-124">ID de ScriptBlock: %4</span><span class="sxs-lookup"><span data-stu-id="30dc4-124">ScriptBlock ID: %4</span></span> |
 
 
-O texto inserido na mensagem é a extensão do bloco de script compilado. A ID é um GUID que é retido durante o ciclo de vida do bloco de script.
+<span data-ttu-id="30dc4-125">O texto inserido na mensagem é a extensão do bloco de script compilado.</span><span class="sxs-lookup"><span data-stu-id="30dc4-125">The text embedded in the message is the extent of the script block compiled.</span></span> <span data-ttu-id="30dc4-126">A ID é um GUID que é retido durante o ciclo de vida do bloco de script.</span><span class="sxs-lookup"><span data-stu-id="30dc4-126">The ID is a GUID that is retained for the life of the script block.</span></span>
 
-Ao habilitar o registro detalhado, o recurso escreve marcadores de início e de fim:
+<span data-ttu-id="30dc4-127">Ao habilitar o registro detalhado, o recurso escreve marcadores de início e de fim:</span><span class="sxs-lookup"><span data-stu-id="30dc4-127">When you enable verbose logging, the feature writes begin and end markers:</span></span>
 
-| Canal | Operacional                                            |
+| <span data-ttu-id="30dc4-128">Canal</span><span class="sxs-lookup"><span data-stu-id="30dc4-128">Channel</span></span> | <span data-ttu-id="30dc4-129">Operacional</span><span class="sxs-lookup"><span data-stu-id="30dc4-129">Operational</span></span>                                            |
 |---------|--------------------------------------------------------|
-| Nível   | Verbose                                                |
-| Opcode  | Abrir (/ Fechar)                                         |
-| Tarefa    | CommandStart (/ CommandStop)                           |
-| Palavra-chave | Runspace                                               |
-| EventId | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
-| Mensagem | Iniciada (/ Concluída) a invocação da ID do ScriptBlock: %1 </br> Runspace ID: %2 |
+| <span data-ttu-id="30dc4-130">Nível</span><span class="sxs-lookup"><span data-stu-id="30dc4-130">Level</span></span>   | <span data-ttu-id="30dc4-131">Verbose</span><span class="sxs-lookup"><span data-stu-id="30dc4-131">Verbose</span></span>                                                |
+| <span data-ttu-id="30dc4-132">Opcode</span><span class="sxs-lookup"><span data-stu-id="30dc4-132">Opcode</span></span>  | <span data-ttu-id="30dc4-133">Abrir (/ Fechar)</span><span class="sxs-lookup"><span data-stu-id="30dc4-133">Open (/ Close)</span></span>                                         |
+| <span data-ttu-id="30dc4-134">Tarefa</span><span class="sxs-lookup"><span data-stu-id="30dc4-134">Task</span></span>    | <span data-ttu-id="30dc4-135">CommandStart (/ CommandStop)</span><span class="sxs-lookup"><span data-stu-id="30dc4-135">CommandStart (/ CommandStop)</span></span>                           |
+| <span data-ttu-id="30dc4-136">Palavra-chave</span><span class="sxs-lookup"><span data-stu-id="30dc4-136">Keyword</span></span> | <span data-ttu-id="30dc4-137">Runspace</span><span class="sxs-lookup"><span data-stu-id="30dc4-137">Runspace</span></span>                                               |
+| <span data-ttu-id="30dc4-138">EventId</span><span class="sxs-lookup"><span data-stu-id="30dc4-138">EventId</span></span> | <span data-ttu-id="30dc4-139">ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) /</span><span class="sxs-lookup"><span data-stu-id="30dc4-139">ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) /</span></span> </br> <span data-ttu-id="30dc4-140">ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106)</span><span class="sxs-lookup"><span data-stu-id="30dc4-140">ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106)</span></span> |
+| <span data-ttu-id="30dc4-141">Mensagem</span><span class="sxs-lookup"><span data-stu-id="30dc4-141">Message</span></span> | <span data-ttu-id="30dc4-142">Iniciada (/ Concluída) a invocação da ID do ScriptBlock: %1</span><span class="sxs-lookup"><span data-stu-id="30dc4-142">Started (/ Completed) invocation of ScriptBlock ID: %1</span></span> </br> <span data-ttu-id="30dc4-143">Runspace ID: %2</span><span class="sxs-lookup"><span data-stu-id="30dc4-143">Runspace ID: %2</span></span> |
 
-A ID é o GUID que representa o bloco de script (que pode ser correlacionado com a ID de evento 0x1008), e a ID do Runspace representa o runspace no qual este bloco de script foi executado.
+<span data-ttu-id="30dc4-144">A ID é o GUID que representa o bloco de script (que pode ser correlacionado com a ID de evento 0x1008), e a ID do Runspace representa o runspace no qual este bloco de script foi executado.</span><span class="sxs-lookup"><span data-stu-id="30dc4-144">The ID is the GUID representing the script block (that can be correlated with event ID 0x1008), and the Runspace ID represents the runspace in which this script block was run.</span></span>
 
-Sinais de porcentagem na mensagem de invocação representam propriedades estruturadas do ETW. Embora eles sejam substituídos pelos valores reais no texto da mensagem, uma maneira mais robusta de acessá-los é recuperar a mensagem com o cmdlet Get-WinEvent e depois usar a matriz **Properties** da mensagem.
+<span data-ttu-id="30dc4-145">Sinais de porcentagem na mensagem de invocação representam propriedades estruturadas do ETW.</span><span class="sxs-lookup"><span data-stu-id="30dc4-145">Percent signs in the invocation message represent structured ETW properties.</span></span> <span data-ttu-id="30dc4-146">Embora eles sejam substituídos pelos valores reais no texto da mensagem, uma maneira mais robusta de acessá-los é recuperar a mensagem com o cmdlet Get-WinEvent e depois usar a matriz **Properties** da mensagem.</span><span class="sxs-lookup"><span data-stu-id="30dc4-146">While they are replaced with the actual values in the message text, a more robust way to access them is to retrieve the message with the Get-WinEvent cmdlet, and then use the **Properties** array of the message.</span></span>
 
-Aqui está um exemplo de como essa funcionalidade pode ajudar a descodificar uma tentativa mal-intencionada de criptografar e ocultar um script:
+<span data-ttu-id="30dc4-147">Aqui está um exemplo de como essa funcionalidade pode ajudar a descodificar uma tentativa mal-intencionada de criptografar e ocultar um script:</span><span class="sxs-lookup"><span data-stu-id="30dc4-147">Here's an example of how this functionality can help unwrap a malicious attempt to encrypt and obfuscate a script:</span></span>
 
 ```powershell
 ## Malware
@@ -67,7 +66,7 @@ $decrypted = SuperDecrypt "FUIwQitCNkInQm9CCkItQjFCNkJiQmVCEkI1QixCJkJlQg=="
 Invoke-Expression $decrypted
 ```
 
-A execução disso gera as seguintes entradas de log:
+<span data-ttu-id="30dc4-148">A execução disso gera as seguintes entradas de log:</span><span class="sxs-lookup"><span data-stu-id="30dc4-148">Running this generates the following log entries:</span></span>
 
 ```
 Compiling Scriptblock text (1 of 1):
@@ -99,7 +98,7 @@ Write-Host 'Pwnd'
 ScriptBlock ID: 5e618414-4e77-48e3-8f65-9a863f54b4c8
 ```
 
-Caso o tamanho do bloco de script exceda o que o ETW pode reter em um único evento, o Windows PowerShell interromperá o script em várias partes. Aqui está o código de exemplo para recombinar um script desde suas mensagens de log:
+Caso o tamanho do bloco de script exceda o que o ETW pode reter em um único evento, o Windows PowerShell interromperá o script em várias partes. <span data-ttu-id="30dc4-150">Aqui está o código de exemplo para recombinar um script desde suas mensagens de log:</span><span class="sxs-lookup"><span data-stu-id="30dc4-150">Here is sample code to recombine a script from its log messages:</span></span>
 
 ```powershell
 $created = Get-WinEvent -FilterHashtable @{ ProviderName="Microsoft-Windows-PowerShell"; Id = 4104 } | Where-Object { $_.<...> }
@@ -107,5 +106,5 @@ $sortedScripts = $created | sort { $_.Properties[0].Value }
 $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
-Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior. Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os logs de eventos para fora do computador assim que possível.
+<span data-ttu-id="30dc4-151">Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior.</span><span class="sxs-lookup"><span data-stu-id="30dc4-151">As with all logging systems that have a limited retention buffer (i.e. ETW logs), one attack against this infrastructure is to flood the log with spurious events to hide earlier evidence.</span></span> <span data-ttu-id="30dc4-152">Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os logs de eventos para fora do computador assim que possível.</span><span class="sxs-lookup"><span data-stu-id="30dc4-152">To protect yourself from this attack, ensure that you have some form of event log collection set up (i.e., Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) to move event logs off of the computer as soon as possible.</span></span>
 

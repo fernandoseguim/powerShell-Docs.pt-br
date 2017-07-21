@@ -10,12 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="architecture-of-packagemanagement-and-its-relationship-with-powershellget-module" class="xliff"></a>
-## Arquitetura de PackageManagement e sua relação com o módulo PowerShellGet.
+## <a name="architecture-of-packagemanagement-and-its-relationship-with-powershellget-module"></a><span data-ttu-id="47fe7-103">Arquitetura de PackageManagement e sua relação com o módulo PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="47fe7-103">Architecture of PackageManagement and its relationship with PowerShellGet module.</span></span>
 
-<a id="how-to-use-packagemanagement-cmdlets-for-discovering-installing-updating-and-inventory-of-scripts-and-modules-using-powershellget-provider" class="xliff"></a>
-## Como usar cmdlets do PackageManagement para descobrir, instalar, atualizar e fazer o inventário de scripts e módulos usando o provedor do PowerShellGet.
+## <a name="how-to-use-packagemanagement-cmdlets-for-discovering-installing-updating-and-inventory-of-scripts-and-modules-using-powershellget-provider"></a><span data-ttu-id="47fe7-104">Como usar cmdlets do PackageManagement para descobrir, instalar, atualizar e fazer o inventário de scripts e módulos usando o provedor do PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="47fe7-104">How to use PackageManagement cmdlets for discovering, installing, updating and inventory of scripts and modules using PowerShellGet provider.</span></span>
 
-<a id="pakagemanagement-commands" class="xliff"></a>
-## Comandos de PakageManagement
+## <a name="pakagemanagement-commands"></a><span data-ttu-id="47fe7-105">Comandos de PakageManagement</span><span class="sxs-lookup"><span data-stu-id="47fe7-105">PakageManagement Commands</span></span>
 

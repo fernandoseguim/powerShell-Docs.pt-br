@@ -10,39 +10,34 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-installedscript" class="xliff"></a>
-# Get-InstalledScript
+# <a name="get-installedscript"></a><span data-ttu-id="d5876-103">Get-InstalledScript</span><span class="sxs-lookup"><span data-stu-id="d5876-103">Get-InstalledScript</span></span>
 
-Obtém os scripts instalados em um computador.
+<span data-ttu-id="d5876-104">Obtém os scripts instalados em um computador.</span><span class="sxs-lookup"><span data-stu-id="d5876-104">Gets installed scripts on a computer.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a><span data-ttu-id="d5876-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="d5876-105">Description</span></span>
 
-O cmdlet Get-InstalledScript obtém scripts do PowerShell instalados em um computador.
+<span data-ttu-id="d5876-106">O cmdlet Get-InstalledScript obtém scripts do PowerShell instalados em um computador.</span><span class="sxs-lookup"><span data-stu-id="d5876-106">The Get-InstalledScript cmdlet gets installed PowerShell scripts on a computer.</span></span>
 
-Para cada script instalado, Get-InstalledScript retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Uninstall-Script para desinstalar os scripts instalados.
+<span data-ttu-id="d5876-107">Para cada script instalado, Get-InstalledScript retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Uninstall-Script para desinstalar os scripts instalados.</span><span class="sxs-lookup"><span data-stu-id="d5876-107">For each installed script, Get-InstalledScript returns a PSRepositoryItemInfo object which can optionally be piped to Uninstall-Script for uninstalling the installed scripts.</span></span>
 
-- Get-InstalledScript pode filtrar os scripts instalados com base em parâmetros de versão e nome.
-- Get-InstalledScript pode filtrar segundo os parâmetros de versão: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
-  - Esses parâmetros são mutuamente exclusivos, exceto MinmimumVersion e MaximumVersion.
-  - Esses parâmetros de versão são permitidos apenas com o nome exclusivo do script, sem curingas.
-  - Se o parâmetro RequiredVersion não for especificado, Get-InstalledScript retorna a versão mais recente do script instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do script se nenhuma versão mínima tiver sido especificada. 
-  - Se o parâmetro RequiredVersion for especificado, Get-InstalledScript retorna apenas a versão do script instalado que corresponde exatamente à versão especificada.
+- <span data-ttu-id="d5876-108">Get-InstalledScript pode filtrar os scripts instalados com base em parâmetros de versão e nome.</span><span class="sxs-lookup"><span data-stu-id="d5876-108">Get-InstalledScript can filter installed scripts based on name, version parameters.</span></span>
+- <span data-ttu-id="d5876-109">Get-InstalledScript pode filtrar segundo os parâmetros de versão: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span><span class="sxs-lookup"><span data-stu-id="d5876-109">Get-InstalledScript can filter with version parameters: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span></span>
+  - <span data-ttu-id="d5876-110">Esses parâmetros são mutuamente exclusivos, exceto MinmimumVersion e MaximumVersion.</span><span class="sxs-lookup"><span data-stu-id="d5876-110">These parameters are mutually exclusive, except MinmimumVersion and MaximumVersion.</span></span>
+  - <span data-ttu-id="d5876-111">Esses parâmetros de versão são permitidos apenas com o nome exclusivo do script, sem curingas.</span><span class="sxs-lookup"><span data-stu-id="d5876-111">These version parameters are allowed only with the single script name without any wildcards.</span></span>
+  - <span data-ttu-id="d5876-112">Se o parâmetro RequiredVersion não for especificado, Get-InstalledScript retorna a versão mais recente do script instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do script se nenhuma versão mínima tiver sido especificada.</span><span class="sxs-lookup"><span data-stu-id="d5876-112">If the RequiredVersion parameter is not specified, Get-InstalledScript returns the latest version of the installed script that is equal to or greater than the minimum version specified or the latest version of the script if no minimum version is specified.</span></span> 
+  - <span data-ttu-id="d5876-113">Se o parâmetro RequiredVersion for especificado, Get-InstalledScript retorna apenas a versão do script instalado que corresponde exatamente à versão especificada.</span><span class="sxs-lookup"><span data-stu-id="d5876-113">If the RequiredVersion parameter is specified, Get-InstalledScript only returns the version of installed script that exactly matches the specified version.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="d5876-114">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="d5876-114">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Get-InstalledScript -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="d5876-115">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="d5876-115">Cmdlet online help reference</span></span>
 
-[Get-InstalledScript](http://go.microsoft.com/fwlink/?LinkId=619790)
+[<span data-ttu-id="d5876-116">Get-InstalledScript</span><span class="sxs-lookup"><span data-stu-id="d5876-116">Get-InstalledScript</span></span>](http://go.microsoft.com/fwlink/?LinkId=619790)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="d5876-117">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="d5876-117">Example commands</span></span>
 
 ```powershell
 

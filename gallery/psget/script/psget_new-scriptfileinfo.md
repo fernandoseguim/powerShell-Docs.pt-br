@@ -10,41 +10,34 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-scriptfileinfo" class="xliff"></a>
-# New-ScriptFileInfo
+# <a name="new-scriptfileinfo"></a><span data-ttu-id="b19a6-103">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="b19a6-103">New-ScriptFileInfo</span></span>
 
-Cria um arquivo de script com metadados.
+<span data-ttu-id="b19a6-104">Cria um arquivo de script com metadados.</span><span class="sxs-lookup"><span data-stu-id="b19a6-104">Creates a script file with metadata.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a><span data-ttu-id="b19a6-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="b19a6-105">Description</span></span>
 
-O cmdlet New-ScriptFileInfo cria um arquivo de script do PowerShell, incluindo metadados sobre o script.
+<span data-ttu-id="b19a6-106">O cmdlet New-ScriptFileInfo cria um arquivo de script do PowerShell, incluindo metadados sobre o script.</span><span class="sxs-lookup"><span data-stu-id="b19a6-106">The New-ScriptFileInfo cmdlet creates a PowerShell script file, including metadata about the script.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="b19a6-107">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="b19a6-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name New-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="b19a6-108">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="b19a6-108">Cmdlet online help reference</span></span>
 
-[New-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619792)
+[<span data-ttu-id="b19a6-109">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="b19a6-109">New-ScriptFileInfo</span></span>](http://go.microsoft.com/fwlink/?LinkId=619792)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="b19a6-110">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="b19a6-110">Example commands</span></span>
 
-<a id="passthru-parameter" class="xliff"></a>
-### Parâmetro PassThru
+### <a name="passthru-parameter"></a><span data-ttu-id="b19a6-111">Parâmetro PassThru</span><span class="sxs-lookup"><span data-stu-id="b19a6-111">PassThru parameter</span></span>
 
 ```powershell
 New-ScriptFileInfo -Description "Script file description." -PassThru
 ```
 
-<a id="new-scriptfileinfo-cmdlet" class="xliff"></a>
-### Cmdlet New-ScriptFileInfo
-O cmdlet New-ScriptFileInfo permite criar um novo arquivo de script com metadados como Versão, Guid, Autor, Descrição, etc. 
+### <a name="new-scriptfileinfo-cmdlet"></a><span data-ttu-id="b19a6-112">Cmdlet New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="b19a6-112">New-ScriptFileInfo cmdlet</span></span>
+<span data-ttu-id="b19a6-113">O cmdlet New-ScriptFileInfo permite criar um novo arquivo de script com metadados como Versão, Guid, Autor, Descrição, etc.</span><span class="sxs-lookup"><span data-stu-id="b19a6-113">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc.</span></span> 
 
 ```powershell
 # Create a new script file with minimum required metadata values

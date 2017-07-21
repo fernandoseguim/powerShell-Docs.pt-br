@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="cryptographic-message-syntax-cms-cmdlets" class="xliff"></a>
-# Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a><span data-ttu-id="533fd-102">Cmdlets da CMS (Sintaxe de Mensagem Criptografada)</span><span class="sxs-lookup"><span data-stu-id="533fd-102">Cryptographic Message Syntax (CMS) cmdlets</span></span>
 
-Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](http://tools.ietf.org/html/rfc5652).
+<span data-ttu-id="533fd-103">Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](http://tools.ietf.org/html/rfc5652).</span><span class="sxs-lookup"><span data-stu-id="533fd-103">The Cryptographic Message Syntax cmdlets support encryption and decryption of content using the IETF standard format for cryptographically protecting messages as documented by [RFC5652](http://tools.ietf.org/html/rfc5652).</span></span>
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -27,13 +26,13 @@ Unprotect-CmsMessage [-Path] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeC
 Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeContext]
 ```
 
-O padrão de criptografia CMS implementa a criptografia por chave pública, em que as chaves usadas para criptografar o conteúdo (a *chave pública*) e as chaves usadas para descriptografá-lo (a *chave privada*) são separadas.
+<span data-ttu-id="533fd-104">O padrão de criptografia CMS implementa a criptografia por chave pública, em que as chaves usadas para criptografar o conteúdo (a *chave pública*) e as chaves usadas para descriptografá-lo (a *chave privada*) são separadas.</span><span class="sxs-lookup"><span data-stu-id="533fd-104">The CMS encryption standard implements public key cryptography, where the keys used to encrypt content (the *public key*) and the keys used to decrypt content (the *private key*) are separate.</span></span>
 
-Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações sobre Criptografia por Chave Pública, veja: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+<span data-ttu-id="533fd-105">Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais.</span><span class="sxs-lookup"><span data-stu-id="533fd-105">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="533fd-106">Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo.</span><span class="sxs-lookup"><span data-stu-id="533fd-106">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="533fd-107">Para obter mais informações sobre Criptografia por Chave Pública, veja: <http://en.wikipedia.org/wiki/Public-key_cryptography>.</span><span class="sxs-lookup"><span data-stu-id="533fd-107">For more information about Public Key Cryptography, see: <http://en.wikipedia.org/wiki/Public-key_cryptography>.</span></span>
 
-Para ser reconhecidos no PowerShell, os certificados de criptografia exigem um EKU (identificador exclusivo de uso de chave) para identificá-los como certificados de criptografia de dados (como os identificadores para “Assinatura de Código”, “Mensagens Criptografadas”).
+<span data-ttu-id="533fd-108">Para ser reconhecidos no PowerShell, os certificados de criptografia exigem um EKU (identificador exclusivo de uso de chave) para identificá-los como certificados de criptografia de dados (como os identificadores para “Assinatura de Código”, “Mensagens Criptografadas”).</span><span class="sxs-lookup"><span data-stu-id="533fd-108">To be recognized in PowerShell, encryption certificates require a unique key usage identifier (EKU) to identify them as data encryption certificates (like the identifiers for 'Code Signing', 'Encrypted Mail').</span></span>
 
-Aqui está um exemplo de como criar um certificado que seja válido para a Criptografia de Documento:
+<span data-ttu-id="533fd-109">Aqui está um exemplo de como criar um certificado que seja válido para a Criptografia de Documento:</span><span class="sxs-lookup"><span data-stu-id="533fd-109">Here is an example of creating a certificate that is good for Document Encryption:</span></span>
 
 ```powershell
 (Change the text in **Subject** to your name, email, or other identifier), and put in a file (i.e.: DocumentEncryption.inf):
@@ -57,12 +56,12 @@ ValidityPeriodUnits = "1000"
 %szOID\_ENHANCED\_KEY\_USAGE% = "{text}%szOID\_DOCUMENT\_ENCRYPTION%"
 ```
 
-Em seguida, execute:
+<span data-ttu-id="533fd-110">Em seguida, execute:</span><span class="sxs-lookup"><span data-stu-id="533fd-110">Then run:</span></span>
 ```powershell
 certreq -new DocumentEncryption.inf DocumentEncryption.cer
 ```
 
-E agora você pode criptografar e descriptografar o conteúdo:
+<span data-ttu-id="533fd-111">E agora você pode criptografar e descriptografar o conteúdo:</span><span class="sxs-lookup"><span data-stu-id="533fd-111">And you can now encrypt and decrypt content:</span></span>
 
 ```powershell
 $protected = "Hello World" | Protect-CmsMessage -To "\*me@somewhere.com\*[](mailto:*leeholm@microsoft.com*)"
@@ -82,14 +81,14 @@ $protected | Unprotect-CmsMessage
 Hello World
 ```
 
-Qualquer parâmetro do tipo **CMSMessageRecipient** dá suporte a identificadores nos seguintes formatos:
-- Um certificado real (como aqueles recuperados pelo provedor de certificados)
-- Caminho de um arquivo que contém o certificado
-- Caminho de um diretório que contém o certificado
-- Impressão digital do certificado (usada para pesquisar no repositório de certificados)
-- Nome da entidade do certificado (usado para pesquisar no repositório de certificados)
+<span data-ttu-id="533fd-112">Qualquer parâmetro do tipo **CMSMessageRecipient** dá suporte a identificadores nos seguintes formatos:</span><span class="sxs-lookup"><span data-stu-id="533fd-112">Any parameter of type **CMSMessageRecipient** supports identifiers in the following formats:</span></span>
+- <span data-ttu-id="533fd-113">Um certificado real (como aqueles recuperados pelo provedor de certificados)</span><span class="sxs-lookup"><span data-stu-id="533fd-113">An actual certificate (as retrieved from the certificate provider)</span></span>
+- <span data-ttu-id="533fd-114">Caminho de um arquivo que contém o certificado</span><span class="sxs-lookup"><span data-stu-id="533fd-114">Path to the a file containing the certificate</span></span>
+- <span data-ttu-id="533fd-115">Caminho de um diretório que contém o certificado</span><span class="sxs-lookup"><span data-stu-id="533fd-115">Path to a directory containing the certificate</span></span>
+- <span data-ttu-id="533fd-116">Impressão digital do certificado (usada para pesquisar no repositório de certificados)</span><span class="sxs-lookup"><span data-stu-id="533fd-116">Thumbprint of the certificate (used to look in the certificate store)</span></span>
+- <span data-ttu-id="533fd-117">Nome da entidade do certificado (usado para pesquisar no repositório de certificados)</span><span class="sxs-lookup"><span data-stu-id="533fd-117">Subject name of the certificate (used to look in the certificate store)</span></span>
 
-Para exibir certificados de criptografia de documento no provedor de certificados, é possível usar o parâmetro dinâmico **-DocumentEncryptionCert**:
+<span data-ttu-id="533fd-118">Para exibir certificados de criptografia de documento no provedor de certificados, é possível usar o parâmetro dinâmico **-DocumentEncryptionCert**:</span><span class="sxs-lookup"><span data-stu-id="533fd-118">To view document encryption certificates in the certificate provider, you can use the **-DocumentEncryptionCert** dynamic parameter:</span></span>
 
 ```powershell
 dir -DocumentEncryptionCert

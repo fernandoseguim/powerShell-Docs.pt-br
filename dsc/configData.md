@@ -1,72 +1,30 @@
 ---
-title: "Separando Dados de Configuração e de Ambiente"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 27d9a259d119099c45d7ecd3a15cd26654071d42
-ms.sourcegitcommit: 26f4e52f3dd008b51b7eae7b634f0216eec6200e
-translationtype: HT
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Usando dados de configuração"
+ms.openlocfilehash: a70cd8f0f6c24eb02743b02d198cebcc3d775756
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="separating-configuration-and-environment-data"></a>Separando Dados de Configuração e de Ambiente
+# <a name="using-configuration-data-in-dsc"></a><span data-ttu-id="1fc7b-103">Usando dados de configuração em DSC</span><span class="sxs-lookup"><span data-stu-id="1fc7b-103">Using configuration data in DSC</span></span>
 
->Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+><span data-ttu-id="1fc7b-104">Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="1fc7b-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-Usando o parâmetro **ConfigurationData** da DSC interna, você pode definir os dados que podem ser usados dentro de uma configuração. Isso permite que você crie uma única configuração que pode ser usada para vários nós ou para ambientes diferentes. Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configuração para os ambientes de desenvolvimento e produção e usar dados de configuração para especificar dados para cada ambiente.
+<span data-ttu-id="1fc7b-105">Usando o parâmetro **ConfigurationData** da DSC interna, você pode definir os dados que podem ser usados dentro de uma configuração.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-105">By using the built-in DSC **ConfigurationData** parameter, you can define data that can be used within a configuration.</span></span> <span data-ttu-id="1fc7b-106">Isso permite que você crie uma única configuração que pode ser usada para vários nós ou para ambientes diferentes.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-106">This allows you to create a single configuration that can be used for multiple nodes or for different environments.</span></span> <span data-ttu-id="1fc7b-107">Por exemplo, se estiver desenvolvendo um aplicativo, você pode usar uma configuração para os ambientes de desenvolvimento e produção e usar dados de configuração para especificar dados para cada ambiente.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-107">For example, if you are developing an application, you can use one configuration for both development and production environments, and use configuration data to specify data for each environment.</span></span>
 
-Vamos observar um exemplo muito simples para ver como isso funciona. Vamos criar uma única configuração que garante que **IIS** esteja presente em alguns nós e que **Hyper-V** esteja presente em outros: 
+<span data-ttu-id="1fc7b-108">Este tópico descreve a estrutura da tabela de hash **ConfigurationData**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-108">This topic describes the structure of the **ConfigurationData** hashtable.</span></span> <span data-ttu-id="1fc7b-109">Para obter exemplos de como usar dados de configuração, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).</span><span class="sxs-lookup"><span data-stu-id="1fc7b-109">For examples of how to use configuration data, see [Separating configuration and environment data](separatingEnvData.md).</span></span>
 
-```powershell
-Configuration MyDscConfiguration {
-    
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
-    {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
-        
-    }
-    Node $AllNodes.Where($_.Role -eq "VMHost").NodeName
-    {
-        WindowsFeature HyperVInstall {
-            Ensure = 'Present'
-            Name   = 'Hyper-V'
-        }
-    }
-}
+## <a name="the-configurationdata-common-parameter"></a><span data-ttu-id="1fc7b-110">O parâmetro comum de ConfigurationData</span><span class="sxs-lookup"><span data-stu-id="1fc7b-110">The ConfigurationData common parameter</span></span>
 
-$MyData = 
-@{
-    AllNodes =
-    @(
-        @{
-            NodeName    = 'VM-1'
-            Role = 'WebServer'
-        },
+<span data-ttu-id="1fc7b-111">Uma configuração DSC usa um parâmetro comum, **ConfigurationData**, que você especifica ao compilar a configuração.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-111">A DSC configuration takes a common parameter, **ConfigurationData**, that you specify when you compile the configuration.</span></span> <span data-ttu-id="1fc7b-112">Para obter informações sobre configurações de compilação, consulte [configurações DSC](configurations.md).</span><span class="sxs-lookup"><span data-stu-id="1fc7b-112">For information about compiling configurations, see [DSC configurations](configurations.md).</span></span>
 
-        @{
-            NodeName    = 'VM-2'
-            Role = 'VMHost'
-        }
-    )
-}
+<span data-ttu-id="1fc7b-113">O parâmetro **ConfigurationData** é uma tabela de hash que deve ter pelo menos uma chave chamada **AllNodes**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-113">The **ConfigurationData** parameter is a hasthtable that must have at least one key named **AllNodes**.</span></span> <span data-ttu-id="1fc7b-114">Ele também pode ter uma ou mais chaves.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-114">It can also have one or more other keys.</span></span>
 
-MyDscConfiguration -ConfigurationData $MyData
-```
-
-A última linha desse script compila a configuração em documentos MOF, passando `$MyData` como o valor do parâmetro **ConfigurationData**. O `$MyData` especifica dois nós diferentes, cada um com seu próprio `NodeName` e `Role`. A configuração cria dinamicamente blocos de **Nó** por meio da coleção de nós que obtém do `$MyData` (especificamente, `$AllNodes`) e filtra essa coleção em relação à propriedade `Role`.
-
-Agora vamos ver como isso funciona com mais detalhes.
-
-## <a name="the-configurationdata-parameter"></a>O parâmetro ConfigurationData
-
-Uma configuração DSC leva um parâmetro chamado **ConfigurationData**, que você especifica quando compila a configuração. Para obter informações sobre configurações de compilação, consulte [configurações DSC](configurations.md).
-
-O parâmetro **ConfigurationData** é uma tabela de hash que deve ter pelo menos uma chave chamada **AllNodes**. Ele também pode ter outras chaves:
+><span data-ttu-id="1fc7b-115">**Observação:** os exemplos neste tópico usam uma única chave adicional (que não é a chave nomeada **AllNodes**) denominada `NonNodeData`, mas você pode incluir qualquer número de chaves adicionais e nomeá-las como desejar.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-115">**Note:** The examples in this topic use a single additional key (other than the named **AllNodes** key) named `NonNodeData`, but you can include any number of additional keys, and name them whatever you want.</span></span>
 
 ```powershell
 $MyData = 
@@ -76,7 +34,7 @@ $MyData =
 }
 ```
 
-O valor da chave **AllNodes** é uma matriz. Cada elemento dessa matriz também é uma tabela de hash que deve ter pelo menos uma chave chamada **NodeName**:
+<span data-ttu-id="1fc7b-116">O valor da chave **AllNodes** é uma matriz.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-116">The value of the **AllNodes** key is an array.</span></span> <span data-ttu-id="1fc7b-117">Cada elemento dessa matriz também é uma tabela de hash que deve ter pelo menos uma chave chamada **NodeName**:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-117">Each element of this array is also a hash table that must have at least one key named **NodeName**:</span></span>
 
 ```powershell
 $MyData = 
@@ -102,7 +60,7 @@ $MyData =
 }
 ```
 
-Você também pode adicionar outras chaves para cada tabela de hash:
+<span data-ttu-id="1fc7b-118">Você também pode adicionar outras chaves para cada tabela de hash:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-118">You can add other keys to each hash table as well:</span></span>
 
 ```powershell
 $MyData = 
@@ -131,7 +89,7 @@ $MyData =
 }
 ```
 
-Para aplicar uma propriedade para todos os nós, você pode criar um membro da matriz **AllNodes** que possua um **NodeName** de `*`. Por exemplo, para atribuir uma propriedade `LogPath` a cada nó, você pode fazer o seguinte:
+<span data-ttu-id="1fc7b-119">Para aplicar uma propriedade para todos os nós, você pode criar um membro da matriz **AllNodes** que possua um **NodeName** de `*`.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-119">To apply a property to all nodes, you can create a member of the **AllNodes** array that has a **NodeName** of `*`.</span></span> <span data-ttu-id="1fc7b-120">Por exemplo, para atribuir uma propriedade `LogPath` a cada nó, você pode fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-120">For example, to give every node a `LogPath` property, you could do this:</span></span>
 
 ```powershell
 $MyData = 
@@ -168,13 +126,13 @@ $MyData =
 }
 ```
 
-Isso é o equivalente a adicionar uma propriedade com um nome de `LogPath` com um valor de `"C:\Logs"` para cada um dos outros blocos (`VM-1`, `VM-2` e `VM-3`).
+<span data-ttu-id="1fc7b-121">Isso é o equivalente a adicionar uma propriedade com um nome de `LogPath` com um valor de `"C:\Logs"` para cada um dos outros blocos (`VM-1`, `VM-2` e `VM-3`).</span><span class="sxs-lookup"><span data-stu-id="1fc7b-121">This is the equivalent of adding a property with a name of `LogPath` with a value of `"C:\Logs"` to each of the other blocks (`VM-1`, `VM-2`, and `VM-3`).</span></span>
 
-## <a name="defining-the-configurationdata-hashtable"></a>Definição da tabela de hash de ConfigurationData
+## <a name="defining-the-configurationdata-hashtable"></a><span data-ttu-id="1fc7b-122">Definição da tabela de hash de ConfigurationData</span><span class="sxs-lookup"><span data-stu-id="1fc7b-122">Defining the ConfigurationData hashtable</span></span>
 
-Você pode definir **ConfigurationData** como uma variável dentro do mesmo arquivo de script como uma configuração (como em nossos exemplos anteriores) ou em um arquivo .psd1 separado. Para definir **ConfigurationData** em um arquivo .psd1, crie um arquivo que contém somente a tabela de hash que representa os dados de configuração.
+<span data-ttu-id="1fc7b-123">Você pode definir **ConfigurationData** como uma variável dentro do mesmo arquivo de script que uma configuração (como em nossos exemplos anteriores) ou em um arquivo `.psd1` separado.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-123">You can define **ConfigurationData** either as a variable within the same script file as a configuration (as in our previous examples) or in a separate `.psd1` file.</span></span> <span data-ttu-id="1fc7b-124">Para definir **ConfigurationData** em um arquivo `.psd1`, crie um arquivo que contenha somente a tabela de hash que representa os dados de configuração.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-124">To define **ConfigurationData** in a `.psd1` file, create a file that contains only the hashtable that represents the configuration data.</span></span>
 
-Por exemplo, você poderia criar um arquivo chamado `MyData.psd1` com o seguinte conteúdo:
+<span data-ttu-id="1fc7b-125">Por exemplo, você poderia criar um arquivo chamado `MyData.psd1` com o seguinte conteúdo:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-125">For example, you could create a file named `MyData.psd1` with the following contents:</span></span>
 
 ```powershell
 @{
@@ -193,163 +151,47 @@ Por exemplo, você poderia criar um arquivo chamado `MyData.psd1` com o seguinte
 }
 ```
 
-Para usar dados de configuração que são definidos em um arquivo .psd1, você passa o caminho e o nome desse arquivo como o valor do parâmetro **ConfigurationData** ao compilar a configuração:
+## <a name="compiling-a-configuration-with-configuration-data"></a><span data-ttu-id="1fc7b-126">Compilando uma configuração com os dados de configuração</span><span class="sxs-lookup"><span data-stu-id="1fc7b-126">Compiling a configuration with configuration data</span></span>
+
+<span data-ttu-id="1fc7b-127">Para compilar uma configuração para a qual você definiu os dados de configuração, passe os dados de configuração como o valor do parâmetro **ConfigurationData**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-127">To compile a configuration for which you have defined configuration data, you pass the cofiguration data as the value of the **ConfigurationData** parameter.</span></span>
+
+<span data-ttu-id="1fc7b-128">Isso criará um arquivo MOF para cada entrada na matriz **AllNodes**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-128">This will create a MOF file for each entry in the **AllNodes** array.</span></span>
+<span data-ttu-id="1fc7b-129">Cada arquivo MOF será nomeado com a propriedade `NodeName` da entrada de matriz correspondente.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-129">Each MOF file will be named with the `NodeName` property of the corresponding array entry.</span></span>
+
+<span data-ttu-id="1fc7b-130">Por exemplo, se você definir dados de configuração como o arquivo `MyData.psd1` acima, compilar uma configuração criará os arquivos `VM-1.mof` e `VM-2.mof`.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-130">For example, if you define configuration data as in the `MyData.psd1` file above, compiling a configuration would create both `VM-1.mof` and `VM-2.mof` files.</span></span>
+
+### <a name="compiling-a-configuration-with-configuration-data-using-a-variable"></a><span data-ttu-id="1fc7b-131">Compilando uma configuração com os dados de configuração usando uma variável</span><span class="sxs-lookup"><span data-stu-id="1fc7b-131">Compiling a configuration with configuration data using a variable</span></span>
+
+<span data-ttu-id="1fc7b-132">Para usar dados de configuração que são definidos como uma variável no mesmo arquivo `.ps1` que a configuração, passe o nome da variável como o valor do parâmetro **ConfigurationData** ao compilar a configuração:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-132">To use configuration data that is defined as a variable in the same `.ps1` file as the configuration, you pass the variable name as the value of the **ConfigurationData** parameter when compiling the configuration:</span></span>
+
+```powershell
+MyDscConfiguration -ConfigurationData $MyData
+```
+
+### <a name="compiling-a-configuration-with-configuration-data-using-a-data-file"></a><span data-ttu-id="1fc7b-133">Compilando uma configuração com os dados de configuração usando um arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="1fc7b-133">Compiling a configuration with configuration data using a data file</span></span>
+
+<span data-ttu-id="1fc7b-134">Para usar dados de configuração que são definidos em um arquivo .psd1, você passa o caminho e o nome desse arquivo como o valor do parâmetro **ConfigurationData** ao compilar a configuração:</span><span class="sxs-lookup"><span data-stu-id="1fc7b-134">To use configuration data that is defined in a .psd1 file, you pass the path and name of that file as the value of the **ConfigurationData** parameter when compiling the configuration:</span></span>
 
 ```powershell
 MyDscConfiguration -ConfigurationData .\MyData.psd1
 ```
 
-## <a name="using-configurationdata-variables-in-a-configuration"></a>Usando variáveis de ConfigurationData em uma configuração
+## <a name="using-configurationdata-variables-in-a-configuration"></a><span data-ttu-id="1fc7b-135">Usando variáveis de ConfigurationData em uma configuração</span><span class="sxs-lookup"><span data-stu-id="1fc7b-135">Using ConfigurationData variables in a configuration</span></span>
 
-A DSC fornece três variáveis especiais que podem ser usadas em um script de configuração: **$AllNodes**, **$Node** e **$ConfigurationData**.
+<span data-ttu-id="1fc7b-136">A DSC fornece três variáveis especiais que podem ser usadas em um script de configuração: **$AllNodes**, **$Node** e **$ConfigurationData**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-136">DSC provides three special variables that can be used in a configuration script: **$AllNodes**, **$Node**, and **$ConfigurationData**.</span></span>
 
-- A **$AllNodes** refere-se a toda a coleção de nós definida em **ConfigurationData**. Você pode filtrar a coleção **AllNodes** usando **.Where()** e **.ForEach()**.
-- O **Nó** refere-se a uma entrada específica na coleção **AllNodes** depois que ela é filtrada usando **.Where()** ou **.ForEach()**.
-- O **ConfigurationData** refere-se à tabela de hash inteira que é passada como parâmetro ao compilar uma configuração.
+- <span data-ttu-id="1fc7b-137">A **$AllNodes** refere-se a toda a coleção de nós definida em **ConfigurationData**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-137">**$AllNodes** refers to the entire collection of nodes defined in **ConfigurationData**.</span></span> <span data-ttu-id="1fc7b-138">Você pode filtrar a coleção **AllNodes** usando **.Where()** e **.ForEach()**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-138">You can filter the **AllNodes** collection by using **.Where()** and **.ForEach()**.</span></span>
+- <span data-ttu-id="1fc7b-139">O **Nó** refere-se a uma entrada específica na coleção **AllNodes** depois que ela é filtrada usando **.Where()** ou **.ForEach()**.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-139">**Node** refers to a particular entry in the **AllNodes** collection after it is filtered by using **.Where()** or **.ForEach()**.</span></span>
+- <span data-ttu-id="1fc7b-140">O **ConfigurationData** refere-se à tabela de hash inteira que é passada como parâmetro ao compilar uma configuração.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-140">**ConfigurationData** refers to the entire hash table that is passed as the parameter when compiling a configuration.</span></span>
 
-## <a name="devops-example"></a>Exemplo de DevOps
+## <a name="using-non-node-data"></a><span data-ttu-id="1fc7b-141">Usar dados sem nós</span><span class="sxs-lookup"><span data-stu-id="1fc7b-141">Using non-node data</span></span>
 
-Vejamos um exemplo completo que usa uma única configuração para configurar ambientes de desenvolvimento e de produção de um site. No ambiente de desenvolvimento, o IIS e o SQL Server são instalados em um único nó. No ambiente de produção, o IIS e o SQL Server são instalados em nós separados. Vamos usar um arquivo de dados de configuração .psd1 para especificar os dados para os dois ambientes diferentes.
+<span data-ttu-id="1fc7b-142">Como vimos nos exemplos anteriores, a tabela de hash **ConfigurationData** pode ter uma ou mais chaves além da chave **AllNodes** necessária.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-142">As we've seen in previous examples, the **ConfigurationData** hashtable can have one or more keys in addition to the required **AllNodes** key.</span></span>
+<span data-ttu-id="1fc7b-143">Nos exemplos neste tópico, usamos apenas um único nó adicional e nomeamos como `NonNodeData`.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-143">In the examples in this topic, we have used only a single addiontal node, and named it `NonNodeData`.</span></span> <span data-ttu-id="1fc7b-144">No entanto, você pode definir qualquer número de chaves adicionais e nomeá-los como desejar.</span><span class="sxs-lookup"><span data-stu-id="1fc7b-144">However, you can define any number of addiontal keys, and name them anything you want.</span></span>
 
- ### <a name="configuration-data-file"></a>Arquivo de dados de configuração
+<span data-ttu-id="1fc7b-145">Para obter um exemplo de como usar dados que não são do nó, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).</span><span class="sxs-lookup"><span data-stu-id="1fc7b-145">For an example of using non-node data, see [Separating configuration and environment data](separatingEnvData.md).</span></span>
 
-Vamos definir os dados do ambiente de desenvolvimento e de produção em um arquivo chamado `DevProdEnvData.psd1` da seguinte maneira:
+## <a name="see-also"></a><span data-ttu-id="1fc7b-146">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="1fc7b-146">See Also</span></span>
+- [<span data-ttu-id="1fc7b-147">Opções de credenciais nos dados de configuração</span><span class="sxs-lookup"><span data-stu-id="1fc7b-147">Credentials Options in Configuration Data</span></span>](configDataCredentials.md)
+- [<span data-ttu-id="1fc7b-148">Configurações DSC</span><span class="sxs-lookup"><span data-stu-id="1fc7b-148">DSC Configurations</span></span>](configurations.md)
 
-```powershell
-@{
-
-    AllNodes = @(
-
-        @{
-            NodeName        = "*"
-            SQLServerName   = "MySQLServer"
-            SqlSource       = "C:\Software\Sql"
-            DotNetSrc       = "C:\Software\sxs"
-        },
-
-        @{
-            NodeName        = "Prod-SQL"
-            Role            = "MSSQL"
-        },
-
-        @{
-            NodeName        = "Prod-IIS"
-            Role            = "Web"
-            SiteContents    = "C:\Website\Prod\SiteContents\"
-            SitePath        = "\\Prod-IIS\Website\"
-        },
-
-        @{
-            NodeName         = "Dev"
-            Role             = "MSSQL", "Web"
-            SiteContents     = "C:\Website\Dev\SiteContents\"
-            SitePath         = "\\Dev\Website\"
-
-        }
-
-    )
-
-}
-```
-
-### <a name="configuration-script-file"></a>Arquivo de script para configuração
-
-Agora, na configuração, definida por um arquivo .ps1, filtramos os nós que definimos no `DevProdEnvData.psd1` por função (`MSSQL`, `Dev` ou ambas) e os configuramos adequadamente. O ambiente de desenvolvimento tem o SQL Server e o IIS em um nó, enquanto que o ambiente de produção os tem em dois nós diferentes. O conteúdo do site também é diferente, conforme especificado pelas propriedades `SiteContents`.
-
-No final do script de configuração, chamamos a configuração (compilamos isso em um documento MOF), passando o `DevProdEnvData.psd1` como o parâmetro `$ConfigurationData`.
-
->**Observação:** essa configuração requer que os módulos `xSqlPs` e `xWebAdministration` estejam instalados no nó de destino.
-
-```powershell
-Configuration MyWebApp
-{
-    Import-DscResource -Module PSDesiredStateConfiguration
-    Import-DscResource -Module xSqlPs
-    Import-DscResource -Module xWebAdministration
-
-    Node $AllNodes.Where{$_.Role -contains "MSSQL"}.Nodename
-   {
-        # Install prerequisites
-        WindowsFeature installdotNet35
-        {            
-            Ensure      = "Present"
-            Name        = "Net-Framework-Core"
-            Source      = "c:\software\sxs"
-        }
-
-        # Install SQL Server
-        xSqlServerInstall InstallSqlServer
-        {
-            InstanceName = $Node.SQLServerName
-            SourcePath   = $Node.SqlSource
-            Features     = "SQLEngine,SSMS"
-            DependsOn    = "[WindowsFeature]installdotNet35"
-
-        }
-   }
-
-   Node $AllNodes.Where($_.Role -contains "Web").NodeName
-   {
-        # Install the IIS role
-        WindowsFeature IIS
-        {
-            Ensure       = 'Present'
-            Name         = 'Web-Server'
-        }
-
-        # Install the ASP .NET 4.5 role
-        WindowsFeature AspNet45
-        {
-            Ensure       = 'Present'
-            Name         = 'Web-Asp-Net45'
-
-        }
-
-        # Stop the default website
-        xWebsite DefaultSite 
-        {
-            Ensure       = 'Present'
-            Name         = 'Default Web Site'
-            State        = 'Stopped'
-            PhysicalPath = 'C:\inetpub\wwwroot'
-            DependsOn    = '[WindowsFeature]IIS'
-
-        }
-
-        # Copy the website content
-        File WebContent
-
-        {
-            Ensure          = 'Present'
-            SourcePath      = $Node.SiteContents
-            DestinationPath = $Node.SitePath
-            Recurse         = $true
-            Type            = 'Directory'
-            DependsOn       = '[WindowsFeature]AspNet45'
-
-        }       
-
-
-        # Create the new Website
-
-        xWebsite NewWebsite
-
-        {
-
-            Ensure          = 'Present'
-            Name            = $WebSiteName
-            State           = 'Started'
-            PhysicalPath    = $Node.SitePath
-            DependsOn       = '[File]WebContent'
-        }
-
-    }
-
-}
-
-MyWebApp -ConfigurationData DevProdEnvData.psd1
-```
-
-## <a name="see-also"></a>Consulte Também
-- [Opções de credenciais nos dados de configuração](configDataCredentials.md)
-- [Configurações DSC](configurations.md)

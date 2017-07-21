@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método ResourceTest da classe MSFT_DSCLocalConfigurationManager
+# <a name="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="0c295-103">Método ResourceTest da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="0c295-103">ResourceTest method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Chama diretamente o método **Test** de um recurso de DSC.
+<span data-ttu-id="0c295-104">Chama diretamente o método **Test** de um recurso de DSC.</span><span class="sxs-lookup"><span data-stu-id="0c295-104">Directly calls the **Test** method of a DSC resource.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="0c295-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0c295-105">Syntax</span></span>
 ------
 
 ```mof
@@ -28,46 +26,41 @@ uint32 ResourceTest(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="0c295-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0c295-106">Parameters</span></span>
 ----------
 
-*ResourceType* \[in\]  
-O nome do recurso a chamar.
+<span data-ttu-id="0c295-107">*ResourceType* \[in\]</span><span class="sxs-lookup"><span data-stu-id="0c295-107">*ResourceType* \[in\]</span></span>  
+<span data-ttu-id="0c295-108">O nome do recurso a chamar.</span><span class="sxs-lookup"><span data-stu-id="0c295-108">The name of the resource to call.</span></span>
 
-*ModuleName* \[in\]  
-O nome do módulo que contém o recurso a chamar.
+<span data-ttu-id="0c295-109">*ModuleName* \[in\]</span><span class="sxs-lookup"><span data-stu-id="0c295-109">*ModuleName* \[in\]</span></span>  
+<span data-ttu-id="0c295-110">O nome do módulo que contém o recurso a chamar.</span><span class="sxs-lookup"><span data-stu-id="0c295-110">The name of the module that contains the resource to call.</span></span>
 
-*resourceProperty* \[in\]  
-Especifica o nome da propriedade de recurso e seu valor em uma tabela de hash como chave e valor, respectivamente. Use o cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) para descobrir as propriedades de recurso e seus tipos.
+<span data-ttu-id="0c295-111">*resourceProperty* \[in\]</span><span class="sxs-lookup"><span data-stu-id="0c295-111">*resourceProperty* \[in\]</span></span>  
+<span data-ttu-id="0c295-112">Especifica o nome da propriedade de recurso e seu valor em uma tabela de hash como chave e valor, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="0c295-112">Specifies the resource property name and its value in a hash table as key and value, respectively.</span></span> <span data-ttu-id="0c295-113">Use o cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) para descobrir as propriedades de recurso e seus tipos.</span><span class="sxs-lookup"><span data-stu-id="0c295-113">Use the [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) cmdlet to discover resource properties and their types.</span></span>
 
-*InDesiredState* \[out\]  
-No retorno, essa propriedade será definida como **true** se o nó de destino estiver no estado desejado.
+<span data-ttu-id="0c295-114">*InDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="0c295-114">*InDesiredState* \[out\]</span></span>  
+<span data-ttu-id="0c295-115">No retorno, essa propriedade será definida como **true** se o nó de destino estiver no estado desejado.</span><span class="sxs-lookup"><span data-stu-id="0c295-115">On return, this property is set to **true** if the target node is in the desired state.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="0c295-116">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="0c295-116">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="0c295-117">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="0c295-117">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="0c295-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="0c295-118">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="0c295-119">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="0c295-119">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="0c295-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0c295-120">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="0c295-121">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="0c295-121">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="0c295-122">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="0c295-122">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="0c295-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0c295-123">See also</span></span>
+
+
+[<span data-ttu-id="0c295-124">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="0c295-124">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

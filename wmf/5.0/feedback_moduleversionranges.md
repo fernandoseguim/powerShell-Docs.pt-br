@@ -9,9 +9,8 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="modules-support-for-declaring-version-ranges-1-etc" class="xliff"></a>
-# Suporte aos módulos para declaração dos intervalos de versão (1.*, etc.)
-Combinado com **-MinimumVersion**, **-MaximumVersion** agora permite que o usuário obtenha/importe o módulo dentro de um intervalo específico. O parâmetro também dá suporte a **.***. O seguinte exemplo mostra como isso funciona:
+# <a name="modules-support-for-declaring-version-ranges-1-etc"></a><span data-ttu-id="831c7-102">Suporte aos módulos para declaração dos intervalos de versão (1.*, etc.)</span><span class="sxs-lookup"><span data-stu-id="831c7-102">Modules support for declaring version ranges (1.*, etc)</span></span>
+<span data-ttu-id="831c7-103">Combinado com **-MinimumVersion**, **-MaximumVersion** agora permite que o usuário obtenha/importe o módulo dentro de um intervalo específico.</span><span class="sxs-lookup"><span data-stu-id="831c7-103">Combined with **-MinimumVersion**, **-MaximumVersion** now allows user to get/import module within specific range.</span></span> <span data-ttu-id="831c7-104">O parâmetro também dá suporte a **.***.</span><span class="sxs-lookup"><span data-stu-id="831c7-104">The parameter also support **.***.</span></span> <span data-ttu-id="831c7-105">O seguinte exemplo mostra como isso funciona:</span><span class="sxs-lookup"><span data-stu-id="831c7-105">The following example shows how it works:</span></span>
 
 ```PowerShell
 Now, you can combine **-MinimumVersion** and **-MaximumVersion** to import module within specific range:

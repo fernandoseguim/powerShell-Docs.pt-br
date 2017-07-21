@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager
+# <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="807fe-103">Método SendMetaConfigurationApply da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="807fe-103">SendMetaConfigurationApply method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Define as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.
+<span data-ttu-id="807fe-104">Define as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.</span><span class="sxs-lookup"><span data-stu-id="807fe-104">Sets the Local Configuration Manager settings that are used to control the Configuration Agent.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="807fe-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="807fe-105">Syntax</span></span>
 ------
 
 ```mof
@@ -26,40 +24,35 @@ uint32 SendMetaConfigurationApply(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="807fe-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="807fe-106">Parameters</span></span>
 ----------
 
-*ConfigurationData* \[in\]  
-Dados do ambiente para a configuração.
+<span data-ttu-id="807fe-107">*ConfigurationData* \[in\]</span><span class="sxs-lookup"><span data-stu-id="807fe-107">*ConfigurationData* \[in\]</span></span>  
+<span data-ttu-id="807fe-108">Dados do ambiente para a configuração.</span><span class="sxs-lookup"><span data-stu-id="807fe-108">The environment data for the configuration.</span></span>
 
-*force* \[in\]  
-**true** para forçar a configuração a parar.
+<span data-ttu-id="807fe-109">*force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="807fe-109">*force* \[in\]</span></span>  
+<span data-ttu-id="807fe-110">**true** para forçar a configuração a parar.</span><span class="sxs-lookup"><span data-stu-id="807fe-110">**true** to force the configuration to stop.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="807fe-111">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="807fe-111">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="807fe-112">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="807fe-112">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="807fe-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="807fe-113">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="807fe-114">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="807fe-114">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="807fe-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="807fe-115">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="807fe-116">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="807fe-116">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="807fe-117">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="807fe-117">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="807fe-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="807fe-118">See also</span></span>
+
+
+[<span data-ttu-id="807fe-119">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="807fe-119">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="information-stream" class="xliff"></a>
-# Fluxo de informações
+# <a name="information-stream"></a><span data-ttu-id="e05b6-102">Fluxo de informações</span><span class="sxs-lookup"><span data-stu-id="e05b6-102">Information Stream</span></span>
 
-Um novo Fluxo de informações estruturado agora pode ser usado para transmitir dados estruturados entre um script e seu host. **Write-Host** também foi atualizado para emitir a saída para o Fluxo de informações, em que agora é possível capturar ou silenciá-lo. O novo cmdlet **Write-Information** (juntamente com uma API WriteInformation correspondente) usado com os parâmetros comuns **-InformationVariable** e **-InformationAction** permite mais flexibilidade e capacidade.
+<span data-ttu-id="e05b6-103">Um novo Fluxo de informações estruturado agora pode ser usado para transmitir dados estruturados entre um script e seu host.</span><span class="sxs-lookup"><span data-stu-id="e05b6-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="e05b6-104">**Write-Host** também foi atualizado para emitir a saída para o Fluxo de informações, em que agora é possível capturar ou silenciá-lo.</span><span class="sxs-lookup"><span data-stu-id="e05b6-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="e05b6-105">O novo cmdlet **Write-Information** (juntamente com uma API WriteInformation correspondente) usado com os parâmetros comuns **-InformationVariable** e **-InformationAction** permite mais flexibilidade e capacidade.</span><span class="sxs-lookup"><span data-stu-id="e05b6-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
 
 ```powershell
 PS C:\Users\demo> ## Here's a typical PowerShell script

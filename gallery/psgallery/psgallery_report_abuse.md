@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="report-abuse" class="xliff"></a>
-# Relatar abuso
+# <a name="report-abuse"></a><span data-ttu-id="f31b3-103">Relatar abuso</span><span class="sxs-lookup"><span data-stu-id="f31b3-103">Report Abuse</span></span>
 
-Se você encontrar algo que viole qualquer um desses itens, clique no link **Relatar Abuso** na página de detalhes do item e envie um relatório.
+<span data-ttu-id="f31b3-104">Se você encontrar algo que viole qualquer um desses itens, clique no link **Relatar Abuso** na página de detalhes do item e envie um relatório.</span><span class="sxs-lookup"><span data-stu-id="f31b3-104">If you find a item that is in violation of any of these items, click the **Report Abuse** link on the item details page and submit a report.</span></span>
 

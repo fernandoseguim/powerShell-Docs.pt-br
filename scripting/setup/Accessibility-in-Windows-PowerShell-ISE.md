@@ -9,143 +9,143 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
-Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell® que podem ser úteis.
+# <a name="accessibility-in-windows-powershell-ise"></a><span data-ttu-id="eb02e-103">Acessibilidade no ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="eb02e-103">Accessibility in Windows PowerShell ISE</span></span>
+<span data-ttu-id="eb02e-104">Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell® que podem ser úteis.</span><span class="sxs-lookup"><span data-stu-id="eb02e-104">This topic describes the accessibility features of Windows PowerShell® Integrated Scripting Environment (ISE) that you might find helpful.</span></span>
 
-* [Como alterar o tamanho e o local dos Painéis de console e de script](#bkmk_1)
-* [Atalhos de teclado para edição de texto](#bkmk_2)
-* [Atalhos de teclado para execução de scripts](#bkmk_3)
-* [Atalhos de teclado para personalizar a exibição](#bkmk_4)
-* [Atalhos de teclado para depuração de scripts](#bkmk_5)
-* [Atalhos do teclado para as guias do Windows PowerShell](#bkmk_6)
-* [Atalhos de teclado para iniciar e sair](#bkmk_7)
+* [<span data-ttu-id="eb02e-105">Como alterar o tamanho e o local dos Painéis de console e de script</span><span class="sxs-lookup"><span data-stu-id="eb02e-105">How to change the size and location of the Console and Script Panes</span></span>](#bkmk_1)
+* [<span data-ttu-id="eb02e-106">Atalhos de teclado para edição de texto</span><span class="sxs-lookup"><span data-stu-id="eb02e-106">Keyboard shortcuts for editing text</span></span>](#bkmk_2)
+* [<span data-ttu-id="eb02e-107">Atalhos de teclado para execução de scripts</span><span class="sxs-lookup"><span data-stu-id="eb02e-107">Keyboard shortcuts for running scripts</span></span>](#bkmk_3)
+* [<span data-ttu-id="eb02e-108">Atalhos de teclado para personalizar a exibição</span><span class="sxs-lookup"><span data-stu-id="eb02e-108">Keyboard shortcuts for customizing the view</span></span>](#bkmk_4)
+* [<span data-ttu-id="eb02e-109">Atalhos de teclado para depuração de scripts</span><span class="sxs-lookup"><span data-stu-id="eb02e-109">Keyboard shortcuts for debugging scripts</span></span>](#bkmk_5)
+* [<span data-ttu-id="eb02e-110">Atalhos do teclado para as guias do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="eb02e-110">Keyboard shortcuts for Windows PowerShell tabs</span></span>](#bkmk_6)
+* [<span data-ttu-id="eb02e-111">Atalhos de teclado para iniciar e sair</span><span class="sxs-lookup"><span data-stu-id="eb02e-111">Keyboard shortcuts for starting and exiting</span></span>](#bkmk_7)
 
-A Microsoft tem o compromisso de facilitar o uso de seus produtos e serviços para todos. Os tópicos a seguir fornecem informações sobre os recursos, produtos e serviços que tornam o ISE do Windows PowerShell mais acessível para pessoas portadoras de deficiência.
+<span data-ttu-id="eb02e-112">A Microsoft tem o compromisso de facilitar o uso de seus produtos e serviços para todos.</span><span class="sxs-lookup"><span data-stu-id="eb02e-112">Microsoft is committed to making its products and services easier for everyone to use.</span></span> <span data-ttu-id="eb02e-113">Os tópicos a seguir fornecem informações sobre os recursos, produtos e serviços que tornam o ISE do Windows PowerShell mais acessível para pessoas portadoras de deficiência.</span><span class="sxs-lookup"><span data-stu-id="eb02e-113">The following topics provide information about the features, products, and services that make Windows PowerShell ISE more accessible for people with disabilities.</span></span>
 
-O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para obter mais informações, consulte "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:
+<span data-ttu-id="eb02e-114">O ISE do Windows PowerShell dá suporte ao modo de alto contraste.</span><span class="sxs-lookup"><span data-stu-id="eb02e-114">Windows PowerShell ISE supports high contrast mode.</span></span> <span data-ttu-id="eb02e-115">Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).</span><span class="sxs-lookup"><span data-stu-id="eb02e-115">For the visually impaired, breakpoint information is available through the cmdlets for managing breakpoints, such as [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) and [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).</span></span> <span data-ttu-id="eb02e-116">Para obter mais informações, consulte "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1).</span><span class="sxs-lookup"><span data-stu-id="eb02e-116">For more information please see “How to manage breakpoints” in [How to Debug Scripts in the Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1).</span></span> <span data-ttu-id="eb02e-117">Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:</span><span class="sxs-lookup"><span data-stu-id="eb02e-117">In addition to accessibility features and utilities in Microsoft Windows, the following features make Windows PowerShell ISE more accessible for people with disabilities:</span></span>
 
--   Atalhos do teclado
+-   <span data-ttu-id="eb02e-118">Atalhos do teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-118">Keyboard Shortcuts</span></span>
 
--   Tabela de cores de sintaxe e a capacidade de modificar várias outras configurações de cor usando o objeto de script [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb).
+-   <span data-ttu-id="eb02e-119">Tabela de cores de sintaxe e a capacidade de modificar várias outras configurações de cor usando o objeto de script [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb).</span><span class="sxs-lookup"><span data-stu-id="eb02e-119">Syntax Coloring Table and the ability to modify several other color settings using the [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb) scripting object.</span></span>
 
--   Alteração do tamanho do texto
+-   <span data-ttu-id="eb02e-120">Alteração do tamanho do texto</span><span class="sxs-lookup"><span data-stu-id="eb02e-120">Text Size Change</span></span>
 
-## <a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script
-Você pode usar as etapas a seguir para alterar o tamanho e o local do Painel de Console e do Painel de Script. Quando você abrir o ISE do Windows PowerShell novamente, as alterações de tamanho e localização feitas serão mantidas.
+## <span data-ttu-id="eb02e-121"><a name="bkmk_1"></a>Como alterar o tamanho e o local dos Painéis de Console e de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-121"><a name="bkmk_1"></a>How to change the size and location of the Console and Script Panes</span></span>
+<span data-ttu-id="eb02e-122">Você pode usar as etapas a seguir para alterar o tamanho e o local do Painel de Console e do Painel de Script.</span><span class="sxs-lookup"><span data-stu-id="eb02e-122">You can use the following steps to change the size and location of the Console Pane and the Script Pane.</span></span> <span data-ttu-id="eb02e-123">Quando você abrir o ISE do Windows PowerShell novamente, as alterações de tamanho e localização feitas serão mantidas.</span><span class="sxs-lookup"><span data-stu-id="eb02e-123">When you open the Windows PowerShell ISE again, the size and location changes you made will be retained.</span></span>
 
-### <a name="to-resize-the-script-pane-and-console-pane"></a>Para redimensionar o Painel de Script e o Painel de Console
+### <a name="to-resize-the-script-pane-and-console-pane"></a><span data-ttu-id="eb02e-124">Para redimensionar o Painel de Script e o Painel de Console</span><span class="sxs-lookup"><span data-stu-id="eb02e-124">To resize the Script Pane and Console Pane</span></span>
 
-1.  Coloque o ponteiro na linha de divisão entre o Painel de Script e o Painel de Console.
+1.  <span data-ttu-id="eb02e-125">Coloque o ponteiro na linha de divisão entre o Painel de Script e o Painel de Console.</span><span class="sxs-lookup"><span data-stu-id="eb02e-125">Pause the pointer on the split line between the Script Pane and Console Pane.</span></span>
 
-2.  Quando o ponteiro do mouse mudar para uma seta dupla, arraste a borda para alterar o tamanho do painel.
+2.  <span data-ttu-id="eb02e-126">Quando o ponteiro do mouse mudar para uma seta dupla, arraste a borda para alterar o tamanho do painel.</span><span class="sxs-lookup"><span data-stu-id="eb02e-126">When the mouse pointer changes to a two-headed arrow, drag the border to change the size of the pane.</span></span>
 
-### <a name="to-move-the-script-pane-and-console-pane"></a>Para mover o Painel de Script e o Painel de Console
-Realize um dos seguintes procedimentos:
+### <a name="to-move-the-script-pane-and-console-pane"></a><span data-ttu-id="eb02e-127">Para mover o Painel de Script e o Painel de Console</span><span class="sxs-lookup"><span data-stu-id="eb02e-127">To move the Script Pane and Console Pane</span></span>
+<span data-ttu-id="eb02e-128">Realize um dos seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="eb02e-128">Do one of the following:</span></span>
 
--   Para mover o Painel de Script acima do Painel Console, pressione **Ctrl+1** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Acima** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Acima**.
+-   <span data-ttu-id="eb02e-129">Para mover o Painel de Script acima do Painel Console, pressione **Ctrl+1** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Acima** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Acima**.</span><span class="sxs-lookup"><span data-stu-id="eb02e-129">To move the Script Pane above the Console Pane, press **CTRL+1** or, on the toolbar, click the **Show Script Pane Top** icon, or in the **View** menu, click **Show Script Pane Top**.</span></span>
 
--   Para mover o Painel de Script para a direita do Painel Console, pressione **Ctrl+2** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script à Direita** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script à Direita**.
+-   <span data-ttu-id="eb02e-130">Para mover o Painel de Script para a direita do Painel Console, pressione **Ctrl+2** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script à Direita** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script à Direita**.</span><span class="sxs-lookup"><span data-stu-id="eb02e-130">To move the Script Pane to the right of the Console Pane, press **CTRL+2** or, on the toolbar, click the **Show Script Pane Right** icon, or in the **View** menu, click **Show Script Pane Right**.</span></span>
 
--   Para maximizar o Painel de Script, pressione **Ctrl+3** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Maximizado** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Maximizado**.
+-   <span data-ttu-id="eb02e-131">Para maximizar o Painel de Script, pressione **Ctrl+3** ou, na barra de ferramentas, clique no ícone **Mostrar Painel de Script Maximizado** ou então, no menu **Exibir**, clique em **Mostrar Painel de Script Maximizado**.</span><span class="sxs-lookup"><span data-stu-id="eb02e-131">To maximize the Script Pane, press **CTRL+3** or, on the toolbar, click the **Show Script Pane Maximized** icon, or in the **View** menu, click **Show Script Pane Maximized**.</span></span>
 
--   Para maximizar o Painel de Console e ocultar o Painel de Script, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script**, no menu **Exibir**, clique para desmarcar a opção de menu **Mostrar Painel de Script**.
+-   <span data-ttu-id="eb02e-132">Para maximizar o Painel de Console e ocultar o Painel de Script, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script**, no menu **Exibir**, clique para desmarcar a opção de menu **Mostrar Painel de Script**.</span><span class="sxs-lookup"><span data-stu-id="eb02e-132">To maximize the Console Pane and hide the Script Pane, on the far right edge of the row of tabs, click the **Hide Script Pane** icon, in the **View** menu, click to deselect the **Show Script Pane** menu option.</span></span>
 
--   Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir**, clique para marcar a opção de menu **Mostrar Painel de Script**.
+-   <span data-ttu-id="eb02e-133">Para exibir o Painel de Script quando o Painel de Console está maximizado, na extrema borda direita da linha de guias, clique no ícone **Ocultar Painel de Script** ou então, no menu **Exibir**, clique para marcar a opção de menu **Mostrar Painel de Script**.</span><span class="sxs-lookup"><span data-stu-id="eb02e-133">To display the Script Pane when the Console Pane is maximized, on the far right edge of the row of tabs, click the **Show Script Pane** icon, or in the **View** menu, click to select the **Show Script Pane** menu option.</span></span>
 
-## <a name="bkmk_2"></a>Atalhos de teclado para edição de texto
-Você pode usar os seguintes atalhos de teclado ao editar texto.
+## <span data-ttu-id="eb02e-134"><a name="bkmk_2"></a>Atalhos de teclado para edição de texto</span><span class="sxs-lookup"><span data-stu-id="eb02e-134"><a name="bkmk_2"></a>Keyboard shortcuts for editing text</span></span>
+<span data-ttu-id="eb02e-135">Você pode usar os seguintes atalhos de teclado ao editar texto.</span><span class="sxs-lookup"><span data-stu-id="eb02e-135">You can use the following keyboard shortcuts when you edit text.</span></span>
 
-|Ação|Atalhos do teclado|Usar em|
+|<span data-ttu-id="eb02e-136">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-136">Action</span></span>|<span data-ttu-id="eb02e-137">Atalhos do teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-137">Keyboard Shortcuts</span></span>|<span data-ttu-id="eb02e-138">Usar em</span><span class="sxs-lookup"><span data-stu-id="eb02e-138">Use in</span></span>|
 |----------|----------------------|----------|
-|**Copiar**|Ctrl+C|Painel de script, o painel de console|
-|**Recortar**|Ctrl+X|Painel de script, o painel de console|
-|**Localizar no script**|Ctrl+F|Painel de Script|
-|**Localizar próximo no script**|F3|Painel de Script|
-|**Localizar anterior no script**|Shift+F3|Painel de Script|
-|**Colar**|Ctrl+V|Painel de script, o painel de console|
-|**Refazer**|Ctrl+Y|Painel de script, o painel de console|
-|**Substituir no script**|Ctrl+H|Painel de Script|
-|**Salvar**|Ctrl+S|Painel de Script|
-|**Selecionar tudo**|Ctrl+A|Painel de script, o painel de console|
-|**Desfazer**|Ctrl+Z|Painel de script, o painel de console|
+|<span data-ttu-id="eb02e-139">**Copiar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-139">**Copy**</span></span>|<span data-ttu-id="eb02e-140">Ctrl+C</span><span class="sxs-lookup"><span data-stu-id="eb02e-140">CTRL+C</span></span>|<span data-ttu-id="eb02e-141">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-141">Script Pane, Console Pane</span></span>|
+|<span data-ttu-id="eb02e-142">**Recortar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-142">**Cut**</span></span>|<span data-ttu-id="eb02e-143">Ctrl+X</span><span class="sxs-lookup"><span data-stu-id="eb02e-143">CTRL+X</span></span>|<span data-ttu-id="eb02e-144">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-144">Script Pane, Console Pane</span></span>|
+|<span data-ttu-id="eb02e-145">**Localizar no script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-145">**Find in Script**</span></span>|<span data-ttu-id="eb02e-146">Ctrl+F</span><span class="sxs-lookup"><span data-stu-id="eb02e-146">CTRL+F</span></span>|<span data-ttu-id="eb02e-147">Painel de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-147">Script Pane</span></span>|
+|<span data-ttu-id="eb02e-148">**Localizar próximo no script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-148">**Find Next in Script**</span></span>|<span data-ttu-id="eb02e-149">F3</span><span class="sxs-lookup"><span data-stu-id="eb02e-149">F3</span></span>|<span data-ttu-id="eb02e-150">Painel de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-150">Script Pane</span></span>|
+|<span data-ttu-id="eb02e-151">**Localizar anterior no script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-151">**Find Previous in Script**</span></span>|<span data-ttu-id="eb02e-152">Shift+F3</span><span class="sxs-lookup"><span data-stu-id="eb02e-152">SHIFT+F3</span></span>|<span data-ttu-id="eb02e-153">Painel de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-153">Script Pane</span></span>|
+|<span data-ttu-id="eb02e-154">**Colar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-154">**Paste**</span></span>|<span data-ttu-id="eb02e-155">Ctrl+V</span><span class="sxs-lookup"><span data-stu-id="eb02e-155">CTRL+V</span></span>|<span data-ttu-id="eb02e-156">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-156">Script Pane, Console Pane</span></span>|
+|<span data-ttu-id="eb02e-157">**Refazer**</span><span class="sxs-lookup"><span data-stu-id="eb02e-157">**Redo**</span></span>|<span data-ttu-id="eb02e-158">Ctrl+Y</span><span class="sxs-lookup"><span data-stu-id="eb02e-158">CTRL+Y</span></span>|<span data-ttu-id="eb02e-159">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-159">Script Pane, Console Pane</span></span>|
+|<span data-ttu-id="eb02e-160">**Substituir no script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-160">**Replace in Script**</span></span>|<span data-ttu-id="eb02e-161">Ctrl+H</span><span class="sxs-lookup"><span data-stu-id="eb02e-161">CTRL+H</span></span>|<span data-ttu-id="eb02e-162">Painel de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-162">Script Pane</span></span>|
+|<span data-ttu-id="eb02e-163">**Salvar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-163">**Save**</span></span>|<span data-ttu-id="eb02e-164">Ctrl+S</span><span class="sxs-lookup"><span data-stu-id="eb02e-164">CTRL+S</span></span>|<span data-ttu-id="eb02e-165">Painel de Script</span><span class="sxs-lookup"><span data-stu-id="eb02e-165">Script Pane</span></span>|
+|<span data-ttu-id="eb02e-166">**Selecionar tudo**</span><span class="sxs-lookup"><span data-stu-id="eb02e-166">**Select All**</span></span>|<span data-ttu-id="eb02e-167">Ctrl+A</span><span class="sxs-lookup"><span data-stu-id="eb02e-167">CTRL+A</span></span>|<span data-ttu-id="eb02e-168">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-168">Script Pane, Console Pane</span></span>|
+|<span data-ttu-id="eb02e-169">**Desfazer**</span><span class="sxs-lookup"><span data-stu-id="eb02e-169">**Undo**</span></span>|<span data-ttu-id="eb02e-170">Ctrl+Z</span><span class="sxs-lookup"><span data-stu-id="eb02e-170">CTRL+Z</span></span>|<span data-ttu-id="eb02e-171">Painel de script, o painel de console</span><span class="sxs-lookup"><span data-stu-id="eb02e-171">Script Pane, Console Pane</span></span>|
 
-## <a name="bkmk_3"></a>Atalhos de teclado para execução de scripts
-Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de Script.
+## <span data-ttu-id="eb02e-172"><a name="bkmk_3"></a>Atalhos de teclado para execução de scripts</span><span class="sxs-lookup"><span data-stu-id="eb02e-172"><a name="bkmk_3"></a>Keyboard shortcuts for running scripts</span></span>
+<span data-ttu-id="eb02e-173">Você pode usar os seguintes atalhos de teclado ao executar scripts no Painel de Script.</span><span class="sxs-lookup"><span data-stu-id="eb02e-173">You can use the following keyboard shortcuts when you run scripts in the Script Pane.</span></span>
 
-|Ação|Atalho do Teclado|
+|<span data-ttu-id="eb02e-174">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-174">Action</span></span>|<span data-ttu-id="eb02e-175">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-175">Keyboard Shortcut</span></span>|
 |----------|---------------------|
-|**Novo**|Ctrl+N|
-|**Abrir**|Ctrl+O|
-|**Executar**|F5|
-|**Executar seleção**|F8|
-|**Parar execução**|Ctrl+Break. Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).|
-|**Tab** (para o próximo script)|Ctrl+Tab **Observação:** Tab para o próximo script só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
-|**Tab** (para o script anterior)|Ctrl+Shift+Tab **Observação:** Tab para o script anterior só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.|
+|<span data-ttu-id="eb02e-176">**Novo**</span><span class="sxs-lookup"><span data-stu-id="eb02e-176">**New**</span></span>|<span data-ttu-id="eb02e-177">Ctrl+N</span><span class="sxs-lookup"><span data-stu-id="eb02e-177">CTRL+N</span></span>|
+|<span data-ttu-id="eb02e-178">**Abrir**</span><span class="sxs-lookup"><span data-stu-id="eb02e-178">**Open**</span></span>|<span data-ttu-id="eb02e-179">Ctrl+O</span><span class="sxs-lookup"><span data-stu-id="eb02e-179">CTRL+O</span></span>|
+|<span data-ttu-id="eb02e-180">**Executar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-180">**Run**</span></span>|<span data-ttu-id="eb02e-181">F5</span><span class="sxs-lookup"><span data-stu-id="eb02e-181">F5</span></span>|
+|<span data-ttu-id="eb02e-182">**Executar seleção**</span><span class="sxs-lookup"><span data-stu-id="eb02e-182">**Run Selection**</span></span>|<span data-ttu-id="eb02e-183">F8</span><span class="sxs-lookup"><span data-stu-id="eb02e-183">F8</span></span>|
+|<span data-ttu-id="eb02e-184">**Parar execução**</span><span class="sxs-lookup"><span data-stu-id="eb02e-184">**Stop Execution**</span></span>|<span data-ttu-id="eb02e-185">Ctrl+Break.</span><span class="sxs-lookup"><span data-stu-id="eb02e-185">CTRL+BREAK.</span></span> <span data-ttu-id="eb02e-186">Ctrl+C pode ser usado quando o contexto é ambíguo (quando não há texto selecionado).</span><span class="sxs-lookup"><span data-stu-id="eb02e-186">CTRL+C can be used when the context is unambiguous (when there is no text selected).</span></span>|
+|<span data-ttu-id="eb02e-187">**Tab** (para o próximo script)</span><span class="sxs-lookup"><span data-stu-id="eb02e-187">**Tab** (to next script)</span></span>|<span data-ttu-id="eb02e-188">Ctrl+Tab **Observação:** Tab para o próximo script só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.</span><span class="sxs-lookup"><span data-stu-id="eb02e-188">CTRL+TAB **Note:** Tab to next script works only when you have a single PowerShell tab open, or when you have more than one PowerShell tab open, but the focus is in the Script Pane.</span></span>|
+|<span data-ttu-id="eb02e-189">**Tab** (para o script anterior)</span><span class="sxs-lookup"><span data-stu-id="eb02e-189">**Tab** (to previous script)</span></span>|<span data-ttu-id="eb02e-190">Ctrl+Shift+Tab **Observação:** Tab para o script anterior só funcionará quando você tiver uma única guia do PowerShell aberta ou se tiver mais de uma guia do PowerShell aberta, mas o foco estiver no Painel de Script.</span><span class="sxs-lookup"><span data-stu-id="eb02e-190">CTRL+SHIFT+TAB **Note:** Tab to previous script works when you have only one PowerShell tab open, or if you have more  than one PowerShell tab open, and the focus is in the Script Pane.</span></span>|
 
-## <a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição
-Você pode usar os seguintes atalhos de teclado para personalizar a exibição no ISE do Windows PowerShell. Eles são acessíveis de todos os painéis no aplicativo.
+## <span data-ttu-id="eb02e-191"><a name="bkmk_4"></a>Atalhos de teclado para personalizar a exibição</span><span class="sxs-lookup"><span data-stu-id="eb02e-191"><a name="bkmk_4"></a>Keyboard shortcuts for customizing the view</span></span>
+<span data-ttu-id="eb02e-192">Você pode usar os seguintes atalhos de teclado para personalizar a exibição no ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-192">You can use the following keyboard shortcuts to customize the view in Windows PowerShell ISE.</span></span> <span data-ttu-id="eb02e-193">Eles são acessíveis de todos os painéis no aplicativo.</span><span class="sxs-lookup"><span data-stu-id="eb02e-193">They are accessible from all the panes in the application.</span></span>
 
-|Ação|Atalho do Teclado|
+|<span data-ttu-id="eb02e-194">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-194">Action</span></span>|<span data-ttu-id="eb02e-195">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-195">Keyboard Shortcut</span></span>|
 |----------|---------------------|
-|**Ir para o Painel de console**|Ctrl+D|
-|**Ir para o Painel de script**|Ctrl+I|
-|**Mostrar Painel de script**|Ctrl+R|
-|**Ocultar Painel de script**|Ctrl+R|
+|<span data-ttu-id="eb02e-196">**Ir para o Painel de console**</span><span class="sxs-lookup"><span data-stu-id="eb02e-196">**Go to Console Pane**</span></span>|<span data-ttu-id="eb02e-197">Ctrl+D</span><span class="sxs-lookup"><span data-stu-id="eb02e-197">CTRL+D</span></span>|
+|<span data-ttu-id="eb02e-198">**Ir para o Painel de script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-198">**Go to Script Pane**</span></span>|<span data-ttu-id="eb02e-199">Ctrl+I</span><span class="sxs-lookup"><span data-stu-id="eb02e-199">CTRL+I</span></span>|
+|<span data-ttu-id="eb02e-200">**Mostrar Painel de script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-200">**Show Script Pane**</span></span>|<span data-ttu-id="eb02e-201">Ctrl+R</span><span class="sxs-lookup"><span data-stu-id="eb02e-201">CTRL+R</span></span>|
+|<span data-ttu-id="eb02e-202">**Ocultar Painel de script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-202">**Hide Script Pane**</span></span>|<span data-ttu-id="eb02e-203">Ctrl+R</span><span class="sxs-lookup"><span data-stu-id="eb02e-203">CTRL+R</span></span>|
 ||
-|**Mover o Painel de script para cima**|Ctrl+1|
-|**Mover o Painel de script para a direita**|Ctrl+2|
-|**Maximizar o Painel de script**|Ctrl+3|
-|**Ampliar**|Ctrl+Sinal de adição|
-|**Reduzir**|Ctrl+Sinal de subtração|
+|<span data-ttu-id="eb02e-204">**Mover o Painel de script para cima**</span><span class="sxs-lookup"><span data-stu-id="eb02e-204">**Move Script Pane Up**</span></span>|<span data-ttu-id="eb02e-205">Ctrl+1</span><span class="sxs-lookup"><span data-stu-id="eb02e-205">CTRL+1</span></span>|
+|<span data-ttu-id="eb02e-206">**Mover o Painel de script para a direita**</span><span class="sxs-lookup"><span data-stu-id="eb02e-206">**Move Script Pane Right**</span></span>|<span data-ttu-id="eb02e-207">Ctrl+2</span><span class="sxs-lookup"><span data-stu-id="eb02e-207">CTRL+2</span></span>|
+|<span data-ttu-id="eb02e-208">**Maximizar o Painel de script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-208">**Maximize Script Pane**</span></span>|<span data-ttu-id="eb02e-209">Ctrl+3</span><span class="sxs-lookup"><span data-stu-id="eb02e-209">CTRL+3</span></span>|
+|<span data-ttu-id="eb02e-210">**Ampliar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-210">**Zoom In**</span></span>|<span data-ttu-id="eb02e-211">Ctrl+Sinal de adição</span><span class="sxs-lookup"><span data-stu-id="eb02e-211">CTRL+PLUS SIGN</span></span>|
+|<span data-ttu-id="eb02e-212">**Reduzir**</span><span class="sxs-lookup"><span data-stu-id="eb02e-212">**Zoom Out**</span></span>|<span data-ttu-id="eb02e-213">Ctrl+Sinal de subtração</span><span class="sxs-lookup"><span data-stu-id="eb02e-213">CTRL+MINUS SIGN</span></span>|
 
-## <a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts
-Você pode usar os seguintes atalhos do teclado ao depurar scripts.
+## <span data-ttu-id="eb02e-214"><a name="bkmk_5"></a>Atalhos de teclado para depuração de scripts</span><span class="sxs-lookup"><span data-stu-id="eb02e-214"><a name="bkmk_5"></a>Keyboard shortcuts for debugging scripts</span></span>
+<span data-ttu-id="eb02e-215">Você pode usar os seguintes atalhos do teclado ao depurar scripts.</span><span class="sxs-lookup"><span data-stu-id="eb02e-215">You can use the following keyboard shortcuts when you debug scripts.</span></span>
 
-|Ação|Atalho do Teclado|Usar em|
+|<span data-ttu-id="eb02e-216">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-216">Action</span></span>|<span data-ttu-id="eb02e-217">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-217">Keyboard Shortcut</span></span>|<span data-ttu-id="eb02e-218">Usar em</span><span class="sxs-lookup"><span data-stu-id="eb02e-218">Use in</span></span>|
 |----------|---------------------|----------|
-|**Executar/continuar**|F5|Painel de Script ao depurar um script|
-|**Intervir**|F11|Painel de Script ao depurar um script|
-|**Contornar**|F10|Painel de Script ao depurar um script|
-|**Sair**|Shift+F11|Painel de Script ao depurar um script|
-|**Exibir pilha de chamadas**|Ctrl+Shift+D|Painel de Script ao depurar um script|
-|**Listar pontos de interrupção**|Ctrl+Shift+L|Painel de Script ao depurar um script|
-|**Alternar ponto de interrupção**|F9|Painel de Script ao depurar um script|
-|**Remover todos os pontos de interrupção**|Ctrl+Shift+F9|Painel de Script ao depurar um script|
-|**Parar depurador**|Shift+F5|Painel de Script ao depurar um script|
+|<span data-ttu-id="eb02e-219">**Executar/continuar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-219">**Run/Continue**</span></span>|<span data-ttu-id="eb02e-220">F5</span><span class="sxs-lookup"><span data-stu-id="eb02e-220">F5</span></span>|<span data-ttu-id="eb02e-221">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-221">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-222">**Intervir**</span><span class="sxs-lookup"><span data-stu-id="eb02e-222">**Step Into**</span></span>|<span data-ttu-id="eb02e-223">F11</span><span class="sxs-lookup"><span data-stu-id="eb02e-223">F11</span></span>|<span data-ttu-id="eb02e-224">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-224">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-225">**Contornar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-225">**Step Over**</span></span>|<span data-ttu-id="eb02e-226">F10</span><span class="sxs-lookup"><span data-stu-id="eb02e-226">F10</span></span>|<span data-ttu-id="eb02e-227">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-227">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-228">**Sair**</span><span class="sxs-lookup"><span data-stu-id="eb02e-228">**Step Out**</span></span>|<span data-ttu-id="eb02e-229">Shift+F11</span><span class="sxs-lookup"><span data-stu-id="eb02e-229">SHIFT+F11</span></span>|<span data-ttu-id="eb02e-230">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-230">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-231">**Exibir pilha de chamadas**</span><span class="sxs-lookup"><span data-stu-id="eb02e-231">**Display Call Stack**</span></span>|<span data-ttu-id="eb02e-232">Ctrl+Shift+D</span><span class="sxs-lookup"><span data-stu-id="eb02e-232">CTRL+SHIFT+D</span></span>|<span data-ttu-id="eb02e-233">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-233">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-234">**Listar pontos de interrupção**</span><span class="sxs-lookup"><span data-stu-id="eb02e-234">**List Breakpoints**</span></span>|<span data-ttu-id="eb02e-235">Ctrl+Shift+L</span><span class="sxs-lookup"><span data-stu-id="eb02e-235">CTRL+SHIFT+L</span></span>|<span data-ttu-id="eb02e-236">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-236">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-237">**Alternar ponto de interrupção**</span><span class="sxs-lookup"><span data-stu-id="eb02e-237">**Toggle Breakpoint**</span></span>|<span data-ttu-id="eb02e-238">F9</span><span class="sxs-lookup"><span data-stu-id="eb02e-238">F9</span></span>|<span data-ttu-id="eb02e-239">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-239">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-240">**Remover todos os pontos de interrupção**</span><span class="sxs-lookup"><span data-stu-id="eb02e-240">**Remove All Breakpoints**</span></span>|<span data-ttu-id="eb02e-241">Ctrl+Shift+F9</span><span class="sxs-lookup"><span data-stu-id="eb02e-241">CTRL+SHIFT+F9</span></span>|<span data-ttu-id="eb02e-242">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-242">Script Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-243">**Parar depurador**</span><span class="sxs-lookup"><span data-stu-id="eb02e-243">**Stop Debugger**</span></span>|<span data-ttu-id="eb02e-244">Shift+F5</span><span class="sxs-lookup"><span data-stu-id="eb02e-244">SHIFT+F5</span></span>|<span data-ttu-id="eb02e-245">Painel de Script ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-245">Script Pane, when debugging a script</span></span>|
 
 > [!NOTE]
-> Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar Enter.
+> <span data-ttu-id="eb02e-246">Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-246">You can also use the keyboard shortcuts designed for the Windows PowerShell console when you debug scripts in Windows PowerShell ISE.</span></span> <span data-ttu-id="eb02e-247">Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar Enter.</span><span class="sxs-lookup"><span data-stu-id="eb02e-247">To use these shortcuts, you must type the shortcut in the Console Pane and press ENTER.</span></span>
 
-|Ação|Atalho do Teclado|Usar em|
+|<span data-ttu-id="eb02e-248">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-248">Action</span></span>|<span data-ttu-id="eb02e-249">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-249">Keyboard Shortcut</span></span>|<span data-ttu-id="eb02e-250">Usar em</span><span class="sxs-lookup"><span data-stu-id="eb02e-250">Use in</span></span>|
 |----------|---------------------|----------|
-|**Continuar**|C|Painel de Console ao depurar um script|
-|**Intervir**|S|Painel de Console ao depurar um script|
-|**Contornar**|V|Painel de Console ao depurar um script|
-|**Sair**|O|Painel de Console ao depurar um script|
-|**Repetir Último Comando** (para Intervir ou Contornar)|Enter|Painel de Console ao depurar um script|
-|**Exibir pilha de chamadas**|K|Painel de Console ao depurar um script|
-|**Parar depuração**|Q|Painel de Console ao depurar um script|
-|**Listar o script**|L|Painel de Console ao depurar um script|
-|**Exibir comandos de depuração do console**|H ou ?|Painel de Console ao depurar um script|
+|<span data-ttu-id="eb02e-251">**Continuar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-251">**Continue**</span></span>|<span data-ttu-id="eb02e-252">C</span><span class="sxs-lookup"><span data-stu-id="eb02e-252">C</span></span>|<span data-ttu-id="eb02e-253">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-253">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-254">**Intervir**</span><span class="sxs-lookup"><span data-stu-id="eb02e-254">**Step Into**</span></span>|<span data-ttu-id="eb02e-255">S</span><span class="sxs-lookup"><span data-stu-id="eb02e-255">S</span></span>|<span data-ttu-id="eb02e-256">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-256">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-257">**Contornar**</span><span class="sxs-lookup"><span data-stu-id="eb02e-257">**Step Over**</span></span>|<span data-ttu-id="eb02e-258">V</span><span class="sxs-lookup"><span data-stu-id="eb02e-258">V</span></span>|<span data-ttu-id="eb02e-259">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-259">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-260">**Sair**</span><span class="sxs-lookup"><span data-stu-id="eb02e-260">**Step Out**</span></span>|<span data-ttu-id="eb02e-261">O</span><span class="sxs-lookup"><span data-stu-id="eb02e-261">O</span></span>|<span data-ttu-id="eb02e-262">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-262">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-263">**Repetir Último Comando** (para Intervir ou Contornar)</span><span class="sxs-lookup"><span data-stu-id="eb02e-263">**Repeat Last Command** (for Step Into or Step Over)</span></span>|<span data-ttu-id="eb02e-264">Enter</span><span class="sxs-lookup"><span data-stu-id="eb02e-264">ENTER</span></span>|<span data-ttu-id="eb02e-265">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-265">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-266">**Exibir pilha de chamadas**</span><span class="sxs-lookup"><span data-stu-id="eb02e-266">**Display Call Stack**</span></span>|<span data-ttu-id="eb02e-267">K</span><span class="sxs-lookup"><span data-stu-id="eb02e-267">K</span></span>|<span data-ttu-id="eb02e-268">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-268">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-269">**Parar depuração**</span><span class="sxs-lookup"><span data-stu-id="eb02e-269">**Stop Debugging**</span></span>|<span data-ttu-id="eb02e-270">Q</span><span class="sxs-lookup"><span data-stu-id="eb02e-270">Q</span></span>|<span data-ttu-id="eb02e-271">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-271">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-272">**Listar o script**</span><span class="sxs-lookup"><span data-stu-id="eb02e-272">**List the Script**</span></span>|<span data-ttu-id="eb02e-273">L</span><span class="sxs-lookup"><span data-stu-id="eb02e-273">L</span></span>|<span data-ttu-id="eb02e-274">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-274">Console Pane, when debugging a script</span></span>|
+|<span data-ttu-id="eb02e-275">**Exibir comandos de depuração do console**</span><span class="sxs-lookup"><span data-stu-id="eb02e-275">**Display Console Debugging Commands**</span></span>|<span data-ttu-id="eb02e-276">H ou ?</span><span class="sxs-lookup"><span data-stu-id="eb02e-276">H or ?</span></span>|<span data-ttu-id="eb02e-277">Painel de Console ao depurar um script</span><span class="sxs-lookup"><span data-stu-id="eb02e-277">Console Pane, when debugging a script</span></span>|
 
-## <a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell
-Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows PowerShell.
+## <span data-ttu-id="eb02e-278"><a name="bkmk_6"></a>Atalhos do teclado para as guias do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="eb02e-278"><a name="bkmk_6"></a>Keyboard shortcuts for Windows PowerShell tabs</span></span>
+<span data-ttu-id="eb02e-279">Você pode usar os seguintes atalhos do teclado ao utilizar as guias do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-279">You can use the following keyboard shortcuts when you use Windows PowerShell tabs.</span></span>
 
-|Ação|Atalho do Teclado|
+|<span data-ttu-id="eb02e-280">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-280">Action</span></span>|<span data-ttu-id="eb02e-281">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-281">Keyboard Shortcut</span></span>|
 |----------|---------------------|
-|**Fechar a guia do PowerShell**|Ctrl+W|
-|**Nova guia do PowerShell**|Ctrl+T|
-|**Guia anterior do PowerShell**|Ctrl+Shift+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
-|**Próxima guia do Windows PowerShell**|Ctrl+Tab. Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.|
+|<span data-ttu-id="eb02e-282">**Fechar a guia do PowerShell**</span><span class="sxs-lookup"><span data-stu-id="eb02e-282">**Close PowerShell Tab**</span></span>|<span data-ttu-id="eb02e-283">Ctrl+W</span><span class="sxs-lookup"><span data-stu-id="eb02e-283">CTRL+W</span></span>|
+|<span data-ttu-id="eb02e-284">**Nova guia do PowerShell**</span><span class="sxs-lookup"><span data-stu-id="eb02e-284">**New PowerShell Tab**</span></span>|<span data-ttu-id="eb02e-285">Ctrl+T</span><span class="sxs-lookup"><span data-stu-id="eb02e-285">CTRL+T</span></span>|
+|<span data-ttu-id="eb02e-286">**Guia anterior do PowerShell**</span><span class="sxs-lookup"><span data-stu-id="eb02e-286">**Previous PowerShell tab**</span></span>|<span data-ttu-id="eb02e-287">Ctrl+Shift+Tab.</span><span class="sxs-lookup"><span data-stu-id="eb02e-287">CTRL+SHIFT+TAB.</span></span> <span data-ttu-id="eb02e-288">Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-288">This shortcut works only when no files are open on any PowerShell tab.</span></span>|
+|<span data-ttu-id="eb02e-289">**Próxima guia do Windows PowerShell**</span><span class="sxs-lookup"><span data-stu-id="eb02e-289">**Next Windows PowerShell tab**</span></span>|<span data-ttu-id="eb02e-290">Ctrl+Tab.</span><span class="sxs-lookup"><span data-stu-id="eb02e-290">CTRL+TAB.</span></span> <span data-ttu-id="eb02e-291">Este atalho funciona somente quando nenhum arquivo estiver aberto em qualquer uma das guias do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-291">This shortcut works only when no files are open on any PowerShell tab.</span></span>|
 
-## <a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair
-Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.
+## <span data-ttu-id="eb02e-292"><a name="bkmk_7"></a>Atalhos de teclado para iniciar e sair</span><span class="sxs-lookup"><span data-stu-id="eb02e-292"><a name="bkmk_7"></a>Keyboard shortcuts for starting and exiting</span></span>
+<span data-ttu-id="eb02e-293">Você pode usar os seguintes atalhos de teclado para iniciar o console do Windows PowerShell (PowerShell.exe) ou para sair do ISE do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="eb02e-293">You can use the following keyboard shortcuts to start the Windows PowerShell console (PowerShell.exe) or to exit Windows PowerShell ISE.</span></span>
 
-|Ação|Atalho do Teclado|
+|<span data-ttu-id="eb02e-294">Ação</span><span class="sxs-lookup"><span data-stu-id="eb02e-294">Action</span></span>|<span data-ttu-id="eb02e-295">Atalho do Teclado</span><span class="sxs-lookup"><span data-stu-id="eb02e-295">Keyboard Shortcut</span></span>|
 |----------|---------------------|
-|**Sair**|Alt+F4|
-|**Iniciar o PowerShell.exe** (console do Windows PowerShell)|Ctrl+Shift+P|
+|<span data-ttu-id="eb02e-296">**Sair**</span><span class="sxs-lookup"><span data-stu-id="eb02e-296">**Exit**</span></span>|<span data-ttu-id="eb02e-297">Alt+F4</span><span class="sxs-lookup"><span data-stu-id="eb02e-297">ALT+F4</span></span>|
+|<span data-ttu-id="eb02e-298">**Iniciar o PowerShell.exe** (console do Windows PowerShell)</span><span class="sxs-lookup"><span data-stu-id="eb02e-298">**Start PowerShell.exe** (Windows PowerShell console)</span></span>|<span data-ttu-id="eb02e-299">Ctrl+Shift+P</span><span class="sxs-lookup"><span data-stu-id="eb02e-299">CTRL+SHIFT+P</span></span>|
 
-## <a name="see-also"></a>Consulte Também
-- [Usando o ISE do Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+## <a name="see-also"></a><span data-ttu-id="eb02e-300">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="eb02e-300">See Also</span></span>
+- [<span data-ttu-id="eb02e-301">Usando o ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="eb02e-301">Using the Windows PowerShell ISE</span></span>](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 

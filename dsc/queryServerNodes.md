@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-function-to-query-node-information-from-pull-server" class="xliff"></a>
-# Função de DSC para consultar informações do nó do servidor de pull.
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="c5796-103">Função de DSC para consultar informações do nó do servidor de pull.</span><span class="sxs-lookup"><span data-stu-id="c5796-103">DSC function to query node information from pull server.</span></span>
 
 ```powershell
 function QueryNodeInformation
@@ -40,9 +39,9 @@ Param (
 }
 ```
 
-Substitua o parâmetro `Uri` pelo URI para o servidor de pull. Se quiser as informações do nó em formato XML, defina `ContentType` como `application/xml`.
+<span data-ttu-id="c5796-104">Substitua o parâmetro `Uri` pelo URI para o servidor de pull.</span><span class="sxs-lookup"><span data-stu-id="c5796-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="c5796-105">Se quiser as informações do nó em formato XML, defina `ContentType` como `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="c5796-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
 
-Para recuperar as informações do nó do parâmetro `$json`, use o seguinte:
+<span data-ttu-id="c5796-106">Para recuperar as informações do nó do parâmetro `$json`, use o seguinte:</span><span class="sxs-lookup"><span data-stu-id="c5796-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
 
 ```powershell
 $json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status 

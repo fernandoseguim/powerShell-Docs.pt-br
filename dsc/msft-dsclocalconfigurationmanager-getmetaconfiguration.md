@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="4bcb2-103">Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="4bcb2-103">GetMetaConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Obtém as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.
+<span data-ttu-id="4bcb2-104">Obtém as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.</span><span class="sxs-lookup"><span data-stu-id="4bcb2-104">Gets the local Configuration Manager settings that are used to control the Configuration Agent.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="4bcb2-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4bcb2-105">Syntax</span></span>
 ------
 
 ```mof
@@ -25,37 +23,32 @@ uint32 GetMetaConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="4bcb2-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4bcb2-106">Parameters</span></span>
 ----------
 
-*MetaConfiguration* \[out\]  
-No retorno, contém uma instância incorporada da classe **MSFT_DSCMetaConfiguration** que define as configurações.
+<span data-ttu-id="4bcb2-107">*MetaConfiguration* \[out\]</span><span class="sxs-lookup"><span data-stu-id="4bcb2-107">*MetaConfiguration* \[out\]</span></span>  
+<span data-ttu-id="4bcb2-108">No retorno, contém uma instância incorporada da classe **MSFT_DSCMetaConfiguration** que define as configurações.</span><span class="sxs-lookup"><span data-stu-id="4bcb2-108">On return, contains an embedded instance of the **MSFT_DSCMetaConfiguration** class that defines the settings.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="4bcb2-109">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="4bcb2-109">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="4bcb2-110">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="4bcb2-110">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="4bcb2-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="4bcb2-111">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="4bcb2-112">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="4bcb2-112">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="4bcb2-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4bcb2-113">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="4bcb2-114">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="4bcb2-114">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="4bcb2-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="4bcb2-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="4bcb2-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4bcb2-116">See also</span></span>
+
+
+[<span data-ttu-id="4bcb2-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="4bcb2-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

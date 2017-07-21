@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
->Observação: dê um título descritivo proposto e uma breve descrição
+><span data-ttu-id="aaf10-103">Observação: dê um título descritivo proposto e uma breve descrição</span><span class="sxs-lookup"><span data-stu-id="aaf10-103">Note: provide a proposed descriptive title and a brief description</span></span>
 
-<a id="example-erroneous-executionpolicy-errors" class="xliff"></a>
-## Exemplo: erros de ExecutionPolicy incorreta ##
-No Windows 7, o uso de módulos PowerShell e recursos DSC pode fazer com que erros sobre ExecutionPolicy sejam relatados.
+## <a name="example-erroneous-executionpolicy-errors"></a><span data-ttu-id="aaf10-104">Exemplo: erros de ExecutionPolicy incorreta</span><span class="sxs-lookup"><span data-stu-id="aaf10-104">Example: Erroneous ExecutionPolicy errors</span></span> ##
+<span data-ttu-id="aaf10-105">No Windows 7, o uso de módulos PowerShell e recursos DSC pode fazer com que erros sobre ExecutionPolicy sejam relatados.</span><span class="sxs-lookup"><span data-stu-id="aaf10-105">On Windows 7, the use of PowerShell modules and DSC resources may result in errors reported about ExecutionPolicy.</span></span>
 
-<a id="resolution" class="xliff"></a>
-### Resolução
+### <a name="resolution"></a><span data-ttu-id="aaf10-106">Resolução</span><span class="sxs-lookup"><span data-stu-id="aaf10-106">Resolution</span></span>
 
-Para resolver, defina **ExecutionPolicy** como **RemoteSigned** executando o seguinte comando em uma sessão do PowerShell com privilégios elevados (Executar como Administrador):
+<span data-ttu-id="aaf10-107">Para resolver, defina **ExecutionPolicy** como **RemoteSigned** executando o seguinte comando em uma sessão do PowerShell com privilégios elevados (Executar como Administrador):</span><span class="sxs-lookup"><span data-stu-id="aaf10-107">To resolve, set the **ExecutionPolicy** to **RemoteSigned** by running the following command in an elevated PowerShell session (Run as Administrator):</span></span>
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned

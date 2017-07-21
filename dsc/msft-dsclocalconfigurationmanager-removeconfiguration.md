@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="59ce9-103">Método RemoveConfiguration da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="59ce9-103">RemoveConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Remove os arquivo de configuração.
+<span data-ttu-id="59ce9-104">Remove os arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="59ce9-104">Removes the configuration files.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="59ce9-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="59ce9-105">Syntax</span></span>
 ------
 
 ```mof
@@ -26,46 +24,41 @@ uint32 RemoveConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="59ce9-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="59ce9-106">Parameters</span></span>
 ----------
 
-*Stage* \[in\]  
-Especifica qual documento de configuração remover. Os seguintes valores são válidos:
+<span data-ttu-id="59ce9-107">*Stage* \[in\]</span><span class="sxs-lookup"><span data-stu-id="59ce9-107">*Stage* \[in\]</span></span>  
+<span data-ttu-id="59ce9-108">Especifica qual documento de configuração remover.</span><span class="sxs-lookup"><span data-stu-id="59ce9-108">Specifies which configuration document to remove.</span></span> <span data-ttu-id="59ce9-109">Os seguintes valores são válidos:</span><span class="sxs-lookup"><span data-stu-id="59ce9-109">The following values are valid:</span></span>
 
-|Valor |Descrição |
+|<span data-ttu-id="59ce9-110">Valor</span><span class="sxs-lookup"><span data-stu-id="59ce9-110">Value</span></span> |<span data-ttu-id="59ce9-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="59ce9-111">Description</span></span> |
 |:--- |:---|
-|**1** | O documento de configuração **atual** (current.mof). |
-|**2** | O documento de configuração **Pendente** (current.mof).  |
-|**4** | O documento de configuração **Anterior** (current.mof). |
+|<span data-ttu-id="59ce9-112">**1**</span><span class="sxs-lookup"><span data-stu-id="59ce9-112">**1**</span></span> | <span data-ttu-id="59ce9-113">O documento de configuração **atual** (current.mof).</span><span class="sxs-lookup"><span data-stu-id="59ce9-113">The **Current** configuration document (current.mof).</span></span> |
+|<span data-ttu-id="59ce9-114">**2**</span><span class="sxs-lookup"><span data-stu-id="59ce9-114">**2**</span></span> | <span data-ttu-id="59ce9-115">O documento de configuração **Pendente** (current.mof).</span><span class="sxs-lookup"><span data-stu-id="59ce9-115">The **Pending** configuration document (pending.mof).</span></span>  |
+|<span data-ttu-id="59ce9-116">**4**</span><span class="sxs-lookup"><span data-stu-id="59ce9-116">**4**</span></span> | <span data-ttu-id="59ce9-117">O documento de configuração **Anterior** (current.mof).</span><span class="sxs-lookup"><span data-stu-id="59ce9-117">The **Previous** configuration document (previous.mof).</span></span> |
 
-*Force* \[in\]  
-**true** para forçar a remoção da configuração.
+<span data-ttu-id="59ce9-118">*Force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="59ce9-118">*Force* \[in\]</span></span>  
+<span data-ttu-id="59ce9-119">**true** para forçar a remoção da configuração.</span><span class="sxs-lookup"><span data-stu-id="59ce9-119">**true** to force the removal of the configuration.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="59ce9-120">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="59ce9-120">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="59ce9-121">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="59ce9-121">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="59ce9-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="59ce9-122">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="59ce9-123">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="59ce9-123">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="59ce9-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="59ce9-124">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="59ce9-125">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="59ce9-125">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="59ce9-126">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="59ce9-126">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="59ce9-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="59ce9-127">See also</span></span>
+
+
+[<span data-ttu-id="59ce9-128">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="59ce9-128">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

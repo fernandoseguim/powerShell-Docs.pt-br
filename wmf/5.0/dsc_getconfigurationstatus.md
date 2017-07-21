@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="details-about-configuration-status" class="xliff"></a>
-# Detalhes sobre o status de configuração
+# <a name="details-about-configuration-status"></a><span data-ttu-id="7a623-102">Detalhes sobre o status de configuração</span><span class="sxs-lookup"><span data-stu-id="7a623-102">Details about Configuration Status</span></span>
 
-O cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) obtém informações sobre o status de configuração de um nó de destino. Para obter mais informações, veja [Solucionando problemas de DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).
+<span data-ttu-id="7a623-103">O cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) obtém informações sobre o status de configuração de um nó de destino.</span><span class="sxs-lookup"><span data-stu-id="7a623-103">The [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) cmdlet gets information about configuration status from a target node.</span></span> <span data-ttu-id="7a623-104">Para obter mais informações, veja [Solucionando problemas de DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).</span><span class="sxs-lookup"><span data-stu-id="7a623-104">For more information, see [Troubleshooting DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).</span></span>
 

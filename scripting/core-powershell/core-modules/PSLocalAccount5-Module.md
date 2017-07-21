@@ -9,10 +9,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="pslocalaccount5-module"></a>Módulo PSLocalAccount5
-Esta seção contém os tópicos de ajuda para o módulo **PSLocalAccounts5**.
+# <a name="pslocalaccount5-module"></a><span data-ttu-id="93df1-103">Módulo PSLocalAccount5</span><span class="sxs-lookup"><span data-stu-id="93df1-103">PSLocalAccount5 Module</span></span>
+<span data-ttu-id="93df1-104">Esta seção contém os tópicos de ajuda para o módulo **PSLocalAccounts5**.</span><span class="sxs-lookup"><span data-stu-id="93df1-104">This section contains the help topics for the **PSLocalAccounts5** module.</span></span>
 
-## <a name="see-also"></a>Consulte Também
-- [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
-- [Scripts com o Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+## <a name="see-also"></a><span data-ttu-id="93df1-105">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="93df1-105">See Also</span></span>
+- [<span data-ttu-id="93df1-106">Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="93df1-106">Windows PowerShell 5.0</span></span>](Windows-PowerShell-5.0.md)
+- [<span data-ttu-id="93df1-107">Scripts com o Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="93df1-107">Scripting with Windows PowerShell</span></span>](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 

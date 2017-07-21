@@ -10,32 +10,27 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="unregister-psrepository" class="xliff"></a>
-# Unregister-PSRepository
+# <a name="unregister-psrepository"></a><span data-ttu-id="4681f-103">Unregister-PSRepository</span><span class="sxs-lookup"><span data-stu-id="4681f-103">Unregister-PSRepository</span></span>
 
-Cancela o registro de um repositório.
+<span data-ttu-id="4681f-104">Cancela o registro de um repositório.</span><span class="sxs-lookup"><span data-stu-id="4681f-104">Unregisters a repository.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a><span data-ttu-id="4681f-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="4681f-105">Description</span></span>
 
-O cmdlet Unregister-PSRepository cancela o registro de um repositório para o usuário atual.
-- O cancelamento de registros e a realização de novos registros do repositório PSGallery são permitidos para cenários empresariais e desconectados.
-- Os usuários podem registrar novamente a PSGallery apenas executando `Register-PSRepository -Default`
-- Como PSGallery é o repositório de publicação padrão nos cmdlets Publish-Module e Publish-Script, um erro será gerado se PSGallery não estiver disponível na lista de repositórios registrados.
+<span data-ttu-id="4681f-106">O cmdlet Unregister-PSRepository cancela o registro de um repositório para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="4681f-106">The Unregister-PSRepository cmdlet unregisters a repository for the current user.</span></span>
+- <span data-ttu-id="4681f-107">O cancelamento de registros e a realização de novos registros do repositório PSGallery são permitidos para cenários empresariais e desconectados.</span><span class="sxs-lookup"><span data-stu-id="4681f-107">Unregistration and re-registration of the PSGallery repository is allowed for an enterprise and disconnected scenarios.</span></span>
+- <span data-ttu-id="4681f-108">Os usuários podem registrar novamente a PSGallery apenas executando `Register-PSRepository -Default`</span><span class="sxs-lookup"><span data-stu-id="4681f-108">Users can re-register the PSGallery by simply running `Register-PSRepository -Default`</span></span>
+- <span data-ttu-id="4681f-109">Como PSGallery é o repositório de publicação padrão nos cmdlets Publish-Module e Publish-Script, um erro será gerado se PSGallery não estiver disponível na lista de repositórios registrados.</span><span class="sxs-lookup"><span data-stu-id="4681f-109">Since PSGallery is the default publish repository in Publish-Module and Publish-Script cmdlets, an error will be thrown if PSGallery is not available in the registered repository list.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="4681f-110">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="4681f-110">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Unregister-PSRepository -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="4681f-111">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="4681f-111">Cmdlet online help reference</span></span>
 
-[Unregister-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517130)
+[<span data-ttu-id="4681f-112">Unregister-PSRepository</span><span class="sxs-lookup"><span data-stu-id="4681f-112">Unregister-PSRepository</span></span>](http://go.microsoft.com/fwlink/?LinkID=517130)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="4681f-113">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="4681f-113">Example commands</span></span>
 
 ```powershell
 Unregister-PSRepository -Name "MyPrivateGallery"
@@ -43,8 +38,7 @@ Unregister-PSRepository -Name "MyPrivateGallery"
 Get-PSRepository exp | Unregister-PSRepository
 ```
 
-<a id="unregistration-and-re-registration-of-the-psgallery-repository-is-allowed-for-an-enterprise-and-disconnected-scenarios" class="xliff"></a>
-### O cancelamento de registros e a realização de novos registros do repositório PSGallery são permitidos para cenários empresariais e desconectados.
+### <a name="unregistration-and-re-registration-of-the-psgallery-repository-is-allowed-for-an-enterprise-and-disconnected-scenarios"></a><span data-ttu-id="4681f-114">O cancelamento de registros e a realização de novos registros do repositório PSGallery são permitidos para cenários empresariais e desconectados.</span><span class="sxs-lookup"><span data-stu-id="4681f-114">Unregistration and re-registration of the PSGallery repository is allowed for an enterprise and disconnected scenarios.</span></span>
 ```powershell
 
 # Unregister PSGallery repository

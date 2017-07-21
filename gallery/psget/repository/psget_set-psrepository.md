@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="set-psrepository" class="xliff"></a>
-# Set-PSRepository
+# <a name="set-psrepository"></a><span data-ttu-id="d10bd-103">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="d10bd-103">Set-PSRepository</span></span>
 
-Set-PSRepository define valores para um repositório registrado.
+<span data-ttu-id="d10bd-104">Set-PSRepository define valores para um repositório registrado.</span><span class="sxs-lookup"><span data-stu-id="d10bd-104">Set-PSRepository sets values for a registered repository.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a><span data-ttu-id="d10bd-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="d10bd-105">Description</span></span>
 
-O cmdlet Set-PSRepository define valores para um repositório de módulo registrado.
+<span data-ttu-id="d10bd-106">O cmdlet Set-PSRepository define valores para um repositório de módulo registrado.</span><span class="sxs-lookup"><span data-stu-id="d10bd-106">The Set-PSRepository cmdlet sets values for a registered module repository.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="d10bd-107">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="d10bd-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Set-PSRepository -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="d10bd-108">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="d10bd-108">Cmdlet online help reference</span></span>
 
-[Set-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517128)
+[<span data-ttu-id="d10bd-109">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="d10bd-109">Set-PSRepository</span></span>](http://go.microsoft.com/fwlink/?LinkID=517128)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a><span data-ttu-id="d10bd-110">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="d10bd-110">Example commands</span></span>
 
 ```powershell
 PS C:\> Register-PSRepository -Name myRepository -SourceLocation "https://www.myget.org/F/powershellgetdemo/api/v2" -InstallationPolicy Trusted
@@ -51,10 +46,9 @@ myRepository              Untrusted            https://www.myget.org/F/powershel
 ```
 
 
-<a id="set-psrepository-cmdlet-with-script-sharing-support" class="xliff"></a>
-### Cmdlet Set-PSRepository com suporte de compartilhamento de script
+### <a name="set-psrepository-cmdlet-with-script-sharing-support"></a><span data-ttu-id="d10bd-111">Cmdlet Set-PSRepository com suporte de compartilhamento de script</span><span class="sxs-lookup"><span data-stu-id="d10bd-111">Set-PSRepository cmdlet with script sharing support</span></span>
 
-Use o cmdlet Set-PSRepository para adicionar **ScriptSourceLocation** e **ScriptPublishLocation** ao PSRepository.
+<span data-ttu-id="d10bd-112">Use o cmdlet Set-PSRepository para adicionar **ScriptSourceLocation** e **ScriptPublishLocation** ao PSRepository.</span><span class="sxs-lookup"><span data-stu-id="d10bd-112">Use Set-PSRepository cmdlets to add the **ScriptSourceLocation** and **ScriptPublishLocation** to the PSRepository.</span></span>
 ```powershell
 # Add script sharing locations to an existing PSRepository using Set-PSRepository object.
 Set-PSRepository -Name MyGallery `

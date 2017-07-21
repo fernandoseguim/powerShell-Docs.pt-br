@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="40fa1-103">Método TestConfiguration da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="40fa1-103">TestConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Envia o documento de configuração para o nó gerenciado e verifica a configuração atual de acordo com o documento.
+<span data-ttu-id="40fa1-104">Envia o documento de configuração para o nó gerenciado e verifica a configuração atual de acordo com o documento.</span><span class="sxs-lookup"><span data-stu-id="40fa1-104">Sends the configuration document to the managed node and verifies the current configuration against the document.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="40fa1-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="40fa1-105">Syntax</span></span>
 ------
 
 ```mof
@@ -28,46 +26,41 @@ uint32 TestConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="40fa1-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="40fa1-106">Parameters</span></span>
 ----------
 
-*configurationData* \[in\]  
-Dados de ambiente de configuration.
+<span data-ttu-id="40fa1-107">*configurationData* \[in\]</span><span class="sxs-lookup"><span data-stu-id="40fa1-107">*configurationData* \[in\]</span></span>  
+<span data-ttu-id="40fa1-108">Dados de ambiente de configuration.</span><span class="sxs-lookup"><span data-stu-id="40fa1-108">Environment data for the confuguration.</span></span>
 
-*InDesiredState* \[out\]  
-No retorno, especifica se o nó gerenciado está no estado especificado pelo documento de configuração.
+<span data-ttu-id="40fa1-109">*InDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="40fa1-109">*InDesiredState* \[out\]</span></span>  
+<span data-ttu-id="40fa1-110">No retorno, especifica se o nó gerenciado está no estado especificado pelo documento de configuração.</span><span class="sxs-lookup"><span data-stu-id="40fa1-110">On return, specifies whether the managed node is in the state specified by the configuration document.</span></span>
 
-*ResourcesInDesiredState* \[out\]  
-No retorno, contém uma instância incorporada da classe **MSFT_ResourceInDesiredState** que especifica os recursos que estão no estado desejado.
+<span data-ttu-id="40fa1-111">*ResourcesInDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="40fa1-111">*ResourcesInDesiredState* \[out\]</span></span>  
+<span data-ttu-id="40fa1-112">No retorno, contém uma instância incorporada da classe **MSFT_ResourceInDesiredState** que especifica os recursos que estão no estado desejado.</span><span class="sxs-lookup"><span data-stu-id="40fa1-112">On return, contains an embedded instance of the **MSFT_ResourceInDesiredState** class that specifies resources that are in the desired state.</span></span>
 
-*ResourcesNotInDesiredState* \[out\]  
-No retorno, contém uma instância incorporada da classe **MSFT_ResourceNotInDesiredState** que especifica os recursos que não estão no estado desejado.
+<span data-ttu-id="40fa1-113">*ResourcesNotInDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="40fa1-113">*ResourcesNotInDesiredState* \[out\]</span></span>  
+<span data-ttu-id="40fa1-114">No retorno, contém uma instância incorporada da classe **MSFT_ResourceNotInDesiredState** que especifica os recursos que não estão no estado desejado.</span><span class="sxs-lookup"><span data-stu-id="40fa1-114">On return, contains an embedded instance of the **MSFT_ResourceNotInDesiredState** class that specifies resources that are not in the desired state.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="40fa1-115">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="40fa1-115">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="40fa1-116">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="40fa1-116">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="40fa1-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="40fa1-117">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="40fa1-118">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="40fa1-118">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="40fa1-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="40fa1-119">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="40fa1-120">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="40fa1-120">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="40fa1-121">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="40fa1-121">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="40fa1-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40fa1-122">See also</span></span>
+
+
+[<span data-ttu-id="40fa1-123">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="40fa1-123">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

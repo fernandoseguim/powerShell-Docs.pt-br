@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="bd305-103">Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="bd305-103">GetConfigurationStatus method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Obtém o histórico do status de configuração.
+<span data-ttu-id="bd305-104">Obtém o histórico do status de configuração.</span><span class="sxs-lookup"><span data-stu-id="bd305-104">Get the configuration status history.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a><span data-ttu-id="bd305-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bd305-105">Syntax</span></span>
 ------
 
 ```mof
@@ -26,40 +24,35 @@ uint32 GetConfigurationStatus(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a><span data-ttu-id="bd305-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bd305-106">Parameters</span></span>
 ----------
 
-*All* \[in\]  
-**true** caso esse método deva retornar informações sobre todos as configurações executadas no computador, incluindo o aplicativo de configuração e a verificação de consistência.
+<span data-ttu-id="bd305-107">*All* \[in\]</span><span class="sxs-lookup"><span data-stu-id="bd305-107">*All* \[in\]</span></span>  
+<span data-ttu-id="bd305-108">**true** caso esse método deva retornar informações sobre todos as configurações executadas no computador, incluindo o aplicativo de configuração e a verificação de consistência.</span><span class="sxs-lookup"><span data-stu-id="bd305-108">**true** if this method should return information about all the configuration runs on the machine, including the configuration application and the consistency check.</span></span>
 
-*configurationStatus* \[out\]  
-No retorno, contém uma instância incorporada da classe **MSFT_DSCConfigurationStatus** que define as configurações.
+<span data-ttu-id="bd305-109">*configurationStatus* \[out\]</span><span class="sxs-lookup"><span data-stu-id="bd305-109">*configurationStatus* \[out\]</span></span>  
+<span data-ttu-id="bd305-110">No retorno, contém uma instância incorporada da classe **MSFT_DSCConfigurationStatus** que define as configurações.</span><span class="sxs-lookup"><span data-stu-id="bd305-110">On return, contains an embedded instance of the **MSFT_DSCConfigurationStatus** class that defines the settings.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="bd305-111">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="bd305-111">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="bd305-112">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="bd305-112">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="bd305-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="bd305-113">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="bd305-114">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="bd305-114">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="bd305-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bd305-115">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="bd305-116">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="bd305-116">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="bd305-117">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="bd305-117">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="bd305-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bd305-118">See also</span></span>
+
+
+[<span data-ttu-id="bd305-119">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="bd305-119">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

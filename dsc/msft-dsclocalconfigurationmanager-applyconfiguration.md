@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="bb51b-103">Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="bb51b-103">ApplyConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Usa o Agente de Configuração para aplicar a configuração pendente. 
+<span data-ttu-id="bb51b-104">Usa o Agente de Configuração para aplicar a configuração pendente.</span><span class="sxs-lookup"><span data-stu-id="bb51b-104">Uses the Configuration Agent to apply the configuration that is pending.</span></span> 
 
-Se não houver nenhuma configuração pendente, esse método reaplicará a configuração atual.
+<span data-ttu-id="bb51b-105">Se não houver nenhuma configuração pendente, esse método reaplicará a configuração atual.</span><span class="sxs-lookup"><span data-stu-id="bb51b-105">If there is no configuration pending, this method reapplies the current configuration.</span></span>
 
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a><span data-ttu-id="bb51b-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bb51b-106">Syntax</span></span>
 ------
 
 ```mof
@@ -28,37 +26,32 @@ uint32 ApplyConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-## Parâmetros
+## <a name="parameters"></a><span data-ttu-id="bb51b-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bb51b-107">Parameters</span></span>
 ----------
 
-*force* \[in\]  
-Se isso for **true**, a configuração atual é reaplicada, mesmo que haja uma configuração pendente.
+<span data-ttu-id="bb51b-108">*force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="bb51b-108">*force* \[in\]</span></span>  
+<span data-ttu-id="bb51b-109">Se isso for **true**, a configuração atual é reaplicada, mesmo que haja uma configuração pendente.</span><span class="sxs-lookup"><span data-stu-id="bb51b-109">If this is **true**, the current configuration is reapplied, even if there is a configuration pending.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a><span data-ttu-id="bb51b-110">Retornar valor</span><span class="sxs-lookup"><span data-stu-id="bb51b-110">Return value</span></span>
 ------------
 
-Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
+<span data-ttu-id="bb51b-111">Retorna zero em caso de êxito; caso contrário, retorna um código de erro.</span><span class="sxs-lookup"><span data-stu-id="bb51b-111">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a><span data-ttu-id="bb51b-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="bb51b-112">Remarks</span></span>
 
-Esse é um método estático.
+<span data-ttu-id="bb51b-113">Esse é um método estático.</span><span class="sxs-lookup"><span data-stu-id="bb51b-113">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a><span data-ttu-id="bb51b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bb51b-114">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="bb51b-115">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="bb51b-115">**MOF:** DscCore.mof</span></span>
 
->**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Consulte também
+><span data-ttu-id="bb51b-116">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="bb51b-116">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="bb51b-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb51b-117">See also</span></span>
+
+
+[<span data-ttu-id="bb51b-118">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="bb51b-118">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
  
 

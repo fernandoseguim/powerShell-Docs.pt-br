@@ -10,18 +10,17 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-dsc-pull-client" class="xliff"></a>
-# Configurando um cliente de pull de DSC
+# <a name="setting-up-a-dsc-pull-client"></a><span data-ttu-id="b472d-103">Configurando um cliente de pull de DSC</span><span class="sxs-lookup"><span data-stu-id="b472d-103">Setting up a DSC pull client</span></span>
 
-> Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+> <span data-ttu-id="b472d-104">Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="b472d-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-Cada nó de destino deve ser instruído a usar o modo de pull e receber a URL ou local do arquivo em que possa contatar o servidor de pull para obter as configurações e recursos e para onde deve enviar os dados de relatório.
+<span data-ttu-id="b472d-105">Cada nó de destino deve ser instruído a usar o modo de pull e receber a URL ou local do arquivo em que possa contatar o servidor de pull para obter as configurações e recursos e para onde deve enviar os dados de relatório.</span><span class="sxs-lookup"><span data-stu-id="b472d-105">Each target node has to be told to use pull mode and given the URL or file location where it can contact the pull server to get configurations and resources, and where it should send report data.</span></span>
 
 
-Os tópicos a seguir explicam como configurar clientes de pull:
+<span data-ttu-id="b472d-106">Os tópicos a seguir explicam como configurar clientes de pull:</span><span class="sxs-lookup"><span data-stu-id="b472d-106">The following topics explain how to set up pull clients:</span></span>
 
-* [Configurando um cliente de pull usando nomes de configuração](pullClientConfigNames.md)
-* [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md)
+* [<span data-ttu-id="b472d-107">Configurando um cliente de pull usando nomes de configuração</span><span class="sxs-lookup"><span data-stu-id="b472d-107">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
+* [<span data-ttu-id="b472d-108">Configurando um cliente de pull usando uma ID de configuração</span><span class="sxs-lookup"><span data-stu-id="b472d-108">Setting up a pull client using configuration ID</span></span>](pullClientConfigID.md)
 
-> **Observação**: estes tópicos se aplicam ao PowerShell 5.0. Para configurar um cliente de pull no PowerShell 4.0, consulte [Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md).
+> <span data-ttu-id="b472d-109">**Observação**: estes tópicos se aplicam ao PowerShell 5.0.</span><span class="sxs-lookup"><span data-stu-id="b472d-109">**Note**: These topics apply to PowerShell 5.0.</span></span> <span data-ttu-id="b472d-110">Para configurar um cliente de pull no PowerShell 4.0, consulte [Configurando um cliente de pull usando uma ID de configuração no PowerShell 4.0](pullClientConfigID4.md).</span><span class="sxs-lookup"><span data-stu-id="b472d-110">To set up a pull client in PowerShell 4.0, see [Setting up a pull client using configuration ID in PowerShell 4.0](pullClientConfigID4.md).</span></span>
 
