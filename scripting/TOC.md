@@ -15,7 +15,6 @@
 ### [Instalar o SDK do Windows PowerShell](setup/Installing-the-Windows-PowerShell-SDK.md)
 ### [Segurança](setup/security.md)
 #### [Considerações de segurança de comunicação remota do PowerShell](setup/WinRMSecurity.md)
-#### [Dando o segundo salto na Comunicação Remota do PowerShell](setup/PS-remoting-second-hop.md)
 ### [Acessibilidade](setup/Accessibility-in-Windows-PowerShell-ISE.md)
 
 ## [Introdução](getting-started/Getting-Started-with-Windows-PowerShell.md)
