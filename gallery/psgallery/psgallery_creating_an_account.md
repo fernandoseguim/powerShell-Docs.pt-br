@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-a-powershell-gallery-account" class="xliff"></a>
-## Criando uma conta da Galeria do PowerShell
+## <a name="creating-a-powershell-gallery-account"></a>Criando uma conta da Galeria do PowerShell
 
 Uma conta da Galeria do PowerShell deve ser estabelecida antes de publicar algo na Galeria do PowerShell. As contas da Galeria do PowerShell devem ser vinculadas a uma conta do Azure Active Directory habilitada por email ou a uma conta de email da Microsoft (com um domínio do outlook.com, do hotmail.com, etc.)
 
@@ -26,8 +25,7 @@ Depois de fazer logon, será solicitado que você crie um nome de usuário para 
 Observação: este nome de conta não poderá ser alterado após a criação.  
 Consulte [Gerenciando proprietários do item](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/managing-item-owners) para obter detalhes adicionais relacionados a isso.
 
-<a id="recommended-practices-for-powershell-gallery-accounts" class="xliff"></a>
-## Práticas recomendadas para contas da Galeria do PowerShell
+## <a name="recommended-practices-for-powershell-gallery-accounts"></a>Práticas recomendadas para contas da Galeria do PowerShell
 
 É importante que a conta de email usada com sua conta da Galeria do PowerShell seja monitorada ativamente.
 Toda a comunicação com os proprietários de itens da Galeria do PowerShell é feita por email usando o endereço associado à sua conta da Galeria do PowerShell.
