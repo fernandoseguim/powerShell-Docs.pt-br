@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: "Usando classes e métodos estáticos"
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
 ms.openlocfilehash: fe41c7d6b45564e7b5bc2b922a18587c9745e26d
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:

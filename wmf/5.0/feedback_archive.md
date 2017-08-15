@@ -1,31 +1,28 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: d23cfc2aaa680c247aaab91d8875c64c9d62187e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 7ad4a00f7beba0de70696d88cd5448c7c638c50c
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="archive-cmdlets" class="xliff"></a>
-# Cmdlets Archive
+# <a name="archive-cmdlets"></a>Cmdlets Archive
 
 Dois novos cmdlets, **Compress-Archive** e **Expand-Archive**, permitem compactar e expandir arquivos ZIP.
 
-<a id="compress-archive" class="xliff"></a>
-## Compress-Archive
+## <a name="compress-archive"></a>Compress-Archive
 O cmdlet **Compress-Archive** cria um novo arquivo morto dos arquivos especificados. Um arquivo morto permite que vários arquivos sejam empacotados e, opcionalmente, compactados em um único arquivo para facilitar o tratamento e armazenamento. Um arquivo morto pode ser compactado usando um algoritmo de compactação especificado no parâmetro **-CompressionLevel**.
-```PowerShell
+```powershell
 Compress-Archive -LiteralPath <String[]> [-DestinationPath] <String> [-Update] [-CompressionLevel <Microsoft.PowerShell.Commands.CompressionLevel>] 
 Compress-Archive [-Path] <String[]> [-DestinationPath] <String> [-Update] [-CompressionLevel <Microsoft.PowerShell.Commands.CompressionLevel>]
 ```
 
-<a id="expand-archive" class="xliff"></a>
-## Expand-Archive
+## <a name="expand-archive"></a>Expand-Archive
 O cmdlet **Expand-Archive** extrai os arquivos de um arquivo morto especificado. Um arquivo morto permite que vários arquivos sejam empacotados e, opcionalmente, compactados em um único arquivo para facilitar o tratamento e armazenamento.
-```PowerShell
+```powershell
 Expand-Archive -LiteralPath <String> [-DestinationPath] <String>
 Expand-Archive [-Path] <String> [-DestinationPath] <String>
 ```

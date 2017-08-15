@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: Apresentando o Windows PowerShell ISE
 ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
 ms.openlocfilehash: 61d31fc2555d91bc7872d7b90cfb1f2a9832ff9c
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="introducing-the-windows-powershell-ise"></a>Apresentando o Windows PowerShell ISE
 O ISE (Ambiente de Script Integrado) do Windows PowerShell é um aplicativo host do Windows PowerShell. No ISE do Windows PowerShell, você pode executar comandos e escrever, testar e depurar scripts em uma única interface gráfica de usuário baseada em Windows com edição de várias linhas, preenchimento com Tab, coloração da sintaxe, execução seletiva, ajuda contextual e suporte a idiomas da direita para esquerda.

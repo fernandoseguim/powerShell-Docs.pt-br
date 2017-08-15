@@ -1,32 +1,29 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Início Rápido de Configuração de Estado Desejado"
-ms.openlocfilehash: 64c9cea7d65d0723e76c205aea104c3ec9423c1d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e8a73296827297bab3229392c4193fed940c53bf
+ms.sourcegitcommit: 46feddbc753523f464f139b5d272794620072fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/02/2017
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-<a id="desired-state-configuration-quick-start" class="xliff"></a>
-# Início Rápido de Configuração de Estado Desejado
+# <a name="desired-state-configuration-quick-start"></a>Início Rápido de Configuração de Estado Desejado
 
 Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.
 O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `intetpub\wwwroot` desse servidor.
 
-Para obter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](DscForEngineers.md).
+Para obter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](decisionMaker.md).
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 Para executar este exemplo, você precisará de um computador com o Windows Server 2012 ou posterior e o PowerShell 4.0 ou posterior.
 
-<a id="write-and-place-the-indexhtm-file" class="xliff"></a>
-## Gravar e posicionar o arquivo index.htm
+## <a name="write-and-place-the-indexhtm-file"></a>Gravar e posicionar o arquivo index.htm
 
 Primeiro, vamos criar o arquivo HTML que usaremos como o conteúdo do site.
 
@@ -43,8 +40,7 @@ Em um editor de texto, digite o texto a seguir:
 
 Salve-o como `index.htm` na pasta `test` que você criou anteriormente. 
 
-<a id="write-the-configuration" class="xliff"></a>
-## Gravar a configuração
+## <a name="write-the-configuration"></a>Gravar a configuração
 
 Uma [Configuração DSC](configurations.md) é uma função especial do PowerShell que define como você deseja configurar um ou mais computadores de destino (nós).
 
@@ -62,7 +58,7 @@ Configuration WebsiteTest {
         # The first resource block ensures that the Web-Server (IIS) feature is enabled.
         WindowsFeature WebServer {
             Ensure = "Present"
-            Name =  "Web-Server"
+            Name   = "Web-Server"
         }
 
         # The second resource block ensures that the website content copied to the website root folder.
@@ -72,7 +68,7 @@ Configuration WebsiteTest {
             DestinationPath = 'c:\inetpub\wwwroot'
         }
     }
-} 
+}
 ```
 
 Salve o arquivo como `WebsiteTest.ps1`.
@@ -84,8 +80,7 @@ O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `local
 A configuração chama dois [recursos](resources.md), [WindowsFeature](windowsFeatureResource.md) e [Arquivo](fileResource.md).
 Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.
 
-<a id="compile-the-configuration" class="xliff"></a>
-## Compilar a configuração
+## <a name="compile-the-configuration"></a>Compilar a configuração
 
 Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF.
 Para fazer isso, você deve executar a configuração como uma função.
@@ -102,20 +97,20 @@ Isso gerará os seguintes resultados:
 Directory: C:\ConfigurationTest\WebsiteTest
 
 
-Mode                LastWriteTime         Length Name                                                                                                                                                       
-----                -------------         ------ ----                                                                                                                                                       
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
 -a----        3/13/2017   5:20 PM           2746 localhost.mof
 ```
 
 A primeira linha torna a função de configuração disponível no console.
 A segunda linha executa a configuração.
 O resultado é que uma nova pasta, chamada `WebsiteTest`, é criada como uma subpasta da pasta atual.
-A pasta `WebsiteTest` contém um arquivo chamado `localhost.mof`. É o arquivo que pode ser aplicado ao nó de destino.
+A pasta `WebsiteTest` contém um arquivo chamado `localhost.mof`.
+É o arquivo que pode ser aplicado ao nó de destino.
 
-<a id="apply-the-configuration" class="xliff"></a>
-## Aplicar a configuração
+## <a name="apply-the-configuration"></a>Aplicar a configuração
 
-Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration.md).
+Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration).
 
 O cmdlet `Start-DscConfiguration` indica ao [Gerenciador de Configurações Local (LCM)](metaConfig.md), qual é o mecanismo de DSC a aplicar à configuração.
 O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.
@@ -126,15 +121,14 @@ Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua 
 Start-DscConfiguration .\WebsiteTest
 ```
 
-<a id="test-the-configuration" class="xliff"></a>
-## Testar a configuração
+## <a name="test-the-configuration"></a>Testar a configuração
 
-Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus.md) para ver se a configuração foi bem-sucedida. 
+Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) para ver se a configuração foi bem-sucedida. 
 
-Você também pode testar os resultados diretamente, neste caso, pesquisando o `http://localhost/` em um navegador da Web. Você deve ver a página de HTML "Hello World" que criou como a primeira etapa deste exemplo.
+Você também pode testar os resultados diretamente, neste caso, pesquisando o `http://localhost/` em um navegador da Web.
+Você deve ver a página de HTML "Hello World" que criou como a primeira etapa deste exemplo.
 
-<a id="next-steps" class="xliff"></a>
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 - Saiba mais sobre configurações de DSC em [Configurações de DSC](configurations.md).
 - Veja quais recursos de DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos de DSC](resources.md).

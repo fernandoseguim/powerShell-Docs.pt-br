@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: Executando comandos remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: a8645a348ebc25533f60cd049ed5872e49565b96
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 755c3c4ac93219c1d0f75394d1c900e8b5fea4be
+ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="running-remote-commands"></a>Executando comandos remotos
 Você pode executar comandos em uma ou centenas de computadores com um único comando do Windows PowerShell. O Windows PowerShell oferece suporte à computação remota usando diversas tecnologias, incluindo WMI, RPC e WS-Management.
@@ -27,7 +27,7 @@ Esses cmdlets incluem:
 
 -   [Get-HotFix](https://technet.microsoft.com/en-us/library/e1ef636f-5170-4675-b564-199d9ef6f101)
 
--   [Get-Process](https://technet.microsoft.com/en-us/library/dd347630.aspx)
+ -   [Get-Process](https://technet.microsoft.com/en-us/library/dd347630.aspx)
 
 -   [Get-Service](https://technet.microsoft.com/en-us/library/dd347591.aspx)
 
@@ -72,7 +72,7 @@ Para executar qualquer comando em um ou vários computadores remotos, use o cmdl
 Por exemplo, para executar um comando [Get-UICulture](https://technet.microsoft.com/en-us/library/dd347742.aspx) nos computadores remotos Server01 e Server02, digite:
 
 ```
-Invoke-Command -ComputerName Server01, Server02 {Get-UICulture}
+Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
 ```
 
 O resultado é retornado no seu computador.
@@ -83,7 +83,6 @@ LCID    Name     DisplayName               PSComputerName
 1033    en-US    English (United States)   server01.corp.fabrikam.com
 1033    en-US    English (United States)   server02.corp.fabrikam.com
 ```
-
 Para saber mais sobre o cmdlet Invoke-Command, confira [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
 
 ### <a name="run-a-script"></a>Executar um script
@@ -117,14 +116,14 @@ Invoke-Command -Session $s {$h = Get-HotFix}
 Agora você pode usar os dados na variável $h em comandos subsequentes, como mostrado a seguir. Os resultados são exibidos no computador local.
 
 ```
-Invoke-Command -Session $s {$h | where {$_.installedby -ne "NTAUTHORITY\SYSTEM"}}
+Invoke-Command -Session $s {$h | where {$_.InstalledBy -ne "NTAUTHORITY\SYSTEM"}}
 ```
 
 ### <a name="advanced-remoting"></a>Comunicação remota avançada
 O gerenciamento remoto do Windows PowerShell começa aqui. Usando os cmdlets instalados com o Windows PowerShell, você pode estabelecer e configurar sessões remotas tanto de extremidades locais quanto remotas, criar sessões personalizadas e restritas, permitir que os usuários importem os comandos de uma sessão remota executado implicitamente na própria sessão remota, configurar a segurança de uma sessão remota e muito mais.
 
 Para facilitar a configuração remota, o Windows PowerShell inclui um provedor WSMan. A unidade WSMAN: criada pelo provedor permite navegar por uma hierarquia de definições de configuração no computador local e nos computadores remotos.
-Para saber mais sobre o provedor WSMan, confira [WSMan Provider](https://technet.microsoft.com/en-us/library/dd819476.aspx) e   [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou, no console do Windows PowerShell, digite "Get-Help wsman".
+Para saber mais sobre o provedor WSMan, confira [WSMan Provider](https://technet.microsoft.com/en-us/library/dd819476.aspx) e [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou, no console do Windows PowerShell, digite "Get-Help wsman".
 
 Para obter mais informações, consulte:
 - [Perguntas frequentes sobre comunicação remota](https://technet.microsoft.com/en-us/library/dd315359.aspx)

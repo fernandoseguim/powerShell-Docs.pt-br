@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: "Módulo Microsoft.PowerShell.Host"
 ms.assetid: 580a896f-b1dc-46f9-af1d-ab1a93c1fbf4
 ms.openlocfilehash: 18229db227d0cbcc2172b5b70d616659f5fc05b6
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoftpowershellhost-module"></a>Módulo Microsoft.PowerShell.Host
 Esta seção contém os tópicos de ajuda para o módulo **Microsoft.PowerShell.Host**. O módulo **Microsoft.PowerShell.Host** contém cmdlets que gerenciam o recurso de programas que hospedam o Windows PowerShell. Ele é instalado com o Windows PowerShell.

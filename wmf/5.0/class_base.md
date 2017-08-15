@@ -1,19 +1,18 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: fc517cd204b8f2647b824f0b9ee8f0f8f62fb821
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 5dbaa126cf9ae3917c3a8787ffc5ef5ac77b19c1
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="declare-base-class" class="xliff"></a>
-# Declarar a classe base
+# <a name="declare-base-class"></a>Declarar a classe base
 É possível declarar uma classe do Windows PowerShell como um tipo base para outra classe do Windows PowerShell.
 
-```PowerShell
+```powershell
 class bar
 {
    [int]foo() 
@@ -29,7 +28,7 @@ class baz : bar {}
 
 Também é possível usar os tipos existentes do .NET Framework como classes base:
 
-```PowerShell
+```powershell
 class MyIntList : system.collections.generic.list[int]
 {
     

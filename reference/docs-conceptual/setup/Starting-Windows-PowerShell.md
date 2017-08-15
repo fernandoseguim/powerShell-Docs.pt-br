@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: Iniciando o Windows PowerShell
 ms.assetid: 59b649a2-c90c-4cf4-bf95-a740c59148e7
 ms.openlocfilehash: ec7ecc3214d727d55b41282fc5a5cb2e77cb84ba
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="starting-windows-powershell"></a>Iniciando o Windows PowerShell
 O PowerShell é uma dll de mecanismo de script que é inserida em vários hosts.  Os hosts que você iniciará com mais frequência são a linha de comando interativa do PowerShell.exe e o Ambiente de Script Integrado do PowerShell_ISE.exe.  

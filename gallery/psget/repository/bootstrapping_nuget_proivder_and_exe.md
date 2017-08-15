@@ -1,17 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Inicializando o provedor do NuGet e o EXE
-ms.openlocfilehash: e1a24c99910467b00b1c22d50125c81c63b077ed
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 0036972eb9a0c20469da1aadafe223e6ec80f16a
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="bootstrap-both-nuget-provider-and-nugetexe-or-bootstrap-only-nuget-provider" class="xliff"></a>
-# Inicializar o provedor do NuGet e o NuGet.exe ou inicializar somente o provedor do NuGet
+# <a name="bootstrap-both-nuget-provider-and-nugetexe-or-bootstrap-only-nuget-provider"></a>Inicializar o provedor do NuGet e o NuGet.exe ou inicializar somente o provedor do NuGet
 
 O NuGet.exe não está incluído no provedor do NuGet mais recente.
 Para operações de publicação de um módulo ou um de script, o PowerShellGet requer o NuGet.exe executável binário.
@@ -22,10 +21,9 @@ Se o computador não estiver conectado à Internet, o usuário ou um administrad
 
 >**Observação**: a partir da versão 6, o provedor do NuGet é incluído na instalação do PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
 
-<a id="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Resolvendo erro quando o provedor do NuGet não for instalado em um computador conectado à Internet
+## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a>Resolvendo erro quando o provedor do NuGet não for instalado em um computador conectado à Internet
 
-```PowerShell
+```powershell
 PS C:\> Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 NuGet provider is required to continue
@@ -53,10 +51,9 @@ Version    Name                                Type       Repository           D
 -------    ----                                ----       ----------           -----------
 2.5        Contoso                             Module     PSGallery        Contoso module
 ```
-<a id="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Resolvendo erro quando o provedor do NuGet está disponível e o NuGet.exe não está disponível durante a operação de publicação em um computador conectado à Internet
+## <a name="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Resolvendo erro quando o provedor do NuGet está disponível e o NuGet.exe não está disponível durante a operação de publicação em um computador conectado à Internet
 
-```PowerShell
+```powershell
 PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe is required to continue
@@ -78,10 +75,9 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<a id="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Resolução de erro quando o provedor do NuGet e o NuGet.exe não estão disponíveis durante a operação de publicação em um computador conectado à Internet
+## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Resolução de erro quando o provedor do NuGet e o NuGet.exe não estão disponíveis durante a operação de publicação em um computador conectado à Internet
 
-```PowerShell
+```powershell
 PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe and NuGet provider are required to continue
@@ -105,8 +101,7 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<a id="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
-## Inicializando manualmente o provedor do NuGet em um computador que não está conectado à Internet
+## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a>Inicializando manualmente o provedor do NuGet em um computador que não está conectado à Internet
 
 Os processos demonstrados acima pressupõem que o computador está conectado à Internet e pode baixar arquivos de um local público.
 Se isso não for possível, a única opção será inicializar um computador com os processos descritos acima e copiar manualmente o provedor para o nó isolado por meio de um processo confiável offline.
@@ -125,8 +120,7 @@ NuGet<br>
 
 Copie essas pastas e arquivos para os computadores offline usando um processo confiável.
 
-<a id="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
-## Inicializando manualmente o NuGet.exe para dar suporte a operações de publicação em um computador que não está conectado à Internet
+## <a name="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet"></a>Inicializando manualmente o NuGet.exe para dar suporte a operações de publicação em um computador que não está conectado à Internet
 
 Além de processo para inicializar manualmente o provedor do NuGet, se o computador for usado para publicar scripts ou módulos em uma galeria privada usando os cmdlets *Publish-Module* ou *Publish-Script*, o arquivo executável binário NuGet.exe será necessário.
 O caso de uso mais comum para esse cenário é quando uma galeria privada está disponível para dar suporte a um ambiente isolado.
