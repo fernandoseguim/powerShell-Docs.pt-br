@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: ISE (Ambiente de Script Integrado) do Windows PowerShell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 ms.openlocfilehash: 93b3322ae5634d3611f3c2743e7460e266dc7ab8
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Ambiente de script integrado do Windows PowerShell (ISE)
 O ISE (Ambiente de Script Integrado) do Windows PowerShell é um dos dois hosts para o mecanismo do Windows PowerShell e a linguagem idioma. Com ele você pode gravar, executar e testar scripts de maneiras que não estão disponíveis no Console do Windows PowerShell. O ISE adiciona cores de sintaxe, preenchimento com Tab, IntelliSense, depuração visual e ajuda contextual.

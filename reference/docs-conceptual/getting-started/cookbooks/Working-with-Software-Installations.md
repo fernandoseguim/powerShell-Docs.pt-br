@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: "Trabalhando com instalações de software"
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ms.openlocfilehash: 2078376a8be19c9ff8ecc44183eb89f14bc388ed
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="working-with-software-installations"></a>Trabalhando com instalações de software
 Aplicativos que são projetados para usar o Windows Installer podem ser acessados por meio da classe do WMI **Win32_Product**, mas nem todos os aplicativos usados atualmente usam o Windows Installer. Como o Windows Installer fornece a mais ampla variedade de técnicas padrão para trabalhar com aplicativos instalados, abordaremos principalmente estes aplicativos. Aplicativos que usam rotinas de instalação alternativas geralmente não serão gerenciados pelo Windows Installer. Técnicas específicas para trabalhar com esses aplicativos dependem do instalador do software e as decisões tomadas pelo desenvolvedor do aplicativo.

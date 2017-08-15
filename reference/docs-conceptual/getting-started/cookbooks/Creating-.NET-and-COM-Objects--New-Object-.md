@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: Criando objetos .NET e COM New Object
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
 ms.openlocfilehash: 534e1a9a759d67cfc62ce658a7abddf02f767212
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Criando objetos .NET e COM (New-Object)
 Existem componentes de software com as interfaces .NET Framework e COM que permitem executar muitas tarefas de administração do sistema. O Windows PowerShell permite usar esses componentes para que você não fique limitado a tarefas que podem ser executadas usando cmdlets. Muitos dos cmdlets na versão inicial do Windows PowerShell não funcionam em computadores remotos. Demonstraremos como contornar essa limitação gerenciando logs de eventos usando a classe **System.Diagnostics.EventLog** do .NET Framework diretamente do Windows PowerShell.

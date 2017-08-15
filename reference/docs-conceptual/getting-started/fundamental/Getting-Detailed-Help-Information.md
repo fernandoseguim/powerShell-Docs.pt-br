@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: "Obtendo informações de ajuda detalhadas"
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
 ms.openlocfilehash: 3260b5ec0a91749d3b7b126412137aa9d603ef0e
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="getting-detailed-help-information"></a>Obtendo informações de ajuda detalhadas
 O Windows PowerShell inclui tópicos detalhados que explicam os conceitos do Windows PowerShell e a linguagem do Windows PowerShell. Também há tópicos da Ajuda para cada cmdlet e tópicos de provedor e de Ajuda para muitas funções e scripts.

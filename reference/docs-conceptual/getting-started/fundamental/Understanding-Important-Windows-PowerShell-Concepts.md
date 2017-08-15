@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: Compreendendo conceitos importantes do Windows PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
 ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Compreendendo conceitos importantes do Windows PowerShell
 O design do Windows PowerShell integra conceitos de muitos ambientes diferentes. Vários deles são familiares para aqueles com experiência em shells ou ambientes de programação específicos, mas poucos conhecerão todos. Examinar alguns desses conceitos fornece uma visão geral útil do shell.
