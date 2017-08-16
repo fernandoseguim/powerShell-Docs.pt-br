@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: O objeto ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 0e1c09c4a92868448d76cc7b4954d250773ce2f2
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-isefile-object"></a>O objeto ISEFile
   Um objeto **ISEFile** representa um arquivo no ISE (Ambiente de Script Integrado) do Windows PowerShell®. É uma instância da classe Microsoft.PowerShell.Host.ISE.ISEFile. Este tópico lista os métodos e as propriedades do membro. O **$psISE.CurrentFile** e os arquivos da coleção de arquivos em uma guia do PowerShell são todas as instâncias da classe Microsoft.PowerShell.Host.ISE.ISEFile.
@@ -19,8 +19,7 @@ ms.lasthandoff: 06/08/2017
 
  Salva o arquivo no disco.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional
- Um parâmetro de codificação de caractere opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional Um parâmetro opcional de codificação de caracteres a ser usado para o arquivo salvo. O valor padrão é **UTF8**.
 
  **Exceções**
  -   **System.IO.IOException**: não foi possível salvar o arquivo.
@@ -45,8 +44,7 @@ $myfile.Encoding
 
  **filename** – cadeia de caracteres, o nome a ser usado para salvar o arquivo.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional
- Um parâmetro de codificação de caractere opcional a ser usado no arquivo salvo. O valor padrão é **UTF8**.
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) opcional Um parâmetro opcional de codificação de caracteres a ser usado para o arquivo salvo. O valor padrão é **UTF8**.
 
  **Exceções**
  -   **System.ArgumentNullException**: o parâmetro **filename** é nulo.

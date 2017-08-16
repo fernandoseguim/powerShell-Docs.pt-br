@@ -1,15 +1,14 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: usar o console do windows powershell baseado na web
 ms.openlocfilehash: 48ed1646c00f909c4e950f197f51a30205060ef0
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="use-the-web-based-windows-powershell-console" class="xliff"></a>
-#  Usar o Console do Windows PowerShell baseado na Web
+#  <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
 Atualizado em: 24 de junho de 2013
 
@@ -36,7 +35,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de computador desktop compatíveis</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de computador desktop com suporte</span></a>
 
 ------------------------------------------------------------------------
 
@@ -52,7 +51,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores ou dispositivos móveis minimamente testados</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores ou dispositivos móveis testados minuciosamente</span></a>
 
 ------------------------------------------------------------------------
 
@@ -66,7 +65,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos de navegador</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos do navegador</span></a>
 
 ------------------------------------------------------------------------
 
@@ -80,15 +79,14 @@ Para usar o console do Windows PowerShell Web Access baseado na Web, os navegado
 
 <a href="" id="BKMK_sign"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Entrando no Windows PowerShell Web Access</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Entrando no Windows PowerShell Web Access</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
 O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o endereço do site do gateway do Windows PowerShell Web Access da sua organização. Por padrão, o endereço do site é https://&lt;server_name&gt;/pswa. Antes de entrar no Windows PowerShell Web Access, tenha o nome ou o endereço IP do computador remoto que deseja gerenciar. Você deve ser um usuário autorizado no computador remoto e ele deve estar configurado para permitir gerenciamento remoto. Para obter mais informações sobre como configurar o computador para permitir o gerenciamento remoto, consulte [Enable and Use Remote Commands in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx) (Habilitar e usar comandos remotos no Windows PowerShell). O método mais simples de configurar o computador para permitir gerenciamento remoto é executar o cmdlet **Enable-PSRemoting -force** no computador, em uma sessão do Windows PowerShell aberta com direitos de usuário elevados (**Executar como Administrador**).
 
-<a id="to-sign-in-to-windows-powershell-web-access" class="xliff"></a>
-### Para entrar no Windows PowerShell Web Access
+### <a name="to-sign-in-to-windows-powershell-web-access"></a>Para entrar no Windows PowerShell Web Access
 
 1.  Abra o site do Windows PowerShell Web Access em uma janela ou guia do navegador da Internet.
 
@@ -100,7 +98,7 @@ O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o 
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -126,8 +124,8 @@ O administrador do Windows PowerShell Web Access deve fornecer uma URL que é o 
 
 <a href="" id="BKMK_timeout"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Saída e tempo limite</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Saindo e atingindo o tempo limite</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -157,8 +155,8 @@ Se desejar entrar novamente, abra a página da Web do Windows PowerShell Web Acc
 
 <a href="" id="BKMK_web"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Diferenças no console do Windows PowerShell baseado na Web</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Diferenças no console do Windows PowerShell baseado na Web</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -166,7 +164,7 @@ Depois de entrar no Windows PowerShell Web Access, um console do Windows PowerSh
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disparidade funcional com o PowerShell.exe</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disparidade funcional com o PowerShell.exe</span></a>
 
 ------------------------------------------------------------------------
 
@@ -278,7 +276,7 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 <a href="" id="BKMK_limits"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Limitações do console baseado na Web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Limitações do console baseado na Web</span></a>
 
 ------------------------------------------------------------------------
 
@@ -331,8 +329,8 @@ A maioria das funcionalidades do host do Windows PowerShell está disponível no
 
         Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 

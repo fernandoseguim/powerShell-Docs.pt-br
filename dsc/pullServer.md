@@ -1,17 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Configurando um servidor de pull da Web de DSC
-ms.openlocfilehash: ffe5b1ae058b9757def30ad53019a1b61605a42a
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 1dd4aa63c598a359a052f6f00a9e48fc6fa6c113
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="setting-up-a-dsc-web-pull-server" class="xliff"></a>
-# Configurando um servidor de pull da Web de DSC
+# <a name="setting-up-a-dsc-web-pull-server"></a>Configurando um servidor de pull da Web de DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -27,8 +26,7 @@ Requisitos para usar um servidor de pull:
 
 É possível adicionar a função de servidor do IIS e o Serviço de DSC com o assistente Adicionar funções e recursos no Gerenciador do Servidor ou usando PowerShell. Os scripts de exemplo incluídos neste tópico também cuidarão dessas duas etapas.
 
-<a id="using-the-xwebservice-resource" class="xliff"></a>
-## Usando o recurso xWebService
+## <a name="using-the-xdscwebservice-resource"></a>Usando o recurso xDSCWebService
 A maneira mais fácil de configurar um servidor de pull da Web é usar o recurso xWebService, incluído no módulo xPSDesiredStateConfiguration. As etapas a seguir explicam como usar o recurso em uma configuração que configure o serviço Web.
 
 1. Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
@@ -89,10 +87,10 @@ configuration Sample_xDscPullServer
 
 ```
 
-1. Execute a configuração, passando a impressão digital do certificado SSL como o parâmetro **certificateThumbPrint** e uma chave de Registro GUID como o parâmetro **RegistrationKey**:
+5. Execute a configuração, passando a impressão digital do certificado SSL como o parâmetro **certificateThumbPrint** e uma chave de Registro GUID como o parâmetro **RegistrationKey**:
 
 ```powershell
-# To find the Thumbprint for an installed SSL certificate for use with the pull server list all certifcates in your local store 
+# To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
 # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
 dir Cert:\LocalMachine\my
 
@@ -103,12 +101,11 @@ Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301F
 Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
 ```
 
-<a id="registration-key" class="xliff"></a>
-## Chave de Registro
+## <a name="registration-key"></a>Chave de Registro
 Para permitir que nós clientes sejam registrados com o servidor para poderem utilizar nomes de configuração em vez de uma ID de configuração, uma chave de registro que foi criada pela configuração acima é salva em um arquivo chamado `RegistrationKeys.txt` em `C:\Program Files\WindowsPowerShell\DscService`. A chave de registro funciona como um segredo compartilhado usado durante o registro inicial pelo cliente com o servidor de pull. O cliente gerará um certificado autoassinado, que será usado para autenticar de modo exclusivo com o servidor de pull depois que o registro for concluído com êxito. A impressão digital do certificado é armazenada localmente e associada à URL do servidor de pull.
 > **Observação**: não há suporte para chaves do registro no PowerShell 4.0. 
 
-Para configurar a um nó para autenticar com o servidor de pull, a chave de registro deve estar na metaconfiguração para qualquer nó de destino que será registrado com esse servidor de pull. Observe que a **RegistrationKey** na metaconfiguração abaixo é removida depois de o computador de destino ser registrado com sucesso, e o valor “140a952b-b9d6-406b-b416-e0f759c9c0e4” deve corresponder ao valor armazenado no arquivo RegistrationKeys.txt no servidor pull. Sempre trate o valor da chave do registro com segurança, porque o conhecimento permite que qualquer computador de destino seja registrado com o servidor de pull.
+Para configurar um nó para ser autenticado no servidor de pull, a chave de registro deverá estar na metaconfiguração do nó de destino que será registrado nesse servidor de pull. Observe que a **RegistrationKey** na metaconfiguração abaixo é removida depois de o computador de destino ser registrado com sucesso, e o valor “140a952b-b9d6-406b-b416-e0f759c9c0e4” deve corresponder ao valor armazenado no arquivo RegistrationKeys.txt no servidor pull. Sempre trate o valor da chave do registro com segurança, porque o conhecimento permite que qualquer computador de destino seja registrado com o servidor de pull.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -146,26 +143,22 @@ A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração sign
 
 >**Observação**: em um cenário PUSH, existe um bug na versão atual que torna necessário definir uma propriedade ConfigurationID no arquivo de metaconfiguração para nós que nunca foram registrados com um servidor pull. Isso forçará o uso do protocolo de Servidor de Pull V1 e evitará mensagens de falha de registro.
 
-<a id="placing-configurations-and-resources" class="xliff"></a>
-## Colocando configurações e recursos
+## <a name="placing-configurations-and-resources"></a>Colocando configurações e recursos
 
 Após a instalação do servidor pull ser concluída, as pastas definidas pelas propriedades **ConfigurationPath** e **ModulePath** na configuração do servidor pull são onde você colocará módulos e configurações que estarão disponíveis para pull pelos nós de destino. Esses arquivos precisam estar em um formato específico para que o servidor de recepção processe-os corretamente. 
 
-<a id="dsc-resource-module-package-format" class="xliff"></a>
-### Formato de pacote do módulo de recursos DSC
+### <a name="dsc-resource-module-package-format"></a>Formato de pacote do módulo de recursos DSC
 
-Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
+Cada módulo de recurso precisa ser compactado e nomeado de acordo com o seguinte padrão `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 Use `new-dscchecksum {module zip file}` para criar um arquivo de soma de verificação para o módulo adicionado recentemente.
 
-<a id="configuration-mof-format" class="xliff"></a>
-### Formato MOF de configuração 
+### <a name="configuration-mof-format"></a>Formato MOF de configuração 
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta. Coloque os arquivos MOF e seus arquivos de soma de verificação associados na pasta **ConfigurationPath**.
 
 >**Observação**: se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
 
-<a id="tooling" class="xliff"></a>
-## Ferramentas
+## <a name="tooling"></a>Ferramentas
 Para facilitar a configuração, validação e gerenciamento do servidor de pull, as ferramentas a seguir são incluídas como exemplos na versão mais recente do módulo xPSDesiredStateConfiguration:
 1. Um módulo que ajudará com empacotamento de módulos de recursos DSC e arquivos de configuração para uso no servidor de pull. [PublishModulesAndMofsToPullServer.psm1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PublishModulesAndMofsToPullServer.psm1). Exemplos abaixo:
 
@@ -178,11 +171,10 @@ Para facilitar a configuração, validação e gerenciamento do servidor de pull
      Publish-DSCModuleAndMof -Source C:\LocalDepot -Force
 ```
 
-1. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
+2. Um script que valida o Servidor de Pull está configurado corretamente. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
 
-<a id="pull-client-configuration" class="xliff"></a>
-## Configuração do cliente de pull 
+## <a name="pull-client-configuration"></a>Configuração do cliente de pull 
 Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 
 * [Configurando um cliente de pull de DSC usando uma ID de configuração](pullClientConfigID.md)
@@ -190,8 +182,7 @@ Os tópicos a seguir descrevem em detalhes a configuração de clientes de pull:
 * [Configurações parciais](partialConfigs.md)
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Aplicando configurações](enactingConfigurations.md)
 * [Usando um servidor de relatório de DSC](reportServer.md)

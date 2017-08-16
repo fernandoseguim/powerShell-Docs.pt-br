@@ -1,15 +1,14 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: "regras de autorização e recursos de segurança do windows powershell web access"
 ms.openlocfilehash: 706830f618173879185f5b84570fdc7782434d59
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="authorization-rules-and-security-features-of-windows-powershell-web-access" class="xliff"></a>
-# Regras de autorização e recursos de segurança do Windows PowerShell Web Access
+# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -36,7 +35,7 @@ Regras de autenticação do Windows PowerShell Web Access são regras da lista d
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
 </tr>
 </thead>
 <tbody>
@@ -112,7 +111,7 @@ Para obter mais informações sobre como configurar regras de autorização, con
 <a href="" id="BKMK_sec"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Segurança</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Segurança</span></a>
 
 ------------------------------------------------------------------------
 
@@ -168,7 +167,7 @@ A tabela a seguir descreve as quatro camadas de segurança entre os usuários fi
 <a href="" id="BKMK_configrules"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurando regras de autorização</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurando regras de autorização</span></a>
 
 ------------------------------------------------------------------------
 
@@ -184,7 +183,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
 </tr>
 </thead>
 <tbody>
@@ -194,8 +193,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 </tbody>
 </table>
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Para adicionar uma regra de autorização restritiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -219,8 +217,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 
 4.  Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-<a id="to-remove-an-authorization-rule" class="xliff"></a>
-#### Para remover uma regra de autorização
+#### <a name="to-remove-an-authorization-rule"></a>Para remover uma regra de autorização
 
 1.  Se uma sessão do Windows PowerShell ainda não estiver aberta, consulte a etapa 1 de [Para adicionar uma regra de autorização não restritiva](#BKMK_arar) nesta seção.
 
@@ -238,7 +235,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -251,7 +248,7 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 <a href="" id="BKMK_others"></a>
 ####
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Outros exemplos de cenário de regras de autorização</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Outros exemplos de cenário de regras de autorização</span></a>
 
 ------------------------------------------------------------------------
 
@@ -271,7 +268,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
     </tr>
     </thead>
     <tbody>
@@ -301,7 +298,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -313,7 +310,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Usando um único conjunto de regras de autorização para vários sites</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Usando um único conjunto de regras de autorização para vários sites</span></a>
 
 ------------------------------------------------------------------------
 
@@ -323,8 +320,8 @@ O caminho para o arquivo XML de regras de autorização é armazenado no arquivo
 
 <a href="" id="BKMK_sesmgmt"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Gerenciamento de sessões</span></a>
-<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Gerenciamento de sessão</span></a>
+<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -334,7 +331,7 @@ Por padrão, o Servidor Web (IIS) é configurado para reiniciar o pool de aplica
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurando parâmetros padrão na página de entrada</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurando parâmetros padrão na página de entrada</span></a>
 
 ------------------------------------------------------------------------
 
@@ -355,7 +352,7 @@ Se o gateway do Windows PowerShell Web Access estiver em execução no Windows S
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Tempos limite e desconexões não planejadas</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Tempos limite e desconexões não planejadas</span></a>
 
 ------------------------------------------------------------------------
 
@@ -365,8 +362,8 @@ No Windows PowerShell Web Access em execução no Windows Server 2012 R2, as ses
 
 Se o servidor de gateway estiver executando Windows Server 2012 R2, o Windows PowerShell Web Access permitirá que os usuários se reconectem a sessões salvas mais tarde, mas quando erros de rede, desligamentos não planejados ou outras falhas desconectam as sessões, os usuários não podem ver nem se reconectar a sessões salvas até ter expirado o tempo limite especificado pelo administrador do gateway.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
-<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
+<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 

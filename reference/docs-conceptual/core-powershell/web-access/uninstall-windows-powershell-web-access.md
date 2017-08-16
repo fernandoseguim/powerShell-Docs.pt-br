@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: desinstalar o windows powershell web access
 ms.openlocfilehash: 7231d5eadceda8e3b28d9a81c2b5dcbe43680ff2
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
 
@@ -24,8 +24,8 @@ Antes de desinstalar o Windows PowerShell Web Access do servidor de gateway, exe
 
 A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado. O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação (rápida) recomendada</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação recomendada (rápida)</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link para desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: excluir o aplicativo Web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: Excluir o aplicativo Web</span></a>
 
 ------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ Se você tiver especificado seu próprio nome de site personalizado, adicione o 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
@@ -83,8 +83,8 @@ Se você tiver especificado seu próprio nome de site personalizado, adicione o 
 
 3.  Quando a remoção for concluída, verifique se você removeu o Windows PowerShell Web Access abrindo a página **Todos os Servidores** no Gerenciador do Servidor, selecionando um servidor do qual você removeu o recurso e exibindo o bloco **Funções e Recursos** na página do servidor selecionado. Você também pode executar o cmdlet <span class="code">Get-WindowsFeature</span> de destino no servidor selecionado (Get-WindowsFeature -ComputerName &lt;*computer_name*&gt;) para exibir uma lista de funções e recursos que estão instalados no servidor.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação personalizada</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Desinstalação personalizada</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -92,7 +92,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: excluir o aplicativo Web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: Excluir o aplicativo Web</span></a>
 
 ------------------------------------------------------------------------
 
@@ -120,7 +120,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -132,7 +132,7 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Desinstalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
@@ -154,8 +154,8 @@ Os procedimentos nesta seção o ajudarão a desinstalar o aplicativo Web do Win
 
 6.  Na página **Confirmar seleções de remoção**, clique em **Remover**.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 

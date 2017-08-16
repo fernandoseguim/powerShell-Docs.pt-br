@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: O objeto PowerShellTabCollection
 ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
 ms.openlocfilehash: dcdc16ae126453b6ade64917ac4950cc05e5f8ad
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-powershelltabcollection-object"></a>O objeto PowerShellTabCollection
   O objeto da coleção **PowerShellTab** é uma coleção de objetos **PowerShellTab**. Cada objeto **PowerShellTab** funciona como um ambiente de tempo de execução separado. Ele é uma instância da classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Um exemplo é o objeto **$psISE.PowerShellTabs**.
@@ -29,8 +29,7 @@ $newTab.DisplayName="Brand New Tab"
 
  Remove a guia especificada pelo parâmetro **psTab**.
 
- **psTab**
- A guia do PowerShell a ser removida.
+ **psTab** A guia do PowerShell a ser removida.
 
 ```
 
@@ -46,8 +45,7 @@ $psISE.PowerShellTabs.Remove($newTab)
 
  Seleciona a guia do PowerShell que é especificada pelo parâmetro **psTab** para torná-la a guia ativa do PowerShell no momento.
 
- **psTab**
- A guia do PowerShell a ser selecionada.
+ **psTab** A guia do PowerShell a ser selecionada.
 
 ```
 # Save the current tab in a variable and rename it

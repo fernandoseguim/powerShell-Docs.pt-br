@@ -1,15 +1,14 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: PowerShell, cmdlet
 title: instalar e usar o windows powershell web access
 ms.openlocfilehash: a860f7c22829da46f0458ea729fa0afd1fe4fb6f
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="install-and-use-windows-powershell-web-access" class="xliff"></a>
-#  Instalar e usar o Windows PowerShell Web Access
+#  <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
 Atualizado em: 5 de novembro de 2013
 
@@ -35,7 +34,7 @@ Este tópico não fornece diretrizes detalhadas de operações do Servidor Web (
 
 O diagrama a seguir mostra como funciona o Windows PowerShell Web Access.
 
-<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Windows PowerShell Web Access diagram" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
+<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Diagrama do Windows PowerShell Web Access" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
 
 Neste tópico:
 
@@ -51,8 +50,8 @@ Neste tópico:
 
 <a href="" id="BKMK_reqs"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos para execução do Windows PowerShell Web Access</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos para executar o Windows PowerShell Web Access</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -62,8 +61,8 @@ O Windows PowerShell Web Access permite que usuários remotos acessem computador
 
 <a href="" id="BKMK_browser"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Suporte a navegadores e dispositivos cliente</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Suporte para dispositivo cliente e navegador</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -71,7 +70,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de computador desktop compatíveis</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores de computador desktop com suporte</span></a>
 
 ------------------------------------------------------------------------
 
@@ -87,7 +86,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores ou dispositivos móveis minimamente testados</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navegadores ou dispositivos móveis testados minuciosamente</span></a>
 
 ------------------------------------------------------------------------
 
@@ -101,7 +100,7 @@ O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Interne
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos de navegador</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisitos do navegador</span></a>
 
 ------------------------------------------------------------------------
 
@@ -115,8 +114,8 @@ Para usar o console do Windows PowerShell Web Access baseado na Web, os navegado
 
 <a href="" id="BKMK_recm"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Implantação (rápida) recomendada</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Implantação (rápida) recomendada</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -131,12 +130,11 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 <a href="" id="BKMK_step1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: instalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: Instalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
-<a id="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets" class="xliff"></a>
-#### Para instalar o Windows PowerShell Web Access usando cmdlets do Windows PowerShell
+#### <a name="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Para instalar o Windows PowerShell Web Access usando cmdlets do Windows PowerShell
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -150,7 +148,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -172,7 +170,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -195,7 +193,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 <a href="" id="BKMK_step2"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: configurar o gateway</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Configurar o gateway</span></a>
 
 ------------------------------------------------------------------------
 
@@ -209,7 +207,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
 </tr>
 </thead>
 <tbody>
@@ -223,8 +221,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
 -   [Para configurar o gateway do Windows PowerShell Web Access com um certificado original usando o Install-PswaWebApplication e o Gerenciador do IIS](#BKMK_gencert)
 
-<a id="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication" class="xliff"></a>
-#### Para configurar o gateway do Windows PowerShell Web Access com um certificado de teste usando Install-PswaWebApplication
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication"></a>Para configurar o gateway do Windows PowerShell Web Access com um certificado de teste usando Install-PswaWebApplication
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell.
 
@@ -242,7 +239,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de Segurança </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Observação de segurança </span></th>
     </tr>
     </thead>
     <tbody>
@@ -274,7 +271,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -284,8 +281,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </tbody>
     </table>
 
-<a id="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager" class="xliff"></a>
-#### Para configurar o gateway do Windows PowerShell Web Access com um certificado original usando o Install-PswaWebApplication e o Gerenciador do IIS
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager"></a>Para configurar o gateway do Windows PowerShell Web Access com um certificado original usando o Install-PswaWebApplication e o Gerenciador do IIS
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell.
 
@@ -331,7 +327,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -344,7 +340,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 <a href="" id="BKMK_step3"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 3: Configurar uma regra de autorização restritiva</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 3: Configurar uma regra de autorização restritiva</span></a>
 
 ------------------------------------------------------------------------
 
@@ -352,8 +348,7 @@ Depois que o Windows PowerShell Web Access for instalado e o gateway configurado
 
 Para obter mais detalhes sobre as regras e a segurança de autorização do Windows PowerShell Web Access, confira [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de segurança e regras de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Para adicionar uma regra de autorização restritiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -381,8 +376,8 @@ Depois de configurar uma regra de autorização, você está pronto para que os 
 
 <a href="" id="BKMK_custom"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Implantação personalizada</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Implantação personalizada</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
@@ -391,12 +386,11 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 <a href="" id="BKMK_custom1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: instalar o Windows PowerShell Web Access</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 1: Instalar o Windows PowerShell Web Access</span></a>
 
 ------------------------------------------------------------------------
 
-<a id="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard" class="xliff"></a>
-#### Para instalar o Windows PowerShell Web Access usando o Assistente para Adicionar Funções e Recursos
+#### <a name="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard"></a>Para instalar o Windows PowerShell Web Access usando o Assistente para Adicionar Funções e Recursos
 
 1.  Se o Gerenciador do Servidor já estiver aberto, vá para a etapa seguinte. Se o Gerenciador do Servidor ainda não estiver aberto, abra-o de uma das maneiras a seguir.
 
@@ -420,7 +414,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -436,7 +430,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: configurar o gateway</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 2: Configurar o gateway</span></a>
 
 ------------------------------------------------------------------------
 
@@ -448,8 +442,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 -   
 
-<a id="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website" class="xliff"></a>
-#### Para usar o Gerenciador do IIS a fim de configurar um gateway em um site existente
+#### <a name="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website"></a>Para usar o Gerenciador do IIS a fim de configurar um gateway em um site existente
 
 1.  Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
@@ -487,7 +480,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -511,8 +504,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
         c:\windows\system32\icacls.exe $authorizationFile
 
-<a id="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate" class="xliff"></a>
-#### Para usar o Gerenciador do IIS a fim de configurar o gateway como site raiz com um certificado de teste
+#### <a name="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate"></a>Para usar o Gerenciador do IIS a fim de configurar o gateway como site raiz com um certificado de teste
 
 1.  Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
@@ -570,7 +562,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" alt="System_CAPS_note" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" /></span><span class="alertTitle">Observação</span></th>
     </tr>
     </thead>
     <tbody>
@@ -582,7 +574,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 3: configurar uma regra de autorização restritiva</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Etapa 3: Configurar uma regra de autorização restritiva</span></a>
 
 ------------------------------------------------------------------------
 
@@ -590,8 +582,7 @@ Depois que o Windows PowerShell Web Access for instalado e o gateway configurado
 
 Para obter mais detalhes sobre as regras e a segurança de autorização do Windows PowerShell Web Access, confira [Authorization Rules and Security Features of Windows PowerShell Web Access (Recursos de segurança e regras de autorização do Windows PowerShell Web Access)](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Para adicionar uma regra de autorização restritiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
 1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
@@ -619,15 +610,14 @@ Depois de configurar uma regra de autorização, você está pronto para que os 
 
 <a href="" id="BKMK_configcert"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurar um certificado original</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurar um certificado original</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
 Para um ambiente de produção seguro, sempre use um certificado SSL válido que foi assinado por uma AC (autoridade de certificação). O procedimento nesta seção descreve como obter e aplicar um certificado SSL válido por meio de uma AC.
 
-<a id="to-configure-an-ssl-certificate-in-iis-manager" class="xliff"></a>
-### Para configurar um certificado SSL no Gerenciador do IIS
+### <a name="to-configure-an-ssl-certificate-in-iis-manager"></a>Para configurar um certificado SSL no Gerenciador do IIS
 
 1.  No painel da árvore Gerenciador do IIS, selecione o servidor no qual o Windows PowerShell Web Access está instalado.
 
@@ -649,15 +639,15 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
 <a href="" id="BKMK_using"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Usando o console do Windows PowerShell baseado na Web</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Usando o console do Windows PowerShell baseado na Web</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
 Depois que o Windows PowerShell Web Access é instalado e a configuração do gateway é concluída, como descrito neste tópico, o console do Windows PowerShell baseado na Web está pronto para uso. Para saber mais sobre como começar a usar o console baseado na Web, confira [Use the Web-based Windows PowerShell Console (Usar o console do Windows PowerShell baseado na Web)](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Recolher"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Veja também</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Clique com o botão direito do mouse para copiar e compartilhar o link desta seção"></a>
 
 ------------------------------------------------------------------------
 
