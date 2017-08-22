@@ -4,14 +4,13 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 title: Criando e publicando um item
-ms.openlocfilehash: e71381d1a3efda73832fab6189bda26cee411d9e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b6bcd3e923b77ad7d19a1d92aeb78222bff7ea7e
+ms.sourcegitcommit: e08f036021e9f115dbb52c697941706cc4ee51dd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/15/2017
 ---
-<a id="creating-and-publishing-an-item" class="xliff"></a>
-# Criar e publicar um item 
+# <a name="creating-and-publishing-an-item"></a>Criar e publicar um item 
 A Galeria do PowerShell é o local para publicar e compartilhar recursos de DSC, scripts e módulos do PowerShell estáveis com a comunidade mais ampla de usuários do PowerShell.    
 
 Este artigo aborda a mecânica e etapas importantes para preparar um script ou um módulo e publicá-lo na Galeria do PowerShell.
@@ -27,8 +26,7 @@ Os requisitos mínimos para publicar um item na Galeria do PowerShell são:
  
 A Galeria do PowerShell aceita módulos do PowerShell e scripts do PowerShell. Quando nos referimos a scripts, queremos dizer um script do PowerShell que é um único arquivo e não faz parte de um módulo maior. 
 
-<a id="powershell-gallery-account-and-api-key" class="xliff"></a>
-## Conta da Galeria do PowerShell e chave de API
+## <a name="powershell-gallery-account-and-api-key"></a>Conta da Galeria do PowerShell e chave de API
 Consulte [Creating a PowerShell Gallery Account](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery_creating_an_account) (Criando uma conta da Galeria do PowerShell) para saber como configurar a sua conta da Galeria do PowerShell. 
 
 Depois de criar uma conta, você poderá obter a chave de API necessária para publicar um item.
@@ -36,8 +34,7 @@ Depois que você entrar usando a conta, seu nome de usuário será exibido na pa
 
 Observação: a chave de API deve ser tratada com a mesma segurança que seu logon e sua senha. Com essa chave você ou qualquer outra pessoa pode atualizar qualquer item que você possua na Galeria do PowerShell. É recomendável atualizar a chave regularmente, o que pode ser feito usando Redefinir chave na página Minha conta.
 
-<a id="required-metadata-for-items-published-to-the-powershell-gallery" class="xliff"></a>
-## Metadados necessários para itens publicados na Galeria do PowerShell
+## <a name="required-metadata-for-items-published-to-the-powershell-gallery"></a>Metadados necessários para itens publicados na Galeria do PowerShell
 
 A Galeria do PowerShell fornece informações aos usuários da galeria que são extraídas dos campos de metadados incluídos no manifesto de módulo ou de script.
 Para criar ou modificar itens para publicação na Galeria do PowerShell, há um pequeno conjunto de requisitos quanto às informações fornecidas no manifesto do item. É altamente recomendado que você examine a seção de Metadados de item das [Diretrizes de publicação](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery-PublishingGuidelines) para saber como fornecer em seus itens as melhores informações para os usuários. 
@@ -62,8 +59,7 @@ Proprietários de item são usuários com contas da Galeria do PowerShell que t�
 * Ter o Autor como o nome de uma equipe conhecida (como a equipe do SDK do Azure) ou Microsoft Corporation.
 
 
-<a id="pre-validate-your-item" class="xliff"></a>
-## Pré-validar o Item
+## <a name="pre-validate-your-item"></a>Pré-validar o Item
 
 Há algumas ferramentas que você precisa executar no código antes de publicar o item na Galeria do PowerShell:
 
@@ -80,8 +76,7 @@ O [Test-ModuleManifest](https://msdn.microsoft.com/en-us/powershell/reference/5.
 Da mesma forma, [Test-ScriptFileInfo](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_test-scriptfileinfo) valida os metadados em um script e deve ser executado em cada script (publicado separado de um módulo) antes de publicar na Galeria do Powershell. 
 
 
-<a id="publishing-items" class="xliff"></a>
-## Publicando itens
+## <a name="publishing-items"></a>Publicando itens
 
 Você deve usar o [Publish-Script](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_publish-script) ou o [Publish-Module](https://msdn.microsoft.com/en-us/powershell/gallery/psget/module/psget_publish-module) para publicar itens na Galeria do PowerShell.
 Esses dois comandos exigem 
