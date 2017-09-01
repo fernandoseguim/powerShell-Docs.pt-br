@@ -65,7 +65,7 @@
 ## [Práticas recomendadas do servidor de pull](secureServer.md)
 
 # [Exemplos de DSC](dscExamples.md)
-## [Building a CI/CD pipeline with DSC, Pester, and Visual Studio Team Services](dscCiCd.md) (Criando um pipeline de CI/CD com DSC, Pester e Visual Studio Team Services)
+## [Criando um pipeline de CI/CD com DSC, Pester e Visual Studio Team Services](dscCiCd.md)
 ## [Separando Dados de Configuração e de Ambiente](separatingEnvData.md)
 
 # [Solução de problemas do DSC](troubleshooting.md)
