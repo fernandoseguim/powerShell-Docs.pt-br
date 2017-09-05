@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Como gravar e executar scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 577ecf96027618a0a8f98d5bcefe7ec949f337cc
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 Este tópico descreve como criar, editar, executar e salvar scripts no Painel de Script.
 
--   [Como criar e executar scripts](#bkmk_1)
+-   [Como criar e executar scripts]()
 
--   [Como escrever e editar texto no Painel de Script](#bkmk_2)
+-   [Como escrever e editar texto no Painel de Script]()
 
--   [Como salvar um script](#bkmk_3)
+-   [Como salvar um script]()
 
 ## <a name="bkmk_1"></a>Como criar e executar scripts
 Você pode abrir e editar arquivos do Windows PowerShell® no Painel de Script. Tipos de arquivos específicos de interesse no Windows PowerShell® são arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1). Esses tipos de arquivo são coloridos por sintaxe no editor do Painel de Script. Outros tipos de arquivo comuns que você pode abrir no Painel de Script são arquivos de configuração (.ps1xml), arquivos XML e arquivos de texto.

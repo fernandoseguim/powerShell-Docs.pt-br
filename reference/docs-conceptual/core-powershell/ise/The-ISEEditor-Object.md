@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: O objeto ISEEditor
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: c4effde470a7a76a21f983b172f0af651dfc5d11
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e2ddb0de1089c832f130e1f5c7c8dcb199aca2fa
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="the-iseeditor-object"></a>O objeto ISEEditor
   Um objeto **ISEEditor** é uma instância da classe Microsoft.PowerShell.Host.ISE.ISEEditor. O painel de Console é um objeto **ISEEditor**. Cada objeto [ISEFile](The-ISEFile-Object.md) tem um objeto **ISEEditor** associado. As seções a seguir listam os métodos e as propriedades de um objeto **ISEEditor**.
@@ -63,7 +63,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### <a name="gotomatch"></a>GoToMatch\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores. 
 
- Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – \(,\[,{ – ou imediatamente após um parêntese de fechamento, colchete ou chave – \),\],}.  O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará. Consulte [CanGoToMatch](#cangotomatch).
+ Moverá o cursor do sistema para o caractere correspondente, se a propriedade **CanGoToMatch** do objeto editor for **$true**, o que ocorrerá quando o cursor vier imediatamente antes de um parêntese de abertura, colchete ou chave – \(,\[,{ – ou imediatamente após um parêntese de fechamento, colchete ou chave – \),\],}.  O cursor é colocado antes de um caractere de abertura ou depois de um caractere de fechamento. Se a propriedade **CanGoToMatch** for **$false**, então esse método nada fará. Consulte [CanGoToMatch]().
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -76,7 +76,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **text** – cadeia de caracteres, o texto a ser inserido.
 
- Veja o [Exemplo de script](#example), posteriormente neste tópico.
+ Veja o [Exemplo de script](), posteriormente neste tópico.
 
 ### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Select\( startLine, startColumn, endLine, endColumn \)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
@@ -91,7 +91,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **endColumn** – inteiro, a coluna na linha final na qual a seleção é encerrada.
 
- Veja o [Exemplo de script](#example), posteriormente neste tópico.
+ Veja o [Exemplo de script](), posteriormente neste tópico.
 
 ### <a name="selectcaretline"></a>SelectCaretLine\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
@@ -186,14 +186,14 @@ $psISE.CurrentFile.Editor.LineCount
 
  A propriedade somente leitura que obtém o texto selecionado do editor.
 
- Veja o [Exemplo de script](#example), posteriormente neste tópico.
+ Veja o [Exemplo de script](), posteriormente neste tópico.
 
 ###  <a name="Text"></a> Text
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
  A propriedade de leitura/gravação que obtém ou define o texto no editor.
 
- Veja o [Exemplo de script](#example), posteriormente neste tópico.
+ Veja o [Exemplo de script](), posteriormente neste tópico.
 
 ##  <a name="example"></a> Exemplo de Script
 

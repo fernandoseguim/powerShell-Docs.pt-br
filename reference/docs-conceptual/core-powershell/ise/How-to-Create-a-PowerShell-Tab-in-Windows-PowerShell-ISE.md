@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Como criar uma guia do PowerShell no ISE do Windows PowerShell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 7dc92275c30ad783ad71b2a4825e9cc0d26d1691
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: b8648b3c23e5a7edaa195f2aa4bfad2757e39e75
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Como criar uma guia do PowerShell no ISE do Windows PowerShell
 As guias no ISE (Ambiente de Script Integrado) do Windows PowerShell® permitem criar e usar simultaneamente vários ambientes de execução dentro do mesmo aplicativo. Cada guia do PowerShell corresponde a uma sessão ou ambiente de execução separado.
@@ -15,7 +15,7 @@ As guias no ISE (Ambiente de Script Integrado) do Windows PowerShell® permitem 
 > [!NOTE]
 > Variáveis, funções e aliases que você criar em uma guia não serão transferidos para outra. Eles são sessões diferentes do Windows PowerShell.
 
-Use as etapas a seguir para abrir ou fechar uma guia no Windows PowerShell. Para renomear uma guia, defina a propriedade [DisplayName](The-PowerShellTab-Object.md#Displayname) no objeto de script de guia do Windows PowerShell.
+Use as etapas a seguir para abrir ou fechar uma guia no Windows PowerShell. Para renomear uma guia, defina a propriedade [DisplayName]() no objeto de script de guia do Windows PowerShell.
 
 ## <a name="to-create-and-use-a-new-powershell-tab"></a>Para criar e usar uma nova guia do PowerShell
 No menu **Arquivo**, clique em **Nova Guia do PowerShell**. A nova guia do PowerShell sempre é aberta como a janela ativa. Guias do PowerShell são numeradas incrementalmente na ordem em que são abertas. Cada guia é associada à sua própria janela de console do Windows PowerShell. Você pode ter até 32 guias do PowerShell com sua própria sessão aberta de cada vez (isso é limitado a 8 no ISE do Windows PowerShell 2.0.)

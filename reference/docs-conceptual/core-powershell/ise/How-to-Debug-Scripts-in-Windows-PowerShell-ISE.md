@@ -1,21 +1,21 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Como depurar scripts no ISE do Windows PowerShell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: db8847e2cc9abeec729ed8d939fc170529a93846
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 2b8313c3f2ae1a8fb670099baa8950db49722330
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar scripts no ISE do Windows PowerShell
 Este tópico descreve como depurar scripts em um computador local usando os recursos de depuração visual do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
-[Como gerenciar pontos de interrupção](#bkmk_1)
-[Como gerenciar uma sessão de depuração](#bkmk_2)
-[Como contornar, intervir e sair durante a depuração](#bkmk_3)
-[Como exibir os valores de variáveis durante a depuração](#bkmk_4)
+[Como gerenciar pontos de interrupção]()
+[Como gerenciar uma sessão de depuração]()
+[Como contornar, intervir e sair durante a depuração]()
+[Como exibir os valores de variáveis durante a depuração]()
 
 ## <a name="bkmk_1"></a>Como gerenciar pontos de interrupção
 Um ponto de interrupção é um ponto designado em um script em que você deseja pausar a operação para poder examinar o estado atual das variáveis e o ambiente no qual o script está sendo executado. Depois de o script ser pausado por um ponto de interrupção, você pode executar comandos no Painel de Console para examinar o estado do script.  Você pode gerar variáveis ou executar outros comandos. Você ainda pode modificar o valor de todas as variáveis que estão visíveis para o contexto do script em execução no momento. Após examinar o que deseja ver, você pode retomar a operação do script.
@@ -51,7 +51,7 @@ Get-PSBreakpoint
 ```
 
 ### <a name="remove-a-breakpoint"></a>Remover um ponto de interrupção
-Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo](#bkmk_disable) em vez disso.  Clique com o botão direito do mouse na linha de onde você quer remover um ponto de interrupção e clique em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Remover um ponto de interrupção o excluirá.  Se você achar que talvez possa querer usá-lo novamente mais tarde, considere [desabilitá-lo]() em vez disso.  Clique com o botão direito do mouse na linha de onde você quer remover um ponto de interrupção e clique em **Alternar Ponto de Interrupção**. Ou então, clique na linha na qual você deseja remover um ponto de interrupção e, no menu **Depurar**, clique em **Alternar Ponto de Interrupção**. O script a seguir é um exemplo de como remover um ponto de interrupção com uma ID especificada do Painel de Console usando o cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ``` PowerShell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -103,7 +103,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Como gerenciar uma sessão de depuração
-Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
+Antes de iniciar a depuração, você deve definir um ou mais pontos de interrupção. Não é possível definir um ponto de interrupção, a menos que o script que você deseja depurar esteja salvo. Para obter instruções sobre como definir um ponto de interrupção, consulte [Como gerenciar pontos de interrupção]() ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Depois de iniciar a depuração, não é possível editar um script até interromper a depuração. Um script que tem um ou mais pontos de interrupção definido é salvo automaticamente antes de ser executado.
 
 ### <a name="to-start-debugging"></a>Para iniciar a depuração
 Pressione **F5** ou, na barra de ferramentas, clique no ícone **Executar Script** ou, no menu **Depurar**, clique em **Executar/Continuar**. O script é executado até encontrar o primeiro ponto de interrupção. Ele pausa a operação neste ponto e realça a linha na qual ele pausa.
