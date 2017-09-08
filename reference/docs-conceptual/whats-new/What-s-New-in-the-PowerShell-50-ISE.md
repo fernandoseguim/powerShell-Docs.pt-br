@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "O que há de novo no ISE do PowerShell 50"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: e772c31ae407e73a96364ffedf98057760037836
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d816d717752579c79477daa35e7c0b15e944a6b7
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell
-Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
+Este tópico explica os recursos novos e atualizados que foram introduzidos nas versões do ISE (Ambiente de Script Integrado) do Windows PowerShell®.
 
 ## <a name="overview"></a>Descrição do recurso
 O ISE do Windows PowerShell é um aplicativo host que permite gravar, executar e testar scripts e módulos em um ambiente gráfico e intuitivo. Recursos importantes como coloração de sintaxe, preenchimento de guias, depuração visual, conformidade com Unicode e Ajuda contextual permitem uma experiência avançada de script.
@@ -22,16 +22,16 @@ A tabela a seguir lista os recursos novos e alterados para esta versão do ISE d
 
 |Recurso/funcionalidade|ISE do Windows PowerShell 4.0|ISE do Windows PowerShell 3.0|ISE do Windows PowerShell 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense](#BKMK_Intellisense)**|X|X||
-|**[Trechos de código](#bkmk_snippets)**|X|X||
-|**[Ferramentas complementares](#BKMK_AddOnTools)**|X|X||
-|**[Gerenciador de Reinicialização e Salvamento Automático](#BKMK_RestartMgr)**|X|X||
-|**[Painel de Console](#BKMK_ConsolePane)**|X|X||
-|**[Lista de recém-usados](#BKMK_MRU)**|X|X||
-|**[Opções de linha de comando](#BKMK_CommandLine)**|X|X||
-|**[Novos recursos do editor](#BKMK_NewEditorFeatures)**|X|X||
-|**[Janela do novo visualizador da ajuda](#BKMK_NewHelpViewer)**|X|X||
-|**[Cmdlet Show-Command](#BKMK_ShowCommand)**|X|X||
+|**[IntelliSense]()**|X|X||
+|**[Trechos de código]()**|X|X||
+|**[Ferramentas complementares]()**|X|X||
+|**[Gerenciador de Reinicialização e Salvamento Automático]()**|X|X||
+|**[Painel de Console]()**|X|X||
+|**[Lista de recém-usados]()**|X|X||
+|**[Opções de linha de comando]()**|X|X||
+|**[Novos recursos do editor]()**|X|X||
+|**[Janela do novo visualizador da ajuda]()**|X|X||
+|**[Cmdlet Show-Command]()**|X|X||
 
 ### <a name="BKMK_Intellisense"></a>IntelliSense
 **Adicionado no ISE 3.0**
@@ -175,7 +175,7 @@ Outros recursos de edição do ISE do Windows PowerShell incluem:
 
 -   **Analisar a exibição de erro** Erros de análise são indicados com um sublinhado vermelho. Quando você passa o cursor sobre um erro indicado, o texto da dica de ferramenta exibe o problema encontrado no código.
 
--   **Zoom** É possível definir o percentual de zoom do conteúdo do console usando o controle deslizante de zoom (no canto inferior direito da janela do ISE do Windows PowerShell) ou digitando o comando **$psise.options.Zoom** no Painel de Console.
+-   **Zoom** É possível definir o percentual de zoom do conteúdo do console usando o controle deslizante de zoom (no canto inferior direito da janela do ISE do Windows PowerShell) ou inserindo o comando **$psise.options.Zoom** no Painel do Console.
 
 -   **Copiar e colar rich text** A cópia para a área de transferência no ISE do Windows PowerShell preserva as informações de fonte, tamanho e cor da seleção original.
 

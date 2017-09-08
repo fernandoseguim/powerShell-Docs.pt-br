@@ -1,28 +1,28 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 1231271067f32ff888504344bc324b13aade9c33
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 05e7b8c3166b3530552d082dd4b0431dd7046b90
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell® que podem ser úteis.
 
-* [Como alterar o tamanho e o local dos Painéis de console e de script](#bkmk_1)
-* [Atalhos de teclado para edição de texto](#bkmk_2)
-* [Atalhos de teclado para execução de scripts](#bkmk_3)
-* [Atalhos de teclado para personalizar a exibição](#bkmk_4)
-* [Atalhos de teclado para depuração de scripts](#bkmk_5)
-* [Atalhos do teclado para as guias do Windows PowerShell](#bkmk_6)
-* [Atalhos de teclado para iniciar e sair](#bkmk_7)
+* [Como alterar o tamanho e o local dos Painéis de console e de script]()
+* [Atalhos de teclado para edição de texto]()
+* [Atalhos de teclado para execução de scripts]()
+* [Atalhos de teclado para personalizar a exibição]()
+* [Atalhos de teclado para depuração de scripts]()
+* [Atalhos do teclado para as guias do Windows PowerShell]()
+* [Atalhos de teclado para iniciar e sair]()
 
 A Microsoft tem o compromisso de facilitar o uso de seus produtos e serviços para todos. Os tópicos a seguir fornecem informações sobre os recursos, produtos e serviços que tornam o ISE do Windows PowerShell mais acessível para pessoas portadoras de deficiência.
 
-O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para obter mais informações, consulte "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:
+O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para obter mais informações, consulte "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:
 
 -   Atalhos do teclado
 

@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: "Diretrizes e práticas recomendadas da Galeria do PowerShell"
-ms.openlocfilehash: 394e69e189761f3c5a4bb54dfa8df15c4ab240d6
-ms.sourcegitcommit: e63f09c005b6bbf39c3c001944f307c2b155765b
+ms.openlocfilehash: 85486c409382472420a67fc124bd07a30486cb62
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -69,9 +69,9 @@ A documentação é a coisa mais útil a ser incluída nos itens publicados na G
 Os usuários geralmente ignoram itens sem a documentação, pois a alternativa é ler o código para entender o que é o item e como usá-lo.
 Há vários artigos disponíveis no MSDN sobre como fornecer documentação com itens do PowerShell, incluindo:
 
-* As diretrizes para fornecer ajuda estão em [How to Write Cmdlet Help](https://msdn.microsoft.com/en-us/library/aa965353(VS.85).aspx) (Como escrever a ajuda do cmdlet)
+* As diretrizes para fornecer ajuda estão em [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a ajuda do cmdlet)
 * Criar a ajuda do cmdlet, que é a melhor abordagem para qualquer script, função ou cmdlet do PowerShell.
-  Para obter informações de como criar a ajuda do cmdlet, inicie com [How to Write Cmdlet Help](http://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a ajuda do cmdlet) na biblioteca MSDN (Microsoft Developer Network).
+  Para obter informações de como criar a Ajuda do cmdlet, comece com [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a Ajuda do cmdlet) na biblioteca MSDN.
   Para adicionar a ajuda dentro de um script, consulte [About Comment Based Help](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help) (Sobre a ajuda baseada em comentários).
 * Muitos módulos também incluem documentação no formato de texto, como arquivos de MarkDown.
   Isso pode ser particularmente útil quando há um site do projeto no Github, no qual o Markdown é um formato muito usado.

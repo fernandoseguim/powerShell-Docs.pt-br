@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Obtendo informações de ajuda detalhadas"
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 3260b5ec0a91749d3b7b126412137aa9d603ef0e
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: c786ce089073abccdf186dc1d9e8ee383f83655d
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="getting-detailed-help-information"></a>Obtendo informações de ajuda detalhadas
 O Windows PowerShell inclui tópicos detalhados que explicam os conceitos do Windows PowerShell e a linguagem do Windows PowerShell. Também há tópicos da Ajuda para cada cmdlet e tópicos de provedor e de Ajuda para muitas funções e scripts.
@@ -75,7 +75,7 @@ Para exibir apenas os exemplos em um tópico da Ajuda, use o parâmetro *Example
 get-help get-childitem -examples
 ```
 
-Para obter informações sobre como escrever tópicos da Ajuda para os cmdlets que você criar, consulte o tópico "Como criar Ajuda para cmdlets" no MSDN.
+Para obter informações de como escrever tópicos de Ajuda para os cmdlets que você escreve, consulte [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a ajuda do cmdlet) na biblioteca MSDN.
 
 ## <a name="getting-conceptual-help"></a>Obtendo Ajuda conceitual
 O cmdlet Get-Help exibe também informações sobre tópicos conceituais no Windows PowerShell, incluindo tópicos sobre a linguagem do Windows PowerShell. Tópicos de Ajuda conceituais começam com o prefixo "about_", como about_line_editing. (O nome do tópico conceitual deve ser inserido em inglês, mesmo em versões do Windows PowerShell em idiomas diferentes do inglês.)
@@ -165,7 +165,7 @@ A primeira linha na seção Links Relacionados do tópico é mostrada abaixo.
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Para obter informações sobre como dar suporte online aos seus tópicos de Ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e consulte "Como criar Ajuda para cmdlets" ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) na Biblioteca do MSDN (Microsoft Developer Network).
+Para obter informações de como dar suporte online aos seus tópicos da Ajuda, consulte [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e [Como escrever a ajuda do Cmdlet](https://go.microsoft.com/fwlink/?LinkID=123415) na biblioteca MSDN.
 
 ## <a name="see-also"></a>Consulte Também
 - [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
