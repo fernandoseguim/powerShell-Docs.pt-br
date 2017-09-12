@@ -3,17 +3,17 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Caixas de listagem de seleção múltipla"
 ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
-ms.openlocfilehash: 85167ea25044f0ee587dc817460e8f13869be4bd
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 122014888bc5cf93c1c709b9d534d572037f5ffe
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/08/2017
 ---
-# <a name="multiple-selection-list-boxes"></a><span data-ttu-id="67ffc-103">Caixas de listagem de seleção múltipla</span><span class="sxs-lookup"><span data-stu-id="67ffc-103">Multiple-selection List Boxes</span></span>
-<span data-ttu-id="67ffc-104">Use o Windows PowerShell 3.0 e versões posteriores para criar um controle de caixa de listagem de seleção múltipla em um formulário personalizado do Windows.</span><span class="sxs-lookup"><span data-stu-id="67ffc-104">Use Windows PowerShell 3.0 and later releases to create a multiple-selection list box control in a custom Windows Form.</span></span>
+# <a name="multiple-selection-list-boxes"></a><span data-ttu-id="91efd-103">Caixas de listagem de seleção múltipla</span><span class="sxs-lookup"><span data-stu-id="91efd-103">Multiple-selection List Boxes</span></span>
+<span data-ttu-id="91efd-104">Use o Windows PowerShell 3.0 e versões posteriores para criar um controle de caixa de listagem de seleção múltipla em um formulário personalizado do Windows.</span><span class="sxs-lookup"><span data-stu-id="91efd-104">Use Windows PowerShell 3.0 and later releases to create a multiple-selection list box control in a custom Windows Form.</span></span>
 
-## <a name="create-list-box-controls-that-allow-multiple-selections"></a><span data-ttu-id="67ffc-105">Criar controles de caixa de listagem que permitem seleção múltipla</span><span class="sxs-lookup"><span data-stu-id="67ffc-105">Create list box controls that allow multiple selections</span></span>
-<span data-ttu-id="67ffc-106">Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).</span><span class="sxs-lookup"><span data-stu-id="67ffc-106">Copy and then paste the following into Windows PowerShell ISE, and then save it as a Windows PowerShell script (.ps1).</span></span>
+## <a name="create-list-box-controls-that-allow-multiple-selections"></a><span data-ttu-id="91efd-105">Criar controles de caixa de listagem que permitem seleção múltipla</span><span class="sxs-lookup"><span data-stu-id="91efd-105">Create list box controls that allow multiple selections</span></span>
+<span data-ttu-id="91efd-106">Copie e cole o seguinte no Windows PowerShell ISE e salve-o como um script do Windows PowerShell (.ps1).</span><span class="sxs-lookup"><span data-stu-id="91efd-106">Copy and then paste the following into Windows PowerShell ISE, and then save it as a Windows PowerShell script (.ps1).</span></span>
 
 ```
 Add-Type -AssemblyName System.Windows.Forms
@@ -71,19 +71,19 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-<span data-ttu-id="67ffc-107">O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**.</span><span class="sxs-lookup"><span data-stu-id="67ffc-107">The script begins by loading two .NET Framework classes: **System.Drawing** and **System.Windows.Forms**.</span></span> <span data-ttu-id="67ffc-108">Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.</span><span class="sxs-lookup"><span data-stu-id="67ffc-108">You then start a new instance of the .NET Framework class **System.Windows.Forms.Form**; that provides a blank form or window to which you can start adding controls.</span></span>
+<span data-ttu-id="91efd-107">O script começa carregando duas classes do .NET Framework: **System.Drawing** e **System.Windows.Forms**.</span><span class="sxs-lookup"><span data-stu-id="91efd-107">The script begins by loading two .NET Framework classes: **System.Drawing** and **System.Windows.Forms**.</span></span> <span data-ttu-id="91efd-108">Inicie uma nova instância da classe do .NET Framework **System.Windows.Forms.Form**, que fornece um formulário em branco ou janela ao qual você pode começar a adicionar controles.</span><span class="sxs-lookup"><span data-stu-id="91efd-108">You then start a new instance of the .NET Framework class **System.Windows.Forms.Form**; that provides a blank form or window to which you can start adding controls.</span></span>
 
 ```
 $form = New-Object System.Windows.Forms.Form
 ```
 
-<span data-ttu-id="67ffc-109">Depois de criar uma instância da classe Form, atribua valores a três propriedades dessa classe.</span><span class="sxs-lookup"><span data-stu-id="67ffc-109">After you create an instance of the Form class, assign values to three properties of this class.</span></span>
+<span data-ttu-id="91efd-109">Depois de criar uma instância da classe Form, atribua valores a três propriedades dessa classe.</span><span class="sxs-lookup"><span data-stu-id="91efd-109">After you create an instance of the Form class, assign values to three properties of this class.</span></span>
 
--   <span data-ttu-id="67ffc-110">**Text.**</span><span class="sxs-lookup"><span data-stu-id="67ffc-110">**Text.**</span></span> <span data-ttu-id="67ffc-111">Isso se torna o título da janela.</span><span class="sxs-lookup"><span data-stu-id="67ffc-111">This becomes the title of the window.</span></span>
+- <span data-ttu-id="91efd-110">**Text.**</span><span class="sxs-lookup"><span data-stu-id="91efd-110">**Text.**</span></span> <span data-ttu-id="91efd-111">Isso se torna o título da janela.</span><span class="sxs-lookup"><span data-stu-id="91efd-111">This becomes the title of the window.</span></span>
 
--   <span data-ttu-id="67ffc-112">**Size.**</span><span class="sxs-lookup"><span data-stu-id="67ffc-112">**Size.**</span></span> <span data-ttu-id="67ffc-113">Esse é o tamanho do formulário, em pixels.</span><span class="sxs-lookup"><span data-stu-id="67ffc-113">This is the size of the form, in pixels.</span></span> <span data-ttu-id="67ffc-114">O script anterior cria um formulário que possui 300 pixels de largura por 200 pixels de altura.</span><span class="sxs-lookup"><span data-stu-id="67ffc-114">The preceding script creates a form that’s 300 pixels wide by 200 pixels tall.</span></span>
+- <span data-ttu-id="91efd-112">**Size.**</span><span class="sxs-lookup"><span data-stu-id="91efd-112">**Size.**</span></span> <span data-ttu-id="91efd-113">Esse é o tamanho do formulário, em pixels.</span><span class="sxs-lookup"><span data-stu-id="91efd-113">This is the size of the form, in pixels.</span></span> <span data-ttu-id="91efd-114">O script anterior cria um formulário que possui 300 pixels de largura por 200 pixels de altura.</span><span class="sxs-lookup"><span data-stu-id="91efd-114">The preceding script creates a form that’s 300 pixels wide by 200 pixels tall.</span></span>
 
--   <span data-ttu-id="67ffc-115">**StartingPosition.**</span><span class="sxs-lookup"><span data-stu-id="67ffc-115">**StartingPosition.**</span></span> <span data-ttu-id="67ffc-116">Esta propriedade opcional é definida para **CenterScreen** no script precedente.</span><span class="sxs-lookup"><span data-stu-id="67ffc-116">This optional property is set to **CenterScreen** in the preceding script.</span></span> <span data-ttu-id="67ffc-117">Se você não adicionar essa propriedade, o Windows seleciona um local quando o formulário aberto.</span><span class="sxs-lookup"><span data-stu-id="67ffc-117">If you don’t add this property, Windows selects a location when the form is opened.</span></span> <span data-ttu-id="67ffc-118">Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.</span><span class="sxs-lookup"><span data-stu-id="67ffc-118">By setting the **StartingPosition** to **CenterScreen**, you’re automatically displaying the form in the middle of the screen each time it loads.</span></span>
+- <span data-ttu-id="91efd-115">**StartingPosition.**</span><span class="sxs-lookup"><span data-stu-id="91efd-115">**StartingPosition.**</span></span> <span data-ttu-id="91efd-116">Esta propriedade opcional é definida para **CenterScreen** no script precedente.</span><span class="sxs-lookup"><span data-stu-id="91efd-116">This optional property is set to **CenterScreen** in the preceding script.</span></span> <span data-ttu-id="91efd-117">Se você não adicionar essa propriedade, o Windows seleciona um local quando o formulário aberto.</span><span class="sxs-lookup"><span data-stu-id="91efd-117">If you don’t add this property, Windows selects a location when the form is opened.</span></span> <span data-ttu-id="91efd-118">Ao configurar o **StartingPosition** para **CenterScreen**, você está exibindo automaticamente o formulário no meio da tela cada vez que ela é carregada.</span><span class="sxs-lookup"><span data-stu-id="91efd-118">By setting the **StartingPosition** to **CenterScreen**, you’re automatically displaying the form in the middle of the screen each time it loads.</span></span>
 
 ```
 $form.Text = "Data Entry Form"
@@ -91,7 +91,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = "CenterScreen"
 ```
 
-<span data-ttu-id="67ffc-119">Em seguida, crie um botão **OK** para seu formulário.</span><span class="sxs-lookup"><span data-stu-id="67ffc-119">Next, create an **OK** button for your form.</span></span> <span data-ttu-id="67ffc-120">Especifique o tamanho e comportamento do botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="67ffc-120">Specify the size and behavior of the **OK** button.</span></span> <span data-ttu-id="67ffc-121">Neste exemplo, a posição do botão é de 120 pixels a partir da borda superior do formulário e 75 pixels a partir da borda esquerda.</span><span class="sxs-lookup"><span data-stu-id="67ffc-121">In this example, the button position is 120 pixels from the form’s top edge, and 75 pixels from the left edge.</span></span> <span data-ttu-id="67ffc-122">A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels.</span><span class="sxs-lookup"><span data-stu-id="67ffc-122">The button height is 23 pixels, while the button length is 75 pixels.</span></span> <span data-ttu-id="67ffc-123">O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.</span><span class="sxs-lookup"><span data-stu-id="67ffc-123">The script uses predefined Windows Forms types to determine the button behaviors.</span></span>
+<span data-ttu-id="91efd-119">Em seguida, crie um botão **OK** para seu formulário.</span><span class="sxs-lookup"><span data-stu-id="91efd-119">Next, create an **OK** button for your form.</span></span> <span data-ttu-id="91efd-120">Especifique o tamanho e comportamento do botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="91efd-120">Specify the size and behavior of the **OK** button.</span></span> <span data-ttu-id="91efd-121">Neste exemplo, a posição do botão é de 120 pixels a partir da borda superior do formulário e 75 pixels a partir da borda esquerda.</span><span class="sxs-lookup"><span data-stu-id="91efd-121">In this example, the button position is 120 pixels from the form’s top edge, and 75 pixels from the left edge.</span></span> <span data-ttu-id="91efd-122">A altura do botão é de 23 pixels, enquanto seu comprimento é de 75 pixels.</span><span class="sxs-lookup"><span data-stu-id="91efd-122">The button height is 23 pixels, while the button length is 75 pixels.</span></span> <span data-ttu-id="91efd-123">O script usa tipos predefinidos de formulários do Windows para determinar os comportamentos do botão.</span><span class="sxs-lookup"><span data-stu-id="91efd-123">The script uses predefined Windows Forms types to determine the button behaviors.</span></span>
 
 ```
 $OKButton = New-Object System.Windows.Forms.Button
@@ -103,7 +103,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-<span data-ttu-id="67ffc-124">Crie o botão **Cancelar** da mesma maneira.</span><span class="sxs-lookup"><span data-stu-id="67ffc-124">Similarly, you create a **Cancel** button.</span></span> <span data-ttu-id="67ffc-125">O botão **Cancelar** fica a 120 pixels da parte superior e 150 pixels da borda esquerda da janela.</span><span class="sxs-lookup"><span data-stu-id="67ffc-125">The **Cancel** button is 120 pixels from the top, but 150 pixels from the left edge of the window.</span></span>
+<span data-ttu-id="91efd-124">Crie o botão **Cancelar** da mesma maneira.</span><span class="sxs-lookup"><span data-stu-id="91efd-124">Similarly, you create a **Cancel** button.</span></span> <span data-ttu-id="91efd-125">O botão **Cancelar** fica a 120 pixels da parte superior e 150 pixels da borda esquerda da janela.</span><span class="sxs-lookup"><span data-stu-id="91efd-125">The **Cancel** button is 120 pixels from the top, but 150 pixels from the left edge of the window.</span></span>
 
 ```
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -115,7 +115,7 @@ $form.CancelButton = $CancelButton
 $form.Controls.Add($CancelButton)
 ```
 
-<span data-ttu-id="67ffc-126">Em seguida, forneça o texto de rótulo na janela que descreve as informações que você deseja que os usuários forneçam.</span><span class="sxs-lookup"><span data-stu-id="67ffc-126">Next, provide label text on your window that describes the information you want users to provide.</span></span>
+<span data-ttu-id="91efd-126">Em seguida, forneça o texto de rótulo na janela que descreve as informações que você deseja que os usuários forneçam.</span><span class="sxs-lookup"><span data-stu-id="91efd-126">Next, provide label text on your window that describes the information you want users to provide.</span></span>
 
 ```
 $label = New-Object System.Windows.Forms.Label
@@ -125,7 +125,7 @@ $label.Text = "Please make a selection from the list below:"
 $form.Controls.Add($label)
 ```
 
-<span data-ttu-id="67ffc-127">Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo.</span><span class="sxs-lookup"><span data-stu-id="67ffc-127">Add the control (in this case, a list box) that lets users provide the information you’ve described in your label text.</span></span> <span data-ttu-id="67ffc-128">Há muitos outros controles que você pode aplicar além de caixas de texto. Para ver mais controles, consulte [Namespace System.Windows.Forms](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) no MSDN.</span><span class="sxs-lookup"><span data-stu-id="67ffc-128">There are many other controls you can apply besides text boxes; for more controls, see [System.Windows.Forms Namespace](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) on MSDN.</span></span>
+<span data-ttu-id="91efd-127">Adicione o controle (no caso, uma caixa de listagem) que permite que os usuários forneçam as informações descritas no texto do rótulo.</span><span class="sxs-lookup"><span data-stu-id="91efd-127">Add the control (in this case, a list box) that lets users provide the information you’ve described in your label text.</span></span> <span data-ttu-id="91efd-128">Há muitos outros controles que você pode aplicar além de caixas de texto. Para ver mais controles, consulte [Namespace System.Windows.Forms](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) no MSDN.</span><span class="sxs-lookup"><span data-stu-id="91efd-128">There are many other controls you can apply besides text boxes; for more controls, see [System.Windows.Forms Namespace](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) on MSDN.</span></span>
 
 ```
 $listBox = New-Object System.Windows.Forms.Listbox 
@@ -134,13 +134,13 @@ $listBox.Size = New-Object System.Drawing.Size(260,20)
 ```
 
 
-<span data-ttu-id="67ffc-129">Veja como especificar que você deseja que os usuários selecionem múltiplos valores na lista.</span><span class="sxs-lookup"><span data-stu-id="67ffc-129">Here’s how you specify that you want to allow users to select multiple values from the list.</span></span>
+<span data-ttu-id="91efd-129">Veja como especificar que você deseja que os usuários selecionem múltiplos valores na lista.</span><span class="sxs-lookup"><span data-stu-id="91efd-129">Here’s how you specify that you want to allow users to select multiple values from the list.</span></span>
 
 ```
 $listBox.SelectionMode = "MultiExtended"
 ```
 
-<span data-ttu-id="67ffc-130">Na próxima seção, você deve especificar os valores que você deseja que a caixa de listagem mostre para os usuários.</span><span class="sxs-lookup"><span data-stu-id="67ffc-130">In the next section, you specify the values you want the list box to display to users.</span></span>
+<span data-ttu-id="91efd-130">Na próxima seção, você deve especificar os valores que você deseja que a caixa de listagem mostre para os usuários.</span><span class="sxs-lookup"><span data-stu-id="91efd-130">In the next section, you specify the values you want the list box to display to users.</span></span>
 
 ```
 [void] $listBox.Items.Add("Item 1")
@@ -150,26 +150,26 @@ $listBox.SelectionMode = "MultiExtended"
 [void] $listBox.Items.Add("Item 5")
 ```
 
-<span data-ttu-id="67ffc-131">Especifica a altura máxima do controle de caixa de listagem.</span><span class="sxs-lookup"><span data-stu-id="67ffc-131">Specify the maximum height of the list box control.</span></span>
+<span data-ttu-id="91efd-131">Especifica a altura máxima do controle de caixa de listagem.</span><span class="sxs-lookup"><span data-stu-id="91efd-131">Specify the maximum height of the list box control.</span></span>
 
 ```
 $listBox.Height = 70
 ```
 
-<span data-ttu-id="67ffc-132">Adicione o controle de caixa de listagem ao formulário e instrua o Windows a abrir o formulário sobre outras janelas e caixas de diálogo quando ela é aberta.</span><span class="sxs-lookup"><span data-stu-id="67ffc-132">Add the list box control to your form, and instruct Windows to open the form atop other windows and dialog boxes when it’s opened.</span></span>
+<span data-ttu-id="91efd-132">Adicione o controle de caixa de listagem ao formulário e instrua o Windows a abrir o formulário sobre outras janelas e caixas de diálogo quando ela é aberta.</span><span class="sxs-lookup"><span data-stu-id="91efd-132">Add the list box control to your form, and instruct Windows to open the form atop other windows and dialog boxes when it’s opened.</span></span>
 
 ```
 $form.Controls.Add($listBox) 
 $form.Topmost = $True
 ```
 
-<span data-ttu-id="67ffc-133">Adicione a seguinte linha de código para exibir o formulário do Windows.</span><span class="sxs-lookup"><span data-stu-id="67ffc-133">Add the following line of code to display the form in Windows.</span></span>
+<span data-ttu-id="91efd-133">Adicione a seguinte linha de código para exibir o formulário do Windows.</span><span class="sxs-lookup"><span data-stu-id="91efd-133">Add the following line of code to display the form in Windows.</span></span>
 
 ```
 $result = $form.ShowDialog()
 ```
 
-<span data-ttu-id="67ffc-134">Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter**.</span><span class="sxs-lookup"><span data-stu-id="67ffc-134">Finally, the code inside the **If** block instructs Windows what to do with the form after users select one or more options from the list box, and then click the **OK** button or press the **Enter** key.</span></span>
+<span data-ttu-id="91efd-134">Por fim, o código dentro do bloco **If** instrui o Windows sobre o que fazer com o formulário depois que os usuários selecionam uma opção ou mais opções na caixa de listagem e clicam no botão **OK** ou pressionam a tecla **Enter**.</span><span class="sxs-lookup"><span data-stu-id="91efd-134">Finally, the code inside the **If** block instructs Windows what to do with the form after users select one or more options from the list box, and then click the **OK** button or press the **Enter** key.</span></span>
 
 ```
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
@@ -179,8 +179,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="67ffc-135">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="67ffc-135">See Also</span></span>
-- [<span data-ttu-id="67ffc-136">Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?</span><span class="sxs-lookup"><span data-stu-id="67ffc-136">Hey Scripting Guy:  Why don’t these PowerShell GUI examples work?</span></span>](http://go.microsoft.com/fwlink/?LinkId=506644)
-- [<span data-ttu-id="67ffc-137">GitHub: WinFormsExampleUpdates do Dave Wyatt</span><span class="sxs-lookup"><span data-stu-id="67ffc-137">GitHub: Dave Wyatt's WinFormsExampleUpdates</span></span>](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [<span data-ttu-id="67ffc-138">Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla – E muito mais!</span><span class="sxs-lookup"><span data-stu-id="67ffc-138">Windows PowerShell Tip of the Week:  Multi-Select List Boxes - And More!</span></span>](http://technet.microsoft.com/library/ff730950.aspx)
+## <a name="see-also"></a><span data-ttu-id="91efd-135">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="91efd-135">See Also</span></span>
+- [<span data-ttu-id="91efd-136">Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?</span><span class="sxs-lookup"><span data-stu-id="91efd-136">Hey Scripting Guy:  Why don’t these PowerShell GUI examples work?</span></span>](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [<span data-ttu-id="91efd-137">GitHub: WinFormsExampleUpdates do Dave Wyatt</span><span class="sxs-lookup"><span data-stu-id="91efd-137">GitHub: Dave Wyatt's WinFormsExampleUpdates</span></span>](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [<span data-ttu-id="91efd-138">Dica da semana do Windows PowerShell: caixas de listagem de seleção múltipla – E muito mais!</span><span class="sxs-lookup"><span data-stu-id="91efd-138">Windows PowerShell Tip of the Week:  Multi-Select List Boxes - And More!</span></span>](http://technet.microsoft.com/library/ff730950.aspx)
 
