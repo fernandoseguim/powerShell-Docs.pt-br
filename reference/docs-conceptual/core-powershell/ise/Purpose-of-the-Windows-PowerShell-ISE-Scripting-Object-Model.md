@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Objetivo do modelo de objeto de script do ISE do Windows PowerShell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
-ms.openlocfilehash: 65535948d681ec63c6cc36583c6d145cfa19b937
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 3256d8bff3885d266f0db6f52932e40c4beaf8b1
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objetivo do modelo de objeto de script do ISE do Windows PowerShell
   Objetos são associados com a forma e a função do ISE (Ambiente de Script Integrado) do Windows PowerShell. A referência de modelo de objeto fornece detalhes sobre as propriedades e os métodos de membros que esses objetos expõem. Exemplos são fornecidos para mostrar como você pode usar scripts para acessar diretamente esses métodos e propriedades. O modelo de objeto de script facilita a gama de tarefas a seguir.
@@ -15,28 +15,28 @@ ms.lasthandoff: 08/03/2017
 ## <a name="customizing-the-appearance-of-windows-powershell-ise"></a>Personalizando a aparência do ISE do Windows PowerShell
  Você pode usar o modelo de objeto para modificar as configurações e opções do aplicativo. Por exemplo, você pode modificá-las da seguinte forma:
 
--   Você pode mudar a cor de erros, avisos, saídas detalhadas e saídas de depuração.
+- Você pode mudar a cor de erros, avisos, saídas detalhadas e saídas de depuração.
 
--   Você pode obter ou definir cores de tela de fundo para o painel de Comando, painel de Saída e o painel de Script.
+- Você pode obter ou definir cores de tela de fundo para o painel de Comando, painel de Saída e o painel de Script.
 
--   Você pode definir a cor de primeiro plano para o painel de Saída.
+- Você pode definir a cor de primeiro plano para o painel de Saída.
 
--   Você pode definir o nome e tamanho da fonte para o ISE do Windows PowerShell.
+- Você pode definir o nome e tamanho da fonte para o ISE do Windows PowerShell.
 
--   Você pode configurar alertas. Essa configuração inclui advertências que são emitidas quando um arquivo é aberto em várias guias do PowerShell ou quando um script no arquivo é executado antes que o arquivo seja salvo.
+- Você pode configurar alertas. Essa configuração inclui advertências que são emitidas quando um arquivo é aberto em várias guias do PowerShell ou quando um script no arquivo é executado antes que o arquivo seja salvo.
 
--   Você pode alternar entre uma exibição em que o painel Script e Painel de saída estão lado em uma exibição em que o painel Script está na parte superior do Painel de saída. Você pode encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
+- Você pode alternar entre uma exibição em que o painel Script e Painel de saída estão lado em uma exibição em que o painel Script está na parte superior do Painel de saída. Você pode encaixar o painel de Comando na parte inferior ou superior do painel de Saída.
 
 ## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Melhorando a funcionalidade do ISE do Windows PowerShell
  Você pode usar o modelo de objeto para melhorar a funcionalidade do ISE do Windows PowerShell. Por exemplo, você pode:
 
--   Adicionar e modificar a instância do próprio ISE do Windows PowerShell. Por exemplo, para alterar os menus, você pode adicionar novos itens de menu e mapear os novos itens de menu para os scripts.
+- Adicionar e modificar a instância do próprio ISE do Windows PowerShell. Por exemplo, para alterar os menus, você pode adicionar novos itens de menu e mapear os novos itens de menu para os scripts.
 
--   Crie scripts que realizam algumas das tarefas que podem ser executadas usando os comandos de menu e botões no ISE do Windows PowerShell. Por exemplo, você pode adicionar, remover ou selecionar uma guia PowerShell.
+- Crie scripts que realizam algumas das tarefas que podem ser executadas usando os comandos de menu e botões no ISE do Windows PowerShell. Por exemplo, você pode adicionar, remover ou selecionar uma guia PowerShell.
 
--   Complemente tarefas que podem ser realizadas usando comandos e botões de menu. Por exemplo, você pode renomear uma guia do PowerShell.
+- Complemente tarefas que podem ser realizadas usando comandos e botões de menu. Por exemplo, você pode renomear uma guia do PowerShell.
 
--   Manipule buffers de texto para os painéis de Comando, Saída e Script associados a um arquivo. Por exemplo, você pode:
+- Manipule buffers de texto para os painéis de Comando, Saída e Script associados a um arquivo. Por exemplo, você pode:
 
     -   Obtenha ou defina todo o texto.
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
 
     -   Obtenha o último número de linha.
 
--   Execute operações de arquivo. Por exemplo, você pode:
+- Execute operações de arquivo. Por exemplo, você pode:
 
     -   Abrir um arquivo, salvar um arquivo ou salvar um arquivo usando um nome diferente.
 

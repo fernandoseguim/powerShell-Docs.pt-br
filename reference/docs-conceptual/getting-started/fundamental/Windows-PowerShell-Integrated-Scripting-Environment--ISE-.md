@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: ISE (Ambiente de Script Integrado) do Windows PowerShell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 93b3322ae5634d3611f3c2743e7460e266dc7ab8
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e5c4e6ef002d6d6ede014a3147d1fed15f6d76d8
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Ambiente de script integrado do Windows PowerShell (ISE)
 O ISE (Ambiente de Script Integrado) do Windows PowerShell é um dos dois hosts para o mecanismo do Windows PowerShell e a linguagem idioma. Com ele você pode gravar, executar e testar scripts de maneiras que não estão disponíveis no Console do Windows PowerShell. O ISE adiciona cores de sintaxe, preenchimento com Tab, IntelliSense, depuração visual e ajuda contextual.
@@ -34,21 +34,21 @@ O **IntelliSense** preenche automaticamente seus comandos exibindo menus de cmdl
 
 **Novos recursos do editor** facilitam criar e ler seu código:
 
--   **Cores de sintaxe de XML**. O editor do ISE agora usa as cores de sintaxe XML da mesma maneira que a sintaxe de código do Windows PowerShell.
+- **Cores de sintaxe de XML**. O editor do ISE agora usa as cores de sintaxe XML da mesma maneira que a sintaxe de código do Windows PowerShell.
 
--   **Correspondência de chaves**. O ISE do Windows PowerShell destaca a correspondência de chaves para ajudar a garantir que você tenha o número correto de chaves de fechamento para corresponder às de abertura. Use Ctrl+\[ para localizar a chave de fechamento correspondente àquela de abertura na qual o cursor está.
+- **Correspondência de chaves**. O ISE do Windows PowerShell destaca a correspondência de chaves para ajudar a garantir que você tenha o número correto de chaves de fechamento para corresponder às de abertura. Use Ctrl+\[ para localizar a chave de fechamento correspondente àquela de abertura na qual o cursor está.
 
--   **Exibição de estrutura de tópicos**. Você pode recolher ou expandir seções do seu código clicando nos sinais de adição e subtração na margem esquerda. Isso torna mais fácil localizar o código que você está procurando em um script longo.
+- **Exibição de estrutura de tópicos**. Você pode recolher ou expandir seções do seu código clicando nos sinais de adição e subtração na margem esquerda. Isso torna mais fácil localizar o código que você está procurando em um script longo.
 
--   **Edição de texto com arrastar e soltar**. Você pode selecionar um bloco de texto e arrastá-lo para outro local para movê-lo. Se você mantiver a tecla Ctrl pressionada enquanto arrasta o texto selecionado, você o copiará em vez mover.
+- **Edição de texto com arrastar e soltar**. Você pode selecionar um bloco de texto e arrastá-lo para outro local para movê-lo. Se você mantiver a tecla Ctrl pressionada enquanto arrasta o texto selecionado, você o copiará em vez mover.
 
--   **Exibição de erros de análise**. O Windows PowerShell examina o script conforme você digita. Se detectar um erro, ele mostrará um rabisco vermelho sob o código incorreto. Quando você focaliza o erro indicado, uma dica de ferramenta mostra o problema que foi encontrado.
+- **Exibição de erros de análise**. O Windows PowerShell examina o script conforme você digita. Se detectar um erro, ele mostrará um rabisco vermelho sob o código incorreto. Quando você focaliza o erro indicado, uma dica de ferramenta mostra o problema que foi encontrado.
 
--   **Zoom**. Você pode ampliar o texto para facilitar a leitura ou reduzir para ver um panorama usando o controle deslizante no canto inferior direito da janela do ISE.
+- **Zoom**. Você pode ampliar o texto para facilitar a leitura ou reduzir para ver um panorama usando o controle deslizante no canto inferior direito da janela do ISE.
 
--   **Copiar e colar rich text**. Quando você copia do ISE para a área de transferência, as informações de fonte, tamanho e cor do texto selecionado estão incluídas.
+- **Copiar e colar rich text**. Quando você copia do ISE para a área de transferência, as informações de fonte, tamanho e cor do texto selecionado estão incluídas.
 
--   **Seleção de blocos**. Você pode selecionar uma parte do texto em bloco segurando a tecla Alt enquanto seleciona o texto no painel de script com o mouse ou pressionando **Alt+Shift+Seta**.
+- **Seleção de blocos**. Você pode selecionar uma parte do texto em bloco segurando a tecla Alt enquanto seleciona o texto no painel de script com o mouse ou pressionando **Alt+Shift+Seta**.
 
 ### <a name="added-in-powershell-20-windows-server-2008-r2-windows-7"></a>Adicionado ao PowerShell 2.0 (Windows Server 2008 R2 e Windows 7)
 O ISE foi introduzido com o PowerShell v2.0.

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Iniciando o Windows PowerShell em versões anteriores do Windows"
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
-ms.openlocfilehash: cb56fded1e67a4f4219d210dd95078314e855b1a
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 52e3acc1fd3009ecad3b7134008e38d4edfb5ca7
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="starting-windows-powershell-on-earlier-versions-of-windows"></a>Iniciando o Windows PowerShell em versões anteriores do Windows
 Esta seção explica como iniciar o Windows PowerShell e o ISE (Ambiente de Script Integrado) do Windows PowerShell no Windows® 7, Windows Server® 2008 R2 e Windows Server® 2008. Também explica como habilitar o recurso opcional para o ISE do Windows PowerShell no Windows PowerShell 2.0 no Windows Server® 2008 R2 e Windows Server 2008.
@@ -21,13 +21,13 @@ Use qualquer um dos seguintes métodos para iniciar a versão instalada do Windo
 
 #### <a name="from-the-start-menu"></a>Do menu Iniciar
 
--   Clique em **Iniciar**, digite **PowerShell** e clique em **Windows PowerShell**.
+- Clique em **Iniciar**, digite **PowerShell** e clique em **Windows PowerShell**.
 
--   No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **Windows PowerShell**.
+- No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **Windows PowerShell**.
 
 #### <a name="at-the-command-prompt"></a>No prompt de comando
 
--   No Cmd.exe, Windows PowerShell ou ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
+- No Cmd.exe, Windows PowerShell ou ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
 
     ```
     PowerShell
@@ -37,20 +37,20 @@ Use qualquer um dos seguintes métodos para iniciar a versão instalada do Windo
 
 #### <a name="with-administrative-privileges-run-as-administrator"></a>Com privilégios administrativos (“Executar como administrador”)
 
-1.  Clique em **Iniciar**, digite **PowerShell**, clique com o botão direito do mouse em **Windows PowerShell** e depois clique em **Executar como administrador**.
+1. Clique em **Iniciar**, digite **PowerShell**, clique com o botão direito do mouse em **Windows PowerShell** e depois clique em **Executar como administrador**.
 
 ## <a name="how-to-start-windows-powershell-ise-on-earlier-releases-of-windows"></a>Como iniciar o ISE do Windows PowerShell em versões anteriores do Windows
 Use qualquer um dos seguintes métodos para iniciar o ISE do Windows PowerShell.
 
 #### <a name="from-the-start-menu"></a>Do menu Iniciar
 
--   Clique em **Iniciar**, digite **ISE** e clique em **ISE do Windows PowerShell**.
+- Clique em **Iniciar**, digite **ISE** e clique em **ISE do Windows PowerShell**.
 
--   No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
+- No menu **Iniciar**, clique em **Iniciar**, **Todos os Programas**, **Acessórios**, clique na pasta **Windows PowerShell** e clique em **ISE do Windows PowerShell**.
 
 #### <a name="at-the-command-prompt"></a>No prompt de comando
 
--   No Cmd.exe, Windows PowerShell ou ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
+- No Cmd.exe, Windows PowerShell ou ISE do Windows PowerShell, para iniciar o Windows PowerShell, digite:
 
     ```
     PowerShell_ISE
@@ -64,7 +64,7 @@ Use qualquer um dos seguintes métodos para iniciar o ISE do Windows PowerShell.
 
 #### <a name="with-administrative-privileges-run-as-administrator"></a>Com privilégios administrativos (“Executar como administrador”)
 
-1.  Clique em **Iniciar**, digite **ISE**, clique com o botão direito do mouse em **ISE do Windows PowerShell** e depois clique em **Executar como administrador**.
+1. Clique em **Iniciar**, digite **ISE**, clique com o botão direito do mouse em **ISE do Windows PowerShell** e depois clique em **Executar como administrador**.
 
 ## <a name="how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows"></a>Como habilitar o ISE do Windows PowerShell em versões anteriores do Windows
 No Windows PowerShell 4.0 e Windows PowerShell 3.0, o ISE do Windows PowerShell é habilitado por padrão em todas as versões do Windows. Se ele ainda não estiver habilitado, o Windows Management Framework 4.0 ou Windows Management Framework 3.0 o habilitará.
@@ -75,9 +75,9 @@ Para habilitar o ISE do Windows PowerShell no Windows PowerShell 2.0 no Windows 
 
 #### <a name="to-enable-windows-powershell-integrated-scripting-environment-ise"></a>Para habilitar o ISE (Ambiente de Script Integrado) do Windows PowerShell
 
-1.  Inicie o Gerenciador do Servidor.
+1. Inicie o Gerenciador do Servidor.
 
-2.  Clique em **Recursos** e depois em **Adicionar Recursos**.
+2. Clique em **Recursos** e depois em **Adicionar Recursos**.
 
-3.  Em Selecionar Recursos, clique em ISE (Ambiente de Script Integrado) do Windows PowerShell.
+3. Em Selecionar Recursos, clique em ISE (Ambiente de Script Integrado) do Windows PowerShell.
 

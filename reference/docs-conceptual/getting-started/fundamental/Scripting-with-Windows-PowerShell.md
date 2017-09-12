@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Criando scripts com o Windows PowerShell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: ac276938c71fa1627a2c9d3346269b89950184d9
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 693d1bb9329dbb280453fc16738eda63c466e156
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="scripting-with-windows-powershell"></a>Criando scripts com o Windows PowerShell
 
@@ -17,10 +17,10 @@ Os comandos do Windows PowerShell, denominados *cmdlets*, permitem que você ger
 
 O Windows PowerShell inclui os seguintes recursos:
 
--   Cmdlets para executar tarefas comuns de administração de sistema, como gerenciar o registro, serviços, processos e logs de eventos usando a Instrumentação de Gerenciamento do Windows (WMI).
--   Uma linguagem de script baseada em tarefas e suporte para ferramentas de linha de comando e scripts existentes.
--   Design consistente. Como repositórios de cmdlets e dados do sistema usam uma sintaxe e convenções de nomenclatura comuns, os dados podem ser compartilhados com facilidade e a saída de um cmdlet pode ser usada como entrada de outro cmdlet sem a necessidade de reformatação ou manipulação.
--   A navegação simples e baseada em comandos do sistema operacional, que permite aos usuários navegar o registro e outros repositórios de dados usando as mesmas técnicas usadas para navegar pelo sistema de arquivos.
--   Recursos potentes de manipulação de objeto. Os objetos podem ser manipulados ou enviados para outras ferramentas ou bancos de dados diretamente.
--   Interface extensível. Fornecedores independentes de software e os desenvolvedores corporativos podem criar ferramentas personalizadas e utilitários para administrar seus softwares.
+- Cmdlets para executar tarefas comuns de administração de sistema, como gerenciar o registro, serviços, processos e logs de eventos usando a Instrumentação de Gerenciamento do Windows (WMI).
+- Uma linguagem de script baseada em tarefas e suporte para ferramentas de linha de comando e scripts existentes.
+- Design consistente. Como repositórios de cmdlets e dados do sistema usam uma sintaxe e convenções de nomenclatura comuns, os dados podem ser compartilhados com facilidade e a saída de um cmdlet pode ser usada como entrada de outro cmdlet sem a necessidade de reformatação ou manipulação.
+- A navegação simples e baseada em comandos do sistema operacional, que permite aos usuários navegar o registro e outros repositórios de dados usando as mesmas técnicas usadas para navegar pelo sistema de arquivos.
+- Recursos potentes de manipulação de objeto. Os objetos podem ser manipulados ou enviados para outras ferramentas ou bancos de dados diretamente.
+- Interface extensível. Fornecedores independentes de software e os desenvolvedores corporativos podem criar ferramentas personalizadas e utilitários para administrar seus softwares.
 

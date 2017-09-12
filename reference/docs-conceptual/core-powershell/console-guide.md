@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Guia do console
-ms.openlocfilehash: fc42147d8dc3ea089c24584d4947b6c55da57677
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: f97a44637cbce5a5d81c8e4e7f8e236901a6e4fd
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
-#  <a name="powershell-console-window-guide"></a>Guia da janela de Console do PowerShell
+# <a name="powershell-console-window-guide"></a>Guia da janela de Console do PowerShell
 
 Neste guia:
--  [Ajuda da linha de comando do PowerShell.exe](console/PowerShell.exe-Command-Line-Help.md)
--  [Usando a expansão com Tab](console/Using-Tab-Expansion.md)
+- [Ajuda da linha de comando do PowerShell.exe](console/PowerShell.exe-Command-Line-Help.md)
+- [Usando a expansão com Tab](console/Using-Tab-Expansion.md)
 

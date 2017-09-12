@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Trabalhando com pastas de arquivos e chaves de Registro
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: 2bae8d6931c84bee4aa30a43742acd052b82d079
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 22a2390686659033bfd8b02a151b3397cfd46a22
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Trabalhando com arquivos, pastas e chaves do Registro
 O Windows PowerShell usa o substantivo **Item** para se referir a itens encontrados em uma unidade do Windows PowerShell. Ao lidar com o provedor do Sistema de arquivos do Windows PowerShell, um **Item** pode ser um arquivo, uma pasta ou uma unidade do Windows PowerShell. Listar e trabalhar com esses itens são tarefas críticas básicas na maioria das configurações administrativas, por isso abordaremos essas tarefas com mais detalhes.
@@ -77,11 +77,11 @@ O comando **Get-ChildItem** aceita curingas no caminho dos itens para listar.
 
 Como a correspondência de curingas é identificada pelo mecanismo do Windows PowerShell, todos os cmdlets que aceitam curingas usam a mesma notação e têm o mesmo comportamento de correspondência. A notação de curinga do Windows PowerShell inclui:
 
--   O asterisco (\*) corresponde a zero ou a mais ocorrências de qualquer caractere.
+- O asterisco (\*) corresponde a zero ou a mais ocorrências de qualquer caractere.
 
--   O ponto de interrogação (?) corresponde exatamente a um caractere.
+- O ponto de interrogação (?) corresponde exatamente a um caractere.
 
--   Os caracteres de colchete esquerdo (\[) e de colchete direito (]) envolvem um conjunto de caracteres a serem correspondidos.
+- Os caracteres de colchete esquerdo (\[) e de colchete direito (]) envolvem um conjunto de caracteres a serem correspondidos.
 
 Aqui estão alguns exemplos de como a especificação de curinga funciona.
 

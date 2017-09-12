@@ -2,13 +2,13 @@
 ms.date: 2017-08-23
 keywords: PowerShell, cmdlet
 title: desinstalar o windows powershell web access
-ms.openlocfilehash: 6b75eadb7264d7478fb3c9bc2b2ff355772ef4c2
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 7c71a245be244c1883598cdcddbf35e43c0fc7b0
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
-#  <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
+# <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
 
 Atualizado em: 24 de junho de 2013
 
@@ -55,7 +55,7 @@ usando cmdlets do Windows PowerShell.
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Etapa 2: Desinstalar o Windows PowerShell Web Access usando cmdlets
 
-1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados. Se já houver uma sessão aberta, vá para a etapa seguinte.
+1. Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados. Se já houver uma sessão aberta, vá para a etapa seguinte.
 
     -   Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
 

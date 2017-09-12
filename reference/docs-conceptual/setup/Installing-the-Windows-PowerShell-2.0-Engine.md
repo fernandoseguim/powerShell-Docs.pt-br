@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Instalar o Mecanismo do Windows PowerShell 2.0
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: 37a300d2f0517a819f520c44f0eb92e168444890
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: ff6c2b52b8948472ace3ee35cd4c6aa2dbf46c25
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Instalar o Mecanismo do Windows PowerShell 2.0
 Este tópico explica como instalar o Mecanismo Windows PowerShell 2.0.
@@ -25,46 +25,46 @@ No Windows 8.1 e Windows 8, o recurso do mecanismo Windows PowerShell 2.0 é ati
 
 #### <a name="to-turn-on-net-framework-35"></a>Para ativar o .NET Framework 3.5
 
-1.  Na tela **Iniciar**, clique em **Recursos do Windows**.
+1. Na tela **Iniciar**, clique em **Recursos do Windows**.
 
-2.  Em **Aplicativos**, clique em **Configurações** e em **Ativar ou desativar recursos do Windows**.
+2. Em **Aplicativos**, clique em **Configurações** e em **Ativar ou desativar recursos do Windows**.
 
-3.  Na caixa **Recursos do Windows**, clique em **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0** para selecioná-la.
+3. Na caixa **Recursos do Windows**, clique em **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0** para selecioná-la.
 
     Quando você seleciona **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0**, a caixa é preenchida para indicar que apenas parte do recurso está selecionada. No entanto, isso é suficiente para o Mecanismo Windows PowerShell 2.0.
 
 #### <a name="to-turn-the-windows-powershell-20-engine-on-and-off"></a>Para ativar ou desativar o Mecanismo Windows PowerShell 2.0
 
-1.  Na tela **Iniciar**, clique em **Recursos do Windows**.
+1. Na tela **Iniciar**, clique em **Recursos do Windows**.
 
-2.  Em **Aplicativos**, clique em **Configurações** e em **Ativar ou desativar recursos do Windows**.
+2. Em **Aplicativos**, clique em **Configurações** e em **Ativar ou desativar recursos do Windows**.
 
-3.  Na caixa **Recursos do Windows**, expanda o nó **Windows PowerShell 2.0** e clique na caixa **Mecanismo Windows PowerShell 2.0** para selecioná-la ou limpá-la.
+3. Na caixa **Recursos do Windows**, expanda o nó **Windows PowerShell 2.0** e clique na caixa **Mecanismo Windows PowerShell 2.0** para selecioná-la ou limpá-la.
 
 ## <a name="on-windows-server-2012-r2-and-windows-server-2012"></a>No Windows Server 2012 R2 e Windows Server 2012
 Use os seguintes procedimentos para adicionar os recursos dos Mecanismos Windows PowerShell 2.0 e Microsoft .NET Framework 3.5. O Mecanismo do Windows PowerShell 2.0 requer o Microsoft .NET Framework 2.0.50727 no mínimo. Esse requisito é atendido pelo Microsoft .NET Framework 3.5.
 
 #### <a name="to-add-the-net-framework-35-feature"></a>Para adicionar o recurso .NET Framework 3.5
 
-1.  Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
+1. Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
 
     Ou, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome de servidor e escolha **Adicionar Funções e Recursos**.
 
-2.  Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
+2. Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
 
-3.  Sobre a página **Recursos**, expanda o nó **Recursos do .NET 3.5 Framework** e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)**.
+3. Sobre a página **Recursos**, expanda o nó **Recursos do .NET 3.5 Framework** e selecione **.NET Framework 3.5 (inclui .NET 2.0 e 3.0)**.
 
     As outras opções nesse esse nó não são necessárias ao Mecanismo Windows PowerShell 2.0.
 
 #### <a name="to-add-the-windows-powershell-20-engine-feature"></a>Para adicionar o recurso do Mecanismo Windows PowerShell 2.0
 
--   Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
+- Em **Gerenciador do Servidor**, no menu **Gerenciar** clique em **Adicionar Funções e Recursos**.
 
     Ou, no **Gerenciador do Servidor**, clique em **Todos os Servidores**, clique com o botão direito do mouse em um nome de servidor e escolha **Adicionar Funções e Recursos**.
 
--   Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
+- Na página **Tipo de Instalação**, escolha **Instalação baseada em função ou recurso**.
 
--   Na página **Recursos**, expanda o nó **Windows PowerShell (Instalado)** e selecione **Mecanismo do Windows PowerShell 2.0**.
+- Na página **Recursos**, expanda o nó **Windows PowerShell (Instalado)** e selecione **Mecanismo do Windows PowerShell 2.0**.
 
 Para obter informações sobre como iniciar o Mecanismo do Windows PowerShell 2.0, consulte [Iniciando o Mecanismo do Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 

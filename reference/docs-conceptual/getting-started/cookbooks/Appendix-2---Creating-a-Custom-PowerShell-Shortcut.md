@@ -1,34 +1,34 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Apêndice 2 Criar um atalho do PowerShell personalizado"
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: 31fdc388ae8859191f75c3c4120667cdbeff1669
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d5e554f6f062fc5bf1beddd2aca1acf0b93d2133
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Apêndice 2: Criar um atalho do PowerShell personalizado
 O procedimento a seguir descreve como criar um atalho para o Windows PowerShell que tem várias opções convenientes personalizadas.
 
-1.  Crie um atalho que aponta para Powershell.exe.
+1. Crie um atalho que aponta para Powershell.exe.
 
-2.  Clique com o botão direito do mouse no atalho e clique em **Propriedades**.
+2. Clique com o botão direito do mouse no atalho e clique em **Propriedades**.
 
-3.  Clique na guia **Opções**.
+3. Clique na guia **Opções**.
 
-4.  Na seção **Editar Opções**, selecione a caixa de seleção **Edição Rápida**.
+4. Na seção **Editar Opções**, selecione a caixa de seleção **Edição Rápida**.
 
     Essa configuração permite selecionar o texto na janela do console do Windows PowerShell, arrastar o botão esquerdo do mouse e copiar texto para a área de transferência pressionando Enter ou clicando com o botão direito do mouse.
 
-5.  Na seção **Editar Opções**, selecione a caixa de seleção **Modo Inserir**. Essa configuração permite clicar com o botão direito do mouse na janela do console para colar o texto da área de transferência automaticamente.
+5. Na seção **Editar Opções**, selecione a caixa de seleção **Modo Inserir**. Essa configuração permite clicar com o botão direito do mouse na janela do console para colar o texto da área de transferência automaticamente.
 
-6.  Na seção **Histórico de Comandos**, digite ou selecione um número entre 1 e 999 na caixa **Tamanho do Buffer**. Isso define o número de comandos digitados que serão mantidas no buffer do console.
+6. Na seção **Histórico de Comandos**, digite ou selecione um número entre 1 e 999 na caixa **Tamanho do Buffer**. Isso define o número de comandos digitados que serão mantidas no buffer do console.
 
-7.  Na seção **Histórico de Comandos**, marque a caixa de seleção **Descartar Duplicatas Antigas** para eliminar comandos repetidos do console do buffer.
+7. Na seção **Histórico de Comandos**, marque a caixa de seleção **Descartar Duplicatas Antigas** para eliminar comandos repetidos do console do buffer.
 
-8.  Clique na guia **Layout**.
+8. Clique na guia **Layout**.
 
 9. Na seção **Buffer da Tela**, digite um número entre 1 e 9999 na caixa **Altura**. A altura representa o número de linhas de saída que são armazenados no buffer. Este é o número máximo de linhas mantido para exibição ao rolar a janela do console. Se este número for menor do que a altura mostrada na seção **Tamanho da Janela**, a altura do tamanho da janela será automaticamente reduzida com o mesmo valor.
 
