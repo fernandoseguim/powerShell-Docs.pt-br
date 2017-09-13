@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: O objeto ISEOptions
 ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
-ms.openlocfilehash: a43628a216b0757e1bf7738439975ed1b081b9ec
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 5e04adeebacfb9214bf39d9ec9c5f0e01f5729ee
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="the-iseoptions-object"></a>O objeto ISEOptions
   O objeto **ISEOptions** representa várias configurações para o ISE do Windows PowerShell. Ele é uma instância da classe **Microsoft.PowerShell.Host.ISE.ISEOptions**.
@@ -16,7 +16,7 @@ ms.lasthandoff: 08/31/2017
 
 ## <a name="methods"></a>Métodos
 
-###  <a name="restoredefaultconsoletokencolors"></a>RestoreDefaultConsoleTokenColors\(\)
+### <a name="restoredefaultconsoletokencolors"></a>RestoreDefaultConsoleTokenColors\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
  Restaura os valores padrão das cores do token no painel de Console.
@@ -27,7 +27,7 @@ $psISE.Options.ConsoleTokenColors["Command"] = "red"
 $psISE.Options.RestoreDefaultConsoleTokenColors()
 ```
 
-###  <a name="restoredefaults"></a>RestoreDefaults\(\)
+### <a name="restoredefaults"></a>RestoreDefaults\(\)
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
  Restaura os valores padrão das cores de todas as configurações de opções no painel de Console. Ele também redefine o comportamento de várias mensagens de aviso que fornecem a caixa de seleção padrão para impedir que a mensagem seja mostrada novamente.
@@ -52,7 +52,7 @@ $psISE.Options.RestoreDefaultTokenColors()
 ### <a name="restoredefaultxmltokencolors"></a>RestoreDefaultXmlTokenColors\(\)
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Restaura os valores padrão das cores do token para elementos XML exibidos no ISE do Windows PowerShell. Consulte também [XmlTokenColors]().
+ Restaura os valores padrão das cores do token para elementos XML exibidos no ISE do Windows PowerShell. Consulte também [XmlTokenColors](#xmltokencolors).
 
 ```
 # Changes the color of the comments in XML data to red and then restores it to its default value.
@@ -73,7 +73,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 ```
 
 ### <a name="commandpanebackgroundcolor"></a>CommandPaneBackgroundColor
-  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneBackgroundColor]().
+  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
  Especifica a cor da tela de fundo para o painel de comando. É uma instância da classe **System.Windows.Media.Color**.
 
@@ -127,7 +127,7 @@ $psISE.Options.ConsolePaneTextBackgroundColor = "pink"
 ### <a name="consoletokencolors"></a>ConsoleTokenColors
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica as cores dos tokens do IntelliSense no painel de Console de ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel de Console. Para alterar as cores dos tokens do IntelliSense no painel de Script, consulte [TokenColors](. Para redefinir as cores aos valores padrão, consulte [RestoreDefaultConsoleTokenColors()](). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Especifica as cores dos tokens do IntelliSense no painel de Console de ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel de Console. Para alterar as cores dos tokens do IntelliSense no painel de Script, consulte [TokenColors](#tokencolors). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultConsoleTokenColors](#restoredefaultconsoletokencolors). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -266,7 +266,7 @@ $psISE.Options.MruCount = 5
 ```
 
 ### <a name="outputpanebackgroundcolor"></a>OutputPaneBackgroundColor
-  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneBackgroundColor]().
+  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
  A propriedade de leitura/gravação que obtém ou define a cor da tela de fundo para o Painel de saída em si. É uma instância da classe **System.Windows.Media.Color**.
 
@@ -277,7 +277,7 @@ $psISE.Options.OutputPaneForegroundColor = "gold"
 ```
 
 ### <a name="outputpanetextforegroundcolor"></a>OutputPaneTextForegroundColor
-  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneForegroundColor]().
+  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneForegroundColor](#consolepaneforegroundcolor).
 
  A propriedade de leitura/gravação que muda a cor do primeiro plano do texto no Painel de saída no ISE do Windows PowerShell 2.0.
 
@@ -288,7 +288,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 ```
 
 ### <a name="outputpanetextbackgroundcolor"></a>OutputPaneTextBackgroundColor
-  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneTextBackgroundColor]().
+  Esse recurso está presente no ISE do Windows PowerShell 2.0, mas foi removido ou renomeado em versões posteriores do ISE.  Para versões posteriores, consulte [ConsolePaneTextBackgroundColor](#consolepanetextbackgroundcolor).
 
  A propriedade de leitura/gravação que muda a cor da tela de fundo do texto no painel Saída.
 
@@ -305,7 +305,7 @@ $psISE.Options.OutputPaneTextBackgroundColor = "pink"
 ```
 
 # Sets the color of the script pane background to yellow.
-$psISE.Options.ScriptPaneBackgroundColor = â€yellowâ€
+$psISE.Options.ScriptPaneBackgroundColor = 'yellow'
 
 ```
 
@@ -313,7 +313,7 @@ $psISE.Options.ScriptPaneBackgroundColor = â€yellowâ€
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
  A propriedade de leitura/gravação que obtém ou define a cor de primeiro plano de arquivos de não script no painel Script.
-Para definir a cor de primeiro plano dos arquivos de script, use a propriedade [TokenColors]()The-ISEOptions-Object.md.
+Para definir a cor de primeiro plano dos arquivos de script, use [TokenColors](#tokencolors).
 
 ```
 # Sets the foreground to color of non-script files in the script pane to green.
@@ -423,7 +423,7 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 ### <a name="tokencolors"></a>TokenColors
   Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
- Especifica as cores de tokens do IntelliSense no painel de script do ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel Script. Para alterar as cores dos tokens do IntelliSense no painel do Console, consulte [ConsoleTokenColors](. Para redefinir as cores aos valores padrão, consulte [RestoreDefaultTokenColors()](). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Especifica as cores de tokens do IntelliSense no painel de script do ISE do Windows PowerShell. Essa propriedade é um objeto de dicionário que contém pares de nome/valor de tipos de token e cores para o painel Script. Para alterar as cores dos tokens IntelliSense no painel de Console, consulte [ConsoleTokenColors](#consoletokencolors). Para redefinir as cores aos valores padrão, consulte [RestoreDefaultTokenColors](#restoredefaulttokencolors). As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -485,7 +485,7 @@ $psISE.Options.VerboseBackgroundColor ='#0000FF'
 
 ```
 # Changes the foreground color for verbose text to yellow.
-$psISE.Options.VerboseForegroundColor =â€yellowâ€
+$psISE.Options.VerboseForegroundColor ='yellow'
 ```
 
 ### <a name="warningbackgroundcolor"></a>WarningBackgroundColor
@@ -505,13 +505,13 @@ $psISE.Options.WarningBackgroundColor ='#0000FF'
 
 ```
 # Changes the foreground color for warning text to yellow.
-$psISE.Options.WarningForegroundColor =â€yellowâ€
+$psISE.Options.WarningForegroundColor ='yellow'
 ```
 
 ### <a name="xmltokencolors"></a>XmlTokenColors
   Com suporte no Windows PowerShell ISE 3.0 e posterior, não está presente em versões anteriores.
 
- Especifica um objeto de dicionário que contém pares de nome/valor de tipos e cores de token para o conteúdo XML exibido no ISE do Windows PowerShell. As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Veja também [RestoreDefaultXmlTokenColors()]().
+ Especifica um objeto de dicionário que contém pares de nome/valor de tipos e cores de token para o conteúdo XML exibido no ISE do Windows PowerShell. As cores do token podem ser definidas para o seguinte: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Veja também [RestoreDefaultXmlTokenColors](#restoredefaultxmltokencolors).
 
 ```
 # Sets the color of XML element names to green.

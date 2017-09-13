@@ -2,11 +2,11 @@
 ms.date: 2017-06-27
 keywords: PowerShell, cmdlet
 title: "Regras de autorização e recursos de segurança do Windows PowerShell Web Access"
-ms.openlocfilehash: 4b076ca1ecdab293f3acadc466d39ba3e7a6444f
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 6b50fdc0f2854d8af6147432fed1a155d26f57e7
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -14,7 +14,7 @@ Atualizado em: 24 de junho de 2013
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
-O Windows PowerShell® Web Access no Windows Server® 2012 R2 e no Windows Server® 2012 tem um modelo de segurança restritivo.
+O Windows PowerShell Web Access no Windows Server 2012 R2 e no Windows Server 2012 tem um modelo de segurança restritivo.
 Os usuários devem ter acesso explícito antes de entrar no gateway do Windows PowerShell Web Access e usar o console do Windows PowerShell baseado na Web.
 
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configurando regras de autorização e segurança do site
@@ -45,10 +45,10 @@ Os cmdlets referenciados em [Cmdlets do Windows PowerShell Web Access](cmdlets/w
 As regras são diferentes das listas de controle de acesso (ACLs) no computador de destino e fornecem uma camada adicional de segurança para acesso à Web.
 A seção a seguir contém mais detalhes sobre segurança.
 
-Se os usuários não conseguirem passar por nenhuma das camadas de segurança anteriores, eles receberão uma mensagem genérica de "acesso negado" na janela do navegador.
+Se os usuários não puderem passar por nenhuma das camadas de segurança anteriores, eles receberão uma mensagem genérica de "acesso negado" na janela do navegador.
 Embora os detalhes de segurança sejam registrador no servidor do gateway, os usuários finais não recebem informações sobre quantas camadas de segurança eles ultrapassaram, ou em qual camada ocorreu a falha de logon ou autenticação.
 
-Para obter mais informações de como configurar regras de autorização, consulte [Configurando regras de autorização]() neste tópico.
+Para obter mais informações de como configurar regras de autorização, consulte [Configurando regras de autorização](#configuring-authorization-rules-and-site-security) neste tópico.
 
 ### <a name="security"></a>Segurança
 
@@ -62,17 +62,17 @@ A tabela a seguir descreve as quatro camadas de segurança entre os usuários fi
 
 |Nível|Camada|
 |-|-|
-|1|[recursos de segurança do servidor Web do IIS]()|
-|2|[autenticação de gateway baseada em formulários do Windows PowerShell Web Access]()|
-|3|[regras de autorização do Windows PowerShell Web Access]()|
-|4|[regras de autorização e autenticação de destino]()|
+|1|[recursos de segurança do servidor Web do IIS](#iis-web-server-security-features)|
+|2|[autenticação de gateway baseada em formulários do Windows PowerShell Web Access](#windows-powershell-web-access-forms-based-gateway-authentication)|
+|3|[regras de autorização do Windows PowerShell Web Access](#windows-powershell-web-access-authorization-rules)|
+|4|[regras de autorização e autenticação de destino](#target-authentication-and-authorization-rules)|
 
 Informações detalhadas sobre cada camada podem ser encontradas nos seguintes títulos:
 
 #### <a name="iis-web-server-security-features"></a>Recursos de segurança do servidor Web do IIS
 
 Os usuários do Windows PowerShell Web Access sempre devem fornecer um nome de usuário e uma senha para autenticar suas contas no gateway.
-No entanto, os administradores do Windows PowerShell Web Access também podem ativar ou desativar a autenticação de certificado opcional do cliente (consulte [instalar e usar o Windows PowerShell Web Access]() para habilitar um certificado de teste e, posteriormente, como configurar um certificado original).
+No entanto, os administradores do Windows PowerShell Web Access também podem ativar ou desativar a autenticação de certificado opcional do cliente, consulte [instalar e usar o Windows PowerShell Web Access](install-and-use-windows-powershell-web-access.md) para habilitar um certificado de teste e, posteriormente, como configurar um certificado original.
 
 O recurso opcional de certificado de cliente exige que os usuários finais tenham um certificado de cliente válido (além de seus nomes de usuário e senhas) e faz parte da configuração do Servidor Web (IIS).
 Quando a camada de certificados cliente estiver habilitada, a página de entrada do Windows PowerShell Web Access solicitará que os usuários forneçam certificados válidos antes que suas credenciais de entrada sejam avaliadas.
@@ -89,12 +89,12 @@ A página de entrada do Windows PowerShell Web Access requer um conjunto de cred
 Se o usuário não fornecer credenciais alternativas, o nome de usuário primário e a respectiva senha usados para conexão com o gateway também serão utilizados para se conectar ao computador cliente.
 
 As credenciais necessárias são autenticadas no gateway do Windows PowerShell Web Access.
-Essas credenciais devem ser contas de usuário válidas no servidor de gateway local do Windows PowerShell Web Access ou no Active Directory®.
+Essas credenciais devem ser contas de usuário válidas no servidor de gateway local do Windows PowerShell Web Access ou no Active Directory.
 
 #### <a name="windows-powershell-web-access-authorization-rules"></a>Regras de autorização do Windows PowerShell Web Access
 
 Depois que um usuário é autenticado no gateway, o Windows PowerShell Web Access verifica as regras de autorização para confirmar se o usuário tem acesso ao computador de destino solicitado.
-Após a autorização bem-sucedida, as credenciais do usuários são passadas para o computador de destino.
+Após a autorização bem-sucedida, as credenciais do usuário são passadas para o computador de destino.
 
 Essas regras serão avaliadas apenas depois que um usuário for autenticado pelo gateway e antes de ser autenticado em um computador de destino.
 
@@ -129,7 +129,7 @@ Não há suporte aos caracteres-curinga com cadeias. Use um asterisco pro propri
 
 > **Observação**
 >
-> Para saber outras formas de usar regras de autorização para conceder acesso a usuários e ajudar a proteger o ambiente do Windows PowerShell Web Access, consulte [Outros exemplos de cenários de regras de autorização]() neste tópico.
+> Para saber outras formas de usar regras de autorização para conceder acesso a usuários e ajudar a proteger o ambiente do Windows PowerShell Web Access, consulte [Outros exemplos de cenários de regras de autorização](#other-authorization-rule-scenario-examples) neste tópico.
 
 #### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
@@ -144,7 +144,7 @@ Não há suporte aos caracteres-curinga com cadeias. Use um asterisco pro propri
     Verifique se as configurações de sessão que você deseja usar já existem em suas regras.
 Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
-3. Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual têm acesso normalmente, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. Digite o seguinte e pressione **Enter**.
+3. Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual tipicamente tem acesso, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. Digite o seguinte e pressione **Enter**.
 
 ```powershell
 Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
@@ -160,7 +160,7 @@ Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -
 
 #### <a name="to-remove-an-authorization-rule"></a>Para remover uma regra de autorização
 
-1. Se uma sessão do Windows PowerShell ainda não estiver aberta, consulte a etapa 1 de [Para adicionar uma regra de autorização restritiva]() nesta seção.
+1. Se uma sessão do Windows PowerShell ainda não estiver aberta, consulte a etapa 1 de [Para adicionar uma regra de autorização restritiva](#to-add-a-restrictive-authorization-rule) nesta seção.
 
 2. Digite o seguinte e pressione **Enter**, em que *ID da regra* representa o número da ID exclusiva que você deseja remover.
 
@@ -181,9 +181,9 @@ Veja a seguir alguns exemplos desse cenário.
 
 - Um administrador cria um ponto de extremidade, chamado **PswaEndpoint**, com um runspace restrito. Em seguida, ele cria uma regra, **\*,\*,PswaEndpoint** e distribui o ponto de extremidade para outros computadores. A regra permite o acesso de todos os usuários a todos os computadores com o ponto de extremidade **PswaEndpoint**. Se essa for a única regra de autorização definida no conjunto de regras, os computadores sem esse ponto de extremidade não poderão ser acessados.
 
--   O administrador criou um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e deseja restringir o acesso a usuários específicos. O administrador cria um grupo de usuários chamado **Level1Support** e define a seguinte regra: **Level1Support,\*,PswaEndpoint**. A regra concede acesso a todos os usuários no grupo **Level1Support** a todos os computadores com a configuração **PswaEndpoint**. De modo semelhante, o acesso pode ser restrito a um conjunto específico de computadores.
+- O administrador criou um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e deseja restringir o acesso a usuários específicos. O administrador cria um grupo de usuários chamado **Level1Support** e define a seguinte regra: **Level1Support,\*,PswaEndpoint**. A regra concede acesso a todos os usuários no grupo **Level1Support** a todos os computadores com a configuração **PswaEndpoint**. De modo semelhante, o acesso pode ser restrito a um conjunto específico de computadores.
 
--   Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define duas regras: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
+- Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define duas regras: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
 
 - Um administrador configurou um ambiente de teste privado e deseja permitir que todos os usuários da rede autorizados acessem todos os computadores na rede aos quais têm acesso normalmente, com acesso a todas as configurações de sessão que acessam tipicamente. Como esse é um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura.
   - O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que usa o caractere curinga **\*** para representar todos os usuários, todos os computadores e todas as configurações.
@@ -209,7 +209,7 @@ No cenário anterior, o Windows PowerShell Web Access só estabelece uma conexã
 
   >**Observação**:
   >
-  >Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx") (Criando relações de confiança entre domínios e florestas). Para obter mais informações de como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, consulte [Gerenciamento remoto com gerenciador do servidor](href="https://technet.microsoft.com/library/dd759202.aspx)
+  >Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx") (Criando relações de confiança entre domínios e florestas). Para obter mais informações de como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, consulte [Gerenciamento remoto com gerenciador do servidor](https://technet.microsoft.com/library/dd759202.aspx)
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Usando um único conjunto de regras de autorização para vários sites
 

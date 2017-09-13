@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: PowerShell, cmdlet
 title: instalar e usar o windows powershell web access
-ms.openlocfilehash: d30bacea8f0edb62e6bb42c118e54010d5401467
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: a4b812e2aa32450bc68f761e7b85e8f2ee2b34ee
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
@@ -16,7 +16,7 @@ Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="introduction"></a>Introdução
 
-Introduzido pela primeira vez no Windows Server 2012, o Windows PowerShell Web Access age como um gateway do Windows PowerShell, oferecendo um console baseado na Web do Windows PowerShell destinado a um computador remoto. Ele permite aos profissionais de TI executar comandos e scripts no console do Windows PowerShell em um navegador da Web, sem necessidade de instalar o Windows PowerShell, software de gerenciamento remoto ou plug-in de navegador no dispositivo cliente. Para executar o console baseado na Web, do Windows PowerShell basta um gateway do Windows PowerShell Web Access devidamente configurado e um navegador de dispositivo cliente que dê suporte a JavaScript® e aceite cookies.
+Introduzido pela primeira vez no Windows Server 2012, o Windows PowerShell Web Access age como um gateway do Windows PowerShell, oferecendo um console baseado na Web do Windows PowerShell destinado a um computador remoto. Ele permite aos profissionais de TI executar comandos e scripts no console do Windows PowerShell em um navegador da Web, sem necessidade de instalar o Windows PowerShell, software de gerenciamento remoto ou plug-in de navegador no dispositivo cliente. Para executar o console do Windows PowerShell baseado na Web, basta um gateway do Windows PowerShell Web Access devidamente configurado e um navegador de dispositivo cliente que dê suporte a JavaScript e aceite cookies.
 
 Exemplos de dispositivos clientes: laptops, computadores pessoais não usados para trabalho, computadores emprestados, tablets, quiosques Web, computadores que não executam sistemas operacionais baseados em Windows e navegadores de celulares. Os profissionais de TI podem realizar tarefas essenciais de gerenciamento em servidores remotos baseados em Windows a partir de dispositivos com acesso a uma conexão com a Internet e um navegador da Web.
 
@@ -24,9 +24,9 @@ Depois de instalar e configurar o gateway com sucesso, os usuários podem acessa
 
 O processo de instalação e configuração do Windows PowerShell Web Access inclui três etapas:
 
-1. [instalar o Windows PowerShell Web Access]()
-2. [configurar o gateway]()
-3. [configurar as regras de autorização]()
+1. [Instalar o Windows PowerShell Web Access](#install-windows-powershell-web-access)
+1. [Configurar o Gateway](#configure-the-gateway)
+1. [Configurar uma regra de autorização restritiva](#configure-a-restrictive-authorization-rule)
 
 Antes de instalar e configurar o Windows PowerShell Web Access, recomendamos ler todo este guia, o qual inclui instruções sobre como instalar, proteger e desinstalar o Windows PowerShell Web Access.
 O tópico [Usar o console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx) descreve como os usuários entram no console baseado na Web, além de abordar limitações e as diferenças entre o console do Windows PowerShell baseado na web e o console **powershell.exe**. Os usuários finais do console baseado na Web devem ler o artigo [Usar o console do Windows PowerShell baseado na Web](use-the-web-based-windows-powershell-console.md), mas não precisam ler o restante desse guia.
@@ -124,7 +124,7 @@ Você pode concluir a configuração do aplicativo Web Windows PowerShell Web Ac
 
     - Na tela **Iniciar** do Windows, clique em **Windows PowerShell**.
 
-2.  Digite o seguinte e pressione **Enter**.
+2. Digite o seguinte e pressione **Enter**.
 
     **Install-PswaWebApplication -UseTestCertificate**
 
@@ -183,9 +183,9 @@ Neste exemplo, o site resultante do Windows PowerShell Web Access é https://\<*
 
 5. Selecione o site no qual você instalou o aplicativo Web Windows PowerShell Web Access. No painel **Ações**, clique em **Associações**.
 
-6.  Na caixa de diálogo **Associação do Site**, clique em **Adicionar**.
+6. Na caixa de diálogo **Associação do Site**, clique em **Adicionar**.
 
-7.  Na caixa de diálogo **Adicionar Associação do Site**, no campo **Tipo**, escolha **https**.
+7. Na caixa de diálogo **Adicionar Associação do Site**, no campo **Tipo**, escolha **https**.
 
 8. No campo **Certificado SSL**, selecione o certificado assinado no menu suspenso. Clique em **OK**. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
 
@@ -238,21 +238,21 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
 
 #### <a name="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard"></a>Para instalar o Windows PowerShell Web Access usando o Assistente para Adicionar Funções e Recursos
 
-1.  Se o Gerenciador do Servidor já estiver aberto, vá para a etapa seguinte. Se o Gerenciador do Servidor ainda não estiver aberto, abra-o de uma das maneiras a seguir.
+1. Se o Gerenciador do Servidor já estiver aberto, vá para a etapa seguinte. Se o Gerenciador do Servidor ainda não estiver aberto, abra-o de uma das maneiras a seguir.
 
     - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows.
 
     - Na tela **Iniciar** do Windows, clique em **Gerenciador do Servidor**.
 
-2.  No menu **Gerenciar**, clique em **Adicionar Funções e Recursos**.
+2. No menu **Gerenciar**, clique em **Adicionar Funções e Recursos**.
 
-3.  Na página **Selecionar tipo de instalação**, selecione **Instalação baseada em função ou recurso**. Clique em **Avançar**.
+3. Na página **Selecionar tipo de instalação**, selecione **Instalação baseada em função ou recurso**. Clique em **Avançar**.
 
-4.  Na página **Selecionar servidor de destino**, escolha um servidor no pool de servidores ou um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor no qual deseja montar o VHD e selecione o arquivo VHD. Para obter informações sobre como adicionar servidores ao pool de servidores, consulte a Ajuda do Gerenciador do Servidor. Após selecionar o servidor de destino, clique em **Avançar**.
+4. Na página **Selecionar servidor de destino**, escolha um servidor no pool de servidores ou um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor no qual deseja montar o VHD e selecione o arquivo VHD. Para obter informações sobre como adicionar servidores ao pool de servidores, consulte a Ajuda do Gerenciador do Servidor. Após selecionar o servidor de destino, clique em **Avançar**.
 
-5.  Na página **Selecionar recursos** do assistente, expanda **Windows PowerShell** e escolha **Windows PowerShell Web Access**.
+5. Na página **Selecionar recursos** do assistente, expanda **Windows PowerShell** e escolha **Windows PowerShell Web Access**.
 
-6.  O sistema solicitará a adição dos recursos obrigatórios, como o .NET Framework 4.5 e os serviços de função do Servidor Web (IIS). Adicione os recursos obrigatórios e continue.
+6. O sistema solicitará a adição dos recursos obrigatórios, como o .NET Framework 4.5 e os serviços de função do Servidor Web (IIS). Adicione os recursos obrigatórios e continue.
 
     >**![Observação](images/note.jpeg) Observação** 
     >
@@ -268,27 +268,27 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 #### <a name="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website"></a>Para usar o Gerenciador do IIS a fim de configurar um gateway em um site existente
 
-1.  Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
+1. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
     - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)**.
 
     - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)**. Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
 
-2.  Crie um novo pool de aplicativos para o Windows PowerShell Web Access. Expanda o nó do servidor de gateway no painel de árvore do Gerenciador do IIS, selecione **Pools de Aplicativos** e clique em **Adicionar Pool de Aplicativos** no painel **Ações**.
+2. Crie um novo pool de aplicativos para o Windows PowerShell Web Access. Expanda o nó do servidor de gateway no painel de árvore do Gerenciador do IIS, selecione **Pools de Aplicativos** e clique em **Adicionar Pool de Aplicativos** no painel **Ações**.
 
-3.  Adicione um novo pool de aplicativos com o nome **pswa_pool** ou forneça outro nome. Clique em **OK**.
+3. Adicione um novo pool de aplicativos com o nome **pswa_pool** ou forneça outro nome. Clique em **OK**.
 
-4.  No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Selecione a pasta **Sites**.
+4. No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Selecione a pasta **Sites**.
 
-5.  Clique com o botão direito do mouse no site (por exemplo, **Site Padrão**) ao qual você deseja adicionar o site do Windows PowerShell Web Access e clique em **Adicionar Aplicativo**.
+5. Clique com o botão direito do mouse no site (por exemplo, **Site Padrão**) ao qual você deseja adicionar o site do Windows PowerShell Web Access e clique em **Adicionar Aplicativo**.
 
-6.  No campo **Alias**, digite pswa ou forneça outro alias. O alias vira o nome do diretório virtual. Por exemplo, **pswa** na URL a seguir, representa o alias especificado nesta etapa: **https://\<server-name\>/pswa**.
+6. No campo **Alias**, digite pswa ou forneça outro alias. O alias vira o nome do diretório virtual. Por exemplo, **pswa** na URL a seguir, representa o alias especificado nesta etapa: **https://\<server-name\>/pswa**.
 
-7.  No campo **Pool de Aplicativos**, selecione o pool de aplicativos criado na etapa 3.
+7. No campo **Pool de Aplicativos**, selecione o pool de aplicativos criado na etapa 3.
 
-8.  No campo **Caminho físico**, procure a localização do aplicativo. Você pode usar a localização padrão, %windir%/Web/PowerShellWebAccess/wwwroot. Clique em **OK**.
+8. No campo **Caminho físico**, procure a localização do aplicativo. Você pode usar a localização padrão, %windir%/Web/PowerShellWebAccess/wwwroot. Clique em **OK**.
 
-9.  Siga as etapas no procedimento para configurar um certificado SSL no gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
+9. Siga as etapas no procedimento para configurar um certificado SSL no gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
 
 10. ![](images/SecurityNote.jpeg) Etapa opcional de segurança:
 
@@ -317,29 +317,29 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 #### <a name="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate"></a>Para usar o Gerenciador do IIS a fim de configurar o gateway como site raiz com um certificado de teste
 
-1.  Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
+1. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
     - Na área de trabalho do Windows, inicie o Gerenciador do Servidor clicando em **Gerenciador do Servidor** na barra de tarefas do Windows. No menu **Ferramentas** no Gerenciador do Servidor, clique em **Gerenciador do IIS (Serviços de Informações da Internet)**.
 
     - Na tela **Iniciar** do Windows, digite qualquer parte do nome **Gerenciador do IIS (Serviços de Informações da Internet)**. Clique no atalho quando ele for exibido nos resultados de **Aplicativos**.
 
-2.  No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Selecione a pasta **Sites**.
+2. No painel de árvore do Gerenciador do IIS, expanda o nó do servidor no qual o Windows PowerShell Web Access está instalado até que a pasta **Sites** fique visível. Selecione a pasta **Sites**.
 
-3.  No painel **Ações**, clique em **Adicionar Site**.
+3. No painel **Ações**, clique em **Adicionar Site**.
 
-4.  Digite um nome para o site, por exemplo, **Windows PowerShell Web Access**.
+4. Digite um nome para o site, por exemplo, **Windows PowerShell Web Access**.
 
-5.  Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Escolha o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
+5. Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Escolha o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
 
-6.  Na caixa de texto **Caminho físico**, navegue até %*windir*%/Web/PowerShellWebAccess/wwwroot.
+6. Na caixa de texto **Caminho físico**, navegue até %*windir*%/Web/PowerShellWebAccess/wwwroot.
 
-7.  No campo **Tipo** da área **Associação**, escolha **https**.
+7. No campo **Tipo** da área **Associação**, escolha **https**.
 
-8.  Atribua um número de porta a um site que ainda não seja usado por outro site ou aplicativo. Para localizar portas abertas, você pode executar o comando **netstat** em uma janela de Prompt de Comando. O número de porta padrão é 443.
+8. Atribua um número de porta a um site que ainda não seja usado por outro site ou aplicativo. Para localizar portas abertas, você pode executar o comando **netstat** em uma janela de Prompt de Comando. O número de porta padrão é 443.
 
     Altere a porta padrão se outro site já estiver usando 443 ou se tiver outros motivos relativos à segurança para alterar esse número. Se outro site em execução no seu servidor de gateway estiver usando a porta selecionada, um aviso será exibido quando você clicar em **OK** na caixa de diálogo **Adicionar Site**. Você deve usar uma porta não utilizada para executar o Windows PowerShell Web Access.
 
-9.  Opcionalmente, se necessário para sua organização, especifique um nome de host que faça sentido para a organização e para os usuários, como **www.contoso.com**. Clique em **OK**.
+9. Opcionalmente, se necessário para sua organização, especifique um nome de host que faça sentido para a organização e para os usuários, como **www.contoso.com**. Clique em **OK**.
 
 10. Para um ambiente de produção mais seguro, recomendamos enfaticamente fornecer um certificado válido assinado por uma AC. Forneça um certificado SSL, pois os usuários só podem se conectar ao Windows PowerShell Web Access por meio de um site HTTPS. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações de como obter um certificado.
 
@@ -376,27 +376,27 @@ Para obter mais detalhes sobre as regras e a segurança de autorização do Wind
 
 #### <a name="to-add-a-restrictive-authorization-rule"></a>Para adicionar uma regra de autorização restritiva
 
-1.  Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
+1. Execute uma das ações a seguir para abrir uma sessão do Windows PowerShell com direitos de usuário elevados.
 
     - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
 
     - Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
-2.  ![Observação de segurança](images/SecurityNote.jpeg) Etapa opcional para restringir o acesso de usuários usando as configurações de sessão:
+2. ![Observação de segurança](images/SecurityNote.jpeg) Etapa opcional para restringir o acesso de usuários usando as configurações de sessão:
 
     verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
-3.  Digite o seguinte e pressione **Enter**.
+3. Digite o seguinte e pressione **Enter**.
 
         Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
-    Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual têm acesso normalmente, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. 
+    Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual tipicamente tem acesso, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. 
     
     No exemplo a seguir, um usuário nomeado `JSmith` no domínio `Contoso` ganha acesso para gerenciar o computador `Contoso_214` e usa uma configuração de sessão nomeada `NewAdminsOnly`.
 
         Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Verifique se a regra foi criada executando o cmdlet `Get-PswaAuthorizationRule` ou `Test-PswaAuthorizationRule -UserName '<domain\user>' -ComputerName <computer-name>`. 
+4. Verifique se a regra foi criada executando o cmdlet `Get-PswaAuthorizationRule` ou `Test-PswaAuthorizationRule -UserName '<domain\user>' -ComputerName <computer-name>`. 
 
     Por exemplo, `Test-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214`.
 
@@ -408,11 +408,11 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
 ### <a name="to-configure-an-ssl-certificate-in-iis-manager"></a>Para configurar um certificado SSL no Gerenciador do IIS
 
-1.  No painel da árvore Gerenciador do IIS, selecione o servidor no qual o Windows PowerShell Web Access está instalado.
+1. No painel da árvore Gerenciador do IIS, selecione o servidor no qual o Windows PowerShell Web Access está instalado.
 
-2.  No painel de conteúdo, clique duas vezes em **Certificados de Servidor**.
+2. No painel de conteúdo, clique duas vezes em **Certificados de Servidor**.
 
-3.  No painel **Ações**, siga um dos procedimentos a seguir. Para saber mais sobre como configurar certificados de servidor no IIS, confira [Configuring Server Certificates in IIS 7](https://technet.microsoft.com/library/cc732230.aspx) (Configurando certificados de servidor no IIS 7).
+3. No painel **Ações**, siga um dos procedimentos a seguir. Para saber mais sobre como configurar certificados de servidor no IIS, confira [Configuring Server Certificates in IIS 7](https://technet.microsoft.com/library/cc732230.aspx) (Configurando certificados de servidor no IIS 7).
 
     - Clique em **Importar** para importar um certificado existente válido de uma localização da sua rede.
 
@@ -422,11 +422,11 @@ Para um ambiente de produção seguro, sempre use um certificado SSL válido que
 
     - Clique em **Criar um Certificado Autoassinado** para criar um certificado que você possa usar imediatamente e que possa ser assinado posteriormente pela AC, se desejado. Especifique um nome amigável para o certificado autoassinado, por exemplo, **Windows PowerShell Web Access**. Essa opção não é considerada segura e é recomendada somente para um ambiente de testes privado.
 
-4.  Depois de criar ou obter um certificado, selecione o site ao qual o certificado é aplicado (por exemplo, **Site Padrão**) no painel de árvore do Gerenciador do IIS e clique em **Associações** no painel **Ações**.
+4. Depois de criar ou obter um certificado, selecione o site ao qual o certificado é aplicado (por exemplo, **Site Padrão**) no painel de árvore do Gerenciador do IIS e clique em **Associações** no painel **Ações**.
 
-5.  Na caixa de diálogo **Adicionar Associação do Site**, adicione uma associação **https** ao site, caso ainda nenhuma seja exibida. Se você não estiver usando um certificado autoassinado, especifique o nome do host da etapa 3 deste procedimento. Se estiver usando um certificado autoassinado, esta etapa não será necessária.
+5. Na caixa de diálogo **Adicionar Associação do Site**, adicione uma associação **https** ao site, caso ainda nenhuma seja exibida. Se você não estiver usando um certificado autoassinado, especifique o nome do host da etapa 3 deste procedimento. Se estiver usando um certificado autoassinado, esta etapa não será necessária.
 
-6.  Escolha o certificado obtido ou criado na etapa 3 deste procedimento e clique em **OK**.
+6. Escolha o certificado obtido ou criado na etapa 3 deste procedimento e clique em **OK**.
 
 ## <a name="using-the-web-based-windows-powershell-console"></a>Usando o console do Windows PowerShell baseado na Web
 

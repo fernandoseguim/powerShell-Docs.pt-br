@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: O objeto PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
-ms.openlocfilehash: 482984272b2f1be027cf2be49bdfa2c6e2c52070
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 15d9a7474e4c2cf2a9ff8edb88802106489cdba1
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="the-powershelltab-object"></a>O objeto PowerShellTab
   O objeto **PowerShellTab** representa um ambiente de tempo de execução do Windows PowerShell.
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/31/2017
  Executa o script determinado na guia PowerShell.
 
 > [!NOTE]
->  Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. Ele não retorna nenhum objeto ou valor. Se o código modificar qualquer variável, essas alterações persistirão na guia na qual o comando foi invocado.
+> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. Ele não retorna nenhum objeto ou valor. Se o código modificar qualquer variável, essas alterações persistirão na guia na qual o comando foi invocado.
 
  **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
@@ -36,7 +36,7 @@ $psise.PowerShellTabs[1].Invoke({dir})
  Executa o script determinado na guia PowerShell.
 
 > [!NOTE]
->  Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando levar mais tempo para executar do que valor **millesecondsTimeout** especifica, o comando falhará com uma exceção: "A operação expirou".
+> Esse método só funciona em outras guias do PowerShell, não na guia do PowerShell do qual ele é executado. O bloco de script é executado e qualquer valor que é devolvido do script é devolvido ao ambiente de execução do qual você invocou o comando. Se o comando levar mais tempo para executar do que valor **millesecondsTimeout** especifica, o comando falhará com uma exceção: "A operação expirou".
 
  **Script** – System.Management.Automation.ScriptBlock ou Cadeia de caracteres, o bloco de script a ser executado.
 
@@ -52,7 +52,7 @@ $psISE.PowerShellTabs.SetSelectedPowerShellTab($psISE.PowerShellTabs[0])
 
 # Invoke a simple command on the other tab, in its own scope
 $psISE.PowerShellTabs[1].InvokeSynchronous('$x=1',$false)
-# You can switch to the other tab and type â€œ$xâ€ to see that the value is saved there.
+# You can switch to the other tab and type 'œ$x' to see that the value is saved there.
 
 # This example sets a value in the other tab (in a different scope) 
 # and returns it through the pipeline to this tab to store in $a
@@ -88,7 +88,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 ### <a name="caninvoke"></a>CanInvoke
   Suportado no Windows PowerShell ISE 2.0 e posteriores. 
 
- A propriedade Boolean somente leitura que retornará um valor **$true** se um script puder ser invocado com o método [Invoke( Script )]().
+ A propriedade Boolean somente leitura que retornará um valor **$true** se um script puder ser invocado com o método [Invoke( Script )](#invoke-script-).
 
 ```
 # CanInvoke will be false if the PowerShell

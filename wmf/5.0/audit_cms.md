@@ -3,16 +3,15 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: 9556f0d9a12807cbfe38aaade6798088f051596d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60055b6755a31397c49686ea9ee1a69ada3516de
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/08/2017
 ---
-<a id="cryptographic-message-syntax-cms-cmdlets" class="xliff"></a>
-# Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlets da CMS (Sintaxe de Mensagem Criptografada)
 
-Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](http://tools.ietf.org/html/rfc5652).
+Os cmdlets da Sintaxe de Mensagem Criptografada dão suporte à criptografia e descriptografia de conteúdo usando o formato padrão da IETF para proteger as mensagens criptograficamente, conforme documentado pelo [RFC5652](https://tools.ietf.org/html/rfc5652).
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -29,7 +28,7 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 O padrão de criptografia CMS implementa a criptografia por chave pública, em que as chaves usadas para criptografar o conteúdo (a *chave pública*) e as chaves usadas para descriptografá-lo (a *chave privada*) são separadas.
 
-Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações sobre Criptografia por Chave Pública, veja: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+Sua chave pública pode ser compartilhada amplamente e não contém dados confidenciais. Se algum conteúdo for criptografado com essa chave pública, somente sua chave privada poderá descriptografá-lo. Para obter mais informações, consulte [Criptografia por chave pública](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
 Para ser reconhecidos no PowerShell, os certificados de criptografia exigem um EKU (identificador exclusivo de uso de chave) para identificá-los como certificados de criptografia de dados (como os identificadores para “Assinatura de Código”, “Mensagens Criptografadas”).
 
