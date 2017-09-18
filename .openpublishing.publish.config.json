@@ -1,7 +1,5 @@
 {
-  "build_entry_point": "",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
+  "build_entry_point": "docs",
   "docsets_to_publish": [
     {
       "docset_name": "PowerShell_PowerShell-docs_dsc",
@@ -10,9 +8,12 @@
       "locale": "pt-br",
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "version": 0
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_gallery",
@@ -21,10 +22,12 @@
       "locale": "pt-br",
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "op",
-      "version": 0
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_jea",
@@ -33,9 +36,12 @@
       "locale": "pt-br",
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "version": 0
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_reference",
@@ -46,21 +52,22 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "AzurePSModulePage": "Content"
       },
-      "build_entry_point": "op",
-      "version": 0
-    },
-    {
-      "docset_name": "PowerShell_PowerShell-docs_scripting",
-      "build_source_folder": "scripting",
-      "build_output_subfolder": "scripting",
-      "locale": "pt-br",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1"
+        ]
       },
-      "version": 0
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
     },
     {
       "docset_name": "PowerShell_PowerShell-docs_wmf",
@@ -69,21 +76,35 @@
       "locale": "pt-br",
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "version": 0
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
-    ""
+    "CnE_Content_Brno@moravia.com",
+    "CnE_UE_Bugfixing_ENG@moravia.com"
   ],
   "branches_to_filter": [
-    "master-oldev",
-    "live-oldev"
+    "live-oldev",
+    "live"
   ],
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "contribution_branch_mappings": {
+    "live-sxs": "live"
+  },
   "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pt-br",
+      "branch": "master",
+      "branch_mapping": {}
+    },
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/PowerShell/PowerShell-Docs",
@@ -94,5 +115,22 @@
       }
     }
   ],
-  "need_generate_pdf_url_template": false
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "id": "Microsoft.OpenPublishing.AzurePSPlugin",
+      "path_to_root": "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ]
 }
