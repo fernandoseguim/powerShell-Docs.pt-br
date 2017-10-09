@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Mais aprendizado sobre o PowerShell
-ms.openlocfilehash: c1bc3c25c34aa4501eae15fb2b4f629a77e90006
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 32d7006010a4808a77d9800ec77c4352213d12b9
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="more-powershell-learning"></a>Mais aprendizado sobre o PowerShell
 
@@ -18,8 +18,8 @@ Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem m
 
 - [Blog da equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/). O melhor recurso para aprender diretamente com a equipe de produto do Windows PowerShell.
 - [Conexão do cliente do Windows PowerShell](http://Connect.Microsoft.com/PowerShell). Faça uma sugestão, envie comentários ou registre um bug para a equipe do Windows PowerShell. Você poderá enviar um bug de código, um erro de documentação ou um bug de localização (tradução).
-- [O blog Hey, Scripting Guy! ](http://www.scriptingguys.com/blog) publica novos conteúdos sete dias por semana, sendo constantemente classificado dentre os cinco melhores blogs da Microsoft. Os artigos são direcionados a cenários comuns e escritos com uma abordagem dinâmica e envolvente.
-- [A página Learn PowerShell](http://www.scriptingguys.com/learnpowershell) é o hub do Windows PowerShell no Script Center do TechNet. Esta página apresenta uma série de sessões de vídeos para iniciantes conduzida pelo Microsoft Scripting Guy Ed Wilson. Ela também contém testes e links para conteúdo da comunidade do Windows PowerShell e muito mais.
+- [O blog Hey, Scripting Guy! ](https://blogs.technet.microsoft.com/heyscriptingguy/) publica novos conteúdos sete dias por semana, sendo constantemente classificado dentre os cinco melhores blogs da Microsoft. Os artigos são direcionados a cenários comuns e escritos com uma abordagem dinâmica e envolvente.
+- [A página Learn PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) é o hub do Windows PowerShell no Script Center do TechNet. Esta página apresenta uma série de sessões de vídeos para iniciantes conduzida pelo Microsoft Scripting Guy Ed Wilson. Ela também contém testes e links para conteúdo da comunidade do Windows PowerShell e muito mais.
 - Dúvidas sobre como usar o Windows PowerShell? Conecte-se a centenas de pessoas com interesses semelhantes no [Fórum oficial do Scripting Guys](http://social.technet.microsoft.com/forums/itcg/threads/).
 - [O Script Center da Microsoft](https://technet.microsoft.com/scriptcenter). Um portal para muitos recursos úteis de Windows PowerShell, incluindo o [Repositório do Script Center](http://gallery.technet.microsoft.com/scriptcenter/). Uma das melhores maneiras de aprender a criar scripts é ver exemplos em ação. Pesquisa dentre os milhares de scripts do Windows PowerShell, todos prontos para você avaliar e adaptar para atender às suas necessidades.
 - Envolva-se com a comunidade de usuários do Windows PowerShell. Consulte na [Página da comunidade do Script Center](https://technet.microsoft.com/scriptcenter/hh182567.aspx) a localização de dezenas de grupos de usuários do Windows PowerShell – provavelmente, há um perto de você. Além disso, mantenha-se atualizado com as atividades da comunidade do Microsoft Scripting Guy.

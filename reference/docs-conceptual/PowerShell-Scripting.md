@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Scripts do PowerShell
-ms.openlocfilehash: 33e5ff3c84b6b34a3072a32165187a8bb811605c
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 8d2386dc49c59a106ecdddf0feabe3344834a86d
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -46,7 +46,6 @@ Nesta seção:
 ## <a name="common-powershellcore-powershellcore-powershellmd"></a>[PowerShell comum](core-powershell/core-powershell.md)
 Esta seção contém todos os materiais de referência do PowerShell.  
 Encontre nesta seção:
-- Os [Módulos comuns do PowerShell](core-powershell/core-modules.md)
 - O [ISE \(Ambiente de Script Integrado\) do PowerShell](core-powershell/ise-guide.md)
 - A [Janela do console do PowerShell](core-powershell/console-guide.md)
 - O [Gerenciamento remoto do PowerShell](core-powershell/Running-Remote-Commands.md)

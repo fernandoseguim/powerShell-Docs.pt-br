@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "O que há de novo no ISE do PowerShell 50"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 1e315351d0e5dde146881b0e6527c38e59777a1e
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell.
@@ -22,16 +22,16 @@ A tabela a seguir lista os recursos novos e alterados para esta versão do ISE d
 
 |Recurso/funcionalidade|ISE do Windows PowerShell 4.0|ISE do Windows PowerShell 3.0|ISE do Windows PowerShell 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense]()**|X|X||
-|**[Trechos de código]()**|X|X||
-|**[Ferramentas complementares]()**|X|X||
-|**[Gerenciador de Reinicialização e Salvamento Automático]()**|X|X||
-|**[Painel de Console]()**|X|X||
-|**[Lista de recém-usados]()**|X|X||
-|**[Opções de linha de comando]()**|X|X||
-|**[Novos recursos do editor]()**|X|X||
-|**[Janela do novo visualizador da ajuda]()**|X|X||
-|**[Cmdlet Show-Command]()**|X|X||
+|**[IntelliSense](#intellisense)**|X|X||
+|**[Trechos de código](#snippets)**|X|X||
+|**[Ferramentas complementares](#add-on-tools)**|X|X||
+|**[Gerenciador de Reinicialização e Salvamento Automático](#restart-manager-and-auto-save)**|X|X||
+|**[Lista de recém-usados](#most-recently-used-list)**|X|X||
+|**[Painel de Console](#console-pane)**|X|X||
+|**[Opções de linha de comando](#command-line-switches)**|X|X||
+|**[Novos recursos do editor](#new-editor-features)**|X|X||
+|**[Janela do novo visualizador da ajuda](#new-help-viewer-window)**|X|X||
+|**[Cmdlet Show-Command](#show-command-cmdlet)**|X|X||
 
 ### <a name="intellisense"></a>IntelliSense
 **Adicionado no ISE 3.0**

@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Iniciando o Mecanismo do Windows PowerShell 2.0
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: 2e5c13cafdfd9fbe479fcad8ac81725cbd7ac3d9
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 88d4374891e38501f6bbcd0793c86692eaed2f22
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Iniciando o Mecanismo do Windows PowerShell 2.0
 Esta seção explica como iniciar o Mecanismo Windows PowerShell 2.0 no Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, que inclui o Mecanismo Windows PowerShell 2.0 e em outros sistemas em que o Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 são instalados.
@@ -66,5 +66,5 @@ O comando a seguir inicia um trabalho em segundo plano com o Mecanismo Windows P
 Start-Job {Get-Process} -PSVersion 2.0
 ```
 
-Para obter mais informações sobre trabalhos em segundo plano, consulte [about_Jobs [v4]](https://technet.microsoft.com/en-us/library/7362512a-8a4e-4575-b2ea-a740e5c4f002).
+Para obter mais informações sobre trabalhos em segundo plano, consulte [about_Jobs [v4]](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-4.0).
 

@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: PowerShell, cmdlet
 title: desinstalar o windows powershell web access
-ms.openlocfilehash: 7c71a245be244c1883598cdcddbf35e43c0fc7b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Desinstalar o Windows PowerShell Web Access
 
@@ -20,10 +20,8 @@ As etapas neste tópico removem o site do Windows PowerShell Web Access e o apli
 
 Antes de começar, notifique os usuários do console baseado na Web a respeito da remoção do site.
 
-
-Antes de desinstalar o Windows PowerShell Web Access do servidor de gateway, execute o cmdlet `Uninstall-PswaWebApplication` para remover o site e os aplicativos Web do Windows PowerShell Web Access ou use o procedimento do Gerenciador do IIS, [To delete the windows powershell web access website and web applications by using iis manager]() (Para excluir o site e os aplicativos Web Windows PowerShell Web Access usando o Gerenciador do IIS).
-
-A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado. O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
+A desinstalação do Windows PowerShell Web Access não desinstala o IIS nem nenhum outro recurso instalado automaticamente porque o Windows PowerShell Web Access precisa deles para ser executado.
+O processo de desinstalação deixa instalados os recursos dos quais o Windows PowerShell Web Access dependia. É possível desinstalar esses recursos separadamente, se necessário.
 
 ## <a name="recommended-quick-uninstallation"></a>Desinstalação recomendada (rápida)
 
