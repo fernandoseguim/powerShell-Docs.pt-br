@@ -2,13 +2,14 @@
 ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Como depurar scripts no ISE do Windows PowerShell
-ms.openlocfilehash: d1019801833e840f3a231f371da1b8d0e5a387b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0ec520dfcba5e4562258256570f140e618e77cdb
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Como depurar scripts no ISE do Windows PowerShell
+
 Este tópico descreve como depurar scripts em um computador local usando os recursos de depuração visual do ISE (Ambiente de Script Integrado) do Windows PowerShell.
 
 ## <a name="how-to-manage-breakpoints"></a>Como gerenciar pontos de interrupção
@@ -35,6 +36,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 ```
 
 ### <a name="list-all-breakpoints"></a>Listar todos os pontos de interrupção
+
 Exibe todos os pontos de interrupção na sessão atual do Windows PowerShell.
 
 No menu **Depurar**, clique em **Listar Pontos de Interrupção**. O script a seguir é um exemplo de como é possível listar todos os pontos de interrupção no Painel de Console usando o cmdlet [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).

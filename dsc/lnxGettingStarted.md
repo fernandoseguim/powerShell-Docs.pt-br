@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Introdução à Configuração de Estado Desejado (DSC) para Linux"
-ms.openlocfilehash: 9dbc4c22cff9df4028c5655cdfba3bb1aac1bb90
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: bf87125309a3f6b556fd7546057cb9491fb34229
+ms.sourcegitcommit: 4ab9a86e47b6effe8fe22ebeb81e8fadff41d31c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
@@ -37,11 +37,11 @@ A tabela a seguir descreve as dependências de pacote necessárias para a DSC pa
 
 ## <a name="installing-dsc-for-linux"></a>Instalando a DSC para Linux
 
-É necessário instalar a [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/) antes de instalar a DSC para Linux.
+É necessário instalar a [Infraestrutura de Gerenciamento Aberta (OMI)](https://github.com/Microsoft/omi) antes de instalar a DSC para Linux.
 
 ### <a name="installing-omi"></a>Instalando a OMI
 
-A Configuração de Estado Desejado para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://collaboration.opengroup.org/omi/).
+A Desired State Configuration para Linux requer o servidor CIM da OMI (Infraestrutura de Gerenciamento Aberta), versão 1.0.8.1 ou posterior. A OMI pode ser baixada do The Open Group: [Infraestrutura de Gerenciamento Aberta (OMI)](https://github.com/Microsoft/omi).
 
 Para instalar a OMI, instale o pacote adequado para seu sistema Linux (.rpm ou .deb), a versão do OpenSSL (ssl_098 ou ssl_100) e a arquitetura (x64/x86). Pacotes de RPM são adequados para CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. Pacotes de DEB são adequados para Debian GNU/Linux e Ubuntu Server. Os pacotes ssl_098 são adequados para computadores com OpenSSL 0.9.8 instalado, enquanto os pacotes ssl_100 são adequados para computadores com OpenSSL 1.0 instalado.
 

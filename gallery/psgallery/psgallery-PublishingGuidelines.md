@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: "Diretrizes e práticas recomendadas da Galeria do PowerShell"
-ms.openlocfilehash: 85486c409382472420a67fc124bd07a30486cb62
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 72b6ca4cb4815900a3fa48f965e581a6f6130123
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -32,7 +32,7 @@ Os itens que seguem estas diretrizes têm uma probabilidade muito maior de ser b
 * Incluir a documentação e exemplos
 * Seja receptivo aos comentários
 * Fornecer módulos em vez de scripts
-* Seguir as diretrizes [SemVer] para controle de versão
+* Seguir as diretrizes [SemVer](http://semver.org/) para controle de versão
 * Fornecer links para um site do projeto
 * Incluir testes com os módulos
 * Incluir e/ou vincular aos termos de licença

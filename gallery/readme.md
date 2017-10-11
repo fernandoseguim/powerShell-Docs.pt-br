@@ -4,24 +4,21 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery,psget
 title: A Galeria do PowerShell
-ms.openlocfilehash: 3e324f15b251822163c3ea9b6655767419a5ac4e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 83a1f4e20b985a502637aee9d50ecc1d3f9a4616
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="the-powershell-gallery" class="xliff"></a>
-# A Galeria do PowerShell
+# <a name="the-powershell-gallery"></a>A Galeria do PowerShell
 
 A Galeria do PowerShell é o repositório central de conteúdo do PowerShell. Você pode encontrar novos comandos do PowerShell ou recursos DSC (Configuração de Estado Desejado) na Galeria.
 
-<a id="powershellget-overview" class="xliff"></a>
-## Visão geral do PowerShellGet
+## <a name="powershellget-overview"></a>Visão geral do PowerShellGet
 
 O módulo do PowerShellGet contém cmdlets para descoberta, instalação, atualização e publicação dos artefatos do PowerShell como Módulos, Recursos DSC, Funcionalidades de Função e Scripts de https://www.PowerShellGallery.com e outros repositórios privados.
 
-<a id="getting-started-with-the-gallery" class="xliff"></a>
-## Introdução à Galeria
+## <a name="getting-started-with-the-gallery"></a>Introdução à Galeria
 
 A instalação de itens da Galeria exige a versão mais recente do módulo PowerShellGet, disponível no Windows 10, no WMF (Windows Management Framework) 5.0 ou no instalador baseado em MSI (para PowerShell 3 e 4).
 
@@ -31,16 +28,15 @@ A instalação de itens da Galeria exige a versão mais recente do módulo Power
 
 Com o módulo [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) mais recente, você pode:
 
--   Pesquisar por itens na Galeria com [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Salvar itens da Galeria em seu sistema com [**Save-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Save-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Instalar itens da Galeria com [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Carregar itens na Galeria com [**Publish-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Publish-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Adicionar seu próprio repositório personalizado com [**Register-PSRepository**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
+-   Pesquisar itens na Galeria com [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) e [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322)
+-   Salvar itens da Galeria no sistema com [Save-Module](https://go.microsoft.com/fwlink/?LinkId=821669) e [Save-Script](https://go.microsoft.com/fwlink/?LinkId=822334)
+-   Instalar itens da Galeria com [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) e [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327)
+-   Carregar itens na Galeria com [Publish-Module](https://go.microsoft.com/fwlink/?LinkId=821666) e [Publish-Script](https://go.microsoft.com/fwlink/?LinkId=822331)
+-   Adicionar um repositório personalizado com [Register-PSRepository](https://go.microsoft.com/fwlink/?LinkId=821668)
 
 Confira a página [Introdução](psgallery/psgallery_gettingstarted.md) para obter mais informações sobre como usar os comandos PowerShellGet com a Galeria. Também é possível executar *Update-Help -Module PowerShellGet* para instalar a ajuda local para esses comandos.
 
-<a id="supported-operating-systems" class="xliff"></a>
-## Sistemas operacionais com suporte
+## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
 O módulo **PowerShellGet** exige o **PowerShell 3.0 ou mais recente**.
 
@@ -50,15 +46,14 @@ Portanto, **PowerShellGet** exige um dos seguintes sistemas operacionais:
 - Windows 8.1 Pro
 - Windows 8.1 Enterprise
 - Windows 7 SP1
-- Windows Server 2016 TP5
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
 **PowerShellGet** também exige o .NET Framework 4.5 ou posterior. Você pode instalar o .NET Framework 4.5 ou acima acessando [aqui](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
 
 
-<a id="got-a-question-have-feedback" class="xliff"></a>
-## Tem alguma pergunta? Deseja fazer comentários?
+## <a name="got-a-question-have-feedback"></a>Tem alguma pergunta? Deseja fazer comentários?
 
 Encontre mais informações sobre a Galeria do PowerShell e o PowerShellGet na página [Introdução](psgallery/psgallery_gettingstarted.md). Forneça comentários e relate problemas usando o [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
 

@@ -1,16 +1,15 @@
 ---
 ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
-title: Novidades no Windows PowerShell 50
-ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
-ms.openlocfilehash: e3c4e840469f3a3caa28a887dc079839f053dc4d
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+title: Novidades sobre o Windows PowerShell 5.0
+ms.openlocfilehash: 3a412b35c593c99fb8ea8307b12ccc05871863f4
+ms.sourcegitcommit: e2360ac94fe4deb0ed0f5c8c8d9b293551ec8030
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 ---
-# <a name="what39s-new-in-windows-powershell"></a>Novidades no Windows PowerShell
-O Windows PowerShell 5.0 inclui recursos novos importantes que estendem e melhoram seu uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
+# <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
+O Windows PowerShell 5.0 inclui recursos novos importantes que estendem e melhoram o uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
 
 O Windows PowerShell 5.0 é compatível com versões anteriores. Cmdlets, provedores, módulos, snap-ins, scripts, funções e perfis projetados para o Windows PowerShell 4.0, o Windows PowerShell 3.0 e o Windows PowerShell 2.0 geralmente funcionam no Windows PowerShell 5.0 sem alterações.
 
@@ -21,13 +20,10 @@ Para instalar o Windows PowerShell 5.0 em Windows Server 2012 R2, Windows 8.1 En
 
 ## <a name="in-this-topic"></a>Neste tópico
 
-- [Atualizações do Windows PowerShell 4.0 DSC na KB 3000850]()
-
-- [Novos recursos no Windows PowerShell 5.0]()
-
-- [Novos recursos no Windows PowerShell 4.0]()
-
-- [Novos recursos no Windows PowerShell 3.0]()
+- [Atualizações do Windows PowerShell 4.0 DSC na KB 3000850](#windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850)
+- [Novos recursos no Windows PowerShell 5.0](#new-features-in-windows-powershell-50)
+- [Novos recursos no Windows PowerShell 4.0](#new-features-in-windows-powershell-40)
+- [Novos recursos no Windows PowerShell 3.0](#new-features-in-windows-powershell-30)
 
 ## <a name="windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850"></a>Atualizações do Windows PowerShell 4.0 no pacote cumulativo de atualizações de novembro de 2014 (KB 3000850)
 Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Desejado) do Windows PowerShell no Windows PowerShell 4.0 estão disponíveis no [pacote cumulativo de atualizações de novembro de 2014 para o Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850). Você pode determinar se o KB 3000850 está instalado no sistema executando o `Get-Hotfix -Id KB3000850` no Windows PowerShell.
@@ -128,15 +124,11 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ## <a name="new-features-in-windows-powershell-50"></a>Novos recursos no Windows PowerShell 5.0
 
-- [Novos recursos no Windows PowerShell]()
-
-- [Novos recursos na Configuração de Estado Desejado do Windows PowerShell]()
-
-- [Novos recursos no ISE do Windows PowerShell]()
-
-- [Novos recursos nos Serviços Web do Windows PowerShell]()
-
-- [Correções de bugs importantes no Windows PowerShell 5.0]()
+- [Novos recursos no Windows PowerShell](#new-features-in-windows-powershell)
+- [Novos recursos na Configuração de Estado Desejado do Windows PowerShell](#new-features-in-windows-powershell-desired-state-configuration)
+- [Novos recursos no ISE do Windows PowerShell](#new-features-in-windows-powershell-ise)
+- [Novos recursos nos Serviços Web do Windows PowerShell](#new-features-in-windows-powershell-web-services-management-odata-iis-extension)
+- [Correções de bugs importantes no Windows PowerShell 5.0](#notable-bug-fixes-in-windows-powershell-50)
 
 ### <a name="new-features-in-windows-powershell"></a>Novos recursos no Windows PowerShell
 
@@ -170,7 +162,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 - Get-ChildItem também tem um novo parâmetro, -Depth, que você pode usar com o parâmetro -Recurse para limitar a recursão. Por exemplo, Get-ChildItem -Recurse -Depth 2 retorna resultados da pasta atual, todas as pastas filho dentro da pasta atual e todas as pastas dentro das pastas filho.
 
-- Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões conectadas a computadores remotos (incluindo computadores que executam o [Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+- Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que conectadas a computadores remotos (incluindo computadores que executam o [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 - A transcrição do Windows PowerShell foi aperfeiçoada para ser aplicada a todos os aplicativos de hospedagem (como o ISE do Windows PowerShell), além do host do console (**powershell.exe**). As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser configuradas habilitando a configuração Política de Grupo de **Ativar Transcrição do PowerShell** encontrada em Modelos Administrativos/Componentes do Windows/Windows PowerShell.
 
@@ -311,19 +303,14 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 ## <a name="new-features-in-windows-powershell-40"></a>Novos recursos no Windows PowerShell 4.0
 O Windows PowerShell 4.0 é compatível com versões anteriores. Os cmdlets, provedores, módulos, snap-ins, scripts, funções e perfis que foram criados para o Windows PowerShell 3.0 e o Windows PowerShell 2.0 geralmente funcionam no Windows PowerShell 4.0 sem alterações.
 
-O Windows PowerShell 4.0 está instalado por padrão no Windows 8.1 e no Windows Server 2012 R2. Para instalar o Windows PowerShell 4.0 no Windows 7 com SP1 ou no Windows Server 2008 R2, baixe e instale o [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Certifique-se de ler os detalhes de download e atender a todos os requisitos de sistema antes de instalar o Windows Management Framework 4.0.
+O Windows PowerShell 4.0 está instalado por padrão no Windows 8.1 e no Windows Server 2012 R2. Para instalar o Windows PowerShell 4.0 no Windows 7 com SP1 ou Windows Server 2008 R2, baixe e instale o [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Certifique-se de ler os detalhes de download e atender a todos os requisitos de sistema antes de instalar o Windows Management Framework 4.0.
 
-- [Novos recursos no Windows PowerShell]()
-
-- [Novos recursos no ISE (Ambiente de Script Integrado) do Windows PowerShell]()
-
-- [Novos recursos no fluxo de trabalho do Windows PowerShell]()
-
-- [Novos recursos nos Serviços Web do Windows PowerShell]()
-
-- [Novos recursos no Windows PowerShell Web Access]()
-
-- [Correções de bugs importantes no Windows PowerShell 4.0]()
+- [Novos recursos no Windows PowerShell](#new-features-in-windows-powershell-1)
+- [Novos recursos no ISE (Ambiente de Script Integrado) do Windows PowerShell](#new-features-in-windows-powershell-integrated-scripting-environment-ise)
+- [Novos recursos no fluxo de trabalho do Windows PowerShell](#new-features-in-windows-powershell-workflow)
+- [Novos recursos nos Serviços Web do Windows PowerShell](#new-features-in-windows-powershell-web-services)
+- [Novos recursos no Windows PowerShell Web Access](#new-features-in-windows-powershell-web-access)
+- [Correções de bugs importantes no Windows PowerShell 4.0](#notable-bug-fixes-in-windows-powershell-40)
 
 O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
@@ -456,59 +443,33 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 ## <a name="new-features-in-windows-powershell-30"></a>Novos recursos no Windows PowerShell 3.0
 O Windows PowerShell 3.0 inclui os seguintes novos recursos.
 
-- [Fluxo de trabalho do Windows PowerShell]()
-
-- [Windows PowerShell Web Access]()
-
-- [Novos recursos do ISE do Windows PowerShell]()
-
-- [Suporte para o Microsoft .NET Framework 4.0]()
-
-- [Suporte para o Ambiente de Pré-Instalação do Windows]()
-
-- [Sessões desconectadas]()
-
-- [Conectividade robusta de sessão]()
-
-- [Sistema de ajuda atualizável]()
-
-- [Ajuda online avançada]()
-
-- [Integração do CIM]()
-
-- [Arquivos de configuração de sessão]()
-
-- [Integração do Agendador de Tarefas e trabalhos agendados]()
-
-- [Melhorias da linguagem do Windows PowerShell]()
-
-- [Novos cmdlets principais]()
-
-- [Aprimoramentos nos cmdlets e nos provedores principais existentes]()
-
-- [Importação e descoberta de módulo remoto]()
-
-- [Preenchimento com Tab avançado]()
-
-- [Módulo de carregamento automático]()
-
-- [Aprimoramentos da experiência do módulo]()
-
-- [Descoberta de comando simplificada]()
-
-- [Suporte aprimorado a registro em log, a diagnósticos e à Política de Grupo]()
-
-- [Aprimoramentos de saída e de formatação]()
-
-- [Experiência de host de console avançada]()
-
-- [Novas APIs de cmdlet e de hospedagem]()
-
-- [Aprimoramentos de desempenho]()
-
-- [Suporte a Host Compartilhado e a Executar como]()
-
-- [Aprimoramentos no tratamento de caracteres especiais]()
+- [Fluxo de trabalho do Windows PowerShell](#windows-powershell-workflow)
+- [Windows PowerShell Web Access](#windows-powershell-web-access)
+- [Novos recursos do ISE do Windows PowerShell](#new-windows-powershell-ise-features)
+- [Suporte para o Microsoft .NET Framework 4.0](#support-for-microsoft-net-framework-4)
+- [Suporte para o Ambiente de Pré-Instalação do Windows](#support-for-windows-preinstallation-environment)
+- [Sessões desconectadas](#disconnected-sessions)
+- [Conectividade robusta de sessão](#robust-session-connectivity)
+- [Sistema de ajuda atualizável](#updatable-help-system)
+- [Ajuda online avançada](#enhanced-online-help)
+- [Integração do CIM](#cim-integration)
+- [Arquivos de configuração de sessão](#session-configuration-files)
+- [Integração do Agendador de Tarefas e trabalhos agendados](#scheduled-jobs-and-task-scheduler-integration)
+- [Melhorias da linguagem do Windows PowerShell](#windows-powershell-language-enhancements)
+- [Novos cmdlets principais](#new-core-cmdlets)
+- [Aprimoramentos nos cmdlets e nos provedores principais existentes](#improvements-to-existing-core-cmdlets-and-providers)
+- [Importação e descoberta de módulo remoto](#remote-module-import-and-discovery)
+- [Preenchimento com Tab avançado](#enhanced-tab-completion)
+- [Módulo de carregamento automático](#module-auto-loading)
+- [Aprimoramentos da experiência do módulo](#module-experience-improvements)
+- [Descoberta de comando simplificada](#simplified-command-discovery)
+- [Suporte aprimorado a registro em log, a diagnósticos e à Política de Grupo](#improved-logging-diagnostics-and-group-policy-support)
+- [Aprimoramentos de saída e de formatação](#formatting-and-output-improvements)
+- [Experiência de host de console avançada](#enhanced-console-host-experience)
+- [Novas APIs de cmdlet e de hospedagem](#new-cmdlet-and-hosting-apis)
+- [Aprimoramentos de desempenho](#performance-improvements)
+- [Suporte a Host Compartilhado e a Executar como](#runas-and-shared-host-support)
+- [Aprimoramentos no tratamento de caracteres especiais](#special-character-handling-improvements)
 
 ### <a name="windows-powershell-workflow"></a>Fluxo de trabalho do Windows PowerShell
 O fluxo de trabalho do Windows PowerShell traz a potência do Windows Workflow Foundation para o Windows PowerShell. Você pode escrever fluxos de trabalho em XAML ou na linguagem do Windows PowerShell e executá-los exatamente como você executaria um cmdlet. O cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém comandos de fluxo de trabalho e o cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtém ajuda para fluxos de trabalho.
@@ -750,7 +711,6 @@ O recurso **SharedHost** permite que vários usuários em vários computadores c
 Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath**, que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path**, incluindo os novos cmdlets [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
 
 ## <a name="see-also"></a>Consulte Também
-- [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
-- [about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
+- [about_Windows_PowerShell_5.0](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
 

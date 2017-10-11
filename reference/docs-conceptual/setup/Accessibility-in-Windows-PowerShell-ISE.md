@@ -3,26 +3,26 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Acessibilidade no ISE do Windows PowerShell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: fce9e2e2f177174a7359351738a0e02201448fc6
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 505ec3aca84b5ad0b9d58a1ec84d80e3aa86db7a
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Acessibilidade no ISE do Windows PowerShell
 Este tópico descreve os recursos de acessibilidade do ISE (Ambiente de Script Integrado) do Windows PowerShell que podem ser úteis.
 
-* [Como alterar o tamanho e o local dos Painéis de console e de script]()
-* [Atalhos de teclado para edição de texto]()
-* [Atalhos de teclado para execução de scripts]()
-* [Atalhos de teclado para personalizar a exibição]()
-* [Atalhos de teclado para depuração de scripts]()
-* [Atalhos do teclado para as guias do Windows PowerShell]()
-* [Atalhos de teclado para iniciar e sair]()
+* [Como alterar o tamanho e o local dos Painéis de console e de script](#how-to-change-the-size-and-location-of-the-console-and-script-panes)
+* [Atalhos de teclado para edição de texto](#keyboard-shortcuts-for-editing-text)
+* [Atalhos de teclado para execução de scripts](#keyboard-shortcuts-for-running-scripts)
+* [Atalhos de teclado para personalizar a exibição](#keyboard-shortcuts-for-customizing-the-view)
+* [Atalhos de teclado para depuração de scripts](#keyboard-shortcuts-for-debugging-scripts)
+* [Atalhos do teclado para as guias do Windows PowerShell](#keyboard-shortcuts-for-windows-powershell-tabs)
+* [Atalhos de teclado para iniciar e sair](#keyboard-shortcuts-for-starting-and-exiting)
 
 A Microsoft tem o compromisso de facilitar o uso de seus produtos e serviços para todos. Os tópicos a seguir fornecem informações sobre os recursos, produtos e serviços que tornam o ISE do Windows PowerShell mais acessível para pessoas portadoras de deficiência.
 
-O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para obter mais informações, consulte “Como gerenciar pontos de interrupção” em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:
+O ISE do Windows PowerShell dá suporte ao modo de alto contraste. Para os deficientes visuais, informações de ponto de interrupção estão disponíveis por meio dos cmdlets para gerenciar pontos de interrupção, como [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Para saber mais, veja "Como gerenciar pontos de interrupção" em [Como depurar scripts no ISE do Windows PowerShell](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Além dos recursos de acessibilidade e utilitários no Microsoft Windows, os seguintes recursos tornam o ISE do Windows PowerShell mais acessível a pessoas com deficiências:
 
 - Atalhos do teclado
 
@@ -113,7 +113,8 @@ Você pode usar os seguintes atalhos do teclado ao depurar scripts.
 |**Remover todos os pontos de interrupção**|Ctrl+Shift+F9|Painel de Script ao depurar um script|
 |**Parar depurador**|Shift+F5|Painel de Script ao depurar um script|
 
-> [!NOTE]
+> ![OBSERVAÇÃO](../core-powershell/web-access/images/Note.jpeg)**Observação**
+>
 > Você também pode usar os atalhos de teclado projetados para o console do Windows PowerShell ao depurar scripts no ISE do Windows PowerShell. Para usar esses atalhos, você deve digitar o atalho no Painel de Console e pressionar Enter.
 
 |Ação|Atalho do Teclado|Usar em|
