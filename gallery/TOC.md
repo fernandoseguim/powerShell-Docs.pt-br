@@ -19,6 +19,8 @@
 ### [Entrando em contato com os proprietários do item](psgallery/psgallery_contacting_item_owners.md)
 ### [Entrando em contato com os administradores](psgallery/psgallery_contacting_administrators.md)
 ### [Fornecendo comentários por meio de mídia social ou do recurso Comentários](psgallery/psgallery-SocialMediaFeedback.md)
+### [Exigir a aceitação da licença em Detalhes dos itens](psgallery/psgallery_requires_license_acceptance.md)
+### [Exigir a aceitação da licença ao implantar na Automação do Azure](psgallery/psgallery_deploy_to_azure_automation_requireLicenseAcceptance.md)
 
 # [PowerShellGet](psget/overview.md)
 ## [Módulo Get PowerShellGet](psget/get_psget_module.md)
@@ -36,6 +38,7 @@
 ### [Atualizar o manifesto de módulo](psget/module/psget_update-modulemanifest.md)
 ### [Publicar](psget/module/psget_publish-module.md)
 ### [Módulos com PSEditions](psget/module/modulewithpseditionsupport.md)
+### [Módulos que exigem a aceitação da licença](psget/module/RequireLicenseAcceptance.md)
 ### [Solução de problemas](psget/psget_cmdlets_troubleshooting.md)
 
 ## script
@@ -50,6 +53,7 @@
 ### [Atualizar metadados de arquivo de script](psget/script/psget_update-scriptfileinfo.md)
 ### [Publicar](psget/script/psget_publish-script.md)
 ### [Scripts com PSEditions](psget/script/scriptwithpseditionsupport.md)
+### [Exigir a aceitação da licença para Scripts](psget/script/script_RequireLicenseAcceptance.md)
 
 ## Gerenciamento de repositório
 ### [Inicializando o provedor do NuGet e NuGet.exe](psget/repository/bootstrapping_nuget_proivder_and_exe.md)
