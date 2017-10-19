@@ -4,14 +4,13 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,segurança"
 title: "Considerações sobre segurança de JEA"
-ms.openlocfilehash: f85b342625d4dba0890619ef9680eaccbbde5224
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 2dcce34113998a1c31709b6afe6d0a21c991e79d
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 10/13/2017
 ---
-<a id="jea-security-considerations" class="xliff"></a>
-# Considerações sobre segurança de JEA
+# <a name="jea-security-considerations"></a>Considerações sobre segurança de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -22,8 +21,7 @@ Como o JEA permite a execução de comandos de administrador sem ter diretamente
 
 Este tópico descreve o modelo de segurança JEA e as práticas recomendadas mais detalhadamente.
 
-<a id="run-as-account" class="xliff"></a>
-## Conta Executar como
+## <a name="run-as-account"></a>Conta Executar como
 
 Cada ponto de extremidade JEA tem uma conta "Run As" designada, que é a conta na qual são executadas as ações do usuário que está se conectando.
 Essa conta é configurável no [arquivo de configuração de sessão](session-configurations.md) e a conta que você escolher tem uma influência significativa sobre a segurança de seu ponto de extremidade.
@@ -81,8 +79,7 @@ Isso significa que as definições de função deixarão de funcionar conforme o
 
 Você não deve usar um RunAsCredential em um ponto de extremidade JEA devido a dificuldade no rastreamento de ações até usuários específicos e devido à falta de suporte para mapeamento de usuários às funções.
 
-<a id="winrm-endpoint-acl" class="xliff"></a>
-## ACL do Ponto de Extremidade do WinRM
+## <a name="winrm-endpoint-acl"></a>ACL do Ponto de Extremidade do WinRM
 
 Assim como acontece com pontos de extremidade regulares de comunicação remota do PowerShell, cada ponto de extremidade JEA tem uma ACL (lista de controle de acesso) separada definida na configuração do WinRM que controla quem pode autenticar no ponto de extremidade JEA.
 Se for configurada incorretamente, usuários confiáveis poderão não acessar o ponto de extremidade JEA e/ou usuários não confiáveis poderão acessar.
@@ -116,8 +113,7 @@ Se usuários adicionais tiverem permissão para acessar o ponto de extremidade J
 Você pode auditar as permissões de usuário em um ponto de extremidade JEA executando o `Get-PSSessionCapability`.
 Confira o artigo [Auditoria e relatórios no JEA](audit-and-report.md) para obter mais informações sobre a auditoria de quais comandos um usuário tem acesso em um ponto de extremidade JEA.
 
-<a id="least-privilege-roles" class="xliff"></a>
-## Funções de privilégio mínimo
+## <a name="least-privilege-roles"></a>Funções de privilégio mínimo
 
 Durante a criação de funções JEA, é importante lembrar que a conta virtual ou a conta de serviço gerenciado de grupo em execução em segundo plano geralmente tem acesso irrestrito para gerenciar o computador local.
 Os recursos de função do JEA ajudam a restringir o uso que pode ser feito por essa conta, limitando os comandos e os aplicativos que podem ser executados usando o contexto privilegiado.
@@ -146,8 +142,7 @@ Uma versão muito mais segura desse mesma capacidade de função seria:
 
 Evite usar curingas em recursos de função e não se esqueça de [auditar as permissões efetivas de usuário](audit-and-report.md#check-effective-rights-for-a-specific-user) regularmente para entender a quais comandos um usuário tem acesso.
 
-<a id="jea-does-not-protect-against-admins" class="xliff"></a>
-## O JEA não protege contra administradores
+## <a name="jea-does-not-protect-against-admins"></a>O JEA não protege contra administradores
 
 Um aos princípios básicos do JEA é que ele permite que não administradores executem *algumas* tarefas de administração.
 O JEA não protege contra aqueles que já têm privilégios de administrador.

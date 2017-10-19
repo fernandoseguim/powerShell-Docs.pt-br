@@ -1,4 +1,16 @@
-# <a name="desired-state-configuration-overview-for-engineers"></a>Visão Geral da Configuração de Estado Desejado para Engenheiros #
+---
+ms.date: 2017-10-13
+author: eslesar;mgreenegit
+ms.topic: conceptual
+keywords: "DSC,powershell,configuração,instalação"
+title: "Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão"
+ms.openlocfilehash: 66822d9a60f98aab3d4f27d14b27ebc6ec90b2c9
+ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/16/2017
+---
+# <a name="desired-state-configuration-overview-for-engineers"></a>Visão Geral da Configuração de Estado Desejado para Engenheiros
 
 Elaboramos este documento para que as equipes de operações e os desenvolvedores possam compreender os benefícios da DSC (Configuração de Estado Desejado) do PowerShell.
 Para obter uma ideia mais abrangente do valor que a DSC fornece, confira o tópico [Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão](decisionMaker.md)
@@ -6,23 +18,23 @@ Para obter uma ideia mais abrangente do valor que a DSC fornece, confira o tópi
 ## <a name="benefits-of-desired-state-configuration"></a>Benefícios da Configuração de Estado Desejado
 
 A DSC existe para:
+
 - Diminuir a complexidade da criação de scripts no Windows
 - Aumentar a velocidade de iteração
 
-O conceito de "implantação contínua" está se tornando mais importante. Implantação contínua significa a capacidade de implantar com frequência, possivelmente, várias vezes por dia.
+O conceito de "implantação contínua" está se tornando mais importante.
+Implantação contínua significa a capacidade de implantar com frequência, possivelmente, várias vezes por dia.
 A finalidade dessas implantações não é corrigir algo, mas sim publicar conteúdo rapidamente.
 Ao lançar novos recursos do desenvolvimento para as operações da forma mais tranquila e confiável possível, você aumenta o rendimento da nova lógica de negócios.
 
-Existem duas tendências em jogo que aumentam essa necessidade de avançar rapidamente. O avanço para a computação em nuvem implica uma mudança rápida, em escala, com uma ameaça constante de fracasso.
-Em virtude dessas implicações, é necessário aumentar a automação.
-A criação da mentalidade "DevOps" é a solução para essas mudanças. 
+A mudança para computação na nuvem implica uma solução de implantação que utiliza um modelo "declarativo", no qual um ambiente de estado final é declarado como texto e publicado em um mecanismo de implantação.
+Essa técnica de implantação permite uma alteração rápida, em grande escala, com resiliência contra ameaças de falha, pois a qualquer momento a implantação pode ser repetida consistentemente a fim de garantir um estado final.
+A criação de ferramentas e serviços que oferecem suporte a esse estilo de operações por meio da automação é uma resposta a essas alterações.
 
-
-A DSC é uma plataforma que fornece implantação, configuração e conformidade declarativas, autônomas e idempotentes (repetível).
+DSC é uma plataforma que fornece implantação, configuração e conformidade declarativas e idempotentes (repetível).
 Na plataforma DSC, você garante que os componentes do datacenter tenham a configuração correta, evitando erros e falhas de implantação dispendiosas.
 A DSC permite a implantação contínua, tratando as configurações DSC como parte do código do aplicativo.
 A configuração DSC deve ser atualizada como parte do aplicativo, garantindo que o conhecimento necessário para implantá-lo esteja sempre atualizado e pronto para uso.
-
 
 ## <a name="i-have-powershell-why-do-i-need-desired-state-configuration"></a>"Eu tenho o PowerShell, por que preciso da Configuração de Estado Desejado?"
 
@@ -36,9 +48,10 @@ Por exemplo, os scripts do PowerShell devem ter a seguinte aparência:
 # Create a share in Windows Server 8
 New-SmbShare -Name MyShare -Path C:\Demo\Temp -FullAccess Alice -ReadAccess Bob
 ```
-Esse script é fácil, simples e direto. No entanto, se tentar colocar o script em produção, você enfrentará vários problemas.
+Esse script é fácil, simples e direto.
+No entanto, se tentar colocar o script em produção, você enfrentará vários problemas.
 O que acontece se o script for executado duas vezes seguidas?
-O que acontece se Diogo já tinha acesso completo ao compartilhamento? 
+O que acontece se Diogo já tinha acesso completo ao compartilhamento?
 
 Para compensar esses problemas, uma versão "real" do script será mais parecida com a seguinte:
 ```powershell
@@ -102,21 +115,21 @@ Start-DscConfiguration Sample_Share
 ```
 
 Este script tem um formato simples e é fácil de ler.
-Os caminhos lógicos e o tratamento de erros continuam presentes na implementação [resource](resources.md), embora sejam invisíveis para o autor do script. 
-
-
+Os caminhos lógicos e o tratamento de erros continuam presentes na implementação [resource](resources.md), embora sejam invisíveis para o autor do script.
 
 ## <a name="separating-environment-from-structure"></a>Separando ambiente de estrutura
 
-Um padrão comum na DevOps é usar vários ambientes de implantação. Por exemplo, pode haver um ambiente de "desenvolvimento" para criar o protótipo de um novo código rapidamente.
+Um padrão comum na DevOps é usar vários ambientes de implantação.
+Por exemplo, pode haver um ambiente de "desenvolvimento" para criar o protótipo de um novo código rapidamente.
 O código do ambiente de "desenvolvimento" passa por um ambiente de "teste", no qual outras pessoas verificam a funcionalidade.
 Por fim, o código passa para a "produção" ou o ambiente de produção de site ativo.
 
-As configurações DSC acomodam esse pipeline de desenvolvimento/teste/produção, por meio do uso de [dados da configuração](configData.md).
+As configurações de DSC acomodam esse pipeline de desenvolvimento/teste/produção, por meio do uso de [dados da configuração](configData.md).
 Isso simplifica ainda mais a diferença entre a estrutura da configuração e os nós gerenciados.
-Por exemplo, você pode definir uma configuração que requer um SQL Server, um Servidor IIS e um servidor de camada intermediária. Independentemente de quais nós recebem as diferentes partes dessa configuração, esses três elementos estarão sempre presentes.
+Por exemplo, você pode definir uma configuração que requer um SQL Server, um Servidor IIS e um servidor de camada intermediária.
+Independentemente de quais nós recebem as diferentes partes dessa configuração, esses três elementos estarão sempre presentes.
 Você pode usar dados de configuração para apontar todos os três elementos para o mesmo computador em um ambiente de desenvolvimento, separar os três elementos para três computadores diferentes em um ambiente de teste e, por fim, apontá-los para todos os servidores de produção no ambiente de produção.
-Para implantar em diferentes ambientes, você pode invocar `Start-DscConfiguration` com os dados de configuração corretos para o ambiente de destino. 
+Para implantar em diferentes ambientes, você pode invocar **Start-DscConfiguration** com os dados de configuração corretos para o ambiente de destino.
 
 ## <a name="see-also"></a>Consulte Também
 

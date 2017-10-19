@@ -1,20 +1,37 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_status
-ms.technology: powershell
-ms.openlocfilehash: a260b9b696b41947fbbb789fd165dfe4bdac1dc3
-ms.sourcegitcommit: 214b8442f05618d078837889cbb6a30b42c01edb
-translationtype: HT
+ms.openlocfilehash: af6111d3c511273571bd978c6d0e7447726c2917
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/13/2017
 ---
 <a name="powershell-gallery-status"></a>Status da Galeria do PowerShell
 =========================
+## <a name="10102017---powershell-gallery-unavailable-for-2-hours-101017"></a>10/10/2017 - Galeria do PowerShell indisponível por duas horas 10/10/17
+
+__Resumo do impacto__: a Galeria do PowerShell apresentou um período de latência muito alta, resultando em problemas de conexão intermitente, começando aproximadamente às 17h (PDT) 10/10/17. Durante a resolução do problema, o site foi colocado offline por 2 horas, começando aproximadamente às 22h (PDT). O site foi restaurado logo antes da meia-noite 10/10/2017. 
+ 
+__Causa raiz__: a causa raiz da alta latência ainda está sendo investigada.
+
+__Resolução__: foi necessário colocar os serviços Web offline e restaurá-los para resolver o problema principal. 
+
+__Próximas etapas__: a causa raiz do problema original está sendo investigada.
+
+## <a name="06012017---deploy-to-azure-automation-currently-unavailable"></a>01/06/2017 – implantar na Automação do Azure indisponível no momento
+
+__Resumo do impacto__: implantar itens com dependências na Automação do Azure da Galeria do PowerShell não está disponível no momento.  Importar itens da Galeria do PowerShell de dentro da Automação do Azure ainda está disponível.  
+ 
+__Causa raiz__: itens que têm dependências de outros e que já foram implantados anteriormente na Automação do Azure, não serão implantados na Automação do Azure. Os engenheiros identificaram um problema em como os modelos ARM são gerados para os itens com dependências na funcionalidade Implantar na Automação do Azure.
+
+__Resolução__: os engenheiros estão trabalhando para resolver o problema.  A solução alternativa atual para os usuários é importar o item da Galeria do PowerShell de dentro da Automação do Azure. 
+
+__Próximas etapas__: os engenheiros vão liberar a correção em breve.  Enquanto isso, use a solução alternativa recomendada. 
+
 
 ## <a name="04112017---users-unable-to-log-in-with-azure-active-directory-aad-accounts"></a>11/04/2017 – os usuários não podem fazer logon nas contas do AAD (Azure Active Directory)
 
@@ -58,7 +75,7 @@ __Próximas etapas__: se você utilizou o link Fale conosco ou enviou email para
 
 __Resumo de impacto__: entre 11/07/2016 e 13/07/2016, um subconjunto de clientes teve problemas para baixar itens da Galeria do PowerShell. O problema provavelmente se manifesta na seguinte mensagem de erro retornada de Install-Module/Install-Script e Save-Module/Save-Script:
 
-```PowerShell
+```powershell
 PS C:\> Install-Module xStorage 
 PackageManagement\Install-Package : Package 'xStorage' failed to be installed because: 
 End of Central Directory record could not be found. At C:\Program 
@@ -77,7 +94,7 @@ __Próximas etapas__: investigar a causa raiz subjacente e desenvolver uma solu�
 ## <a name="5192016---download-items-failed"></a>19/05/2016 – Baixar itens com falha
 __Resumo de impacto__: entre 17/05/2016 e 19/05/2016, um subconjunto de clientes teve problemas para baixar itens da Galeria do PowerShell. O problema provavelmente se manifesta na seguinte mensagem de erro retornada de Install-Module/Install-Script e Save-Module/Save-Script:
 
-```PowerShell
+```powershell
 VERBOSE: Hash for package 'AzureRM.OperationalInsights' does not match hash provided from the server.
 VERBOSE: InstallPackageLocal' - name='AzureRM.OperationalInsights', version='1.0.8',
 destination='C:\Users\jbritt\AppData\Local\Temp\2\1741355729'
