@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Gerenciando o local atual
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: 20b3828d12587e675ed51863e5d96c37839b62d6
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: cbdebb84b3191e3bd549a1cf344cbeefaa91a23c
+ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="managing-current-location"></a>Gerenciando o local atual
 Ao navegar em sistemas de pasta no Explorador de arquivos, você normalmente tem um local de trabalho específico, ou seja, a pasta aberta atual. Itens na pasta atual podem ser manipulados facilmente clicando neles. Para interfaces de linha de comando como Cmd.exe, quando você estiver na mesma pasta que um arquivo específico, poderá acessá-lo especificando um nome relativamente curto, em vez de precisar especificar todo o caminho para o arquivo. O diretório atual é chamado no diretório de trabalho.
@@ -49,10 +49,13 @@ Você pode especificar caminhos em relação ao seu local atual da mesma forma q
 
 Por exemplo, se você está na pasta **C:\\Windows**, um ponto (**.**) representa **C:\\Windows** e um ponto duplo (**..**) representa **C:**. Você pode alterar do seu local atual para a raiz da unidade C: digitando:
 
-<pre>PS> Set-Location -Path .. -PassThru
+```powershell
+PS> Set-Location -Path .. -PassThru
+
 Path
 ----
-C:\</pre>
+C:\
+```
 
 A mesma técnica funciona em unidades do Windows PowerShell que não são unidades de sistema de arquivos, como **HKLM:**. Você pode definir o local na chave HKLM\\Software do Registro digitando:
 
