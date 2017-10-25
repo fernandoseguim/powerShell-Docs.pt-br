@@ -27,3 +27,8 @@ Ativamente mesclamos contribuições neste repositório via [solicitação pull]
 Para obter mais informações sobre a contribuição, leia nosso [guia de contribuições](CONTRIBUTING.md).
 Há um rascunho de [guia de estilo](./STYLE.md) que deve ser analisado antes de fazer contribuições.
 Use os modelos de Solicitação Pull e de Problemas para ajudar a manter a consistência da documentação em diferentes versões. 
+
+## <a name="licenses"></a>Licenças
+
+Há dois arquivos de licença para este projeto. A licença do MIT aplica-se ao código contido neste repositório.
+A licença Creative Commons aplica-se à documentação. 

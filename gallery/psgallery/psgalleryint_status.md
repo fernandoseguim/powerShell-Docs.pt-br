@@ -1,24 +1,21 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: PowerShell, cmdlet, galeria
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: galeria,powershell,cmdlet,psgallery
 title: psgalleryint_status
-ms.technology: powershell
-ms.openlocfilehash: 58f06ca061a4f171288e75b30698910c701f1da1
-ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
-translationtype: HT
+ms.openlocfilehash: 0b2f1ebcb365fcd24438a028a9c8181449266a8b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
 <a name="powershell-gallery-status"></a>Status da Galeria do PowerShell
 =========================
 
 ## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 – RESOLVIDO: não é possível ver as páginas de scripts e módulos individuais
 
-__Resumo do Impacto__: os links diretos para páginas de scripts e módulos individuais em https://www.powershellgallery.com estavam corrompidos. Isso está sendo relatado atualmente em todas as regiões. Isso não afeta nenhum cmdlet do PowerShellGet, ou seja, Install-Module, Install-Script, Update-Module, Update-Script, Publish-Module, Publish-Scirpt dev continuaram funcionando.
+__Resumo do Impacto__: os links diretos para páginas de scripts e módulos individuais em https://www.powershellgallery.com estavam corrompidos. Isso está sendo relatado atualmente em todas as regiões. Isso não afetou nenhum cmdlet do PowerShellGet, ou seja, Install-Module, Install-Script, Update-Module, Update-Script, Publish-Module, Publish-Script continuaram funcionando.
 
 __Causa Raiz__: os engenheiros identificaram a causa como um problema para exibir os botões de mídias sociais como o do Facebook na página.  
 
