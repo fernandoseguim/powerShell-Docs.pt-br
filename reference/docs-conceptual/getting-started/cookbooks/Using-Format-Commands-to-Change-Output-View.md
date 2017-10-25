@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Usando comandos de formatação para alterar a exibição de saída"
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05

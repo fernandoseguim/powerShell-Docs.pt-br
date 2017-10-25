@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="set-psrepository" class="xliff"></a>
-# Set-PSRepository
+# <a name="set-psrepository"></a>Set-PSRepository
 
 Set-PSRepository define valores para um repositório registrado.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Set-PSRepository define valores para um repositório de módulo registrado.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Set-PSRepository -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Set-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517128)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 PS C:\> Register-PSRepository -Name myRepository -SourceLocation "https://www.myget.org/F/powershellgetdemo/api/v2" -InstallationPolicy Trusted
@@ -51,8 +46,7 @@ myRepository              Untrusted            https://www.myget.org/F/powershel
 ```
 
 
-<a id="set-psrepository-cmdlet-with-script-sharing-support" class="xliff"></a>
-### Cmdlet Set-PSRepository com suporte de compartilhamento de script
+### <a name="set-psrepository-cmdlet-with-script-sharing-support"></a>Cmdlet Set-PSRepository com suporte de compartilhamento de script
 
 Use o cmdlet Set-PSRepository para adicionar **ScriptSourceLocation** e **ScriptPublishLocation** ao PSRepository.
 ```powershell

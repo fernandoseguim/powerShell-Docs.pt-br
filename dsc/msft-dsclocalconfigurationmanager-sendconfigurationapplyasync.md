@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método SendConfigurationApplyAsync da classe MSFT_DSCLocalConfigurationManager
 
 Envia o documento de configuração de maneira assíncrona para o nó gerenciado e usa o Agente de Configuração para aplicar a configuração.
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -27,8 +25,7 @@ uint32 SendConfigurationApplyAsync(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *ConfigurationData* \[in\]  
@@ -40,27 +37,23 @@ Dados do ambiente para a configuração.
 *jobId* \[in\]  
 A ID do trabalho para a qual enviar a configuração.
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="just-enough-administration" class="xliff"></a>
-# Just Enough Administration
+# <a name="just-enough-administration"></a>Just Enough Administration
 
 JEA (Just Enough Administration) é uma tecnologia de segurança que habilita o uso de administração delegada para qualquer coisa que pode ser gerenciada com o PowerShell.
 Com o JEA, você pode:
@@ -37,8 +36,7 @@ Isso significa que você pode fornecer o acesso apropriado para reparar um cache
 Melhor ainda, quando a sessão JEA está configurada para usar contas virtuais privilegiadas temporárias, seus administradores de DNS podem se conectar ao servidor usando credenciais *não administrativas* e ainda poderão executar comandos que, geralmente, necessitam de privilégios de administrador.
 Essa capacidade permite que você remova usuários das funções de administrador local ou de domínio com privilégios amplos e, em vez disso, controle cuidadosamente o que eles podem fazer em cada computador.
 
-<a id="get-started-with-jea" class="xliff"></a>
-## Introdução ao JEA
+## <a name="get-started-with-jea"></a>Introdução ao JEA
 
 Você pode começar a usar o JEA hoje em qualquer computador executando o Windows Server 2016 ou Windows 10.
 Também é possível executar o JEA em sistemas operacionais mais antigos com uma atualização do Windows Management Framework.
@@ -52,8 +50,7 @@ Para saber mais sobre os requisitos para usar o JEA e aprender a criar, usar e a
 - [Considerações de Segurança](security-considerations.md) – examine as práticas recomendadas de segurança e as implicações das opções de configuração de JEA.
 - [Auditoria e relatórios no JEA](audit-and-report.md) – aprenda a fazer auditoria e relatórios em pontos de extremidade JEA.
 
-<a id="samples-and-dsc-resource" class="xliff"></a>
-## Exemplos e recurso DSC
+## <a name="samples-and-dsc-resource"></a>Exemplos e recurso DSC
 
 Exemplos de configurações de JEA e o recurso DSC de JEA podem ser encontrados no [Repositório GitHub de JEA](https://github.com/PowerShell/JEA).
 

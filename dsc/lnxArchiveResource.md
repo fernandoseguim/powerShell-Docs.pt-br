@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxarchive-resource" class="xliff"></a>
-# Recurso nxArchive de DSC para Linux
+# <a name="dsc-for-linux-nxarchive-resource"></a>Recurso nxArchive de DSC para Linux
 
 O recurso **nxArchive** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para descompactar arquivos mortos (.tar, .zip) em um caminho específico em um nó do Linux.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 nxArchive <string> #ResourceName
@@ -30,8 +28,7 @@ nxArchive <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -42,8 +39,7 @@ nxArchive <string> #ResourceName
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | Ensure| Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination**. Defina essa propriedade como "Present" para garantir que o conteúdo exista. Defina-a como "Absent" para garantir que não exista. O valor padrão é "Present".| 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como usar o recurso **nxArchive** para garantir que o conteúdo de um arquivo morto chamado `website.tar` exista e seja extraído em um destino específico.
 

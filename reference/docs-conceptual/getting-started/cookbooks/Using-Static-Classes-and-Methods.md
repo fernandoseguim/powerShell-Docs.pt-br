@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Usando classes e métodos estáticos"
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9

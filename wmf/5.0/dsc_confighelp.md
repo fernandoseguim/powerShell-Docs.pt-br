@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="help-support-for-dsc-configurations" class="xliff"></a>
-# Ajuda e suporte para configurações DSC
+# <a name="help-support-for-dsc-configurations"></a>Ajuda e suporte para configurações DSC
 
 Agora você pode usar a ajuda baseada em comentários dentro das configurações DSC e obter ajuda sobre o uso dessa configuração ao chamar a função de configuração com `-?`:  
 

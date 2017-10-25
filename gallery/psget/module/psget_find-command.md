@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-command" class="xliff"></a>
-# Find-Command
+# <a name="find-command"></a>Find-Command
 
 Localiza comandos do PowerShell em módulos.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 O cmdlet Find-Command localiza comandos do PowerShell, como cmdlets, aliases, funções e fluxos de trabalho. Find-Command faz pesquisas em módulos em repositórios registrados.
 Para cada comando que localiza, esse cmdlet retorna um objeto PSGetCommandInfo. Você pode passar um objeto PSGetCommandInfo para o cmdlet Install-Module para instalar o módulo que contém o comando.
 
@@ -29,19 +27,16 @@ Para cada comando que localiza, esse cmdlet retorna um objeto PSGetCommandInfo. 
 - Find-Command pode filtrar a linguagem de pesquisa específica do repositório com o parâmetro -Filter.
 - Find-Command pode filtrar módulos de todos ou de alguns dos repositórios registrados.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 ```powershell
 
 # Find a specific command

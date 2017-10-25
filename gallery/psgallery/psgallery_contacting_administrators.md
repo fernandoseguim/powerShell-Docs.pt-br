@@ -10,11 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contact-gallery-administrators" class="xliff"></a>
-# Entrar em contato com os Administradores da Galeria
+# <a name="contact-gallery-administrators"></a>Entrar em contato com os Administradores da Galeria
 
-<a id="when-to-contact-gallery-administrators" class="xliff"></a>
-## Quando entrar em contato com os Administradores da Galeria
+## <a name="when-to-contact-gallery-administrators"></a>Quando entrar em contato com os Administradores da Galeria
 
 Você deverá entrar em contato com os administradores da galeria quando:
 
@@ -24,8 +22,7 @@ Você deverá entrar em contato com os administradores da galeria quando:
 4. Tiver uma controvérsia de nome do item com outros usuários e não conseguir resolvê-la entrando em contato com os usuários.
 5. Tiver sido contatado pelos Administradores da Galeria, referente aos seus itens na galeria, e quiser fornecer uma resposta.
 
-<a id="how-to-contact-gallery-administrators" class="xliff"></a>
-## Como entrar em contato com os Administradores da Galeria
+## <a name="how-to-contact-gallery-administrators"></a>Como entrar em contato com os Administradores da Galeria
 
 1. Envie-em um email: cgadmin@microsoft.com.
 2. Se estiver relatando abuso de um item, será possível encontrar um link “Relatar abuso” abaixo das informações do item no painel esquerdo.

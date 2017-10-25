@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="calling-dsc-resource-methods-directly" class="xliff"></a>
-# Chamando métodos do recurso DSC diretamente
+# <a name="calling-dsc-resource-methods-directly"></a>Chamando métodos do recurso DSC diretamente
 
 >Aplica-se a: Windows PowerShell 5.0
 
@@ -23,8 +22,7 @@ Ao chamar o cmdlet **Invoke-DscResource**, você especifica qual método ou fun�
 
 A seguir, exemplos de chamada direta aos métodos do recurso:
 
-<a id="ensure-a-file-is-present" class="xliff"></a>
-## Certificar-se de que um arquivo está presente
+## <a name="ensure-a-file-is-present"></a>Certificar-se de que um arquivo está presente
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
@@ -33,8 +31,7 @@ $result = Invoke-DscResource -Name File -Method Set -Property @{
 $result | fl
 ```
 
-<a id="test-that-a-file-is-present" class="xliff"></a>
-## Testar se um arquivo está presente
+## <a name="test-that-a-file-is-present"></a>Testar se um arquivo está presente
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
@@ -43,8 +40,7 @@ $result = Invoke-DscResource -Name File -Method Test -Property @{
 $result | fl
 ```
 
-<a id="get-the-contents-of-file" class="xliff"></a>
-## Obter o conteúdo do arquivo
+## <a name="get-the-contents-of-file"></a>Obter o conteúdo do arquivo
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
@@ -55,8 +51,7 @@ $result.ItemValue | fl
 
 >**Observação:** não é permitido chamar diretamente métodos de recurso de composição. Em vez disso, chame os métodos de recursos subjacentes que compõem o recurso de composição.
 
-<a id="see-also" class="xliff"></a>
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
 - [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
 - [Depurando os recursos de DSC](debugResource.md)

@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-archive-resource" class="xliff"></a>
-# Recurso Archive da DSC
+# <a name="dsc-archive-resource"></a>Recurso Archive da DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso Archive na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para descompactar arquivos mortos (.zip) em um caminho específico.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe 
+## <a name="syntax"></a>Sintaxe 
 ```MOF
 Archive [string] #ResourceName
 {
@@ -32,8 +30,7 @@ Archive [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -45,8 +42,7 @@ Archive [string] #ResourceName
 | Validar| Usa a propriedade Checksum para determinar se o arquivo corresponde à assinatura. Se você especificar Checksum sem Validate, ocorrerá uma falha na configuração. Se você especificar Validate sem Checksum, uma soma de verificação SHA-256 será usada por padrão.| 
 | Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade Force substitui esses erros. O valor padrão é False.| 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como usar o recurso Archive para garantir que o conteúdo de um arquivo morto chamado Test.zip exista e seja extraído em um destino específico.
 

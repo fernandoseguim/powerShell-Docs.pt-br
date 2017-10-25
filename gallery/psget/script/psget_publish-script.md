@@ -10,30 +10,25 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="publish-script" class="xliff"></a>
-# Publish-Script
+# <a name="publish-script"></a>Publish-Script
 
 O cmdlet Publish-Script publica o script especificado na galeria online.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Publish-Script permite publicar o arquivo de script com metadados válidos como Versão, Guid, Autor, Descrição, etc. O parâmetro de opção forçada no cmdlet Publish-Script inicializa o NuGet.exe sem avisar.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Publish-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Publish-Script](http://go.microsoft.com/fwlink/?LinkId=619788)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 # Publish the really basic script file with required metadata

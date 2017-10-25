@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="registering-jea-configurations" class="xliff"></a>
-# Registrando Configurações de JEA
+# <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
 A última etapa antes de usar o JEA, depois que você tiver criado os [recursos de função](role-capabilities.md) e os [arquivo de configuração de sessão](session-configurations.md), é registrar o ponto de extremidade JEA.
 Esse processo aplica as informações de configuração de sessão no sistema e torna o ponto de extremidade disponível para uso pelos usuários e pelos mecanismos de automação.
 
-<a id="single-machine-configuration" class="xliff"></a>
-## Configuração de computador único
+## <a name="single-machine-configuration"></a>Configuração de computador único
 
 Em ambientes pequenos, você pode implantar o JEA ao registrar o arquivo de configuração de sessão usando o cmdlet [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
@@ -58,8 +56,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 Se o registro foi bem-sucedido, você estará pronto para [usar o JEA](using-jea.md).
 Você pode excluir o arquivo de configuração de sessão a qualquer momento; ele não é mais usado depois do registro.
 
-<a id="multi-machine-configuration-with-dsc" class="xliff"></a>
-## Configuração de vários computadores com o DSC
+## <a name="multi-machine-configuration-with-dsc"></a>Configuração de vários computadores com o DSC
 
 Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples é usar o recurso [Configuração de Estado Desejado](https://msdn.microsoft.com/en-us/powershell/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
 
@@ -119,8 +116,7 @@ Essa configuração pode ser aplicada em um sistema [invocando diretamente o Ger
 O recurso DSC também permite que você substitua o ponto de extremidade de comunicação remota padrão Microsoft.PowerShell.
 Se você fizer isso, o recurso registrará automaticamente um ponto de extremidade irrestrito de backup chamado "Microsoft.PowerShell.Restricted", que tem a ACL do WinRM padrão (permitindo que Usuários de Gerenciamento Remoto e membros do grupo local de Administradores o acessem).
 
-<a id="unregistering-jea-configurations" class="xliff"></a>
-## Cancelando o registro de configurações de JEA
+## <a name="unregistering-jea-configurations"></a>Cancelando o registro de configurações de JEA
 
 Para remover um ponto de extremidade JEA em um sistema, use o cmdlet [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
 O cancelamento do registro de um ponto de extremidade JEA impedirá que novos usuários criem novas sessões de JEA no sistema.
@@ -136,8 +132,7 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 > Isso interromperá a maioria das operações de gerenciamento remotas em andamento, incluindo outras sessões do PowerShell, invocações de WMI e algumas ferramentas de gerenciamento.
 > Cancele o registro de pontos de extremidade do PowerShell somente durante janelas de manutenção planejadas.
 
-<a id="next-steps" class="xliff"></a>
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 - [Testar o ponto de extremidade JEA](using-jea.md)
 

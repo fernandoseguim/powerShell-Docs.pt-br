@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-scriptfileinfo" class="xliff"></a>
-# Update-ScriptFileInfo
+# <a name="update-scriptfileinfo"></a>Update-ScriptFileInfo
 
 O cmdlet Update-ScriptFileInfo permite atualizar os metadados do arquivo de script existente.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Update-ScriptFileInfo atualiza informações de um script.
 - O cmdlet Update-ScriptFileInfo atualizará os metadados de um arquivo de script somente se ele tiver sido criado usando o cmdlet New-ScriptFileInfo ou com o comentário PSScriptInfo válido.
@@ -24,19 +22,16 @@ O cmdlet Update-ScriptFileInfo atualiza informações de um script.
 - Se –Force for especificado, tente adicionar os metadados ao arquivo de script existente que não foi criado usando o cmdlet New-ScriptFileInfo.
 - Se Test-ScriptFileInfo falhar com erros de análise, depois de anexar os metadados de script ao arquivo existente, será gerado um erro dizendo algo como "Não é possível adicionar os metadados ao arquivo existente, você pode usar o cmdlet new-scriptfileinfo para adicionar os metadados ao arquivo de script existente que não foi criado usando o cmdlet New-ScriptFileInfo."
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Update-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619793)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 # Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -50,8 +45,7 @@ Version Name Author Description
 ```
 
 
-<a id="adding-the-script-metadata-to-the-existing-script-file" class="xliff"></a>
-### Adicionando os metadados de script ao arquivo de script existente
+### <a name="adding-the-script-metadata-to-the-existing-script-file"></a>Adicionando os metadados de script ao arquivo de script existente
 
 ```powershell
 PS C:\WINDOWS\system32> New-ScriptFileInfo -Description "Script file description." -PassThru

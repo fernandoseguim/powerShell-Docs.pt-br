@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="authoring-improvements-using-powershell-ise" class="xliff"></a>
-# Criando melhorias usando o ISE do PowerShell
+# <a name="authoring-improvements-using-powershell-ise"></a>Criando melhorias usando o ISE do PowerShell
 
 Criar configurações DSC no ISE do Windows PowerShell ficou muito mais fácil, graças às seguintes melhorias:
 

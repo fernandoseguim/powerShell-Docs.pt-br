@@ -9,13 +9,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-language-features-in-powershell-50" class="xliff"></a>
-# Novos recursos de linguagem no PowerShell 5.0 
+# <a name="new-language-features-in-powershell-50"></a>Novos recursos de linguagem no PowerShell 5.0 
 
 O PowerShell 5.0 introduz os seguintes novos elementos de linguagem no Windows PowerShell:
 
-<a id="class-keyword" class="xliff"></a>
-## Palavra-chave class
+## <a name="class-keyword"></a>Palavra-chave class
 
 A palavra-chave **class** define uma nova classe. Este é um tipo real do .NET Framework. Membros de classe são públicos, mas somente públicos dentro do escopo do módulo.
 Não é possível se referir ao nome de tipo como uma cadeia de caracteres (por exemplo, `New-Object` não funciona), e nesta versão, não é possível usar um literal de tipo (por exemplo, `[MyClass]`) fora do arquivo de script/módulo no qual a classe é definida.
@@ -27,8 +25,7 @@ class MyClass
 }
 ```
 
-<a id="enum-keyword-and-enumerations" class="xliff"></a>
-## Palavra-chave Enum e enumerações
+## <a name="enum-keyword-and-enumerations"></a>Palavra-chave Enum e enumerações
 
 O suporte à palavra-chave **enum** for adicionado, que usa uma nova linha como o delimitador.
 Limitações atuais: não é possível definir um enumerador em relação a si mesmo, mas é possível inicializar um enum em relação a outro enum, conforme mostrado no exemplo a seguir.
@@ -60,14 +57,12 @@ enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-<a id="import-dscresource" class="xliff"></a>
-## Import-DscResource
+## <a name="import-dscresource"></a>Import-DscResource
 
 **Import-DscResource** agora é uma palavra-chave dinâmica real.
 O PowerShell analisa o módulo raiz do módulo especificado, pesquisando classes que contêm o atributo **DscResource**.
 
-<a id="implementingassembly" class="xliff"></a>
-## ImplementingAssembly
+## <a name="implementingassembly"></a>ImplementingAssembly
 
 Um novo campo, **ImplementingAssembly**, foi adicionado a ModuleInfo. Ele é definido como o assembly dinâmico criado para um módulo de script, caso o script defina classes, ou como o assembly carregado para módulos binários. Ele não é definido quando ModuleType = Manifest. 
 
@@ -93,8 +88,7 @@ $s = "hello"
 
 Todos os membros são públicos. 
 
-<a id="constructors-and-instantiation" class="xliff"></a>
-## Construtores e instanciação
+## <a name="constructors-and-instantiation"></a>Construtores e instanciação
 
 As classes do Windows PowerShell podem ter construtores; eles têm o mesmo nome que a classe. Os construtores podem ser sobrecarregados. Há suporte para construtores estáticos. As propriedades com expressões de inicialização são inicializadas antes da execução de qualquer código em um construtor. As propriedades estáticas são inicializadas antes do corpo de um construtor estático, e as propriedades de instância são inicializadas antes do corpo do construtor não estático. Atualmente, não há nenhuma sintaxe para chamar um construtor de outro construtor [como a sintaxe do C\# ": this()"]. A solução alternativa é definir um método comum de Init. 
 
@@ -138,8 +132,7 @@ hashtable new(int capacity)
 hashtable new(int capacity, float loadFactor)
 ```
 
-<a id="methods" class="xliff"></a>
-## Métodos
+## <a name="methods"></a>Métodos
 
 Um método de classe do Windows PowerShell é implementado como um ScriptBlock que tem apenas um end block. Todos os métodos são públicos. Veja a seguir um exemplo de definição de um método chamado **DoSomething**.
 
@@ -163,15 +156,13 @@ $b.DoSomething(42)
 
 Também há suporte para métodos sobrecarregados – ou seja, aqueles que têm o mesmo nome que um método existente, mas que são diferenciados por seus valores especificados.
 
-<a id="properties" class="xliff"></a>
-## Propriedades 
+## <a name="properties"></a>Propriedades 
 
 Todas as propriedades são públicas. As propriedades exigem uma nova linha ou um ponto-e-vírgula. Se nenhum tipo de objeto for especificado, o tipo de propriedade será o objeto.
 
 As propriedades que usam atributos de validação ou atributos de transformação de argumento (por exemplo, `[ValidateSet("aaa")]`) funcionam como esperado.
 
-<a id="hidden" class="xliff"></a>
-## Hidden
+## <a name="hidden"></a>Hidden
 
 Uma nova palavra-chave, **Hidden**, foi adicionada. **Hidden** pode ser aplicado a propriedades e métodos (incluindo construtores).
 
@@ -181,18 +172,15 @@ Membros ocultos não são incluídos durante o preenchimento de tabulação ou u
 
 Um novo atributo, **System.Management.Automation.HiddenAttribute**, foi adicionado, para que o código do C# possa ter a mesma semântica dentro do Windows PowerShell.
 
-<a id="return-types" class="xliff"></a>
-## Tipos de retorno
+## <a name="return-types"></a>Tipos de retorno
 
 O tipo de retorno é um contrato; o valor retornado é convertido para o tipo esperado. Se nenhum tipo de retorno for especificado, o tipo de retorno será nulo. Não há nenhum streaming de objetos; os objetos não podem ser gravados no pipeline, seja intencionalmente ou por engano.
 
-<a id="attributes" class="xliff"></a>
-## Atributos
+## <a name="attributes"></a>Atributos
 
 Dois novos atributos, **DscResource** e **DscProperty** foram adicionados.
 
-<a id="lexical-scoping-of-variables" class="xliff"></a>
-## Escopo léxico de variáveis
+## <a name="lexical-scoping-of-variables"></a>Escopo léxico de variáveis
 
 Apresentamos a seguir um exemplo de como o escopo léxico funciona nesta versão.
 
@@ -220,8 +208,7 @@ $v = bar
 $v -eq $d # true
 ```
 
-<a id="end-to-end-example" class="xliff"></a>
-## Exemplo de ponta a ponta
+## <a name="end-to-end-example"></a>Exemplo de ponta a ponta
 
 O exemplo a seguir cria várias classes novas e personalizadas para implementar uma DSL (linguagem de folha de estilos dinâmica) em HTML. Em seguida, o exemplo adiciona funções auxiliares para criar tipos específicos de elementos como parte da classe de elemento, como estilos de título e tabelas, já que os tipos não podem ser usados fora do escopo de um módulo.
 

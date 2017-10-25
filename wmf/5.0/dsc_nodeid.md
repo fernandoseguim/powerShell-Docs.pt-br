@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="separation-of-node-and-configuration-ids" class="xliff"></a>
-# Separação de IDs de nó e de configuração
+# <a name="separation-of-node-and-configuration-ids"></a>Separação de IDs de nó e de configuração
 
-<a id="overview" class="xliff"></a>
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 Para proporcionar uma experiência mais flexível e simplificada ao usar o DSC no modo Pull, adicionamos uma série de recursos nesta versão. Esses recursos destinam-se a permitir que você tenha a flexibilidade de configurar e implantar configurações em vários nós com facilidade, ao mesmo tempo que acompanha as informações de status e relatório de cada nó individualmente. Esses recursos são os seguintes:
 

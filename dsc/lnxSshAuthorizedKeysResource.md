@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxsshauthorizedkeys-resource" class="xliff"></a>
-# Recurso nxSshAuthorizedKeys de DSC para Linux
+# <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Recurso nxSshAuthorizedKeys de DSC para Linux
 
 O recurso **nxAuthorizedKeys** na Configuração de Estado Desejado (DSC) do PowerShell fornece um mecanismo para gerenciar chaves ssh autorizadas para um usuário especificado.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 nxAuthorizedKeys <string> #ResourceName
@@ -30,8 +28,7 @@ nxAuthorizedKeys <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -41,8 +38,7 @@ nxAuthorizedKeys <string> #ResourceName
 | Chave| O conteúdo da chave. Será obrigatório se **Ensure** for definido como "Present".| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir define uma chave ssh pública autorizada para o usuário "monuser".
 

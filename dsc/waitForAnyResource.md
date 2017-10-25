@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-waitforany-resource" class="xliff"></a>
-# Recurso de DSC WaitForAny
+# <a name="dsc-waitforany-resource"></a>Recurso de DSC WaitForAny
 
 > Aplica-se a: Windows PowerShell 5.1 e posterior
 
@@ -20,8 +19,7 @@ O recurso de DSC (Desired State Configuration) **WaitForSome** pode ser usado de
 Esse recurso terá êxito se o recurso especificado pela propriedade **ResourceName** estiver no estado desejado em qualquer nó de destino definido na propriedade **NodeName**.
 
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 WaitForAny [string] #ResourceName
@@ -35,8 +33,7 @@ WaitForAny [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -48,8 +45,7 @@ WaitForAny [string] #ResourceName
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 Para obter um exemplo de como usar esse recurso, consulte [Especificando dependências de nó cruzado](crossNodeDependencies.md)
 

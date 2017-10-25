@@ -10,32 +10,26 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-modulemanifest" class="xliff"></a>
-# Update-ModuleManifest
+# <a name="update-modulemanifest"></a>Update-ModuleManifest
 Atualiza um arquivo de manifesto do módulo.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Update-ModuleManifest atualiza um arquivo de manifesto do módulo (.psd1).
 
-<a id="notes" class="xliff"></a>
-### Observações
+### <a name="notes"></a>Observações
     - DscResourcesToExport tem suporte somente na versão mais recente do PowerShell 5.0. Nós não poderemos atualizar o campo se você estiver executando em versões anteriores do PowerShell.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 Esse novo cmdlet é usado para ajudar a atualizar o arquivo de manifesto com valores de propriedade de entrada. Ele usa todos os parâmetros usados por New-ModuleManifest.
 

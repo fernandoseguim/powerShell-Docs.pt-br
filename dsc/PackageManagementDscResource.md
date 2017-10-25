@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-packagemanagement-resource" class="xliff"></a>
-# Recurso PackageManagement de DSC
+# <a name="dsc-packagemanagement-resource"></a>Recurso PackageManagement de DSC
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 O recurso **PackageManagement** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para instalar ou desinstalar pacotes de Gerenciamento de Pacotes em um nó de destino. Este recurso requer o módulo **PackageManagement**, disponível em http://PowerShellGallery.com.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 PackageManagement [string] #ResourceName
@@ -35,8 +33,7 @@ PackageManagement [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 |  Propriedade  |  Descrição   | 
 |---|---| 
 | Nome| Especifica o nome do Pacote a ser instalado ou desinstalado.| 
@@ -49,16 +46,14 @@ PackageManagement [string] #ResourceName
 | ProviderName| Especifica um nome de provedor de pacote para o qual definir o escopo de sua pesquisa de pacote. Você pode obter os nomes de provedores de pacote executando o cmdlet Get-PackageProvider.| 
 | AdditionalParameters| Parâmetros específicos do provedor que são transmitidos como uma tabela de hash. Por exemplo, para o provedor do NuGet, você pode transmitir parâmetros adicionais, como DestinationPath.| 
 
-<a id="additional-parameters" class="xliff"></a>
-## Parâmetros Adicionais
+## <a name="additional-parameters"></a>Parâmetros Adicionais
 A tabela a seguir lista as opções para a propriedade AdditionalParameters.
 |  Parâmetro  | Descrição   | 
 |---|---|
 | DestinationPath| Usada por provedores como o Nuget interno. Especifica o local de um arquivo onde você deseja que o pacote seja instalado.|
 | InstallationPolicy| Usada por provedores como o Nuget interno. Determina se você confia na origem do pacote. Um destes: "Não confiável", "Confiável".|
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 Este exemplo instala o pacote do NuGet **JQuery** e o módulo do PowerShell **GistProvider** usando o recurso de DSC **PackageManagement**. Este exemplo primeiro garante que as origens dos pacotes necessários estejam disponíveis e, em seguida, define o estado esperado dos pacotes **JQuery** e **GistProvider** (NuGet e PowerShell, respectivamente).
 

@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Trabalhando com chaves do Registro
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a

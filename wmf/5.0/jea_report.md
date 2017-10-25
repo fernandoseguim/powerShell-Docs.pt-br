@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="reporting-on-jea" class="xliff"></a>
-# Relatando no JEA
+# <a name="reporting-on-jea"></a>Relatando no JEA
 Para relatar o estado da configuração JEA, é possível usar:
 1.  **Get-PSSessionConfiguration** para retornar uma lista de todos os pontos de extremidade registrados em determinado computador.
 2.  **Get-PSSessionCapability** para relatar as funcionalidades que determinado usuário tem em relação a um ponto de extremidade específico.

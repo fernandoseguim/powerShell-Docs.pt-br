@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="audit-powershell-usage-using-transcription-and-logging" class="xliff"></a>
-# Auditar o uso do PowerShell usando a transcrição e o registro
+# <a name="audit-powershell-usage-using-transcription-and-logging"></a>Auditar o uso do PowerShell usando a transcrição e o registro
 
 - [Opções de transcrição avançada](audit_transcript.md)
 - [Rastreamento e registro de scripts](audit_script.md)

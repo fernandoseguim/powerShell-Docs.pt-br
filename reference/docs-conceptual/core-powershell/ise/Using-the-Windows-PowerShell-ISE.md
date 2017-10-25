@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Usando o ISE do Windows PowerShell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0

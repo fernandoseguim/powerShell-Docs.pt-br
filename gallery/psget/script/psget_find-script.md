@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-script" class="xliff"></a>
-# Find-Script
+# <a name="find-script"></a>Find-Script
 
 Localiza os arquivos de script do PowerShell de uma galeria online que correspondem aos critérios especificados.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 Find-Script descobre os arquivos de script de repositórios registrados que correspondem aos critérios especificados.
 Para cada script encontrado, Find-Script retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Install-Script para instalar os scripts.
@@ -34,20 +32,17 @@ O cmdlet Find-Script permite descobrir os arquivos de script com critérios de p
 
 **OBSERVAÇÃO:** PSRepository registrado deve ter um ScriptSourceLocation válido. Você pode usar Set-PSRepository para definir o valor de ScriptSourceLocation.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Find-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Find-Script](http://go.microsoft.com/fwlink/?LinkId=619785)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 # Find a script from the registered repository with ScriptSourceLocation

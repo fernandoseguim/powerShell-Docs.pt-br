@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="built-in-desired-state-configuration-resources-for-linux" class="xliff"></a>
-# Recursos Internos de Configuração de Estado Desejado para Linux
+# <a name="built-in-desired-state-configuration-resources-for-linux"></a>Recursos Internos de Configuração de Estado Desejado para Linux
 
 Os recursos são blocos de construção que você pode usar para escrever um script de Configuração de Estado Desejado (DSC) do PowerShell. A DSC para Linux vem com um conjunto de funcionalidade interna para configurar recursos, como arquivos e pastas, pacotes, variáveis de ambiente, serviços e processos.
 
-<a id="built-in-resources" class="xliff"></a>
-## Recursos internos 
+## <a name="built-in-resources"></a>Recursos internos 
 
 A tabela a seguir fornece uma lista desses recursos e links para tópicos que os descrevem detalhadamente.
 

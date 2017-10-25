@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="software-discovery-install-and-inventory-with-packagemanagement" class="xliff"></a>
-# Descoberta, instalação e inventário de software com o PackageManagement
+# <a name="software-discovery-install-and-inventory-with-packagemanagement"></a>Descoberta, instalação e inventário de software com o PackageManagement
 
 O PackageManagement (também conhecido como OneGet) é uma nova maneira de descobrir e instalar pacotes de software na Web. É um gerenciador ou multiplexador de gerenciadores de pacotes existentes (também chamados de provedores de pacote) que unifica o gerenciamento de pacotes do Windows com uma única interface do Windows PowerShell. Com o PackageManagement, é possível fazer o seguinte:
 

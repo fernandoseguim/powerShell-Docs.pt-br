@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="improvements-in-desired-state-configuration-dsc" class="xliff"></a>
-# Melhorias no DSC (Configuração de Estado Desejado)
+# <a name="improvements-in-desired-state-configuration-dsc"></a>Melhorias no DSC (Configuração de Estado Desejado)
 
-<a id="dsc-feedback-survey" class="xliff"></a>
-## Pesquisa de comentários sobre o DSC   
+## <a name="dsc-feedback-survey"></a>Pesquisa de comentários sobre o DSC   
 
 Depois de usar por algum tempo os novos recursos e funcionalidades da Configuração de Estado Desejado do PowerShell introduzidos nesta versão, ajude-nos a continuar melhorando o produto respondendo a uma rápida [pesquisa sobre o WMF 5.0 RTM](https://www.surveymonkey.com/r/SGLQM5W). Esta pesquisa permite que você compartilhe seus comentários sobre esses novos recursos e funcionalidades. 
 

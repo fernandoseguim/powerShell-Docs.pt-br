@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="software-inventory-logging-sil" class="xliff"></a>
-# SIL (Log de Inventário de Software)
+# <a name="software-inventory-logging-sil"></a>SIL (Log de Inventário de Software)
 
 **IMPORTANTE: ** *ao instalar o WMF 5.0 em um Windows Server 2012 R2 Server que já esteja executando o SIL, será necessário executar o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso de Log de Inventário de Software.*
 

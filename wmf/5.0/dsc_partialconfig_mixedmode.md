@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="support-for-mixed-refreshmode" class="xliff"></a>
-# Suporte para RefreshMode misto
+# <a name="support-for-mixed-refreshmode"></a>Suporte para RefreshMode misto
 
 Ao usar configurações parciais, agora é possível definir cada configuração parcial individual com um `RefreshMode`. Para obter mais informações, veja [Configurações parciais](https://msdn.microsoft.com/powershell/dsc/partialconfigs).
 

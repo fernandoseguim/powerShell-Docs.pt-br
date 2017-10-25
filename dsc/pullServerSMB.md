@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-dsc-smb-pull-server" class="xliff"></a>
-# Configurando um servidor de pull de SMB para DSC
+# <a name="setting-up-a-dsc-smb-pull-server"></a>Configurando um servidor de pull de SMB para DSC
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -21,19 +20,16 @@ Para usar um servidor de pull de SMB para DSC, você precisa:
 - Configurar um compartilhamento de arquivos SMB em um servidor executando o PowerShell 4.0 ou superior
 - Configurar um cliente executando o PowerShell 4.0 ou superior para efetuar pull desse compartilhamento SMB
 
-<a id="using-the-xsmbshare-resource-to-create-an-smb-file-share" class="xliff"></a>
-## Usando o recurso xSmbShare para criar um compartilhamento de arquivos SMB
+## <a name="using-the-xsmbshare-resource-to-create-an-smb-file-share"></a>Usando o recurso xSmbShare para criar um compartilhamento de arquivos SMB
 
 Há várias maneiras para configurar um compartilhamento de arquivos SMB, mas vamos ver como você pode fazer isso usando DSC.
 
-<a id="install-the-xsmbshare-resource" class="xliff"></a>
-### Instalar o recurso xSmbShare
+### <a name="install-the-xsmbshare-resource"></a>Instalar o recurso xSmbShare
 
 Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xSmbShare**.
 >**Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). O **xSmbShare** contém o recurso de DSC **xSmbShare**, que pode ser usado para criar um compartilhamento de arquivo SMB.
 
-<a id="create-the-directory-and-file-share" class="xliff"></a>
-### Criar o diretório e o compartilhamento de arquivos
+### <a name="create-the-directory-and-file-share"></a>Criar o diretório e o compartilhamento de arquivos
 
 A configuração a seguir usa o recurso [File](fileResource.md) para criar o diretório para o compartilhamento e o recurso **xSmbShare** para configurar o compartilhamento SMB:
 
@@ -73,8 +69,7 @@ Import-DscResource -ModuleName xSmbShare
 A configuração cria o diretório `C:\DscSmbShare` se ele ainda não existir e, em seguida, usa esse diretório como um compartilhamento de arquivos SMB. **FullAccess** deve ser fornecido a qualquer conta que precise gravar no compartilhamento de arquivo ou excluir algo dele e **ReadAccess** deve ser fornecido a qualquer nó de cliente que obterá configurações e/ou recursos de DSC do compartilhamento (isso porque o DSC é executado como a conta do sistema por padrão, de modo que o computador em si precisa ter acesso ao compartilhamento).
 
 
-<a id="give-file-system-access-to-the-pull-client" class="xliff"></a>
-### Conceder acesso ao sistema de arquivos para o cliente de pull
+### <a name="give-file-system-access-to-the-pull-client"></a>Conceder acesso ao sistema de arquivos para o cliente de pull
 
 Conceder **ReadAccess** para um nó do cliente permite que esse nó acesse o compartilhamento SMB, mas não arquivos ou pastas dentro desse compartilhamento. Você precisa conceder explicitamente aos nós do cliente acesso à pasta e às subpastas de compartilhamento SMB. Podemos fazer isso com o DSC adicionando/usando o recurso **cNtfsPermissionEntry**, que está contido no módulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). A configuração a seguir adiciona um bloco **cNtfsPermissionEntry**, que concede acesso ReadAndExecute ao cliente de pull:
 
@@ -131,8 +126,7 @@ Import-DscResource -ModuleName cNtfsAccessControl
 }
 ```
 
-<a id="placing-configurations-and-resources" class="xliff"></a>
-## Colocando configurações e recursos
+## <a name="placing-configurations-and-resources"></a>Colocando configurações e recursos
 
 Salve todos os arquivos MOF de configuração e/ou recursos DSC que você deseja que sejam obtidos por pull do compartilhamento de pasta SMB pelos nós do cliente.
 
@@ -142,16 +136,14 @@ O arquivo MOF de configuração no servidor de pull deve ser nomeado como _Confi
 
 Cada módulo de recurso precisa ser compactado e nomeado de acordo com o padrão a seguir `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório. Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios. O formato padrão dos módulos contendo o recurso DSC no WMF 5.0 é '{Pasta do Módulo}\{{Versão do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Antes do empacotamento para o servidor de pull, simplesmente remova a pasta **{Versão do módulo}** de modo que o caminho se torne '{Pasta do Módulo}\DscResources\{{Pasta do Recurso DSC}\'. Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta de compartilhamento SMB. 
 
-<a id="creating-the-mof-checksum" class="xliff"></a>
-## Criando a soma de verificação de MOF
+## <a name="creating-the-mof-checksum"></a>Criando a soma de verificação de MOF
 Um arquivo MOF de configuração precisa ser emparelhado com um arquivo de soma de verificação para que um LCM em um nó de destino possa validar a configuração. Para criar uma soma de verificação, chame o cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). O cmdlet usa um parâmetro **Path** que especifica a pasta na qual se encontra o MOF de configuração. O cmdlet cria um arquivo de soma de verificação chamado `ConfigurationMOFName.mof.checksum`, em que `ConfigurationMOFName` é o nome do arquivo MOF de configuração. Se houver mais de um arquivo MOF de configuração na pasta especificada, será criada uma soma de verificação para cada configuração na pasta.
 
 O arquivo de soma de verificação deve estar presente no mesmo diretório em que o arquivo MOF de configuração (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` por padrão) e ter o mesmo nome com a extensão `.checksum` anexada.
 
 >**Observação**: se alterar o arquivo MOF de configuração de qualquer forma, você também deverá recriar o arquivo de soma de verificação.
 
-<a id="setting-up-a-pull-client-for-smb" class="xliff"></a>
-## Configurando um cliente de pull para SMB
+## <a name="setting-up-a-pull-client-for-smb"></a>Configurando um cliente de pull para SMB
 
 Para configurar um cliente que recebe as configurações e/ou recursos de um compartilhamento SMB, você configura o LCM (Gerenciador de Configurações Local) do cliente com blocos **ConfigurationRepositoryShare** e **ResourceRepositoryShare** que especificam o compartilhamento do qual efetuar o configurações de pull e recursos DSC.
 
@@ -212,16 +204,14 @@ $ConfigurationData = @{
 }
 ```
 
-<a id="acknowledgements" class="xliff"></a>
-## Agradecimentos
+## <a name="acknowledgements"></a>Agradecimentos
 
 Agradecimentos especiais às pessoas a seguir:
 
 - Mike F. Robbins, cujas postagens sobre o uso de SMB para DSC ajudaram a informar o conteúdo deste tópico. Seu blog está em [Mike F Robbins](http://mikefrobbins.com/).
 - Serge Nikalaichyk, que criou o módulo **cNtfsAccessControl**. A fonte para esse módulo está em https://github.com/SNikalaichyk/cNtfsAccessControl.
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 - [Aplicando configurações](enactingConfigurations.md)
 - [Configurando um cliente de pull usando uma ID de configuração](pullClientConfigID.md)

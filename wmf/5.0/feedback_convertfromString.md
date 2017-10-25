@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="extract-and-parse-structured-objects-out-of-string" class="xliff"></a>
-# Extrair e analisar objetos estruturados fora da cadeia de caracteres
+# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar objetos estruturados fora da cadeia de caracteres
 Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-String:
 
 -   Por padrão, remove a propriedade de texto de extensão. É possível incluí-la com o parâmetro -IncludeExtent.
@@ -20,8 +19,7 @@ Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-S
 -   Um novo parâmetro -UpdateTemplate para salvar os resultados do algoritmo de aprendizado em um comentário no arquivo de modelo. Isso faz com que o processo de aprendizado (a etapa mais lenta) seja de custo único. A execução de Convert-String com um modelo que contém o algoritmo de aprendizado codificado agora é quase instantânea.
 
 
-<a id="extract-and-parse-structured-objects-out-of-string-content" class="xliff"></a>
-Extrair e analisar objetos estruturados fora do conteúdo da cadeia de caracteres
+<a name="extract-and-parse-structured-objects-out-of-string-content"></a>Extrair e analisar objetos estruturados fora do conteúdo da cadeia de caracteres
 ----------------------------------------------------------
 
 Em colaboração com o [Microsoft Research](http://research.microsoft.com/), um novo cmdlet **ConvertFrom-String** foi adicionado.

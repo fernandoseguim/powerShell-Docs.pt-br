@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Gerenciando processos com os Cmdlets de processo
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31

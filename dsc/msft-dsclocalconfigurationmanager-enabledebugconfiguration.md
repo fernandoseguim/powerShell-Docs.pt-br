@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 
 Habilita a depuração do recurso DSC.
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -25,34 +23,29 @@ uint32 EnableDebugConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *BreakAll* \[in\]  
 Define um ponto de interrupção em cada linha do script de recurso.
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

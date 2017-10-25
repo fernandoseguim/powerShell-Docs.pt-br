@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="configure-dsc-lcm-with-new-meta-configuration-attribute" class="xliff"></a>
-# Configurar o LCM do DSC com o novo atributo de metaconfiguração
+# <a name="configure-dsc-lcm-with-new-meta-configuration-attribute"></a>Configurar o LCM do DSC com o novo atributo de metaconfiguração
 
 O atributo `DscLocalConfigurationManager` designa um bloco de configuração como uma metaconfiguração, que é usada para configurar o Gerenciador de Configurações Local do DSC. 
 

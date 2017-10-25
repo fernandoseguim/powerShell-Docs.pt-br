@@ -10,40 +10,33 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="save-script" class="xliff"></a>
-# Save-Script
+# <a name="save-script"></a>Save-Script
 
 O cmdlet Save-Script permite examinar o arquivo de script salvando-o em um local especificado.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Save-Script salva o script especificado.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Save-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Save-Script](http://go.microsoft.com/fwlink/?LinkId=619786)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
-<a id="example-1-save-a-script-from-a-repository" class="xliff"></a>
-### Exemplo 1: Salvar um script de um repositório
+### <a name="example-1-save-a-script-from-a-repository"></a>Exemplo 1: Salvar um script de um repositório
 Este comando salva a versão mais recente do script Fabrikam-ClientScript do repositório GalleryINT na pasta local C:\ScriptSharingDemo
 
 ```powershell
 Save-Script -Name Fabrikam-ClientScript -Repository GalleryINT -Path C:\ScriptSharingDemo
 ```
 
-<a id="example-2-save-a-version-of-a-script-by-piping-from-the-find-script-cmdlet" class="xliff"></a>
-### Exemplo 2: Salvar uma versão de um script por tubulação do cmdlet Find-Script
+### <a name="example-2-save-a-version-of-a-script-by-piping-from-the-find-script-cmdlet"></a>Exemplo 2: Salvar uma versão de um script por tubulação do cmdlet Find-Script
 
 O primeiro comando localiza a versão 1.5 de Fabrikam-ClientScript do repositório GalleryINT e a salva na pasta C:\ScriptSharingDemo
 

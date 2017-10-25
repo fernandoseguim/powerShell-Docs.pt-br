@@ -10,40 +10,33 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-scriptfileinfo" class="xliff"></a>
-# New-ScriptFileInfo
+# <a name="new-scriptfileinfo"></a>New-ScriptFileInfo
 
 Cria um arquivo de script com metadados.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet New-ScriptFileInfo cria um arquivo de script do PowerShell, incluindo metadados sobre o script.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name New-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [New-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619792)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
-<a id="passthru-parameter" class="xliff"></a>
-### Parâmetro PassThru
+### <a name="passthru-parameter"></a>Parâmetro PassThru
 
 ```powershell
 New-ScriptFileInfo -Description "Script file description." -PassThru
 ```
 
-<a id="new-scriptfileinfo-cmdlet" class="xliff"></a>
-### Cmdlet New-ScriptFileInfo
+### <a name="new-scriptfileinfo-cmdlet"></a>Cmdlet New-ScriptFileInfo
 O cmdlet New-ScriptFileInfo permite criar um novo arquivo de script com metadados como Versão, Guid, Autor, Descrição, etc. 
 
 ```powershell

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="built-in-windows-powershell-desired-state-configuration-resources" class="xliff"></a>
-# Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
+# <a name="built-in-windows-powershell-desired-state-configuration-resources"></a>Recursos Internos de Configuração de Estado Desejado do Windows PowerShell
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 

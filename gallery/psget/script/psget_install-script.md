@@ -10,14 +10,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="install-script" class="xliff"></a>
-# Install-Script
+# <a name="install-script"></a>Install-Script
 
 Instala arquivos de script do PowerShell de repositórios online no computador local.
 
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Install-Script adquire uma carga de script de um repositório, verifica se a carga é um script do PowerShell válido e copia o arquivo de script para um local de instalação especificado.
 
@@ -40,8 +38,7 @@ Você pode filtrar os resultados com base nas versões mínima e exata dos módu
 
 Não há suporte para curingas em -Name nos cmdlets Install-Module, Save-Module, Uninstall-Module, Install-Script, Save-Script e Uninstall-Script.
 
-<a id="scope" class="xliff"></a>
-### Escopo
+### <a name="scope"></a>Escopo
 Especifica o escopo de instalação do módulo. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
 
 O escopo de instalação padrão é AllUsers.
@@ -56,8 +53,7 @@ Especifica o escopo de instalação do script. Os valores válidos são: AllUser
 O escopo AllUsers especifica a instalação do script em %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts, de modo que o script fica disponível para todos os usuários. O escopo CurrentUser especifica a instalação do script em $home\Documents\WindowsPowerShell\Scripts, de modo que o script fica disponível somente para o usuário atual.
 
 
-<a id="nopathupdate" class="xliff"></a>
-## NoPathUpdate
+## <a name="nopathupdate"></a>NoPathUpdate
 
 - O parâmetro de opção NoPathUpdate no cmdlet Install-Script ignora o prompt para adicionar o local de instalação do script à variável de ambiente PATH.
 - Qualquer uso do comando COM – NoPathUpdate especificado não resultará em nenhum prompt e PATH NÃO será atualizado (Force pode ser ignorado aqui).
@@ -66,8 +62,7 @@ O escopo AllUsers especifica a instalação do script em %systemdrive%:\ProgramF
 - Tudo isso se aplica apenas à primeira vez em que Inslatll-Script é usado em um determinado escopo.
 
 
-<a id="notes" class="xliff"></a>
-## Observações
+## <a name="notes"></a>Observações
 
 Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 
@@ -84,20 +79,17 @@ Por padrão, os módulos são instalados na pasta Arquivos de Programas, para ev
 Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 
 ```powershell
 Get-Command -Name Install-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Install-Script](http://go.microsoft.com/fwlink/?LinkId=619784)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 
@@ -479,8 +471,7 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```
 
-<a id="install-script-cmdlet-in-pipeline-operations" class="xliff"></a>
-## Cmdlet Install-Script em operações de pipeline
+## <a name="install-script-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Script em operações de pipeline
 
 ```powershell
 
@@ -507,13 +498,11 @@ Get-InstalledModule
 
 ```
 
-<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
-## Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
 
 O PowerShellGet dá suporte à versão SxS (lado a lado) do módulo nos cmdlets Install-Script, Update-Script e Publish-Script executados no Windows PowerShell 5.0 ou mais recente.
 
-<a id="install-script-examples" class="xliff"></a>
-### Exemplos de Install-Script
+### <a name="install-script-examples"></a>Exemplos de Install-Script
 
 ```powershell
 # Install a version of the module
@@ -545,8 +534,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="install-module-with-its-dependencies" class="xliff"></a>
-## Instalar um módulo com dependências
+## <a name="install-module-with-its-dependencies"></a>Instalar um módulo com dependências
 
 ```powershell
 
@@ -640,8 +628,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="error-scenarios" class="xliff"></a>
-## Cenários de erro
+## <a name="error-scenarios"></a>Cenários de erro
 
 ```powershell
 
@@ -659,8 +646,7 @@ Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
 
-<a id="installing-a-script-with-dependent-scripts-and-modules" class="xliff"></a>
-## Instalando um script com módulos e scripts dependentes
+## <a name="installing-a-script-with-dependent-scripts-and-modules"></a>Instalando um script com módulos e scripts dependentes
 
 ```powershell
 # Installing a script with dependent scripts and modules
@@ -733,8 +719,7 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-<a id="install-script-and-get-installedscript-cmdlets" class="xliff"></a>
-## Cmdlets Install-Script e Get-InstalledScript
+## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlets Install-Script e Get-InstalledScript
 O cmdlet Install-Script permite instalar um arquivo de script específico junto com suas dependências no escopo especificado. Por padrão, os scripts são instalados no escopo AllUsers. O cmdlet Get-InstalledScript permite obter a lista de arquivos de script que foram instalados com o cmdlet Install-Script.
 
 Observação de uso: para permitir o gerenciamento e a localização dos scripts quando eles forem instalados, Install-Script criará uma pasta padrão para armazenar scripts em $home\Documents\WindowsPowerShell\Scripts e adicionará essa pasta ao seu ambiente PATH. Caso a modificação do caminho seja uma preocupação, use Save-Script em vez de Install-Script. Get-InstalledScripts e Uninstall-Script só podem funcionar com scripts colocados no sistema usando Install-Script.

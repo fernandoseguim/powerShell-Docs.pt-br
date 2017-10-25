@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-windowsoptionalfeatureset-resource" class="xliff"></a>
-# Recurso do WindowsOptionalFeatureSet DSC
+# <a name="dsc-windowsoptionalfeatureset-resource"></a>Recurso do WindowsOptionalFeatureSet DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -19,8 +18,7 @@ O recurso **WindowsOptionalFeatureSet** na DSC (Configuração de Estado Desejad
 
 Use esse recurso quando desejar configurar vários recursos opcionais do Windows para o mesmo estado.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -37,8 +35,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 

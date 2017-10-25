@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="install-module" class="xliff"></a>
-# Install-Module
+# <a name="install-module"></a>Install-Module
 
 Instala módulos do PowerShell de repositórios online no computador local.
 
-<a id="description" class="xliff"></a>
-## Descrição
+## <a name="description"></a>Descrição
 
 O cmdlet Install-Module baixa um ou mais módulos de uma galeria online, valida-os e instala-os no computador local com o escopo de instalação especificado.
 
@@ -32,8 +30,7 @@ Você pode filtrar os resultados com base nas versões mínima e exata dos módu
 - -Force reinstala o módulo instalado
 - RequiredVersion instala a versão especificada no SxS com as versões existentes no PowerShell versão 5.0 ou posterior.
 
-<a id="scope" class="xliff"></a>
-### Escopo
+### <a name="scope"></a>Escopo
 Especifica o escopo de instalação do módulo. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
 
 O escopo de instalação padrão é AllUsers.
@@ -42,8 +39,7 @@ O escopo AllUsers permite que os módulos sejam instalados em um local que seja 
 
 O escopo CurrentUser permite que módulos ser instalado somente em "$home\Documents\WindowsPowerShell\Modules", de modo que o módulo fica disponível somente para o usuário atual.
 
-<a id="notes" class="xliff"></a>
-## Observações
+## <a name="notes"></a>Observações
 
 Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 
@@ -60,19 +56,16 @@ Por padrão, os módulos são instalados na pasta Arquivos de Programas, para ev
 Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintaxe do cmdlet
+## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
 ```powershell
 Get-Command -Name Install-Module -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Referência da ajuda online sobre cmdlets
+## <a name="cmdlet-online-help-reference"></a>Referência da ajuda online sobre cmdlets
 
 [Install-Module](http://go.microsoft.com/fwlink/?LinkID=398573)
 
-<a id="example-commands" class="xliff"></a>
-## Comandos de exemplo
+## <a name="example-commands"></a>Comandos de exemplo
 
 ```powershell
 
@@ -113,8 +106,7 @@ Install-Module ContosoClient -Force
 Install-Module -Name 
 ```
 
-<a id="install-module-cmdlet-in-pipeline-operations" class="xliff"></a>
-## Cmdlet Install-Module em operações de pipeline
+## <a name="install-module-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Module em operações de pipeline
 
 ```powershell
 
@@ -141,13 +133,11 @@ Get-InstalledModule
 
 ```
 
-<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
-## Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
 
 O PowerShellGet dá suporte à versão do módulo SxS (lado a lado) nos cmdlets Install-Module, Update-Module e Publish-Module executados no Windows PowerShell 5.0 ou mais recente.
 
-<a id="install-module-examples" class="xliff"></a>
-### Exemplos de Install-Module
+### <a name="install-module-examples"></a>Exemplos de Install-Module
 
 ```powershell
 # Install a version of the module
@@ -179,8 +169,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="install-module-with-its-dependencies" class="xliff"></a>
-## Instalar um módulo com dependências
+## <a name="install-module-with-its-dependencies"></a>Instalar um módulo com dependências
 
 ```powershell
 
@@ -274,8 +263,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="error-scenarios" class="xliff"></a>
-## Cenários de erro
+## <a name="error-scenarios"></a>Cenários de erro
 
 ```powershell
 

@@ -11,8 +11,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-groupset-resource" class="xliff"></a>
-# Recurso de GroupSet DSC
+# <a name="dsc-groupset-resource"></a>Recurso de GroupSet DSC
 
 > Aplica-se a: Windows Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ O recurso **GroupSet** na DSC (Configuração de Estado Desejado) do Windows Pow
 
 Use esse recurso quando desejar adicionar e/ou remover a mesma lista de membros para mais de um grupo, remova mais de um grupo ou adicionar mais de um grupo com a mesma lista de membros.
 
-<a id="syntax" class="xliff"></a>
-##Sintaxe##
+##<a name="syntax"></a>Sintaxe##
 ```
 Group [string] #ResourceName
 {
@@ -34,8 +32,7 @@ Group [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -47,8 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Use essa propriedade para adicionar membros à associação existente do grupo. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário *Domínio*\\*NomeDoUsuário*. Se você definir essa propriedade em uma configuração, não use a propriedade **Membros**. Isso vai gerar um erro.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
 
-<a id="example-1" class="xliff"></a>
-## Exemplo 1
+## <a name="example-1"></a>Exemplo 1
 
 O exemplo a seguir mostra como garantir que dois grupos chamados "myGroup" e "myOtherGroup" estejam presentes. 
 

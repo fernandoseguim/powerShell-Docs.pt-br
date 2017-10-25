@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="allowing-for-identical-duplicate-resources-in-a-configuration" class="xliff"></a>
-# Permitindo recursos duplicados idênticos em uma configuração
+# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Permitindo recursos duplicados idênticos em uma configuração
 
 O DSC não permite nem manipula definições de recursos conflitantes dentro de uma configuração. Em vez de tentar resolver o conflito, ele simplesmente falha. Como a reutilização de configuração é cada mais utilizada por meio de recursos de composição, etc., os conflitos ocorrerão com mais frequência. Quando definições de recursos conflitantes forem idênticas, o DSC deverá ter inteligência para permiti-las. Com esta versão, damos suporte a várias instâncias de recursos com definições idênticas:
 

@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Classificação de objetos"
 ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199

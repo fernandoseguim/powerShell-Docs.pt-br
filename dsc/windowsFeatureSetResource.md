@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-windowsfeatureset-resource" class="xliff"></a>
-# Recurso do WindowsFeatureSet DSC
+# <a name="dsc-windowsfeatureset-resource"></a>Recurso do WindowsFeatureSet DSC
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ Esse recurso é um [recurso composto](authoringResourceComposite.md) que chama o
 
 Use esse recurso quando desejar configurar vários Recursos do Windows para o mesmo estado.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -37,8 +35,7 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
@@ -50,8 +47,7 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 | Origem| Indica o local do arquivo de origem que deve ser usado para a instalação, se necessário.| 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 A configuração a seguir garante que os recursos **Servidor Web** (IIS) e **Servidor SMTP** e todos os sub-recursos de cada um sejam instalados.
 

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationstatus-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetConfigurationStatus da classe MSFT_DSCLocalConfigurationManager
 
 Obtém o histórico do status de configuração.
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -26,8 +24,7 @@ uint32 GetConfigurationStatus(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *All* \[in\]  
@@ -36,27 +33,23 @@ Parâmetros
 *configurationStatus* \[out\]  
 No retorno, contém uma instância incorporada da classe **MSFT_DSCConfigurationStatus** que define as configurações.
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

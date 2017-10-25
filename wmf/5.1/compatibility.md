@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="wmf-51-operating-system-compatibility" class="xliff"></a>
-# Compatibilidade de sistema de operacional do WMF 5.1 #
+# <a name="wmf-51-operating-system-compatibility"></a>Compatibilidade de sistema de operacional do WMF 5.1 #
 
 > Observação: essas informações são preliminares e estão sujeitas a alteração.
 

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="using-dsc-on-nano-server" class="xliff"></a>
-# Usando DSC no Nano Server
+# <a name="using-dsc-on-nano-server"></a>Usando DSC no Nano Server
 
 > Aplica-se a: Windows PowerShell 5.0
 
@@ -24,8 +23,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 Para saber mais sobre como instalar e usar o Nano Server, bem como gerenciar o Nano Server com a comunicação remota do PowerShell, confira [Getting Started with Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx) (Introdução ao Nano Server).
 
 
-<a id="dsc-features-available-on-nano-server" class="xliff"></a>
-## Recursos de DSC disponíveis no Nano Server
+## <a name="dsc-features-available-on-nano-server"></a>Recursos de DSC disponíveis no Nano Server
 
  Como o Nano Server dá suporte a apenas um conjunto limitado de APIs em comparação com uma versão completa do Windows Server, por enquanto, o DSC no Nano Server não tem paridade funcional completa com DSC em execução em SKUs completas. O DSC no Nano Server está em desenvolvimento ativo e ainda não é um recurso completo.
  
@@ -114,8 +112,7 @@ Para saber mais sobre como instalar e usar o Nano Server, bem como gerenciar o N
   * [User](userResource.md)
   
 
-<a id="dsc-features-not-available-on-nano-server" class="xliff"></a>
-## Recursos de DSC não disponíveis no Nano Server
+## <a name="dsc-features-not-available-on-nano-server"></a>Recursos de DSC não disponíveis no Nano Server
 
 Os recursos de DSC a seguir não estão disponíveis atualmente no Nano Server:
 
@@ -123,12 +120,10 @@ Os recursos de DSC a seguir não estão disponíveis atualmente no Nano Server:
 * Servidor de pull -- no momento não é possível definir um servidor de pull no Nano Server
 * Tudo o que não está na lista de recursos funciona
 
-<a id="using-custom-dsc-resources-on-nano-server" class="xliff"></a>
-## Usando recursos personalizados de DSC no Nano Server
+## <a name="using-custom-dsc-resources-on-nano-server"></a>Usando recursos personalizados de DSC no Nano Server
  
 Devido a conjuntos limitados de APIs do Windows e bibliotecas CLR disponíveis no Nano Server, os recursos de DSC que funcionam com a versão CLR completa do Windows não funcionam necessariamente no Nano Server. Conclua completamente o teste antes de implantar qualquer recurso personalizado de DSC em um ambiente de produção.
 
-<a id="see-also" class="xliff"></a>
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Introdução ao Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx)
 

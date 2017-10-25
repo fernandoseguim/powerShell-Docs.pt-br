@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxscript-resource" class="xliff"></a>
-# Recurso nxScript de DSC para Linux
+# <a name="dsc-for-linux-nxscript-resource"></a>Recurso nxScript de DSC para Linux
 
 O recurso **nxScript** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para executar scripts do Linux em um nó do Linux.
 
-<a id="syntax" class="xliff"></a>
-## Sintaxe
+## <a name="syntax"></a>Sintaxe
 
 ```
 nxScript <string> #ResourceName
@@ -31,8 +29,7 @@ nxScript <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriedades
+## <a name="properties"></a>Propriedades
 
 |  Propriedade |  Descrição | 
 |---|---|
@@ -43,8 +40,7 @@ nxScript <string> #ResourceName
 | Grupo| O grupo com o qual o script será executado.| 
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Exemplo
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o uso do recurso **nxScript** para executar um gerenciamento de configuração adicional.
 

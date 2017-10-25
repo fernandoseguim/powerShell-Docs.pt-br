@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershellget-cmdlet-reference" class="xliff"></a>
-# Referência de cmdlet do PowerShellGet
+# <a name="powershellget-cmdlet-reference"></a>Referência de cmdlet do PowerShellGet
 
 - [Register-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517129)
 - [Get-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517127)

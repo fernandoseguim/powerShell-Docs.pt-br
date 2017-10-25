@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Obtendo informações sobre comandos"
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d

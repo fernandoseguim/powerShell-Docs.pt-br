@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="wow64-support-for-configuration-keyword" class="xliff"></a>
-# Suporte ao WOW64 para palavra-chave Configuration
+# <a name="wow64-support-for-configuration-keyword"></a>Suporte ao WOW64 para palavra-chave Configuration
 
 Agora há suporte para a palavra-chave Configuration no WOW64 em um computador de 64 bits. Isso significa que uma configuração DSC pode ser definida e compilada dentro de um processo de 32 bits como o ISE do Windows PowerShell (x86) executado em um computador de 64 bits.
 

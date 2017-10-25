@@ -9,7 +9,6 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="feedback" class="xliff"></a>
-# Comentários
+# <a name="feedback"></a>Comentários
 Para relatar problemas ou fornecer comentários, use o [site UserVoice do PowerShell](http://windowsserver.uservoice.com/forums/301869-powershell).
 

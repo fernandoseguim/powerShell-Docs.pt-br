@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="providing-feedback-via-social-media-or-comments" class="xliff"></a>
-# Fornecendo comentários por meio de mídia social ou do recurso Comentários
+# <a name="providing-feedback-via-social-media-or-comments"></a>Fornecendo comentários por meio de mídia social ou do recurso Comentários
 
 A Galeria do Powershell dá suporte a duas abordagens para que os usuários forneçam comentários públicos sobre um item:
 
 * Use os links na borda esquerda para “compartilhar” um item nos sites de mídia social Facebook, LinkedIn ou Twitter;
 * Use o recurso Comentário para enviar comentários sobre um item e para permitir que os autores detectem comentários sobre os itens que eles publicaram.
 
-<a id="social-media-feedback" class="xliff"></a>
-## Comentários em mídia social
+## <a name="social-media-feedback"></a>Comentários em mídia social
 No lado esquerdo da página de cada item da Galeria do PowerShell, há links para o LinkedIn, o Facebook e o Twitter.   
 Clicar nesses links abrirá o site de mídia social e permitirá o compartilhamento rápido de um link para o item.
 
@@ -29,8 +27,7 @@ Recomenda-se fazer isso quando o usuário acha que um item é algo que ele recom
 Como isso mostra apenas o número de vezes que algo foi compartilhado, isso será interpretado como: se os outros usuários “gostaram” do item.
 
 
-<a id="comments" class="xliff"></a>
-## Comentários
+## <a name="comments"></a>Comentários
 A Galeria do PowerShell usa o serviço LiveFyre para permitir que os usuários comentem sobre os itens.
 Os usuários que têm recomendações ou comentários podem usar esse recurso para fornecer comentários que ficam visível para qualquer pessoa que visitar a página do item.
 Os proprietários do item podem Seguir este comentário e ser notificados quando alguém postar um comentário. 

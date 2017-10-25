@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="using-resources-with-multiple-versions" class="xliff"></a>
-# Usando recursos com várias versões
+# <a name="using-resources-with-multiple-versions"></a>Usando recursos com várias versões
 
 > Aplica-se a: Windows PowerShell 5.0
 
 No PowerShell 5.0, recursos de DSC podem ter várias versões e as versões podem ser instaladas em um computador lado a lado. Isso é implementado por ter várias versões de um módulo de recursos que estão contidas na mesma pasta de módulo.
 
-<a id="installing-multiple-resource-versions-side-by-side" class="xliff"></a>
-## Instalando várias versões de recurso lado a lado
+## <a name="installing-multiple-resource-versions-side-by-side"></a>Instalando várias versões de recurso lado a lado
 
 Você pode usar os parâmetros **MinimumVersion**, **MaximumVersion** e **RequiredVersion** do cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para especificar qual versão de um módulo instalar. Se você chamar **Install-Module** sem especificar uma versão, a versão mais recente será instalada.
 
@@ -45,8 +43,7 @@ PowerShell      xCluster                  xFailOverCluster               1.1    
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, Name, ...
 ```
 
-<a id="specifying-a-resource-version-in-a-configuration" class="xliff"></a>
-## Especificando uma versão do recurso em uma configuração
+## <a name="specifying-a-resource-version-in-a-configuration"></a>Especificando uma versão do recurso em uma configuração
 
 Se você tiver vários recursos instalados em um computador, deve especificar a versão do recurso ao usá-lo em uma configuração. Faça isso especificando o parâmetro **ModuleVersion** da palavra-chave **Import-DscResource**. Se você não especificar a versão de um módulo de um recurso do qual tem mais de uma versão instalada, a configuração vai gerar um erro.
 
@@ -90,8 +87,7 @@ configuration VersionTest
 
 Isso também funcionará no PowerShell 5.0, mas é recomendável que você use o parâmetro **ModuleVersion**.
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 * [Configurações DSC](configurations.md)
 * [Recursos de DSC](resources.md)
 

@@ -12,12 +12,10 @@ ms.lasthandoff: 06/12/2017
 ---
 >Observação: dê um título descritivo proposto e uma breve descrição
 
-<a id="example-erroneous-executionpolicy-errors" class="xliff"></a>
-## Exemplo: erros de ExecutionPolicy incorreta ##
+## <a name="example-erroneous-executionpolicy-errors"></a>Exemplo: erros de ExecutionPolicy incorreta ##
 No Windows 7, o uso de módulos PowerShell e recursos DSC pode fazer com que erros sobre ExecutionPolicy sejam relatados.
 
-<a id="resolution" class="xliff"></a>
-### Resolução
+### <a name="resolution"></a>Resolução
 
 Para resolver, defina **ExecutionPolicy** como **RemoteSigned** executando o seguinte comando em uma sessão do PowerShell com privilégios elevados (Executar como Administrador):
 

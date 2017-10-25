@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="unified-and-consistent-state-and-status-representation" class="xliff"></a>
-# Representação de estado e status consistente e unificada
+# <a name="unified-and-consistent-state-and-status-representation"></a>Representação de estado e status consistente e unificada
 
 Uma série de melhorias foram feitas nessa versão em relação ao estado do LCM e ao status do DSC internos das automações. Entre elas estão representações de estado e status consistentes e unificadas, propriedade datetime gerenciável de objetos de status retornados pelo cmdlet Get-DscConfigurationStatus e melhoria na propriedade de detalhes do estado do LCM retornada pelo cmdlet Get-DscLocalConfigurationManager.
 
@@ -49,8 +48,7 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
-<a id="enhancement-in-get-dscconfigurationstatus-cmdlet" class="xliff"></a>
-## Melhorias no cmdlet Get-DscConfigurationStatus
+## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Melhorias no cmdlet Get-DscConfigurationStatus
 
 Foram feitas algumas melhorias ao cmdlet Get-DscConfigurationStatus nesta versão. Anteriormente, a propriedade StartDate de objetos retornados pelo cmdlet era do tipo String. Agora, ela é do tipo Datetime, o que permite uma seleção e filtragem complexas, facilitando-as com base nas propriedades intrínsecas de um objeto Datetime.
 ```powershell
@@ -92,8 +90,7 @@ Success 11/13/2015 11:20:44 AM Initial True
 Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
-<a id="enhancement-in-get-dsclocalconfigurationmanager-cmdlet" class="xliff"></a>
-## Melhoria no cmdlet Get-DscLocalConfigurationManager
+## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Melhoria no cmdlet Get-DscLocalConfigurationManager
 Um novo campo de LCMStateDetail é adicionado ao objeto retornado pelo cmdlet Get-DscLocalConfigurationManager. Este campo é populado quando LCMState é “Ocupado”. Ele pode ser recuperado pelo seguinte cmdlet:
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail

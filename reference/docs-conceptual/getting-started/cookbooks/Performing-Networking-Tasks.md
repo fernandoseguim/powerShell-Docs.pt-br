@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Executando tarefas de rede
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5

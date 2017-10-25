@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contacting-item-owners" class="xliff"></a>
-# Entrando em contato com os proprietários do item
+# <a name="contacting-item-owners"></a>Entrando em contato com os proprietários do item
 
 Para entrar em contato com o proprietário de um item específico, navegue até a página de detalhes do item.
 Há um link Entrar em contato com os proprietários na barra de menus à esquerda.

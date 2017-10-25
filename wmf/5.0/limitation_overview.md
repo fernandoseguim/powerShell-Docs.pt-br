@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="known-issues-and-limitations" class="xliff"></a>
-# Limitações e problemas conhecidos
+# <a name="known-issues-and-limitations"></a>Limitações e problemas conhecidos
 
-<a id="powershell-shortcuts-are-broken-when-used-for-the-first-time" class="xliff"></a>
-Os Atalhos do PowerShell são desfeitos quando usados pela primeira vez
+<a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>Os Atalhos do PowerShell são desfeitos quando usados pela primeira vez
 ------------------------------------------------------------
 
 **Resolução:** execute uma das seguintes ações:
@@ -24,8 +22,7 @@ Os Atalhos do PowerShell são desfeitos quando usados pela primeira vez
 Depois de executar uma das ações acima, os atalhos do PowerShell funcionarão. Essas ações precisarão ser executadas apenas uma vez.
 
 
-<a id="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7" class="xliff"></a>
-Os Módulos PowerShell e os Recursos DSC relatam erros sobre ExecutionPolicy no Windows 7
+<a name="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7"></a>Os Módulos PowerShell e os Recursos DSC relatam erros sobre ExecutionPolicy no Windows 7
 -------------------------------------------------------------------------------------
 No Windows 7, o uso de módulos PowerShell e recursos DSC pode fazer com que erros sobre ExecutionPolicy sejam relatados.
 
@@ -35,8 +32,7 @@ No Windows 7, o uso de módulos PowerShell e recursos DSC pode fazer com que err
 Set-ExecutionPolicy RemoteSigned
 ```
 
-<a id="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash" class="xliff"></a>
-Conectar-se a um ponto de extremidade remoto antigo do Exchange causa uma falha
+<a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a>Conectar-se a um ponto de extremidade remoto antigo do Exchange causa uma falha
 ------------------------------------------------------------
 
 O ponto de extremidade antigo do Exchange redireciona para um novo ponto de extremidade. Há um bug na lógica de redirecionamento que resulta em uma falha.
@@ -44,16 +40,14 @@ O ponto de extremidade antigo do Exchange redireciona para um novo ponto de extr
 **Resolução:** conecte-se diretamente ao novo ponto de extremidade.
 
 
-<a id="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2" class="xliff"></a>
-O recurso de Log de Inventário de Software é interrompido incorretamente após a instalação do WMF 5.0 no Windows Server 2012 R2
+<a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a>O recurso de Log de Inventário de Software é interrompido incorretamente após a instalação do WMF 5.0 no Windows Server 2012 R2
 -------------------------------------------------------------------------------------------------------------
 
 Ao instalar o WMF 5.0 em um Windows Server 2012 R2 que já está executando o SIL, o recurso de Log de Inventário de Software será interrompido incorretamente após a instalação.
 
 **Resolução:** execute o cmdlet Start-SilLogging uma vez após a instalação do WMF, pois o processo de instalação interromperá incorretamente o recurso de Log de Inventário de Software.
 
-<a id="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together" class="xliff"></a>
-Get-ChildItem não funcionará se -LiteralPath e -Recurse forem usados juntos
+<a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>Get-ChildItem não funcionará se -LiteralPath e -Recurse forem usados juntos
 --------------------------------------------------------------------------
 
 Caso um nome de diretório contenha um caractere curinga inválido, Get-ChildItem não produzirá os resultados esperados quando -LiteralPath e -Recurse são usados juntos.
@@ -61,8 +55,7 @@ Caso um nome de diretório contenha um caractere curinga inválido, Get-ChildIte
 **Resolução:** a solução alternativa não ideal, mas atual, é implementar a recursão no script em vez de depender do cmdlet.
 
 
-<a id="sysprep-fails-after-wmf-50-installation" class="xliff"></a>
-Falha de sysprep após instalação do WMF 5.0
+<a name="sysprep-fails-after-wmf-50-installation"></a>Falha de sysprep após instalação do WMF 5.0
 ----------------------------------------
 
 Há duas soluções para este problema, dependendo da versão do Windows Server que você está executando.

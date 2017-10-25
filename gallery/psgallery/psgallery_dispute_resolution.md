@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dispute-resolution" class="xliff"></a>
-# Solução de controvérsias
+# <a name="dispute-resolution"></a>Solução de controvérsias
 
 Este documento é um processo de solução de controvérsias recomendado para membros da comunidade, a fim de ajudar a resolver controvérsias com outros editores da Galeria do PowerShell.
 
-<a id="process" class="xliff"></a>
-## Processo
+## <a name="process"></a>Processo
 
 1. Entre em contato com os proprietários do item ao qual se refere a controvérsia usando o link **Entrar em contato com os proprietários** na página de detalhes do item.
 Explique o problema de forma cordial e direta.
@@ -25,8 +23,7 @@ Explique o problema de forma cordial e direta.
 A equipe de suporte do PowerShellGallery.com se mobilizará e tentará resolver o problema.
 
 
-<a id="prohibited-use" class="xliff"></a>
-## Uso proibido
+## <a name="prohibited-use"></a>Uso proibido
 
 Os procedimentos a seguir não são permitidos na Galeria pública do PowerShell e serão removidos imediatamente sem discussão.  Os proprietários do item serão notificados caso seus itens sejam removidos.
 

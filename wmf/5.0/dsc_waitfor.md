@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Especificando dependências de nó cruzado
+# <a name="specifying-cross-node-dependencies"></a>Especificando dependências de nó cruzado
 
 Com os recursos internos WaitFor\* (`WaitForAll`, `WaitForAny`, and `WaitForSome`), agora é possível especificar dependências entre computadores durante execuções de configuração, sem a orquestração externa. 
 

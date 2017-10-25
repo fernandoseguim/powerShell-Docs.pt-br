@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="unlisting-items" class="xliff"></a>
-# Removendo itens da lista
+# <a name="unlisting-items"></a>Removendo itens da lista
 
 **Por que a remoção de um item da Galeria do PowerShell não é exposta como uma opção?**
 

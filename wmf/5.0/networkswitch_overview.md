@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="network-switch-management-with-powershell" class="xliff"></a>
-# Gerenciamento de comutador de rede com o PowerShell
+# <a name="network-switch-management-with-powershell"></a>Gerenciamento de comutador de rede com o PowerShell
 
 O cmdlet **Get-NetworkSwitchEthernetPort** agora retorna as seguintes informações adicionais com instâncias:
 
@@ -19,8 +18,7 @@ O cmdlet **Get-NetworkSwitchEthernetPort** agora retorna as seguintes informaç�
 - AccessVLAN – a ID da VLAN associada a essa porta no modo de acesso
 - TrunkedVLANList – uma lista de IDs de VLANs associadas a essa porta no modo de tronco
 
-<a id="fundamental-network-switch-management-with-windows-powershell" class="xliff"></a>
-## Gerenciamento fundamental de comutador de rede com o Windows PowerShell
+## <a name="fundamental-network-switch-management-with-windows-powershell"></a>Gerenciamento fundamental de comutador de rede com o Windows PowerShell
 
 Os cmdlets Network Switch, introduzidos no WMF 5.0, permitem aplicar a configuração do comutador, da VLAN (LAN virtual) e a configuração básica de porta do comutador de rede da Camada 2 a comutadores de rede certificados com o logotipo do Windows Server 2012 R2. A Microsoft mantém seu compromisso em dar suporte à visão da DAL (Camada de [Abstração de Datacenter](http://technet.microsoft.com/en-us/cloud/dal.aspx)) e em mostrar o valor para nossos clientes e parceiros neste espaço. Com esses cmdlets, é possível executar:
 

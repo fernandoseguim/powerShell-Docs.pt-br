@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
+# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método GetMetaConfiguration da classe MSFT_DSCLocalConfigurationManager
 
 Obtém as configurações do Gerenciador de Configurações Local usadas para controlar o Agente de Configuração.
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -25,34 +23,29 @@ uint32 GetMetaConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *MetaConfiguration* \[out\]  
 No retorno, contém uma instância incorporada da classe **MSFT_DSCMetaConfiguration** que define as configurações.
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

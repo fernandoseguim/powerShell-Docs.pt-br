@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="script-tracing-and-logging" class="xliff"></a>
-# Rastreamento e registro de scripts
+# <a name="script-tracing-and-logging"></a>Rastreamento e registro de scripts
 
 Embora o Windows PowerShell já tenha a configuração **LogPipelineExecutionDetails** da Política de Grupo para registrar em log a invocação de cmdlets, a linguagem de scripts do PowerShell traz vários recursos que talvez você queira registrar em log e/ou auditar. O novo recurso de Rastreamento de Script Detalhado permite habilitar o acompanhamento detalhado e a análise de uso de scripts do Windows PowerShell em um sistema. Depois de habilitar o rastreamento de script detalhado, o Windows PowerShell registra em log todos os blocos de script no log de eventos do ETW, **Microsoft-Windows-PowerShell/Operational**. Caso um bloco de script crie outro bloco de script (por exemplo, um script que chama o cmdlet Invoke-Expression em uma cadeia de caracteres), esse bloco de script resultante também será registrado em log.
 

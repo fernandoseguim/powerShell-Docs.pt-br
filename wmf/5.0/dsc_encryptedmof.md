@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="mof-documents-are-encrypted-by-default" class="xliff"></a>
-# Documentos MOF são criptografados por padrão
+# <a name="mof-documents-are-encrypted-by-default"></a>Documentos MOF são criptografados por padrão
 
 Documentos de configuração contêm informações confidenciais. Nas versões anteriores do DSC, era necessário distribuir e gerenciar certificados para proteger as credenciais em uma configuração. Para muitas pessoas, essa era uma carga de gerenciamento significativa e, mesmo com todo o trabalho necessário para fazer isso, ainda faltavam algumas informações de configuração que não eram e não poderiam ser protegidas. 
 

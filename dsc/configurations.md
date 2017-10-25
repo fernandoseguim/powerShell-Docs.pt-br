@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-configurations" class="xliff"></a>
-# Configurações DSC
+# <a name="dsc-configurations"></a>Configurações DSC
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,8 +36,7 @@ MyDscConfiguration
 
 Salve o script como um arquivo .ps1.
 
-<a id="configuration-syntax" class="xliff"></a>
-## Sintaxe da configuração
+## <a name="configuration-syntax"></a>Sintaxe da configuração
 
 Um script de configuração é composto por estas partes:
 
@@ -71,8 +69,7 @@ MyDscConfiguration
 
 Neste exemplo, você especifica o nome do nó passando-o como o parâmetro **ComputerName** quando compila a configuração. O nome padrão é "localhost".
 
-<a id="compiling-the-configuration" class="xliff"></a>
-## Compilando a configuração
+## <a name="compiling-the-configuration"></a>Compilando a configuração
 
 Para poder aplicar uma configuração, você precisa compilá-la em um documento MOF. Chame a configuração como chamaria uma função do PowerShell.  
 A última linha do exemplo contendo somente o nome da configuração, chama a configuração.
@@ -119,8 +116,7 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 MyTestNode.mof
 ```      
 
-<a id="using-dependson" class="xliff"></a>
-## Usando o DependsOn
+## <a name="using-dependson"></a>Usando o DependsOn
 
 Uma palavra-chave útil da DSC é **DependsOn**. Normalmente (mas nem sempre), a DSC aplica os recursos na ordem em que aparecem dentro da configuração. Contudo, o **DependsOn** especifica quais recursos dependem de outros recursos, enquanto o LCM garante que sejam aplicados na ordem correta, independentemente da ordem na qual as instâncias de recurso são definidas. Por exemplo, uma configuração pode especificar que uma instância do recurso **User** depende da existência de uma instância **Group**:
 
@@ -144,8 +140,7 @@ Configuration DependsOnExample {
 DependsOnExample
 ```
 
-<a id="using-new-resources-in-your-configuration" class="xliff"></a>
-## Uso de novos recursos na sua configuração
+## <a name="using-new-resources-in-your-configuration"></a>Uso de novos recursos na sua configuração
 
 Se você executou os exemplos anteriores, talvez tenha notado que foi informado que estava usando um recurso sem importá-lo explicitamente.
 Atualmente, a DSC vem com 12 recursos como parte do módulo PSDesiredStateConfiguration. Outros recursos em módulos externos devem ser colocados em `$env:PSModulePath` para serem reconhecidos pelo LCM. Um novo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), pode ser usado para determinar quais recursos estão instalados no sistema e disponíveis para uso pelo LCM. Depois que esses módulos forem colocados em `$env:PSModulePath` e reconhecidos adequadamente pelo [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ainda precisam ser carregados na sua configuração. 
@@ -154,8 +149,7 @@ O **Import-DscResource** dá suporte a dois parâmetros:
 - **ModuleName** é a forma recomendada de usar o **Import-DscResource**. Aceita o nome do módulo que contém os recursos que serão importados (assim como uma matriz de cadeia de caracteres de nomes de módulos). 
 - **Name** é o nome do recurso que será importado. Não é o nome amigável gerado como "Name" pelo [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mas o nome de classe usado na hora de definir o esquema de recurso (gerado como **ResourceType** pelo [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
-<a id="see-also" class="xliff"></a>
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 * [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](overview.md)
 * [Recursos de DSC](resources.md)
 * [Configurando o Gerenciador de Configurações Local](metaConfig.md)

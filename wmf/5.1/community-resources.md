@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="community-resources" class="xliff"></a>
-# Recursos da Comunidade #
+# <a name="community-resources"></a>Recursos da Comunidade #
 > Observação: essas informações são preliminares e estão sujeitas a alteração.
 
 A equipe do PowerShell agradece incentiva os comentários dos clientes sobre o produto e oferece suporte a várias abordagens para que os usuários entrem em contato conosco.

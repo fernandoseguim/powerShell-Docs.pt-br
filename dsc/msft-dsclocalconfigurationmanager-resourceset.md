@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="resourceset-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
+# <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método ResourceSet da classe MSFT_DSCLocalConfigurationManager
 
 Chama diretamente o método **Set** de um recurso de DSC.
 
-<a id="syntax" class="xliff"></a>
-Sintaxe
+<a name="syntax"></a>Sintaxe
 ------
 
 ```mof
@@ -28,8 +26,7 @@ uint32 ResourceSet(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parâmetros
+<a name="parameters"></a>Parâmetros
 ----------
 
 *ResourceType* \[in\]  
@@ -44,27 +41,23 @@ Especifica o nome da propriedade de recurso e seu valor em uma tabela de hash co
 *RebootRequired* \[out\]  
 No retorno, essa propriedade será definida como **true** se o nó de destino precisar ser reiniciado.
 
-<a id="return-value" class="xliff"></a>
-## Retornar valor
+## <a name="return-value"></a>Retornar valor
 ------------
 
 Retorna zero em caso de êxito; caso contrário, retorna um código de erro.
 
-<a id="remarks" class="xliff"></a>
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Esse é um método estático.
 
-<a id="requirements" class="xliff"></a>
-## Requisitos
+## <a name="requirements"></a>Requisitos
 ------------
 >**MOF:** DscCore.mof
 
 >**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

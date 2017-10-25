@@ -10,14 +10,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershell-engine-improvements" class="xliff"></a>
-#Melhorias ao Mecanismo do PowerShell
+#<a name="powershell-engine-improvements"></a>Melhorias ao Mecanismo do PowerShell
 
 As seguintes melhorias ao mecanismo principal do PowerShell foram implementadas no WMF 5.1:
 
 
-<a id="performance" class="xliff"></a>
-## Desempenho ##
+## <a name="performance"></a>Desempenho ##
 
 O desempenho melhorou em algumas áreas importantes:
 

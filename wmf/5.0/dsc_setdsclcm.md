@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter" class="xliff"></a>
-# O cmdlet Set-DscLocalConfigurationManager dá suporte ao parâmetro -force
+# <a name="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter"></a>O cmdlet Set-DscLocalConfigurationManager dá suporte ao parâmetro -force
 
 Adicionamos suporte para um novo parâmetro ao cmdlet DscLocalConfigurationManager. Isso permite que o usuário redefina a metaconfiguração no computador de forma determinista quando outras operações, como verificação de consistência, são executadas em segundo plano, pois ela faz com que todas as operações em execução sejam interrompidas.
 

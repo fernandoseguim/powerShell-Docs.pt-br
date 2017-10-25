@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Apêndice 1 Aliases de compatibilidade"
 ms.assetid: 96ad921e-1a57-463e-8e60-424faf8b6ef8

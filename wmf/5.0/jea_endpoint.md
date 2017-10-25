@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-and-connecting-to-a-jea-endpoint" class="xliff"></a>
-# Criando e conectando-se a um ponto de extremidade JEA
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a>Criando e conectando-se a um ponto de extremidade JEA
 Para criar um ponto de extremidade JEA, é necessário criar e registrar um arquivo de Configuração de Sessão do PowerShell especialmente configurado, que possa ser gerado com o cmdlet **New-PSSessionConfigurationFile**.
 
 ```powershell
@@ -142,8 +141,7 @@ Finalmente, depois de terminar de personalizar a configuração de sessão e as 
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc" 
 ```
 
-<a id="connect-to-a-jea-endpoint" class="xliff"></a>
-## Conectar-se a um ponto de extremidade JEA
+## <a name="connect-to-a-jea-endpoint"></a>Conectar-se a um ponto de extremidade JEA
 A conexão a um Ponto de Extremidade JEA funciona da mesma forma que a conexão a qualquer outro ponto de extremidade de PowerShell.  Basta nomear o ponto de extremidade JEA como o parâmetro “ConfigurationName” para **New-PSSession**, **Invoke-Command** ou **Enter-PSSession**.
 
 ```powershell

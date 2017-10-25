@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: "Outros objetos de script úteis"
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5

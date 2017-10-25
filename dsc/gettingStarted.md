@@ -10,14 +10,12 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getting-started-with-powershell-desired-state-configuration" class="xliff"></a>
-# Introdução à Configuração de Estado Desejado do PowerShell #
+# <a name="getting-started-with-powershell-desired-state-configuration"></a>Introdução à Configuração de Estado Desejado do PowerShell #
 
 Este guia descreve como começar a criar documentos de Configuração de Estado Desejado do PowerShell e aplicá-los aos computadores. Assume que há uma familiaridade básica com cmdlets, módulos e funções do PowerShell. 
 
 
-<a id="create-a-configuration" class="xliff"></a>
-## Criar uma configuração ##
+## <a name="create-a-configuration"></a>Criar uma configuração ##
 
 [**Configurações**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) são documentos que descrevem um ambiente. Os ambientes consistem em "**nós**", que normalmente são máquinas virtuais ou físicas. 
 
@@ -40,8 +38,7 @@ configuration MyFirstConfiguration
 
 }
 ```
-<a id="parts-of-a-configuration" class="xliff"></a>
-## Partes de uma Configuração ##
+## <a name="parts-of-a-configuration"></a>Partes de uma Configuração ##
 **Configuration** é uma palavra-chave que foi adicionada ao PowerShell 4.0. Significa um tipo especial de função do PowerShell usado pela Configuração de Estado Desejado. Neste exemplo, a função é chamada de myFirstConfiguration. 
 
 A próxima linha é uma instrução de importação, semelhante à importação de um módulo. Será discutida posteriormente.

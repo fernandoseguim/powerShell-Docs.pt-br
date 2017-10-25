@@ -9,18 +9,15 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="interact-with-symbolic-links-using-improved-item-cmdlets" class="xliff"></a>
-# Interagir com Links simbólicos usando cmdlets Item aprimorados
+# <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a>Interagir com Links simbólicos usando cmdlets Item aprimorados
 
 Para dar suporte a links simbólicos, **\*-Item** e alguns cmdlets relacionados foram estendidos. Agora, é possível criar links simbólicos em uma única linha simples com **New-Item**. Você observará que os cmdlets relacionados a Item (**Remove-Item, Get-ChildItem**) se comportam de maneira muito semelhante quando comparado a situações anteriores.
 
 Apresentamos a seguir alguns casos de uso das novas funcionalidades:
 
-<a id="new-item" class="xliff"></a>
-## NEW-ITEM
+## <a name="new-item"></a>NEW-ITEM
 
-<a id="symbolic-link-files" class="xliff"></a>
-### ARQUIVOS DE LINK SIMBÓLICO
+### <a name="symbolic-link-files"></a>ARQUIVOS DE LINK SIMBÓLICO
 
 ```powershell
 # Create a new symbolic link file named MySymLinkFile.txt in C:\Temp which links to $pshome\profile.ps1
@@ -34,8 +31,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkFile.txt -Value $pshome\p
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkFile.txt -Value $pshome\profile.ps1
 ```
 
-<a id="symbolic-link-directories" class="xliff"></a>
-### DIRETÓRIOS DE LINKS SIMBÓLICOS
+### <a name="symbolic-link-directories"></a>DIRETÓRIOS DE LINKS SIMBÓLICOS
 
 ```powershell
 # Create a new symbolic link directory named MySymLinkDir in C:\Temp which links to the $pshome folder
@@ -50,24 +46,21 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkDir -Value $pshome
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 ```
 
-<a id="hard-links" class="xliff"></a>
-### LINKS FÍSICOS
+### <a name="hard-links"></a>LINKS FÍSICOS
 
 ```powershell
 New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshome\profile.ps1
 # Same combinations of Path and Name allowed as described above
 ```
 
-<a id="directory-junctions" class="xliff"></a>
-### JUNÇÕES DE DIRETÓRIO
+### <a name="directory-junctions"></a>JUNÇÕES DE DIRETÓRIO
 
 ```powershell
 New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 # Same combinations of Path and Name allowed as described above
 ```
 
-<a id="get-childitem" class="xliff"></a>
-## GET-CHILDITEM
+## <a name="get-childitem"></a>GET-CHILDITEM
 
 ```powershell
 # Append link type column to Mode property and display with Get-ChildItem
@@ -118,8 +111,7 @@ SpecialBuild: False
 Language:
 ```
 
-<a id="remove-item" class="xliff"></a>
-## REMOVE-ITEM
+## <a name="remove-item"></a>REMOVE-ITEM
 
 ```powershell
 # Works like any other item type
