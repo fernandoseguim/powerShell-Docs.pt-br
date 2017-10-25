@@ -182,4 +182,4 @@ Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $D
 [<span data-ttu-id="4fef1-145">Criar recursos personalizados de configuração de estado desejado do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="4fef1-145">Build Custom Windows PowerShell Desired State Configuration Resources</span></span>](authoringResource.md)
 
 #### <a name="other-resources"></a><span data-ttu-id="4fef1-146">Outros recursos</span><span class="sxs-lookup"><span data-stu-id="4fef1-146">Other Resources</span></span>
-[<span data-ttu-id="4fef1-147">xDscResourceDesigner Module</span><span class="sxs-lookup"><span data-stu-id="4fef1-147">xDscResourceDesigner Module</span></span>](https://powershellgallery.com/packages/xDscResourceDesigner) (Módulo xDscResourceDesigner)
+<span data-ttu-id="4fef1-147">[xDscResourceDesigner Module](https://powershellgallery.com/packages/xDscResourceDesigner) (Módulo xDscResourceDesigner)</span><span class="sxs-lookup"><span data-stu-id="4fef1-147">[xDscResourceDesigner Module](https://powershellgallery.com/packages/xDscResourceDesigner)</span></span>

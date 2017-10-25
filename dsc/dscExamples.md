@@ -14,6 +14,6 @@ ms.lasthandoff: 06/12/2017
 
 <span data-ttu-id="5ed9e-104">Esta seção contém exemplos de DSC:</span><span class="sxs-lookup"><span data-stu-id="5ed9e-104">This section contains DSC examples:</span></span>
 
-- [<span data-ttu-id="5ed9e-105">Building a CI-CD pipeline with DSC, Pester, and Visual Studio Team Services</span><span class="sxs-lookup"><span data-stu-id="5ed9e-105">Building a CI-CD pipeline with DSC, Pester, and Visual Studio Team Services</span></span>](dscCiCd.md) (Criando um pipeline de CI-CD com DSC, Pester e Visual Studio Team Services)
+- <span data-ttu-id="5ed9e-105">[Building a CI-CD pipeline with DSC, Pester, and Visual Studio Team Services](dscCiCd.md) (Criando um pipeline de CI-CD com DSC, Pester e Visual Studio Team Services)</span><span class="sxs-lookup"><span data-stu-id="5ed9e-105">[Building a CI-CD pipeline with DSC, Pester, and Visual Studio Team Services](dscCiCd.md)</span></span>
 - [<span data-ttu-id="5ed9e-106">Separando Dados de Configuração e de Ambiente</span><span class="sxs-lookup"><span data-stu-id="5ed9e-106">Separating configuration and environment data</span></span>](separatingEnvData.md)
 
