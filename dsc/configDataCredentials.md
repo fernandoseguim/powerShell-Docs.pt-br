@@ -4,24 +4,24 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Opções de Credenciais nos Dados de Configuração"
-ms.openlocfilehash: ec4eeb8e519158b2bf929b949e381cdba54f8928
-ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
+ms.openlocfilehash: 94ff541fc517254ef2876c424307513eaf1d362a
+ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
 
 ## <a name="plain-text-passwords-and-domain-users"></a>Senhas de Texto Sem Formatação e Usuários do Domínio
 
-As configurações DSC que contêm uma credencial sem criptografia gerarão mensagens de erro sobre senhas de texto sem formatação.
+As configurações DSC com uma credencial sem criptografia gerarão mensagens de erro sobre senhas de texto sem formatação.
 Além disso, a DSC gerará um aviso quando usar credenciais de domínio.
 Para suprimir essas mensagens de erro e aviso, use as palavras-chave de dados de configuração DSC:
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
->**Observação:** o uso de senhas de texto não criptografado não é seguro. É recomendável proteger credenciais usando as técnicas discutidas mais adiante neste tópico.
+>**Observações:** <p>Armazenar/transmitir senhas de texto sem formatação não criptografadas não é seguro. É recomendável proteger credenciais usando as técnicas discutidas mais adiante neste tópico.</p> <p>O serviço de DSC de Automação do Azure permite que gerenciar centralmente as credenciais a serem compiladas em configurações e armazenadas com segurança.  Para obter informações, consulte: [Compilando configurações de DSC / Ativos de credencial](https://docs.microsoft.com/en-in/azure/automation/automation-dsc-compile#credential-assets)</p>
 
 A seguir, um exemplo de passar credenciais de texto sem formatação:
 
@@ -129,10 +129,11 @@ Os recursos de configuração DSC são executados como `Local System` por padrã
 Contudo, alguns recursos precisam de uma credencial, como quando o recurso `Package` precisa instalar um software em uma conta de usuário específica.
 
 Recursos anteriores usaram um nome de propriedade `Credential` embutido em código para lidar com isso.
-O WMF 5.0 adicionou uma propriedade `PsDscRunAsCredential` automática para todos os recursos. Para obter informações sobre como usar o `PsDscRunAsCredential`, confira [Executar DSC com as credenciais do usuário](runAsUser.md).
+O WMF 5.0 adicionou uma propriedade `PsDscRunAsCredential` automática para todos os recursos.
+Para obter informações sobre como usar o `PsDscRunAsCredential`, confira [Executar DSC com as credenciais do usuário](runAsUser.md).
 Recursos mais recentes e recursos personalizados podem usar essa propriedade automática em vez de criar sua própria propriedade para credenciais.
 
-*Observe que o design de alguns recursos consiste em usar diversas credenciais por um motivo específico e eles terão suas próprias propriedades de credencial.*
+>**Observação:** o design de alguns recursos consiste em usar diversas credenciais por um motivo específico e eles terão suas próprias propriedades de credencial.
 
 Para encontrar as propriedades de credencial disponíveis em um recurso, use `Get-DscResource -Name ResourceName -Syntax` ou o Intellisense no ISE (`CTRL+SPACE`).
 
@@ -265,9 +266,10 @@ $cred = Get-Credential -UserName contoso\genericuser -Message "Password please"
 DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
-*Observe que `NodeName` não pode ser igual a um asterisco; um nome de nó específico é obrigatório.*
+>**Observação:** `NodeName` não pode ser um asterisco; um nome do nó específico é obrigatório.
 
 **A Microsoft avisa para evitar senhas de texto sem formatação devido ao risco de segurança significativo.**
+Uma exceção seria ao usar o serviço de DSC de Automação do Azure, pois os dados sempre são armazenados criptografados (em trânsito, em repouso no serviço e em repouso no nó).
 
 ## <a name="domain-credentials"></a>Credenciais de Domínio
 
@@ -298,4 +300,3 @@ $cd = @{
 ```
 
 Agora o script de configuração vai gerar o arquivo MOF sem erros ou avisos.
-
