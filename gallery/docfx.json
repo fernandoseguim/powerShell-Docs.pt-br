@@ -1,0 +1,39 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/**.md",
+          "**/**.yml"
+        ],
+        "exclude": [
+          "**/obj/**"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "breadcrumb_path": "/powershell/gallery/bread/toc.yml",
+      "ROBOTS": "INDEX, FOLLOW",
+      "ms.prod": "powershell",
+      "ms.technology": "gallery",
+      "manager": "carmonm",
+      "ms.devlang": "powershell",
+      "ms.tgt_pltfr": "windows, macos, linux",
+      "author": "juanpablojofre",
+      "ms.author": "jpjofre",
+      "bilingual_type": "hover over"
+    },
+    "resource": [
+      {
+        "files": [
+          "**/images/**"
+        ],
+        "exclude": [
+          "**/obj/**"
+        ]
+      }
+    ],
+    "template": "op.html",
+    "dest": "gallery"
+  }
+}
