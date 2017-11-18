@@ -1,22 +1,31 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-10-31
 author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Protegendo o Arquivo MOF
-ms.openlocfilehash: dc900f53c954637a407fbd026d24d20c2fdabf6e
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: f4ef2962710c7458ac947bf33270175a09de643c
+ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Para informar aos nós de destino qual configuração deveriam ter, a DSC envia um arquivo MOF com essas informações para cada nó, em que o Gerenciador de Configurações Local (LCM) implementa a configuração desejada. Como esse arquivo contém os detalhes da configuração, é importante mantê-lo em segurança. Para fazer isso, você pode definir o LCM para verificar as credenciais de um usuário. Este tópico descreve como transmitir essas credenciais com segurança para o nó de destino criptografando-as com certificados.
+O DSC gerencia a configuração dos nós de servidor aplicando as informações armazenadas em um arquivo MOF, em que o LCM (Gerenciador de Configurações Local) implementa o estado final desejado.
+Como esse arquivo contém os detalhes da configuração, é importante mantê-lo em segurança.
+Este tópico descreve como garantir que o nó de destino criptografou o arquivo.
 
->**Observação:** este tópico discute os certificados usados para criptografia. Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento. Certificados autoassinados *não* devem ser usados para fins de autenticação. Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
+A partir do PowerShell versão 5.0, o arquivo MOF inteiro é criptografado por padrão quando aplicado ao nó usando o cmdlet **Start-DSCConfiguration**.
+O processo descrito neste artigo será necessário somente ao implementar uma solução usando o protocolo de serviço de pull se os certificados não forem gerenciados, para garantir que as configurações baixadas pelo nó de destino possam ser criptografadas e lidas pelo sistema antes de serem aplicadas (por exemplo, o serviço de pull disponível no Windows Server).
+Nós registrados no [DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) terão certificados automaticamente instalados e gerenciados pelo serviço sem a necessidade de sobrecarga administrativa.
+
+>**Observação:** este tópico discute os certificados usados para criptografia.
+>Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento.
+>Certificados autoassinados *não* devem ser usados para fins de autenticação.
+>Você deve usar um certificado de uma AC (Autoridade de Certificação) confiável para fins de autenticação.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -1,29 +1,22 @@
+.md--- ms.date:  2017-06-05 palavras-chave:  powershell,cmdlet título:  noções básicas sobre a referências de conceitos
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
-title: "compreendendo referências de conceitos"
-ms.openlocfilehash: c8cc3e1fbfb96bd3dfcc2f1c7f974e53e6246ade
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
----
+
 # <a name="understanding-concepts"></a>Compreendendo Conceitos
 
 *  Objetos no PowerShell  
-*  O pipeline
+*  [O pipeline](./fundamental/understanding-the-windows-powershell-pipeline.md)
 *  Análise de comando
 *  Avaliando expressões
 *  Delimitação e escape
 *  Operadores
-*  Variáveis e atribuição
+*  [Variáveis e atribuição](./fundamental/using-variables-to-store-objects.md)
 *  Execução de comando ou cmdlet
 *  Execução de aplicativos nativos e passagem de parâmetro
-*  Formatação de saída explícita e implícita
+*  [Formatação de saída implícita e explícita](./cookbooks/using-format-commands-to-change-output-view.md)
 *  Desenvolvendo um arquivo de formatação
 *  Elementos de linguagem de script
 *  Integração com o sistema operacional e serviços
 *  Provedores
 *  Drivers
-*  Atualizando a Ajuda 
+*  [Atualizando a ajuda](/powershell/module/Microsoft.PowerShell.Core/Update-Help)
 

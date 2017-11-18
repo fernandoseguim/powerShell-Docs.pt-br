@@ -3,26 +3,26 @@ ms.date: 2017-06-05
 keywords: PowerShell, cmdlet
 title: Preparando-se para usar o Windows PowerShell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-ms.openlocfilehash: a87ec614a45f0b6c05c530110e52f87c646b3e8b
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: de09c74e938f11a130864b1620d6c169006a27be
+ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparando-se para usar o Windows PowerShell
 Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes opções de configuração. Você pode executar essas tarefas a qualquer momento.
 
-- **Instale os arquivos de Ajuda.** Os cmdlets que estão incluídos no Windows PowerShell 3.0 não vêm com arquivos de ajuda. No entanto, você pode usar o cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) para baixar e instalar os arquivos de ajuda mais recentes no seu computador. Depois de os arquivos serem instalados, você pode usar o cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) para exibi-los diretamente na linha de comando. Para obter mais informações, consulte [about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
+- **Instale os arquivos de Ajuda.** Os cmdlets que estão incluídos no Windows PowerShell 3.0 não vêm com arquivos de ajuda. No entanto, você pode usar o cmdlet [Update-Help](/powershell/module/microsoft.powershell.core/update-help) para baixar e instalar os arquivos de ajuda mais recentes no seu computador. Depois de os arquivos serem instalados, você pode usar o cmdlet [Get-Help](/powershell/module/microsoft.powershell.core/get-help) para exibi-los diretamente na linha de comando. Para obter mais informações, consulte [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-    Se você decidir não instalar os arquivos de Ajuda, ainda poderá ler os tópicos da Ajuda online. Para abrir a versão online de qualquer tópico de Ajuda de cmdlet, digite: `Get-Help <CmdletName> -Online`. Para procurar os tópicos de ajuda do Windows PowerShell na Biblioteca do TechNet, comece por [http://go.microsoft.com/fwlink/?LinkID=107116](http://go.microsoft.com/fwlink/?LinkID=107116).
+    Se você decidir não instalar os arquivos de Ajuda, ainda poderá ler os tópicos da Ajuda online. Para abrir a versão online de qualquer tópico de Ajuda de cmdlet, digite: `Get-Help <CmdletName> -Online`. Para pesquisar os tópicos de ajuda do Windows PowerShell, consulte a [documentação do PowerShell](/powershell/scripting).
 
-- **Execute os Scripts.** Para manter o Windows PowerShell seguro, a política de execução padrão no Windows PowerShell é **Restrita**. Essa política permite executar os cmdlets, mas não em scripts. Para executar scripts, use o cmdlet [Set-ExecutionPolicy [PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) para alterar a política de execução para **AllSigned** ou **RemoteSigned**. Somente os membros do grupo Administradores no computador podem executar este cmdlet. Para obter mais informações, consulte [about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6).
+- **Execute os Scripts.** Para manter o Windows PowerShell seguro, a política de execução padrão no Windows PowerShell é **Restrita**. Essa política permite executar os cmdlets, mas não em scripts. Para executar scripts, use o cmdlet [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) para alterar a política de execução para **AllSigned** ou **RemoteSigned**. Somente os membros do grupo Administradores no computador podem executar este cmdlet. Para obter mais informações, consulte [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-- **Habilite a comunicação remota.** O sistema já está configurado para executar comandos remotos em outros computadores. No Windows Server 2012 R2 e Windows Server 2012, o sistema também está configurado para receber comandos remotos, ou seja, para permitir que outros computadores executem comandos remotos no computador local. Para permitir que os computadores que executam outras versões do Windows recebam comandos remotos, execute o cmdlet [Enable-PSRemoting](https://technet.microsoft.com/en-us/library/19437c28-33b8-4ac1-9113-8439cc8beffb) no computador que você deseja gerenciar remotamente. Somente os membros do grupo Administradores no computador podem executar este cmdlet. Para obter mais informações, consulte [about_Remote](https://technet.microsoft.com/en-us/library/9b4a5c87-9162-4adf-bdfe-fbc80b9b8970).
+- **Habilite a comunicação remota.** O sistema já está configurado para executar comandos remotos em outros computadores. No Windows Server 2012 R2 e Windows Server 2012, o sistema também está configurado para receber comandos remotos, ou seja, para permitir que outros computadores executem comandos remotos no computador local. Para permitir que os computadores que executam outras versões do Windows recebam comandos remotos, execute o cmdlet [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting) no computador que você deseja gerenciar remotamente. Somente os membros do grupo Administradores no computador podem executar este cmdlet. Para obter mais informações, consulte [about_Remote](/powershell/module/microsoft.powershell.core/about/about_remote).
 
     OBSERVAÇÃO: se a comunicação remota estiver habilitada em um computador que executa o Windows PowerShell 2.0, a comunicação remota ainda estará habilitada após a instalação do Windows Management Framework 3.0. No entanto, no Windows Server 2008 (não no Windows Server 2008 R2), você deve habilitar novamente a comunicação remota após instalar o Windows Management Framework 3.0.
 
 ## <a name="see-also"></a>Consulte Também
 - [Instalar o Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
-- [Iniciando o Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
+- [Iniciando o Windows PowerShell](/powershell/scripting/setup/starting-windows-powershell)
 
