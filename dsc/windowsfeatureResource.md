@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Recurso WindowsFeature de DSC
-ms.openlocfilehash: a3433577a122f6c7e31360e094a089f6ceef77c2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b4f50cb9ee172600b1811175e9cf67f6a7ed2d55
+ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dsc-windowsfeature-resource"></a>Recurso WindowsFeature de DSC
 
@@ -35,7 +35,7 @@ WindowsFeature [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| Nome| Indica o nome da função ou recurso que você deseja garantir que seja adicionado ou removido. É igual à propriedade __Name__ do cmdlet [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx), não o nome de exibição da função ou recurso.| 
+| Nome| Indica o nome da função ou recurso que você deseja garantir que seja adicionado ou removido. É igual à propriedade __Name__ do cmdlet [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature), não o nome de exibição da função ou recurso.| 
 | Credential| Indica as credenciais que devem ser usadas para adicionar ou remover a função ou recurso.| 
 | Ensure| Indica se a função ou o recurso foi adicionado. Para garantir que a função ou o recurso seja adicionado, defina essa propriedade como "Present"; para garantir que a função ou o recurso seja removido, defina a propriedade como "Absent".| 
 | IncludeAllSubFeature| Defina essa propriedade como __$true__ para garantir o estado de todos os sub-recursos necessários com o estado do recurso especificado com a propriedade __Name__.| 
