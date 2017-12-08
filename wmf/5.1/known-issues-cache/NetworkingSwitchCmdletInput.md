@@ -3,7 +3,8 @@ title: Falha de cmdlets do Gerenciador de Comutador de Rede
 contributor: vaibch
 ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
 ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 Os cmdlets do Gerenciador de Comutador de Rede podem ser usados para gerenciar os comutadores de rede em WSMAN. Alguns cmdlets do módulo são capazes de aceitar valores de pipelines. Na Preview do 5.1 WMF, os cmdlets que podem aceitar o valor de pipeline não poderão ser executados quando os valores não forem passados pelos pipelines.
 
