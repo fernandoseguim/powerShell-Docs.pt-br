@@ -4,48 +4,40 @@ contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Install-Script
-ms.openlocfilehash: 4c3fd9393ccb7ee5c3b010f1114b6596a74fdee2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 9ce4125329ea2a38f27f9305b169c7fcf3e9df42
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-script"></a>Install-Script
 
 Instala arquivos de script do PowerShell de repositórios online no computador local.
 
-
 ## <a name="description"></a>Descrição
 
-O cmdlet Install-Script adquire uma carga de script de um repositório, verifica se a carga é um script do PowerShell válido e copia o arquivo de script para um local de instalação especificado.
+O cmdlet Install-Script encontra e baixa um ou mais scripts de uma galeria online, valida e instala-os no computador local, de acordo com o escopo de instalação especificado.
 
-Os repositórios padrão em que Install-Script opera podem ser configurados por meio dos cmdlets Register-PSRepository, Set-PSRepository, Unregister-PSRepository e Get-PSRepository. Ao operar em vários repositórios, Install-Script instala o primeiro script correspondente aos critérios de pesquisa especificados (Name, MinimumVersion ou MaximumVersion) do primeiro repositório sem erros.
+Quando nenhum escopo for definido, ou quando o valor do parâmetro Scope for AllUsers, o script será instalado em %systemdrive%:\Arquivos de Programas\WindowsPowerShell\scripts. Quando o valor do parâmetro Scope for CurrentUser, o script será instalado em $home\Documentos\WindowsPowerShell\scripts.
 
+Você pode filtrar os resultados com base nas versões mínima e exata dos scripts especificados.
 
-O cmdlet Install-Script baixa um ou mais módulos de uma galeria online, valida-os e instala-os no computador local com o escopo de instalação especificado.
-
-O cmdlet Install-Script obtém um ou mais módulos que atendem aos critérios especificados de uma galeria online, verifica se os resultados da pesquisa são módulos válidos e copia pastas de módulo para o local de instalação.
-
-Quando nenhum escopo é definido ou quando o valor do parâmetro Scope é AllUsers, o módulo é instalado em %systemdrive%:\Program Files\WindowsPowerShell\Modules. Quando o valor de Scope é CurrentUser, o módulo é instalado em $home\Documents\WindowsPowerShell\Modules.
-
-Você pode filtrar os resultados com base nas versões mínima e exata dos módulos especificados.
-
-- Não há suporte para a versão Lado a Lado para arquivos de Script do PowerShell
-- Suporte para instalação de dependências de script
-- **Prompt não confiável:** a aceitação do usuário é obrigatória para instalar os módulos de um repositório não confiável.
-- -Force reinstala o módulo instalado
+Algumas observações importantes:
+- Os scripts são arquivos individuais instalados. Como resultado, somente uma cópia de um script será instalada e várias versões de scripts não poderão ser instaladas lado a lado em um sistema. 
+- Os scripts poderão definir as dependências em módulos externos, que serão instalados quando o cmdlet Install-Script for executado.
+- **Prompt não confiável:** a aceitação do usuário é obrigatória para instalar os scripts de um repositório não confiável.
 - RequiredVersion instala a versão especificada no SxS com as versões existentes no PowerShell versão 5.0 ou posterior.
 
-Não há suporte para curingas em -Name nos cmdlets Install-Module, Save-Module, Uninstall-Module, Install-Script, Save-Script e Uninstall-Script.
+Os curingas não são compatíveis com -Name nos cmdlets Install-Script, Save-Script e Uninstall-Script.
 
 ### <a name="scope"></a>Escopo
-Especifica o escopo de instalação do módulo. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
+Especifica o escopo de instalação do script. Os valores aceitáveis para este parâmetro são: AllUsers e CurrentUser.
 
 O escopo de instalação padrão é AllUsers.
 
-O escopo AllUsers permite que os módulos sejam instalados em um local que seja acessível para todos os usuários do computador, ou seja, "$env:SystemDrive\Program Files\WindowsPowerShell\Modules".
+O escopo AllUsers permite que os scripts sejam instalados em um local que seja acessível a todos os usuários do computador, ou seja, em “$env:SystemDrive\Arquivos de Programas\WindowsPowerShell\scripts”.
 
-O escopo CurrentUser permite que módulos ser instalado somente em "$home\Documents\WindowsPowerShell\Modules", de modo que o módulo fica disponível somente para o usuário atual.
+O escopo CurrentUser permite que os scripts sejam instalados somente em “$home\Documentos\WindowsPowerShell\scripts”, de modo que o script seja disponibilizado somente para o usuário atual.
 
 
 Especifica o escopo de instalação do script. Os valores válidos são: AllUsers e CurrentUser. O padrão é CurrentUser.
@@ -66,17 +58,15 @@ O escopo AllUsers especifica a instalação do script em %systemdrive%:\ProgramF
 
 Esse cmdlet é executado no Windows PowerShell 3.0 ou em versões posteriores do Windows PowerShell, no Windows 7 ou no Windows 2008 R2 e em versões posteriores do Windows.
 
-Se um módulo instalado não puder ser importado (ou seja, se ele não tiver um .psm1, .psd1 ou .dll com o mesmo nome dentro da pasta), a instalação falhará, a menos que você adicione o parâmetro Force ao comando.
+Se uma versão do script no computador corresponder ao valor especificado para o parâmetro Name e você não tiver adicionado o parâmetro MinimumVersion ou RequiredVersion, o cmdlet Install-Script continuará silenciosamente sem instalar o script. Se os parâmetros MinimumVersion ou RequiredVersion forem especificados e o script existente não corresponder aos valores no parâmetro, ocorrerá um erro. De modo mais específico: se a versão do script instalada atualmente for inferior ao valor do parâmetro MinimumVersion ou for diferente do valor do parâmetro RequiredVersion, ocorrerá um erro. Se a versão do script instalada for maior que o valor do parâmetro MinimumVersion ou igual ao valor do parâmetro RequiredVersion, o cmdlet Install-Script continuará silenciosamente sem instalar o script.
 
-Se uma versão do módulo no computador corresponder ao valor especificado para o parâmetro Name e você não tiver adicionado o parâmetro MinimumVersion ou RequiredVersion, o Install-Script continuará silenciosamente sem instalar o módulo. Se os parâmetros MinimumVersion ou RequiredVersion forem especificados e o módulo existente não corresponder aos valores no parâmetro, ocorrerá um erro. Para ser mais específico: se a versão do módulo instalada atualmente for inferior ao valor do parâmetro MinimumVersion ou for diferente do valor do parâmetro RequiredVersion, ocorrerá um erro. Se a versão do módulo instalado for maior que o valor do parâmetro MinimumVersion ou igual ao valor do parâmetro RequiredVersion, Install-Script continuará silenciosamente sem instalar o módulo.
+O Install-Script retornará um erro se não houver nenhum script na galeria online que seja correspondente ao nome especificado.
 
-Install-Script retornará um erro se não existir na galeria online nenhum módulo correspondente ao nome especificado.
+Para instalar vários scripts, especifique uma matriz de nomes de scripts, separados por vírgulas. Não será possível adicionar o parâmetro MinimumVersion ou o RequiredVersion se você especificar vários nomes de scripts.
 
-Para instalar vários módulos, especifique uma matriz de nomes de módulo, separados por vírgulas. Não será possível adicionar MinimumVersion ou RequiredVersion se você especificar vários nomes de módulo.
+Por padrão, os scripts são instalados na pasta Arquivos de Programas. É possível redirecionar vários objetos PSGetItemInfo ao Install-Script. Esta é outra maneira de especificar vários scripts para serem instalados com um único comando.
 
-Por padrão, os módulos são instalados na pasta Arquivos de Programas, para evitar confusão ao instalar recursos de DSC (Configuração de Estado Desejado) do Windows PowerShell. É possível redirecionar vários objetos PSGetItemInfo para Install-Script; esta é outra maneira de especificar vários módulos para serem instalados em um único comando.
-
-Para ajudar a evitar a execução de módulos que contêm código mal-intencionado, os módulos instalados não são importados automaticamente pela instalação. Como mellhor prática de segurança, avalie o código do módulo antes de executar cmdlets ou funções em um módulo pela primeira vez.
+Para ajudar a evitar a execução de scripts que contenham um código mal-intencionado, os scripts instalados não são importados automaticamente pela instalação. Como prática recomendada de segurança, avalie o código do script antes de executar cmdlets ou funções em um script pela primeira vez.
 
 
 ## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
@@ -297,42 +287,46 @@ ExternalScript Required-Script2.ps1 C:\\Users\\manikb\\Documents\\WindowsPowerSh
 
 ```powershell
 
-# Install a module by name
-Install-Script -Name MyDscModule
+# Install a script by name
+Install-Script -Name MyDscscript
 
-# Install multiple modules
+# Install multiple scripts
 Install-Script ContosoClient,ContosoServer
 
-# Install a module using its minimum version
+# Install a script using its minimum version
 Install-Script -Name ContosoServer -MinimumVersion 1.0
 
-# Install a specific version of a module
+# Install a specific version of a script
 Install-Script -Name ContosoServer -RequiredVersion 1.1.3
 
-# Install the latest version of a module to $home\Documents\WindowsPowerShell\Modules.
+# Install a specific prerelease version of a script
+Install-Script -Name ContosoServer -RequiredVersion 1.1.3-alpha -AllowPrerelease
+
+# Install the latest version of a script to $home\Documents\WindowsPowerShell\scripts.
 Install-Script -Name ContosoServer -Scope CurrentUser
 
-# if a module is already available under $env:PSModulePath, below command fails with 'ModuleAlreadyInstalled,Install-Package,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage'
+# if a script is already available under $env:PSModulePath, below command fails with 'scriptAlreadyInstalled,Install-Package,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage'
 Install-Script ContosoServer -RequiredVersion 1.5
 
-# if a module is already available under $env:PSModulePath, below command fails with 'ModuleAlreadyInstalled,Install-Package,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage'
+# if a script is already available under $env:PSModulePath, below command fails with 'scriptAlreadyInstalled,Install-Package,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage'
 Install-Script ContosoServer -MinimumVersion 2.5
 
-# Install multiple modules from multiple registered repositories
+# Install multiple scripts from multiple registered repositories
 Install-Script ContosoClient,ContosoServer -Repository PSGallery, PrivatePSGallery
 
-# Install a module with -WhatIf
+# Install a script with -WhatIf
 Install-Script ContosoClient -WhatIf
 
-# Install a module with -Confirm. A prompt will be displayed to confirm the installation.
+# Install a script with -Confirm. A prompt will be displayed to confirm the installation.
 Install-Script ContosoClient -WhatIf
 
-# -Force option reinstalls the installed module
+# -Force option reinstalls the installed script
 Install-Script ContosoClient -Force
 
-# Install a module with dependencies
-Install-Script -Name 
+# Install a script with dependencies
+Install-Script -Name ContosoClient
 
+# Install a script 
 
 # Install a script from the registered repository with ScriptSourceLocation
 Install-Script Connect-AzureVM
@@ -475,158 +469,25 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```powershell
 
-# Find a module and install it
+# Find a script and install it
 Find-Script -Name "MyDSC*" | Install-Script
 
-# Find a module and install it to the CurrentUser scope
+# Find a script and install it to the CurrentUser scope
 Find-Script -Name "MyDSC*" | Install-Script -Scope CurrentUser
 
 # Find commands by name and install them
 # The first command finds the specified commands in the INT repository, and then uses the pipeline operator to pass them to Install-Script to install them.
-# The second command uses Get-InstalledModule to verify the modules from the prior command are installed.
+# The second command uses Get-Installedscript to verify the scripts from the prior command are installed.
 Find-Command -Repository "INT" -Name Get-ContosoClient,Get-ContosoServer | Install-Script
-Get-InstalledModule
-
-# This command finds the resource named MyResource and passes it to the Install-Script cmdlet by using the pipeline operator. The Install-Script cmdlet installs the module for the resource. 
-# If you pipe multiple resources to the Install-Script cmdlet from the same module, Install-Script attempts to install the module only once. 
-Find-DscResource -Name "MyResource" | Install-Script
-Get-InstalledModule
+Get-Installedscript
 
 # Find multiple role capabilities and install them
 Find-RoleCapability -Name MyJeaRole, Maintenance | Install-Script
-Get-InstalledModule
+Get-Installedscript
 
 ```
 
-## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Suporte à versão lado a lado no PowerShell 5.0 ou mais recente
 
-O PowerShellGet dá suporte à versão SxS (lado a lado) do módulo nos cmdlets Install-Script, Update-Script e Publish-Script executados no Windows PowerShell 5.0 ou mais recente.
-
-### <a name="install-script-examples"></a>Exemplos de Install-Script
-
-```powershell
-# Install a version of the module
-Install-Script -Name PSScriptAnalyzer -RequiredVersion 1.1.0 -Repository PSGallery
-Get-Script -ListAvailable -Name PSScriptAnalyzer | Format-List Name,Version,ModuleBase
-
-Name : PSScriptAnalyzer
-Version : 1.1.0
-ModuleBase : C:\Program Files\WindowsPowerShell\Modules\PSScriptAnalyzer\1.1.0
-
-# Install another version of the module in Side-by-Side with already installed version.
-Install-Script -Name PSScriptAnalyzer -RequiredVersion 1.1.1 -Repository PSGallery
-Get-Script -ListAvailable -Name PSScriptAnalyzer | Format-List Name,Version,ModuleBase
-
-Name       : PSScriptAnalyzer 
-Version    : 1.1.1
-ModuleBase : C:\Program Files\WindowsPowerShell\Modules\PSScriptAnalyzer\1.1.1
-Name       : PSScriptAnalyzer
-Version    : 1.1.0
-ModuleBase : C:\Program Files\WindowsPowerShell\Modules\PSScriptAnalyzer\1.1.0
-
-# Get all versions of an installed module
-Get-InstalledModule -Name PSScriptAnalyzer -AllVersions
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.1.0      PSScriptAnalyzer                    PSGallery            PSScriptAnalyzer provides script analysis...
-1.1.1      PSScriptAnalyzer                    PSGallery            PSScriptAnalyzer provides script analysis...
-
-
-```
-
-## <a name="install-module-with-its-dependencies"></a>Instalar um módulo com dependências
-
-```powershell
-
-# Find a module
-Find-Module -Name TypePx -Repository PSGallery
-
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-2.0.1.20   TypePx                              PSGallery            The TypePx module adds properties and methods to the m...
-
-# Find a module and its dependencies
-Find-Module -Name TypePx -Repository PSGallery -IncludeDependencies
-
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-2.0.1.20   TypePx                              PSGallery            The TypePx module adds properties and methods to the m...
-1.0.5.18   SnippetPx                           PSGallery            The SnippetPx module enhances the snippet experience i...
-
-# Discover the dependencies list without adding -IncludeDependencies
-$result = Find-Module -Name TypePx -Repository PSGallery
-$result.Dependencies
-
-Name                           Value
-----                           -----
-Name                           SnippetPx
-CanonicalId                    powershellget:SnippetPx/#https://www.powershellgallery.com/api/v2/
-
-
-# Now install the module along with its dependencies
-Install-Script -Name TypePx -Repository PSGallery -Verbose
-
-VERBOSE: Repository details, Name = 'PSGallery', Location = 'https://www.powershellgallery.com/api/v2/'; IsTrusted =
-'False'; IsRegistered = 'True'.
-VERBOSE: Using the provider 'PowerShellGet' for searching packages.
-VERBOSE: Using the specified source names : 'PSGallery'.
-VERBOSE: Getting the provider object for the PackageManagement Provider 'NuGet'.
-VERBOSE: The specified Location is 'https://www.powershellgallery.com/api/v2/' and PackageManagementProvider is
-'NuGet'.
-VERBOSE: Searching repository 'https://www.powershellgallery.com/api/v2/FindPackagesById()?id='TypePx'' for ''.
-VERBOSE: Total package yield:'1' for the specified package 'TypePx'.
-VERBOSE: Performing the operation "Install-Script" on target "Version '2.0.1.20' of module 'TypePx'".
-
-Untrusted repository
-You are installing the modules from an untrusted repository. If you trust this repository, change its
-InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
-'PSGallery'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
-VERBOSE: The installation scope is specified to be 'AllUsers'.
-VERBOSE: The specified module will be installed in 'C:\Program Files\WindowsPowerShell\Modules'.
-VERBOSE: The specified Location is 'NuGet' and PackageManagementProvider is 'NuGet'.
-VERBOSE: Downloading module 'TypePx' with version '2.0.1.20' from the repository
-'https://www.powershellgallery.com/api/v2/'.
-VERBOSE: Searching repository 'https://www.powershellgallery.com/api/v2/FindPackagesById()?id='TypePx'' for ''.
-VERBOSE: Searching repository 'https://www.powershellgallery.com/api/v2/FindPackagesById()?id='SnippetPx'' for ''.
-VERBOSE: InstallPackage' - name='SnippetPx',
-version='1.0.5.18',destination='C:\Users\manikb\AppData\Local\Temp\1027042896'
-VERBOSE: DownloadPackage' - name='SnippetPx',
-version='1.0.5.18',destination='C:\Users\manikb\AppData\Local\Temp\1027042896\SnippetPx\SnippetPx.nupkg',
-uri='https://www.powershellgallery.com/api/v2/package/SnippetPx/1.0.5.18'
-VERBOSE: Downloading 'https://www.powershellgallery.com/api/v2/package/SnippetPx/1.0.5.18'.
-VERBOSE: Completed downloading 'https://www.powershellgallery.com/api/v2/package/SnippetPx/1.0.5.18'.
-VERBOSE: Completed downloading 'SnippetPx'.
-VERBOSE: Hash for package 'SnippetPx' does not match hash provided from the server.
-VERBOSE: InstallPackageLocal' - name='SnippetPx',
-version='1.0.5.18',destination='C:\Users\manikb\AppData\Local\Temp\1027042896'
-VERBOSE: InstallPackage' - name='TypePx',
-version='2.0.1.20',destination='C:\Users\manikb\AppData\Local\Temp\1027042896'
-VERBOSE: DownloadPackage' - name='TypePx',
-version='2.0.1.20',destination='C:\Users\manikb\AppData\Local\Temp\1027042896\TypePx\TypePx.nupkg',
-uri='https://www.powershellgallery.com/api/v2/package/TypePx/2.0.1.20'
-VERBOSE: Downloading 'https://www.powershellgallery.com/api/v2/package/TypePx/2.0.1.20'.
-VERBOSE: Completed downloading 'https://www.powershellgallery.com/api/v2/package/TypePx/2.0.1.20'.
-VERBOSE: Completed downloading 'TypePx'.
-VERBOSE: Hash for package 'TypePx' does not match hash provided from the server.
-VERBOSE: InstallPackageLocal' - name='TypePx',
-version='2.0.1.20',destination='C:\Users\manikb\AppData\Local\Temp\1027042896'
-VERBOSE: Installing the dependency module 'SnippetPx' with version '1.0.5.18' for the module 'TypePx'.
-VERBOSE: Module 'SnippetPx' was installed successfully to path 'C:\Program
-Files\WindowsPowerShell\Modules\SnippetPx\1.0.5.18'.
-VERBOSE: Module 'TypePx' was installed successfully to path 'C:\Program
-Files\WindowsPowerShell\Modules\TypePx\2.0.1.20'.
-
-
-# Get the installed modules
-Get-InstalledModule
-
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.0.5.18   SnippetPx                           PSGallery            The SnippetPx module enhances the snippet experience i...
-2.0.1.20   TypePx                              PSGallery            The TypePx module adds properties and methods to the m...
-
-```
 
 ## <a name="error-scenarios"></a>Cenários de erro
 
@@ -644,79 +505,6 @@ Install-Script ContosoClient,ContosoServer -RequiredVersion 2.0
 # Below command fails with 'VersionParametersAreAllowedOnlyWithSingleName,Install-Script'
 Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
-```
-
-## <a name="installing-a-script-with-dependent-scripts-and-modules"></a>Instalando um script com módulos e scripts dependentes
-
-```powershell
-# Installing a script with dependent scripts and modules
-Find-Script -Repository GalleryINT -Name Script-WithDependencies2 -IncludeDependencies
-Version Name Type Repository Description
-------- ---- ---- ---------- -----------
-2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
-2.5 RequiredModule1 Module GalleryINT RequiredModule1 module
-2.5 RequiredModule2 Module GalleryINT RequiredModule2 module
-2.5 RequiredModule3 Module GalleryINT RequiredModule3 module
-2.0 RequiredModule4 Module GalleryINT RequiredModule4 module
-1.5 RequiredModule5 Module GalleryINT RequiredModule5 module
-2.5 Required-Script1 Script GalleryINT Description for the Required-Script1 script
-2.5 Required-Script2 Script GalleryINT Description for the Required-Script2 script
-2.5 Required-Script3 Script GalleryINT Description for the Required-Script3 script
-
-Get-InstalledScript
-Version Name Type Repository Description
-------- ---- ---- ---------- -----------
-2.0 Required-Script3 Script GalleryINT Description for the Required-Script3 script
-1.0 Demo-Script Script LocalRepo1 Script file description goes here
-2.5 Required-Script2 Script GalleryINT Description for the Required-Script2 script
-Get-InstalledModule
-Install-Script -Repository GalleryINT -Name Script-WithDependencies2 -Scope CurrentUser
-Get-InstalledScript
-Version Name Type Repository Description
-------- ---- ---- ---------- -----------
-2.0 Required-Script3 Script GalleryINT Description for the Required-Script3 script
-1.0 Demo-Script Script LocalRepo1 Script file description goes here
-2.5 Required-Script1 Script GalleryINT Description for the Required-Script1 script
-2.5 Required-Script2 Script GalleryINT Description for the Required-Script2 script
-2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
-Get-InstalledModule
-Version Name Type Repository Description
-------- ---- ---- ---------- -----------
-2.5 RequiredModule1 Module GalleryINT RequiredModule1 module
-2.5 RequiredModule2 Module GalleryINT RequiredModule2 module
-2.5 RequiredModule3 Module GalleryINT RequiredModule3 module
-2.0 RequiredModule4 Module GalleryINT RequiredModule4 module
-1.5 RequiredModule5 Module GalleryINT RequiredModule5 module
-
-# Contents of Script-WithDependencies2 file.
-<#PSScriptInfo
-.VERSION 2.0
-.GUID 90082fa1-0b84-49fb-a00e-0a624fbb6584
-.AUTHOR manikb
-.COMPANYNAME Microsoft Corporation
-.COPYRIGHT (c) 2015 Microsoft Corporation. All rights reserved.
-.TAGS Tag1 Tag2 Tag-Script-WithDependencies2-2.0
-.LICENSEURI http://script-withdependencies2.com/license
-.PROJECTURI http://script-withdependencies2.com/
-.ICONURI http://script-withdependencies2.com/icon
-.EXTERNALMODULEDEPENDENCIES
-.REQUIREDSCRIPTS Required-Script1,Required-Script2,Required-Script3
-.EXTERNALSCRIPTDEPENDENCIES
-.RELEASENOTES
-Script-WithDependencies2 release notes
-#>
-#Requires -Module RequiredModule1
-#Requires -Module @{ModuleName = 'RequiredModule2'; ModuleVersion = '2.0'}
-#Requires -Module @{RequiredVersion = '2.5'; ModuleName = 'RequiredModule3'}
-#Requires -Module @{ModuleVersion = '1.1'; ModuleName = 'RequiredModule4'; MaximumVersion = '2.0'}
-#Requires -Module @{MaximumVersion = '1.5'; ModuleName = 'RequiredModule5'}
-<#
-.DESCRIPTION
-Description for the Script-WithDependencies2 script
-#>
-Param()
-Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
-Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
 ## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlets Install-Script e Get-InstalledScript
