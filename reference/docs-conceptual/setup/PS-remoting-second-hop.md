@@ -1,12 +1,12 @@
 ---
 ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: "Dando o segundo salto na Comunicação Remota do PowerShell"
-ms.openlocfilehash: f3b8280819e43bd67bd608ffd0ba9484c2bbc26c
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 2518409369a75a49b975b9b944320c1878819421
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Dando o segundo salto na Comunicação Remota do PowerShell
 
@@ -256,12 +256,12 @@ Para obter informações sobre o JEA, consulte [Just Enough Administration](http
 - Não requer configuração especial do servidor.
 - Funciona em qualquer servidor que executa o WMF 2.0 ou posterior.
 
-## <a name="cons"></a>Desvantagens
+### <a name="cons"></a>Desvantagens
 
 - Requer uma técnica de código complicada.
 - Se estiver executando o WMF 2.0, necessita de uma sintaxe diferente para passar argumentos para uma sessão remota.
 
-## <a name="example"></a>Exemplo
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como passar credenciais em um bloco de script **Invoke-Command**:
 
