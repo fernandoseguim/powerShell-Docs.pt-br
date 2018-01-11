@@ -4,11 +4,11 @@ author: JKeithB
 ms.topic: reference
 keywords: "wmf,powershell,instalação"
 title: Compatibilidade de sistema de operacional do WMF 5.1
-ms.openlocfilehash: b8724538a03ab67529682b9efb29e3ab947339b5
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 04217c5abb0f04a5dc6b15cd956a632f7b84c9bb
+ms.sourcegitcommit: 5dbf78ba0db482efa79e31a0e4963f8cbeb3df54
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="wmf-51-operating-system-compatibility"></a>Compatibilidade de sistema de operacional do WMF 5.1 #
 
@@ -33,4 +33,6 @@ ms.lasthandoff: 06/12/2017
 Sobre "É fornecido na caixa*": os recursos do WMF 5.0 foram incluídos na versão RTM do Windows 10 original.
 Os recursos do WMF 5.1 foram incluídos no Windows Server 2016 e na Edição de Aniversário do Windows 10. O WMF 5.1 não é aplicável a essas versões de sistema operacional, pois as atualizações são fornecidas através do Windows Update.
 
+
+Observe que o WMF não acompanha o Windows. O WMF é um pacote de atualização que fornece um conjunto de recursos do Windows para versões deste sistema lançadas anteriormente. Isso pode fazer uma grande diferença no momento de buscar assistência para algum desses recursos, já que a versão desses componentes não corresponde à que foi fornecida com o sistema operacional original.
 

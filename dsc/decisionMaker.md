@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão"
-ms.openlocfilehash: e39ab5138b20653e46ac35fa32b99d268f96b2df
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 1800acfa9edae4f65e34db380ff719ad4c034921
+ms.sourcegitcommit: 60f06a06c2fce63024f3f4cbd7657b1dfe7fcb1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão
 
@@ -34,7 +34,7 @@ As configurações também podem ser compartilhadas por meio da [Galeria do Powe
 
 ## <a name="desired-state-configuration-and-devops"></a>Configuração de Estado Desejado e DevOps
 
-[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) é uma combinação de pessoas, tecnologias e culturas que permite uma implantação e uma iteração rápidas. A DSC foi concebida pensando em DevOps. Ter uma única configuração definindo um ambiente significa que os desenvolvedores podem codificar seus requisitos em uma configuração, verificar essa configuração no controle do código-fonte e as equipes de operações podem implantar facilmente o código sem precisar passar por processos manuais propensos a erro. 
+[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) é uma combinação de pessoas, processos e ferramentas que permitem uma rápida implantação e iteração concentradas em proporcionar vantagens para os usuários finais internos ou externos. A DSC foi concebida pensando em DevOps. Ter uma única configuração definindo um ambiente significa que os desenvolvedores podem codificar seus requisitos em uma configuração, verificar essa configuração no controle do código-fonte e as equipes de operações podem implantar facilmente o código sem precisar passar por processos manuais propensos a erro. 
 
 As configurações também são [orientadas a dados](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), o que ajuda as equipes de operações a identificar e alterar os ambientes sem a intervenção do desenvolvedor. 
 

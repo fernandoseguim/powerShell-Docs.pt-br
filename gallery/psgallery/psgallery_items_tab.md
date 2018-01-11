@@ -4,46 +4,56 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_items_tab
-ms.openlocfilehash: 8424c4729436a78fec3fdbb405591fcd3c6bc6a6
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 8704091542de5c19817ab0b4f77fd98987084b5d
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/21/2017
 ---
-<a name="items-tab"></a>Guia Itens
-==========
+# <a name="items-tab"></a>Guia Itens
 
-A Guia Itens exibe todos os itens disponíveis na Galeria do PowerShell.
+A [guia Itens](https://www.powershellgallery.com/items) exibe todos os itens disponíveis na Galeria do PowerShell.
 
-Para ver somente os Módulos na Galeria do PowerShell, clique em Módulos no menu suspenso da Guia Itens.  De forma semelhante, para ver somente os Scripts na Galeria do PowerShell, clique em Scripts no menu suspenso da Guia Itens.  
-
+Há várias maneiras de filtrar, classificar e pesquisar os itens.
 Para ver mais detalhes sobre um item específico, clique no item.
 
-Há várias maneiras de classificar os itens:
+## <a name="filter-by"></a>Filtrar Por
 
-##<a name="filter-by"></a>Filtrar por ##
-A seção Filtrar Por permite que os usuários filtrem os resultados por:
-* Tipo de Item:
-    * Módulos
-    * Scripts
-* Categoria:
-    * Cmdlet
-    * Recurso de DSC
-    * Função
-    * Fluxo de Trabalho
+O menu suspenso em "Filtrar Por" permite aos usuários filtrar os resultados por:
+* Incluir pré-lançamento
+* Apenas estável
 
-Observação: os filtros são inclusivos.  
-Exemplo: um item que contém Cmdlets e Funções será exibido se um Cmdlet ou Função (ou ambos) for selecionada.  Se nenhum dos dois for selecionado, o item não será exibido.  
-De forma semelhante, se todas as categorias forem selecionadas, apenas itens que contêm uma dessas categorias serão exibidos. **Itens que não pertencem a nenhuma dessas categorias não serão exibidos.**
+Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artigo [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Controle de versão de pré-lançamento adicionado ao PowerShellGet e à Galeria do PowerShell), no blog da equipe do PowerShell.
 
-##<a name="sort-by"></a>Classificar por ## 
+Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resultados por:
+* Tipos de item
+  - Módulo
+  - script
+* Categorias
+  - Cmdlet
+  - Recurso de DSC
+  - Função
+  - Capacidade da função
+  - Fluxo de Trabalho
+
+Para ver somente módulos na Galeria do PowerShell, marque a opção Módulo nos Tipos de item.
+Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opção Script nos Tipos de item.
+
+> [!NOTE]
+> Os filtros são inclusivos.
+> Exemplo: um item que contém cmdlets e funções será exibido se Cmdlet ou Função (ou ambos) estiverem marcados.
+> Se nenhum dos dois for selecionado, o item não será exibido.
+> De forma semelhante, se todas as categorias forem selecionadas, apenas itens que contêm uma dessas categorias serão exibidos.
+> **Itens que não pertencem a nenhuma dessas categorias não serão exibidos.**
+
+## <a name="sort-by"></a>Classificar Por
+
 O menu suspenso Classificar Por permite aos usuários classificar os resultados por:
-* Popularidade – a popularidade é determinada pela Contagem de Download.
-* A-Z – em ordem alfabética por nome do item.
-* Recentes – os itens aparecem na ordem da data de publicação.
+* Popularidade – a popularidade é determinada pela Contagem de Downloads
+* A a Z – em ordem alfabética por nome do item
+* Recentes – os itens aparecem na ordem da data de publicação
 
+## <a name="search-box"></a>Caixa de Pesquisa
 
-##<a name="search-box"></a>Caixa de pesquisa ##
-A Caixa de Pesquisa permite que os usuários pesquisem itens por palavras-chave.  
-Consulte [Sintaxe de Pesquisa](./psgallery_search_syntax.md) para obter mais detalhes.
-
+A Caixa de Pesquisa permite que os usuários pesquisem itens por palavras-chave.
+Para saber mais, confira [Sintaxe de Pesquisa da Galeria](psgallery_search_syntax.md).

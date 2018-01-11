@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Usando dados de configuração"
-ms.openlocfilehash: a70cd8f0f6c24eb02743b02d198cebcc3d775756
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60c6c2d5694a03275e1a08522bdcf4b1bc5bb068
+ms.sourcegitcommit: 60f06a06c2fce63024f3f4cbd7657b1dfe7fcb1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-configuration-data-in-dsc"></a>Usando dados de configuração em DSC
 
@@ -187,7 +187,7 @@ A DSC fornece três variáveis especiais que podem ser usadas em um script de co
 ## <a name="using-non-node-data"></a>Usar dados sem nós
 
 Como vimos nos exemplos anteriores, a tabela de hash **ConfigurationData** pode ter uma ou mais chaves além da chave **AllNodes** necessária.
-Nos exemplos neste tópico, usamos apenas um único nó adicional e nomeamos como `NonNodeData`. No entanto, você pode definir qualquer número de chaves adicionais e nomeá-los como desejar.
+Nos exemplos deste tópico, usamos apenas um único nó adicional e o nomeamos como `NonNodeData`. No entanto, você pode definir quantas chaves adicionais quiser e nomeá-las da maneira desejada.
 
 Para obter um exemplo de como usar dados que não são do nó, consulte [Separando Dados de Configuração e de Ambiente](separatingEnvData.md).
 

@@ -4,11 +4,11 @@ author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Configurando o Gerenciador de Configurações Local"
-ms.openlocfilehash: 98470f45ca7c11ea63d68da7dec9fcd844f06192
-ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.openlocfilehash: 6ca527aae263637bbca5a064e0d770fe9384d679
+ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -75,7 +75,7 @@ As seguintes propriedades estão disponíveis em um bloco **Settings**.
 |----------- |------- |--------------- |
 | ActionAfterReboot| cadeia de caracteres| Especifica o que acontece após uma reinicialização durante a aplicação de uma configuração. Os valores possíveis são __"ContinueConfiguration"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continue a aplicar a configuração atual após a reinicialização do computador. Este é o valor padrão</li><li>__StopConfiguration__: interrompa a configuração atual após a reinicialização do computador.</li></ul>|
 | AllowModuleOverwrite| bool| __$TRUE__ se as novas configurações baixadas do serviço de pull tiverem permissão para substituir as antigas no nó de destino. Caso contrário, $FALSE.|
-| CertificateID| cadeia de caracteres| A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx)? <br> __Observação:__ isso será gerenciado automaticamente se estiver usando o serviço de pull de DSC de Automação do Azure.|
+| CertificateID| cadeia de caracteres| A impressão digital de um certificado usado para proteger as credenciais passadas em uma configuração. Para obter mais informações, consulte [Quer proteger credenciais na Configuração de Estado Desejado do Windows PowerShell?](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx). <br> __Observação:__ isso será gerenciado automaticamente se estiver usando o serviço de pull de DSC de Automação do Azure.|
 | ConfigurationDownloadManagers| CimInstance[]| Obsoleto. Use os blocos __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ para definir pontos de extremidade de serviço de pull de configuração.|
 | ConfigurationID| cadeia de caracteres| Para compatibilidade com versões anteriores do serviço de pull. Um GUID que identifica o arquivo de configuração que deve ser obtido de um serviço de pull. O nó efetuará o pull das configurações serviço de pull se o nome do MOF de configuração for ConfigurationID.mof.<br> __Observação:__ se você definir essa propriedade, registrar o nó com um serviço de pull usando __RegistrationKey__ não funcionará. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).|
 | ConfigurationMode| cadeia de caracteres | Especifica como o LCM realmente aplica a configuração aos nós de destino. Os valores possíveis são __"ApplyOnly"__, __"ApplyandMonitior"__ e __"ApplyandAutoCorrect"__. <ul><li>__ApplyOnly__: a DSC aplica a configuração e não faz nada além disso, a menos que uma nova configuração seja enviada por push para o nó de destino ou quando o pull de uma nova configuração for efetuado de um serviço. Depois da aplicação inicial de uma nova configuração, a DSC não procura um dessincronização em relação a um estado previamente configurado. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyOnly__ entre em vigor. </li><li> __ApplyAndMonitor__: este é o valor padrão. O LCM aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs. Observe que a DSC tentará aplicar a configuração até obter êxito antes que __ApplyAndMonitor__ entre em vigor.</li><li>__ApplyAndAutoCorrect__: a DSC aplica as novas configurações. Após a aplicação inicial de uma nova configuração, se o nó de destino estiver dessincronizado em relação ao estado desejado, a DSC relatará a discrepância nos logs e reaplica a configuração atual.</li></ul>|
@@ -162,7 +162,7 @@ Um **ResourceRepositoryWeb** define as propriedades a seguir.
 Um exemplo de script para simplificar a configuração do valor ResourceRepositoryWeb para nós locais está disponível - confira [Geração de metaconfigurações de DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-onboarding#generating-dsc-metaconfigurations)
 
 Para definir um servidor de recurso baseado em SMB, crie um bloco **ResourceRepositoryShare**.
-O **ResourceRepositoryShare** define as propriedades a seguir.
+**ResourceRepositoryShare** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---|
@@ -173,7 +173,7 @@ O **ResourceRepositoryShare** define as propriedades a seguir.
 
 Para definir um servidor de relatório, crie um bloco **ReportServerWeb**.
 A função de servidor de relatório não é compatível com o serviço de pull baseado em SMB.
-O **ReportServerWeb** define as propriedades a seguir.
+**ReportServerWeb** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---|
@@ -188,7 +188,7 @@ Um exemplo de script para simplificar a configuração do valor ReportServerWeb 
 
 Para definir uma configuração parcial, você cria um bloco **PartialConfiguration**.
 Para obter mais informações sobre configurações parciais, consulte [Configurações parciais de DSC](partialConfigs.md).
-O **PartialConfiguration** define as propriedades a seguir.
+**PartialConfiguration** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
 |---|---|---| 
