@@ -4,46 +4,56 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_items_tab
-ms.openlocfilehash: 8424c4729436a78fec3fdbb405591fcd3c6bc6a6
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 8704091542de5c19817ab0b4f77fd98987084b5d
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/21/2017
 ---
-<a name="items-tab"></a><span data-ttu-id="2768c-103">Guia Itens</span><span class="sxs-lookup"><span data-stu-id="2768c-103">Items Tab</span></span>
-==========
+# <a name="items-tab"></a><span data-ttu-id="030a0-103">Guia Itens</span><span class="sxs-lookup"><span data-stu-id="030a0-103">Items Tab</span></span>
 
-<span data-ttu-id="2768c-104">A Guia Itens exibe todos os itens disponíveis na Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="2768c-104">The Items Tab displays all available items in the PowerShell Gallery.</span></span>
+<span data-ttu-id="030a0-104">A [guia Itens](https://www.powershellgallery.com/items) exibe todos os itens disponíveis na Galeria do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="030a0-104">The [Items tab](https://www.powershellgallery.com/items) displays all available items in the PowerShell Gallery.</span></span>
 
-<span data-ttu-id="2768c-105">Para ver somente os Módulos na Galeria do PowerShell, clique em Módulos no menu suspenso da Guia Itens.</span><span class="sxs-lookup"><span data-stu-id="2768c-105">To see only Modules in the PowerShell Gallery, click Modules in the Items Tab drop down.</span></span>  <span data-ttu-id="2768c-106">De forma semelhante, para ver somente os Scripts na Galeria do PowerShell, clique em Scripts no menu suspenso da Guia Itens.</span><span class="sxs-lookup"><span data-stu-id="2768c-106">Similarly, to see only Scripts in the PowerShell Gallery, click Scripts in the Items Tab drop down.</span></span>  
+<span data-ttu-id="030a0-105">Há várias maneiras de filtrar, classificar e pesquisar os itens.</span><span class="sxs-lookup"><span data-stu-id="030a0-105">There are several ways to filter, sort, and search the items.</span></span>
+<span data-ttu-id="030a0-106">Para ver mais detalhes sobre um item específico, clique no item.</span><span class="sxs-lookup"><span data-stu-id="030a0-106">To see more details about a particular item, click the item.</span></span>
 
-<span data-ttu-id="2768c-107">Para ver mais detalhes sobre um item específico, clique no item.</span><span class="sxs-lookup"><span data-stu-id="2768c-107">To see more details about a particular item, click the item.</span></span>
+## <a name="filter-by"></a><span data-ttu-id="030a0-107">Filtrar Por</span><span class="sxs-lookup"><span data-stu-id="030a0-107">Filter By</span></span>
 
-<span data-ttu-id="2768c-108">Há várias maneiras de classificar os itens:</span><span class="sxs-lookup"><span data-stu-id="2768c-108">There are several ways to sort the items:</span></span>
+<span data-ttu-id="030a0-108">O menu suspenso em "Filtrar Por" permite aos usuários filtrar os resultados por:</span><span class="sxs-lookup"><span data-stu-id="030a0-108">The drop-down under "Filter By" allows users to filter the results by:</span></span>
+* <span data-ttu-id="030a0-109">Incluir pré-lançamento</span><span class="sxs-lookup"><span data-stu-id="030a0-109">Include Prerelease</span></span>
+* <span data-ttu-id="030a0-110">Apenas estável</span><span class="sxs-lookup"><span data-stu-id="030a0-110">Stable Only</span></span>
 
-##<a name="filter-by"></a><span data-ttu-id="2768c-109">Filtrar por ##</span><span class="sxs-lookup"><span data-stu-id="2768c-109">Filter By##</span></span>
-<span data-ttu-id="2768c-110">A seção Filtrar Por permite que os usuários filtrem os resultados por:</span><span class="sxs-lookup"><span data-stu-id="2768c-110">The Filter By section allows users to filter the results by:</span></span>
-* <span data-ttu-id="2768c-111">Tipo de Item:</span><span class="sxs-lookup"><span data-stu-id="2768c-111">Item Type:</span></span>
-    * <span data-ttu-id="2768c-112">Módulos</span><span class="sxs-lookup"><span data-stu-id="2768c-112">Modules</span></span>
-    * <span data-ttu-id="2768c-113">Scripts</span><span class="sxs-lookup"><span data-stu-id="2768c-113">Scripts</span></span>
-* <span data-ttu-id="2768c-114">Categoria:</span><span class="sxs-lookup"><span data-stu-id="2768c-114">Category:</span></span>
-    * <span data-ttu-id="2768c-115">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="2768c-115">Cmdlet</span></span>
-    * <span data-ttu-id="2768c-116">Recurso de DSC</span><span class="sxs-lookup"><span data-stu-id="2768c-116">DSC Resource</span></span>
-    * <span data-ttu-id="2768c-117">Função</span><span class="sxs-lookup"><span data-stu-id="2768c-117">Function</span></span>
-    * <span data-ttu-id="2768c-118">Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="2768c-118">Workflow</span></span>
+<span data-ttu-id="030a0-111">Para saber mais sobre itens de "pré-lançamento" e "estáveis", confira o artigo [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Controle de versão de pré-lançamento adicionado ao PowerShellGet e à Galeria do PowerShell), no blog da equipe do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="030a0-111">For information about "Prerelease" and "Stable", see [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) in the PowerShell Team Blog.</span></span>
 
-<span data-ttu-id="2768c-119">Observação: os filtros são inclusivos.</span><span class="sxs-lookup"><span data-stu-id="2768c-119">Note: Filters are inclusive.</span></span>  
-<span data-ttu-id="2768c-120">Exemplo: um item que contém Cmdlets e Funções será exibido se um Cmdlet ou Função (ou ambos) for selecionada.</span><span class="sxs-lookup"><span data-stu-id="2768c-120">Example: An item containing both Cmdlets and Functions will appear if either Cmdlet or Function (or both) are checked.</span></span>  <span data-ttu-id="2768c-121">Se nenhum dos dois for selecionado, o item não será exibido.</span><span class="sxs-lookup"><span data-stu-id="2768c-121">If neither are selected, the item will not appear.</span></span>  
-<span data-ttu-id="2768c-122">De forma semelhante, se todas as categorias forem selecionadas, apenas itens que contêm uma dessas categorias serão exibidos.</span><span class="sxs-lookup"><span data-stu-id="2768c-122">Similarly, if all categories are selected, only items containing one of those categories will appear.</span></span> <span data-ttu-id="2768c-123">**Itens que não pertencem a nenhuma dessas categorias não serão exibidos.**</span><span class="sxs-lookup"><span data-stu-id="2768c-123">**Items that do not belong to any of those categories will not appear.**</span></span>
+<span data-ttu-id="030a0-112">Com as caixas de seleção no menu suspenso, os usuários podem filtrar os resultados por:</span><span class="sxs-lookup"><span data-stu-id="030a0-112">The checkboxes under the drop-down allow users to filter the results by:</span></span>
+* <span data-ttu-id="030a0-113">Tipos de item</span><span class="sxs-lookup"><span data-stu-id="030a0-113">Item Types</span></span>
+  - <span data-ttu-id="030a0-114">Módulo</span><span class="sxs-lookup"><span data-stu-id="030a0-114">Module</span></span>
+  - <span data-ttu-id="030a0-115">script</span><span class="sxs-lookup"><span data-stu-id="030a0-115">Script</span></span>
+* <span data-ttu-id="030a0-116">Categorias</span><span class="sxs-lookup"><span data-stu-id="030a0-116">Categories</span></span>
+  - <span data-ttu-id="030a0-117">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="030a0-117">Cmdlet</span></span>
+  - <span data-ttu-id="030a0-118">Recurso de DSC</span><span class="sxs-lookup"><span data-stu-id="030a0-118">DSC Resource</span></span>
+  - <span data-ttu-id="030a0-119">Função</span><span class="sxs-lookup"><span data-stu-id="030a0-119">Function</span></span>
+  - <span data-ttu-id="030a0-120">Capacidade da função</span><span class="sxs-lookup"><span data-stu-id="030a0-120">Role Capability</span></span>
+  - <span data-ttu-id="030a0-121">Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="030a0-121">Workflow</span></span>
 
-##<a name="sort-by"></a><span data-ttu-id="2768c-124">Classificar por ##</span><span class="sxs-lookup"><span data-stu-id="2768c-124">Sort By##</span></span> 
-<span data-ttu-id="2768c-125">O menu suspenso Classificar Por permite aos usuários classificar os resultados por:</span><span class="sxs-lookup"><span data-stu-id="2768c-125">The Sort By drop down allows users to sort the results by:</span></span>
-* <span data-ttu-id="2768c-126">Popularidade – a popularidade é determinada pela Contagem de Download.</span><span class="sxs-lookup"><span data-stu-id="2768c-126">Popularity - Popularity is determined by Download Count.</span></span>
-* <span data-ttu-id="2768c-127">A-Z – em ordem alfabética por nome do item.</span><span class="sxs-lookup"><span data-stu-id="2768c-127">A-Z - Alphabetically by item name.</span></span>
-* <span data-ttu-id="2768c-128">Recentes – os itens aparecem na ordem da data de publicação.</span><span class="sxs-lookup"><span data-stu-id="2768c-128">Recent - Items appear in order of publish date.</span></span>
+<span data-ttu-id="030a0-122">Para ver somente módulos na Galeria do PowerShell, marque a opção Módulo nos Tipos de item.</span><span class="sxs-lookup"><span data-stu-id="030a0-122">To see only modules in the PowerShell Gallery, check Module in the Item Types.</span></span>
+<span data-ttu-id="030a0-123">Da mesma forma, para ver somente scripts na Galeria do PowerShell, marque a opção Script nos Tipos de item.</span><span class="sxs-lookup"><span data-stu-id="030a0-123">Similarly, to see only scripts in the PowerShell Gallery, check Script in the Item Types.</span></span>
 
+> [!NOTE]
+> <span data-ttu-id="030a0-124">Os filtros são inclusivos.</span><span class="sxs-lookup"><span data-stu-id="030a0-124">Filters are inclusive.</span></span>
+> <span data-ttu-id="030a0-125">Exemplo: um item que contém cmdlets e funções será exibido se Cmdlet ou Função (ou ambos) estiverem marcados.</span><span class="sxs-lookup"><span data-stu-id="030a0-125">Example: An item containing both cmdlets and functions will appear if either Cmdlet or Function (or both) are checked.</span></span>
+> <span data-ttu-id="030a0-126">Se nenhum dos dois for selecionado, o item não será exibido.</span><span class="sxs-lookup"><span data-stu-id="030a0-126">If neither are selected, the item will not appear.</span></span>
+> <span data-ttu-id="030a0-127">De forma semelhante, se todas as categorias forem selecionadas, apenas itens que contêm uma dessas categorias serão exibidos.</span><span class="sxs-lookup"><span data-stu-id="030a0-127">Similarly, if all categories are selected, only items containing one of those categories will appear.</span></span>
+> <span data-ttu-id="030a0-128">**Itens que não pertencem a nenhuma dessas categorias não serão exibidos.**</span><span class="sxs-lookup"><span data-stu-id="030a0-128">**Items that do not belong to any of those categories will not appear.**</span></span>
 
-##<a name="search-box"></a><span data-ttu-id="2768c-129">Caixa de pesquisa ##</span><span class="sxs-lookup"><span data-stu-id="2768c-129">Search Box##</span></span>
-<span data-ttu-id="2768c-130">A Caixa de Pesquisa permite que os usuários pesquisem itens por palavras-chave.</span><span class="sxs-lookup"><span data-stu-id="2768c-130">The Search Box allows users to search the items on keywords.</span></span>  
-<span data-ttu-id="2768c-131">Consulte [Sintaxe de Pesquisa](./psgallery_search_syntax.md) para obter mais detalhes.</span><span class="sxs-lookup"><span data-stu-id="2768c-131">See [Search Syntax](./psgallery_search_syntax.md) for more details.</span></span>
+## <a name="sort-by"></a><span data-ttu-id="030a0-129">Classificar Por</span><span class="sxs-lookup"><span data-stu-id="030a0-129">Sort By</span></span>
 
+<span data-ttu-id="030a0-130">O menu suspenso Classificar Por permite aos usuários classificar os resultados por:</span><span class="sxs-lookup"><span data-stu-id="030a0-130">The Sort By drop-down allows users to sort the results by:</span></span>
+* <span data-ttu-id="030a0-131">Popularidade – a popularidade é determinada pela Contagem de Downloads</span><span class="sxs-lookup"><span data-stu-id="030a0-131">Popularity - Popularity is determined by Download Count</span></span>
+* <span data-ttu-id="030a0-132">A a Z – em ordem alfabética por nome do item</span><span class="sxs-lookup"><span data-stu-id="030a0-132">A-Z - Alphabetically by item name</span></span>
+* <span data-ttu-id="030a0-133">Recentes – os itens aparecem na ordem da data de publicação</span><span class="sxs-lookup"><span data-stu-id="030a0-133">Recent - Items appear in order of publish date</span></span>
+
+## <a name="search-box"></a><span data-ttu-id="030a0-134">Caixa de Pesquisa</span><span class="sxs-lookup"><span data-stu-id="030a0-134">Search Box</span></span>
+
+<span data-ttu-id="030a0-135">A Caixa de Pesquisa permite que os usuários pesquisem itens por palavras-chave.</span><span class="sxs-lookup"><span data-stu-id="030a0-135">The Search Box allows users to search the items on keywords.</span></span>
+<span data-ttu-id="030a0-136">Para saber mais, confira [Sintaxe de Pesquisa da Galeria](psgallery_search_syntax.md).</span><span class="sxs-lookup"><span data-stu-id="030a0-136">For more information, see [Gallery Search Syntax](psgallery_search_syntax.md).</span></span>
