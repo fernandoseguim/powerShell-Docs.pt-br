@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Criar recursos personalizados de configuração de estado desejado do Windows PowerShell"
-ms.openlocfilehash: 75b494db4ee6e381491decb11d35b60105217a0f
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 4751bcaab1996ee3164bd2a2f430c3b188712860
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>Criar recursos personalizados de configuração de estado desejado do Windows PowerShell
 
@@ -20,9 +19,9 @@ A Configuração de Estado Desejado (DSC) do Windows PowerShell tem recursos int
 
 Um recurso de DSC é um módulo do Windows PowerShell. O módulo contém o esquema (a definição das propriedades configuráveis) e a implementação (o código que faz o trabalho real especificado por uma configuração) do recurso. Um esquema de recursos de DSC pode ser definido em um arquivo MOF e a implementação é executada por um módulo de script. Começando com o suporte das classes do PowerShell na versão 5, o esquema e a implementação podem ser definidos em uma classe. Os tópicos a seguir descrevem detalhadamente como criar recursos de DSC.
 
-* [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md) 
-* [Implementando um recurso de DSC em C#](authoringResourceMofCS.md) 
-* [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md) 
-* [Recursos de composição: usando uma configuração DSC como um recurso](authoringResourceComposite.md) 
-* [Usando a ferramenta Designer de Recursos](authoringResourceMofDesigner.md) 
+* [Escrevendo um recurso personalizado de DSC com MOF](authoringResourceMOF.md)
+* [Implementando um recurso de DSC em C#](authoringResourceMofCS.md)
+* [Escrevendo um recurso personalizado de DSC com classes do PowerShell](authoringResourceClass.md)
+* [Recursos de composição: usando uma configuração DSC como um recurso](authoringResourceComposite.md)
+* [Usando a ferramenta Designer de Recursos](authoringResourceMofDesigner.md)
 

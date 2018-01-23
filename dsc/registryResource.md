@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Recurso Registry de DSC
-ms.openlocfilehash: 649cb60578c053c04a7fcc7446881fb76daee26a
-ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.openlocfilehash: 1e73e4275c0d9db5d8fac7641514ea8190f719ca
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-registry-resource"></a>Recurso Registry de DSC
 

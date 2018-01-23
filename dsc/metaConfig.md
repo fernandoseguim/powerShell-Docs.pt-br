@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-10-11
-author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Configurando o Gerenciador de Configurações Local"
-ms.openlocfilehash: 6ca527aae263637bbca5a064e0d770fe9384d679
-ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
+ms.openlocfilehash: 947bc17347204f6f15a24f83b449582afe65a4ee
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -46,7 +45,7 @@ configuration LCMConfig
             RefreshMode = 'Push'
         }
     }
-} 
+}
 ```
 
 O processo de aplicação das configurações do LCM é semelhante à aplicação de uma configuração de DSC.
@@ -130,7 +129,7 @@ Para definir um servidor de configuração baseado na Web, crie um bloco **Confi
 Um **ConfigurationRepositoryWeb** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
-|---|---|---| 
+|---|---|---|
 |AllowUnsecureConnection|bool|Defina como **$TRUE** para permitir conexões entre o nó e o servidor sem autenticação. Defina como **$FALSE** para exigir autenticação.|
 |CertificateID|cadeia de caracteres|A impressão digital de um certificado usado para autenticar o servidor.|
 |ConfigurationNames|String[]|Uma matriz de nomes de configurações que serão retiradas por pull pelo nó de destino. Serão usadas apenas se o nó for registrado com o serviço de pull usando uma **RegistrationKey**. Para obter mais informações, consulte [Configurando um cliente de pull com nomes de configuração](pullClientConfigNames.md).|
@@ -191,7 +190,7 @@ Para obter mais informações sobre configurações parciais, consulte [Configur
 **PartialConfiguration** define as propriedades a seguir.
 
 |Propriedade|Tipo|Descrição|
-|---|---|---| 
+|---|---|---|
 |ConfigurationSource|string[]|Uma matriz de nomes de servidores de configuração, definidos previamente nos blocos **ConfigurationRepositoryWeb** e **ConfigurationRepositoryShare**, dos quais a configuração parcial é retirada.|
 |DependsOn|string{}|Uma lista de nomes de outras configurações que devem ser concluídas antes que essa configuração parcial seja aplicada.|
 |Descrição|cadeia de caracteres|Texto usado para descrever a configuração parcial.|
@@ -201,11 +200,11 @@ Para obter mais informações sobre configurações parciais, consulte [Configur
 
 __Observação:__ configurações parciais são compatíveis com o DSC de Automação do Azure, mas somente uma configuração pode ser extraída de cada conta de automação por nó.
 
-## <a name="see-also"></a>Consulte Também 
+## <a name="see-also"></a>Consulte Também
 
 ### <a name="concepts"></a>Conceitos
 [Visão geral da Configuração do Estado Desejado](overview.md)
- 
+
 [Introdução à DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started)
 
 ### <a name="other-resources"></a>Outros recursos
