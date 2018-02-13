@@ -1,13 +1,13 @@
 ---
 ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: "Módulo ISE"
 ms.assetid: fd03c995-4cdb-4d14-a315-9cfbd1e81b10
 ms.openlocfilehash: 846d1c858f6d72009985221267e664f3f40395ac
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="ise-module"></a>Módulo ISE
 Esta seção contém tópicos da ajuda para o módulo **ISE**, que inclui comandos que podem ser usados no ISE (Ambiente de Script Integrado) do Windows PowerShell. O módulo **ISE** é instalado com o Windows PowerShell.
