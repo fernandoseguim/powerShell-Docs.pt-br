@@ -3,11 +3,11 @@ ms.date: 2017-10-11
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Configurando o Gerenciador de Configurações Local"
-ms.openlocfilehash: 81434b57e453ba7b64cc32dffdf309da16ef8882
-ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
+ms.openlocfilehash: b8e0749cf2f67e395e9fd8eaf9cde33b97c0cb67
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurando o Gerenciador de Configurações Local
 
@@ -25,8 +25,8 @@ Também é responsável por uma série de outros aspectos da DSC, incluindo os i
 Um tipo especial de configuração é utilizado para configurar o LCM para especificar cada um desses comportamentos.
 As seções a seguir descrevem como configurar o LCM.
 
-> **Observação**: este tópico se aplica ao LCM introduzido no Windows PowerShell 5.0.
-Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, consulte o [Gerenciador de Configurações Local (LCM) de Configuração de Estado Desejado do Windows PowerShell 4.0](metaconfig4.md).
+O Windows PowerShell 5.0 introduziu novas configurações para gerenciar o Gerenciador de Configurações Local.
+Para obter informações sobre como configurar o LCM no Windows PowerShell 4.0, veja [Configurar o Gerenciador de Configurações Local em versões anteriores do Windows PowerShell](metaconfig4.md).
 
 ## <a name="writing-and-enacting-an-lcm-configuration"></a>Escrevendo e aplicando uma configuração do LCM
 
@@ -90,38 +90,13 @@ As seguintes propriedades estão disponíveis em um bloco **Settings**.
 
 ## <a name="pull-service"></a>Serviço de pull
 
-As configurações de DSC permitem que um nó seja gerenciado obtendo por pull as configurações e os módulos, e publicando dados de relatório, em um local remoto.
-As opções atuais para o serviço de pull incluem:
-
-- Serviço de Configuração de Estado Desejado da Automação do Azure
-- Uma instância do serviço de pull em execução no Windows Server
-- Um compartilhamento SMB (não dá suporte a publicação de dados de relatórios)
-
 A configuração do LCM dá suporte à definição dos seguintes tipos de ponto de extremidade de serviço de pull:
 
 - **Servidor de configuração**: um repositório de configurações DSC. Defina os servidores de configuração usando blocos **ConfigurationRepositoryWeb** (para servidores baseados na Web) e **ConfigurationRepositoryShare** (para servidores baseados em SMB).
 - **Servidor de recursos**: um repositório de recursos de DSC, empacotados como módulos do PowerShell. Defina os servidores de recurso usando blocos **ResourceRepositoryWeb** (para servidores baseados na Web) e **ResourceRepositoryShare** (para servidores baseados em SMB).
 - **Servidor de relatório**: um serviço para o qual a DSC envia dados de relatório. Defina os servidores de relatório usando blocos **ReportServerWeb**. Um servidor de relatório deve ser um serviço Web.
 
-**A solução recomendada**, e a opção com a maioria dos recursos disponíveis, é [DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started).
-
-O serviço do Azure pode gerenciar nós localmente em datacenters privados ou em nuvens públicas, como AWS e o Azure.
-Para ambientes privados, onde os servidores não podem se conectar diretamente à Internet, considere limitar o tráfego de saída apenas ao intervalo de IPs do Azure publicado (consulte [Intervalos de IP de Datacenter do Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
-
-Entre os recursos do serviço online que não estão disponíveis no serviço de pull no Windows Server estão:
-- Todos os dados são criptografados em trânsito e em repouso
-- Certificados de cliente são criados e gerenciados automaticamente
-- Armazenamento de segredos para gerenciar centralmente [senhas/credenciais](https://docs.microsoft.com/en-us/azure/automation/automation-credentials), ou [variáveis](https://docs.microsoft.com/en-us/azure/automation/automation-variables) como nomes de servidor ou cadeias de conexão
-- Gerenciar centralmente o nó [Configuração do LCM](metaConfig.md#basic-settings)
-- Atribuir centralmente configurações a nós do cliente
-- Alterações na configuração de versão de "grupos canário" para teste antes de chegar à produção
-- Relatório gráfico
-  - Detalhes de status no nível de granularidade de recursos de DSC
-  - Mensagens de erro detalhadas de computadores cliente para solução de problemas
-- [Integração com o Azure Log Analytics](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-diagnostics) para alertas, tarefas automatizadas, aplicativo para Android/iOS para relatórios e alertas
-
-Como alternativa, para obter informações sobre a configuração e o uso do serviço de pull de HTTP no Windows Server, consulte [Configurar um servidor de pull de DSC](pullServer.md).
-Lembre-se de que se trata de uma implementação limitada com apenas os recursos básicos de armazenamento de configurações/módulos e captura de dados de relatório em um banco de dados local.
+Para obter mais detalhes sobre o serviço de pull, veja [Serviço de pull de Desired State Configuration](pullServer.md).
 
 ## <a name="configuration-server-blocks"></a>Blocos do servidor de configuração
 
