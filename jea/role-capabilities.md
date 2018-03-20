@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,segurança"
 title: "Recursos de Função JEA"
-ms.openlocfilehash: 10f5f390daccbb012be6ee7272041e777810ee12
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 083cab3b44348168fe20e8355f5076b28be78702
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
 
@@ -86,7 +86,7 @@ VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; Val
 ```
 
 > [!NOTE]
-> Os [parâmetros comuns do PowerShell](https://technet.microsoft.com/en-us/library/hh847884.aspx) são sempre permitidos, mesmo que você restrinja os parâmetros disponíveis.
+> Os [parâmetros comuns do PowerShell](https://technet.microsoft.com/library/hh847884.aspx) são sempre permitidos, mesmo que você restrinja os parâmetros disponíveis.
 > Você não deve listá-los explicitamente no campo Parâmetros.
 
 A tabela a seguir descreve as várias maneiras que podem ser usadas para personalizar um cmdlet ou função visível.
@@ -111,7 +111,7 @@ Você não pode aplicar um ValidatePattern e ValidateSet no mesmo cmdlet ou fun�
 
 Se isso acontecer, o ValidatePattern substituirá o ValidateSet.
 
-Para obter mais informações sobre ValidatePattern, dê uma olhada [nessa postagem *Hey, Scripting Guy!*](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e no conteúdo de referência [Expressões regulares do PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
+Para obter mais informações sobre ValidatePattern, dê uma olhada [nessa postagem *Hey, Scripting Guy!*](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e no conteúdo de referência [Expressões regulares do PowerShell](https://technet.microsoft.com/library/hh847880.aspx).
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>Permitindo comandos externos e scripts do PowerShell
 
@@ -128,7 +128,7 @@ Muitos executáveis permitem que você leia o estado atual e, em seguida, altere
 Por exemplo, considere a função de um administrador de servidor de arquivo que deseja verificar quais compartilhamentos de rede são hospedados pelo computador local.
 Uma maneira de verificar é usar `net share`.
 No entanto, permitir o net.exe é muito perigoso, pois o administrador poderia facilmente usar o comando para obter privilégios de administrador com `net group Administrators unprivilegedjeauser /add`.
-Uma abordagem melhor é permitir o [Get-SmbShare](https://technet.microsoft.com/en-us/library/jj635704.aspx) que alcança o mesmo resultado, mas tem um escopo muito mais limitado.
+Uma abordagem melhor é permitir o [Get-SmbShare](https://technet.microsoft.com/library/jj635704.aspx) que alcança o mesmo resultado, mas tem um escopo muito mais limitado.
 
 Ao disponibilizar comandos externos aos usuários em uma sessão JEA, sempre especifique o caminho completo para o executável para garantir que um programa nomeado da mesma forma (e potencialmente mal-intencionado) colocado em outro lugar no sistema não seja executado em vez disso.
 

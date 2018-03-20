@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,segurança"
 title: "Configurações de Sessão de JEA"
-ms.openlocfilehash: 0a8931ae15caf04a3639ab46f130e5f5b0498d8c
-ms.sourcegitcommit: 0733db9a05e89e6a23f6b52b9edd784fcbe8beec
+ms.openlocfilehash: c475a90a59d91b074f954cfb656b00142444c052
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-session-configurations"></a>Configurações de Sessão de JEA
 
@@ -38,7 +38,7 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 
 Você pode abrir o arquivo de configuração de sessão em qualquer editor de texto.
 O campo `-SessionType RestrictedRemoteServer` indica que a configuração da sessão será usada pelo JEA para gerenciamento seguro.
-As sessões configuradas dessa forma funcionarão no [modo NoLanguage](https://technet.microsoft.com/en-us/library/dn433292.aspx) e só terão estes oito comandos (e aliases) padrão disponíveis:
+As sessões configuradas dessa forma funcionarão no [modo NoLanguage](https://technet.microsoft.com/library/dn433292.aspx) e só terão estes oito comandos (e aliases) padrão disponíveis:
 
 - Clear-Host (cls, limpar)
 - Exit-PSSession (exsn, sair)
@@ -128,7 +128,7 @@ Os usuários padrão não devem ter nenhum acesso à pasta e um conjunto limitad
 ### <a name="user-drive"></a>Unidade de usuário
 
 Se os usuários que estão se conectando precisarem copiar arquivos do ou para o ponto de extremidade JEA para executar um comando, você poderá habilitar a unidade do usuário no arquivo de configuração de sessão.
-A unidade de usuário é um [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) que é mapeada para uma pasta exclusiva para cada usuário que está se conectando.
+A unidade de usuário é um [PSDrive](https://msdn.microsoft.com/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) que é mapeada para uma pasta exclusiva para cada usuário que está se conectando.
 Essa pasta serve como um espaço para que eles possam copiar arquivos do sistema ou para o sistema, sem fornecer acesso ao sistema de arquivos completo ou expor o provedor FileSystem.
 Os conteúdos da unidade de usuário são persistentes entre as sessões para se adaptar a situações em que a conectividade de rede pode ser interrompida.
 

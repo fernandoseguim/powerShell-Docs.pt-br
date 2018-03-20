@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Configurações parciais da Configuração de Estado Desejado do PowerShell"
-ms.openlocfilehash: 66791bb7b14898d292b9da38dd27ba45b7c75d88
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4401ea80cffd09f4b92c9fcca16d5dcad7f6a327
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurações parciais da Configuração de Estado Desejado do PowerShell
 
@@ -18,10 +18,10 @@ No PowerShell 5.0, a Configuração de Estado Desejado (DSC) permite que as conf
 É possível usar configurações parciais no modo de push, no modo de pull ou em uma combinação de ambos.
 
 ## <a name="partial-configurations-in-push-mode"></a>Configurações parciais no modo de push
-Para usar configurações parciais no modo de push, o LCM é configurado no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada por push para o destino usando o cmdlet Publish-DSCConfiguration. Em seguida, o nó de destino combina a configuração parcial em uma única configuração; pode-se aplicar a configuração chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
+Para usar configurações parciais no modo de push, o LCM é configurado no nó de destino para receber as configurações parciais. Cada configuração parcial deve ser enviada por push para o destino usando o cmdlet Publish-DSCConfiguration. Em seguida, o nó de destino combina a configuração parcial em uma única configuração; pode-se aplicar a configuração chamando o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx).
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Configurando o LCM para configurações parciais no modo de push
-Para configurar o LCM para configurações parciais no modo de push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
+Para configurar o LCM para configurações parciais no modo de push, é criada uma configuração **DSCLocalConfigurationManager** com um bloco **PartialConfiguration** para cada configuração parcial. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/library/mt421188.aspx). O exemplo a seguir mostra uma configuração do LCM que espera duas configurações parciais—uma que implanta o sistema operacional e outra que implanta e configura o SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -51,7 +51,7 @@ O **RefreshMode** para cada configuração parcial é definido como "Push". Os n
 
 ### <a name="publishing-and-starting-push-mode-partial-configurations"></a>Publicando e iniciando configurações parciais no modo de push
 
-A seguir, chame [Publish-DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) para cada configuração, passando as pastas que contêm os documentos de configuração como os parâmetros **Path**. O `Publish-DSCConfiguration` coloca os arquivos MOF de configuração para os nós de destino. Depois de publicar as duas configurações, é possível chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
+A seguir, chame [Publish-DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) para cada configuração, passando as pastas que contêm os documentos de configuração como os parâmetros **Path**. O `Publish-DSCConfiguration` coloca os arquivos MOF de configuração para os nós de destino. Depois de publicar as duas configurações, é possível chamar `Start-DSCConfiguration –UseExisting` no nó de destino.
 
 Por exemplo, se você compilou os seguintes documentos MOF de configuração no nó de criação:
 
@@ -96,7 +96,7 @@ Id     Name            PSJobTypeName   State         HasMoreData     Location   
 17     Job17           Configuratio... Running       True            TestVM            Start-DscConfiguration...
 ```
 
->**Observação:** o usuário que estiver executando o cmdlet [Publish-DSCConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) deve ter privilégios de administrador no nó de destino.
+>**Observação:** o usuário que estiver executando o cmdlet [Publish-DSCConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/psdesiredstateconfiguration/publish-dscconfiguration) deve ter privilégios de administrador no nó de destino.
 
 ## <a name="partial-configurations-in-pull-mode"></a>Configurações parciais no modo de pull
 
@@ -377,5 +377,5 @@ SharePointConfig
 **Conceitos**
 [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](pullServer.md) 
 
-[Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
+[Configurando o Gerenciador de Configurações Local com o Windows](https://technet.microsoft.com/library/mt421188.aspx) 
 

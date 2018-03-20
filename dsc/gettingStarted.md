@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Introdução à Configuração de Estado Desejado do PowerShell"
-ms.openlocfilehash: 856528f1e52eafa8b2c93b825a60376a0d64cab2
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 04404696bef128805e4f1c191711eaab33cf7e4c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-powershell-desired-state-configuration"></a>Introdução à Configuração de Estado Desejado do PowerShell #
 
@@ -16,7 +16,7 @@ Este guia descreve como começar a criar documentos de Configuração de Estado 
 
 ## <a name="create-a-configuration"></a>Criar uma configuração ##
 
-[**Configurações**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) são documentos que descrevem um ambiente. Os ambientes consistem em "**nós**", que normalmente são máquinas virtuais ou físicas. 
+[**Configurações**](https://msdn.microsoft.com/powershell/dsc/configurations) são documentos que descrevem um ambiente. Os ambientes consistem em "**nós**", que normalmente são máquinas virtuais ou físicas. 
 
 As configurações podem vir de várias formas. A maneira mais fácil de criar uma nova configuração é criar um arquivo .ps1 (script do PowerShell). Para fazer isso, abra o editor escolhido por você. O ISE do PowerShell é uma boa opção, pois entenda a DSC nativamente. Salve o seguinte como um PS1:
 
@@ -44,9 +44,9 @@ A próxima linha é uma instrução de importação, semelhante à importação 
 
 "Nó" define o nome do computador em que essa configuração vai agir. Embora ela seja editada localmente, as configurações podem chegar a nós remotos e configurá-los. 
 
-Os nós podem ser nomes ou endereços IP de computador. Você pode ter vários nós em um único documento de configuração. Usando [dados de configuração](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), também é possível aplicar a mesma configuração a vários nós. Nesse caso, o nó é "localhost" - que significa o computador local. 
+Os nós podem ser nomes ou endereços IP de computador. Você pode ter vários nós em um único documento de configuração. Usando [dados de configuração](https://msdn.microsoft.com/powershell/dsc/configdata), também é possível aplicar a mesma configuração a vários nós. Nesse caso, o nó é "localhost" - que significa o computador local. 
 
-O próximo item é um [**recurso**](https://msdn.microsoft.com/en-us/powershell/dsc/resources). Os recursos são blocos de construção de configurações. Cada recurso é um módulo que define a lógica de implementação de um único aspecto de um computador. Você pode exibir todos os recursos no seu computador executando **Get-DscResource** no PowerShell. Os recursos devem estar presentes no computador local e ser importados antes que possam ser usados em uma configuração com **Import-DscResource**, que está na segunda linha dessa configuração. 
+O próximo item é um [**recurso**](https://msdn.microsoft.com/powershell/dsc/resources). Os recursos são blocos de construção de configurações. Cada recurso é um módulo que define a lógica de implementação de um único aspecto de um computador. Você pode exibir todos os recursos no seu computador executando **Get-DscResource** no PowerShell. Os recursos devem estar presentes no computador local e ser importados antes que possam ser usados em uma configuração com **Import-DscResource**, que está na segunda linha dessa configuração. 
 
 **Aplicando uma Configuração**
 

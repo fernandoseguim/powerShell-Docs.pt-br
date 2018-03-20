@@ -3,11 +3,11 @@ ms.date: 2017-10-31
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Protegendo o Arquivo MOF
-ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 1bb257f3237344f32c9035f3836dd317b75eef0a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
 
@@ -19,7 +19,7 @@ Este tópico descreve como garantir que o nó de destino criptografou o arquivo.
 
 A partir do PowerShell versão 5.0, o arquivo MOF inteiro é criptografado por padrão quando aplicado ao nó usando o cmdlet **Start-DSCConfiguration**.
 O processo descrito neste artigo será necessário somente ao implementar uma solução usando o protocolo de serviço de pull se os certificados não forem gerenciados, para garantir que as configurações baixadas pelo nó de destino possam ser criptografadas e lidas pelo sistema antes de serem aplicadas (por exemplo, o serviço de pull disponível no Windows Server).
-Nós registrados no [DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) terão certificados automaticamente instalados e gerenciados pelo serviço sem a necessidade de sobrecarga administrativa.
+Nós registrados no [DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview) terão certificados automaticamente instalados e gerenciados pelo serviço sem a necessidade de sobrecarga administrativa.
 
 >**Observação:** este tópico discute os certificados usados para criptografia.
 >Para criptografia, um certificado autoassinado é suficiente porque a chave privada é mantida sempre segredo e a criptografia não afeta a confiança do documento.
@@ -262,7 +262,7 @@ configuration CredentialEncryptionExample
 
 ## <a name="setting-up-decryption"></a>Configurando a descriptografia
 
-Para que o [`Start-DscConfiguration`](https://technet.microsoft.com/en-us/library/dn521623.aspx) possa funcionar, você precisa informar ao Gerenciador de Configurações Local em cada nó de destino qual certificado usar para descriptografar as credenciais, usando o recurso CertificateID para verificar a impressão digital do certificado. A função neste exemplo encontrará o certificado local apropriado (talvez seja necessário personalizá-lo para ele encontrar o certificado exato que você deseja usar):
+Para que o [`Start-DscConfiguration`](https://technet.microsoft.com/library/dn521623.aspx) possa funcionar, você precisa informar ao Gerenciador de Configurações Local em cada nó de destino qual certificado usar para descriptografar as credenciais, usando o recurso CertificateID para verificar a impressão digital do certificado. A função neste exemplo encontrará o certificado local apropriado (talvez seja necessário personalizá-lo para ele encontrar o certificado exato que você deseja usar):
 
 ```powershell
 # Get the certificate that works for encryption 
@@ -311,7 +311,7 @@ configuration CredentialEncryptionExample
 
 Neste ponto, você pode executar a configuração, o que resultará em dois arquivos:
 
- * Um arquivo *.meta.mof que configura o Gerenciador de Configurações Local para descriptografar as credenciais usando o certificado armazenado no repositório do computador local e identificado por sua impressão digital. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/en-us/library/dn521621.aspx) aplica o arquivo *.meta.mof.
+ * Um arquivo *.meta.mof que configura o Gerenciador de Configurações Local para descriptografar as credenciais usando o certificado armazenado no repositório do computador local e identificado por sua impressão digital. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) aplica o arquivo *.meta.mof.
  * Um arquivo MOF que realmente aplica a configuração. O Start-DscConfiguration aplica a configuração.
 
 Estes comandos realizarão estas etapas:

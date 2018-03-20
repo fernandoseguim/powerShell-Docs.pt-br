@@ -4,11 +4,11 @@ contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Find-DscResource
-ms.openlocfilehash: 37ba7925d6f73c453126f25e0818b3f8839d3b3b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 6c5713f122d48e9c9d5e0aa45dc14047afc56102
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="find-dscresource"></a>Find-DscResource
 
@@ -16,7 +16,7 @@ Localiza Recursos de DSC nos módulos.
 
 ## <a name="description"></a>Descrição
 
-O cmdlet Find-DscResource localiza recursos de [DSC (Configuração de Estado Desejado)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contidos em módulos que correspondam aos critérios especificados dos repositórios registrados.
+O cmdlet Find-DscResource localiza recursos de [DSC (Configuração de Estado Desejado)](https://msdn.microsoft.com/PowerShell/dsc/overview) contidos em módulos que correspondam aos critérios especificados dos repositórios registrados.
 Para cada módulo que localiza, o cmdlet Find-DscResource retorna um objeto PSGetDscResourceInfo que você pode redirecionar para Install-Module para instalar os módulos que contêm os recursos que esse cmdlet retorna.
 
 A DSC é uma nova plataforma de gerenciamento do Windows PowerShell que permite implantar e gerenciar dados de configuração para serviços de software e gerenciar o ambiente no qual esses serviços são executados.

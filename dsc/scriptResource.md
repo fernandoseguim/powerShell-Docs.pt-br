@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Recurso Script de DSC
-ms.openlocfilehash: 22213b74986b45b3a8205f1584b3b0d89a92f211
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: d65a89ceba0b641ccb0ac3dfcc6d5ec1a48dc92a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-script-resource"></a>Recurso Script de DSC
 
@@ -42,9 +42,9 @@ Script [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| GetScript| Fornece um bloco de script do Windows PowerShell que é executado quando você invoca o cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx). Esse bloco deve retornar uma tabela de hash. A tabela de hash deve conter somente uma chave **Resultado** e o valor deve ser do tipo **cadeia de caracteres**.| 
-| SetScript| Fornece um bloco de script do Windows PowerShell. Quando você invoca o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), o bloco **TestScript** é executado primeiro. Se o bloco **TestScript** gerar **$false**, o bloco **SetScript** será executado. Se o bloco **TestScript** gerar **$true**, o bloco **SetScript** não será executado.| 
-| TestScript| Fornece um bloco de script do Windows PowerShell. Quando você invoca o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), esse bloco é executado. Se gerar **$false**, o bloco SetScript será executado. Se gerar **$true**, o bloco SetScript não será executado. O bloco **TestScript** também é executado quando você invoca o cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). No entanto, nesse caso, o bloco **SetScript** não será executado, independentemente do valor gerado pelo bloco TestScript. O bloco **TestScript** precisará gerar True se a configuração real corresponder à configuração atual de estado desejado e False se não corresponder. (A configuração atual de estado desejado é a última configuração aplicada no nó que está usando a DSC.)| 
+| GetScript| Fornece um bloco de script do Windows PowerShell que é executado quando você invoca o cmdlet [Get-DscConfiguration](https://technet.microsoft.com/library/dn407379.aspx). Esse bloco deve retornar uma tabela de hash. A tabela de hash deve conter somente uma chave **Resultado** e o valor deve ser do tipo **cadeia de caracteres**.| 
+| SetScript| Fornece um bloco de script do Windows PowerShell. Quando você invoca o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx), o bloco **TestScript** é executado primeiro. Se o bloco **TestScript** gerar **$false**, o bloco **SetScript** será executado. Se o bloco **TestScript** gerar **$true**, o bloco **SetScript** não será executado.| 
+| TestScript| Fornece um bloco de script do Windows PowerShell. Quando você invoca o cmdlet [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx), esse bloco é executado. Se gerar **$false**, o bloco SetScript será executado. Se gerar **$true**, o bloco SetScript não será executado. O bloco **TestScript** também é executado quando você invoca o cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). No entanto, nesse caso, o bloco **SetScript** não será executado, independentemente do valor gerado pelo bloco TestScript. O bloco **TestScript** precisará gerar True se a configuração real corresponder à configuração atual de estado desejado e False se não corresponder. (A configuração atual de estado desejado é a última configuração aplicada no nó que está usando a DSC.)| 
 | Credential| Indica as credenciais que devem ser usadas para executar esse script, caso sejam necessárias.| 
 | DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.
 

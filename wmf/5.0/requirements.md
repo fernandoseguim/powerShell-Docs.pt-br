@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: e4e5c6fff2eea12b9cfbba325d5519f6266218e8
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 510e1baa2933932cfd4c3bcb4e0973f3eb8095f3
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="system-requirements"></a>Requisitos do Sistema
 
@@ -18,9 +18,9 @@ ms.lasthandoff: 06/12/2017
     |------------------------|--------------|------------------|----------------------| --------------|
     | Windows Server 2012 R2 |  |  | [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) |
     | Windows Server 2012    |  |  | [W2K12-KB3134759-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717506) |
-    | Windows Server 2008 R2 SP1 | Todos, exceto IA64 | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) estão instalados| [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
+    | Windows Server 2008 R2 SP1 | Todos, exceto IA64 | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/library/5a4x27ek.aspx) estão instalados| [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
     | Windows 8.1 | Pro, Enterprise | | **x64:**  [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) </br> **x86:**  [Win8.1-KB3134758-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717963)|
-    | Windows 7 SP1 | Tudo | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) estão instalados | **x64:**  [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
+    | Windows 7 SP1 | Tudo | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/library/5a4x27ek.aspx) estão instalados | **x64:**  [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
 
 # <a name="installation-instructions"></a>Instruções de instalação
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/12/2017
 Certifique-se de que os seguintes pré-requisitos foram atendidos:
 - O service pack mais recente está instalado.
 - O [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) está instalado.
-- O [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) está instalado.
+- O [.NET Framework 4.5 ou posterior](https://msdn.microsoft.com/library/5a4x27ek.aspx) está instalado.
 
 **Dependência do WMF 4.0**
 
@@ -64,7 +64,7 @@ Corrigimos todos esses problemas em pacotes do WMF 4.0. Portanto, há um pré-re
 
 **Dependência do WinRM**
 
-O DSC (Configuração de Estado Desejado) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 SP1 e Windows 7 SP1. Para habilitar o WinRM, em uma sessão com privilégios elevados do Windows PowerShell, execute **Set-WSManQuickConfig**.
+O DSC (Desired State Configuration) do Windows PowerShell depende do WinRM. O WinRM não é habilitado por padrão no Windows Server 2008 R2 SP1 e Windows 7 SP1. Para habilitar o WinRM, em uma sessão com privilégios elevados do Windows PowerShell, execute **Set-WSManQuickConfig**.
 
 # <a name="uninstallation-instructions"></a>Instruções de desinstalação
 

@@ -2,8 +2,8 @@
 
 Este tópico fornece um resumo informativo aos editores sobre como modificar o manifesto das publicações na Galeria do PowerShell a fim de alterar os recursos de cmdlets PowerShellGet e da interface do usuário da Galeria do PowerShell. Este conteúdo está organizado de acordo com o local onde as alterações serão exibidas, começando pela seção central até a área de navegação à esquerda. Há uma seção Detalhes que aborda as marcas, identifica as marcas importantes, bem como algumas das marcas usadas com mais frequência. Há dois tópicos que fornecem exemplos de manifesto: 
 
-* No caso dos módulos, confira o artigo [Atualizar o manifesto de módulo](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/psget_update-modulemanifest)
-* No caso dos scripts, confira o artigo [Cria um arquivo de script com metadados](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/psget_new-scriptfileinfo)
+* No caso dos módulos, confira o artigo [Atualizar o manifesto de módulo](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
+* No caso dos scripts, confira o artigo [Cria um arquivo de script com metadados](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
 
 ## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Elementos de recurso da Galeria do PowerShell controlados pelo manifesto
 
@@ -76,7 +76,7 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | **ActiveDirectory** | "AD" por si só não está em uso no momento  |
 | **SQLServer** |  |
 | **DBA** |  |
-| **Security** | "Defense" é menos preciso |
+| **Segurança** | "Defense" é menos preciso |
 | **Database** | "Databases" (plural) é menos recomendado |
 | **DevOps** |  |
 | **Windows** |  |

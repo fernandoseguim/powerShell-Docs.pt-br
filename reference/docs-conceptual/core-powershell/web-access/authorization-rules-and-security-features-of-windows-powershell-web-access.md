@@ -1,12 +1,12 @@
 ---
 ms.date: 2017-06-27
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: "Regras de autorização e recursos de segurança do Windows PowerShell Web Access"
-ms.openlocfilehash: 6b50fdc0f2854d8af6147432fed1a155d26f57e7
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 19e4aa1bb55178ec2634af0771afe2db5db3423c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -24,7 +24,7 @@ O controle de acesso do ‘Windows PowerShell Web Access’ é gerenciado por me
 Não há uma GUI comparável para adicionar ou gerenciar regras de autorização.
 Consulte [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
 
-Os administradores podem definir de 0 a *n* regras de autenticação para o Windows PowerShell Web Access.
+Os administradores podem definir as regras de autenticação 0-*n* para o Windows PowerShell Web Access.
 A segurança padrão é restritiva, não permissiva. Se não houver regras de autenticação, significa que nenhum usuário tem acesso a coisa alguma.
 
 [Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de uma sessão ativa do Windows PowerShell Web Access.
@@ -32,7 +32,7 @@ Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Crede
 Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
 Regras de autenticação do Windows PowerShell Web Access são regras da lista de permissões.
-Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
+Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
 Para obter uma explicação sobre **runspaces** consulte [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/) (Começando a usar runspaces do PowerShell)
 
 > **Observação de segurança**
@@ -103,7 +103,7 @@ Essas regras serão avaliadas apenas depois que um usuário for autenticado pelo
 A camada final de segurança do Windows PowerShell Web Access é a própria configuração de segurança do computador de destino.
 Os usuários devem ter os direitos de acesso apropriados configurados no computador de destino e nas regras de autorização do Windows PowerShell Web Access para executar um console do Windows PowerShell baseado na Web que afete um computador de destino via Windows PowerShell Web Access.
 
-Essa camada oferece os mesmos mecanismos de segurança que avaliariam tentativas de conexão se usuários tentassem criar uma sessão remota do Windows PowerShell para um computador de destino por meio do Windows PowerShell, executando os cmdlets [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
+Essa camada oferece os mesmos mecanismos de segurança que avaliariam tentativas de conexão se usuários tentassem criar uma sessão remota do Windows PowerShell para um computador de destino por meio do Windows PowerShell, executando os cmdlets [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
 
 Por padrão, o Windows PowerShell Web Access usa o nome de usuário principal e a respectiva senha para autenticação no gateway e no computador de destino.
 A página de entrada baseada na Web, em uma seção intitulada **Configurações opcionais de conexão**, oferece aos usuários a opção de fornecer outras credenciais para o computador de destino, caso necessário.

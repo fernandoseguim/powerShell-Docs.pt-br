@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Opções de Credenciais nos Dados de Configuração"
-ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6ddf82c2b63309255ec3187d650677a6c3c2afb0
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
@@ -156,7 +156,7 @@ Group [String] #ResourceName
 }
 ```
 
-Esse exemplo usa um recurso [Group](https://msdn.microsoft.com/en-us/powershell/dsc/groupresource) do módulo interno de recurso de DSC `PSDesiredStateConfiguration`.
+Esse exemplo usa um recurso [Group](https://msdn.microsoft.com/powershell/dsc/groupresource) do módulo interno de recurso de DSC `PSDesiredStateConfiguration`.
 Pode criar grupos locais e adicionar ou remover membros.
 Ele aceita a propriedade `Credential` e a propriedade `PsDscRunAsCredential` automática.
 No entanto, o recurso usa apenas a propriedade `Credential`.
@@ -231,7 +231,7 @@ Esse exemplo tem dois problemas:
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 A primeira mensagem de erro tem uma URL com a documentação.
-Esse link explica como criptografar senhas usando uma estrutura [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e um certificado.
+Esse link explica como criptografar senhas usando uma estrutura [ConfigurationData](https://msdn.microsoft.com/powershell/dsc/configdata) e um certificado.
 Para obter mais informações sobre certificados e DSC, [leia esta postagem](http://aka.ms/certs4dsc).
 
 Para forçar uma senha de texto sem formatação, o recurso requer a palavra-chave `PsDscAllowPlainTextPassword` na seção de dados de configuração, conforme segue:

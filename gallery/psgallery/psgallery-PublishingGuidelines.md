@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: "Diretrizes e práticas recomendadas da Galeria do PowerShell"
-ms.openlocfilehash: 882a33c00cc024ad2bbb05a3283e058a61035e3a
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 25bbe31bcc805808c311829598e3c29991f72aad
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -19,7 +19,7 @@ Os itens que forem publicados seguindo essas diretrizes terão maior probabilida
 Abaixo estão as diretrizes para que um item da Galeria do PowerShell seja o ideal, quais configurações opcionais de manifesto são mais importantes, melhorias do código com comentários de revisores inicias e do [Powershell Script Analyzer](https://aka.ms/psscriptanalyzer), controle de versão de seu módulo, documentação, testes e exemplos de como usar o que você compartilhou.
 Grande parte desta documentação segue as diretrizes para publicar [High Quality DSC Resource Modules](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md) (Módulos de recurso de DSC de alta qualidade).
 
-Para obter o mecanismo de publicação de um item na Galeria do PowerShell, consulte [Criar e publicar um item](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item).
+Para obter o mecanismo de publicação de um item na Galeria do PowerShell, consulte [Criar e publicar um item](https://msdn.microsoft.com/powershell/gallery/psgallery/creating-and-publishing-an-item).
 
 Comentários sobre essas diretrizes são boas-vindos. Se você tiver comentários, abra problemas no nosso [Repositório de documentação do Github](https://github.com/powershell/powershell-docs/).
 
@@ -71,7 +71,7 @@ Há vários artigos disponíveis no MSDN sobre como fornecer documentação com 
 * As diretrizes para fornecer ajuda estão em [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a ajuda do cmdlet)
 * Criar a ajuda do cmdlet, que é a melhor abordagem para qualquer script, função ou cmdlet do PowerShell.
   Para obter informações de como criar a Ajuda do cmdlet, comece com [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Como escrever a Ajuda do cmdlet) na biblioteca MSDN.
-  Para adicionar a ajuda dentro de um script, consulte [About Comment Based Help](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help) (Sobre a ajuda baseada em comentários).
+  Para adicionar a ajuda dentro de um script, consulte [About Comment Based Help](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help) (Sobre a ajuda baseada em comentários).
 * Muitos módulos também incluem documentação no formato de texto, como arquivos de MarkDown.
   Isso pode ser particularmente útil quando há um site do projeto no Github, no qual o Markdown é um formato muito usado.
   A prática recomendada é usar [Markdown para Github](https://help.github.com/categories/writing-on-github/)

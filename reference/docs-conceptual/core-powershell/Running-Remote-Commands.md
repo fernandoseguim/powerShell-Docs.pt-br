@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell, cmdlet
 title: Executando comandos remotos
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 43f07abd642e7de235647fa151537c46ebe86cae
-ms.sourcegitcommit: 6aed37d7f0c9652ae09bb8c11928da7e4783ed7f
+ms.openlocfilehash: 24648e8f35fbc28c9ba9f9b7176ac23e72ffbe78
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="running-remote-commands"></a>Executando comandos remotos
 
@@ -48,9 +48,9 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 ## <a name="windows-powershell-remoting"></a>Comunicação remota do Windows PowerShell
 A comunicação remota do Windows PowerShell, que usa o protocolo WS-Management, permite executar qualquer comando do Windows PowerShell em um ou vários computadores remotos. Ela permite estabelecer conexões persistentes, iniciar sessões interativas 1:1 e executar scripts em vários computadores.
 
-Para usar a comunicação remota do Windows PowerShell, o computador remoto deve ser configurado para gerenciamento remoto. Para obter mas informações, incluindo instruções consulte [Sobre requisitos remotos](https://technet.microsoft.com/en-us/library/dd315349.aspx).
+Para usar a comunicação remota do Windows PowerShell, o computador remoto deve ser configurado para gerenciamento remoto. Para obter mas informações, incluindo instruções consulte [Sobre requisitos remotos](https://technet.microsoft.com/library/dd315349.aspx).
 
-Depois de configurar a comunicação remota do Windows PowerShell, muitas estratégias de comunicação remota estão disponíveis para você. O restante deste documento lista apenas algumas delas. Para obter mais informações, confira [about_Remote](https://technet.microsoft.com/en-us/library/dd347744.aspx) e [Perguntas frequentes sobre about_Remote](https://technet.microsoft.com/en-us/library/dd347744.aspx).
+Depois de configurar a comunicação remota do Windows PowerShell, muitas estratégias de comunicação remota estão disponíveis para você. O restante deste documento lista apenas algumas delas. Para obter mais informações, confira [about_Remote](https://technet.microsoft.com/library/dd347744.aspx) e [Perguntas frequentes sobre about_Remote](https://technet.microsoft.com/library/dd347744.aspx).
 
 ### <a name="start-an-interactive-session"></a>Iniciar uma sessão interativa
 Para iniciar uma sessão interativa com um único computador remoto, use o cmdlet [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477).

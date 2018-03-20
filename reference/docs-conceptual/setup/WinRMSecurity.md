@@ -1,12 +1,12 @@
 ---
 ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 65cf12466c9dc8fc8b77d79b0d63a6ae61e64d60
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0522844fded847a3fd45c1b3890a141357edb2b2
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell
 
@@ -14,7 +14,7 @@ Comunicação remota do PowerShell é a maneira recomendada de gerenciar sistema
 
 ## <a name="what-is-powershell-remoting"></a>O que é a comunicação remota do PowerShell?
 
-A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), que é a implementação do protocolo [WS-Management (Serviços Web para Gerenciamento)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf) da Microsoft, para permitir que os usuários executem comandos do PowerShell em computadores remotos. Você pode encontrar mais informações sobre como usar a comunicação remota do PowerShell em [Executando comandos remotos](https://technet.microsoft.com/en-us/library/dd819505.aspx).
+A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), que é a implementação do protocolo [WS-Management (Serviços Web para Gerenciamento)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf) da Microsoft, para permitir que os usuários executem comandos do PowerShell em computadores remotos. Você pode encontrar mais informações sobre como usar a comunicação remota do PowerShell em [Executando comandos remotos](https://technet.microsoft.com/library/dd819505.aspx).
 
 A comunicação remota do PowerShell não é igual ao parâmetro **ComputerName** de um cmdlet para executá-lo em um computador remoto, que usa RPC (Chamada de Procedimento Remoto) como seu protocolo subjacente.
 
@@ -33,7 +33,7 @@ Em redes privadas, a regra de Firewall do Windows padrão para comunicação rem
 
 ## <a name="process-isolation"></a>Isolamento do processo
 
-A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) para comunicação entre computadores. O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
+A comunicação remota do PowerShell usa o [WinRM (Gerenciamento Remoto do Windows)](https://msdn.microsoft.com/library/windows/desktop/aa384426) para comunicação entre computadores. O WinRM é executado como um serviço na conta de serviço de rede e gera processos isolados executados como contas de usuário para hospedar instâncias do PowerShell. Uma instância do PowerShell em execução como um usuário não tem acesso a um processo que executa uma instância do PowerShell como outro usuário.
 
 ## <a name="event-logs-generated-by-powershell-remoting"></a>Logs de eventos gerados pela comunicação remota do PowerShell
 
@@ -50,10 +50,10 @@ Independentemente do protocolo de transporte usado (HTTP ou HTTPS), a comunicaç
 
 A autenticação confirma a identidade do cliente para o servidor - e idealmente - do servidor para o cliente.
     
-Quando um cliente se conecta a um servidor de domínio usando seu nome do computador (por exemplo: servidor01 ou servidor01.contoso.com), o protocolo de autenticação padrão é [Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747.aspx).
+Quando um cliente se conecta a um servidor de domínio usando seu nome do computador (por exemplo: servidor01 ou servidor01.contoso.com), o protocolo de autenticação padrão é [Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747.aspx).
 Kerberos garante a identidade do usuário e a identidade do servidor sem enviar qualquer tipo de credencial reutilizável.
 
-Quando um cliente se conecta a um servidor de domínio usando seu endereço IP, ou se conecta a um servidor de grupo de trabalho, a autenticação Kerberos não é possível. Nesse caso, a comunicação remoto do PowerShell depende do [protocolo de autenticação NTLM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749.aspx). O protocolo de autenticação NTLM garante a identidade do usuário sem enviar qualquer tipo de credencial delegável. Para provar a identidade do usuário, o protocolo NTLM exige que o cliente e o servidor computem uma chave de sessão da senha do usuário sem nunca trocar a senha. O servidor normalmente não sabe a senha do usuário, de modo que ele se comunica com o controlador de domínio, que sabe a senha do usuário e calcula a chave de sessão para o servidor. 
+Quando um cliente se conecta a um servidor de domínio usando seu endereço IP, ou se conecta a um servidor de grupo de trabalho, a autenticação Kerberos não é possível. Nesse caso, a comunicação remoto do PowerShell depende do [protocolo de autenticação NTLM](https://msdn.microsoft.com/library/windows/desktop/aa378749.aspx). O protocolo de autenticação NTLM garante a identidade do usuário sem enviar qualquer tipo de credencial delegável. Para provar a identidade do usuário, o protocolo NTLM exige que o cliente e o servidor computem uma chave de sessão da senha do usuário sem nunca trocar a senha. O servidor normalmente não sabe a senha do usuário, de modo que ele se comunica com o controlador de domínio, que sabe a senha do usuário e calcula a chave de sessão para o servidor. 
       
 No entanto, o protocolo NTLM não assegura a identidade do servidor. Como ocorre com todos os protocolos que usam NTLM para autenticação, um invasor com acesso a uma conta do computador ingressado do domínio pode invocar o controlador de domínio para computar uma chave de sessão NTLM e, assim, representar o servidor.
 

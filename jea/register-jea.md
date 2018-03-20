@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,segurança"
 title: "Registrando Configurações de JEA"
-ms.openlocfilehash: 0684a1c7acffbccbedab9dba4689611a24c8ae25
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: d6b007fed97be6470bfe4cf4d42f72cb4edc3a45
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 
@@ -19,7 +19,7 @@ Esse processo aplica as informações de configuração de sessão no sistema e 
 
 ## <a name="single-machine-configuration"></a>Configuração de computador único
 
-Em ambientes pequenos, você pode implantar o JEA ao registrar o arquivo de configuração de sessão usando o cmdlet [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
+Em ambientes pequenos, você pode implantar o JEA ao registrar o arquivo de configuração de sessão usando o cmdlet [Register-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
 Antes de começar, verifique se os pré-requisitos a seguir foram atendidos:
 - Uma ou mais funções foram criadas e colocadas na pasta 'RoleCapabilities' de um módulo de PowerShell válido.
@@ -28,7 +28,7 @@ Antes de começar, verifique se os pré-requisitos a seguir foram atendidos:
 
 Também é necessário selecionar um nome para o ponto de extremidade JEA.
 O nome do ponto de extremidade JEA será necessário quando os usuários desejarem se conectar ao sistema usando o JEA.
-Você pode usar o cmdlet [Get-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) para verificar os nomes dos pontos de extremidade existentes no sistema.
+Você pode usar o cmdlet [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) para verificar os nomes dos pontos de extremidade existentes no sistema.
 Pontos de extremidade que começam com 'microsoft' geralmente são fornecidos com o Windows.
 O ponto de extremidade 'microsoft.powershell' é o ponto de extremidade padrão usado ao se conectar a um ponto de extremidade remoto do PowerShell.
 

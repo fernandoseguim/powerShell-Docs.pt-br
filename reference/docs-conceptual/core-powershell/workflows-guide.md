@@ -1,12 +1,12 @@
 ---
 ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: guia de fluxos de trabalho
-ms.openlocfilehash: 9eb5ae1d665ed6e4319ede62e7f7a27e6ce5b04f
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d99f23e281b8a1229c4577c3d6c3a93e4ba4973e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="psworkflow-module"></a>Módulo PSWorkflow
 Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui cmdlets que dão suporte ao recurso de fluxo de trabalho do Windows PowerShell. O módulo **PSWorkflow** é instalado com o Windows PowerShell.
@@ -14,9 +14,9 @@ Esta seção contém tópicos de ajuda para o módulo **PSWorkflow**, que inclui
 ## <a name="help-topics"></a>Tópicos da Ajuda
 [Cmdlets de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=245865)
 
-[about_Workflows](https://technet.microsoft.com/en-us/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)
+[about_Workflows](https://technet.microsoft.com/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)
 
-[about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)
+[about_WorkflowCommonParameters](https://technet.microsoft.com/library/119f968e-618e-439c-b76c-cdd17e6df27c)
 
 [about_ActivityCommonParameters](https://technet.microsoft.com/en-us/library/8ca60664-37c6-4257-a723-e3c41dd10122)
 

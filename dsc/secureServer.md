@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: "Práticas recomendadas do servidor de pull"
-ms.openlocfilehash: 045f98475d6182b329ecf048038a98e933684a82
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -24,7 +24,7 @@ Publicado | Abril de 2015
 ## <a name="abstract"></a>Resumo
 
 Este documento foi criado para fornecer diretrizes oficiais para qualquer pessoa que esteja planejando uma implementação de um servidor de pull de Configuração de Estado Desejado do Windows PowerShell. Um servidor de pull é um serviço simples que deve levar apenas alguns minutos para implantar. Embora ofereça diretrizes técnicas passo a passo que podem ser usadas em uma implantação, o valor desse documento está em servir como uma referência para as práticas recomendadas e no que se deve refletir antes da implantação.
-Os leitores devem ter uma familiaridade básica com o DSC e com os termos usados para descrever os componentes que estão incluídos em uma implantação de DSC. Para obter mais informações, consulte o tópico [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/en-us/library/dn249912.aspx).
+Os leitores devem ter uma familiaridade básica com o DSC e com os termos usados para descrever os componentes que estão incluídos em uma implantação de DSC. Para obter mais informações, consulte o tópico [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/dn249912.aspx).
 Como é esperado que o DSC evolua em uma cadência de nuvem, espera-se também que a tecnologia subjacente, incluindo o servidor de pull, evolua e introduza novos recursos. Este documento inclui uma tabela de versão no apêndice que fornece referências a versões anteriores e referências a soluções futuras para incentivar designs inovadores.
 
 As duas seções principais deste documento:
@@ -43,7 +43,7 @@ O Windows PowerShell fornece um conjunto de extensões de linguagem para a Confi
 ### <a name="pull-server-role"></a>Função de servidor de pull  
 Um servidor de pull oferece um serviço centralizado para armazenar configurações que estarão acessíveis aos nós de destino.
  
-A função de servidor de pull pode ser implantada como uma instância de servidor Web ou um compartilhamento de arquivos SMB. A capacidade de servidor Web inclui uma interface de OData e, opcionalmente, pode incluir recursos para que os nós de destino reportem a confirmação de êxito ou de falha conforme as configurações são aplicadas. Essa funcionalidade é útil em ambientes em que há um grande número de nós de destino. Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para obter mais informações, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/en-us/library/dn249913.aspx) e [Modos de Configuração de Push e Pull](https://technet.microsoft.com/en-us/library/dn249913.aspx).
+A função de servidor de pull pode ser implantada como uma instância de servidor Web ou um compartilhamento de arquivos SMB. A capacidade de servidor Web inclui uma interface de OData e, opcionalmente, pode incluir recursos para que os nós de destino reportem a confirmação de êxito ou de falha conforme as configurações são aplicadas. Essa funcionalidade é útil em ambientes em que há um grande número de nós de destino. Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para obter mais informações, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/dn249913.aspx) e [Modos de Configuração de Push e Pull](https://technet.microsoft.com/library/dn249913.aspx).
 
 ## <a name="configuration-planning"></a>Planejamento de configuração
 
