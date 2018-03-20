@@ -9,7 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2017
 ---
-# <a name="redirecting-data-with-out--cmdlets"></a>Redirecionamento de dados com cmdlets Out-*
+# <a name="redirecting-data-with-out--cmdlets"></a>Redirecionamento de dados com cmdlets Out-\*
 O Windows PowerShell oferece vários cmdlets que permitem controlar os dados de saída diretamente. Esses cmdlets compartilham duas importantes características.
 
 Primeiramente, eles geralmente transformam dados em alguma forma de texto. Eles fazem isso porque geram saída de dados para os componentes do sistema que exigem entrada de texto. Isso significa que eles precisam para representar os objetos como texto. Portanto, o texto é formatado como visto na janela do console do Windows PowerShell.
