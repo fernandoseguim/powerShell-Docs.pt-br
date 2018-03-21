@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,segurança"
 title: "Pré-requisitos do JEA"
-ms.openlocfilehash: 75d5db2ba446df1d461050d187dc1495a22fef18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e6ee16e34eb9f1f0b2f3601c1aa9e90ab4f785f1
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -72,7 +72,7 @@ Os usuários do Windows 10 devem instalar as atualizações mais recentes do rec
 ## <a name="enable-powershell-remoting"></a>Habilitar a Comunicação Remota do PowerShell
 
 A Comunicação Remota do PowerShell fornece a base na qual o JEA é criado.
-Portanto, é necessário garantir que a comunicação remota do PowerShell esteja habilitada e [devidamente protegida](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) em seu sistema antes de usar o JEA.
+Portanto, é necessário garantir que a comunicação remota do PowerShell esteja habilitada e [devidamente protegida](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity) em seu sistema antes de usar o JEA.
 
 A Comunicação Remota do PowerShell é habilitada por padrão no Windows Server 2012, 2012 R2 e 2016.
 Você pode habilitar a Comunicação Remota do PowerShell executando o seguinte comando em uma janela elevada do PowerShell.
@@ -109,6 +109,6 @@ Você também pode habilitar transcrição do PowerShell de todo o sistema por m
 
 ## <a name="see-also"></a>Consulte também
 
-- [Informações adicionais sobre a Comunicação Remota do PowerShell e segurança do WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
-- [Postagem de blog sobre segurança *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
+- [Informações adicionais sobre a Comunicação Remota do PowerShell e segurança do WinRM](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity)
+- [*Postagem no blog sobre segurança* PowerShell ♥ the Blue Team](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 

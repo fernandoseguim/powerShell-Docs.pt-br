@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: d13c23cd6f9cce433cd3fe1ad5f2d00e3ef0527c
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 2117712b0081db4a21f8480b458a499ed84dc512
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
@@ -103,7 +103,7 @@ Por padrão, [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) e 
 
 Para implantar um item da Galeria do PowerShell na Automação do Azure, clique em **Implantar na Automação do Azure** na página de detalhes do item. Você será redirecionado ao Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure. Observe que implantar itens com dependências implantará todas as dependências na Automação do Azure. O botão Implantar na Automação do Azure pode ser desabilitado adicionando a marca **AzureAutomationNotSupported** aos metadados do item.
 
-Para saber mais sobre a Automação do Azure, consulte o [Site da Automação do Azure](http://azure.microsoft.com/en-us/services/automation/).
+Para saber mais sobre a Automação do Azure, consulte o [Site da Automação do Azure](http://azure.microsoft.com/services/automation/).
 
 ## <a name="updating-items-from-the-powershell-gallery"></a>Atualizando itens da Galeria do PowerShell
 

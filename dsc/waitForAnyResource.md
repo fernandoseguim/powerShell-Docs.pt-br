@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: "DSC,powershell,configuração,instalação"
 title: Recurso de DSC WaitForAny
-ms.openlocfilehash: 795c005c67c196ef9afb08af790fe2a1695392ec
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 43922dbcccb6d06d7d9edfcf16ce4eb107e9d4e6
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-waitforany-resource"></a>Recurso de DSC WaitForAny
 
@@ -36,7 +36,7 @@ WaitForAny [string] #ResourceName
 
 |  Propriedade  |  Descrição   | 
 |---|---| 
-| ResourceName| O nome do recurso do qual dependerá.| 
+| ResourceName| O nome do recurso do qual dependerá. Se esse recurso pertencer a uma configuração diferente, formate o nome como "[__TipoDoRecurso__]__NomeDoRecurso__::[__NomeDaConfiguração__]::[__NomeDaConfiguração__]"| 
 | NodeName| Os nós de destino do recurso do qual dependerá.| 
 | RetryIntervalSec| O número de segundos antes de tentar novamente. O mínimo é 1.| 
 | RetryCount| O número máximo de tentativas.| 
