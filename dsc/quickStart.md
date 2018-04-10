@@ -1,34 +1,34 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Início Rápido de Configuração de Estado Desejado"
-ms.openlocfilehash: e21017f24db8c90229063895c1a7e4c6f0546d0c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Início Rápido de Configuração de Estado Desejado
+ms.openlocfilehash: 25bcd46bbf62a6ebb727519a65732377363e68c0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-> <span data-ttu-id="0a94e-103">Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="0a94e-103">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="6ed14-103">Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="6ed14-103">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-# <a name="desired-state-configuration-quick-start"></a><span data-ttu-id="0a94e-104">Início Rápido de Configuração de Estado Desejado</span><span class="sxs-lookup"><span data-stu-id="0a94e-104">Desired State Configuration Quick Start</span></span>
+# <a name="desired-state-configuration-quick-start"></a><span data-ttu-id="6ed14-104">Início Rápido de Configuração de Estado Desejado</span><span class="sxs-lookup"><span data-stu-id="6ed14-104">Desired State Configuration Quick Start</span></span>
 
-<span data-ttu-id="0a94e-105">Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.</span><span class="sxs-lookup"><span data-stu-id="0a94e-105">This exercise walks through creating and applying a Desired State Configuration (DSC) configuration from start to finish.</span></span>
-<span data-ttu-id="0a94e-106">O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `intepub\wwwroot` desse servidor.</span><span class="sxs-lookup"><span data-stu-id="0a94e-106">The example we'll use ensures that a server has the `Web-Server` (IIS) feature enabled, and that the content for a simple "Hello World" website is present in the `intepub\wwwroot` directory of that server.</span></span>
+<span data-ttu-id="6ed14-105">Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.</span><span class="sxs-lookup"><span data-stu-id="6ed14-105">This exercise walks through creating and applying a Desired State Configuration (DSC) configuration from start to finish.</span></span>
+<span data-ttu-id="6ed14-106">O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `intepub\wwwroot` desse servidor.</span><span class="sxs-lookup"><span data-stu-id="6ed14-106">The example we'll use ensures that a server has the `Web-Server` (IIS) feature enabled, and that the content for a simple "Hello World" website is present in the `intepub\wwwroot` directory of that server.</span></span>
 
-<span data-ttu-id="0a94e-107">Para obter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](decisionMaker.md).</span><span class="sxs-lookup"><span data-stu-id="0a94e-107">For an overview of what DSC is and how it works, see [Desired State Configuration Overview for Decision Makers](decisionMaker.md).</span></span>
+<span data-ttu-id="6ed14-107">Para obter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](decisionMaker.md).</span><span class="sxs-lookup"><span data-stu-id="6ed14-107">For an overview of what DSC is and how it works, see [Desired State Configuration Overview for Decision Makers](decisionMaker.md).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="0a94e-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0a94e-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="6ed14-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6ed14-108">Requirements</span></span>
 
-<span data-ttu-id="0a94e-109">Para executar este exemplo, você precisará de um computador com o Windows Server 2012 ou posterior e o PowerShell 4.0 ou posterior.</span><span class="sxs-lookup"><span data-stu-id="0a94e-109">To run this example, you will need a computer running Windows Server 2012 or later and PowerShell 4.0 or later.</span></span>
+<span data-ttu-id="6ed14-109">Para executar este exemplo, você precisará de um computador com o Windows Server 2012 ou posterior e o PowerShell 4.0 ou posterior.</span><span class="sxs-lookup"><span data-stu-id="6ed14-109">To run this example, you will need a computer running Windows Server 2012 or later and PowerShell 4.0 or later.</span></span>
 
-## <a name="write-and-place-the-indexhtm-file"></a><span data-ttu-id="0a94e-110">Gravar e posicionar o arquivo index.htm</span><span class="sxs-lookup"><span data-stu-id="0a94e-110">Write and place the index.htm file</span></span>
+## <a name="write-and-place-the-indexhtm-file"></a><span data-ttu-id="6ed14-110">Gravar e posicionar o arquivo index.htm</span><span class="sxs-lookup"><span data-stu-id="6ed14-110">Write and place the index.htm file</span></span>
 
-<span data-ttu-id="0a94e-111">Primeiro, vamos criar o arquivo HTML que usaremos como o conteúdo do site.</span><span class="sxs-lookup"><span data-stu-id="0a94e-111">First, we'll create the HTML file that we will use as the website content.</span></span>
+<span data-ttu-id="6ed14-111">Primeiro, vamos criar o arquivo HTML que usaremos como o conteúdo do site.</span><span class="sxs-lookup"><span data-stu-id="6ed14-111">First, we'll create the HTML file that we will use as the website content.</span></span>
 
-<span data-ttu-id="0a94e-112">Na pasta-raiz, crie uma pasta chamada `test`.</span><span class="sxs-lookup"><span data-stu-id="0a94e-112">In your root folder, create a folder named `test`.</span></span>
+<span data-ttu-id="6ed14-112">Na pasta-raiz, crie uma pasta chamada `test`.</span><span class="sxs-lookup"><span data-stu-id="6ed14-112">In your root folder, create a folder named `test`.</span></span>
 
-<span data-ttu-id="0a94e-113">Em um editor de texto, digite o texto a seguir:</span><span class="sxs-lookup"><span data-stu-id="0a94e-113">In a text editor, type the following text:</span></span>
+<span data-ttu-id="6ed14-113">Em um editor de texto, digite o texto a seguir:</span><span class="sxs-lookup"><span data-stu-id="6ed14-113">In a text editor, type the following text:</span></span>
 
 ```html
 <head></head>
@@ -37,13 +37,13 @@ ms.lasthandoff: 01/17/2018
 </body>
 ```
 
-<span data-ttu-id="0a94e-114">Salve-o como `index.htm` na pasta `test` que você criou anteriormente.</span><span class="sxs-lookup"><span data-stu-id="0a94e-114">Save this as `index.htm` in the `test` folder you created earlier.</span></span> 
+<span data-ttu-id="6ed14-114">Salve-o como `index.htm` na pasta `test` que você criou anteriormente.</span><span class="sxs-lookup"><span data-stu-id="6ed14-114">Save this as `index.htm` in the `test` folder you created earlier.</span></span>
 
-## <a name="write-the-configuration"></a><span data-ttu-id="0a94e-115">Gravar a configuração</span><span class="sxs-lookup"><span data-stu-id="0a94e-115">Write the configuration</span></span>
+## <a name="write-the-configuration"></a><span data-ttu-id="6ed14-115">Gravar a configuração</span><span class="sxs-lookup"><span data-stu-id="6ed14-115">Write the configuration</span></span>
 
-<span data-ttu-id="0a94e-116">Uma [Configuração DSC](configurations.md) é uma função especial do PowerShell que define como você deseja configurar um ou mais computadores de destino (nós).</span><span class="sxs-lookup"><span data-stu-id="0a94e-116">A [DSC configuration](configurations.md) is a special PowerShell function that defines how you want to configure one or more target computers (nodes).</span></span>
+<span data-ttu-id="6ed14-116">Uma [Configuração DSC](configurations.md) é uma função especial do PowerShell que define como você deseja configurar um ou mais computadores de destino (nós).</span><span class="sxs-lookup"><span data-stu-id="6ed14-116">A [DSC configuration](configurations.md) is a special PowerShell function that defines how you want to configure one or more target computers (nodes).</span></span>
 
-<span data-ttu-id="0a94e-117">No ISE do PowerShell, digite o seguinte:</span><span class="sxs-lookup"><span data-stu-id="0a94e-117">In the PowerShell ISE, type the following:</span></span>
+<span data-ttu-id="6ed14-117">No ISE do PowerShell, digite o seguinte:</span><span class="sxs-lookup"><span data-stu-id="6ed14-117">In the PowerShell ISE, type the following:</span></span>
 
 ```powershell
 Configuration WebsiteTest {
@@ -70,27 +70,27 @@ Configuration WebsiteTest {
 }
 ```
 
-<span data-ttu-id="0a94e-118">Salve o arquivo como `WebsiteTest.ps1`.</span><span class="sxs-lookup"><span data-stu-id="0a94e-118">Save the file as `WebsiteTest.ps1`.</span></span>
+<span data-ttu-id="6ed14-118">Salve o arquivo como `WebsiteTest.ps1`.</span><span class="sxs-lookup"><span data-stu-id="6ed14-118">Save the file as `WebsiteTest.ps1`.</span></span>
 
-<span data-ttu-id="0a94e-119">Você pode ver que ele parece uma função do PowerShell, com a adição da palavra-chave **Configuração** usada antes do nome da função.</span><span class="sxs-lookup"><span data-stu-id="0a94e-119">You can see that it looks like a PowerShell function, with the addition of the keyword **Configuration** used before the name of the function.</span></span>
+<span data-ttu-id="6ed14-119">Você pode ver que ele parece uma função do PowerShell, com a adição da palavra-chave **Configuração** usada antes do nome da função.</span><span class="sxs-lookup"><span data-stu-id="6ed14-119">You can see that it looks like a PowerShell function, with the addition of the keyword **Configuration** used before the name of the function.</span></span>
 
-<span data-ttu-id="0a94e-120">O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `localhost`.</span><span class="sxs-lookup"><span data-stu-id="0a94e-120">The **Node** block specifies the target node to be configured, in this case `localhost`.</span></span>
+<span data-ttu-id="6ed14-120">O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `localhost`.</span><span class="sxs-lookup"><span data-stu-id="6ed14-120">The **Node** block specifies the target node to be configured, in this case `localhost`.</span></span>
 
-<span data-ttu-id="0a94e-121">A configuração chama dois [recursos](resources.md), [WindowsFeature](windowsFeatureResource.md) e [Arquivo](fileResource.md).</span><span class="sxs-lookup"><span data-stu-id="0a94e-121">The configuration calls two [resources](resources.md), [WindowsFeature](windowsFeatureResource.md) and [File](fileResource.md).</span></span>
-<span data-ttu-id="0a94e-122">Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.</span><span class="sxs-lookup"><span data-stu-id="0a94e-122">Resources do the work of ensuring that the target node is in the state defined by the configuration.</span></span>
+<span data-ttu-id="6ed14-121">A configuração chama dois [recursos](resources.md), [WindowsFeature](windowsFeatureResource.md) e [Arquivo](fileResource.md).</span><span class="sxs-lookup"><span data-stu-id="6ed14-121">The configuration calls two [resources](resources.md), [WindowsFeature](windowsFeatureResource.md) and [File](fileResource.md).</span></span>
+<span data-ttu-id="6ed14-122">Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.</span><span class="sxs-lookup"><span data-stu-id="6ed14-122">Resources do the work of ensuring that the target node is in the state defined by the configuration.</span></span>
 
-## <a name="compile-the-configuration"></a><span data-ttu-id="0a94e-123">Compilar a configuração</span><span class="sxs-lookup"><span data-stu-id="0a94e-123">Compile the configuration</span></span>
+## <a name="compile-the-configuration"></a><span data-ttu-id="6ed14-123">Compilar a configuração</span><span class="sxs-lookup"><span data-stu-id="6ed14-123">Compile the configuration</span></span>
 
-<span data-ttu-id="0a94e-124">Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF.</span><span class="sxs-lookup"><span data-stu-id="0a94e-124">For a DSC configuration to be applied to a node, it must first be compiled into a MOF file.</span></span>
-<span data-ttu-id="0a94e-125">Para fazer isso, você deve executar a configuração como uma função.</span><span class="sxs-lookup"><span data-stu-id="0a94e-125">To do this, you run the configuration like a function.</span></span>
-<span data-ttu-id="0a94e-126">Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute os seguintes comandos para compilar a configuração em um arquivo MOF:</span><span class="sxs-lookup"><span data-stu-id="0a94e-126">In a PowerShell console, navigate to the same folder where you saved your configuration and run the following commands to compile the configuration into a MOF file:</span></span>
+<span data-ttu-id="6ed14-124">Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF.</span><span class="sxs-lookup"><span data-stu-id="6ed14-124">For a DSC configuration to be applied to a node, it must first be compiled into a MOF file.</span></span>
+<span data-ttu-id="6ed14-125">Para fazer isso, você deve executar a configuração como uma função.</span><span class="sxs-lookup"><span data-stu-id="6ed14-125">To do this, you run the configuration like a function.</span></span>
+<span data-ttu-id="6ed14-126">Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute os seguintes comandos para compilar a configuração em um arquivo MOF:</span><span class="sxs-lookup"><span data-stu-id="6ed14-126">In a PowerShell console, navigate to the same folder where you saved your configuration and run the following commands to compile the configuration into a MOF file:</span></span>
 
 ```powershell
 . .\WebsiteTest.ps1
 WebsiteTest
 ```
 
-<span data-ttu-id="0a94e-127">Isso gerará os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="0a94e-127">This generates the following output:</span></span>
+<span data-ttu-id="6ed14-127">Isso gerará os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="6ed14-127">This generates the following output:</span></span>
 
 ```
 Directory: C:\ConfigurationTest\WebsiteTest
@@ -101,37 +101,34 @@ Mode                LastWriteTime         Length Name
 -a----        3/13/2017   5:20 PM           2746 localhost.mof
 ```
 
-<span data-ttu-id="0a94e-128">A primeira linha torna a função de configuração disponível no console.</span><span class="sxs-lookup"><span data-stu-id="0a94e-128">The first line makes the configuration function available in the console.</span></span>
-<span data-ttu-id="0a94e-129">A segunda linha executa a configuração.</span><span class="sxs-lookup"><span data-stu-id="0a94e-129">The second line runs the configuration.</span></span>
-<span data-ttu-id="0a94e-130">O resultado é que uma nova pasta, chamada `WebsiteTest`, é criada como uma subpasta da pasta atual.</span><span class="sxs-lookup"><span data-stu-id="0a94e-130">The result is that a new folder, named `WebsiteTest` is created as a subfolder of the current folder.</span></span>
-<span data-ttu-id="0a94e-131">A pasta `WebsiteTest` contém um arquivo chamado `localhost.mof`.</span><span class="sxs-lookup"><span data-stu-id="0a94e-131">The `WebsiteTest` folder contains a file named `localhost.mof`.</span></span>
-<span data-ttu-id="0a94e-132">É o arquivo que pode ser aplicado ao nó de destino.</span><span class="sxs-lookup"><span data-stu-id="0a94e-132">It is this file that can then be applied to the target node.</span></span>
+<span data-ttu-id="6ed14-128">A primeira linha torna a função de configuração disponível no console.</span><span class="sxs-lookup"><span data-stu-id="6ed14-128">The first line makes the configuration function available in the console.</span></span>
+<span data-ttu-id="6ed14-129">A segunda linha executa a configuração.</span><span class="sxs-lookup"><span data-stu-id="6ed14-129">The second line runs the configuration.</span></span>
+<span data-ttu-id="6ed14-130">O resultado é que uma nova pasta, chamada `WebsiteTest`, é criada como uma subpasta da pasta atual.</span><span class="sxs-lookup"><span data-stu-id="6ed14-130">The result is that a new folder, named `WebsiteTest` is created as a subfolder of the current folder.</span></span>
+<span data-ttu-id="6ed14-131">A pasta `WebsiteTest` contém um arquivo chamado `localhost.mof`.</span><span class="sxs-lookup"><span data-stu-id="6ed14-131">The `WebsiteTest` folder contains a file named `localhost.mof`.</span></span>
+<span data-ttu-id="6ed14-132">É o arquivo que pode ser aplicado ao nó de destino.</span><span class="sxs-lookup"><span data-stu-id="6ed14-132">It is this file that can then be applied to the target node.</span></span>
 
-## <a name="apply-the-configuration"></a><span data-ttu-id="0a94e-133">Aplicar a configuração</span><span class="sxs-lookup"><span data-stu-id="0a94e-133">Apply the configuration</span></span>
+## <a name="apply-the-configuration"></a><span data-ttu-id="6ed14-133">Aplicar a configuração</span><span class="sxs-lookup"><span data-stu-id="6ed14-133">Apply the configuration</span></span>
 
-<span data-ttu-id="0a94e-134">Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration).</span><span class="sxs-lookup"><span data-stu-id="0a94e-134">Now that you have the compiled MOF, you can apply the configuration to the target node (in this case, the local computer) by calling the [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration) cmdlet.</span></span>
+<span data-ttu-id="6ed14-134">Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration).</span><span class="sxs-lookup"><span data-stu-id="6ed14-134">Now that you have the compiled MOF, you can apply the configuration to the target node (in this case, the local computer) by calling the [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration) cmdlet.</span></span>
 
-<span data-ttu-id="0a94e-135">O cmdlet `Start-DscConfiguration` indica ao [Gerenciador de Configurações Local (LCM)](metaConfig.md), qual é o mecanismo de DSC a aplicar à configuração.</span><span class="sxs-lookup"><span data-stu-id="0a94e-135">The `Start-DscConfiguration` cmdlet tells the [Local Configuration Manager (LCM)](metaConfig.md), which is the engine of DSC, to apply the configuration.</span></span>
-<span data-ttu-id="0a94e-136">O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.</span><span class="sxs-lookup"><span data-stu-id="0a94e-136">The LCM does the work of calling the DSC resources to apply the configuration.</span></span>
+<span data-ttu-id="6ed14-135">O cmdlet `Start-DscConfiguration` indica ao [Gerenciador de Configurações Local (LCM)](metaConfig.md), qual é o mecanismo de DSC a aplicar à configuração.</span><span class="sxs-lookup"><span data-stu-id="6ed14-135">The `Start-DscConfiguration` cmdlet tells the [Local Configuration Manager (LCM)](metaConfig.md), which is the engine of DSC, to apply the configuration.</span></span>
+<span data-ttu-id="6ed14-136">O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.</span><span class="sxs-lookup"><span data-stu-id="6ed14-136">The LCM does the work of calling the DSC resources to apply the configuration.</span></span>
 
-<span data-ttu-id="0a94e-137">Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute o mesmo comando:</span><span class="sxs-lookup"><span data-stu-id="0a94e-137">In a PowerShell console, navigate to the same folder where you saved your configuration and run the following command:</span></span>
+<span data-ttu-id="6ed14-137">Em um console do PowerShell, navegue até a mesma pasta em que você salvou sua configuração e execute o mesmo comando:</span><span class="sxs-lookup"><span data-stu-id="6ed14-137">In a PowerShell console, navigate to the same folder where you saved your configuration and run the following command:</span></span>
 
 ```powershell
 Start-DscConfiguration .\WebsiteTest
 ```
 
-## <a name="test-the-configuration"></a><span data-ttu-id="0a94e-138">Testar a configuração</span><span class="sxs-lookup"><span data-stu-id="0a94e-138">Test the configuration</span></span>
+## <a name="test-the-configuration"></a><span data-ttu-id="6ed14-138">Testar a configuração</span><span class="sxs-lookup"><span data-stu-id="6ed14-138">Test the configuration</span></span>
 
-<span data-ttu-id="0a94e-139">Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) para ver se a configuração foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="0a94e-139">You can call the [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) cmdlet to see whether the configuration succeeded.</span></span> 
+<span data-ttu-id="6ed14-139">Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) para ver se a configuração foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="6ed14-139">You can call the [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) cmdlet to see whether the configuration succeeded.</span></span>
 
-<span data-ttu-id="0a94e-140">Você também pode testar os resultados diretamente, neste caso, pesquisando o `http://localhost/` em um navegador da Web.</span><span class="sxs-lookup"><span data-stu-id="0a94e-140">You can also test the results directly, in this case by browsing to `http://localhost/` in a web browser.</span></span>
-<span data-ttu-id="0a94e-141">Você deve ver a página de HTML "Hello World" que criou como a primeira etapa deste exemplo.</span><span class="sxs-lookup"><span data-stu-id="0a94e-141">You should see the "Hello World" HTML page you created as the first step in this example.</span></span>
+<span data-ttu-id="6ed14-140">Você também pode testar os resultados diretamente, neste caso, pesquisando o `http://localhost/` em um navegador da Web.</span><span class="sxs-lookup"><span data-stu-id="6ed14-140">You can also test the results directly, in this case by browsing to `http://localhost/` in a web browser.</span></span>
+<span data-ttu-id="6ed14-141">Você deve ver a página de HTML "Hello World" que criou como a primeira etapa deste exemplo.</span><span class="sxs-lookup"><span data-stu-id="6ed14-141">You should see the "Hello World" HTML page you created as the first step in this example.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="0a94e-142">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="0a94e-142">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="6ed14-142">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="6ed14-142">Next steps</span></span>
 
-- <span data-ttu-id="0a94e-143">Saiba mais sobre configurações de DSC em [Configurações de DSC](configurations.md).</span><span class="sxs-lookup"><span data-stu-id="0a94e-143">Find out more about DSC configurations at [DSC configurations](configurations.md).</span></span>
-- <span data-ttu-id="0a94e-144">Veja quais recursos de DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos de DSC](resources.md).</span><span class="sxs-lookup"><span data-stu-id="0a94e-144">See what DSC resources are available, and how to create custom DSC resources at [DSC resources](resources.md).</span></span>
-- <span data-ttu-id="0a94e-145">Localize as configurações e recursos de DSC na [Galeria do PowerShell](https://www.powershellgallery.com/).</span><span class="sxs-lookup"><span data-stu-id="0a94e-145">Find DSC configurations and resources in the [PowerShell Gallery](https://www.powershellgallery.com/).</span></span>
-
-
-
+- <span data-ttu-id="6ed14-143">Saiba mais sobre configurações de DSC em [Configurações de DSC](configurations.md).</span><span class="sxs-lookup"><span data-stu-id="6ed14-143">Find out more about DSC configurations at [DSC configurations](configurations.md).</span></span>
+- <span data-ttu-id="6ed14-144">Veja quais recursos de DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos de DSC](resources.md).</span><span class="sxs-lookup"><span data-stu-id="6ed14-144">See what DSC resources are available, and how to create custom DSC resources at [DSC resources](resources.md).</span></span>
+- <span data-ttu-id="6ed14-145">Localize as configurações e recursos de DSC na [Galeria do PowerShell](https://www.powershellgallery.com/).</span><span class="sxs-lookup"><span data-stu-id="6ed14-145">Find DSC configurations and resources in the [PowerShell Gallery](https://www.powershellgallery.com/).</span></span>

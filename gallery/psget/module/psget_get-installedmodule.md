@@ -1,42 +1,42 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Get-InstalledModule
-ms.openlocfilehash: 6f485d04503ea6d9a51a68ae7ec3d0dc2e6facab
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f82d8f3b6b6a9283deef44c2705b97d4717b634c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="get-installedmodule"></a><span data-ttu-id="764c1-103">Get-InstalledModule</span><span class="sxs-lookup"><span data-stu-id="764c1-103">Get-InstalledModule</span></span>
+# <a name="get-installedmodule"></a><span data-ttu-id="86a84-103">Get-InstalledModule</span><span class="sxs-lookup"><span data-stu-id="86a84-103">Get-InstalledModule</span></span>
 
-<span data-ttu-id="764c1-104">Obtém os módulos instalados em um computador.</span><span class="sxs-lookup"><span data-stu-id="764c1-104">Gets installed modules on a computer.</span></span>
+<span data-ttu-id="86a84-104">Obtém os módulos instalados em um computador.</span><span class="sxs-lookup"><span data-stu-id="86a84-104">Gets installed modules on a computer.</span></span>
 
-## <a name="description"></a><span data-ttu-id="764c1-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="764c1-105">Description</span></span>
+## <a name="description"></a><span data-ttu-id="86a84-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="86a84-105">Description</span></span>
 
-<span data-ttu-id="764c1-106">O cmdlet Get-InstalledModule obtém os módulos do PowerShell que foram instalados no computador usando o cmdlet Install-Module.</span><span class="sxs-lookup"><span data-stu-id="764c1-106">The Get-InstalledModule cmdlet gets installed PowerShell modules on a computer which were installed using Install-Module cmdlet.</span></span>
+<span data-ttu-id="86a84-106">O cmdlet Get-InstalledModule obtém os módulos do PowerShell que foram instalados no computador usando o cmdlet Install-Module.</span><span class="sxs-lookup"><span data-stu-id="86a84-106">The Get-InstalledModule cmdlet gets installed PowerShell modules on a computer which were installed using Install-Module cmdlet.</span></span>
 
-<span data-ttu-id="764c1-107">Para cada módulo instalado, Get-InstalledModule retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Uninstall-Module para desinstalar os módulos instalados.</span><span class="sxs-lookup"><span data-stu-id="764c1-107">For each installed module, Get-InstalledModule returns a PSRepositoryItemInfo object which can optionally be piped to Uninstall-Module for uninstalling the installed modules.</span></span>
+<span data-ttu-id="86a84-107">Para cada módulo instalado, Get-InstalledModule retorna um objeto PSRepositoryItemInfo que pode, opcionalmente, ser redirecionado para Uninstall-Module para desinstalar os módulos instalados.</span><span class="sxs-lookup"><span data-stu-id="86a84-107">For each installed module, Get-InstalledModule returns a PSRepositoryItemInfo object which can optionally be piped to Uninstall-Module for uninstalling the installed modules.</span></span>
 
-- <span data-ttu-id="764c1-108">Get-InstalledModule pode filtrar os módulos instalados com base em parâmetros de versão e nome.</span><span class="sxs-lookup"><span data-stu-id="764c1-108">Get-InstalledModule can filter installed modules based on name, version parameters.</span></span>
-- <span data-ttu-id="764c1-109">Get-InstalledModule pode filtrar segundo os parâmetros de versão: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span><span class="sxs-lookup"><span data-stu-id="764c1-109">Get-InstalledModule can filter with version parameters: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span></span>
-  - <span data-ttu-id="764c1-110">Esses parâmetros são mutuamente exclusivos, exceto MinmimumVersion e MaximumVersion.</span><span class="sxs-lookup"><span data-stu-id="764c1-110">These parameters are mutually exclusive, except MinmimumVersion and MaximumVersion.</span></span>
-  - <span data-ttu-id="764c1-111">Esses parâmetros de versão são permitidos apenas com o nome exclusivo do módulo, sem curingas.</span><span class="sxs-lookup"><span data-stu-id="764c1-111">These version parameters are allowed only with the single module name without any wildcards.</span></span>
-  - <span data-ttu-id="764c1-112">Se o parâmetro RequiredVersion não for especificado, Get-InstalledModule retornará a versão mais recente do módulo instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do módulo se nenhuma versão mínima tiver sido especificada.</span><span class="sxs-lookup"><span data-stu-id="764c1-112">If the RequiredVersion parameter is not specified, Get-InstalledModule returns the latest version of the installed module that is equal to or greater than the minimum version specified or the latest version of the module if no minimum version is specified.</span></span> 
-  - <span data-ttu-id="764c1-113">Se o parâmetro RequiredVersion for especificado, Get-InstalledModule retornará apenas a versão do módulo instalado que corresponde exatamente à versão especificada.</span><span class="sxs-lookup"><span data-stu-id="764c1-113">If the RequiredVersion parameter is specified, Get-InstalledModule only returns the version of installed module that exactly matches the specified version.</span></span>
+- <span data-ttu-id="86a84-108">Get-InstalledModule pode filtrar os módulos instalados com base em parâmetros de versão e nome.</span><span class="sxs-lookup"><span data-stu-id="86a84-108">Get-InstalledModule can filter installed modules based on name, version parameters.</span></span>
+- <span data-ttu-id="86a84-109">Get-InstalledModule pode filtrar segundo os parâmetros de versão: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span><span class="sxs-lookup"><span data-stu-id="86a84-109">Get-InstalledModule can filter with version parameters: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.</span></span>
+  - <span data-ttu-id="86a84-110">Esses parâmetros são mutuamente exclusivos, exceto MinmimumVersion e MaximumVersion.</span><span class="sxs-lookup"><span data-stu-id="86a84-110">These parameters are mutually exclusive, except MinmimumVersion and MaximumVersion.</span></span>
+  - <span data-ttu-id="86a84-111">Esses parâmetros de versão são permitidos apenas com o nome exclusivo do módulo, sem curingas.</span><span class="sxs-lookup"><span data-stu-id="86a84-111">These version parameters are allowed only with the single module name without any wildcards.</span></span>
+  - <span data-ttu-id="86a84-112">Se o parâmetro RequiredVersion não for especificado, Get-InstalledModule retornará a versão mais recente do módulo instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do módulo se nenhuma versão mínima tiver sido especificada.</span><span class="sxs-lookup"><span data-stu-id="86a84-112">If the RequiredVersion parameter is not specified, Get-InstalledModule returns the latest version of the installed module that is equal to or greater than the minimum version specified or the latest version of the module if no minimum version is specified.</span></span>
+  - <span data-ttu-id="86a84-113">Se o parâmetro RequiredVersion for especificado, Get-InstalledModule retornará apenas a versão do módulo instalado que corresponde exatamente à versão especificada.</span><span class="sxs-lookup"><span data-stu-id="86a84-113">If the RequiredVersion parameter is specified, Get-InstalledModule only returns the version of installed module that exactly matches the specified version.</span></span>
 
-## <a name="cmdlet-syntax"></a><span data-ttu-id="764c1-114">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="764c1-114">Cmdlet syntax</span></span>
+## <a name="cmdlet-syntax"></a><span data-ttu-id="86a84-114">Sintaxe do cmdlet</span><span class="sxs-lookup"><span data-stu-id="86a84-114">Cmdlet syntax</span></span>
 ```powershell
 Get-Command -Name Get-InstalledModule -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="764c1-115">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="764c1-115">Cmdlet online help reference</span></span>
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="86a84-115">Referência da ajuda online sobre cmdlets</span><span class="sxs-lookup"><span data-stu-id="86a84-115">Cmdlet online help reference</span></span>
 
-[<span data-ttu-id="764c1-116">Get-InstalledModule</span><span class="sxs-lookup"><span data-stu-id="764c1-116">Get-InstalledModule</span></span>](http://go.microsoft.com/fwlink/?LinkId=526863)
+[<span data-ttu-id="86a84-116">Get-InstalledModule</span><span class="sxs-lookup"><span data-stu-id="86a84-116">Get-InstalledModule</span></span>](http://go.microsoft.com/fwlink/?LinkId=526863)
 
-## <a name="example-commands"></a><span data-ttu-id="764c1-117">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="764c1-117">Example commands</span></span>
+## <a name="example-commands"></a><span data-ttu-id="86a84-117">Comandos de exemplo</span><span class="sxs-lookup"><span data-stu-id="86a84-117">Example commands</span></span>
 
 ```powershell
 
@@ -100,7 +100,7 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Modules\DJoin\1.
 
 
 
-## <a name="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object"></a><span data-ttu-id="764c1-118">Propriedades InstalledDate e UpdatedDate no objeto PSGetRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="764c1-118">InstalledDate and UpdatedDate properties in PSGetRepositoryItemInfo object</span></span>
+## <a name="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object"></a><span data-ttu-id="86a84-118">Propriedades InstalledDate e UpdatedDate no objeto PSGetRepositoryItemInfo</span><span class="sxs-lookup"><span data-stu-id="86a84-118">InstalledDate and UpdatedDate properties in PSGetRepositoryItemInfo object</span></span>
 
     During the install operation:
         InstalledDate: current DateTime (Get-Date) value
@@ -126,4 +126,3 @@ Name          InstalledDate         UpdatedDate
 ----          -------------         -----------
 ContosoServer 2/29/2016 11:59:14 AM 2/29/2016 12:00:15 PM
 ```
-
