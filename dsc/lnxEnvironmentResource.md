@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso nxEnvironment de DSC para Linux
-ms.openlocfilehash: 61e0c7e77e486cea878351f1929d73f1f80710d8
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6d1d5e578e9a7ddda0e70063f86867de2e87a52e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>Recurso nxEnvironment de DSC para Linux
 
@@ -29,13 +29,13 @@ nxEnvironment <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade |  Descrição | 
+|  Propriedade |  Descrição |
 |---|---|
-| Nome| Indica o nome da variável de ambiente para a qual você deseja garantir um estado específico.| 
-| Valor| O valor que será atribuído à variável de ambiente.| 
-| Ensure| Determina se é necessário verificar se a variável existe. Defina essa propriedade como "Present" para garantir que a variável exista. Defina-a como "Absent" para garantir que a variável não exista. O valor padrão é "Present".| 
-| Caminho| Define a variável de ambiente que está sendo configurada. Defina essa propriedade como **$true** se a variável for a variável **Path**; caso contrário, defina-a como **$false**. O padrão é **$false**. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente.| 
-| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
+| Nome| Indica o nome da variável de ambiente para a qual você deseja garantir um estado específico.|
+| Valor| O valor que será atribuído à variável de ambiente.|
+| Ensure| Determina se é necessário verificar se a variável existe. Defina essa propriedade como "Present" para garantir que a variável exista. Defina-a como "Absent" para garantir que a variável não exista. O valor padrão é "Present".|
+| Caminho| Define a variável de ambiente que está sendo configurada. Defina essa propriedade como **$true** se a variável for a variável **Path**; caso contrário, defina-a como **$false**. O padrão é **$false**. Se a variável que estiver sendo configurada for a variável **Path**, o valor fornecido por meio da propriedade **Value** será acrescentado ao valor existente.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="additional-information"></a>Informações adicionais
 
@@ -47,7 +47,7 @@ nxEnvironment <string> #ResourceName
 O exemplo a seguir mostra como usar o recurso **nxEnvironment** para garantir que **TestEnvironmentVariable** esteja presente e tenha o valor "Test-Value". Se **TestEnvironmentVariable** não estiver presente, será criado.
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 
 nxEnvironment EnvironmentExample
@@ -57,5 +57,3 @@ nxEnvironment EnvironmentExample
     Value = “TestValue”
 }
 ```
-
-

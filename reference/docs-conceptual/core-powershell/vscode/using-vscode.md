@@ -58,7 +58,7 @@ Se quiser usar uma instalação específica do PowerShell com o Visual Studio Co
 
 1. Clique em **Arquivo -> Preferências -> Configurações**
 1. Dois painéis de editor serão exibidos.
-   No painel mais à direita (`settings.json`), insira a configuração abaixo apropriada para seu sistema operacional entre as duas chaves (`{` e `}`) e substitua  *<version>*  pela versão do PowerShell instalada:
+   No painel mais à direita (`settings.json`), insira a configuração abaixo apropriada para seu sistema operacional entre as duas chaves (`{` e `}`) e substitua *<version>* pela versão do PowerShell instalada:
 
   ```json
     // On Windows:

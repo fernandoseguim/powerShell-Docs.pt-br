@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Visão Geral da Configuração de Estado Desejado do Windows PowerShell"
-ms.openlocfilehash: 1d6ba0b2fdb514e703ddad11adf4cdace5c001a9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Visão Geral da Configuração de Estado Desejado do Windows PowerShell
+ms.openlocfilehash: 3f357ea11a388a05b73539a63e52e639ee906f68
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="windows-powershell-desired-state-configuration-overview"></a>Visão Geral da Configuração de Estado Desejado do Windows PowerShell 
+# <a name="windows-powershell-desired-state-configuration-overview"></a>Visão Geral da Configuração de Estado Desejado do Windows PowerShell
 
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -24,17 +24,16 @@ A DSC é uma plataforma de gerenciamento no PowerShell que permite que você ger
 A DSC é uma plataforma declarativa usada para configuração, implantação e gerenciamento de sistemas. Consiste em três componentes principais:
 
 - [Configurações](configurations.md) são scripts declarativos do PowerShell que definem e configuram instâncias de recursos.
-    Após executar a configuração, a DSC (e os recursos que estão sendo chamados pela configuração) vai simplesmente “realizar”, garantindo que o sistema exista no estado disposto pela configuração. 
+    Após executar a configuração, a DSC (e os recursos que estão sendo chamados pela configuração) vai simplesmente “realizar”, garantindo que o sistema exista no estado disposto pela configuração.
     As configurações da DSC também são idempotentes: o Gerenciador de Configurações Local (LCM) continuará garantindo que os computadores sejam configurados no estado declarado pela configuração.
-- Os [recursos](resources.md) são a parte de "realização" da DSC. Eles contêm o código que definem e mantêm o destino de uma configuração no estado especificado. 
+- Os [recursos](resources.md) são a parte de "realização" da DSC. Eles contêm o código que definem e mantêm o destino de uma configuração no estado especificado.
     Os recursos residem dentro de módulos do PowerShell e podem ser escritos para modelar algo tão genérico quanto um arquivo ou um processo do Windows ou tão específico quanto um servidor IIS ou em uma VM em execução no Azure.
-- O [Gerenciador de Configurações Local (LCM)](metaConfig.md) é o mecanismo pelo qual a DSC facilita a interação entre recursos e configurações. 
-    Regularmente, o LCM sonda o sistema usando o fluxo de controle implementado pelos recursos para garantir que o estado definido por uma Configuração seja mantido. 
-    Se o sistema estiver sem estado, o LCM faz chamadas para o código nos recursos para “realizar”, de acordo com a configuração. 
+- O [Gerenciador de Configurações Local (LCM)](metaConfig.md) é o mecanismo pelo qual a DSC facilita a interação entre recursos e configurações.
+    Regularmente, o LCM sonda o sistema usando o fluxo de controle implementado pelos recursos para garantir que o estado definido por uma Configuração seja mantido.
+    Se o sistema estiver sem estado, o LCM faz chamadas para o código nos recursos para “realizar”, de acordo com a configuração.
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Configurações DSC](configurations.md)
 - [Recursos de DSC](resources.md)
 - [Configurando o Gerenciador de Configurações Local](metaConfig.md)
-

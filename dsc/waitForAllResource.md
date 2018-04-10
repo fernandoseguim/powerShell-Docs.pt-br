@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso de DSC WaitForAll
-ms.openlocfilehash: 2b6d9e11acd429eecb30926316d1033331524edc
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 7cb2fc134f4391de0e5df2cd719902097bf2ebf5
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-waitforall-resource"></a>Recurso de DSC WaitForAll
 
@@ -26,7 +26,7 @@ WaitForAll [string] #ResourceName
     ResourceName = [string]
     NodeName = [string]
     [ RetryIntervalSec = [Uint64] ]
-    [ RetryCount = [Uint32] ] 
+    [ RetryCount = [Uint32] ]
     [ ThrottleLimit = [Uint32]]
     [ DependsOn = [string[]] ]
 }
@@ -34,17 +34,16 @@ WaitForAll [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| ResourceName| O nome do recurso do qual dependerá. Se esse recurso pertence a uma configuração diferente, formate o nome como "[__TipoDoRecurso__]__NomeDoRecurso__::[__NomeDaConfiguração__]::[__NomeDaConfiguração__]"| 
-| NodeName| Os nós de destino do recurso do qual dependerá.| 
-| RetryIntervalSec| O número de segundos antes de tentar novamente. O mínimo é 1.| 
-| RetryCount| O número máximo de tentativas.| 
-| ThrottleLimit| O número de máquinas para conectar-se simultaneamente. O padrão é new-cimsession padrão.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| ResourceName| O nome do recurso do qual dependerá. Se esse recurso pertence a uma configuração diferente, formate o nome como "[__TipoDoRecurso__]__NomeDoRecurso__::[__NomeDaConfiguração__]::[__NomeDaConfiguração__]"|
+| NodeName| Os nós de destino do recurso do qual dependerá.|
+| RetryIntervalSec| O número de segundos antes de tentar novamente. O mínimo é 1.|
+| RetryCount| O número máximo de tentativas.|
+| ThrottleLimit| O número de máquinas para conectar-se simultaneamente. O padrão é new-cimsession padrão.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 
 
 ## <a name="example"></a>Exemplo
 
 Para obter um exemplo de como usar esse recurso, consulte [Especificando dependências de nó cruzado](crossNodeDependencies.md)
-

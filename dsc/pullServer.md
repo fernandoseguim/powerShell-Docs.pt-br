@@ -1,13 +1,13 @@
 ---
-ms.date: 2018-02-02
+ms.date: 02/02/2018
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Serviço de Pull de DSC"
-ms.openlocfilehash: d5e24dcc093c73d8ebbaa618517193dacc4f2aaf
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+keywords: DSC,powershell,configuração,instalação
+title: Serviço de Pull de DSC
+ms.openlocfilehash: 1547092d5ea6733296bf89f05dd96f70c0a000ac
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -67,7 +67,7 @@ Um script de exemplo é fornecido abaixo.
 A maneira mais fácil de configurar um servidor de pull da Web é usar o recurso xWebService, incluído no módulo xPSDesiredStateConfiguration.
 As etapas a seguir explicam como usar o recurso em uma configuração que configure o serviço Web.
 
-1. Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
+1. Chame o cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX. Instale o certificado no nó que se tornará o servidor de Pull de DSC no local padrão, que deve ser CERT: \LocalMachine\My. Anote a impressão digital do certificado.
 1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um, usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```' ou '```New-Guid```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para saber mais, veja a seção Chave de Registro abaixo.
 1. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta Example do módulo **xPSDesiredStateConfiguration** como Sample_xDscWebService.ps1). Esse script configura o servidor de pull.
@@ -127,7 +127,7 @@ As etapas a seguir explicam como usar o recurso em uma configuração que config
 1. Execute a configuração, passando a impressão digital do certificado SSL como o parâmetro **certificateThumbPrint** e uma chave de Registro GUID como o parâmetro **RegistrationKey**:
 
 ```powershell
-    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
+    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store
     # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
     dir Cert:\LocalMachine\my
 
@@ -142,7 +142,7 @@ As etapas a seguir explicam como usar o recurso em uma configuração que config
 #### <a name="registration-key"></a>Chave de Registro
 
 Para permitir que nós clientes sejam registrados com o servidor para poderem utilizar nomes de configuração em vez de uma ID de configuração, uma chave de registro que foi criada pela configuração acima é salva em um arquivo chamado `RegistrationKeys.txt` em `C:\Program Files\WindowsPowerShell\DscService`. A chave de registro funciona como um segredo compartilhado usado durante o registro inicial pelo cliente com o servidor de pull. O cliente gerará um certificado autoassinado, que será usado para autenticar de modo exclusivo com o servidor de pull depois que o registro for concluído com êxito. A impressão digital do certificado é armazenada localmente e associada à URL do servidor de pull.
-> **Observação**: não há suporte para chaves do registro no PowerShell 4.0. 
+> **Observação**: não há suporte para chaves do registro no PowerShell 4.0.
 
 Para configurar um nó para ser autenticado no servidor de pull, a chave de registro deverá estar na metaconfiguração do nó de destino que será registrado nesse servidor de pull. Observe que a **RegistrationKey** na metaconfiguração abaixo é removida depois de o computador de destino ser registrado com sucesso, e o valor “140a952b-b9d6-406b-b416-e0f759c9c0e4” deve corresponder ao valor armazenado no arquivo RegistrationKeys.txt no servidor pull. Sempre trate o valor da chave do registro com segurança, porque o conhecimento permite que qualquer computador de destino seja registrado com o servidor de pull.
 
@@ -155,7 +155,7 @@ configuration PullClientConfigID
         Settings
         {
             RefreshMode          = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded   = $true
         }
 
@@ -223,8 +223,8 @@ Para facilitar a configuração, validação e gerenciamento do servidor de pull
 
     ```powershell
         # Example 1 - Package all versions of given modules installed locally and MOF files are in c:\LocalDepot
-         $moduleList = @("xWebAdministration", "xPhp") 
-         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList 
+         $moduleList = @("xWebAdministration", "xPhp")
+         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList
 
          # Example 2 - Package modules and mof documents from c:\LocalDepot
          Publish-DSCModuleAndMof -Source C:\LocalDepot -Force

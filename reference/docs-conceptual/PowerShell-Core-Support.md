@@ -67,7 +67,7 @@ Instalando o módulo [`WindowsPSModulePath`][], você pode acrescentar o Windows
 Primeiro, instale o módulo `WindowsPSModulePath` na Galeria do PowerShell:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 

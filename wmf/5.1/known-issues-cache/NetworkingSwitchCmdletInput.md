@@ -1,16 +1,24 @@
 ---
-title: Falha de cmdlets do Gerenciador de Comutador de Rede
+ms.date: 06/12/2017
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,instalação
 contributor: vaibch
-ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
-ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
+title: Falha de cmdlets do Gerenciador de Comutador de Rede
+ms.openlocfilehash: 626809513e7a8f1aa2c47a48c74e69ca4077f598
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
+ms.lasthandoff: 04/09/2018
 ---
-Os cmdlets do Gerenciador de Comutador de Rede podem ser usados para gerenciar os comutadores de rede em WSMAN. Alguns cmdlets do módulo são capazes de aceitar valores de pipelines. Na Preview do 5.1 WMF, os cmdlets que podem aceitar o valor de pipeline não poderão ser executados quando os valores não forem passados pelos pipelines.
+Os cmdlets do Gerenciador de Comutador de Rede podem ser usados para gerenciar os comutadores de rede em WSMAN.
+Alguns cmdlets do módulo são capazes de aceitar valores de pipelines.
+Na Preview do 5.1 WMF, os cmdlets que podem aceitar o valor de pipeline não poderão ser executados quando os valores não forem passados pelos pipelines.
 
 Se o parâmetro "InputObject" não for usado, o cmdlet deverá continuar a execução sem falhas.
 
-Aqui está a lista dos cmdlets afetados, ou seja, esses cmdlets pode aceitar o valor para o parâmetro "InputObject" de pipeline. Se esse valor não for passado do pipeline, a execução do cmdlet falhará.
+Aqui está a lista dos cmdlets afetados, ou seja, esses cmdlets pode aceitar o valor para o parâmetro "InputObject" de pipeline.
+Se esse valor não for passado do pipeline, a execução do cmdlet falhará.
 
 - Disable-NetworkSwitchEthernetPo
 - Enable-NetworkSwitchEthernetPort

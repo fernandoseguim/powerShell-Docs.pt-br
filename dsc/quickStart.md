@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Início Rápido de Configuração de Estado Desejado"
-ms.openlocfilehash: e21017f24db8c90229063895c1a7e4c6f0546d0c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Início Rápido de Configuração de Estado Desejado
+ms.openlocfilehash: 25bcd46bbf62a6ebb727519a65732377363e68c0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,7 +37,7 @@ Em um editor de texto, digite o texto a seguir:
 </body>
 ```
 
-Salve-o como `index.htm` na pasta `test` que você criou anteriormente. 
+Salve-o como `index.htm` na pasta `test` que você criou anteriormente.
 
 ## <a name="write-the-configuration"></a>Gravar a configuração
 
@@ -122,7 +122,7 @@ Start-DscConfiguration .\WebsiteTest
 
 ## <a name="test-the-configuration"></a>Testar a configuração
 
-Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) para ver se a configuração foi bem-sucedida. 
+Você pode chamar o cmdlet [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) para ver se a configuração foi bem-sucedida.
 
 Você também pode testar os resultados diretamente, neste caso, pesquisando o `http://localhost/` em um navegador da Web.
 Você deve ver a página de HTML "Hello World" que criou como a primeira etapa deste exemplo.
@@ -132,6 +132,3 @@ Você deve ver a página de HTML "Hello World" que criou como a primeira etapa d
 - Saiba mais sobre configurações de DSC em [Configurações de DSC](configurations.md).
 - Veja quais recursos de DSC estão disponíveis e como criar recursos personalizados de DSC em [Recursos de DSC](resources.md).
 - Localize as configurações e recursos de DSC na [Galeria do PowerShell](https://www.powershellgallery.com/).
-
-
-

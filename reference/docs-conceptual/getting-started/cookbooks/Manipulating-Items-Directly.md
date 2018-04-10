@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Manipulando itens diretamente
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: d9aa95dcb0da2e8203cbe32d64b95bf33d914166
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 688f9194bd16793331325999c69e88df3e94c976
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="manipulating-items-directly"></a>Manipulando itens diretamente
+
 Os elementos exibidos em unidades do Windows PowerShell, como os arquivos e pastas em unidades de sistema de arquivos e as chaves do Registro nas unidades do Registro do Windows PowerShell, são chamados de *itens* no Windows PowerShell. Os cmdlets para trabalhar com tais itens têm o substantivo **Item** em seus nomes.
 
 A saída do comando **Get-Command -Noun Item** mostra que existem nove cmdlets de itens do Windows PowerShell.
@@ -31,6 +32,7 @@ Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
 ### <a name="creating-new-items-new-item"></a>Criando novos itens (New-Item)
+
 Para criar um novo item no sistema de arquivos, use o cmdlet **New-Item**. Inclua o parâmetro **Path** com o caminho para o item e o parâmetro **ItemType** com um valor de "file" ou "directory".
 
 Por exemplo, para criar um novo diretório chamado “New.Directory” no diretório C:\\Temp, digite:
@@ -73,6 +75,7 @@ SKC  VC Name                           Property
 Ao digitar um caminho do Registro, certifique-se de incluir os dois-pontos (**:**) nos nomes de unidades do Windows PowerShell, HKLM: e HKCU:. Sem os dois pontos, o Windows PowerShell não reconhece o nome de unidade no caminho.
 
 ### <a name="why-registry-values-are-not-items"></a>Por que os valores do registro não são itens
+
 Ao usar o cmdlet **Get-ChildItem** para localizar os itens em uma chave do Registro, você nunca verá entradas reais do Registro ou seus valores.
 
 Por exemplo, a chave do Registro **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run** geralmente contém várias entradas do Registro que representam aplicativos executados quando o sistema é iniciado.
@@ -81,6 +84,7 @@ No entanto, ao usar **Get-ChildItem** para procurar itens filho na chave, tudo o
 
 ```
 PS> Get-ChildItem HKLM:\Software\Microsoft\Windows\CurrentVersion\Run
+
    Hive: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\Software\Micros
 oft\Windows\CurrentVersion\Run
 SKC  VC Name                           Property
@@ -91,10 +95,11 @@ SKC  VC Name                           Property
 Embora seria algo conveniente tratar as entradas do registro como itens, não é possível você especificar um caminho para uma entrada de registro de uma maneira que garanta que ele seja exclusivo. A notação de caminho não faz distinção entre a subchave do Registro chamada **Run** e a entrada do Registro **(Default)** na subchave **Run**. Além disso, como nomes de entrada do Registro podem conter o caractere de barra invertida (**\\**), se as entradas de Registro fossem itens, você não poderia usar a notação de caminho para distinguir uma entrada do Registro denominada **Windows\\CurrentVersion\\Run** da subchave localizada nesse caminho.
 
 ### <a name="renaming-existing-items-rename-item"></a>Renomeando itens existentes (Rename-Item)
+
 Para alterar o nome de um arquivo ou uma pasta, use o cmdlet **Rename-Item**. O comando a seguir altera o nome do arquivo **file1.txt** para **fileOne.txt**.
 
-```
-PS> Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
+```powershell
+Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
 ```
 
 O cmdlet **Rename-Item** pode alterar o nome de um arquivo ou uma pasta, mas não pode mover um item. O comando a seguir falhará porque ele tenta mover o arquivo da pasta New.Directory para o diretório Temp.
@@ -107,6 +112,7 @@ At line:1 char:12
 ```
 
 ### <a name="moving-items-move-item"></a>Movendo itens (Move Item)
+
 Para mover um arquivo ou uma pasta, use o cmdlet **Move-Item**.
 
 Por exemplo, o comando a seguir move o diretório New.Directory do diretório C:\\temp para a raiz da unidade C:. Para confirmar que o item foi movido, inclua o parâmetro **PassThru** do cmdlet **Move-Item**. Sem o **Passthru**, o cmdlet **Move-Item** não exibirá nenhum resultado.
@@ -122,12 +128,13 @@ d----        2006-05-18  12:14 PM            New.Directory
 ```
 
 ### <a name="copying-items-copy-item"></a>Copiando itens (Copy-Item)
+
 Se estiver familiarizado com as operações de cópia em outros shells, você poderá achar o comportamento do cmdlet **Copy-Item** do Windows PowerShell um tanto incomum. Quando você copia um item de um local para outro, o Copy-Item não copia o conteúdo por padrão.
 
 Por exemplo, se você copiar o diretório **New.Directory** da unidade C: para o diretório C:\\temp, o comando será executado com êxito, mas os arquivos no diretório New.Directory não serão copiados.
 
-```
-PS> Copy-Item -Path C:\New.Directory -Destination C:\temp
+```powershell
+Copy-Item -Path C:\New.Directory -Destination C:\temp
 ```
 
 Se você exibir o conteúdo do **C:\\temp\\New.Directory**, verá que ele não contém nenhum arquivo:
@@ -145,6 +152,7 @@ Para copiar todo o conteúdo de uma pasta, inclua o parâmetro **Recurse** do cm
 
 ```
 PS> Copy-Item -Path C:\New.Directory -Destination C:\temp -Recurse -Force -Passthru
+
     Directory: Microsoft.Windows PowerShell.Core\FileSystem::C:\temp
 
 Mode                LastWriteTime     Length Name
@@ -159,6 +167,7 @@ Mode                LastWriteTime     Length Name
 ```
 
 ### <a name="deleting-items-remove-item"></a>Excluindo itens (Remove-Item)
+
 Para excluir arquivos ou pastas, use o cmdlet **Remove-Item**. Cmdlets do Windows PowerShell, como o **Remove-Item**, que podem executar alterações significativas e irreversíveis, geralmente solicitarão confirmação quando você inserir seus comandos. Por exemplo, se você tentar remover a pasta **New.Directory**, será solicitado a confirmar o comando, pois a pasta contém arquivos:
 
 ```
@@ -174,26 +183,26 @@ specified. If you continue, all children will be removed with the item. Are you
 
 Como **Sim** é a resposta padrão, para excluir a pasta e seus arquivos, pressione a tecla **Enter**. Para remover a pasta sem confirmar, use o parâmetro **-Recurse**.
 
-```
-PS> Remove-Item C:\temp\New.Directory -Recurse
+```powershell
+Remove-Item C:\temp\New.Directory -Recurse
 ```
 
 ### <a name="executing-items-invoke-item"></a>Executando itens (Invoke-Item)
+
 O Windows PowerShell usa o cmdlet **Invoke-Item** para executar uma ação padrão para um arquivo ou uma pasta. Essa ação padrão é determinada pelo manipulador de aplicativo padrão no registro. O efeito é o mesmo que clicar duas vezes o item no Explorador de arquivos.
 
 Por exemplo, suponha que você execute o seguinte comando:
 
-```
-PS> Invoke-Item C:\WINDOWS
+```powershell
+Invoke-Item C:\WINDOWS
 ```
 
 Aparece uma janela do Explorer localizada em C:\\Windows, como se você tivesse clicado duas vezes na pasta C:\\Windows.
 
 Se você invocar o arquivo **Boot.ini** em um sistema anterior ao Windows Vista:
 
-```
-PS> Invoke-Item C:\boot.ini
+```powershell
+Invoke-Item C:\boot.ini
 ```
 
 Se o tipo de arquivo .ini estiver associado ao Bloco de Notas, o arquivo Boot.ini é aberto nele.
-

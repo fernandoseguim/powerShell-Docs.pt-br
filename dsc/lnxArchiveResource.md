@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso nxArchive de DSC para Linux
-ms.openlocfilehash: e91ef5bcf4bdf413844c23d1d3bd823a535b536f
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 142f0317914f1bd3a0523d706b19662f3f64c8b6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>Recurso nxArchive de DSC para Linux
 
@@ -29,21 +29,21 @@ nxArchive <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade |  Descrição | 
+|  Propriedade |  Descrição |
 |---|---|
-| SourcePath| Especifica o caminho de origem do arquivo morto. Deve ser um arquivo .tar, .zip ou .tar.gz. | 
-| DestinationPath| Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído.| 
-| Soma de verificação| Define o tipo que deve ser usado ao determinar se o arquivo de origem foi atualizado. Os valores são: "ctime", "mtime" ou "md5". O valor padrão é "md5".| 
-| Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **$false**.| 
-| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
-| Ensure| Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination**. Defina essa propriedade como "Present" para garantir que o conteúdo exista. Defina-a como "Absent" para garantir que não exista. O valor padrão é "Present".| 
+| SourcePath| Especifica o caminho de origem do arquivo morto. Deve ser um arquivo .tar, .zip ou .tar.gz. |
+| DestinationPath| Especifica o local onde você deseja garantir que o conteúdo do arquivo seja extraído.|
+| Soma de verificação| Define o tipo que deve ser usado ao determinar se o arquivo de origem foi atualizado. Os valores são: "ctime", "mtime" ou "md5". O valor padrão é "md5".|
+| Force| Determinadas operações de arquivo (como substituição de um arquivo ou exclusão de um diretório que não esteja vazio) resultarão em erro. O uso da propriedade **Force** substitui esses erros. O valor padrão é **$false**.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
+| Ensure| Determina se é necessário verificar se o conteúdo do arquivo existe em **Destination**. Defina essa propriedade como "Present" para garantir que o conteúdo exista. Defina-a como "Absent" para garantir que não exista. O valor padrão é "Present".|
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como usar o recurso **nxArchive** para garantir que o conteúdo de um arquivo morto chamado `website.tar` exista e seja extraído em um destino específico.
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 nxFile SyncArchiveFromWeb
 {
@@ -60,6 +60,5 @@ nxArchive SyncWebDir
    DestinationPath = “/usr/local/apache2/htdocs/”
    Force = $false
    DependsOn = "[nxFile]SyncArchiveFromWeb"
-} 
+}
 ```
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Compreendendo o Pipeline do Windows PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 6d152e52d2fcfb9dd592eb9ac40500615f2186cb
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: c3f1d17432cf3a77c0f5ecae137a4233a28a19d7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understanding-the-windows-powershell-pipeline"></a>Compreendendo o Pipeline do Windows PowerShell
 O redirecionamento funciona praticamente em qualquer lugar no Windows PowerShell. Embora você veja o texto na tela, o Windows PowerShell não redireciona o texto entre comandos. Em vez disso, ele redireciona os objetos.
@@ -61,4 +61,3 @@ Na verdade, a saída das informações de cabeçalho do cmdlet **Get-Location** 
 Considerando que pode haver mais saída de informações de um comando do Windows PowerShell do que é exibido na janela do console, como podemos recuperar os elementos não visíveis? Como exibir os dados extras? E se você desejar exibir os dados em um formato diferente do que o Windows PowerShell normalmente usa?
 
 O restante deste capítulo discute como é possível pode descobrir a estrutura de objetos específicos do Windows PowerShell selecionando itens específicos e formatando-os para exibição mais fácil, bem como enviar essas informações para locais de saída alternativos, como arquivos e impressoras.
-

@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Get-InstalledScript
-ms.openlocfilehash: f35e57cdadd1448bd9032ab007d692003c4cf4a2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 668327905b0dab40119940a3134b674c452f538d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-installedscript"></a>Get-InstalledScript
 
@@ -24,7 +24,7 @@ Para cada script instalado, Get-InstalledScript retorna um objeto PSRepositoryIt
 - Get-InstalledScript pode filtrar segundo os parâmetros de versão: MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
   - Esses parâmetros são mutuamente exclusivos, exceto MinmimumVersion e MaximumVersion.
   - Esses parâmetros de versão são permitidos apenas com o nome exclusivo do script, sem curingas.
-  - Se o parâmetro RequiredVersion não for especificado, Get-InstalledScript retorna a versão mais recente do script instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do script se nenhuma versão mínima tiver sido especificada. 
+  - Se o parâmetro RequiredVersion não for especificado, Get-InstalledScript retorna a versão mais recente do script instalado que for igual ou maior que a versão mínima especificada ou a versão mais recente do script se nenhuma versão mínima tiver sido especificada.
   - Se o parâmetro RequiredVersion for especificado, Get-InstalledScript retorna apenas a versão do script instalado que corresponde exatamente à versão especificada.
 
 ## <a name="cmdlet-syntax"></a>Sintaxe do cmdlet
@@ -98,4 +98,3 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Scripts
 
 
 ```
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso de DSC WindowsPackageCab
-ms.openlocfilehash: 1d7c8d9bf45d2eda8734daa8877315d219662c75
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: af45956c1fe8cffa1d7fd779847eded9e3f6b51e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Recurso de DSC WindowsPackageCab
 
@@ -15,7 +15,7 @@ ms.lasthandoff: 01/17/2018
 
 O **WindowsPackageCab** no DSC (Desired State Configuration) do Windows PowerShell fornece um mecanismo para instalar ou desinstalar pacotes de gabinete (.cab) do Windows em um nó de destino.
 
-O nó de destino deve ter o módulo PowerShell do DISM instalado. Para obter informações, consulte [Usar DISM no Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14). 
+O nó de destino deve ter o módulo PowerShell do DISM instalado. Para obter informações, consulte [Usar DISM no Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14).
 
 
 ## <a name="syntax"></a>Sintaxe
@@ -32,13 +32,13 @@ O nó de destino deve ter o módulo PowerShell do DISM instalado. Para obter inf
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Nome| Indica o nome do pacote para o qual você deseja garantir um estado específico.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Nome| Indica o nome do pacote para o qual você deseja garantir um estado específico.|
 | Ensure| Indica se o pacote foi instalado. Defina esta propriedade como "Absent" para garantir que o pacote não seja instalado (ou desinstalar o pacote, se ele estiver instalado). Defina-a como "Present" (o valor padrão) para garantir que o pacote seja instalado.|
-| Caminho| Indica o caminho em que o pacote reside.| 
-| LogPath| Indica o caminho completo em que você deseja que o provedor salve um arquivo de log para instalar ou desinstalar o pacote.| 
-| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.| 
+| Caminho| Indica o caminho em que o pacote reside.|
+| LogPath| Indica o caminho completo em que você deseja que o provedor salve um arquivo de log para instalar ou desinstalar o pacote.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"``.|
 
 ## <a name="example"></a>Exemplo
 
@@ -76,4 +76,3 @@ Configuration Sample_WindowsPackageCab
     }
 }
 ```
-

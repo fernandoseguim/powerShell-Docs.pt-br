@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
-title: "Apêndice 1 Aliases de compatibilidade"
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
+title: Apêndice 1 Aliases de compatibilidade
 ms.assetid: 96ad921e-1a57-463e-8e60-424faf8b6ef8
-ms.openlocfilehash: d789139ef80d4208b56e0b2930f04f824a00537d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 113bbee1af185f98777df5767022d54accb69447
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="appendix-1---compatibility-aliases"></a>Apêndice 1: Alias de compatibilidade
+
 O Windows PowerShell tem vários aliases de transição que permitem aos usuários do UNIX e do Cmd usar nomes de comando familiares no Windows PowerShell. Os aliases mais comuns são mostrados na tabela a seguir, junto com o comando do Windows PowerShell por trás do alias e o alias padrão do Windows PowerShell, se houver.
 
 Você pode encontrar o comando do Windows PowerShell para o qual qualquer alias aponta de dentro do Windows PowerShell usando o cmdlet Get-Alias. Por exemplo, digite **get-alias cls**.
@@ -33,4 +34,3 @@ Alias           cls                             Clear-Host
 |**md**|**mkdir**|**New-Item**|**ni**|
 |**pushd**|**pushd**|**Push-Location**|**pushd**|
 |**popd**|**popd**|**Pop-Location**|**popd**|
-

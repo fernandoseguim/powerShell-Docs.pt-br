@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-25
-keywords: PowerShell, cmdlet
+ms.date: 08/25/2017
+keywords: powershell, cmdlet
 title: O objeto ObjectModelRoot
-ms.openlocfilehash: eb3424ff147c35364fa08543d59ebd30f6d2d857
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="the-objectmodelroot-object"></a>O objeto ObjectModelRoot
 
@@ -17,7 +17,7 @@ Este tópico descreve as propriedades do objeto **ObjectModelRoot**.
 
 ### <a name="currentfile"></a>CurrentFile
 
-> Suportado no Windows PowerShell ISE 2.0 e posteriores. 
+> Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém o arquivo, que é associada ao objeto host que atualmente tem o foco.
 
@@ -35,24 +35,23 @@ A propriedade somente leitura que obtém a ferramenta complementar do ISE do Win
 
 ### <a name="currentvisibleverticaltool"></a>CurrentVisibleVerticalTool
 
-> Suportado no Windows PowerShell ISE 2.0 e posteriores. 
+> Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a ferramenta complementar do ISE do Windows PowerShell visível no momento que está localizada no painel de ferramentas vertical no lado direito do editor.
 
 ### <a name="options"></a>Opções
 
-> Suportado no Windows PowerShell ISE 2.0 e posteriores. 
+> Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém as várias opções que podem alterar as configurações no ISE do Windows PowerShell.
 
 ### <a name="powershelltabs"></a>PowerShellTabs
 
-> Suportado no Windows PowerShell ISE 2.0 e posteriores. 
+> Suportado no Windows PowerShell ISE 2.0 e posteriores.
 
 A propriedade somente leitura que obtém a coleção de guias do PowerShell, que está aberta no ISE do Windows PowerShell. Por padrão, esse objeto contém uma guia do PowerShell. No entanto, é possível adicionar mais guias do PowerShell a esse objeto usando scripts ou usando os menus no ISE do Windows PowerShell.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [O modelo de objeto de script do ISE do Windows PowerShell](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [Referência de modelo de objeto do ISE do Windows PowerShell](Windows-PowerShell-ISE-Object-Model-Reference.md)
+- [Objetivo do modelo de objeto de script do ISE do Windows PowerShell](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [A hierarquia de modelo de objeto do ISE](The-ISE-Object-Model-Hierarchy.md)

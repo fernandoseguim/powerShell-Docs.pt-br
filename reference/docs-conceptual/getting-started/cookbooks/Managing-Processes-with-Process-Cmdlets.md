@@ -1,24 +1,27 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Gerenciando processos com os Cmdlets de processo
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
-ms.openlocfilehash: 3786fb77167746d6a477dffdd4ea13e863c99964
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d6d7daa810dce2d476566e4d30f03cc95bf730e6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Gerenciando processos com os Cmdlets de processo
+
 Você pode usar os cmdlets de processo do Windows PowerShell para gerenciar processos locais e remotos no Windows PowerShell.
 
 ## <a name="getting-processes-get-process"></a>Obtendo processos (Get-Process)
+
 Para obter os processos em execução no computador local, execute um **Get-Process** sem parâmetros.
 
 Você pode obter processos específicos definindo seus nomes de processo ou IDs de processo. O comando a seguir obtém o processo Idle:
 
 ```
 PS> Get-Process -id 0
+
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
       0       0        0         16     0               0 Idle
@@ -28,6 +31,7 @@ Embora seja normal os cmdlets não retornarem dados em algumas situações, quan
 
 ```
 PS> Get-Process -Id 99
+
 Get-Process : No process with process ID 99 was found.
 At line:1 char:12
 + Get-Process  <<<< -Id 99
@@ -39,6 +43,7 @@ Por exemplo, o comando a seguir obtém o processo cujos nomes começam com "ex".
 
 ```
 PS> Get-Process -Name ex*
+
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
     234       7     5572      12484   134     2.98   1684 EXCEL
@@ -50,7 +55,8 @@ Como a classe .NET System.Diagnostics.Process é a base de processos do Windows 
 **Get-Process** também aceita vários valores para o parâmetro Name.
 
 ```
-PS> Get-Process -Name exp*,power* 
+PS> Get-Process -Name exp*,power*
+
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
     540      15    35172      48148   141    88.44    408 explorer
@@ -61,6 +67,7 @@ Você pode usar o parâmetro ComputerName de Get-Process para obter os processos
 
 ```
 PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server02
+
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
     258       8    29772      38636   130            3700 powershell
@@ -72,6 +79,7 @@ Os nomes de computador não são evidentes nessa exibição, mas eles são armaz
 
 ```
 PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server01 | Format-Table -Property ID, ProcessName, MachineName
+
   Id ProcessName MachineName
   -- ----------- -----------
 3700 powershell  Server01
@@ -79,17 +87,17 @@ PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server01 | F
 5816 powershell  localhost
 ```
 
-Esse comando mais complexo adiciona a propriedade MachineName à exibição padrão de Get-Process. O acento grave (\`)(ASCII 96) é o caractere de continuação do Windows PowerShell.
+Esse comando mais complexo adiciona a propriedade MachineName à exibição padrão de Get-Process.
 
 ```
-get-process powershell -computername localhost, Server01, Server02 | format-table -property Handles, `
-                    @{Label="NPM(K)";Expression={[int]($_.NPM/1024)}}, `
-                    @{Label="PM(K)";Expression={[int]($_.PM/1024)}}, `
-                    @{Label="WS(K)";Expression={[int]($_.WS/1024)}}, `
-                    @{Label="VM(M)";Expression={[int]($_.VM/1MB)}}, `
-                    @{Label="CPU(s)";Expression={if ($_.CPU -ne $()` 
-                    {$_.CPU.ToString("N")}}}, `                                                                         
-                    Id, ProcessName, MachineName -auto
+PS> Get-Process powershell -ComputerName localhost, Server01, Server02 |
+    Format-Table -Property Handles,
+        @{Label="NPM(K)";Expression={[int]($_.NPM/1024)}},
+        @{Label="PM(K)";Expression={[int]($_.PM/1024)}},
+        @{Label="WS(K)";Expression={[int]($_.WS/1024)}},
+        @{Label="VM(M)";Expression={[int]($_.VM/1MB)}},
+        @{Label="CPU(s)";Expression={if ($_.CPU -ne $() {$_.CPU.ToString("N")}}},
+        Id, ProcessName, MachineName -auto
 
 Handles  NPM(K)  PM(K) WS(K) VM(M) CPU(s)  Id ProcessName  MachineName
 -------  ------  ----- ----- ----- ------  -- -----------  -----------
@@ -99,6 +107,7 @@ Handles  NPM(K)  PM(K) WS(K) VM(M) CPU(s)  Id ProcessName  MachineName
 ```
 
 ## <a name="stopping-processes-stop-process"></a>Parando processos (Stop-Process)
+
 O Windows PowerShell oferece flexibilidade para listar processos, mas como podemos interromper um processo?
 
 O cmdlet **Stop-Process** obtém um Name ou ID para especificar um processo que você deseja interromper. A capacidade de parar os processos depende das suas permissões. Alguns processos não podem ser interrompidos. Por exemplo, se você tentar interromper o processo ocioso, você receberá um erro:
@@ -129,30 +138,31 @@ Performing operation "Stop-Process" on Target "taskmgr (4072)".
 
 A manipulação complexa de processos é possível usando alguns cmdlets de filtragem de objetos. Como um objeto Process tem uma propriedade Responding que é verdadeira quando ele não está respondendo, você pode interromper todos os aplicativos sem resposta com o seguinte comando:
 
-```
+```powershell
 Get-Process | Where-Object -FilterScript {$_.Responding -eq $false} | Stop-Process
 ```
 
 Você pode usar a mesma abordagem em outras situações. Por exemplo, suponha que um aplicativo de área de notificação secundário é executado automaticamente quando os usuários iniciam o outro aplicativo. Você pode achar que isso não funciona corretamente em sessões de Serviços de Terminal, mas você ainda deseja mantê-lo em sessões que são executadas no console do computador físico. Sessões conectadas à área de trabalho do computador físico sempre têm uma ID de sessão 0, portanto você pode parar todas as instâncias do processo que estão em outras sessões usando **Where-Object** e o processo, com **SessionId**:
 
-```
+```powershell
 Get-Process -Name BadApp | Where-Object -FilterScript {$_.SessionId -neq 0} | Stop-Process
 ```
 
 O cmdlet Stop-Process não tem um parâmetro ComputerName. Portanto, para executar um comando de parada do processo em um computador remoto, você precisa usar o cmdlet Invoke-Command. Por exemplo, para parar o processo do PowerShell no computador remoto Server01, digite:
 
-```
+```powershell
 Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
 ```
 
 ## <a name="stopping-all-other-windows-powershell-sessions"></a>Parar todas as outras sessões do Windows PowerShell
+
 Ocasionalmente, pode ser útil poder parar a execução de todas as sessões do Windows PowerShell que não sejam a sessão atual. Se uma sessão usar muitos recursos ou estiver inacessível (ela pode estar em execução remotamente ou em outra sessão de área de trabalho), poderá não ser possível pará-la diretamente. Se você tentar interromper todas as sessões, no entanto, a sessão atual talvez seja encerrada.
 
 Cada sessão do Windows PowerShell tem uma variável de ambiente PID que contém a ID do processo do Windows PowerShell. Você pode verificar o $PID com a ID de cada sessão e encerrar somente sessões do Windows PowerShell que têm uma ID diferente. O comando de pipeline a seguir faz isso e retorna a lista de sessões finalizadas (devido ao uso do parâmetro **PassThru**):
 
 ```
-PS> Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -
-PassThru
+PS> Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru
+
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
     334       9    23348      29136   143     1.03    388 powershell
@@ -164,13 +174,14 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 ```
 
 ## <a name="starting-debugging-and-waiting-for-processes"></a>Iniciando, depuração e aguardando a processos
+
 O Windows PowerShell também inclui cmdlets para iniciar (ou reiniciar), depurar um processo e aguardar a conclusão de um processo antes de executar um comando. Para obter informações sobre esses cmdlets, consulte o tópico de Ajuda do cmdlet para cada cmdlet.
 
 ## <a name="see-also"></a>Consulte Também
+
 - [Get-Process [m2]](https://technet.microsoft.com/en-us/library/27a05dbd-4b69-48a3-8d55-b295f6225f15)
 - [Stop-Process [m2]](https://technet.microsoft.com/en-us/library/12454238-9881-457a-bde4-fb6cd124deec)
 - [Start-Process](https://technet.microsoft.com/en-us/library/41a7e43c-9bb3-4dc2-8b0c-f6c32962e72c)
 - [Wait-Process](https://technet.microsoft.com/en-us/library/9222af7a-789d-4a09-aa90-09d7c256c799)
 - [Debug-Process](https://technet.microsoft.com/en-us/library/eea1dace-3913-4dbd-b659-5a94a610eee1)
 - [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462)
-

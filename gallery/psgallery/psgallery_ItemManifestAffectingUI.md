@@ -1,6 +1,8 @@
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de itens que afetam a interface do usuário da Galeria do PowerShell
 
-Este tópico fornece um resumo informativo aos editores sobre como modificar o manifesto das publicações na Galeria do PowerShell a fim de alterar os recursos de cmdlets PowerShellGet e da interface do usuário da Galeria do PowerShell. Este conteúdo está organizado de acordo com o local onde as alterações serão exibidas, começando pela seção central até a área de navegação à esquerda. Há uma seção Detalhes que aborda as marcas, identifica as marcas importantes, bem como algumas das marcas usadas com mais frequência. Há dois tópicos que fornecem exemplos de manifesto: 
+Este tópico fornece um resumo informativo aos editores sobre como modificar o manifesto das publicações na Galeria do PowerShell a fim de alterar os recursos de cmdlets PowerShellGet e da interface do usuário da Galeria do PowerShell.
+Este conteúdo está organizado de acordo com o local onde as alterações serão exibidas, começando pela seção central até a área de navegação à esquerda. Há uma seção Detalhes que aborda as marcas, identifica as marcas importantes, bem como algumas das marcas usadas com mais frequência.
+Há dois tópicos que fornecem exemplos de manifesto:
 
 * No caso dos módulos, confira o artigo [Atualizar o manifesto de módulo](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
 * No caso dos scripts, confira o artigo [Cria um arquivo de script com metadados](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
@@ -10,7 +12,7 @@ Este tópico fornece um resumo informativo aos editores sobre como modificar o m
 A tabela a seguir mostra os elementos da interface do usuário da página do item da Galeria do PowerShell, que são controlados pelo editor.
 Cada item indica se pode ser controlado pelo manifesto de módulo ou de script.
 
-| Elemento da interface do usuário | Descrição | Módulo | script | 
+| Elemento da interface do usuário | Descrição | Módulo | script |
 | --- | --- | --- | --- |
 | **Título** | Este é o nome do item publicado na Galeria  | Não | Não |
 | **Versão** | A versão exibida representa a cadeia de caracteres da versão nos metadados e um pré-lançamento, se for especificado. A parte principal da versão em um manifesto de módulo é a ModuleVersion. No caso de um script, ela é identificada como .VERSION. Se a cadeia de caracteres da versão de um pré-lançamento for especificada, ela será adicionada à ModuleVersion nos módulos ou especificada como parte da .VERSION nos scripts. Veja a documentação sobre como especificar cadeias de caracteres de pré-lançamento em [módulos](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule) e [scripts](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript) | Sim | Sim |
@@ -49,18 +51,26 @@ A página Editar item, na Galeria do PowerShell, permite aos editores alterar v�
 * Notas de versão
 * Exigir licença
 
-Geralmente, esta abordagem não é recomendável, exceto quando é necessário corrigir o conteúdo exibido na versão anterior de um módulo. Os usuários que adquirem o módulo podem observar que os metadados não correspondem ao conteúdo exibido na Galeria do PowerShell, causando preocupações em relação ao item. Isso gera consultas frequentes aos proprietários do item a fim de confirmar as alterações. É altamente recomendável publicar uma nova versão do item com as mesmas alterações, sempre que usar esta abordagem. 
+Geralmente, esta abordagem não é recomendável, exceto quando é necessário corrigir o conteúdo exibido na versão anterior de um módulo.
+Os usuários que adquirem o módulo podem observar que os metadados não correspondem ao conteúdo exibido na Galeria do PowerShell, causando preocupações em relação ao item.
+Isso gera consultas frequentes aos proprietários do item a fim de confirmar as alterações.
+É altamente recomendável publicar uma nova versão do item com as mesmas alterações, sempre que usar esta abordagem.
 
 ## <a name="tag-details"></a>Detalhes das marcas
 
-As marcas são cadeias de caracteres simples que os consumidores usam para localizar itens. Elas são mais eficientes quando usadas regularmente em vários itens relacionados ao mesmo tópico. O uso de variações de um mesmo termo (por exemplo banco de dados e bancos de dados ou teste e testes) normalmente traz poucos benefícios. As marcas são cadeias de caracteres de palavras únicas que não diferenciam maiúsculas e minúsculas e não podem incluir espaços. Se você acredita que os usuários vão pesquisar uma determinada frase, adicione-a à descrição do item para que ela seja encontrada nos resultados da pesquisa. Use o padrão Pascal Case, hífen, sublinhado ou ponto, se quiser melhorar a legibilidade. Cuidado quando criar marcas diferentes, longas e complexas, pois às vezes você poderá escrevê-las de forma incorreta. 
+As marcas são cadeias de caracteres simples que os consumidores usam para localizar itens.
+Elas são mais eficientes quando usadas regularmente em vários itens relacionados ao mesmo tópico. O uso de variações de um mesmo termo (por exemplo banco de dados e bancos de dados ou teste e testes) normalmente traz poucos benefícios.
+As marcas são cadeias de caracteres de palavras únicas que não diferenciam maiúsculas e minúsculas e não podem incluir espaços. Se você acredita que os usuários vão pesquisar uma determinada frase, adicione-a à descrição do item para que ela seja encontrada nos resultados da pesquisa. Use o padrão Pascal Case, hífen, sublinhado ou ponto, se quiser melhorar a legibilidade. Cuidado quando criar marcas diferentes, longas e complexas, pois às vezes você poderá escrevê-las de forma incorreta.
 
-É importante observar certas marcas, pois a Galeria do PowerShell e os cmdlets PowerShellGet tratam elas de forma exclusiva. PSEdition_Desktop e PSEdition_Core são exemplos específicos descritos anteriormente. 
+É importante observar certas marcas, pois a Galeria do PowerShell e os cmdlets PowerShellGet tratam elas de forma exclusiva. PSEdition_Desktop e PSEdition_Core são exemplos específicos descritos anteriormente.
 
-Conforme observado acima, as marcas são mais eficientes quando são específicas e usadas regularmente em vários itens. Quando o editor tenta localizar as marcas ideais que pretende usar, a abordagem mais fácil consiste em pesquisá-las na Galeria do PowerShell. O ideal é que vários itens sejam retornados e que a descrição do item corresponda ao uso da palavra-chave. 
+Conforme observado acima, as marcas são mais eficientes quando são específicas e usadas regularmente em vários itens.
+Quando o editor tenta localizar as marcas ideais que pretende usar, a abordagem mais fácil consiste em pesquisá-las na Galeria do PowerShell.
+O ideal é que vários itens sejam retornados e que a descrição do item corresponda ao uso da palavra-chave.
 
-Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em alguns casos, há opções parecidas, mas talvez menos ideais ao lado da marca.
-É prática recomendada usar as marcas preferenciais, já que elas resultam em menos correspondências difusas e geram melhores resultados de pesquisa para os usuários. 
+Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017.
+Em alguns casos, há opções parecidas, mas talvez menos ideais ao lado da marca.
+É prática recomendada usar as marcas preferenciais, já que elas resultam em menos correspondências difusas e geram melhores resultados de pesquisa para os usuários.
 
 
 | **Marca preferencial** | **Alternativas e observações** |
@@ -125,5 +135,3 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017. Em
 | **MSI** |  |
 | **Mac** |  |
 | **PoshBot** |  |
-
-

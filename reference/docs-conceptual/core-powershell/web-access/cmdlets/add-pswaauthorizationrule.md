@@ -1,17 +1,17 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell, cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: add pswaauthorizationrule
 ms.technology: powershell
 schema: 2.0.0
-ms.openlocfilehash: 71954fc115daee4c05662d11baa2bc6a0a417896
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 07ddd4df6a776f3ef6763242f8682747b9b97061
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
@@ -62,7 +62,7 @@ As regras de autorização avaliam a credencial de logon principal dos usuários
 
 Especifica o nome de um grupo de computadores no AD DS (Active Directory Domain Services) ou de grupos locais aos quais essa regra concede acesso.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | verdadeiro                                 |
@@ -75,7 +75,7 @@ Especifica o nome de um grupo de computadores no AD DS (Active Directory Domain 
 
 Especifica o nome do computador ao qual esta regra concede acesso.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | verdadeiro                                 |
@@ -88,7 +88,7 @@ Especifica o nome do computador ao qual esta regra concede acesso.
 
 Especifica o nome da configuração de sessão do Windows PowerShell, também conhecido como runspace, ao qual essa regra concede acesso.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | verdadeiro                                 |
@@ -101,7 +101,7 @@ Especifica o nome da configuração de sessão do Windows PowerShell, também co
 
 Especifica um objeto **PSCredential** para uma conta de usuário que você deseja usar para alterar as regras de autorização do Windows PowerShell Web Access. Se você não adicionar esse parâmetro, o cmdlet usará a conta do usuário conectado no momento. Para obter um objeto **PSCredential**, que é necessário para adicionar regras de autorização remotamente, execute o cmdlet [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -115,7 +115,7 @@ Especifica um objeto **PSCredential** para uma conta de usuário que você desej
 Força o comando a ser executado sem solicitar confirmação do usuário.\
 Além disso, ele também solicita confirmação quando você insere um nome do computador curto ou simples (como um nome que não seja um nome de domínio ou não seja totalmente qualificado). A confirmação é solicitada por motivos de segurança, de modo que você apenas possa usar o nome simples para adicionar um computador se o computador estiver em um grupo de trabalho.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -128,7 +128,7 @@ Além disso, ele também solicita confirmação quando você insere um nome do c
 
 Especifica o nome amigável dessa regra.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -141,7 +141,7 @@ Especifica o nome amigável dessa regra.
 
 Especifica o nome de um ou mais grupos de usuários no AD DS ou grupos locais aos quais essa regra concede acesso.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | verdadeiro                                 |
@@ -155,7 +155,7 @@ Especifica o nome de um ou mais grupos de usuários no AD DS ou grupos locais ao
 Especifica um ou mais usuários aos quais essa regra concede acesso. O nome de usuário pode ser uma conta de usuário local no computador do gateway ou um usuário no AD DS.
 O formato é `domain\user` ou `computer\user`.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | verdadeiro                                 |
@@ -217,9 +217,9 @@ Este exemplo ilustra como inserir valores de nome de usuário por meio do pipeli
 Este exemplo ilustra como todos os parâmetros obtêm os valores do pipeline pelo nome da propriedade.
 
 ````PowerShell
-$o = New-Object -TypeName PSObject | 
-    Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru | 
-    Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru | 
+$o = New-Object -TypeName PSObject |
+    Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru |
+    Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru |
     Add-Member -Type NoteProperty -Name "ConfigurationName" -Value "Microsoft.PowerShell" –PassThru
 
 $o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Microsoft.PowerShell

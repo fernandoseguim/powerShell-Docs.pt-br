@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
-title: "Usando classes e métodos estáticos"
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
+title: Usando classes e métodos estáticos
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: fe41c7d6b45564e7b5bc2b922a18587c9745e26d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 0f2b02c3a40365ad0335118b057a4e548c9f6535
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:
@@ -18,6 +18,7 @@ New-Object : Constructor not found. Cannot find an appropriate constructor for
 type System.Environment.
 At line:1 char:11
 + New-Object  <<<< System.Environment
+
 PS> New-Object System.Math
 New-Object : Constructor not found. Cannot find an appropriate constructor for
 type System.Math.
@@ -88,6 +89,7 @@ TickCount                               ExitCode
 Agora podemos selecionar propriedades a serem exibidas de System.Environment.
 
 #### <a name="displaying-static-properties-of-systemenvironment"></a>Exibindo propriedades estáticas do System.Environment
+
 As propriedades do System.Environment também são estáticas e devem ser especificadas de forma diferente que as propriedades normais. Usamos **::** para indicar ao Windows PowerShell que queremos trabalhar com uma propriedade ou método estático. Para ver o comando que foi usado para iniciar o Windows PowerShell, verificamos a propriedade **CommandLine** digitando:
 
 ```
@@ -113,6 +115,7 @@ False
 ```
 
 ### <a name="doing-math-with-systemmath"></a>Fazendo cálculos com o System.Math
+
 A classe estática System.Math é útil para executar algumas operações matemáticas. Os membros importantes do **System.Math** são em sua maioria métodos, que podemos exibir usando **Get-Member**.
 
 > [!NOTE]
@@ -181,4 +184,3 @@ PS> [System.Math]::Truncate(9.3)
 PS> [System.Math]::Truncate(-9.3)
 -9
 ```
-

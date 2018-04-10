@@ -1,20 +1,19 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Whitepapers
-ms.openlocfilehash: bb3fd6bb31990060ce9f96e3c8525e3bb7431b8f
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 48ce9d5264c1f3570b1d65c517924b0da6417e94
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whitepapers"></a>Whitepapers
 
 Os seguintes whitepapers foram publicados para fornecer informações adicionais sobre tópicos relacionados à configuração de estado desejado do PowerShell.
 
 ## <a name="the-release-pipeline-model"></a>O modelo de pipeline da versão
-Há vantagens quando padrões e práticas recomendadas de técnicas de desenvolvimento são aplicadas às operações. Em especial, uma solução totalmente automatizada em que a infraestrutura é gerenciada como código e todas as alterações são validadas automaticamente antes de alcançar a produção. Essa é uma mudança de processo reconhecida entre inovadores do setor. Para organizações que já estão aproveitando esses processos, deve estar claro como aproveitar as plataformas da Microsoft. Para organizações que são novas no tópico, deve estar claro como colocar esse processo em seu ambiente e o que significa para sua cultura organizacional. Este documento explica os componentes de um pipeline de versão para a configuração como código, o valor às operações e as soluções usadas durante a criação de uma nova arquitetura de pipeline da versão. 
+Há vantagens quando padrões e práticas recomendadas de técnicas de desenvolvimento são aplicadas às operações. Em especial, uma solução totalmente automatizada em que a infraestrutura é gerenciada como código e todas as alterações são validadas automaticamente antes de alcançar a produção. Essa é uma mudança de processo reconhecida entre inovadores do setor. Para organizações que já estão aproveitando esses processos, deve estar claro como aproveitar as plataformas da Microsoft. Para organizações que são novas no tópico, deve estar claro como colocar esse processo em seu ambiente e o que significa para sua cultura organizacional. Este documento explica os componentes de um pipeline de versão para a configuração como código, o valor às operações e as soluções usadas durante a criação de uma nova arquitetura de pipeline da versão.
 
 **[Baixar PDF](http://aka.ms/thereleasepipelinemodelpdf)**
-

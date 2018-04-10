@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: galeria,powershell,cmdlet,psgallery
 title: psgallery_dispute_resolution
-ms.openlocfilehash: 640d20371a51b08a5627b9beff1bb0ada4f06dd8
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 424013229418efddeb0fe56828aece418630d91b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dispute-resolution"></a>Solução de controvérsias
 
@@ -39,4 +39,3 @@ Publique o código e comece a usá-lo ou conceda o nome para alguém que realmen
 Se você encontrar um item que esteja violando qualquer um desses itens, clique no link “Relatar abuso” na página de detalhes do item e envie um relatório.
 
 **Essa política está sujeita a alterações, a critério da Galeria do PowerShell.**
-

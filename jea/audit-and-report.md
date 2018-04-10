@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: rpsqrd
 ms.topic: conceptual
-keywords: "jea,powershell,segurança"
-title: "Auditoria e relatórios no JEA (Just Enough Administration)"
-ms.openlocfilehash: 57148bc3753bdd751bfa21fc3198aca3f8654849
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: jea,powershell,segurança
+title: Auditoria e relatórios no JEA (Just Enough Administration)
+ms.openlocfilehash: 7fc670c77b5fbf9bce8fb55dd99a2f9a984100d2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Auditoria e relatórios no JEA (Just Enough Administration)
 
@@ -144,11 +144,11 @@ Para cada comando que um usuário executa, uma linha "CommandInvocation" será e
 O ParameterBindings segue cada CommandInvocation para informar sobre cada parâmetro e valor que foi fornecido com o comando.
 No exemplo acima, você pode ver que o parâmetro "Nome" foi fornecido com o valor "Dns" para o cmdlet "Get-Service".
 
-A saída de cada comando também disparará um CommandInvocation, geralmente para Out-Default. O InputObject do Out-Default é o objeto do PowerShell retornado pelo comando.
+A saída de cada comando também disparará um CommandInvocation, geralmente para Out-Default.
+O InputObject do Out-Default é o objeto do PowerShell retornado pelo comando.
 Os detalhes desse objeto estão impressos algumas linhas abaixo, imitando de perto o que o usuário veria.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Auditar ações de usuário em uma sessão JEA](audit-and-report.md)
 - [*Postagem no blog sobre segurança* PowerShell ♥ the Blue Team](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
-

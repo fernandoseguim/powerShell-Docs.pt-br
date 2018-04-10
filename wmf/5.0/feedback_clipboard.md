@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: 8d5f8cc8c85d584b195483e464e878857629a78e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,instalação
+ms.openlocfilehash: d34a267bae7e48afe4442256d7f112da3a97eb7d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="clipboard-cmdlets"></a>Área de transferência de Cmdlets
 **Get-Clipboard** e **Set-Clipboard** facilitam a transferência do conteúdo de e para uma sessão do Windows PowerShell. Por exemplo, se você usar o Windows Explorer para copiar três arquivos na área de transferência (selecionando-os e pressionando `ctrl-c`, por exemplo), poderá facilmente acessar o conteúdo da área de transferência como uma lista de arquivos:
 
-```powershell 
+```powershell
 PS C:\\&gt; Get-Clipboard -Format FileDropList
 
 Directory: C:\\Users\\slee\\Downloads\\Example
@@ -30,4 +30,3 @@ Mode LastWriteTime Length Name
 
 
 Os cmdlets Clipboard dão suporte a imagens, arquivos de áudio, listas de arquivo e texto.
-

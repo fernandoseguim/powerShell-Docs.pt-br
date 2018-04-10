@@ -1,20 +1,22 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Removendo objetos do pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: 4140c4c3ebb26223d03ca139992fedf6e184a38b
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 2d89defdb1b234a9d0021fc06e1f05a95bb1bce9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Removendo objetos do pipeline (Where-Object)
+
 No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeline do que deseja. Você pode especificar as propriedades de determinados objetos para exibição usando os cmdlets **Format**, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Talvez você queira filtrar objetos antes do final de um pipeline para poder executar ações em apenas um subconjunto dos objetos gerados inicialmente.
 
 O Windows PowerShell inclui um cmdlet **Where-Object** que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a uma condição de teste específica. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **Where-ObjectFilterScript**.
 
 ### <a name="performing-simple-tests-with-where-object"></a>Executando testes simples com Where-Object
+
 O valor de **FilterScript** é um *bloco de script* (um ou mais comandos do Windows PowerShell entre chaves {}) que é avaliado como verdadeiro ou falso. Esses blocos de script podem ser muito simples, mas criá-los requer conhecimento sobre outro conceito do Windows PowerShell, os operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dela. Operadores de comparação começam com um caractere '-' e são seguidos por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados podem funcionar apenas em texto ou matrizes.
 
 > [!NOTE]
@@ -44,12 +46,13 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 ```
 
 ### <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades de objeto
+
 Como $_ se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
 
 Por exemplo, podemos ver a classe Win32_SystemDriver no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Se usar Get-Member para exibir os membros de Win32_SystemDriver (**Get-WmiObject -Class Win32_SystemDriver | Get-Member -MemberType Property**), você verá que a propriedade relevante é State e que ela tem um valor "Running" quando o driver está sendo executado. Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
 
-```
-Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -eq "Running"}
+```powershell
+Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -eq 'Running'}
 ```
 
 Isso ainda produz uma longa lista. Você pode desejar filtrar para selecionar apenas os drivers definidos para iniciar automaticamente testando também o valor de StartMode:
@@ -89,8 +92,8 @@ mssmbios                                Microsoft System Management BIOS Driver
 
 Há dois elementos Where-Object no comando acima, mas pode eles podem ser expressos em um único elemento Where-Object usando o operador lógico -and, desta forma:
 
-```
-Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript { ($_.State -eq "Running") -and ($_.StartMode -eq "Manual") } | Format-Table -Property Name,DisplayName
+```powershell
+Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript { ($_.State -eq 'Running') -and ($_.StartMode -eq 'Manual') } | Format-Table -Property Name,DisplayName
 ```
 
 Os operadores lógicos padrão são listados na tabela a seguir.
@@ -101,4 +104,3 @@ Os operadores lógicos padrão são listados na tabela a seguir.
 |-or|Ou lógico; verdadeiro se um dos lados for verdadeiro|(1 -eq 1) -or (1 -eq 2)|
 |-not|Não lógico; inverte o verdadeiro e o falso|-not (1 -eq 2)|
 |\!|Não lógico; inverte o verdadeiro e o falso|\!(1 -eq 2)|
-

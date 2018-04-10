@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: usar o console do windows powershell baseado na web
-ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 3ef2b39279745ffe78fa928247e8a1fb76519ba0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
@@ -18,15 +18,18 @@ O Windows PowerShell Web Access permite que os usuários entrem em um site prote
 
 Como o console do Windows PowerShell é executado em um navegador da Web, ele pode ser aberto em uma ampla variedade de dispositivos clientes, ou seja, quase em todos os dispositivos com um navegador da Web funcionando.
 
-O console do Windows PowerShell baseado na Web é destinado a um computador remoto especificado por usuários como parte do processo de entrada. 
+O console do Windows PowerShell baseado na Web é destinado a um computador remoto especificado por usuários como parte do processo de entrada.
 
 Este tópico descreve como entrar e iniciar usando o console baseado na Web do Windows PowerShell Web Access.
 
-Este tópico não descreve como usar o Windows PowerShell ou executar cmdlets ou scripts. Para obter informações de como usar o Windows PowerShell e os recursos de script, veja a seção [Consulte também](#see-also) no fim deste tópico.
+Este tópico não descreve como usar o Windows PowerShell ou executar cmdlets ou scripts.
+Para obter informações de como usar o Windows PowerShell e os recursos de script, veja a seção [Consulte também](#see-also) no fim deste tópico.
 
 ## <a name="supported-browsers-and-client-devices"></a>Navegadores e dispositivos clientes compatíveis
 
-O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Internet. Embora navegadores móveis não tenham suporte oficialmente, muitos poderão executar o console do Windows PowerShell baseado na Web. É provável que outros navegadores que aceitam cookies, executam JavaScript e abrem sites HTTPS funcionam, mas não foram oficialmente testados.
+O Windows PowerShell Web Access dá suporte aos seguintes navegadores da Internet.
+Embora navegadores móveis não tenham suporte oficialmente, muitos poderão executar o console do Windows PowerShell baseado na Web.
+É provável que outros navegadores que aceitam cookies, executam JavaScript e abrem sites HTTPS funcionam, mas não foram oficialmente testados.
 
 ### <a name="supported-desktop-computer-browsers"></a>Navegadores de desktop compatíveis
 

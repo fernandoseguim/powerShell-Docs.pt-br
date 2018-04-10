@@ -5,4 +5,4 @@
 | Pacote para baixar | TBD | TBD | TBD | TBD |
 | TBD | TBD | TBD | TBD | TBD |
 
-*Observação: esta tabela representa apenas um espaço reservado. Vamos atualizá-la nos próximos meses e a manteremos atualizada à medida que avançarmos com nossos planos.* 
+*Observação: esta tabela representa apenas um espaço reservado. Vamos atualizá-la nos próximos meses e a manteremos atualizada à medida que avançarmos com nossos planos.*

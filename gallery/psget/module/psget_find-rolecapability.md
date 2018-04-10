@@ -1,21 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: galeria,powershell,cmdlet,psget
 title: Find-RoleCapability
-ms.openlocfilehash: 77c5b492d9681fa05315401fba410c508af1d13b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 89aacd604d54f6a5e9752790be65cc3bcc77c8e1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="find-rolecapability"></a>Find-RoleCapability
 
 Localiza capacidades de função em módulos.
 
 ## <a name="description"></a>Descrição
-O cmdlet Find-RoleCapability localiza capacidades de função do PowerShell em módulos. Find-RoleCapability faz pesquisas em módulos em repositórios registrados. Para cada capacidade de função localizada, esse cmdlet retorna um objeto PSGetRoleCapabilityInfo. Você pode passar um objeto PSGetRoleCapabilityInfo para o cmdlet Install-Module para instalar o módulo que contém a capacidade de função.
+O cmdlet Find-RoleCapability localiza capacidades de função do PowerShell em módulos. Find-RoleCapability faz pesquisas em módulos em repositórios registrados.
+Para cada capacidade de função localizada, esse cmdlet retorna um objeto PSGetRoleCapabilityInfo. Você pode passar um objeto PSGetRoleCapabilityInfo para o cmdlet Install-Module para instalar o módulo que contém a capacidade de função.
 As capacidades de função do PowerShell definem quais comandos, aplicativos e assim por diante ficam disponíveis para um usuário em um ponto de extremidade do tipo JEA ("Administração Suficiente"). As capacidades de função são definidas por arquivos com uma extensão .psrc.
 
 - Find-RoleCapability pode filtrar segundo os parâmetros de versão: MinimumVersion, RequiredVersion, AllVersions.
@@ -78,4 +79,3 @@ Find-RoleCapability -Filter RBAC
 Find-RoleCapability -Tag Azure, DSC
 
 ```
-

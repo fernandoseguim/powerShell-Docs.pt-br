@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso nxUser de DSC para Linux
-ms.openlocfilehash: 93e2b12af076fce687e045e3043c94fa82d61861
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 222bd2191cf5c5f0a90ba947275ffde47d22ec86
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Recurso nxUser de DSC para Linux
 
@@ -34,25 +34,25 @@ nxUser <string> #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade |  Indica o nome da conta para a qual você deseja garantir um estado específico. | 
+|  Propriedade |  Indica o nome da conta para a qual você deseja garantir um estado específico. |
 |---|---|
-| UserName| Especifica o local onde você deseja garantir o estado de um arquivo ou diretório.| 
-| Ensure| Especifica se a conta existe. Defina essa propriedade como "Present" para garantir que a conta exista e defina-o como "Absent" para garantir que a conta não exista.| 
-| FullName| Uma cadeia de caracteres que contém o nome completo que deve ser usado para a conta de usuário.| 
-| Descrição| A descrição da conta de usuário.| 
-| Senha| O hash da senha de usuário no formato apropriado para o computador Linux. Normalmente, é um hash SHA-256 ou SHA-512 com valor de sal. No Debian e no Ubuntu Linux, esse valor pode ser gerado com o comando mkpasswd. Para outras distribuições de Linux, o método de criptografia da biblioteca de Criptografia do Python pode ser usado para gerar o hash.| 
-| Desabilitado| Indica se a conta está habilitada. Defina essa propriedade como **$true** para garantir que essa conta esteja desabilitada e defina-a como **$false** para garantir que esteja habilitada.| 
-| PasswordChangeRequired| Indica se o usuário pode alterar a senha. Defina essa propriedade como **$true** para garantir que o usuário não possa alterar a senha e defina-a como **$false** para permitir que o usuário altere a senha. O valor padrão é **$false**. Essa propriedade é avaliada apenas se a conta de usuário não existia anteriormente e está sendo criada.| 
-| HomeDirectory| O diretório inicial do usuário.| 
-| GroupID| A ID primária de grupo do usuário.| 
-| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for "ResourceName" e seu tipo for "ResourceType", a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.| 
+| UserName| Especifica o local onde você deseja garantir o estado de um arquivo ou diretório.|
+| Ensure| Especifica se a conta existe. Defina essa propriedade como "Present" para garantir que a conta exista e defina-o como "Absent" para garantir que a conta não exista.|
+| FullName| Uma cadeia de caracteres que contém o nome completo que deve ser usado para a conta de usuário.|
+| Descrição| A descrição da conta de usuário.|
+| Senha| O hash da senha de usuário no formato apropriado para o computador Linux. Normalmente, é um hash SHA-256 ou SHA-512 com valor de sal. No Debian e no Ubuntu Linux, esse valor pode ser gerado com o comando mkpasswd. Para outras distribuições de Linux, o método de criptografia da biblioteca de Criptografia do Python pode ser usado para gerar o hash.|
+| Desabilitado| Indica se a conta está habilitada. Defina essa propriedade como **$true** para garantir que essa conta esteja desabilitada e defina-a como **$false** para garantir que esteja habilitada.|
+| PasswordChangeRequired| Indica se o usuário pode alterar a senha. Defina essa propriedade como **$true** para garantir que o usuário não possa alterar a senha e defina-a como **$false** para permitir que o usuário altere a senha. O valor padrão é **$false**. Essa propriedade é avaliada apenas se a conta de usuário não existia anteriormente e está sendo criada.|
+| HomeDirectory| O diretório inicial do usuário.|
+| GroupID| A ID primária de grupo do usuário.|
+| DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for "ResourceName" e seu tipo for "ResourceType", a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir garante que o usuário "monuser" exista e seja membro do grupo "DBusers".
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 Node $node {
 nxUser UserExample{
@@ -62,13 +62,12 @@ nxUser UserExample{
    Ensure = "Present"
    HomeDirectory = "/home/monuser"
 }
- 
+
 nxGroup GroupExample{
    GroupName = "DBusers"
    Ensure = "Present"
    MembersToInclude = "monuser"
-   DependsOn = "[nxUser]UserExample"            
+   DependsOn = "[nxUser]UserExample"
 }
 }
 ```
-

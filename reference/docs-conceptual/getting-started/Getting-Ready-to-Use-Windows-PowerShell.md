@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Preparando-se para usar o Windows PowerShell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-ms.openlocfilehash: de09c74e938f11a130864b1620d6c169006a27be
-ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
+ms.openlocfilehash: 5e095984286ff89958dc0a4e3d27e40eae5b2c5e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparando-se para usar o Windows PowerShell
 Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes opções de configuração. Você pode executar essas tarefas a qualquer momento.
 
-- **Instale os arquivos de Ajuda.** Os cmdlets que estão incluídos no Windows PowerShell 3.0 não vêm com arquivos de ajuda. No entanto, você pode usar o cmdlet [Update-Help](/powershell/module/microsoft.powershell.core/update-help) para baixar e instalar os arquivos de ajuda mais recentes no seu computador. Depois de os arquivos serem instalados, você pode usar o cmdlet [Get-Help](/powershell/module/microsoft.powershell.core/get-help) para exibi-los diretamente na linha de comando. Para obter mais informações, consulte [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+- **Instale os arquivos de Ajuda.** Os cmdlets que estão incluídos no Windows PowerShell 3.0 não vêm com arquivos de ajuda. No entanto, você pode usar o cmdlet [Update-Help](/powershell/module/microsoft.powershell.core/update-help) para baixar e instalar os arquivos de ajuda mais recentes no seu computador. Depois de os arquivos serem instalados, você pode usar o cmdlet [Get-Help](/powershell/module/microsoft.powershell.core/get-help) para exibi-los diretamente na linha de comando. Para obter mais informações, consulte [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
     Se você decidir não instalar os arquivos de Ajuda, ainda poderá ler os tópicos da Ajuda online. Para abrir a versão online de qualquer tópico de Ajuda de cmdlet, digite: `Get-Help <CmdletName> -Online`. Para pesquisar os tópicos de ajuda do Windows PowerShell, consulte a [documentação do PowerShell](/powershell/scripting).
 
@@ -25,4 +25,3 @@ Quando o Windows PowerShell estiver instalado e iniciado, considere as seguintes
 ## <a name="see-also"></a>Consulte Também
 - [Instalar o Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 - [Iniciando o Windows PowerShell](/powershell/scripting/setup/starting-windows-powershell)
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Configurar uma máquina virtual na inicialização inicial usando DSC"
-ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+keywords: DSC,powershell,configuração,instalação
+title: Configurar uma máquina virtual na inicialização inicial usando DSC
+ms.openlocfilehash: e6ff83b9a09f93277904c80e8e52f3db5e818739
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 >Aplica-se a: Windows PowerShell 5.0
 
@@ -90,7 +90,8 @@ Renomear e mover esse arquivo para o local apropriado no VHD como `Pending.mof`,
     Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
     ```
 
-7. Crie uma VM usando o VHD no qual você instalou o documento MOF do DSC. Após a inicialização inicial e instalação do sistema operacional, o IIS será instalado.
+7. Crie uma VM usando o VHD no qual você instalou o documento MOF do DSC.
+Após a inicialização inicial e instalação do sistema operacional, o IIS será instalado.
 Você pode verificar isso chamando o cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Inserir uma metaconfiguração DSC em um VHD
@@ -203,4 +204,3 @@ Por padrão, o valor da chave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cu
 - [Chave do Registro de DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 - [Configurando o LCM (Gerenciador de Configurações Local)](metaConfig.md)
 - [Configurando um servidor de pull da Web de DSC](pullServer.md)
-

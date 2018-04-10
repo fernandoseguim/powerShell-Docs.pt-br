@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "wmf,powershell,instalação"
-title: "exemplo de modelo de um problema conhecido ou writeup de limitação"
-ms.openlocfilehash: b93393b2c84e76a301e6406d1388e82e95a2959c
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,instalação
+title: exemplo de modelo de um problema conhecido ou writeup de limitação
+ms.openlocfilehash: cecf31127aaa1942471877a2056230ab592bd095
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 >Observação: dê um título descritivo proposto e uma breve descrição
 
@@ -22,4 +22,3 @@ Para resolver, defina **ExecutionPolicy** como **RemoteSigned** executando o seg
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
-

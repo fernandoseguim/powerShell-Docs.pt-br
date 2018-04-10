@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Compreendendo conceitos importantes do Windows PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 07ceaa2f3e6a192c6281cb4c99aed4c3f66afc7e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Compreendendo conceitos importantes do Windows PowerShell
 O design do Windows PowerShell integra conceitos de muitos ambientes diferentes. Vários deles são familiares para aqueles com experiência em shells ou ambientes de programação específicos, mas poucos conhecerão todos. Examinar alguns desses conceitos fornece uma visão geral útil do shell.
@@ -43,4 +43,3 @@ Quando você insere um comando no Windows PowerShell, tudo o que você insere é
 O Windows PowerShell tem recursos de sintaxe e palavras-chave muito semelhantes àqueles usados na linguagem de programação C#, pois o Windows PowerShell é baseado no .NET Framework. Aprender a usar o Windows PowerShell facilitará o aprendizado de C#, caso você esteja interessado na linguagem.
 
 Se você não for um programador de C#, essa semelhança não será importante. No entanto, se já estiver familiarizado com o C#, as semelhanças poderão facilitar grande parte do aprendizado do Windows PowerShell.
-

@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell, cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: install pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: ce4d01fbe8a83924e7023d792c68c903a32e07d4
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c7f7768a41b6784d8c29afa1fccf0b855160b777
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
@@ -35,7 +35,7 @@ O cmdlet **Install-PswaWebApplication** configura o aplicativo Web Windows Power
 
 Especifica que um certificado de teste é criado. Se esse parâmetro for definido como true, esse cmdlet criará um certificado de teste e configurará o aplicativo Web Windows PowerShell Web Access para usar o certificado para solicitações HTTPS. Se esse parâmetro for definido como false, não serão criados certificados nem associações. Defina esse valor como false se outro certificado for usado para o Windows PowerShell Web Access.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -48,7 +48,7 @@ Especifica que um certificado de teste é criado. Se esse parâmetro for definid
 
 Especifica o nome do seu aplicativo Web. Essa opção é exibida como a última parte da URL do Windows PowerShell Web Access.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -61,7 +61,7 @@ Especifica o nome do seu aplicativo Web. Essa opção é exibida como a última 
 
 Especifica o nome do site do Servidor Web (IIS) no qual este aplicativo Web Windows PowerShell Web Access será instalado.
 
-|||  
+|||
 |-|-|
 | Aliases                              | none                                 |
 | Necessário?                            | false                                |
@@ -74,7 +74,7 @@ Especifica o nome do site do Servidor Web (IIS) no qual este aplicativo Web Wind
 
 Solicita que você confirme antes de executar o cmdlet.
 
-|||  
+|||
 |-|-|
 | Necessário?                            | false                                |
 | Posição?                            | chamada                                |
@@ -87,7 +87,7 @@ Solicita que você confirme antes de executar o cmdlet.
 Mostra o que aconteceria se o cmdlet fosse executado.
 O cmdlet não é executado.
 
-|||  
+|||
 |-|-|
 | Necessário?                            | false                                |
 | Posição?                            | chamada                                |

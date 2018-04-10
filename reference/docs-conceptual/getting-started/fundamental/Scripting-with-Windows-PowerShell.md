@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Criando scripts com o Windows PowerShell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: 693d1bb9329dbb280453fc16738eda63c466e156
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 9bb420a3d725d3fa925b79452bbbcc542bf9f4db
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="scripting-with-windows-powershell"></a>Criando scripts com o Windows PowerShell
 
@@ -23,4 +23,3 @@ O Windows PowerShell inclui os seguintes recursos:
 - A navegação simples e baseada em comandos do sistema operacional, que permite aos usuários navegar o registro e outros repositórios de dados usando as mesmas técnicas usadas para navegar pelo sistema de arquivos.
 - Recursos potentes de manipulação de objeto. Os objetos podem ser manipulados ou enviados para outras ferramentas ou bancos de dados diretamente.
 - Interface extensível. Fornecedores independentes de software e os desenvolvedores corporativos podem criar ferramentas personalizadas e utilitários para administrar seus softwares.
-

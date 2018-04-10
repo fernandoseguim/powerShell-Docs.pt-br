@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Requisitos do Sistema do Windows PowerShell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 33824eac4de28de97990ffa1ea2500e61e03e847
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: a15b5b33b5296befae833e520cfdfbd41a07b122
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisitos do Sistema do Windows PowerShell
 Este tópico lista os requisitos do sistema para o Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 e recursos especiais, como o ISE (Ambiente de Script Integrado) do Windows PowerShell, comandos CIM e fluxos de trabalho.
@@ -125,4 +125,3 @@ Além disso, o serviço do **WinRM** não está presente no Windows PE.
 - [Introdução ao Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Iniciando o Windows PowerShell](Starting-Windows-PowerShell.md)
-
