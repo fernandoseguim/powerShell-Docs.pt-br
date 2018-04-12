@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "wmf,powershell,instalação"
+keywords: wmf,powershell,instalação
 contributor: ryanpu
-title: "Aprimoramentos no recurso JEA (Administração Suficiente)"
-ms.openlocfilehash: 2811b4deb3f4fca513791c7389ee5f9f877dbfe8
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Aprimoramentos no recurso JEA (Administração Suficiente)
+ms.openlocfilehash: c80472fa4372331bf2cf9ab0b7513021354d1408
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
 
@@ -50,7 +50,7 @@ Em seguida, você pode escrever funções personalizadas para processar os dados
 
 Em alguns casos, uma tarefa que um usuário precisa para executar em uma sessão JEA precisará acessar recursos fora do computador local.
 Quando uma sessão JEA é configurada para usar uma conta virtual, qualquer tentativa de acessar esses recursos parecem que serão provenientes da identidade do computador local, não da conta virtual ou do usuário conectado.
-No TP5, habilitamos suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx), tornando muito mais fácil acessar recursos de rede usando uma identidade de domínio.
+No TP5, habilitamos o suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx), tornando muito mais fácil acessar recursos de rede usando uma identidade de domínio.
 
 Para configurar uma sessão JEA para executar sob uma conta gMSA, use a nova chave a seguir no arquivo PSSC:
 
@@ -93,4 +93,3 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Corrigido: contas virtuais agora têm suporte no Windows Server 2008 R2
 No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de recursos entre o Windows Server 2008 R2 - 2016.
 Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.
-

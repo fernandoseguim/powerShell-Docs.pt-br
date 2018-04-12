@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell, cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: cmdlets de acesso via Web
 ms.technology: powershell
-ms.openlocfilehash: 54821c318b165461ec613678a39c4e3b500dfd0e
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6930fd6a08de69078576fb0d0fbabb04e05d0814
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-web-access-cmdlets"></a>Cmdlets do Windows PowerShell Web Access
 
@@ -46,9 +46,7 @@ Desinstala o aplicativo Web Windows PowerShell do IIS.
 >
 > cmdlet `Get-Command –Module PowerShellWebAccess`.
 
-Para saber mais informações ou para obter a sintaxe de qualquer um dos cmdlets, use:  
-`Get-Help `*&lt;nome do cmdlet&gt;*  
-em que *&lt;nome do cmdlet&gt;* é o nome do cmdlet que você deseja pesquisar.
+Para saber mais sobre os cmdlets ou as respectivas sintaxes, use: `Get-Help ` *&lt;nome do cmdlet&gt;*, no qual *&lt;nome do cmdlet&gt;* é o nome do cmdlet que você deseja pesquisar.
 
 Para obter mais informações, você pode executar qualquer um dos seguintes cmdlets:
 
@@ -61,4 +59,3 @@ Para obter mais informações, você pode executar qualquer um dos seguintes cmd
 Para obter mais informações sobre o PowerShell Web Access, consulte o seguinte:
 
 - [Instalar e usar o Windows PowerShell Web Access](../install-and-use-windows-powershell-web-access.md)
-

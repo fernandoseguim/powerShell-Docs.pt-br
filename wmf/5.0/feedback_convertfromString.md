@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: "wmf,powershell,instalação"
-ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
-ms.translationtype: MT
+keywords: wmf,powershell,instalação
+ms.openlocfilehash: cedda61241df4965fe5db723f03e3497f046fa44
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar objetos estruturados fora da cadeia de caracteres
 Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-String:
@@ -67,7 +67,7 @@ Faça uma cópia de alguns exemplos em um arquivo, que você usará como o model
 
     Renton, WA
 
-   
+
 
 Coloque chaves em torno dos dados que deseja extrair, nomeando-os. Como a propriedade **Name** (e suas outras propriedades associadas) pode aparecer várias vezes, use um asterisco (\*) para indicar que isso resultará em vários registros (em vez de extrair várias propriedades em um registro):
 
@@ -89,5 +89,4 @@ Desse conjunto de exemplos, **ConvertFrom-String** agora pode extrair automatica
 > ----------                     ----               ----     -----
 > Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
-A fim de realizar a manipulação de dados adicional no texto extraído, a propriedade **ExtentText** captura o texto não processado do qual o registro foi extraído. Para fornecer comentários sobre este recurso ou compartilhar conteúdo para o qual está tendo dificuldades para escrever exemplos, envie um email <psdmfb@microsoft.com>.
-
+A fim de realizar a manipulação de dados adicional no texto extraído, a propriedade **ExtentText** captura o texto não processado do qual o registro foi extraído. Para fornecer comentários sobre este recurso ou compartilhar conteúdo para o qual você está com dificuldades para escrever exemplos, envie um email para <psdmfb@microsoft.com>.

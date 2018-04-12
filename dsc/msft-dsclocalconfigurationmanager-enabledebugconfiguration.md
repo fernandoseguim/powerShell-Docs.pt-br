@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: fa34a583af7c3fd46d99307d582973410e4c0e31
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 9fe41fa806a6abff1d36dadd0c041a5cf0e78caf
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método EnableDebugConfiguration da classe MSFT_DSCLocalConfigurationManager
 
@@ -25,8 +25,7 @@ uint32 EnableDebugConfiguration(
 <a name="parameters"></a>Parâmetros
 ----------
 
-*BreakAll* \[in\]  
-Define um ponto de interrupção em cada linha do script de recurso.
+*BreakAll* \[in\] Define um ponto de interrupção em cada linha do script de recurso.
 
 ## <a name="return-value"></a>Retornar valor
 ------------
@@ -48,9 +47,3 @@ Esse é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
- 
-
- 
-
-
-

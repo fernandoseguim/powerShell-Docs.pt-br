@@ -105,7 +105,7 @@ Alterações adicionais para `pwsh(.exe)` de `powershell.exe`:
   Essa alteração corrige o uso de `#!` (também conhecido como um shebang) em scripts do PowerShell que estão sendo executados de shells não PowerShell em plataformas não Windows.
   Isso também significa que você pode executar comandos como `pwsh foo.ps1` ou `pwsh fooScript` sem especificar `-File`.
   No entanto, essa alteração exige que você especifique explicitamente `-c` ou `-Command` ao tentar executar comandos como `pwsh.exe -Command Get-Command`. (#4019)
-- O PowerShell Core aceita o comutador `-i` (ou `-Interactive`) para indicar um shell interativo. (&#3558;) Isso permite que o PowerShell seja usado como um shell padrão em plataformas Unix.
+- O PowerShell Core aceita o comutador `-i` (ou `-Interactive`) para indicar um shell interativo. (3558 #) Isso permite que o PowerShell seja usado como um shell padrão em plataformas Unix.
 - Parâmetros `-importsystemmodules` e `-psconsoleFile` removidos de `pwsh.exe`. (#4995)
 - `pwsh -version` alterado e ajuda interna para `pwsh.exe` para se alinhar com outras ferramentas nativas. (#4958 e #4931) (Obrigado, @iSazonov)
 - Mensagens de erro de argumento inválido para `-File` e `-Command` e códigos de saída consistentes com os padrões do Unix (#4573)
@@ -133,7 +133,7 @@ Instalando o módulo [`WindowsPSModulePath`][windowspsmodulepath], você pode us
 Primeiro, instale o módulo `WindowsPSModulePath` na Galeria do PowerShell:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 
@@ -160,7 +160,7 @@ Tudo o que você precisa fazer é registrar o PowerShell como um subsistema com 
 
 Para obter mais informações sobre como configurar e usar a comunicação remota baseada no SSH, veja [Comunicação remota do PowerShell por SSH][ssh-remoting].
 
-## <a name="default-encoding-is-utf-8-without-a-bom"></a>Codificação padrão é UTF-8 sem uma BOM
+## <a name="default-encoding-is-utf-8-without-a-bom-except-for-new-modulemanifest"></a>Codificação padrão é UTF-8 sem uma BOM, exceto para New-ModuleManifest
 
 No passado, cmdlets do Windows PowerShell como `Get-Content`, `Set-Content` usavam codificações diferentes, como ASCII e UTF-16.
 A variação em padrões de codificação criou problemas ao misturar cmdlets sem especificar uma codificação.
@@ -179,7 +179,6 @@ Os cmdlets a seguir são afetados por essa alteração:
 - Format-Hex
 - Get-Content
 - Import-Csv
-- New-ModuleManifest
 - Out-File
 - Select-String
 - Send-MailMessage
@@ -190,6 +189,8 @@ Esses cmdlets também foram atualizados para que o parâmetro `-Encoding` aceite
 O valor padrão de `$OutputEncoding` também foi alterado para UTF-8.
 
 Como prática recomendada, você deve definir explicitamente codificações em scripts usando o parâmetro `-Encoding` para produzir um comportamento determinístico entre plataformas.
+
+O cmdlet `New-ModuleManifest` não tem o parâmetro **Encoding**. A codificação do arquivo (.psd1) de manifesto do módulo criado com o cmdlet `New-ModuleManifest` depende do ambiente: se ele estiver no PowerShell Core com Linux, a codificação será UTF-8 (sem BOM); caso contrário, a codificação será UTF-16 (com BOM). (#3940)
 
 ## <a name="support-backgrounding-of-pipelines-with-ampersand--3360"></a>Suporte à colocação de pipelines em segundo plano com E comercial (`&`) (#3360)
 
@@ -225,7 +226,7 @@ Para obter mais informações sobre trabalhos do PowerShell, veja [about_Jobs](h
   - `GitCommitId`: esta é a ID de confirmação Git da ramificação ou marca Git em que o PowerShell foi criado.
     Em builds lançados, provavelmente será o mesmo que `PSVersion`.
   - `OS`: esta é uma cadeia de caracteres de versão do sistema operacional retornada por `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
-  - `Platform`: é retornado por `[System.Environment]::OSVersion.Platform` e está definido como `Win32NT` no Windows, `MacOSX` no macOS e `Unix` no Linux.
+  - `Platform`: é retornado por `[System.Environment]::OSVersion.Platform` e está definido como `Win32NT` no Windows, `Unix` no macOS e `Unix` no Linux.
 - Propriedade `BuildVersion` removida de `$PSVersionTable`.
   Essa propriedade foi vinculada fortemente à versão de build do Windows.
   Em vez disso, recomendamos que você use `GitCommitId` para recuperar a versão de build exata do PowerShell Core. (#3877) (Obrigado, @iSazonov!)

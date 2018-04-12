@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
+keywords: DSC,powershell,configuração,instalação
 title: Recurso PackageManagementSource da DSC
-ms.openlocfilehash: 1c904c70369a75802484c3c0520df63602760361
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 8c0cb5a3b0a019ddb5ed995406f499298103b07c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Recurso PackageManagementSource da DSC
 
@@ -30,30 +30,29 @@ PSModule [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Propriedades
-|  Propriedade  |  Descrição   | 
-|---|---| 
-| Nome| Especifica o nome da origem do pacote a ser registrado ou cancelado no seu sistema.| 
-| Ensure| Determina se a origem do pacote deve ser registrada ou cancelada.| 
-| InstallationPolicy| Determina se você confia na origem do pacote. Um destes: "Não confiável", "Confiável".| 
-| ProviderName| Especifica o nome do provedor OneGet por meio do qual você pode fornecer interoperabilidade com a origem do pacote.| 
-| SourceUri| Especifica o URI de origem do pacote.| 
-| SourceCredential| Fornece acesso ao pacote em uma fonte remota.| 
+|  Propriedade  |  Descrição   |
+|---|---|
+| Nome| Especifica o nome da origem do pacote a ser registrado ou cancelado no seu sistema.|
+| Ensure| Determina se a origem do pacote deve ser registrada ou cancelada.|
+| InstallationPolicy| Determina se você confia na origem do pacote. Um destes: "Não confiável", "Confiável".|
+| ProviderName| Especifica o nome do provedor OneGet por meio do qual você pode fornecer interoperabilidade com a origem do pacote.|
+| SourceUri| Especifica o URI de origem do pacote.|
+| SourceCredential| Fornece acesso ao pacote em uma fonte remota.|
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo registra a origem do pacote de http://nuget.org usando o recurso de DSC **PackageManagementSource**.
+Este exemplo registra a origem do pacote de http://nuget.org usando o recurso DSC **PackageManagementSource**.
 
 ```powershell
 Configuration PackageManagementSourceTest
-{    
+{
     PackageManagementSource SourceRepository
     {
-        Ensure      = "Present" 
-        Name        = "MyNuget" 
-        ProviderName= "Nuget" 
-        SourceUri   = "http://nuget.org/api/v2/"   
-        InstallationPolicy ="Trusted" 
+        Ensure      = "Present"
+        Name        = "MyNuget"
+        ProviderName= "Nuget"
+        SourceUri   = "http://nuget.org/api/v2/"
+        InstallationPolicy ="Trusted"
     }
 }
 ```
-

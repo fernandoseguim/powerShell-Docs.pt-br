@@ -1,17 +1,17 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 72fbedf30e5058d8003ed620400d6b443d50dff6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 2844e354e0d054b13b92267ce314536d88a1c33e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Método ApplyConfiguration da classe MSFT_DSCLocalConfigurationManager
 
-Usa o Agente de Configuração para aplicar a configuração pendente. 
+Usa o Agente de Configuração para aplicar a configuração pendente.
 
 Se não houver nenhuma configuração pendente, esse método reaplicará a configuração atual.
 
@@ -28,8 +28,7 @@ uint32 ApplyConfiguration(
 ## <a name="parameters"></a>Parâmetros
 ----------
 
-*force* \[in\]  
-Se isso for **true**, a configuração atual é reaplicada, mesmo que haja uma configuração pendente.
+*force* \[in\] Se for **true**, a configuração atual será reaplicada, mesmo que haja uma configuração pendente.
 
 ## <a name="return-value"></a>Retornar valor
 ------------
@@ -51,10 +50,3 @@ Esse é um método estático.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-

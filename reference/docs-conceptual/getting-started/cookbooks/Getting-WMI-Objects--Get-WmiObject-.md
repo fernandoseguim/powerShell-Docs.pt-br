@@ -1,20 +1,22 @@
 ---
-ms.date: 2017-06-05
-keywords: PowerShell, cmdlet
+ms.date: 06/05/2017
+keywords: powershell, cmdlet
 title: Obtendo objetos WMI Get WmiObject
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: fbaac2797dd62eb03a2be581b3b5f8be6dafc0ad
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 67922426ae3f13ef5f4c70bc70bb3ce1594d3d05
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
 
 ## <a name="getting-wmi-objects-get-wmiobject"></a>Obtendo objetos WMI (Get-WmiObject)
+
 O WMI (Instrumentação de Gerenciamento do Windows) é uma das principais tecnologias para a administração do sistema, pois ela expõe uma grande variedade de informações de maneira uniforme. Devido a quanto o WMI possibilita, o cmdlet do Windows PowerShell para acessar objetos WMI, **Get-WmiObject**, é um dos mais úteis para fazer o trabalho real. Vamos discutir como usar Get-WmiObject para acessar objetos WMI e como usar objetos WMI para fazer coisas específicas.
 
 ### <a name="listing-wmi-classes"></a>Listar classes WMI
+
 O primeiro problema que a maioria dos usuários do WMI encontram é tentar descobrir o que pode ser feito com o WMI. As classes WMI descrevem os recursos que podem ser gerenciados. Há centenas de classes WMI, algumas das quais contêm dezenas de propriedades.
 
 O **Get-WmiObject** cuida desse problema, possibilitando que o WMI possa ser descoberto. Você pode obter uma lista das classes WMI disponíveis no computador local digitando:
@@ -48,7 +50,7 @@ A listagem de classe retornada por computadores remotos pode variar por sistema 
 
 Você pode até mesmo incluir o ComputerName ao se conectar ao sistema local. Você pode usar o nome do computador local, seu endereço IP (ou o endereço de loopback 127.0.0.1) ou '.' em estilo WMI como o nome do computador. Se você estiver executando o Windows PowerShell em um computador chamado Admin01 com endereço IP 192.168.1.90, os comandos a seguir retornarão a listagem da classe WMI para o computador:
 
-```
+```powershell
 Get-WmiObject -List
 Get-WmiObject -List -ComputerName .
 Get-WmiObject -List -ComputerName Admin01
@@ -68,6 +70,7 @@ __Provider                              __Win32Provider
 ```
 
 ### <a name="displaying-wmi-class-details"></a>Exibir detalhes da classe WMI
+
 Se você já souber o nome de uma classe WMI, poderá usá-la para obter informações imediatamente. Por exemplo, uma das classes WMI geralmente usadas para recuperar informações sobre um computador é **Win32_OperatingSystem**.
 
 ```
@@ -83,7 +86,7 @@ Version         : 5.1.2600
 
 Embora mostremos todos os parâmetros, o comando pode ser expresso de forma mais sucinta. O parâmetro **ComputerName** não é necessário ao se conectar ao sistema local. Vamos mostrá-lo para demonstrar o caso mais geral e lembrá-lo sobre o parâmetro. O **Namespace** assume o padrão de root/cimv2 e também pode ser omitido. Por fim, a maioria dos cmdlets permitem omitir o nome dos parâmetros comuns. Com Get-WmiObject, se nenhum nome for especificado para o primeiro parâmetro, o Windows PowerShell o tratará como o parâmetro **Class**. Isso significa que o último comando pode ter sido emitido digitando:
 
-```
+```powershell
 Get-WmiObject Win32_OperatingSystem
 ```
 
@@ -105,6 +108,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ```
 
 #### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Exibindo propriedades não padrão com cmdlets Format
+
 Se quiser ver as informações contidas na classe **Win32_OperatingSystem** que não são exibidas por padrão, você poderá exibi-las usando os cmdlets **Format**. Por exemplo, se você deseja exibir dados de memória disponível, digite:
 
 ```
@@ -116,7 +120,7 @@ TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory F
 ```
 
 > [!NOTE]
-> Os curingas funcionam com nomes de propriedade em **Format-Table**, portanto, o elemento final do pipeline pode ser reduzido para **Format-Table -Property Total*,Free*
+> Os curingas funcionam com nomes de propriedade em **Format-Table**, portanto o elemento final do pipeline pode ser reduzido para **Format-Table -Property Total*,Free*
 
 Os dados da memória podem ficar mais legíveis se você formatá-los como uma lista digitando:
 
@@ -129,4 +133,3 @@ FreePhysicalMemory     : 301876
 FreeVirtualMemory      : 2056724
 FreeSpaceInPagingFiles : 1556644
 ```
-

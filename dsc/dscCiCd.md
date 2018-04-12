@@ -1,19 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: "DSC,powershell,configuração,instalação"
-title: "Criando um pipeline de integração contínua e implantação contínua com DSC"
-ms.openlocfilehash: 5f7583fb93b69bbe4103b34b79b3a859c9cee8a9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+keywords: DSC,powershell,configuração,instalação
+title: Criando um pipeline de integração contínua e implantação contínua com DSC
+ms.openlocfilehash: a3803a8e6fe6ff1b93758a73ccd54754d7bb2a84
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Criando um pipeline de integração contínua e implantação contínua com DSC
 
 Este exemplo demonstra como criar um pipeline de CI/CD (implantação contínua/integração contínua) usando o PowerShell, a DSC, o Pester e o Visual Studio Team Foundation Server (TFS).
 
-Depois que o pipeline é criado e configurado, você pode usá-lo para implantar, configurar e testar completamente um servidor DNS e os registros de host associados. Esse processo simula a primeira parte de um pipeline que seria usado em um ambiente de desenvolvimento.
+Depois que o pipeline é criado e configurado, você pode usá-lo para implantar, configurar e testar completamente um servidor DNS e os registros de host associados.
+Esse processo simula a primeira parte de um pipeline que seria usado em um ambiente de desenvolvimento.
 
 Um pipeline de CI/CD automatizado ajuda a atualizar softwares com mais rapidez e confiança, garantir que todo o código seja testado e que um build atual do código esteja sempre disponível.
 
@@ -36,7 +37,7 @@ Este é o computador no qual você fará todo o trabalho de configurar e executa
 
 O computador cliente deve ser um computador Windows com o seguinte instalado:
 - [Git](https://git-scm.com/)
-- um repositório git local clonado de https://github.com/PowerShell/Demo_CI
+- um repositório Git local clonado de https://github.com/PowerShell/Demo_CI
 - um editor de texto, como o [Visual Studio Code](https://code.visualstudio.com/)
 
 ### <a name="tfssrv1"></a>TFSSrv1
@@ -60,7 +61,7 @@ O computador deve estar executando o [Windows Server 2016](https://www.microsoft
 ### <a name="testagent2"></a>TestAgent2
 
 Este é o computador que hospeda o site, que este exemplo configura.
-O computador deve estar executando o [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). 
+O computador deve estar executando o [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
 
 ## <a name="add-the-code-to-tfs"></a>Adicione o código no TFS
 
@@ -156,7 +157,8 @@ Isso localiza todos os nós que foram definidos como tendo uma função de `DNSS
 
 Usar dados de configuração para definir nós é importante ao fazer CI porque as informações do nó provavelmente serão alteradas entre os ambientes e usar dados de configuração permite fazer alterações facilmente nas informações do nó sem alterar o código de configuração.
 
-No primeiro bloco de recurso, a configuração chama o [WindowsFeature](windowsFeatureResource.md) para garantir que o recurso DNS esteja habilitado. Os blocos de recurso que seguem chamam recursos do módulo [xDnsServer](https://github.com/PowerShell/xDnsServer) para configurar os registros DNS e a zona primária.
+No primeiro bloco de recurso, a configuração chama o [WindowsFeature](windowsFeatureResource.md) para garantir que o recurso DNS esteja habilitado.
+Os blocos de recurso que seguem chamam recursos do módulo [xDnsServer](https://github.com/PowerShell/xDnsServer) para configurar os registros DNS e a zona primária.
 
 Observe que os dois blocos `xDnsRecord` são encapsulados em loops `foreach` que iteram em matrizes nos dados de configuração.
 Novamente, os dados de configuração são criados pelo script `DevEnv.ps1`, o que veremos a seguir.
@@ -199,7 +201,8 @@ Em nosso caso, somente o parâmetro `RawEnvData` é usado.
 ### <a name="the-psake-build-script"></a>O script de build psake
 
 O script de build [psake](https://github.com/psake/psake) definido em `Build.ps1` (da raiz do repositório Demo_CI, `./InfraDNS/Build.ps1`) define as tarefas que fazem parte do build.
-Ele também define de quais outras tarefas cada tarefa depende. Quando chamado, o script psake garante que a tarefa especificada (ou a tarefa chamada `Default` se não houver nenhuma especificada) seja executada e que todas as dependências também sejam executadas (isso é recursivo, para que as dependências das dependências sejam executadas e assim por diante).
+Ele também define de quais outras tarefas cada tarefa depende.
+Quando chamado, o script psake garante que a tarefa especificada (ou a tarefa chamada `Default` se não houver nenhuma especificada) seja executada e que todas as dependências também sejam executadas (isso é recursivo, para que as dependências das dependências sejam executadas e assim por diante).
 
 Neste exemplo, a tarefa `Default` é definida como:
 
@@ -422,10 +425,3 @@ Você pode verificar o resultado da implantação, abrindo um navegador no compu
 Este exemplo configura o servidor DNS `TestAgent1` para que a URL `www.contoso.com` seja resolvida para `TestAgent2`, mas na verdade isso não implanta um site.
 O esqueleto para fazer isso é fornecido no repositório na pasta `WebApp`.
 Você pode usar os stubs fornecidos para criar scripts psake, testes do Pester e configurações DSC para implantar seu próprio site.
-
-
-
-
-
-
-
