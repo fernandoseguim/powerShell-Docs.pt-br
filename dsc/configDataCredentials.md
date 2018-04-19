@@ -283,7 +283,7 @@ O uso de uma conta local elimina a possível exposição das credenciais de dom�
 
 **Ao usar credenciais com recursos de DSC, prefira uma conta local a uma conta de domínio, quando possível.**
 
-Se houver um '\'' ou um '@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
+Se houver um '\'' ou um '\@' na propriedade `Username` da credencial, a DSC vai tratá-la como uma conta de domínio.
 Há uma exceção para "localhost", "127.0.0.1" e "::1" na parte do domínio do nome de usuário.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
