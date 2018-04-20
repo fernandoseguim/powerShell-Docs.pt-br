@@ -3,28 +3,28 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com arquivos e pastas
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-ms.openlocfilehash: e47ea00c9d90d7e04a7af0cb1348849410a6e357
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 6b1fcd438570c8708aa87e4b213f33474921d5f8
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-files-and-folders"></a>Trabalhando com arquivos e pastas
 
-Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Abordaremos como lidar com tarefas específicas de manipulação de arquivo e pasta nesta seção.
+Navegar pelas unidades do Windows PowerShell e manipular os itens nelas é semelhante a manipular arquivos e pastas em unidades de disco físico do Windows. Esta seção discute como lidar com tarefas de manipulação de arquivos e pastas específicas usando o PowerShell.
 
 ### <a name="listing-all-the-files-and-folders-within-a-folder"></a>Listar todos os arquivos e pastas dentro de uma pasta
 
 Você pode obter todos os itens diretamente em uma pasta usando **Get-ChildItem**. Adicione o parâmetro opcional **Force** para exibir itens ocultos ou do sistema. Por exemplo, este comando exibe o conteúdo direto da unidade do Windows PowerShell C (que é a mesma que a unidade física C do Windows):
 
 ```powershell
-Get-ChildItem -Force C:\
+Get-ChildItem -Path C:\ -Force
 ```
 
 O comando lista apenas os itens contidos diretamente, similar ao uso do comando **DIR** do Cmd.exe ou do **ls** em um shell do UNIX. Para mostrar os itens contidos, também é necessário especificar o parâmetro **-Recurse**. (Isso pode levar muitíssimo tempo para ser concluído.) Para listar todos os itens na unidade C:
 
 ```powershell
-Get-ChildItem -Force C:\ -Recurse
+Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
 **Get-ChildItem** pode filtrar itens com seus parâmetros **Path**, **Filter**, **Include** e **Exclude**, mas eles normalmente se baseiam apenas no nome. Você pode executar a filtragem complexa com base em outras propriedades de itens usando **Where-Object**.
@@ -40,33 +40,33 @@ Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -Fi
 A cópia é feita com **Copy-Item**. O comando a seguir faz backup de C:\\boot.ini em C:\\boot.bak:
 
 ```powershell
-Copy-Item -Path c:\boot.ini -Destination c:\boot.bak
+Copy-Item -Path C:\boot.ini -Destination C:\boot.bak
 ```
 
-Se o arquivo de destino já existir, a tentativa de cópia falhará. Para substituir um destino pré-existente, use o parâmetro Force:
+Se o arquivo de destino já existir, a tentativa de cópia falhará. Para substituir um destino pré-existente, use o parâmetro **Force**:
 
 ```powershell
-Copy-Item -Path c:\boot.ini -Destination c:\boot.bak -Force
+Copy-Item -Path C:\boot.ini -Destination C:\boot.bak -Force
 ```
 
 Esse comando funciona mesmo quando o destino é somente leitura.
 
-Copiar a pasta funciona da mesma maneira. Este comando copia a pasta C:\\temp\\test1 na nova pasta c:\\temp\\DeleteMe recursivamente:
+Copiar a pasta funciona da mesma maneira. Este comando copia a pasta c:\\temp\\test1 na nova pasta c:\\temp\\DeleteMe recursivamente:
 
 ```powershell
-Copy-Item C:\temp\test1 -Recurse c:\temp\DeleteMe
+Copy-Item C:\temp\test1 -Recurse C:\temp\DeleteMe
 ```
 
 Você também pode copiar uma seleção de itens. O comando a seguir copia todos os arquivos .txt contidos em qualquer lugar em c:\\data em c:\\temp\\text:
 
 ```powershell
-Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination c:\temp\text
+Copy-Item -Filter *.txt -Path c:\data -Recurse -Destination C:\temp\text
 ```
 
 Você ainda pode usar outras ferramentas para realizar cópias do sistema de arquivos. XCOPY, ROBOCOPY e objetos COM, como o **Scripting.FileSystemObject,** todos eles funcionam no Windows PowerShell. Por exemplo, você pode usar a classe **Scripting.FileSystem COM** do Windows Script Host para fazer backup de C:\\boot.ini em C:\\boot.bak:
 
 ```powershell
-(New-Object -ComObject Scripting.FileSystemObject).CopyFile('c:\boot.ini', 'c:\boot.bak')
+(New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
 ```
 
 ### <a name="creating-files-and-folders"></a>Criar arquivos e pastas
@@ -90,7 +90,7 @@ New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 É possível remover os itens contidos usando **Remove-Item**, mas você será solicitado a confirmar a remoção se o item contiver qualquer outra coisa. Por exemplo, se você tentar excluir a pasta C:\\temp\\DeleteMe que contém outros itens, o Windows PowerShell solicitará sua confirmação antes de excluí-la:
 
 ```
-Remove-Item C:\temp\DeleteMe
+Remove-Item -Path C:\temp\DeleteMe
 
 Confirm
 The item at C:\temp\DeleteMe has children and the -recurse parameter was not
@@ -103,7 +103,7 @@ sure you want to continue?
 Se você não quiser ser solicitado para cada item contido, especifique o parâmetro **Recurse**:
 
 ```powershell
-Remove-Item C:\temp\DeleteMe -Recurse
+Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
 ### <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapear uma pasta local como uma Unidade Acessível do Windows

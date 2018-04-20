@@ -588,10 +588,10 @@ Quando são lançadas novas versões do PowerShell, basta atualizar fórmula do 
 
 ```sh
 brew update
-brew cask reinstall powershell
+brew cask upgrade powershell
 ```
 
-> Observação: por causa [desse problema no Cask](https://github.com/caskroom/homebrew-cask/issues/29301), no momento, você deve fazer uma reinstalação para atualizar.
+> Observação: Os comandos acima podem ser chamados por meio de um host do PowerShell (pwsh), mas é necessário sair e entrar novamente no shell do PowerShell para concluir a atualização e atualizar os valores mostrados em $PSVersionTable.
 
 [brew]: http://brew.sh/
 [cask]: https://caskroom.github.io/
