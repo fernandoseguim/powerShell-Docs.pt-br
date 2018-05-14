@@ -25,7 +25,7 @@ Para cargas de trabalho tradicionais do Windows PowerShell, veja [instalação d
 > [!IMPORTANT]
 > No macOS, você deve instalar o OpenSSL para que a extensão do PowerShell funcione corretamente.
 > A maneira mais fácil de fazer isso é instalar o [Homebrew](http://brew.sh/) e, em seguida, executar `brew install openssl`.
-> Agora, a extensão do PowerShell será capaz de carregar com êxito.
+> O VS Code agora pode carregar a extensão do PowerShell com êxito.
 
 - **Windows**: siga as instruções de instalação na página [Execução do código VS no Windows](https://code.visualstudio.com/docs/setup/windows)
 
@@ -39,7 +39,7 @@ Para cargas de trabalho tradicionais do Windows PowerShell, veja [instalação d
 - Inicie **Abertura rápida** pressionando **Ctrl+P** (**Cmd+P** no Mac).
 - Na Abertura rápida, digite `ext install powershell` e clique em **Enter**.
 - A exibição **Extensões** será aberta na barra lateral. Selecione a extensão do PowerShell da Microsoft.
-  Você verá algo como abaixo:
+  Você deve ver algo como:
 
   ![VSCode](../../images/vscode.png)
 
@@ -55,7 +55,7 @@ Para sair do Visual Studio Code, **Arquivo -> Sair**.
 
 #### <a name="using-a-specific-installed-version-of-powershell"></a>Uso de uma versão instalada específica do PowerShell
 
-Se quiser usar uma instalação específica do PowerShell com o Visual Studio Code, você precisará adicionar uma nova variável ao arquivo de configurações do usuário.
+Se quiser usar uma instalação específica do PowerShell com o Visual Studio Code, precisará adicionar uma nova variável ao arquivo de configurações do usuário.
 
 1. Clique em **Arquivo -> Preferências -> Configurações**
 1. Dois painéis de editor serão exibidos.
@@ -96,7 +96,7 @@ Recomendamos as seguintes definições de configuração para o Visual Studio Co
 
 A partir da versão do Visual Studio Code 1.9, você pode depurar scripts do PowerShell sem a necessidade de abrir a pasta que contém o script do PowerShell.
 Basta abrir o arquivo de script do PowerShell usando **Arquivo -> Abrir Arquivo...** , definir um ponto de interrupção em uma linha (pressione F9) e, em seguida, pressionar F5 para iniciar a depuração.
-Será exibido o painel de ações de depuração que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
+Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
 
 ### <a name="workspace-debugging"></a>Depuração do espaço de trabalho
 
@@ -116,11 +116,11 @@ Siga estas etapas para criar o arquivo de configuração de depuração:
 
 1. Abra a exibição **Depurar** pressionando **Ctrl+Shift+D** (**Cmd+Shift+D** no Mac).
 1. Pressione o ícone de engrenagem **Configurar** na barra de ferramentas.
-1. O Visual Studio Code solicitará que você **Selecione Ambiente**.
+1. O Visual Studio Code solicitará que você **Selecione o Ambiente**.
    Escolha **PowerShell**.
 
    Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de espaço de trabalho.
-   A configuração de depuração é armazena nesse local. Se os arquivos estiverem em um repositório Git, normalmente você desejará confirmar o arquivo launch.json.
+   A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json.
    O conteúdo do arquivo launch.json é:
 
 ```json

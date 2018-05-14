@@ -3,11 +3,11 @@ ms.date: 10/31/2017
 ms.topic: conceptual
 keywords: DSC,powershell,configuração,instalação
 title: Protegendo o Arquivo MOF
-ms.openlocfilehash: 80ef37ef1bdcb0a8b0ad343b4eab99f1bc66e116
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 00a33a5d628921bcd04aa904a1aa8ee4345af48f
+ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-the-mof-file"></a>Protegendo o Arquivo MOF
 
@@ -137,7 +137,7 @@ O exemplo a seguir:
  1. cria um certificado no **Nó de criação**.
  2. exporta o certificado, incluindo a chave privada do **Nó de criação**.
  3. remove a chave privada do **Nó de criação**, mas mantém o certificado de chave pública no **meu** repositório.
- 4. importa o certificado de chave privada para o repositório de certificados raiz no **Nó de destino**.
+ 4. importa o certificado de chave privada no repositório de certificados My(Personal) no **Nó de destino**.
    - ele deve ser adicionado ao repositório raiz para que seja confiável pelo **Nó de destino**.
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>No Nó de criação: criar e exportar o certificado
