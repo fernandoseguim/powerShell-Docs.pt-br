@@ -1,17 +1,15 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 41a676939cb45e780b572b8e718ae315d641d4f8
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 6dadbe9c41ed0a61839ef94fe0a950fe501941ee
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="information-stream"></a><span data-ttu-id="f9d24-102">Fluxo de informações</span><span class="sxs-lookup"><span data-stu-id="f9d24-102">Information Stream</span></span>
+# <a name="information-stream"></a><span data-ttu-id="6a509-102">Fluxo de informações</span><span class="sxs-lookup"><span data-stu-id="6a509-102">Information Stream</span></span>
 
-<span data-ttu-id="f9d24-103">Um novo Fluxo de informações estruturado agora pode ser usado para transmitir dados estruturados entre um script e seu host.</span><span class="sxs-lookup"><span data-stu-id="f9d24-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="f9d24-104">**Write-Host** também foi atualizado para emitir a saída para o Fluxo de informações, em que agora é possível capturar ou silenciá-lo.</span><span class="sxs-lookup"><span data-stu-id="f9d24-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="f9d24-105">O novo cmdlet **Write-Information** (juntamente com uma API WriteInformation correspondente) usado com os parâmetros comuns **-InformationVariable** e **-InformationAction** permite mais flexibilidade e capacidade.</span><span class="sxs-lookup"><span data-stu-id="f9d24-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
+<span data-ttu-id="6a509-103">Um novo Fluxo de informações estruturado agora pode ser usado para transmitir dados estruturados entre um script e seu host.</span><span class="sxs-lookup"><span data-stu-id="6a509-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="6a509-104">**Write-Host** também foi atualizado para emitir a saída para o Fluxo de informações, em que agora é possível capturar ou silenciá-lo.</span><span class="sxs-lookup"><span data-stu-id="6a509-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="6a509-105">O novo cmdlet **Write-Information** (juntamente com uma API WriteInformation correspondente) usado com os parâmetros comuns **-InformationVariable** e **-InformationAction** permite mais flexibilidade e capacidade.</span><span class="sxs-lookup"><span data-stu-id="6a509-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
 
 ```powershell
 PS C:\Users\demo> ## Here's a typical PowerShell script
