@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
+ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Novos cenários e recursos no WMF 5.1
-ms.openlocfilehash: 8edea99731df44349c8bcff113a8163ba5401ccd
-ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
+ms.openlocfilehash: 77b439e61c5802f8ddbc4a0f39923cc8c0c36fe9
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Novos cenários e recursos no WMF 5.1
 
@@ -83,10 +82,10 @@ Do WMF 5.1 em diante, o PowerShell fornece controle sobre o arquivo que é usado
 Por padrão, esse cache é armazenado no arquivo `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 O cache normalmente é lido na inicialização ao procurar um comando e é gravado em um thread em segundo plano em algum momento após a importação de um módulo.
 
-Para alterar a localização padrão do cache, defina a variável de ambiente `$env:PSModuleAnalysisCachePath` antes de iniciar o PowerShell.
+Para alterar o local padrão do cache, defina a variável de ambiente `$env:PSModuleAnalysisCachePath` antes de iniciar o PowerShell.
 As alterações a esta variável de ambiente afetarão apenas processos filhos.
 O valor deve nomear um caminho completo (incluindo nome do arquivo) em que o PowerShell tenha permissão para criar e gravar arquivos.
-Para desabilitar o cache de arquivo, defina esse valor para uma localização inválida, por exemplo:
+Para desabilitar o cache de arquivo, defina esse valor para um local inválido, por exemplo:
 
 ```powershell
 $env:PSModuleAnalysisCachePath = 'nul'

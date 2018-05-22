@@ -1,13 +1,12 @@
 ---
 ms.date: 04/11/2018
-ms.topic: conceptual
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: 075487be68de82074750e5344a24d6d4c2f2bec5
-ms.sourcegitcommit: a9aa5e8d0fab0cbb3e4e6cff0e3ca8c0339ab4e6
+ms.openlocfilehash: 057da50843e79ae31eef4fea1fa58e882a9d1ace
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -84,7 +83,7 @@ A maneira mais fácil de configurar um servidor de recepção Web é usar o recu
 As etapas a seguir explicam como usar o recurso em uma configuração que configure o serviço Web.
 
 1. Chame o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xPSDesiredStateConfiguration**. **Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
-1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX. Instale o certificado no nó que se tornará o servidor de recepção de DSC na localização padrão, que deve ser CERT:\LocalMachine\My. Anote a impressão digital do certificado.
+1. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX. Instale o certificado no nó que se tornará o servidor de recepção de DSC no local padrão, que deve ser CERT:\LocalMachine\My. Anote a impressão digital do certificado.
 1. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um, usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: '``` [guid]::newGuid()```' ou '```New-Guid```'. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, confira a seção Chave de registro abaixo.
 1. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta Exemplos do módulo **xPSDesiredStateConfiguration** como Sample_xDscWebServiceRegistration.ps1). Esse script configura o servidor de pull.
 

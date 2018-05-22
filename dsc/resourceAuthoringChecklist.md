@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC,powershell,configuração,instalação
 title: Lista de verificação da criação de recursos
-ms.openlocfilehash: 39f652b458702dc7e815ab4b2f965e6728fa1b51
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 76d9fecca8618fcc178975465f45cda0d0e04064
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação da criação de recursos
 Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso de DSC.

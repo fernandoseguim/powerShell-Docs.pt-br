@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC,powershell,configuração,instalação
 title: Função de DSC para consultar informações do nó do servidor de pull.
-ms.openlocfilehash: 5c10eefe9ded4fe6339c4e6252cc189bcd793978
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 069fc79a79fbd5f75bcce27f7f0bd95af0d7b1ad
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dsc-function-to-query-node-information-from-pull-server"></a>Função de DSC para consultar informações do nó do servidor de pull.
 

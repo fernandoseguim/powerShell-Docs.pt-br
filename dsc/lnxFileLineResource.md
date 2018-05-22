@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxFileLine de DSC para Linux
-ms.openlocfilehash: 798bfa4150996622c33c77d6a5aa3be4af342f1b
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 6b927839c23478aa9916a5d23836b31fccc58484
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>Recurso nxFileLine de DSC para Linux
 

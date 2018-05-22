@@ -1,13 +1,11 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: cedda61241df4965fe5db723f03e3497f046fa44
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: e4588e8c69efb965cd33c273ad09a8bef8e9bf16
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>Extrair e analisar objetos estruturados fora da cadeia de caracteres
 Isso também introduz algumas funcionalidades adicionais ao cmdlet ConvertFrom-String:
