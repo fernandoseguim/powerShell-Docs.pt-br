@@ -1,11 +1,11 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 272843efb68c42105af6eb88ad6a95b581da47ae
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7b4e4dbeaf9c3c48e7b2dfc74435dfa2cd9c7ea7
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Representação de estado e status consistente e unificada
 
@@ -21,7 +21,7 @@ A representação do estado do LCM e do status de operação do DSC foi revisita
 
 A tabela abaixo ilustra as propriedades relacionadas a estado e status resultantes em alguns cenários típicos.
 
-| **Cenário**                    | **LCMState\***       | **Status** | **Reinicialização solicitada**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| Cenário                    | LCMState       | Status | Reinicialização solicitada  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Idle                 | Sucesso    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Falha    | $false        | $null                        | F                              |
@@ -46,11 +46,13 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
+
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Melhorias no cmdlet Get-DscConfigurationStatus
 
 Foram feitas algumas melhorias ao cmdlet Get-DscConfigurationStatus nesta versão. Anteriormente, a propriedade StartDate de objetos retornados pelo cmdlet era do tipo String. Agora, ela é do tipo Datetime, o que permite uma seleção e filtragem complexas, facilitando-as com base nas propriedades intrínsecas de um objeto Datetime.
+
 ```powershell
-(Get-DscConfigurationStatus).StartDate | fl \*
+(Get-DscConfigurationStatus).StartDate | fl *
 DateTime : Friday, November 13, 2015 1:39:44 PM
 Date : 11/13/2015 12:00:00 AM
 Day : 13
@@ -68,14 +70,16 @@ Year : 2015
 ```
 
 Veja a seguir um exemplo que retorna todos os registros de operação do DSC ocorridos no mesmo dia da semana que hoje.
+
 ```powershell
-(Get-DscConfigurationStatus –All) | where { $\_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
+(Get-DscConfigurationStatus –All) | where { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
 Registros de operações que não fazem alterações à configuração do nó (ou seja, operações somente leitura) são eliminados. Portanto, as operações Test-DscConfiguration e Get-DscConfiguration são não mais adulteradas em objetos retornados pelo cmdlet Get-DscConfigurationStatus.
 Registros da operação de definição de metaconfiguração são adicionados ao retorno pelo cmdlet Get-DscConfigurationStatus.
 
 Apresentamos a seguir um exemplo de resultado retornado pelo cmdlet Get-DscConfigurationStatus –All.
+
 ```powershell
 All configuration operations:
 
@@ -89,12 +93,15 @@ Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
 ## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Melhoria no cmdlet Get-DscLocalConfigurationManager
+
 Um novo campo de LCMStateDetail é adicionado ao objeto retornado pelo cmdlet Get-DscLocalConfigurationManager. Este campo é populado quando LCMState é “Ocupado”. Ele pode ser recuperado pelo seguinte cmdlet:
+
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
 ```
 
 Veja a seguir um exemplo de saída de um monitoramento contínuo em uma configuração que exige duas reinicializações em um nó remoto.
+
 ```powershell
 Start a configuration that requires two reboots
 
