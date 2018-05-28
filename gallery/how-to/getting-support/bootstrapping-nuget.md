@@ -1,6 +1,13 @@
-
 ---
-ms.date: 12/06/2017 colaborador: manikb ms.topic: palavras-chave de referência: galeria,powershell,cmdlet, título psget: Inicializando o NuGet
+ms.date: 06/12/2017
+contributor: manikb
+keywords: galeria,powershell,cmdlet,psget
+title: Inicializando o NuGet
+ms.openlocfilehash: f707e23737361ee7f82a16150402c9e719ee0ae1
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Inicializar o provedor do NuGet e o NuGet.exe
 
