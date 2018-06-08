@@ -131,7 +131,7 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
     - Adicione uma entrada do subsistema PowerShell
 
     ```
-    Subsystem powershell /usr/local/bin/powershell -sshs -NoLogo -NoProfile
+    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
     ```
 
     - Como alternativa, habilite a autenticação de chave
