@@ -3,17 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Removendo objetos do pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: 2d89defdb1b234a9d0021fc06e1f05a95bb1bce9
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 46f210e1418098f4809174cd975ab8d783580285
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753831"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Removendo objetos do pipeline (Where-Object)
 
 No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeline do que deseja. Você pode especificar as propriedades de determinados objetos para exibição usando os cmdlets **Format**, mas isso não ajuda em problemas de remoção de objetos inteiros da exibição. Talvez você queira filtrar objetos antes do final de um pipeline para poder executar ações em apenas um subconjunto dos objetos gerados inicialmente.
 
-O Windows PowerShell inclui um cmdlet **Where-Object** que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a uma condição de teste específica. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro **Where-ObjectFilterScript**.
+O Windows PowerShell inclui um cmdlet `Where-Object` que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a determinada condição de teste. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro `Where-Object` **FilterScript**.
 
 ### <a name="performing-simple-tests-with-where-object"></a>Executando testes simples com Where-Object
 
