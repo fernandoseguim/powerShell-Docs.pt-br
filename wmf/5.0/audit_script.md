@@ -1,11 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 2627b9d02788bd31a5384587406df533faf2cfaf
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b8f175cee0a1de501b64890fdc2798f4f6421a14
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251476"
 ---
 # <a name="script-tracing-and-logging"></a>Rastreamento e registro de scripts
 
@@ -104,4 +105,4 @@ $sortedScripts = $created | sort { $_.Properties[0].Value }
 $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
-Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior. Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) para mover os logs de eventos para fora do computador assim que possível.
+Assim como acontece com todos os sistemas de registro que têm um buffer de retenção limitado (ou seja, logs do ETW), um ataque contra essa infraestrutura seria inundar o log com eventos diferentes para ocultar a evidência anterior. Para se proteger contra esse ataque, verifique se você tem alguma forma de coleção de log de eventos configurada (ou seja, Windows Event Forwarding, [Spotting the Adversary with Windows Event Log Monitoring](https://www.iad.gov/iad/library/reports/spotting-the-adversary-with-windows-event-log-monitoring.cfm)) para mover os logs de eventos para fora do computador assim que possível.

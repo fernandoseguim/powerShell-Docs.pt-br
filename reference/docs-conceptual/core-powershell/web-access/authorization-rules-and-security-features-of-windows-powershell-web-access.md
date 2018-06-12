@@ -2,11 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
-ms.openlocfilehash: 0e765ae90661a054ca9bae71d0f6d449cccb185d
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 1b4d4339efda78a5cb719921a9cb06881d119930
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483127"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -112,7 +113,7 @@ Se o usuário não fornecer credenciais alternativas, o nome de usuário primár
 As regras de autorização podem ser usadas para permitir que os usuários acessem uma configuração de sessão específica.
 Você pode criar configurações de sessão ou _runspaces restritos_ para o Windows PowerShell Web Access e permitir que usuários específicos se conectem apenas a configurações de sessão específicas quando entrarem no Windows PowerShell Web Access.
 Você pode usar ACLs (listas de controle de acesso) para determinar quais usuários têm acesso a pontos de extremidade específicos e restringir ainda mais o acesso ao ponto de extremidade para um conjunto específico de usuários, usando as regras de autorização descritas nesta seção.
-Para obter mais informações sobre runspaces restritos, consulte [Creating a constrained runspace](https://msdn.microsoft.com/en-us/library/dn614668) (Criando um runspace restrito).
+Para obter mais informações sobre runspaces restritos, consulte [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668) (Criando um runspace restrito).
 
 ### <a name="configuring-authorization-rules"></a>Configurando regras de autorização
 
@@ -122,7 +123,7 @@ O segundo procedimento descreve como remover uma regra de autorização que não
 
 Se você pretende usar configurações de sessão personalizadas para permitir que usuários específicos trabalhem apenas dentro de runspaces restritos no Windows PowerShell Web Access, crie configurações de sessão personalizadas antes de adicionar regras de autorização que as referenciem.
 Não é possível usar os cmdlets do Windows PowerShell Web Access para criar configurações de sessão personalizadas.
-Para obter mais informações de como criar configurações de sessão personalizadas, consulte [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Para obter mais informações de como criar configurações de sessão personalizadas, consulte [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga, o asterisco (\*).
 Não há suporte aos caracteres-curinga com cadeias. Use um asterisco pro propriedade (usuários, computadores ou configurações de sessão).
@@ -142,7 +143,7 @@ Não há suporte aos caracteres-curinga com cadeias. Use um asterisco pro propri
 2. **Etapa opcional** Para restringir o acesso de usuários usando configurações de sessão:
 
     Verifique se as configurações de sessão que você deseja usar já existem em suas regras.
-Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 3. Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual tipicamente tem acesso, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. Digite o seguinte e pressione **Enter**.
 
@@ -253,6 +254,6 @@ Se o servidor de gateway estiver executando Windows Server 2012 R2, o Windows Po
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Instalar e usar o Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
+- [Instalar e usar o Windows PowerShell Web Access](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
 - [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 - [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md)

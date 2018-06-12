@@ -2,11 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: f1134a37e7027b00c948ce1db186a21dc5a311c6
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: f5a27c0541e21b379f88b318cbe09a0344c1b372
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483178"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 O Windows PowerShell 5.0 inclui recursos novos importantes que estendem e melhoram o uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
@@ -316,7 +317,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
 ### <a name="new-features-in-windows-powershell"></a>Novos recursos no Windows PowerShell
 
-- A **DSC (Configuração de Estado Desejado) do Windows PowerShell** é uma nova plataforma de gerenciamento no Windows PowerShell 4.0 que permite a implantação e o gerenciamento de dados de configuração de serviços de software e o ambiente no qual esses serviços são executados. Para obter mais informações sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/en-us/library/c134aa32-b085-4656-9a89-955d8ff768d0).
+- A **DSC (Configuração de Estado Desejado) do Windows PowerShell** é uma nova plataforma de gerenciamento no Windows PowerShell 4.0 que permite a implantação e o gerenciamento de dados de configuração de serviços de software e o ambiente no qual esses serviços são executados. Para obter mais informações sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 
 - **Save-Help** agora permite salvar ajuda para módulos instalados em computadores remotos. Você pode usar Save-Help para baixar o módulo da Ajuda de um cliente conectado à Internet (nos quais nem todos os módulos para o qual você deseja obter ajuda estão necessariamente instalados) e copiar a Ajuda salva em uma pasta compartilhada remota ou um computador remoto que não tem acesso à Internet.
 
@@ -472,7 +473,7 @@ O Windows PowerShell 3.0 inclui os seguintes novos recursos.
 - [Aprimoramentos no tratamento de caracteres especiais](#special-character-handling-improvements)
 
 ### <a name="windows-powershell-workflow"></a>Fluxo de trabalho do Windows PowerShell
-O fluxo de trabalho do Windows PowerShell traz a potência do Windows Workflow Foundation para o Windows PowerShell. Você pode escrever fluxos de trabalho em XAML ou na linguagem do Windows PowerShell e executá-los exatamente como você executaria um cmdlet. O cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém comandos de fluxo de trabalho e o cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtém ajuda para fluxos de trabalho.
+O fluxo de trabalho do Windows PowerShell traz a potência do Windows Workflow Foundation para o Windows PowerShell. Você pode escrever fluxos de trabalho em XAML ou na linguagem do Windows PowerShell e executá-los exatamente como você executaria um cmdlet. O cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém comandos de fluxo de trabalho e o cmdlet [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtém ajuda para fluxos de trabalho.
 
 Fluxos de trabalho são sequências de atividades de gerenciamento demoradas, repetíveis, frequentes, frequentes, paralelizáveis, passível de interrupção, passível de suspensão e reiniciáveis. Fluxos de trabalho podem ser reiniciados com uma interrupção acidental ou intencional, como uma interrupção da rede, uma reinicialização do Windows ou uma falha de energia.
 
@@ -504,7 +505,7 @@ O Windows PowerShell Web Access é um recurso do Windows Server 2012 que permite
 Para obter mais informações, consulte [Implantar o Windows PowerShell Web Access](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
 ### <a name="new-windows-powershell-ise-features"></a>Novos recursos do Windows PowerShell ISE
-Para o Windows PowerShell 3.0, o ISE (Ambiente de Script Integrado) do Windows PowerShell tem muitos recursos novos, incluindo IntelliSense, janela Show-Command, um painel de console unificado, trechos de código, correspondência de colchetes, seções expandir-recolher, salvamento automático, lista de itens recentes, cópia avançada, cópia do bloco e suporte completo para escrever fluxos de trabalho de script do Windows PowerShell. Para obter mais informações, consulte [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
+Para o Windows PowerShell 3.0, o ISE (Ambiente de Script Integrado) do Windows PowerShell tem muitos recursos novos, incluindo IntelliSense, janela Show-Command, um painel de console unificado, trechos de código, correspondência de colchetes, seções expandir-recolher, salvamento automático, lista de itens recentes, cópia avançada, cópia do bloco e suporte completo para escrever fluxos de trabalho de script do Windows PowerShell. Para obter mais informações, consulte [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="support-for-microsoft-net-framework-4"></a>Suporte para o Microsoft .NET Framework 4
 O Windows PowerShell foi desenvolvido com o Common Language Runtime 4.0. Autores de cmdlet, script e fluxo de trabalho podem usar as novas classes do Microsoft .NET Framework 4 no Windows PowerShell, com recursos que incluem a Implantação e Compatibilidade do Aplicativo, Managed Extensibility Framework, Computação Paralela, Rede, Windows Communication Foundation e Windows Workflow Foundation.
@@ -517,9 +518,9 @@ A partir do Windows PowerShell 3.0, sessões persistentes gerenciadas pelo usuá
 
 Agora você pode desconectar-se de uma sessão sem interromper os comandos que são executados nela. Você pode fechar a sessão e desligar o computador. Posteriormente, você pode se reconectar à sessão de uma sessão diferente no mesmo computador ou em um computador diferente.
 
-O parâmetro **ComputerName** do cmdlet [Get-PSSession](https://technet.microsoft.com/en-us/library/b2b10531-d0df-4746-b877-e75c09955cb6) agora obtém todas as sessões do usuário que se conectam ao computador, mesmo se elas foram iniciadas em uma sessão diferente em outro computador. Você pode se conectar às sessões, obter os resultados dos comandos, iniciar novos comandos e desconectar a sessão.
+O parâmetro **ComputerName** do cmdlet [Get-PSSession](https://technet.microsoft.com/library/b2b10531-d0df-4746-b877-e75c09955cb6) agora obtém todas as sessões do usuário que se conectam ao computador, mesmo se elas foram iniciadas em uma sessão diferente em outro computador. Você pode se conectar às sessões, obter os resultados dos comandos, iniciar novos comandos e desconectar a sessão.
 
-Foram adicionados novos cmdlets para dar suporte ao recurso de Sessões Desconectadas, incluindo [Disconnect-PSSession](https://technet.microsoft.com/en-us/library/f8f95111-612f-4cba-9098-77904b0473d8), [Connect-PSSession](https://technet.microsoft.com/en-us/library/b803dd29-f208-4079-80d4-db04d778f060) e Receive-PSSession, além de novos parâmetros adicionados aos cmdlets que gerenciam as PSSessions, como o parâmetro **InDisconnectedSession** do cmdlet [Invoke-Command](https://technet.microsoft.com/en-us/library/906b4b41-7da8-4330-9363-e7164e5e6970).
+Foram adicionados novos cmdlets para dar suporte ao recurso de Sessões Desconectadas, incluindo [Disconnect-PSSession](https://technet.microsoft.com/library/f8f95111-612f-4cba-9098-77904b0473d8), [Connect-PSSession](https://technet.microsoft.com/library/b803dd29-f208-4079-80d4-db04d778f060) e Receive-PSSession, além de novos parâmetros adicionados aos cmdlets que gerenciam as PSSessions, como o parâmetro **InDisconnectedSession** do cmdlet [Invoke-Command](https://technet.microsoft.com/library/906b4b41-7da8-4330-9363-e7164e5e6970).
 
 O recurso de sessões desconectadas é suportado apenas quando os computadores em ambas as extremidades de origem ("cliente") e de destino ("servidor") estão executando o Windows PowerShell 3.0.
 
@@ -531,17 +532,17 @@ Se a sessão desconectada foi iniciada usando o InvokeCommand, o Windows PowerSh
 Esses recursos fornecem uma experiência de comunicação remota mais confiável e recuperável, permitindo que os usuários executem tarefas de longa duração que exigem sessões robustas, como fluxos de trabalho.
 
 ### <a name="updatable-help-system"></a>Sistema de Ajuda Atualizável
-Agora você pode baixar arquivos de Ajuda atualizados para os cmdlets nos seus módulos. O cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) identifica os arquivos de ajuda mais recentes, baixa da Internet, descompacta, valida e instala eles no diretório específico do idioma correto para o módulo.
+Agora você pode baixar arquivos de Ajuda atualizados para os cmdlets nos seus módulos. O cmdlet [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) identifica os arquivos de ajuda mais recentes, baixa da Internet, descompacta, valida e instala eles no diretório específico do idioma correto para o módulo.
 
 Para usar os arquivos de ajuda atualizados, basta digitar `Get-Help`. Não é necessário reiniciar o Windows ou o Windows PowerShell. Para atualizar a ajuda para os módulos no diretório $pshome, inicie o Windows PowerShell com a opção "Executar como administrador".
 
-Para dar suporte a usuários que não têm acesso à Internet e usuários atrás de firewalls, o novo cmdlet [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) baixa os arquivos de ajuda para um diretório de sistema de arquivos, como um compartilhamento de arquivos. Os usuários poderão então usar o cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) para obter os arquivos de ajuda atualizados no compartilhamento de arquivos.
+Para dar suporte a usuários que não têm acesso à Internet e usuários atrás de firewalls, o novo cmdlet [Save-Help](https://technet.microsoft.com/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) baixa os arquivos de ajuda para um diretório de sistema de arquivos, como um compartilhamento de arquivos. Os usuários poderão então usar o cmdlet [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) para obter os arquivos de ajuda atualizados no compartilhamento de arquivos.
 
-Você pode usar o cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) para atualizar os arquivos da ajuda para todos os módulos ou alguns específicos em todas a culturas de interface do usuário com suporte. Você pode até mesmo colocar um comando [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) no seu perfil do Windows PowerShell. Por padrão, o Windows PowerShell baixará os arquivos de ajuda de um módulo, no máximo, uma vez por dia.
+Você pode usar o cmdlet [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) para atualizar os arquivos da ajuda para todos os módulos ou alguns específicos em todas a culturas de interface do usuário com suporte. Você pode até mesmo colocar um comando [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) no seu perfil do Windows PowerShell. Por padrão, o Windows PowerShell baixará os arquivos de ajuda de um módulo, no máximo, uma vez por dia.
 
-Os módulos do Windows 8 e Windows Server 2012 não incluem arquivos de ajuda. Para baixar os arquivos de ajuda mais recentes, digite `Update-Help`. Para obter mais informações, digite `Get-Help` (sem parâmetros) ou consulte [About_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
+Os módulos do Windows 8 e Windows Server 2012 não incluem arquivos de ajuda. Para baixar os arquivos de ajuda mais recentes, digite `Update-Help`. Para obter mais informações, digite `Get-Help` (sem parâmetros) ou consulte [About_Updatable_Help](https://technet.microsoft.com/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
 
-Quando os arquivos de ajuda para um cmdlet não estão instalados no computador, o cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) agora exibe a ajuda gerada automaticamente. A Ajuda gerada automaticamente inclui a sintaxe de comando e instruções sobre como usar o cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) para baixar arquivos de Ajuda.
+Quando os arquivos de ajuda para um cmdlet não estão instalados no computador, o cmdlet [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) agora exibe a ajuda gerada automaticamente. A Ajuda gerada automaticamente inclui a sintaxe de comando e instruções sobre como usar o cmdlet [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) para baixar arquivos de Ajuda.
 
 Qualquer autor de módulo pode suportar a ajuda atualizável para seu módulo. Você pode incluir arquivos de Ajuda no módulo e usar a Ajuda Atualizável para atualizá-los ou omitir os arquivos da Ajuda e usar a Ajuda Atualizável para instalá-los. Para obter mais informações sobre como dar suporte à Ajuda Atualizável, consulte [Dar suporte à Ajuda Atualizável](http://go.microsoft.com/FWLink/?LinkID=242129) no MSDN.
 
@@ -579,22 +580,22 @@ Você pode criar uma sessão na qual os usuários podem executar apenas os cmdle
 
 Nas versões anteriores do Windows PowerShell, o controle nesse nível estava disponível somente para aqueles que sabiam escrever um programa em C# ou um script de inicialização complexo. Agora, qualquer membro do grupo Administradores no computador pode personalizar uma configuração de sessão usando um arquivo de configuração.
 
-Para criar um arquivo de configuração de sessão, use o cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866). Para aplicar o arquivo de configuração de sessão a uma configuração de sessão, use os cmdlets [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) ou [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
+Para criar um arquivo de configuração de sessão, use o cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866). Para aplicar o arquivo de configuração de sessão a uma configuração de sessão, use os cmdlets [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) ou [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Para obter mais informações, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
+Para obter mais informações, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="scheduled-jobs-and-task-scheduler-integration"></a>Trabalhos Agendados e Integração do Agendador de Tarefas
 Agora você pode agendar trabalhos em segundo plano do Windows PowerShell e gerenciá-los no Windows PowerShell e no Agendador de Tarefas.
 
 Trabalhos agendados do Windows PowerShell são um híbrido útil entre trabalhos em segundo plano do Windows PowerShell e tarefas do Agendador de Tarefas.
 
-Como os trabalhos em segundo plano do Windows PowerShell, os trabalhos agendados são executados de forma assíncrona em segundo plano. As instâncias de trabalhos agendados concluídas podem ser gerenciadas usando cmdlets de trabalho, tais como [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442) e [Get-Job](https://technet.microsoft.com/en-us/library/1352c534-7193-46ca-9ab1-0c5219a661ad).
+Como os trabalhos em segundo plano do Windows PowerShell, os trabalhos agendados são executados de forma assíncrona em segundo plano. As instâncias de trabalhos agendados concluídas podem ser gerenciadas usando cmdlets de trabalho, tais como [Start-Job](https://technet.microsoft.com/library/2bc04935-0deb-4ec0-b856-d7290cca6442) e [Get-Job](https://technet.microsoft.com/library/1352c534-7193-46ca-9ab1-0c5219a661ad).
 
 Assim como tarefas do Agendador de Tarefas, você pode executar trabalhos agendados em uma agenda única ou recorrente ou em resposta a um evento ou ação. Você pode exibir e gerenciar trabalhos agendados no Agendador de Tarefas, habilitar e desabilitá-los conforme necessário, executá-los ou usá-los como modelos e definir as condições sob as quais os trabalhos devem iniciar.
 
 Além disso, os trabalhos agendados são fornecidos com um conjunto personalizado de cmdlets para gerenciá-las. Os cmdlets permitem criar, editar, gerenciar, desabilitar e habilitar novamente os trabalhos agendados, criar disparadores de trabalho agendado e definir opções de trabalho agendado.
 
-Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92).
+Para obter mais informações sobre os trabalhos agendados, consulte [about_Scheduled_Jobs](https://technet.microsoft.com/library/3b546629-703c-4939-b44f-52dd567bce92).
 
 ### <a name="windows-powershell-language-enhancements"></a>Aprimoramentos da Linguagem do Windows PowerShell
 O Windows PowerShell 3.0 inclui muitos recursos que foram projetados para tornar sua linguagem mais simples e mais fácil de usar e evitar erros comuns. As melhorias incluem propriedades de enumeração, contagem e tamanho de propriedade em objetos escalares, novos operadores de redirecionamento, o modificador de escopo $Using, PSItem automático variável e formatação de script flexível, atributos de variáveis, argumentos de atributo simplificados, nomes de comandos numéricos, operador de análise de parada, nivelamento de matriz aprimorado, novos operadores de bit, dicionários ordenados, conversão de PSCustomObject e ajuda aprimorada baseada em comentário.
@@ -641,21 +642,21 @@ Os provedores do Windows PowerShell também foram aprimorados significativamente
 ### <a name="remote-module-import-and-discovery"></a>Importação e descoberta de módulo remoto
 O Windows PowerShell 3.0 estende os recursos de comunicação remota implícita, de descoberta e importação em computadores remotos. Os cmdlets Module obtém módulos em computadores remotos e importam os módulos para o computador local ou remoto usando o Windows PowerShell remotamente. Novo suporte de sessão CIM permite usar o CIM e o WMI para gerenciar computadores sem Windows importando comandos no computador local implicitamente executados no computador remoto.
 
-Para obter mais informações, consulte os tópicos de ajuda para os cmdlets [Get-Module](https://technet.microsoft.com/en-us/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
+Para obter mais informações, consulte os tópicos de ajuda para os cmdlets [Get-Module](https://technet.microsoft.com/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="enhanced-tab-completion"></a>Preenchimento de tabela avançado
 O preenchimento com Tab no console do Windows PowerShell agora preenche os nomes de cmdlets, parâmetros, valores de parâmetro, enumerações, tipos de .NET Frameworks, objetos COM, diretórios e muito mais. O recurso de preenchimento de guia foi completamente reescrito com base em um novo analisador e uma árvore de sintaxe abstrata para dar suporte a mais cenários, incluindo árvores de análise na memória e preenchimento de guias medianas.
 
 ### <a name="module-auto-loading"></a>Módulo de carregamento automático
-O cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) agora obterá todos os cmdlets e funções de todos os módulos instalados no computador, mesmo se o módulo não for importado para a sessão atual.
+O cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) agora obterá todos os cmdlets e funções de todos os módulos instalados no computador, mesmo se o módulo não for importado para a sessão atual.
 
 Ao obter o cmdlet que você precisa, você pode usá-lo imediatamente sem importar os módulos. Agora, os módulos do Windows PowerShell são importados automaticamente quando você usa qualquer cmdlet no módulo. Você não precisa mais pesquisar o módulo e importá-lo para usar seus cmdlets.
 
-A importação automática de módulos é acionada usando o cmdlet em um comando, executando o **Get-Command** para um cmdlet sem curingas ou o [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) para um cmdlet sem curingas.
+A importação automática de módulos é acionada usando o cmdlet em um comando, executando o **Get-Command** para um cmdlet sem curingas ou o [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) para um cmdlet sem curingas.
 
 Você pode habilitar, desabilitar e configurar a importação automática de módulos usando a variável de preferência **$PSModuleAutoLoadingPreference**.
 
-Para obter mais informações, consulte [about_Modules [v4]](https://technet.microsoft.com/en-us/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b) e os tópicos da Ajuda para os cmdlets [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
+Para obter mais informações, consulte [about_Modules [v4]](https://technet.microsoft.com/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) e os tópicos da Ajuda para os cmdlets [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="module-experience-improvements"></a>Aprimoramentos da experiência do módulo
 O Windows PowerShell 3.0 oferece suporte a recursos avançados para módulos, incluindo os seguintes recursos novos.
@@ -672,16 +673,16 @@ O Windows PowerShell 3.0 oferece suporte a recursos avançados para módulos, in
 
 6. Requisitos de módulo aprimorados, incluindo módulos necessários totalmente qualificado com versão e GUID, bem como importação automática de módulos necessários
 
-7. Operação mais discreta e simplificada do cmdlet [New-ModuleManifest](https://technet.microsoft.com/en-us/library/512adced-f42f-4e88-ba7c-834fc9e5d047).
+7. Operação mais discreta e simplificada do cmdlet [New-ModuleManifest](https://technet.microsoft.com/library/512adced-f42f-4e88-ba7c-834fc9e5d047).
 
 8. Novo parâmetro **Module** para #Requires
 
-9. O cmdlet [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade) foi aprimorado com ambos os parâmetros **MinimumVersion** e **RequiredVersion**.
+9. O cmdlet [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade) foi aprimorado com ambos os parâmetros **MinimumVersion** e **RequiredVersion**.
 
 ### <a name="simplified-command-discovery"></a>Descoberta de comando simplificada
-Você não precisa mais importar todos os módulos para descobrir os comandos disponíveis para sua sessão. No Windows PowerShell 3.0, o cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém todos os comandos de todos os módulos instalados. E, se você usar um comando, o módulo que o exporta é importado automaticamente para a sessão.
+Você não precisa mais importar todos os módulos para descobrir os comandos disponíveis para sua sessão. No Windows PowerShell 3.0, o cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém todos os comandos de todos os módulos instalados. E, se você usar um comando, o módulo que o exporta é importado automaticamente para a sessão.
 
-O novo cmdlet [Show-Command](https://technet.microsoft.com/en-us/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) foi desenvolvido especialmente para iniciantes. É possível procurar comandos em uma janela. Você pode exibir todos os comandos ou filtrar por módulo, importar um módulo clicando em um botão, usar as caixas de texto e listas suspensas para construir um comando válido e copiar ou executar o comando sem sair da janela.
+O novo cmdlet [Show-Command](https://technet.microsoft.com/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) foi desenvolvido especialmente para iniciantes. É possível procurar comandos em uma janela. Você pode exibir todos os comandos ou filtrar por módulo, importar um módulo clicando em um botão, usar as caixas de texto e listas suspensas para construir um comando válido e copiar ou executar o comando sem sair da janela.
 
 ### <a name="improved-logging-diagnostics-and-group-policy-support"></a>Suporte aprimorado ao registro em log, diagnósticos e políticas de grupo
 O Windows PowerShell 3.0 melhora o registro em log e o suporte de rastreamento para comandos e módulos com suporte ao Rastreamento de Eventos para Windows (ETW) em logs, uma propriedade editável de módulos **LogPipelineExecutionDetails** e a configuração de política de grupo "Ativar registro em log do módulo". Agora você pode obter valores de parâmetro dos detalhes do log exibindo as propriedades de log.
@@ -692,13 +693,13 @@ A nova formatação e aprimoramentos na saída melhoram a eficiência de todos o
 ### <a name="enhanced-console-host-experience"></a>Experiência de host de console aprimorada
 O programa do host do console do Windows PowerShell tem novos recursos no Windows PowerShell 3.0, incluindo Single Threaded Apartment por padrão. A nova opção "Executar com o PowerShell" no Explorador de Arquivos permite executar scripts em uma sessão irrestrita com apenas um clique. A nova lógica de inicialização de host do console inicia o Windows PowerShell mais rápido e as novas fontes permitem personalizar a experiência da conhecida janela do console.
 
-Para obter mais informações, consulte [about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb).
+Para obter mais informações, consulte [about_Run_With_PowerShell](https://technet.microsoft.com/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb).
 
 ### <a name="new-cmdlet-and-hosting-apis"></a>Novas APIs de cmdlet e hospedagem
 As novas API de Cmdlet e API de hospedagem incluem APIs da árvore de sintaxe avançada pública APIs (AST) e APIs para paginação de pipeline, pipelines aninhados, preenchimento de guias de pools de runspace, Windows RT, atributo do cmdlets Obsolete e propriedades Verb e Noun do objeto FunctionInfo.
 
 ### <a name="performance-improvements"></a>Aprimoramento de desempenho
-As melhorias de desempenho significativas no Windows PowerShell são graças ao novo analisador de linguagem, que é criado em Dynamic Runtime Language (DLR) no .NET Framework 4., juntamente com a compilação de script de tempo de execução, melhorias de confiabilidade do mecanismo e as alterações no algoritmo do [Get-ChildItem](https://technet.microsoft.com/en-us/library/75cf79bb-4db6-4a67-8c36-3d20754e2190) que melhoram seu desempenho, especialmente ao pesquisar os compartilhamentos de rede.
+As melhorias de desempenho significativas no Windows PowerShell são graças ao novo analisador de linguagem, que é criado em Dynamic Runtime Language (DLR) no .NET Framework 4., juntamente com a compilação de script de tempo de execução, melhorias de confiabilidade do mecanismo e as alterações no algoritmo do [Get-ChildItem](https://technet.microsoft.com/library/75cf79bb-4db6-4a67-8c36-3d20754e2190) que melhoram seu desempenho, especialmente ao pesquisar os compartilhamentos de rede.
 
 ### <a name="runas-and-shared-host-support"></a>Executar como e suporte de host compartilhado
 O Windows PowerShell 3.0 inclui suporte para os recursos Executar Como e Host Compartilhado.
@@ -708,8 +709,8 @@ O recurso *Executar como*, projetado para o Fluxo de Trabalho do Windows PowerSh
 O recurso **SharedHost** permite que vários usuários em vários computadores conectem-se a uma sessão de fluxo de trabalho simultaneamente e monitorem o progresso de um fluxo de trabalho. Os usuários podem iniciar um fluxo de trabalho em um computador e conectar-se à sessão de fluxo de trabalho em outro computador sem desconectar a sessão do computador original. Os usuários devem ter as mesmas permissões e usar a mesma configuração de sessão. Para obter mais informações, consulte "Executando um Fluxo de Trabalho do Windows PowerShell" na Introdução ao Fluxo de Trabalho do Windows PowerShell.
 
 ### <a name="special-character-handling-improvements"></a>Aprimoramentos na manipulação de caracteres especiais
-Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath**, que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path**, incluindo os novos cmdlets [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
+Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular corretamente caracteres especiais, o parâmetro **LiteralPath**, que manipula caracteres especiais em caminhos, é válido para quase todos os cmdlets que têm um parâmetro **Path**, incluindo os novos cmdlets [Update-Help](https://technet.microsoft.com/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). O analisador também inclui uma lógica especial para melhorar o manipulador do caractere de acento grave (\`) e colchetes em nomes de arquivo e caminhos.
 
 ## <a name="see-also"></a>Consulte Também
-- [about_Windows_PowerShell_5.0](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
+- [about_Windows_PowerShell_5.0](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
