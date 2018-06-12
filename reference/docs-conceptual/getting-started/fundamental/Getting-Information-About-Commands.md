@@ -3,14 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Obtendo informações sobre comandos
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: 1426c171d74afc87751f7d31d46571b9c98fa47e
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c51579fe2cdf4f2a0d3248d1aaf3f1f9cac83868
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34482719"
 ---
 # <a name="getting-information-about-commands"></a>Obtendo informações sobre comandos
-O cmdlet **Get-Command** do Windows PowerShell obtém todos os comandos que estão disponíveis na sessão atual. Quando você digita **Get-Command** em um prompt do Windows PowerShell, uma saída semelhante à seguinte é exibida:
+O cmdlet `Get-Command` do Windows PowerShell obtém todos os comandos disponíveis na sessão atual. Ao digitar `Get-Command` em um prompt do PowerShell, você verá uma saída semelhante à seguinte:
 
 ```
 PS> Get-Command
@@ -24,13 +25,13 @@ Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
 
 Esta saída se parece muito como a saída de Ajuda do Cmd.exe: um resumo tabular de comandos internos. No trecho da saída do comando **Get-Command** mostrado acima, todos os comandos mostrados tem um CommandType do Cmdlet. Um cmdlet é o tipo de comando intrínseco do Windows PowerShell; um tipo que corresponde aproximadamente aos comandos **dir** e **cd** de Cmd.exe e shells integrados do UNIX, como BASH.
 
-Na saída do comando **Get-Command**, todas as definições terminam com reticências (...) para indicar que o PowerShell não consegue exibir todo o conteúdo no espaço disponível. Quando o Windows PowerShell exibe a saída, ele formata o resultado como texto e o organiza para ajustar os dados corretamente na janela. Falaremos sobre isso mais tarde na seção sobre formatadores.
+Na saída do comando `Get-Command`, todas as definições terminam com reticências (...) para indicar que o PowerShell não consegue exibir todo o conteúdo no espaço disponível. Quando o Windows PowerShell exibe a saída, ele formata o resultado como texto e o organiza para ajustar os dados corretamente na janela. Falaremos sobre isso mais tarde na seção sobre formatadores.
 
-O cmdlet **Get-Command** tem um parâmetro **Syntax** que obtém a sintaxe de cada cmdlet. Para obter a sintaxe do cmdlet Get-Help, use o seguinte comando:
-
-**Get-Command Get-Help -Syntax**
+O cmdlet `Get-Command` tem um parâmetro **Syntax** que obtém a sintaxe de cada cmdlet. Para obter a sintaxe do cmdlet Get-Help, use o seguinte comando:
 
 ```
+Get-Command Get-Help -Syntax
+
 Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component <String[]>] [-Functionality <String[]>]
  [-Role <String[]>] [-Full] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 
@@ -49,31 +50,31 @@ O comando **Get-Command** não lista todos os comandos disponíveis no Windows P
 
 Para obter todos os comandos na sessão, digite:
 
-```
+```powershell
 Get-Command *
 ```
 
 Como essa lista inclui arquivos externos em seu caminho de pesquisa, ela pode conter milhares de itens. É mais útil examinar um conjunto reduzido de comandos.
 
-Para obter comandos nativos de outros tipos, use o parâmetro **CommandType** do cmdlet **Get-Command**.
+Para obter comandos nativos de outros tipos, use o parâmetro **CommandType** do cmdlet `Get-Command`.
 
 > [!NOTE]
-> O asterisco (\*) é usado para correspondência de curingas nos argumentos de comando do Windows PowerShell. O \* corresponde a “um ou mais caracteres quaisquer”. Você pode digitar **Get-Command a\&#42;** para encontrar todos os comandos que começam com a letra "a". Diferentemente da correspondência de curingas no Cmd.exe, curingas do Windows PowerShell também serão compatíveis com um ponto.
+> O asterisco (\*) é usado para correspondência de curingas nos argumentos de comando do Windows PowerShell. O \* corresponde a “um ou mais caracteres quaisquer”. Você pode digitar `Get-Command a*` para encontrar todos os comandos que começam com a letra "a". Diferentemente da correspondência de curingas no Cmd.exe, curingas do Windows PowerShell também serão compatíveis com um ponto.
 
 Para obter os aliases de comando, que são os apelidos atribuídos a comandos, digite:
 
-```
+```powershell
 Get-Command -CommandType Alias
 ```
 
 Para obter as funções na sessão atual, digite:
 
-```
+```powershell
 Get-Command -CommandType Function
 ```
 
 Para exibir os scripts no caminho de pesquisa do Windows PowerShell, digite:
 
-```
+```powershell
 Get-Command -CommandType Script
 ```

@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Alterando o estado do computador
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: 3d3983c6d9e9b11db62bd71805da51be83331fdb
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251510"
 ---
 # <a name="changing-computer-state"></a>Alterando o estado do computador
 
@@ -49,16 +50,16 @@ Para saber mais e para localizar outros recursos do método Win32Shutdown, confi
 
 Desligar e reiniciar computadores geralmente são os mesmos tipos de tarefa. Ferramentas que desligam um computador geralmente também o reiniciam e vice-versa. Há duas opções simples para reiniciar um computador do Windows PowerShell. Use Tsshutdn.exe ou Shutdown.exe com os argumentos apropriados. Obtenha informações de uso detalhadas em **tsshutdn.exe /?** ou **shutdown.exe /?**.
 
-Você também pode executar as operações de desligamento e reinicialização usando **Win32_OperatingSystem** diretamente do Windows PowerShell.
+Você também pode executar as operações de desligamento e reinicialização diretamente no Windows PowerShell.
 
-Para desligar o computador, use o método Win32Shutdown com o sinalizador **1**.
+Para desligar o computador, use o comando restart-computer
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(1)
+stop-computer
 ```
 
-Para reiniciar sistema operacional, use o método Win32Shutdown com o sinalizador **2**.
+Para reiniciar o sistema operacional, use o comando restart-computer
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
+restart-computer
 ```

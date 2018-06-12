@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Como gravar e executar scripts no ISE do Windows PowerShell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 4b8a9c0c3a710f3b3b9b6077c3c84e174a141db2
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 4d7c5352ef1dac6f63a50433676068f83a920db5
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483110"
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Como gravar e executar scripts no ISE do Windows PowerShell
 
@@ -124,13 +125,13 @@ Pressione **Ctrl+S** ou, na barra de ferramentas, clique no ícone **Salvar** ou
 
 2. Na caixa **Nome do arquivo**, insira um nome para o arquivo.
 
-3. Na caixa **Salvar como tipo**, selecione um tipo de arquivo. Por exemplo, na caixa **Salvar como tipo**, selecione 'œScripts do PowerShell (\* .ps1)'.
+3. Na caixa **Salvar como tipo**, selecione um tipo de arquivo. Por exemplo, na caixa **Salvar como tipo**, selecione "Scripts do œPowerShell (\* .ps1)".
 
 4. Clique em **Salvar**.
 
 ### <a name="to-save-a-script-in-ascii-encoding"></a>Para salvar um script em codificação ASCII
 
-Por padrão, o ISE do Windows PowerShell salva novos arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1) como Unicode (BigEndianUnicode). Para salvar um script em outra codificação, como ASCII (ANSI), use os métodos **Save** ou **SaveAs** no objeto [$psISE.CurrentFile](https://technet.microsoft.com/en-us/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
+Por padrão, o ISE do Windows PowerShell salva novos arquivos de script (.ps1), arquivos de dados de script (.psd1) e arquivos de módulo de script (.psm1) como Unicode (BigEndianUnicode). Para salvar um script em outra codificação, como ASCII (ANSI), use os métodos **Save** ou **SaveAs** no objeto [$psISE.CurrentFile](https://technet.microsoft.com/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
 
 O comando a seguir salva um novo script como MyScript.ps1 com codificação ASCII.
 
