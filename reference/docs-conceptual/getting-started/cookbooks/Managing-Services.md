@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951191"
 ---
 # <a name="managing-services"></a><span data-ttu-id="81cc0-103">Gerenciamento de serviços</span><span class="sxs-lookup"><span data-stu-id="81cc0-103">Managing Services</span></span>
 

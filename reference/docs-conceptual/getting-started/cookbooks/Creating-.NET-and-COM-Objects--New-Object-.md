@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953381"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a><span data-ttu-id="1a1d7-103">Criando objetos .NET e COM (New-Object)</span><span class="sxs-lookup"><span data-stu-id="1a1d7-103">Creating .NET and COM Objects (New-Object)</span></span>
 

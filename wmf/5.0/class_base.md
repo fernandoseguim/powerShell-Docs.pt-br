@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219898"
 ---
 # <a name="declare-base-class"></a><span data-ttu-id="b5d08-102">Declarar a classe base</span><span class="sxs-lookup"><span data-stu-id="b5d08-102">Declare Base Class</span></span>
 <span data-ttu-id="b5d08-103">É possível declarar uma classe do Windows PowerShell como um tipo base para outra classe do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b5d08-103">You can declare a Windows PowerShell class as a base type for another Windows PowerShell class.</span></span>

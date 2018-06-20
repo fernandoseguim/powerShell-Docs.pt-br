@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187486"
 ---
 # <a name="setting-up-a-pull-client-using-configuration-id"></a><span data-ttu-id="949d0-103">Configurando um cliente de pull usando uma ID de configuração</span><span class="sxs-lookup"><span data-stu-id="949d0-103">Setting up a pull client using configuration ID</span></span>
 

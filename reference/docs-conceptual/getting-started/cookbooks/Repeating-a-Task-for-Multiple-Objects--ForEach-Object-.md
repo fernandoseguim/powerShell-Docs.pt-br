@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954272"
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a><span data-ttu-id="7a6fe-103">Repetir uma tarefa para vários objetos (ForEach-Object)</span><span class="sxs-lookup"><span data-stu-id="7a6fe-103">Repeating a Task for Multiple Objects (ForEach-Object)</span></span>
 

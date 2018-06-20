@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221809"
 ---
 # <a name="separation-of-configuration-resource-and-report-repositories"></a><span data-ttu-id="7608c-102">Separação de repositórios de configurações, recursos e relatórios</span><span class="sxs-lookup"><span data-stu-id="7608c-102">Separation of Configuration, Resource and Report Repositories</span></span>
 

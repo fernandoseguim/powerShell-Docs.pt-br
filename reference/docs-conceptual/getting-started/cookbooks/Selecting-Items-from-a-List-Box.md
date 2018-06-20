@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951674"
 ---
 # <a name="selecting-items-from-a-list-box"></a><span data-ttu-id="ba219-103">Selecionando itens de uma caixa de listagem</span><span class="sxs-lookup"><span data-stu-id="ba219-103">Selecting Items from a List Box</span></span>
 

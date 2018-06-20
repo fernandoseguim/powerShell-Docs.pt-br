@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221775"
 ---
 # <a name="dsc-waitforall-resource"></a><span data-ttu-id="fa4eb-103">Recurso de DSC WaitForAll</span><span class="sxs-lookup"><span data-stu-id="fa4eb-103">DSC WaitForAll Resource</span></span>
 

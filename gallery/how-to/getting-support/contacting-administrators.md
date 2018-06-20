@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218885"
 ---
 # <a name="contact-gallery-administrators"></a><span data-ttu-id="216bd-103">Contatar os administradores da galeria</span><span class="sxs-lookup"><span data-stu-id="216bd-103">Contact Gallery administrators</span></span>
 

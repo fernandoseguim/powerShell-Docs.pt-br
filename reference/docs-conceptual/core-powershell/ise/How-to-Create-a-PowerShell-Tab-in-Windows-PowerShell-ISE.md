@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950039"
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a><span data-ttu-id="d77f6-103">Como criar uma guia do PowerShell no ISE do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="d77f6-103">How to Create a PowerShell Tab in Windows PowerShell ISE</span></span>
 
