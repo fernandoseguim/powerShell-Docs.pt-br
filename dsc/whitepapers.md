@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218970"
 ---
 # <a name="whitepapers"></a><span data-ttu-id="0d078-103">Whitepapers</span><span class="sxs-lookup"><span data-stu-id="0d078-103">Whitepapers</span></span>
 

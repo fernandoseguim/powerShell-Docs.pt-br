@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218392"
 ---
 # <a name="require-license-acceptance"></a><span data-ttu-id="2ee41-103">Exigir a aceitação da licença</span><span class="sxs-lookup"><span data-stu-id="2ee41-103">Require license acceptance</span></span>
 

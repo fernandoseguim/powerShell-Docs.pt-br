@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188455"
 ---
 # <a name="dsc-resource-script-debugging"></a><span data-ttu-id="c77c7-102">Depuração de script do recurso DSC</span><span class="sxs-lookup"><span data-stu-id="c77c7-102">DSC Resource Script Debugging</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187469"
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a><span data-ttu-id="8f4be-103">Visão Geral da Configuração de Estado Desejado do Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="8f4be-103">Windows PowerShell Desired State Configuration Overview</span></span>
 

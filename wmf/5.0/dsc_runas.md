@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219208"
 ---
 # <a name="automatic-runas-support-for-dsc-resources"></a><span data-ttu-id="9db70-102">Suporte automático de RunAs para recursos DSC</span><span class="sxs-lookup"><span data-stu-id="9db70-102">Automatic RunAs support for DSC Resources</span></span>
 

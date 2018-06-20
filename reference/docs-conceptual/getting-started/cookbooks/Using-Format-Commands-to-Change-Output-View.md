@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952776"
 ---
 # <a name="using-format-commands-to-change-output-view"></a><span data-ttu-id="b6f19-103">Usando comandos de formatação para alterar a exibição de saída</span><span class="sxs-lookup"><span data-stu-id="b6f19-103">Using Format Commands to Change Output View</span></span>
 

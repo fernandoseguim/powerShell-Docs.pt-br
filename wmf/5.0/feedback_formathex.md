@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218205"
 ---
 # <a name="format-hex"></a><span data-ttu-id="8c6ac-102">Format-Hex</span><span class="sxs-lookup"><span data-stu-id="8c6ac-102">Format-Hex</span></span>
 <span data-ttu-id="8c6ac-103">**O Format-Hex** permite exibir texto ou dados binários em formato hexadecimal. Consulte [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)</span><span class="sxs-lookup"><span data-stu-id="8c6ac-103">**Format-Hex** lets you view text or binary data in hexadecimal format; see [Format-Hex](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/format-hex)</span></span>

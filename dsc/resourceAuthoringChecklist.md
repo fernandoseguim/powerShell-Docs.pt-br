@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189951"
 ---
 # <a name="resource-authoring-checklist"></a><span data-ttu-id="e0e86-103">Lista de verificação da criação de recursos</span><span class="sxs-lookup"><span data-stu-id="e0e86-103">Resource authoring checklist</span></span>
 <span data-ttu-id="e0e86-104">Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso de DSC.</span><span class="sxs-lookup"><span data-stu-id="e0e86-104">This checklist is a list of best practices when authoring a new DSC Resource.</span></span>

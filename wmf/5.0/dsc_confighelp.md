@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34186969"
 ---
 # <a name="help-support-for-dsc-configurations"></a><span data-ttu-id="87448-102">Ajuda e suporte para configurações DSC</span><span class="sxs-lookup"><span data-stu-id="87448-102">Help support for DSC configurations</span></span>
 

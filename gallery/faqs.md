@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34190427"
 ---
 # <a name="frequently-asked-questions"></a><span data-ttu-id="44007-103">perguntas frequentes</span><span class="sxs-lookup"><span data-stu-id="44007-103">Frequently Asked Questions</span></span>
 

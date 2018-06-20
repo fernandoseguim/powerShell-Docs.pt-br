@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34187503"
 ---
 # <a name="wmf-51-operating-system-compatibility"></a><span data-ttu-id="8d6dc-103">Compatibilidade de sistema de operacional do WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="8d6dc-103">WMF 5.1 Operating System Compatibility</span></span> #
 

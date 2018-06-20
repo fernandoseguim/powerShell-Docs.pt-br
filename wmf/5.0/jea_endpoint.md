@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188421"
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a><span data-ttu-id="566c1-102">Criando e conectando-se a um ponto de extremidade JEA</span><span class="sxs-lookup"><span data-stu-id="566c1-102">Creating and Connecting to a JEA Endpoint</span></span>
 <span data-ttu-id="566c1-103">Para criar um ponto de extremidade JEA, é necessário criar e registrar um arquivo de Configuração de Sessão do PowerShell especialmente configurado, que possa ser gerado com o cmdlet **New-PSSessionConfigurationFile**.</span><span class="sxs-lookup"><span data-stu-id="566c1-103">To create a JEA endpoint, you need to create and register a specially-configured PowerShell Session Configuration file, which can be generated with the **New-PSSessionConfigurationFile** cmdlet.</span></span>

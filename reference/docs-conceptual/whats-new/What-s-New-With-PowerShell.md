@@ -7,6 +7,7 @@ ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33677239"
 ---
 # <a name="whats-new-with-powershell-50"></a><span data-ttu-id="edd02-103">Novidades no PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="edd02-103">What's New With PowerShell 5.0</span></span>
 <span data-ttu-id="edd02-104">O Windows PowerShell® 5.0 inclui recursos novos e importantes que estendem e melhoram seu uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.</span><span class="sxs-lookup"><span data-stu-id="edd02-104">Windows PowerShell® 5.0 includes significant new features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively.</span></span>  <span data-ttu-id="edd02-105">Os principais aprimoramentos são nas áreas de Configuração de Estado Desejado, segurança, desempenho, comunicação remota e aprimoramentos de linguagem.</span><span class="sxs-lookup"><span data-stu-id="edd02-105">The major improvements are in the areas of Desired State Configuration, security, performance, remoting, and language enhancements.</span></span>

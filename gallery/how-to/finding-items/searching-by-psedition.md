@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189492"
 ---
 # <a name="items-with-compatible-powershell-editions"></a><span data-ttu-id="a104a-103">Itens com edições compatíveis do PowerShell</span><span class="sxs-lookup"><span data-stu-id="a104a-103">Items with compatible PowerShell Editions</span></span>
 
