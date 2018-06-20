@@ -2,17 +2,17 @@
 
 ## <a name="msi"></a>MSI
 
-Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][] do GitHub.
+Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][] no GitHub.
 
-O arquivo MSI tem esta aparência – `PowerShell-6.0.0.<buildversion>.<os-arch>.msi`
+O arquivo MSI tem esta aparência – `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 Após o download, clique duas vezes no instalador e siga os prompts.
 
 Há um atalho colocado no Menu Iniciar após a instalação.
 
-- Por padrão, o pacote é instalado em `$env:ProgramFiles\PowerShell\`
-- Você pode iniciar o PowerShell por meio do Menu Iniciar ou `$env:ProgramFiles\PowerShell\pwsh.exe`
+- Por padrão, o pacote é instalado em `$env:ProgramFiles\PowerShell\<version>`
+- Você pode iniciar o PowerShell por meio do Menu Iniciar ou `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -78,8 +78,8 @@ O Windows IoT já é fornecido com o Windows PowerShell, o qual usaremos para im
 Estas instruções pressupõem que uma versão do PowerShell já está em execução na imagem do Nano Server e que ela foi gerada pelo [Nano Server Image Builder](/windows-server/get-started/deploy-nano-server).
 Nano Server é um sistema operacional "sem periféricos". Os principais binários podem ser implantados usando dois métodos diferentes.
 
-1. Offline – monte o VHD do Nano Server e descompacte o conteúdo do arquivo zip para a localização escolhida na imagem montada.
-2. Online – transfira o arquivo zip em uma sessão do PowerShell e descompacte-o em sua localização escolhida.
+1. Offline – monte o VHD do Nano Server e descompacte o conteúdo do arquivo zip para o local escolhido na imagem montada.
+2. Online – transfira o arquivo zip em uma sessão do PowerShell e descompacte-o em seu local escolhido.
 
 Em ambos os casos, você precisa do pacote da versão ZIP do Windows 10 x64 e precisa executar os comandos em uma instância "Administrador" do PowerShell.
 
@@ -126,8 +126,8 @@ As etapas a seguir servem de orientação para a implantação do PowerShell Cor
 O PowerShell Core dá suporte ao protocolo PSRP (comunicação remota do PowerShell) por WSMan e SSH.
 Para obter mais informações, consulte:
 
-- [Comunicação remota do SSH no PowerShell Core][ssh-remoting]
-- [Comunicação remota do WSMan no PowerShell Core][wsman-remoting]
+- [Comunicação remota do SSH no PowerShell Core] [comunicação remota ssh]
+- [Comunicação remota do WSMan no PowerShell Core][comunicação remota do wsman]
 
 ## <a name="artifact-installation-instructions"></a>Instruções de instalação do artefato
 
@@ -140,8 +140,4 @@ Para instalar o PowerShell Core do artefato CoreCLR:
 3. Extraia o arquivo zip para o diretório `bin`
 4. `./bin/pwsh.exe`
 
-<!-- [download-center]: TODO -->
-[versões]: https://github.com/PowerShell/PowerShell/releases
-[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
-[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+<!-- [download-center]: TODO --> [versões]: https://github.com/PowerShell/PowerShell/releases [comunicação remota ssh]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [comunicação remota wsman]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell

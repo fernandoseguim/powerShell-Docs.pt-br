@@ -7,7 +7,7 @@ No entanto, o PowerShell Core é aceito pelos tradicionais contratos de suporte 
 Você também pode pagar por [suporte assistido][] do PowerShell Core preenchendo uma solicitação de suporte para o seu problema.
 
 Oferecemos também [suporte da comunidade][] no GitHub, no qual você pode registrar um problema, um bug ou uma solicitação de recurso.
-Como alternativa, você pode encontrar ajuda de outros membros da comunidade na [Microsoft Community][] geral ou na Microsoft [PowerShell Tech Community][].
+Como alternativa, você pode encontrar ajuda de outros membros da comunidade na [Microsoft Community][] geral ou na Microsoft [Comunidade tecnológica do PowerShell][].
 Não oferecemos nenhuma garantia de que o problema será resolvido ou resolvido de maneira oportuna.
 Se você tiver um problema que requer atenção imediata, use as opções tradicionais de suporte pago.
 
@@ -41,7 +41,7 @@ O PowerShell Core é oficialmente compatível com as seguintes plataformas:
 * CentOS 7
 * Red Hat Enterprise Linux 7
 * OpenSUSE 42.2
-* Fedora 25, 26
+* Fedora 27, 28
 * macOS 10.12+
 
 Nossa comunidade também contribuiu com pacotes para as seguintes plataformas, mas eles não têm suporte oficialmente:
@@ -83,7 +83,7 @@ Add-WindowsPSModulePath
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
 [suporte da comunidade]: https://github.com/powershell/powershell/issues
 [Microsoft Community]: https://answers.microsoft.com/
-[PowerShell Tech Community]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+[Comunidade tecnológica do PowerShell]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
 [suporte assistido]: https://support.microsoft.com/assistedsupportproducts
 [modern]: https://support.microsoft.com/help/30881/modern-lifecycle-policy
 [lifecycle-chart]: ./images/modern-lifecycle.png
