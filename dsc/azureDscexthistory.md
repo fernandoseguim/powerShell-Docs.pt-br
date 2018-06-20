@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189934"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versão da extensão de Desired State Configuration do Azure
 

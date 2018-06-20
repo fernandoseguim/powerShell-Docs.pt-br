@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953575"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell.

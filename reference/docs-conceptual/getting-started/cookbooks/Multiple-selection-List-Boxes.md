@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954884"
 ---
 # <a name="multiple-selection-list-boxes"></a>Caixas de listagem de seleção múltipla
 

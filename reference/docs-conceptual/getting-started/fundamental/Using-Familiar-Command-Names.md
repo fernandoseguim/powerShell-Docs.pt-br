@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952674"
 ---
 # <a name="using-familiar-command-names"></a>Usando nomes familiares de comando
 Usando um mecanismo chamado *aliasing*, o Windows PowerShell permite que os usuários consultem comandos por nomes alternativos. Usar alias permite que usuários com experiência em outros shells reutilizem nomes de comando comuns que já conhecem para executar operações semelhantes no Windows PowerShell. Embora não abordemos aliases do Windows PowerShell em detalhes, você ainda pode usá-los ao começar a usar o Windows PowerShell.

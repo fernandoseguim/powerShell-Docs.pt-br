@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951062"
 ---
 # <a name="understanding-the-windows-powershell-pipeline"></a>Compreendendo o Pipeline do Windows PowerShell
 O redirecionamento funciona praticamente em qualquer lugar no Windows PowerShell. Embora você veja o texto na tela, o Windows PowerShell não redireciona o texto entre comandos. Em vez disso, ele redireciona os objetos.

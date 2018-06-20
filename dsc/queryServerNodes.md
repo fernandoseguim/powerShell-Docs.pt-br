@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225616"
 ---
 # <a name="dsc-function-to-query-node-information-from-pull-server"></a>Função de DSC para consultar informações do nó do servidor de pull.
 

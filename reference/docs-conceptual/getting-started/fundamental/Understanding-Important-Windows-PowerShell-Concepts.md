@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951079"
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Compreendendo conceitos importantes do Windows PowerShell
 O design do Windows PowerShell integra conceitos de muitos ambientes diferentes. Vários deles são familiares para aqueles com experiência em shells ou ambientes de programação específicos, mas poucos conhecerão todos. Examinar alguns desses conceitos fornece uma visão geral útil do shell.

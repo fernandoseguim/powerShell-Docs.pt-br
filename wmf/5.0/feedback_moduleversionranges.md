@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225684"
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Suporte aos módulos para declaração dos intervalos de versão (1.*, etc.)
 Combinado com **-MinimumVersion**, **-MaximumVersion** agora permite que o usuário obtenha/importe o módulo dentro de um intervalo específico. O parâmetro também oferece suporte para **.**\*. O seguinte exemplo mostra como isso funciona:

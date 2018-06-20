@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219898"
 ---
 # <a name="declare-base-class"></a>Declarar a classe base
 É possível declarar uma classe do Windows PowerShell como um tipo base para outra classe do Windows PowerShell.
