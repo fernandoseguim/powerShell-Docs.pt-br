@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189951"
 ---
 # <a name="resource-authoring-checklist"></a>Lista de verificação da criação de recursos
 Esta lista de verificação é uma lista de melhores práticas ao criar um novo Recurso de DSC.

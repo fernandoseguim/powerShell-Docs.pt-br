@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951844"
 ---
 # <a name="using-static-classes-and-methods"></a>Usando classes e métodos estáticos
 Nem todas as classes do .NET Framework podem ser criadas usando **New-Object**. Por exemplo, se você tentar criar um objeto **System.Environment** ou **System.Math** com **New-Object**, as mensagens de erro a seguir poderão ser exibidas:
