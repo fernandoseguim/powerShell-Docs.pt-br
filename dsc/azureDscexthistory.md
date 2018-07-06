@@ -1,14 +1,14 @@
 ---
 description: Saiba mais sobre o histórico de versão para a extensão de DSC (Desired State Configuration) no Azure.
-ms.date: 05/09/2018
+ms.date: 06/21/2018
 keywords: dsc, powershell, azure, extensão
 title: Histórico de Versão de Extensão de DSC do Azure
-ms.openlocfilehash: 81dfcf81bd8f8685a0c8c81cd07bc5447e1abf94
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 25248288291b9bf8efe6ce1eef203a552cd17736
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189934"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940320"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Histórico de versão da extensão de Desired State Configuration do Azure
 
@@ -16,12 +16,12 @@ A Extensão de VM de DSC (Desired State Configuration) do Azure é atualizada co
 
 Este artigo fornecerá informações sobre cada versão da extensão DSC da VM do Azure, os ambientes compatíveis, além de comentários e observações sobre novos recursos ou alterações.
 
-## <a name="latest-versions"></a>Versões Mais Recentes
+## <a name="latest-version"></a>Última versão
 
 ### <a name="version-276"></a>Versão 2.76
 
 - **Data de lançamento:**
-  - 9 de maio de 2018
+  - 9 de maio de 2018 (Azure) | 21 de junho de 2018 (Azure China, Azure Governamental)
 - **Suporte a SO:**
   - Windows Server 2016
   - Windows Server 2012 R2
@@ -36,30 +36,11 @@ Este artigo fornecerá informações sobre cada versão da extensão DSC da VM d
   - WMF 4.0
 - **Ambiente:**
   - Azure
+  - Azure China
+  - Azure Governamental
 - **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016; para outros sistemas operacionais Windows, ela instala o [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (a instalação do WMF requer uma reinicialização). Para o Nano Server, a função de DSC é instalada na VM.
 - **Novos recursos:**
   - Melhoria nos metadados de extensão de substatus e outras correções de bugs secundárias.
-
-### <a name="version-219"></a>Versão 2.19
-
-- **Data de lançamento:**
-  - 3 de junho de 2016
-- **Suporte a SO:**
-  - Windows Server 2016 Technical Preview
-  - Windows Server 2012 R2
-  - Windows Server 2012
-  - Windows Server 2008 R2 SP1
-- **Suporte a WMF:**
-  - WMF 5.0 RTM
-  - Atualização do WMF 4.0
-  - WMF 4.0
-- **Ambiente:**
-  - Azure
-  - Azure China
-  - Azure Governamental
-- **Comentários:** essa versão usa o DSC como incluído no Windows Server 2016 Technical Preview; para outros sistemas operacionais, ela instala o [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (a instalação do WMF requer uma reinicialização).
-- **Novos recursos:**
-  - A extensão de DSC agora está integrada ao Azure China. Esta versão contém principalmente correções para executar a Extensão no Azure China.
 
 ## <a name="supported-versions"></a>Versões com suporte do
 
