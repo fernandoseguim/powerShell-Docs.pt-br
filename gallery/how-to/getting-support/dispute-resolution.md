@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Solução de controvérsias
-ms.openlocfilehash: 2a291773ae9391e417e14c4ec0b75379e0bf4640
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a3a3b160366dc17f2fe0d1721d275387700e71e4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221811"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892332"
 ---
 # <a name="dispute-resolution"></a>Solução de controvérsias
 
@@ -17,11 +17,11 @@ Este documento é um processo de solução de controvérsias recomendado para me
 ## <a name="process"></a>Processo
 
 1. Entre em contato com os proprietários do item ao qual se refere a controvérsia usando o link **Entrar em contato com os proprietários** na página de detalhes do item.
-Explique o problema de forma cordial e direta.
+   Explique o problema de forma cordial e direta.
 2. Envie uma cópia da mensagem para [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com) para que os Administradores da Galeria do PowerShell fiquem cientes da controvérsia.
 3. Aguarde, no máximo, 30 dias e, caso não obtenha a solução, notifique [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com) novamente.
-A equipe de suporte do PowerShellGallery.com se mobilizará e tentará resolver o problema.
 
+A equipe de suporte do PowerShellGallery.com se mobilizará e tentará resolver o problema.
 
 ## <a name="prohibited-use"></a>Uso proibido
 
@@ -32,9 +32,8 @@ Os procedimentos a seguir não são permitidos na Galeria pública do PowerShell
 - Violação de direitos autorais ou violação de licença;
 - Conteúdo ilegal;
 - “Apropriação indevida” de nomes de item que você pretende usar, mas que não está realmente usando. Isso também inclui a publicação de itens que não têm nenhum conteúdo produtivo.
-Publique o código e comece a usá-lo ou conceda o nome para alguém que realmente tem um produto para fornecer; e
+  Publique o código e comece a usá-lo ou conceda o nome para alguém que realmente tem um produto para fornecer; e
 - Tentativa de fazer com que a galeria execute alguma ação que ela não foi explicitamente projetada para fazer.
-
 
 Se você encontrar um item que esteja violando qualquer um desses itens, clique no link “Relatar abuso” na página de detalhes do item e envie um relatório.
 
