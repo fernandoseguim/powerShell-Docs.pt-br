@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: ryanpu
 title: Aprimoramentos no recurso JEA (Administração Suficiente)
-ms.openlocfilehash: 47a58a6fae9f3a41ec527ec1f77ac1c196336669
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 79271e77a539764e7a18842efd919413cdc8ab9f
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222410"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892711"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
 
@@ -18,7 +18,7 @@ ms.locfileid: "34222410"
 Agora, você pode remotamente copiar arquivos de/para um ponto de extremidade JEA ficar tranquilo que o usuário conectado não poderá copiar *nenhum* arquivo em seu sistema.
 Isso é possível ao configurar seu arquivo PSSC para montar uma unidade de usuário para conectar usuários.
 A unidade de usuário é um novo PSDrive exclusivo para cada usuário conectado e persiste nas sessões.
-Quando Copy-Item é usado para copiar arquivos de ou para uma sessão JEA, ele é restrito para permitir apenas acesso à unidade do usuário.
+Quando `Copy-Item` é usado para copiar arquivos de ou para uma sessão JEA, ele é restrito para permitir apenas acesso à unidade do usuário.
 As tentativas de copiar arquivos para qualquer outro PSDrive falharão.
 
 Para configurar a unidade de usuário no arquivo de configuração de sessão JEA, use os novos campos a seguir:
@@ -30,7 +30,7 @@ UserDriveMaximumSize = 10485760    # 10 MB
 
 A pasta que dá suporte à unidade do usuário será criada em `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
 
-Para utilizar a unidade de usuário e copiar arquivos de/para um ponto de extremidade JEA configurado para expor a unidade do usuário, use os parâmetros `-ToSession` e `-FromSession` em Copy-Item.
+Para utilizar a unidade de usuário e copiar arquivos de/para um ponto de extremidade JEA configurado para expor a unidade do usuário, use os parâmetros `-ToSession` e `-FromSession` em `Copy-Item`.
 
 ```powershell
 # Connect to the JEA endpoint
@@ -64,7 +64,8 @@ GroupManagedServiceAccount = 'myGMSAforJEA'
 RunAsVirtualAccount = $false
 ```
 
-> **Observação:** Contas de Serviço Gerenciado de Grupo não arcam com o isolamento ou o escopo limitado de contas virtuais.
+> [!NOTE]
+> Contas de Serviço Gerenciado de Grupo não arcam com o isolamento ou o escopo limitado de contas virtuais.
 > Cada usuário conectado compartilha a mesma identidade de gMSA, que pode ter permissões em toda a empresa.
 > Tenha muito cuidado ao optar por usar uma gMSA, e sempre prefira contas virtuais que são limitadas no computador local, quando possível.
 
@@ -91,5 +92,6 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 ```
 
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Corrigido: contas virtuais agora têm suporte no Windows Server 2008 R2
+
 No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de recursos entre o Windows Server 2008 R2 - 2016.
 Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.

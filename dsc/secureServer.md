@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: 1efc016df6882fa962f59dfd3e53eaa6d6b0c121
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 04ad6940f443bc23d5e2347952b2d173aceac408
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190291"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893443"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
->Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
+Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
@@ -27,27 +27,32 @@ Publicado | Abril de 2015
 ## <a name="abstract"></a>Resumo
 
 Este documento foi criado para fornecer diretrizes oficiais para qualquer pessoa que esteja planejando uma implementação de um servidor de pull de Configuração de Estado Desejado do Windows PowerShell. Um servidor de pull é um serviço simples que deve levar apenas alguns minutos para implantar. Embora ofereça diretrizes técnicas passo a passo que podem ser usadas em uma implantação, o valor desse documento está em servir como uma referência para as práticas recomendadas e no que se deve refletir antes da implantação.
-Os leitores devem ter uma familiaridade básica com o DSC e com os termos usados para descrever os componentes que estão incluídos em uma implantação de DSC. Para obter mais informações, consulte o tópico [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/dn249912.aspx).
+Os leitores devem ter uma familiaridade básica com o DSC e com os termos usados para descrever os componentes que estão incluídos em uma implantação de DSC. Para obter mais informações, consulte o tópico [Visão Geral da Configuração de Estado Desejado do Windows PowerShell](/powershell/dsc/overview).
 Como é esperado que o DSC evolua em uma cadência de nuvem, espera-se também que a tecnologia subjacente, incluindo o servidor de pull, evolua e introduza novos recursos. Este documento inclui uma tabela de versão no apêndice que fornece referências a versões anteriores e referências a soluções futuras para incentivar designs inovadores.
 
 As duas seções principais deste documento:
 
- - Planejamento de Configuração
- - Guia de instalação
+- Planejamento de Configuração
+- Guia de instalação
 
 ### <a name="versions-of-the-windows-management-framework"></a>Versões do Windows Management Framework
+
 As informações neste documento destinam-se ao Windows Management Framework 5.0. Embora o WMF 5.0 não seja necessário para a implantação e operação de um servidor de pull, o foco deste documento é a versão 5.0.
 
 ### <a name="windows-powershell-desired-state-configuration"></a>Configuração do Estado Desejado do Windows PowerShell
-A DSC (Configuração do Estado Desejado) é uma plataforma de gerenciamento que habilita a implantação e gerenciamento de dados de configuração, usando uma sintaxe do setor chamada de MOF (Managed Object Format) para descrever o CIM (modelo CIM). Existe um projeto de software livre, o OMI (Open Management Infrastructure), para promover o desenvolvimento desses padrões entre plataformas, incluindo Linux e sistemas operacionais de hardware de rede. Para obter mais informações, consulte a [página DMTF com vínculo para as especificações de MOF](http://dmtf.org/standards/cim) e [Documentos e Fonte do OMI](https://collaboration.opengroup.org/omi/documents.php).
+
+A DSC (Configuração do Estado Desejado) é uma plataforma de gerenciamento que habilita a implantação e gerenciamento de dados de configuração, usando uma sintaxe do setor chamada de MOF (Managed Object Format) para descrever o CIM (modelo CIM). Existe um projeto de software livre, o OMI (Open Management Infrastructure), para promover o desenvolvimento desses padrões entre plataformas, incluindo Linux e sistemas operacionais de hardware de rede. Para obter mais informações, consulte a [página DMTF com vínculo para as especificações de MOF](https://www.dmtf.org/standards/cim) e [Documentos e Fonte do OMI](https://collaboration.opengroup.org/omi/documents.php).
 
 O Windows PowerShell fornece um conjunto de extensões de linguagem para a Configuração de Estado Desejado que podem ser usadas para criar e gerenciar configurações declarativas.
 
 ### <a name="pull-server-role"></a>Função de servidor de pull
+
 Um servidor de pull oferece um serviço centralizado para armazenar configurações que estarão acessíveis aos nós de destino.
 
 A função de servidor de pull pode ser implantada como uma instância de servidor Web ou um compartilhamento de arquivos SMB. A capacidade de servidor Web inclui uma interface de OData e, opcionalmente, pode incluir recursos para que os nós de destino reportem a confirmação de êxito ou de falha conforme as configurações são aplicadas. Essa funcionalidade é útil em ambientes em que há um grande número de nós de destino.
-Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para obter mais informações, consulte [Servidores de Pull de Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/dn249913.aspx) e [Modos de Configuração de Push e Pull](https://technet.microsoft.com/library/dn249913.aspx).
+Depois de configurar um nó de destino (também conhecido como um cliente) para apontar para o servidor de pull, os dados de configuração mais recentes e os scripts necessários são baixados e aplicados. Isso pode ser feito como uma implantação única ou como um trabalho recorrente, o que também torna o servidor de pull um ativo importante para o gerenciamento de alteração em grande escala. Para saber mais, confira [Servidores de Pull da Configuração de Estado Desejado do Windows PowerShell](/powershell/dsc/pullServer) e
+
+[Configuração de modos Push e Pull](/powershell/dsc/pullServer).
 
 ## <a name="configuration-planning"></a>Planejamento de configuração
 
@@ -64,20 +69,20 @@ Além de instalar o conteúdo mais recente do Windows Update, há dois downloads
 ### <a name="wmf"></a>WINDOWS MANAGEMENT FRAMEWORK
 
 O Windows Server 2012 R2 inclui um recurso chamado de serviço DSC. O recurso de serviço DSC fornece a funcionalidade do servidor de pull, incluindo os binários que oferecem suporte ao ponto de extremidade OData.
-O WMF está incluído no Windows Server e é atualizado em uma cadência ágil entre as versões do Windows Server. [Novas versões do WMF 5.0](http://aka.ms/wmf5latest) podem incluir atualizações do recurso de Serviço DSC. Por esse motivo, é uma prática recomendada baixar a versão mais recente do WMF e examinar as notas de versão para determinar se a versão inclui uma atualização do recurso de serviço DSC. Também é necessário examinar a seção das notas de versão que indica se o status de design para uma atualização ou cenário está listado como estável ou experimental.
+O WMF está incluído no Windows Server e é atualizado em uma cadência ágil entre as versões do Windows Server. [Novas versões do WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=54616) podem incluir atualizações do recurso de Serviço DSC. Por esse motivo, é uma prática recomendada baixar a versão mais recente do WMF e examinar as notas de versão para determinar se a versão inclui uma atualização do recurso de serviço DSC. Também é necessário examinar a seção das notas de versão que indica se o status de design para uma atualização ou cenário está listado como estável ou experimental.
 Para permitir um ciclo de lançamento ágil, recursos individuais podem ser declarados estáveis, o que indica que o recurso está pronto para ser usado em um ambiente de produção ainda que o WMF esteja lançado como visualização.
 Outros recursos que têm sido historicamente atualizados por versões do WMF (consulte as Notas de Versão do WMF para obter mais detalhes):
 
- - Windows PowerShell, ISE (Ambiente de Script Integrado) do Windows PowerShell
- - Serviços Web do Windows PowerShell (Extensão do IIS do Management OData)
- - DSC (Configuração de Estado Desejado) do Windows PowerShell
- - WinRM (Gerenciamento Remoto do Windows) WMI (Instrumentação de Gerenciamento do Windows)
+- Windows PowerShell, ISE (Ambiente de Script Integrado) do Windows PowerShell
+- Serviços Web do Windows PowerShell (Extensão do IIS do Management OData)
+- DSC (Configuração de Estado Desejado) do Windows PowerShell
+- WinRM (Gerenciamento Remoto do Windows) WMI (Instrumentação de Gerenciamento do Windows)
 
 ### <a name="dsc-resource"></a>Recurso DSC
 
 Uma implantação de servidor de pull pode ser simplificada através do provisionamento do serviço com o uso de um script de configuração DSC. Este documento inclui scripts de configuração que podem ser usados para implantar um nó de servidor pronto para produção. Para usar os scripts de configuração, é necessário um módulo de DSC que não está incluído no Windows Server. O nome do módulo necessário é **xPSDesiredStateConfiguration**, que inclui o recurso de DSC **xDscWebService**. O módulo xPSDesiredStateConfiguration pode ser baixado [aqui](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d).
 
-Use o cmdlet **Install-Module** do módulo **PowerShellGet**.
+Use o cmdlet `Install-Module` do módulo **PowerShellGet**.
 
 ```powershell
 Install-Module xPSDesiredStateConfiguration
@@ -132,7 +137,7 @@ Cenário |Prática recomendada
 Ambiente de Teste |Reproduzir o ambiente de produção planejado, se possível. Um nome do host do servidor é adequado para configurações simples. Se o DNS não estiver disponível, um endereço IP poderá ser usado no lugar do nome do host.|
 Implantação de Nó único |Criar um registro DNS CNAME que aponta para o nome do host do servidor.|
 
-Para obter mais informações, consulte [Configuração de Round Robin de DNS no Windows Server](https://technet.microsoft.com/en-us/library/cc787484(v=ws.10).aspx).
+Para obter mais informações, consulte [Configuração de Round Robin de DNS no Windows Server](/previous-versions/windows/it-pro/windows-server-2003/cc787484(v=ws.10)).
 
 Tarefa de planejamento|
 ---|
@@ -165,6 +170,7 @@ O SMB fornece uma opção para ambientes em que a política determina que um ser
 Em ambos os casos, lembre-se de avaliar os requisitos para assinatura e criptografia de tráfego. O HTTPS, a assinatura SMB e as políticas IPSEC são opções que vale a pena considerar.
 
 #### <a name="load-balancing"></a>Balanceamento de carga
+
 Os clientes interagindo com o serviço Web fazem uma solicitação de informações que é retornada em uma única resposta. Não são necessárias solicitações sequenciais, portanto, não é necessário que a plataforma de balanceamento de carga garanta que as sessões sejam mantidas em um único servidor em qualquer ponto no tempo.
 
 Tarefa de planejamento|
@@ -184,6 +190,7 @@ Como parte do planejamento da configuração, será necessário pensar sobre qua
 No futuro, esta seção será expandida e incluída em um Guia de Operações para Servidor de Pull da DSC.  O guia discutirá o processo diário do gerenciamento de módulos e das configurações ao longo do tempo, com automação.
 
 #### <a name="dsc-modules"></a>Módulos de DSC
+
 Os clientes que solicitam uma configuração precisarão dos módulos necessários de DSC. Automatizar a distribuição por demanda dos módulos de DSC para clientes é uma funcionalidade do servidor de pull. Se estiver implantando um servidor de pull pela primeira vez, talvez como um laboratório ou prova de conceito, você provavelmente vai depender de módulos de DSC que estão disponíveis em repositórios públicos, como a Galeria do PowerShell ou os repositórios PowerShell.org do GitHub para módulos de DSC.
 
 É importante lembrar que mesmo para as fontes confiáveis online como a Galeria do PowerShell, qualquer módulo que é baixado de um repositório público deve ser revisado por alguém com experiência com PowerShell e conhecimento sobre o ambiente em que os módulos serão usados antes de serem usados em produção. Durante a conclusão dessa tarefa é um bom momento para verificar se há qualquer conteúdo adicional no módulo que pode ser removido, como documentação e scripts de exemplo. Isso reduz a largura de banda da rede por cliente em sua primeira solicitação, quando os módulos serão baixados do servidor para o cliente através da rede.
@@ -191,7 +198,7 @@ Os clientes que solicitam uma configuração precisarão dos módulos necessári
 Cada módulo deve ser empacotado em um formato específico, um arquivo ZIP denominado ModuleName_Version.zip que contém o conteúdo do módulo. Depois que o arquivo for copiado para o servidor, um arquivo de soma de verificação deve ser criado. Quando os clientes se conectam ao servidor, a soma de verificação é usada para verificar se o conteúdo do módulo de DSC não foi alterado desde que foi publicado.
 
 ```powershell
-New-DscCheckSum -ConfigurationPath .\ -OutPath .\
+New-DscChecksum -ConfigurationPath .\ -OutPath .\
 ```
 
 Tarefa de planejamento|
@@ -214,10 +221,10 @@ Cada documento será nomeado com um GUID exclusivo. Quando os clientes são conf
 
 O planejamento de GUIDs de configuração merece atenção adicional quando se pensa em uma implantação de servidor de pull. Não há nenhum requisito específico para manipular GUIDs e é provável que o processo seja exclusivo para cada ambiente. O processo pode variar de simples a complexo: um arquivo CSV armazenado centralmente, uma tabela SQL simples, um CMDB ou uma solução complexa que exige integração com outra solução de ferramenta ou de software. Há duas abordagens gerais:
 
- - **Atribuição de GUIDs por servidor** — Fornece uma medida de garantia de que todas as configurações de servidor sejam controladas individualmente. Isso fornece um nível de precisão em relação às atualizações e pode funcionar bem em ambientes com poucos servidores.
- - **Atribuição de GUIDs por função de servidor** — Todos os servidores que executam a mesma função, como servidores Web, usam o mesmo GUID para fazer referência aos dados de configuração necessários.  Lembre-se de que se vários servidores compartilham o mesmo GUID, todos eles serão atualizados simultaneamente quando as configurações forem alteradas.
+- **Atribuição de GUIDs por servidor** — Fornece uma medida de garantia de que todas as configurações de servidor sejam controladas individualmente. Isso fornece um nível de precisão em relação às atualizações e pode funcionar bem em ambientes com poucos servidores.
+- **Atribuição de GUIDs por função de servidor** — Todos os servidores que executam a mesma função, como servidores Web, usam o mesmo GUID para fazer referência aos dados de configuração necessários.  Lembre-se de que se vários servidores compartilham o mesmo GUID, todos eles serão atualizados simultaneamente quando as configurações forem alteradas.
 
-O GUID é algo que deve ser considerado como dado confidencial, porque ele pode ser aproveitado por alguém mal-intencionado para obter informações sobre como os servidores estão implantados e configurados no seu ambiente. Para obter mais informações, consulte [Alocar GUIDs com segurança no Modo Pull da Configuração de Estado Desejado do PowerShell](http://blogs.msdn.com/b/powershell/archive/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode.aspx).
+  O GUID é algo que deve ser considerado como dado confidencial, porque ele pode ser aproveitado por alguém mal-intencionado para obter informações sobre como os servidores estão implantados e configurados no seu ambiente. Para obter mais informações, consulte [Alocar GUIDs com segurança no Modo Pull da Configuração de Estado Desejado do PowerShell](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/).
 
 Tarefa de planejamento|
 ---|
@@ -243,7 +250,6 @@ $PSVersionTable.PSVersion
 Se possível, atualize para a versão mais recente do Windows Management Framework.
 Em seguida, baixe o módulo `xPsDesiredStateConfiguration` usando o comando a seguir.
 
-
 ```powershell
 Install-Module xPSDesiredStateConfiguration
 ```
@@ -251,14 +257,13 @@ Install-Module xPSDesiredStateConfiguration
 O comando solicitará sua aprovação antes de baixar o módulo.
 
 ### <a name="installation-and-configuration-scripts"></a>Scripts de instalação e configuração
--
 
 O melhor método para implantar um servidor de pull de DSC é usar um script de configuração DSC. Este documento apresentará scripts que incluem as configurações básicas que configurariam apenas o serviço Web da DSC e as configurações avançadas, que configurariam um Windows Server de ponta a ponta, incluindo o serviço Web da DSC.
 
 Observação: atualmente o módulo `xPSDesiredStateConfiguation` da DSC exige que o servidor seja de localidade EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configuração básica para Windows Server 2012
--------------------------------------------
+
 ```powershell
 # This is a very basic Configuration to deploy a pull server instance in a lab environment on Windows Server 2012.
 
@@ -355,6 +360,7 @@ Configuration PullServer {
             ValueData = 1
             ValueType = 'Dword'
         }
+
         Registry TLS1_2ServerDisabledByDefault
         {
             Ensure = 'Present'
@@ -363,6 +369,7 @@ Configuration PullServer {
             ValueData = 0
             ValueType = 'Dword'
         }
+
         Registry TLS1_2ClientEnabled
         {
             Ensure = 'Present'
@@ -371,6 +378,7 @@ Configuration PullServer {
             ValueData = 1
             ValueType = 'Dword'
         }
+
         Registry TLS1_2ClientDisabledByDefault
         {
             Ensure = 'Present'
@@ -379,6 +387,7 @@ Configuration PullServer {
             ValueData = 0
             ValueType = 'Dword'
         }
+
         Registry SSL2ServerDisabled
         {
             Ensure = 'Present'
@@ -449,6 +458,7 @@ Configuration PullServer {
         }
     }
 }
+
 $configData = @{
     AllNodes = @(
         @{
@@ -467,6 +477,7 @@ $configData = @{
             }
         )
     }
+
 PullServer -ConfigurationData $configData -OutputPath 'C:\PullServerConfig\'
 Set-DscLocalConfigurationManager -ComputerName localhost -Path 'C:\PullServerConfig\'
 Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
@@ -474,16 +485,18 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 # .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share'
 ```
 
-
 ### <a name="verify-pull-server-functionality"></a>Verificar a funcionalidade do servidor de pull
 
 ```powershell
 # This function is meant to simplify a check against a DSC pull server. If you do not use the default service URL, you will need to adjust accordingly.
 function Verify-DSCPullServer ($fqdn) {
-    ([xml](invoke-webrequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
+    ([xml](Invoke-WebRequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
 }
-Verify-DSCPullServer 'INSERT SERVER FQDN'
 
+Verify-DSCPullServer 'INSERT SERVER FQDN'
+```
+
+```output
 Expected Result:
 Action
 Module
@@ -511,28 +524,28 @@ Configuration PullClient {
                     DownloadManagerCustomData = @{ServerUrl = "http://"+$Server+":8080/PSDSCPullServer.svc"; AllowUnsecureConnection = $true}
                 }
 }
+
 PullClient -ID 'INSERTGUID' -Server 'INSERTSERVER' -Output 'C:\DSCConfig\'
 Set-DscLocalConfigurationManager -ComputerName 'Localhost' -Path 'C:\DSCConfig\' -Verbose
 ```
-
 
 ## <a name="additional-references-snippets-and-examples"></a>Exemplos, trechos de código e referências adicionais
 
 Este exemplo mostra como iniciar manualmente uma conexão de cliente (requer WMF5) para teste.
 
 ```powershell
-Update-DSCConfiguration –Wait -Verbose
+Update-DscConfiguration –Wait -Verbose
 ```
 
 O cmdlet [Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) é usado para adicionar um tipo de registro CNAME em uma zona DNS.
 
-A função do PowerShell para [Criar uma soma de verificação e publicar o MOF da DSC em um servidor de pull de SMB](http://bit.ly/1E46BhI) gera automaticamente a soma de verificação necessária e, em seguida, copia a configuração do MOF e os arquivos de soma de verificação para o servidor de pull de SMB.
+A função do PowerShell para [Criar uma soma de verificação e publicar o MOF da DSC em um servidor de pull de SMB](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-Function-to-3bc4b7f0) gera automaticamente a soma de verificação necessária e, em seguida, copia a configuração do MOF e os arquivos de soma de verificação para o servidor de pull de SMB.
 
 ## <a name="appendix---understanding-odata-service-data-file-types"></a>Apêndice – Noções básicas sobre tipos de arquivo de dados do serviço ODATA
 
 Um arquivo de dados é armazenado para criar informações durante a implantação de um servidor de pull que inclui o serviço Web OData. O tipo de arquivo depende do sistema operacional, conforme descrito abaixo.
 
- - **Windows Server 2012** O tipo de arquivo será sempre .mdb
- - **Windows Server 2012 R2** O tipo de arquivo padrão será .edb, a menos que um .mdb seja especificado na configuração
+- **Windows Server 2012** O tipo de arquivo será sempre .mdb
+- **Windows Server 2012 R2** O tipo de arquivo padrão será .edb, a menos que um .mdb seja especificado na configuração
 
 No [Script de exemplo avançado](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) para a instalação de um Servidor de Pull, você também encontrará um exemplo de como controlar automaticamente as configurações do arquivo web.config para evitar qualquer possibilidade de erro causado pelo tipo de arquivo.

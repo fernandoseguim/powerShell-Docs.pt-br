@@ -22,19 +22,19 @@ Para cargas de trabalho tradicionais do Windows PowerShell, veja [instalação d
 
 - **macOS**: siga as instruções de instalação na página [Execução do código VS no macOS](https://code.visualstudio.com/docs/setup/mac)
 
-> [!IMPORTANT]
-> No macOS, você deve instalar o OpenSSL para que a extensão do PowerShell funcione corretamente.
-> A maneira mais fácil de fazer isso é instalar o [Homebrew](http://brew.sh/) e, em seguida, executar `brew install openssl`.
-> O VS Code agora pode carregar a extensão do PowerShell com êxito.
+  > [!IMPORTANT]
+  > No macOS, você deve instalar o OpenSSL para que a extensão do PowerShell funcione corretamente.
+  > A maneira mais fácil de fazer isso é instalar o [Homebrew](http://brew.sh/) e, em seguida, executar `brew install openssl`.
+  > O VS Code agora pode carregar a extensão do PowerShell com êxito.
 
 - **Windows**: siga as instruções de instalação na página [Execução do código VS no Windows](https://code.visualstudio.com/docs/setup/windows)
 
 ### <a name="2-installing-powershell-extension"></a>2. Instalação da extensão do PowerShell
 
 - Inicie o aplicativo Visual Studio Code pelo:
-    - **Windows**: digitando `code` na sua sessão do PowerShell
-    - **Linux**: digitando `code` em seu terminal
-    - **macOS**: digitando `code` em seu terminal
+  - **Windows**: digitando `code` na sua sessão do PowerShell
+  - **Linux**: digitando `code` em seu terminal
+  - **macOS**: digitando `code` em seu terminal
 
 - Inicie **Abertura rápida** pressionando **Ctrl+P** (**Cmd+P** no Mac).
 - Na Abertura rápida, digite `ext install powershell` e clique em **Enter**.
@@ -58,10 +58,10 @@ Para sair do Visual Studio Code, **Arquivo -> Sair**.
 Se quiser usar uma instalação específica do PowerShell com o Visual Studio Code, precisará adicionar uma nova variável ao arquivo de configurações do usuário.
 
 1. Clique em **Arquivo -> Preferências -> Configurações**
-1. Dois painéis de editor serão exibidos.
+2. Dois painéis de editor serão exibidos.
    No painel mais à direita (`settings.json`), insira a configuração abaixo apropriada para seu sistema operacional entre as duas chaves (`{` e `}`) e substitua *<version>* pela versão do PowerShell instalada:
 
-  ```json
+   ```json
     // On Windows:
     "powershell.powerShellExePath": "c:/Program Files/PowerShell/<version>/pwsh.exe"
 
@@ -70,9 +70,10 @@ Se quiser usar uma instalação específica do PowerShell com o Visual Studio Co
 
     // On macOS:
     "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
-  ```
-1. Substitua a configuração pelo caminho para o executável desejado do PowerShell
-1. Salve o arquivo de configurações e reinicie o Visual Studio Code
+   ```
+
+3. Substitua a configuração pelo caminho para o executável desejado do PowerShell
+4. Salve o arquivo de configurações e reinicie o Visual Studio Code
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Definições de configuração para o Visual Studio Code
 
@@ -112,19 +113,19 @@ Por exemplo, você pode adicionar configurações para:
 - Inicie uma sessão interativa no depurador
 - Anexar o depurador a um processo de host do PowerShell
 
-Siga estas etapas para criar o arquivo de configuração de depuração:
+  Siga estas etapas para criar o arquivo de configuração de depuração:
 
-1. Abra a exibição **Depurar** pressionando **Ctrl+Shift+D** (**Cmd+Shift+D** no Mac).
-1. Pressione o ícone de engrenagem **Configurar** na barra de ferramentas.
-1. O Visual Studio Code solicitará que você **Selecione o Ambiente**.
-   Escolha **PowerShell**.
+  1. Abra a exibição **Depurar** pressionando **Ctrl+Shift+D** (**Cmd+Shift+D** no Mac).
+  2. Pressione o ícone de engrenagem **Configurar** na barra de ferramentas.
+  3. O Visual Studio Code solicitará que você **Selecione o Ambiente**.
+  Escolha **PowerShell**.
 
-   Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de espaço de trabalho.
-   A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json.
-   O conteúdo do arquivo launch.json é:
+  Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de espaço de trabalho.
+  A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json.
+  O conteúdo do arquivo launch.json é:
 
-```json
-{
+  ```json
+  {
     "version": "0.2.0",
     "configurations": [
         {
@@ -149,19 +150,21 @@ Siga estas etapas para criar o arquivo de configuração de depuração:
             "cwd": "${workspaceRoot}"
         }
     ]
-}
-```
+  }
+  ```
 
-Isso representa os cenários comuns de depuração.
-No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...**.
-Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a ser adicionada é **PowerShell: Iniciar o Script**.
-Com essa configuração, você pode especificar um arquivo específico com argumentos opcionais que devem ser iniciado sempre que você pressionar F5, não importa qual arquivo está ativo no momento no editor.
+  Isso representa os cenários comuns de depuração.
+  No entanto, ao abrir este arquivo no editor, você vê um botão **Adicionar Configuração...**.
+  Você pode pressionar esse botão para adicionar mais configurações de depuração do PowerShell. Uma configuração útil a ser adicionada é **PowerShell: Iniciar o Script**.
+  Com essa configuração, você pode especificar um arquivo específico com argumentos opcionais que devem ser iniciado sempre que você pressionar F5, não importa qual arquivo está ativo no momento no editor.
 
-Quando a configuração de depuração é estabelecida, selecione qual configuração você deseja usar durante uma sessão de depuração, selecionando uma no menu suspenso de configuração de depuração na barra de ferramentas da exibição **Depurar**.
+  Quando a configuração de depuração é estabelecida, selecione qual configuração você deseja usar durante uma sessão de depuração, selecionando uma no menu suspenso de configuração de depuração na barra de ferramentas da exibição **Depurar**.
 
-Há alguns blogs que podem ser úteis para você começar a usar a extensão do PowerShell para o Visual Studio Code
+  Há alguns blogs que podem ser úteis para você começar a usar a extensão do PowerShell para o Visual Studio Code
 
-- Visual Studio Code: [extensão do PowerShell][ps-extension]
+Visual Studio Code:
+
+- [Extensão do PowerShell][ps-extension]
 - [Gravar e depurar scripts do PowerShell no Visual Studio Code][debug]
 - [Orientação sobre depuração no Visual Studio Code][vscode-guide]
 - [Depuração do PowerShell no Visual Studio Code][ps-vscode]
@@ -176,15 +179,15 @@ Há alguns blogs que podem ser úteis para você começar a usar a extensão do 
 [install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
-[ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
-[debug]:https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
-[vscode-guide]:https://johnpapa.net/debugging-with-visual-studio-code/
-[ps-vscode]:https://github.com/PowerShell/vscode-powershell/tree/master/examples
-[getting-started]:https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
-[editing-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
-[editing-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
-[debugging-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
-[debugging-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
+[ps-extension]: https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
+[debug]: https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
+[vscode-guide]: https://johnpapa.net/debugging-with-visual-studio-code/
+[ps-vscode]: https://github.com/PowerShell/vscode-powershell/tree/master/examples
+[getting-started]: https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
+[editing-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
+[editing-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
+[debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
+[debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
 ## <a name="powershell-extension-for-visual-studio-code"></a>Extensão do PowerShell para Visual Studio Code
 

@@ -3,12 +3,12 @@ ms.date: 03/27/2018
 contributor: JKeithB
 keywords: galeria,powershell,psgallery,GDPR
 title: Conformidade da Galeria do PowerShell com o GDPR
-ms.openlocfilehash: dca1a82952c284980a84caafa13b2807e47e25a0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 14b82fa07df52f02f0d7577cb0eef70faa4285a2
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189747"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893239"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Conformidade da Galeria do PowerShell com o GDPR
 
@@ -25,9 +25,9 @@ O GDPR aplica-se independentemente de onde você esteja localizado.
 
 A Galeria do PowerShell armazena as seguintes informações que podem ser fornecidas pelos usuários podendo conter informações pessoais:
 
-* Conta da Galeria do PowerShell
-* Itens publicados na Galeria do PowerShell
-* Correspondência de email com a equipe da Galeria do PowerShell
+- Conta da Galeria do PowerShell
+- Itens publicados na Galeria do PowerShell
+- Correspondência de email com a equipe da Galeria do PowerShell
 
 A maioria dos usuários não cria uma conta da Galeria do PowerShell.
 Não é necessário ter uma conta, a menos que você pretenda publicar um item ou usar o recurso "Contatar Proprietário" na Galeria do PowerShell.
@@ -45,15 +45,15 @@ As seções a seguir descrevem como a Galeria do PowerShell permite DSR (solicit
 
 A correspondência de email a seguir pode incluir:
 
-* Email enviado aos proprietários de itens da Galeria do PowerShell se as verificações de análise de código tiverem detectado algum problema em um item publicado por eles na Galeria do PowerShell
-* Email enviado por qualquer pessoa para a equipe da Galeria do PowerShell usando o endereço de email na página "Fale Conosco" (cgadmin@microsoft.com)
-* Usuários registrados que usam o recurso "Contatar Proprietário" na Galeria do PowerShell para enviar email ao proprietário de um item da Galeria do PowerShell
+- Email enviado aos proprietários de itens da Galeria do PowerShell se as verificações de análise de código tiverem detectado algum problema em um item publicado por eles na Galeria do PowerShell
+- Email enviado por qualquer pessoa para a equipe da Galeria do PowerShell usando o endereço de email na página "Fale Conosco" [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com)
+- Usuários registrados que usam o recurso "Contatar Proprietário" na Galeria do PowerShell para enviar email ao proprietário de um item da Galeria do PowerShell
 
 Os emails enviados pela Galeria do PowerShell ou para ela têm uma política de retenção de 90 dias para embasar possíveis investigações de segurança caso seja descoberto algum código mal-intencionado na Galeria do PowerShell.
 Os emails são excluídos pela política após 90 dias.
 
 Você pode solicitar cópias de todos os emails enviados e recebidos entre o seu endereço de email e a Galeria do PowerShell nos últimos 90 dias.
-Para solicitar essa correspondência, envie um email para cgadmin@microsoft.com, com o título: "Solicitação de DSR de emails relacionados a essa conta".
+Para solicitar essa correspondência, envie um email para [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com), com o título: "Solicitação de DSR de emails relacionados a essa conta".
 No corpo da mensagem, indique quais informações você está solicitando (por exemplo: Envie-me os emails enviados deste endereço de email ou recebidos por ele.) Todos os emails que envolverem o seu endereço de email nos 90 dias anteriores à solicitação serão enviados em até sete dias úteis.
 
 ### <a name="powershell-gallery-account-information"></a>Informações de conta da Galeria do PowerShell
@@ -78,13 +78,13 @@ Esse script exporta uma cópia de cada versão de cada item inserido na Galeria 
 Você pode baixar o script usando o seguinte comando do PowerShell:
 
 ```powershell
-Save-Script GetPSGalleryItemsForAuthor -path <local folder location> -repository psgallery
+Save-Script Get-repository psgallery
 ```
 
 Em seguida, você pode executar o script diretamente, executando os seguintes comandos do PowerShell:
 
 ```powershell
-cd <local folder location >
+# cd <local folder location>
 .\GetPSGalleryItemsForAuthor.ps1
 ```
 
@@ -95,9 +95,9 @@ Será solicitado que você forneça o autor e uma pasta no sistema na qual desej
 Para excluir sua conta da Galeria do PowerShell ou qualquer item que você tenha na Galeria do PowerShell, envie um email para cgadmin@microsoft.com com o título: "Solicitação do GDPR para itens relacionados a essa conta".
 No corpo da mensagem indique quais informações você deseja excluir. Por exemplo:
 
-* Exclua a versão x.y.z do meu item "nome do item"
-* Exclua todas as versões do meu item "nome do item"
-* Exclua a minha conta da Galeria do PowerShell
+- Exclua a versão x.y.z do meu item "nome do item"
+- Exclua todas as versões do meu item "nome do item"
+- Exclua a minha conta da Galeria do PowerShell
 
 Os administradores da Galeria do PowerShell responderão em até sete dias úteis.
 Os itens especificados serão excluídos em até 30 dias após o envio da solicitação.

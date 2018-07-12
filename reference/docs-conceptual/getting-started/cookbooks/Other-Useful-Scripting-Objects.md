@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Outros objetos de script úteis
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
-ms.openlocfilehash: 0e87e9919199e011ab5abec5b07dccc8494ad64a
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 2ae9bc1864daedbcb0070c5f3862a6c98f8db2d4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30949818"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893273"
 ---
 # <a name="other-useful-scripting-objects"></a>Outros objetos de script úteis
 
@@ -33,14 +33,14 @@ $psUnsupportedConsoleApplications
 
 ### <a name="pslocalhelp"></a>$psLocalHelp
 
-Esse é um objeto de dicionário que mantém um mapeamento contextual entre os tópicos da Ajuda e seus links associados no arquivo de ajuda local HTML compilado. Ele é usado para localizar a Ajuda local para determinado tópico. Você pode adicionar ou excluir tópicos desta lista. O exemplo de código a seguir mostra alguns exemplos de pares de chave-valor contidos em **$psLocalHelp**.
+Esse é um objeto de dicionário que mantém um mapeamento contextual entre os tópicos da Ajuda e seus links associados no arquivo de ajuda local HTML compilado. Ele é usado para localizar a Ajuda local para determinado tópico. Você pode adicionar ou excluir tópicos desta lista. O exemplo de código a seguir mostra alguns exemplos de pares de chave-valor contidos em `$psLocalHelp`.
 
 ```powershell
 # See the local help map
 $psLocalHelp | Format-List
 ```
 
-### <a name="sample-output"></a>Saída de exemplo
+### <a name="pslocalhelp-sample-output"></a>Amostra de saída $psLocalHelp
 
 |||
 |-|-|
@@ -61,14 +61,14 @@ Este é um objeto de dicionário que mantém um mapeamento contextual entre tít
 $psOnlineHelp | Format-List
 ```
 
-### <a name="sample-output"></a>Saída de exemplo
+## <a name="psonilnehelp-sample-output"></a>Amostra de saída $psOnilneHelp
 
 |||
 |-|-|
 |Chave: Add-Computer|Valor: http://go.microsoft.com/fwlink/p/?LinkID=135194|
 |Chave: Add-Content|Valor: http://go.microsoft.com/fwlink/p/?LinkID=113278|
 
- O script a seguir adiciona uma entrada à lista.
+O script a seguir adiciona uma entrada à lista.
 
 ```powershell
 $psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
@@ -76,4 +76,4 @@ $psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Objetivo do modelo de objeto de script do ISE do Windows PowerShell](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+[Objetivo do modelo de objeto de script do ISE do Windows PowerShell](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

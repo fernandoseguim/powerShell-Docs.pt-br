@@ -1,14 +1,14 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell, cmdlet
+keywords: PowerShell, cmdlet
 title: Instalar o SDK do Windows PowerShell
 ms.assetid: c3636b45-61aa-4720-85f0-58312c4fc8f9
-ms.openlocfilehash: 830b054c2cf2b49d935d3d96b79effa7131f6db2
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: fa876bac0c1afac24f93d11dd2e7ecfb1165cf5f
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953558"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893531"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Instalar o SDK do Windows PowerShell
 
@@ -19,16 +19,16 @@ O tópico a seguir descreve como instalar o SDK do PowerShell em diferentes vers
 O Windows PowerShell 3.0 é instalado automaticamente com o Windows 8 e Windows Server 2012.
 Além disso, você pode baixar e instalar os assemblies de referência para o Windows PowerShell 3.0 como parte do SDK do Windows 8.
 Esses assemblies permitem que você grave cmdlets, provedores e programas de host no Windows PowerShell 3.0.
-Quando você instala o SDK do Windows para o Windows 8, os assemblies do Windows PowerShell são instalados automaticamente na pasta do assembly de referência, em \Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0.
-Para obter mais informações, visite o [site de download do SDK do Windows 8](http://msdn.microsoft.com/windows/hardware/hh852363.aspx).
+Quando você instala o SDK do Windows para o Windows 8, os assemblies do Windows PowerShell são instalados automaticamente na pasta do assembly de referência, em `\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`.
+Para obter mais informações, visite o [site de download do SDK do Windows 8](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
 Exemplos de código do Windows PowerShell também estão disponíveis no Centro de Desenvolvimento.
-Para obter mais informações, confira a página de exemplo de código de Área de Trabalho no [site do Centro de desenvolvimento](http://code.msdn.microsoft.com/windowsdesktop/).
+Para obter mais informações, confira a página de exemplo de código de Área de Trabalho no [site do Centro de desenvolvimento](https://code.msdn.microsoft.com:443/windowsdesktop/).
 
 Além disso, o Windows PowerShell 3.0 é compatível com versões anteriores com o SDK do Windows PowerShell 2.0, que inclui diversos exemplos de código.
 Para obter mais informações sobre como baixar o SDK do Windows PowerShell 2.0, consulte abaixo.
 (Observe que, enquanto os exemplos de 2.0 código são compatíveis com o Windows 8 e Windows PowerShell 3.0, você não pode instalar o Windows PowerShell 2.0 em uma plataforma Windows 8).
 
-##<a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Instalando o SDK do Windows PowerShell 3.0 no Windows 7 e Windows Server 2008 R2
+## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Instalando o SDK do Windows PowerShell 3.0 no Windows 7 e Windows Server 2008 R2
 
 O Windows 7 e o Windows Server 2008 R2 têm o PowerShell 2.0 instalado automaticamente.
 Além disso, você pode instalar o PowerShell 3.0 nesses sistemas.
@@ -39,14 +39,15 @@ Conforme descrito acima, você também pode instalar o SDK do Windows 8 no Windo
 
 O SDK do Windows PowerShell 2.0 fornece os assemblies de referência necessários para gravar cmdlets, provedores e aplicativos de hospedagem, além de fornecer o código de exemplo em C# que poderá ser usado como ponto de partida quando você começar a gravar código.
 
-Para instalar esse SDK, veja [Windows PowerShell 2.0 SDK](http://go.microsoft.com/fwlink/?LinkId=184611) (SDK do Windows PowerShell 2.0).
+Para instalar esse SDK, veja [Windows PowerShell 2.0 SDK](http://www.microsoft.com/en-us/download/details.aspx?id=2560) (SDK do Windows PowerShell 2.0).
 
 ## <a name="reference-assemblies"></a>Assemblies de referência
 
 Assemblies de referência são instalados, por padrão, no seguinte local: `c:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\V1.0`.
 
-> **Observação**: o código que é compilado nos assemblies do Windows PowerShell 2.0 não pode ser carregado em instalações do Windows PowerShell 1.0.
->No entanto, o código que é compilado em relação aos assemblies do Windows PowerShell 1.0 pode ser carregado em instalações do Windows PowerShell 2.0.
+> [!NOTE] 
+> O código que é compilado nos assemblies do Windows PowerShell 2.0 não pode ser carregado em instalações do Windows PowerShell 1.0.
+> No entanto, o código que é compilado em relação aos assemblies do Windows PowerShell 1.0 pode ser carregado em instalações do Windows PowerShell 2.0.
 
 ## <a name="samples"></a>Amostras
 
@@ -55,215 +56,216 @@ Exemplos de código são instalados, por padrão, no seguinte local: `C:\Program
 As seções a seguir fornecem uma breve descrição da ação de cada amostra.
 
 ## <a name="cmdlet-samples"></a>Amostras de cmdlet
-**GetProcessSample01**
+
+### <a name="getprocesssample01"></a>GetProcessSample01
 
 Mostra como gravar um cmdlet simples que coloca todos os processos no computador local.
 
-**GetProcessSample02**
+### <a name="getprocesssample02"></a>GetProcessSample02
 
 Mostra como adicionar parâmetros ao cmdlet.
 O cmdlet usa um ou mais nomes de processo e retorna os processos correspondentes.
 
-**GetProcessSample03**
+### <a name="getprocesssample03"></a>GetProcessSample03
 
 Mostra como adicionar parâmetros que aceitam a entrada do pipeline.
 
-**GetProcessSample04**
+### <a name="getprocesssample04"></a>GetProcessSample04
 
 Mostra como tratar erros de não encerramento.
 
-**GetProcessSample05**
+### <a name="getprocesssample05"></a>GetProcessSample05
 
 Mostra como exibir uma lista de processos especificados.
 
-**SelectObject**
+### <a name="selectobject"></a>SelectObject
 
 Mostra como gravar um filtro para selecionar apenas determinados objetos.
 
-**SelectString**
+### <a name="selectstring"></a>SelectString
 
 Mostra como pesquisar padrões especificados em arquivos.
 
-**StopProcessSample01**
+### <a name="stopprocesssample01"></a>StopProcessSample01
 
-Mostra como implementar um parâmetro *PassThru* e como solicitar comentários do usuário por chamadas para os métodos [ShouldProcess](https://technet.microsoft.com/library/system.management.automation.cmdlet.shouldprocess.aspx) e [ShouldContinue](https://technet.microsoft.com/library/system.management.automation.cmdlet.shouldcontinue.aspx).
+Mostra como implementar um parâmetro *PassThru* e como solicitar comentários do usuário por chamadas para os métodos [ShouldProcess](/dotnet/api/system.management.automation.cmdlet.shouldprocess) e [ShouldContinue](/dotnet/api/system.management.automation.cmdlet.shouldcontinue).
 Os usuários especificam o parâmetro *PassThru* quando querem forçar o cmdlet a retornar um objeto de parâmetro.
 
-**StopProcessSample02**
+### <a name="stopprocesssample02"></a>StopProcessSample02
 
 Mostra como interromper um processo específico.
 
-**StopProcessSample03**
+### <a name="stopprocesssample03"></a>StopProcessSample03
 
 Mostra como declarar aliases para parâmetros e como dar suporte a curingas.
 
-**StopProcessSample04**
+### <a name="stopprocesssample04"></a>StopProcessSample04
 
 Mostra como declarar conjuntos de parâmetros, o objeto que o cmdlet usa como entrada, e como especificar o parâmetro padrão definido a ser usado.
 
 ## <a name="remoting-samples"></a>Amostras de comunicação remota
 
-**RemoteRunspace01**
+### <a name="remoterunspace01"></a>RemoteRunspace01
 
 Mostra como criar um runspace remoto que é usado para estabelecer uma conexão remota.
 
-**RemoteRunspacePool01**
+### <a name="remoterunspacepool01"></a>RemoteRunspacePool01
 
 Mostra como construir um pool de runspaces remotos e como executar vários comandos simultaneamente usando esse pool.
 
-**Serialization01**
+### <a name="serialization01"></a>Serialization01
 
 Mostra como examinar uma classe existente do .NET e garantir que as informações das propriedades públicas selecionadas dessa classe são preservadas na serialização/desserialização.
 
-**Serialization02**
+### <a name="serialization02"></a>Serialization02
 
 Mostra como examinar uma classe existente do .NET e garantir que as informações da instância dessa classe são preservadas na serialização/desserialização quando as informações não estão disponíveis nas propriedades públicas da classe.
 
-**Serialization03**
+### <a name="serialization03"></a>Serialization03
 
 Mostra como examinar uma classe existente do .NET e garantir que as instâncias dessa classe e de classes derivadas são desserializadas (reidratadas) em objetos dinâmicos do .NET.
 
 ## <a name="event-samples"></a>Amostras de eventos
 
-**Event01**
+### <a name="event01"></a>Event01
 
 Mostra como criar um cmdlet de registro de eventos, fazendo a derivação de ObjectEventRegistrationBase.
 
-**Event02**
+### <a name="event02"></a>Event02
 
 Mostra como receber notificações de eventos do Windows PowerShell gerados em computadores remotos.
-Usa o evento PSEventReceived exposto por meio da classe [Runspace](https://technet.microsoft.com/library/system.management.automation.runspaces.runspace.aspx).
+Usa o evento PSEventReceived exposto por meio da classe [Runspace](/dotnet/api/system.management.automation.runspaces.runspace).
 
 ## <a name="hosting-application-samples"></a>Amostras de aplicativos de hospedagem
 
-**Runspace01**
+### <a name="runspace01"></a>Runspace01
 
-Mostra como usar a classe [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) para executar o cmdlet [Get-Process](http://go.microsoft.com/fwlink/?LinkId=113324) de forma síncrona.
-O cmdlet [Get-Process](http://go.microsoft.com/fwlink/?LinkId=113324) retorna os objetos [Process](https://technet.microsoft.com/library/system.diagnostics.process.aspx) de cada processo em execução no computador local.
+Mostra como usar a classe [PowerShell](/dotnet/api/system.management.automation.powershell) para executar o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) de forma síncrona.
+O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna os objetos [Process](https://technet.microsoft.com/library/system.diagnostics.process.aspx) de cada processo em execução no computador local.
 
-**Runspace02**
+### <a name="runspace02"></a>Runspace02
 
-Mostra como usar a classe [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) para executar os cmdlets [Get-Process](http://go.microsoft.com/fwlink/?LinkId=113324) e [Sort-Object](http://go.microsoft.com/fwlink/?LinkID=113403) de forma síncrona.
-O cmdlet [Get-Process](http://go.microsoft.com/fwlink/?LinkId=113324) retorna os objetos [Process](https://technet.microsoft.com/library/system.diagnostics.process.aspx) de cada processo em execução no computador local e Sort-Object classifica os objetos com base em sua propriedade [Id](https://technet.microsoft.com/library/system.diagnostics.process.id.aspx).
+Mostra como usar a classe [PowerShell](/dotnet/api/system.management.automation.powershell) para executar os cmdlets [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) de forma síncrona.
+O cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) retorna os objetos [Process](https://technet.microsoft.com/library/system.diagnostics.process.aspx) de cada processo em execução no computador local e `Sort-Object` classifica os objetos com base em sua propriedade [Id](https://technet.microsoft.com/library/system.diagnostics.process.id.aspx).
 Os resultados desses comandos são exibidos com o uso de um controle [DataGridView](https://technet.microsoft.com/library/system.windows.forms.datagridview.aspx).
 
-**Runspace03**
+### <a name="runspace03"></a>Runspace03
 
-Mostra como usar a classe [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) para executar um script de forma síncrona e como tratar erros de não encerramento.
+Mostra como usar a classe [PowerShell](/dotnet/api/system.management.automation.powershell) para executar um script de forma síncrona e como tratar erros de não encerramento.
 O script recebe uma lista de nomes de processo e, em seguida, recupera tais processos.
 Os resultados do script, incluindo quaisquer erros de não encerramento gerados durante a execução do script, são exibidos em uma janela do console.
 
-**Runspace04**
+### <a name="runspace04"></a>Runspace04
 
-Mostra como usar a classe [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) para executar comandos e como capturar erros de encerramento gerados durante a execução de comandos.
+Mostra como usar a classe [PowerShell](/dotnet/api/system.management.automation.powershell) para executar comandos e como capturar erros de encerramento gerados durante a execução de comandos.
 Dois comandos são executados e o último comando é passado um argumento de parâmetro que não é válido.
 Como resultado, nenhum objeto é retornado e um erro de encerramento é gerado.
 
-**Runspace05**
+### <a name="runspace05"></a>Runspace05
 
-Mostra como adicionar um snap-in a um objeto [InitialSessionState](https://technet.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.aspx) para que o cmdlet do snap-in esteja disponível quando o runspace for aberto.
-O snap-in fornece um cmdlet Get-Proc (definido pela [Amostra GetProcessSample01](https://technet.microsoft.com/library/ff602028.aspx)) que é executado de forma síncrona usando um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx).
+Mostra como adicionar um snap-in a um objeto [InitialSessionState](/dotnet/api/system.management.automation.runspaces.initialsessionstate) para que o cmdlet do snap-in esteja disponível quando o runspace for aberto.
+O snap-in fornece um cmdlet Get-Proc (definido pela [Amostra GetProcessSample01](https://technet.microsoft.com/library/ff602028.aspx)) que é executado de forma síncrona usando um objeto [PowerShell](/dotnet/api/system.management.automation.powershell).
 
-**Runspace06**
+### <a name="runspace06"></a>Runspace06
 
-Mostra como adicionar um módulo a um objeto [InitialSessionState](https://technet.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.aspx) para que o módulo seja carregado quando o runspace for aberto.
-O módulo fornece um cmdlet Get-Proc (definido pelo [GetProcessSample02 exemplo](https://technet.microsoft.com/library/ff602027.aspx)) executado de forma síncrona com o uso de um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx).
+Mostra como adicionar um módulo a um objeto [InitialSessionState](/dotnet/api/system.management.automation.runspaces.initialsessionstate) para que o módulo seja carregado quando o runspace for aberto.
+O módulo fornece um cmdlet Get-Proc (definido pelo [GetProcessSample02 exemplo](https://technet.microsoft.com/library/ff602027.aspx)) executado de forma síncrona com o uso de um objeto [PowerShell](/dotnet/api/system.management.automation.powershell).
 
-**Runspace07**
+### <a name="runspace07"></a>Runspace07
 
-Mostra como criar um runspace e usá-lo para executar dois cmdlets de forma síncrona usando um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx).
+Mostra como criar um runspace e usá-lo para executar dois cmdlets de forma síncrona usando um objeto [PowerShell](/dotnet/api/system.management.automation.powershell).
 
-**Runspace08**
+### <a name="runspace08"></a>Runspace08
 
-Mostra como adicionar comandos e argumentos ao pipeline de um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) e como executar os comandos de forma síncrona.
+Mostra como adicionar comandos e argumentos ao pipeline de um objeto [PowerShell](/dotnet/api/system.management.automation.powershell) e como executar os comandos de forma síncrona.
 
-**Runspace09**
+### <a name="runspace09"></a>Runspace09
 
-Mostra como adicionar um script ao pipeline de um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) e como executar o script de forma assíncrona.
+Mostra como adicionar um script ao pipeline de um objeto [PowerShell](/dotnet/api/system.management.automation.powershell) e como executar o script de forma assíncrona.
 Eventos são usados para tratar a saída do script.
 
-**Runspace10**
+### <a name="runspace10"></a>Runspace10
 
-Mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [InitialSessionState](https://technet.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.aspx), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx).
+Mostra como criar um estado de sessão inicial padrão, como adicionar um cmdlet ao [InitialSessionState](/dotnet/api/system.management.automation.runspaces.initialsessionstate), como criar um runspace que usa o estado de sessão inicial e como executar o comando usando um objeto [PowerShell](/dotnet/api/system.management.automation.powershell).
 
-**Runspace11**
+### <a name="runspace11"></a>Runspace11
 
-Mostra como usar a classe [ProxyCommand](https://technet.microsoft.com/library/system.management.automation.proxycommand.aspx) para criar um comando proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros disponíveis.
+Mostra como usar a classe [ProxyCommand](/dotnet/api/system.management.automation.proxycommand) para criar um comando proxy que chama um cmdlet existente, mas restringe o conjunto de parâmetros disponíveis.
 O comando de proxy é adicionado a um estado de sessão inicial que é usado para criar um espaço de execução restrito.
 Isso significa que o usuário pode acessar a funcionalidade do cmdlet apenas por meio do comando proxy.
 
-**PowerShell01**
+### <a name="powershell01"></a>PowerShell01
 
-Mostra como criar um runspace restrito usando um objeto [InitialSessionState](https://technet.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.aspx).
+Mostra como criar um runspace restrito usando um objeto [InitialSessionState](/dotnet/api/system.management.automation.runspaces.initialsessionstate).
 
-**PowerShell02**
+### <a name="powershell02"></a>PowerShell02
 
 Mostra como usar um pool de runspaces para executar vários comandos simultaneamente.
 
 ## <a name="host-samples"></a>Amostras de host
 
-**Host01**
+### <a name="host01"></a>Host01
 
 Mostra como implementar um aplicativo host que usa um host personalizado.
-Nesta amostra, é criado um runspace que usa o host personalizado e, em seguida, a API [PowerShell](https://technet.microsoft.com/library/system.management.automation.powershell.aspx) é usada para executar um script que chama a “saída”.
+Nesta amostra, é criado um runspace que usa o host personalizado e, em seguida, a API [PowerShell](/dotnet/api/system.management.automation.powershell) é usada para executar um script que chama a “saída”.
 O aplicativo host analisa a saída do script e imprime os resultados.
 
-**Host02**
+### <a name="host02"></a>Host02
 
 Mostra como gravar um aplicativo host que usa o tempo de execução do Windows PowerShell, juntamente com uma implementação de host personalizado.
-O aplicativo host define a cultura do host para alemão, executa o cmdlet [Get-Process](http://go.microsoft.com/fwlink/?LinkId=113324), exibe os resultados como seriam vistos com pwrsh.exe e imprime a data e hora atuais em alemão.
+O aplicativo host define a cultura do host para alemão, executa o cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process), exibe os resultados como seriam vistos com pwrsh.exe e imprime a data e hora atuais em alemão.
 
-**Host03**
+### <a name="host03"></a>Host03
 
 Mostra como criar um aplicativo host baseado em console interativo que lê os comandos da linha de comando, executa os comandos e exibe os resultados para o console.
 
-**Host04**
+### <a name="host04"></a>Host04
 
 Mostra como criar um aplicativo host baseado em console interativo que lê os comandos da linha de comando, executa os comandos e exibe os resultados para o console.
 Esse aplicativo host também dá suporte a exibições de avisos que permitem ao usuário especificar várias opções.
 
-**Host05**
+### <a name="host05"></a>Host05
 
 Mostra como criar um aplicativo host baseado em console interativo que lê os comandos da linha de comando, executa os comandos e exibe os resultados para o console.
-Este aplicativo host também dá suporte a chamadas para computadores remotos com os cmdlets [Enter-PsSession](http://go.microsoft.com/fwlink/?LinkId=135210) e [Exit-PsSession](http://go.microsoft.com/fwlink/?LinkId=135212).
+Este aplicativo host também dá suporte a chamadas para computadores remotos com os cmdlets [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession).
 
-**Host06**
+### <a name="host06"></a>Host06
 
 Mostra como criar um aplicativo host baseado em console interativo que lê os comandos da linha de comando, executa os comandos e exibe os resultados para o console.
 Além disso, este exemplo usa as APIs do Criador de Token para especificar a cor do texto inserido pelo usuário.
 
 ## <a name="provider-samples"></a>Amostras de provedor
 
-**AccessDBProviderSample01**
+### <a name="accessdbprovidersample01"></a>AccessDBProviderSample01
 
-Mostra como declarar uma classe de provedor que deriva diretamente da classe [CmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.cmdletprovider.aspx).
+Mostra como declarar uma classe de provedor que deriva diretamente da classe [CmdletProvider](/dotnet/api/system.management.automation.provider.cmdletprovider).
 Ele é incluído aqui apenas para fins de integridade.
 
-**AccessDBProviderSample02**
+### <a name="accessdbprovidersample02"></a>AccessDBProviderSample02
 
-Mostra como substituir os métodos [NewDrive](https://technet.microsoft.com/library/system.management.automation.provider.drivecmdletprovider.newdrive.aspx) e [RemoveDrive](https://technet.microsoft.com/library/system.management.automation.provider.drivecmdletprovider.removedrive.aspx) para dar suporte a chamadas para os cmdlets New-PSDrive e Remove-PSDrive.
-A classe de provedor nessa amostra deriva da classe [DriveCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.drivecmdletprovider.aspx).
+Mostra como substituir os métodos [NewDrive](/dotnet/api/system.management.automation.provider.drivecmdletprovider.newdrive) e [RemoveDrive](/dotnet/api/system.management.automation.provider.drivecmdletprovider.removedrive) para dar suporte a chamadas para os cmdlets `New-PSDrive` e `Remove-PSDrive`.
+A classe de provedor nessa amostra deriva da classe [DriveCmdletProvider](/dotnet/api/system.management.automation.provider.drivecmdletprovider).
 
-**AccessDBProviderSample03**
+### <a name="accessdbprovidersample03"></a>AccessDBProviderSample03
 
-Mostra como substituir os métodos [GetItem](https://technet.microsoft.com/library/system.management.automation.provider.itemcmdletprovider.getitem.aspx) e [SetItem](https://technet.microsoft.com/library/system.management.automation.provider.itemcmdletprovider.setitem.aspx) para dar suporte a chamadas para os cmdlets Get-Item e Set-Item.
-A classe de provedor nessa amostra deriva da classe [ItemCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.itemcmdletprovider.aspx).
+Mostra como substituir os métodos [GetItem](/dotnet/api/system.management.automation.provider.itemcmdletprovider.getitem) e [SetItem](/dotnet/api/system.management.automation.provider.itemcmdletprovider.setitem) para dar suporte a chamadas para os cmdlets `Get-Item` e `Set-Item`.
+A classe de provedor nessa amostra deriva da classe [ItemCmdletProvider](/dotnet/api/system.management.automation.provider.itemcmdletprovider).
 
-**AccessDBProviderSample04**
+### <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
-Mostra como substituir os métodos de contêiner para dar suporte a chamadas para os cmdlets Copy-Item, Get-ChildItem, New-Item e Remove-Item.
+Mostra como substituir os métodos de contêiner para dar suporte a chamadas para os cmdlets `Copy-Item`, `Get-ChildItem`, `New-Item` e `Remove-Item`.
 Esses métodos devem ser implementados quando o armazenamento de dados contiver itens que são contêineres.
 Um contêiner é um grupo de itens filho em um item pai comum.
-A classe de provedor nessa amostra deriva da classe [ItemCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.itemcmdletprovider.aspx).
+A classe de provedor nessa amostra deriva da classe [ItemCmdletProvider](/dotnet/api/system.management.automation.provider.itemcmdletprovider).
 
-**AccessDBProviderSample05**
+### <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
-Mostra como substituir os métodos de contêiner para dar suporte a chamadas para os cmdlets Move-Item e Join-Path.
+Mostra como substituir os métodos de contêiner para dar suporte a chamadas para os cmdlets `Move-Item` e `Join-Path`.
 Esses métodos deverão ser implementados quando o usuário precisar mover itens dentro de um contêiner e se o armazenamento de dados contiver contêineres aninhados.
-A classe de provedor nessa amostra deriva da classe [NavigationCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider.aspx).
+A classe de provedor nessa amostra deriva da classe [NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider).
 
-**AccessDBProviderSample06**
+### <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
-Mostra como substituir os métodos de conteúdo para dar suporte a chamadas para os cmdlets Clear-Content, Get-Content e Set-Content.
+Mostra como substituir os métodos de conteúdo para dar suporte a chamadas para os cmdlets `Clear-Content`, `Get-Content` e `Set-Content`.
 Esses métodos devem ser implementados quando o usuário precisa gerenciar o conteúdo dos itens no armazenamento de dados.
-A classe de provedor nessa amostra deriva da classe [NavigationCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider.aspx) e implementa a interface [IContentCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.icontentcmdletprovider.aspx).
+A classe de provedor nessa amostra deriva da classe [NavigationCmdletProvider](/dotnet/api/system.management.automation.provider.navigationcmdletprovider) e implementa a interface [IContentCmdletProvider](/dotnet/api/system.management.automation.provider.icontentcmdletprovider).

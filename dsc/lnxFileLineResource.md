@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso nxFileLine de DSC para Linux
-ms.openlocfilehash: 6b927839c23478aa9916a5d23836b31fccc58484
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f2a989dd3a6746948e09ba94e279c02be8ebe2de
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219626"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893290"
 ---
 # <a name="dsc-for-linux-nxfileline-resource"></a>Recurso nxFileLine de DSC para Linux
 
@@ -31,7 +31,7 @@ nxFileLine <string> #ResourceName
 |  Propriedade |  Descrição |
 |---|---|
 | FilePath| O caminho completo até o arquivo para gerenciar linhas no nó de destino.|
-| ContainsLine| Uma linha para garantir que exista no arquivo. Essa linha será acrescentada ao arquivo caso não exista nele. **ContainsLine** é obrigatório, mas poderá ser definido como uma cadeia de caracteres vazia (`ContainsLine = ‘’``) se não for necessário.|
+| ContainsLine| Uma linha para garantir que exista no arquivo. Essa linha será acrescentada ao arquivo caso não exista nele. **ContainsLine** é obrigatório, mas poderá ser definido como uma cadeia de caracteres vazia (`ContainsLine = ""`) se não for necessário.|
 | DoesNotContainPattern| Um padrão de expressão regular para linhas que não devem existir no arquivo. Para todas as linhas existentes no arquivo que correspondem a essa expressão regular, a linha será removida do arquivo.|
 | DependsOn | Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a **ID** do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 
@@ -39,8 +39,8 @@ nxFileLine <string> #ResourceName
 
 Este exemplo demonstra como usar o recurso **nxFileLine** para configurar o arquivo `/etc/sudoers`, garantindo que o usuário: monuser esteja configurado como não requiretty.
 
-```
-Import-DSCResource -Module nx
+```powershell
+Import-DscResource -Module nx
 
 nxFileLine DoNotRequireTTY
 {

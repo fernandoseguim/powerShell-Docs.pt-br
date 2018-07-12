@@ -4,12 +4,12 @@ keywords: powershell, cmdlet
 ms.date: 12/12/2016
 title: Add-PswaAuthorizationRule
 schema: 2.0.0
-ms.openlocfilehash: b8020f8b034ab24d79a96da3908e9b63bf017cd9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a5e55611ac59ff5bfecee59ba2b7d7669d08f840
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190376"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893732"
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
@@ -20,21 +20,25 @@ Adiciona uma nova regra de autorização ao conjunto de regras de autorização 
 ## <a name="syntax"></a>Sintaxe
 
 ### <a name="usergroupnamecomputergroupname"></a>UserGroupNameComputerGroupName
+
 ```
 Add-PswaAuthorizationRule -ComputerGroupName <String> -ConfigurationName <String> -UserGroupName <String[]> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usergroupnamecomputername"></a>UserGroupNameComputerName
+
 ```
 Add-PswaAuthorizationRule -ComputerName <String> -ConfigurationName <String> -UserGroupName <String[]> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usernamecomputergroupname"></a>UserNameComputerGroupName
+
 ```
 Add-PswaAuthorizationRule [-UserName] <String[]> -ComputerGroupName <String> -ConfigurationName <String> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
 
 ### <a name="usernamecomputername"></a>UserNameComputerName
+
 ```
 Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-ConfigurationName] <String> [-Credential <PSCredential> ] [-Force] [-RuleName <String> ] [ <CommonParameters>]
 ```
@@ -56,7 +60,7 @@ As regras de autorização avaliam a credencial de logon principal dos usuários
 
 ## <a name="parameters"></a>Parâmetros
 
-### <a name="-computergroupnameltstringgt"></a>-ComputerGroupName&lt;String&gt;
+### <a name="-computergroupname-string"></a>-ComputerGroupName \<String\>
 
 Especifica o nome de um grupo de computadores no AD DS (Active Directory Domain Services) ou de grupos locais aos quais essa regra concede acesso.
 
@@ -69,7 +73,7 @@ Especifica o nome de um grupo de computadores no AD DS (Active Directory Domain 
 | Aceitar entrada do pipeline?               | True (ByPropertyName)                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-computernameltstringgt"></a>-ComputerName&lt;String&gt;
+### <a name="-computername-string"></a>-ComputerName \<String\>
 
 Especifica o nome do computador ao qual esta regra concede acesso.
 
@@ -82,7 +86,7 @@ Especifica o nome do computador ao qual esta regra concede acesso.
 | Aceitar entrada do pipeline?               | True (ByPropertyName)                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-configurationnameltstringgt"></a>-ConfigurationName&lt;String&gt;
+### <a name="-configurationname-string"></a>-ConfigurationName \<String\>
 
 Especifica o nome da configuração de sessão do Windows PowerShell, também conhecido como runspace, ao qual essa regra concede acesso.
 
@@ -95,7 +99,7 @@ Especifica o nome da configuração de sessão do Windows PowerShell, também co
 | Aceitar entrada do pipeline?               | True (ByPropertyName)                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-credentialltpscredentialgt"></a>-Credential&lt;PSCredential&gt;
+### <a name="-credential--pscredential"></a>-Credential \<PSCredential\>
 
 Especifica um objeto **PSCredential** para uma conta de usuário que você deseja usar para alterar as regras de autorização do Windows PowerShell Web Access. Se você não adicionar esse parâmetro, o cmdlet usará a conta do usuário conectado no momento. Para obter um objeto **PSCredential**, que é necessário para adicionar regras de autorização remotamente, execute o cmdlet [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
@@ -122,7 +126,7 @@ Além disso, ele também solicita confirmação quando você insere um nome do c
 | Aceitar entrada do pipeline?               | false                                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-rulenameltstringgt"></a>-RuleName&lt;String&gt;
+### <a name="-rulename-string"></a>-RuleName \<String\>
 
 Especifica o nome amigável dessa regra.
 
@@ -135,7 +139,7 @@ Especifica o nome amigável dessa regra.
 | Aceitar entrada do pipeline?               | True (ByPropertyName)                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-usergroupnameltstringgt"></a>-UserGroupName&lt;String\[\]&gt;
+### <a name="-usergroupname-string"></a>-UserGroupName \<String\[\]\>
 
 Especifica o nome de um ou mais grupos de usuários no AD DS ou grupos locais aos quais essa regra concede acesso.
 
@@ -148,7 +152,7 @@ Especifica o nome de um ou mais grupos de usuários no AD DS ou grupos locais ao
 | Aceitar entrada do pipeline?               | True (ByPropertyName)                |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="-usernameltstringgt"></a>-UserName&lt;String\[\]&gt;
+### <a name="-username-string"></a>-UserName \<String\[\]\>
 
 Especifica um ou mais usuários aos quais essa regra concede acesso. O nome de usuário pode ser uma conta de usuário local no computador do gateway ou um usuário no AD DS.
 O formato é `domain\user` ou `computer\user`.
@@ -162,7 +166,7 @@ O formato é `domain\user` ou `computer\user`.
 | Aceitar entrada do pipeline?               | Verdadeiro (ByValue, ByPropertyName)       |
 | Aceitar caracteres curinga?          | false                                |
 
-### <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
+###  <a name="commonparameters"></a>\<CommonParameters\>
 
 Esse cmdlet oferece suporte aos parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_commonparameters).
@@ -196,7 +200,7 @@ Add-PswaAuthorizationRule -ComputerName srv2.contoso.com -UserGroupName contoso\
 
 ### <a name="example-2"></a>EXEMPLO 2
 
-Este exemplo concede acesso à configuração de sessão padrão do Windows PowerShell, `Microsoft.PowerShell`, no *srv2* para os usuários chamados contoso\\user1, contoso\\user2 e contoso\\user3. Esse cmdlet cria três regras (uma por pessoa).
+Este exemplo concede acesso à configuração de sessão padrão do Windows PowerShell, `Microsoft.PowerShell`, no *srv2* para os usuários chamados `contoso\user1`, `contoso\user2` e `contoso\user3`. Esse cmdlet cria três regras (uma por pessoa).
 
 ```PowerShell
 Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user3 –ComputerName srv2.contoso.com -ConfigurationName Microsoft.PowerShell
@@ -206,7 +210,7 @@ Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user
 
 Este exemplo ilustra como inserir valores de nome de usuário por meio do pipeline.
 
-```
+```powershell
 "contoso\user1","contoso\user2" | Add-pswaAuthorizationRule –ComputerName srv2.contoso.com –ConfigurationName Microsoft.PowerShell
 ```
 
@@ -225,11 +229,11 @@ $o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Micros
 
 ### <a name="example-5"></a>EXEMPLO 5
 
-Este exemplo adiciona uma regra para permitir que o usuário local chamado *PswaServer\\ChrisLocal* acesse um servidor chamado *srv1.contoso.com*.
+Este exemplo adiciona uma regra para permitir que o usuário local chamado `PswaServer\ChrisLocal` acesse um servidor chamado **srv1.contoso.com**.
 
 Este exemplo ilustra um cenário em que o gateway está em um grupo de trabalho e o computador de destino está em um domínio. A regra de autorização aplica-se aos usuários locais no gateway. Na página de logon do Windows PowerShell Web Access, para autenticar-se com êxito, o usuário deve fornecer um segundo conjunto de credenciais na área **Configurações opcionais de conexão**. O servidor de gateway usa o conjunto adicional de credenciais para autenticar o usuário no computador de destino, um servidor chamado *srv1.contoso.com*.
 
-````
+````powershell
 Add-PswaAuthorizationRule –UserName PswaServer\ChrisLocal –ComputerName srv1.contoso.com –ConfigurationName Microsoft.PowerShell
 ````
 
@@ -245,10 +249,16 @@ Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Get-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592891(v=wps.630).aspx)
-- [Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
-- [Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
-- [Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
-- [Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
-- [New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
-- [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592891(v=wps.630).aspx)
+
+[Remove-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592893(v=wps.630).aspx)
+
+[Test-PswaAuthorizationRule](https://technet.microsoft.com/en-us/library/jj592892(v=wps.630).aspx)
+
+[Install-PswaWebApplication](https://technet.microsoft.com/en-us/library/jj592894(v=wps.630).aspx)
+
+[Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+
+[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+
+[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)

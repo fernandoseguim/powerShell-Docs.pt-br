@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: galeria,powershell,cmdlet,psget
 title: Módulos com as edições compatíveis do PowerShell
-ms.openlocfilehash: fbbfda2f913d54c3e69c0724fea4d977923279c1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 653cfa82be9d0150da8d8765c96e35be99497262
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189509"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892314"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Módulos com as edições compatíveis do PowerShell
 
@@ -21,7 +21,9 @@ Da versão 5.1 em diante, o PowerShell está disponível nas edições diferente
 
 ```powershell
 $PSVersionTable
+```
 
+```output
 Name                           Value
 ----                           -----
 PSVersion                      5.1.14300.1000
@@ -36,41 +38,54 @@ SerializationVersion           1.1.0.1
 
 ## <a name="module-authors-can-declare-their-modules-to-be-compatible-with-one-or-more-powershell-editions-using-the-compatiblepseditions-module-manifest-key-this-key-is-only-supported-on-powershell-51-or-later"></a>Os autores de módulo podem declarar seus módulos para serem compatíveis com uma ou mais edições do PowerShell usando a chave de manifesto do módulo CompatiblePSEditions. Essa chave só tem suporte no PowerShell 5.1 ou posterior.
 
-*OBSERVAÇÃO:* quando um manifesto de módulo for especificado com a chave CompatiblePSEditions, ele não poderá ser importado em versões anteriores do PowerShell.
+> [!NOTE]
+> Quando um manifesto de módulo for especificado com a chave CompatiblePSEditions, ele não poderá ser importado em versões anteriores do PowerShell.
 
 ```powershell
 New-ModuleManifest -Path .\TestModuleWithEdition.psd1 -CompatiblePSEditions Desktop,Core -PowerShellVersion 5.1
 $ModuleInfo = Test-ModuleManifest -Path .\TestModuleWithEdition.psd1
 $ModuleInfo.CompatiblePSEditions
+```
+
+```output
 Desktop
 Core
+```
 
+```powershell
 $ModuleInfo | Get-Member CompatiblePSEditions
+```
 
+```output
    TypeName: System.Management.Automation.PSModuleInfo
 
 Name                 MemberType Definition
 ----                 ---------- ----------
 CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] CompatiblePSEditions {get;}
-
 ```
 
 Ao obter uma lista de módulos disponíveis, você pode filtrar a lista por edição do PowerShell.
 
 ```powershell
 Get-Module -ListAvailable -PSEdition Desktop
+```
 
+```output
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
 
 ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   1.0        ModuleWithPSEditions
+```
 
+```powershell
 Get-Module -ListAvailable -PSEdition Core | % CompatiblePSEditions
+```
+
+```output
 Desktop
 Core
-
 ```
 
 ## <a name="module-authors-can-publish-a-single-module-targeting-to-either-or-both-powershell-editions-desktop-and-core"></a>Os autores de módulo podem publicar um único módulo destinado a uma ou ambas as edições do PowerShell (Desktop e Core)
@@ -162,8 +177,8 @@ $PSModule.OnRemove = {
 No PS 5.1 ou mais recente, a variável global $PSEdition é permitida no arquivo de manifesto de módulo.
 Usando essa variável, autor de módulo pode especificar os valores condicionais no arquivo de manifesto de módulo. A variável de $PSEdition pode ser referenciada no modo de linguagem restrita ou em uma seção de dados.
 
-*OBSERVAÇÃO:* quando um manifesto de módulo for especificado com a chave CompatiblePSEditions ou usar a variável $PSEdition, ele não poderá ser importado em versões anteriores do PowerShell.
-
+> [!NOTE]
+> Quando um manifesto de módulo for especificado com a chave CompatiblePSEditions ou usar a variável $PSEdition, ele não poderá ser importado em versões anteriores do PowerShell.
 
 #### <a name="sample-module-manifest-file-with-compatiblepseditions-key"></a>Arquivo de manifesto de módulo de exemplo com chave CompatiblePSEditions
 
@@ -203,9 +218,10 @@ else # Desktop
 #### <a name="module-contents"></a>Conteúdos do módulo
 
 ```powershell
+dir -Recurse
+```
 
-PS C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions> dir -Recurse
-
+```output
     Directory: C:\Users\manikb\Documents\WindowsPowerShell\Modules\ModuleWithEditions
 
 Mode                LastWriteTime         Length Name
@@ -245,9 +261,10 @@ Find-Module -Tag PSEdition_Core
 
 ```
 
-
 ## <a name="more-details"></a>Mais detalhes
 
-- [Scripts com PSEditions](script-psedition-support.md)
-- [Suporte do PSEditions na PowerShellGallery](../how-to/finding-items/searching-by-psedition.md)
-- [Atualizar manifesto do módulo] (/powershell/module/powershellget/update-modulemanifest)
+[Scripts com PSEditions](script-psedition-support.md)
+
+[Suporte do PSEditions na PowerShellGallery](../how-to/finding-items/searching-by-psedition.md)
+
+[Atualizar o manifesto de módulo](/powershell/module/powershellget/update-modulemanifest)
