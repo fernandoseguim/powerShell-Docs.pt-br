@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento do módulo
-ms.openlocfilehash: 2a4fcd40353450e5ba03910984c5a05772a93d0d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 371aae7eed4afe341755133c5ee2d356cd5876e0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093772"
 ---
 # <a name="prerelease-module-versions"></a>Versões de pré-lançamento do módulo
 
@@ -108,7 +108,6 @@ C:\windows\system32> Get-InstalledModule TestPackage
 Version         Name                                Repository           Description
 -------         ----                                ----------           -----------
 1.9.0-alpha     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-
 ```
 
 Não há compatibilidade para a instalação lado a lado das versões de um módulo que diferem apenas devido à versão de pré-lançamento especificada. Ao instalar um módulo usando o PowerShellGet, versões diferentes do mesmo módulo serão instaladas lado a lado com a criação de um nome de pasta usando o ModuleVersion. O ModuleVersion, sem a cadeia de caracteres de pré-lançamento, é usado para o nome da pasta. Se um usuário instalar MyModule versão 2.5.0-alpha, ele será instalado na pasta MyModule\2.5.0. Se o usuário instalar a versão 2.5.0-beta, ela __substituirá__ o conteúdo da pasta MyModule\2.5.0. Uma vantagem dessa abordagem é que não é necessário desinstalar a versão de pré-lançamento depois de instalar a versão pronta para produção. O exemplo a seguir mostra o que esperar:

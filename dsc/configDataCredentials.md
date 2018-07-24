@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
-ms.openlocfilehash: 2c6685f3b6992537d1652f172cf926b85dd634c6
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 12bb8d8ce5fc4685e583e74d411b098320ac4fd4
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190036"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093670"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
@@ -273,8 +273,6 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 > `NodeName` não pode ser um asterisco; um nome do nó específico é obrigatório.
 
 **A Microsoft avisa para evitar senhas de texto sem formatação devido ao risco de segurança significativo.**
-
-Uma exceção seria ao usar o serviço de DSC de Automação do Azure, pois os dados sempre são armazenados criptografados (em trânsito, em repouso no serviço e em repouso no nó).
 
 ## <a name="domain-credentials"></a>Credenciais de Domínio
 

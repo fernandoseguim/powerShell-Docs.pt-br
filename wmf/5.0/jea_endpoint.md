@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 66db78cfb136f22cad9078d7113dad085ee667a5
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e4910e95a417da61661aaddd98b2dc7da9f98a3d
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188421"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093711"
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a>Criando e conectando-se a um ponto de extremidade JEA
 Para criar um ponto de extremidade JEA, é necessário criar e registrar um arquivo de Configuração de Sessão do PowerShell especialmente configurado, que possa ser gerado com o cmdlet **New-PSSessionConfigurationFile**.
@@ -128,8 +128,8 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
 }
-
 ```
+
 Para ser usadas por uma configuração de sessão JEA, as Funcionalidades da Função devem ser salvas como um módulo PowerShell válido em um diretório chamado “RoleCapabilities”. Um módulo pode ter vários arquivos de funcionalidades da função, se desejado.
 
 Para começar a configurar quais cmdlets, funções, aliases e scripts um usuário poderá acessar ao se conectar a uma sessão JEA, adicione suas próprias regras ao arquivo de Funcionalidade da Função seguindo os modelos comentados. Para obter uma análise mais profunda sobre como você pode configurar Funcionalidades da Função, confira o [guia de experiência](http://aka.ms/JEA) completo.
@@ -141,9 +141,11 @@ Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfi
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Conectar-se a um ponto de extremidade JEA
+
 A conexão a um Ponto de Extremidade JEA funciona da mesma forma que a conexão a qualquer outro ponto de extremidade de PowerShell.  Basta nomear o ponto de extremidade JEA como o parâmetro “ConfigurationName” para **New-PSSession**, **Invoke-Command** ou **Enter-PSSession**.
 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
+
 Depois de se conectar à sessão JEA, você estará limitado à execução de comandos na lista de permissões nas Funcionalidades da Função às quais você tem acesso. Caso tente executar algum comando que não seja permitido para sua função, você encontrará um erro.

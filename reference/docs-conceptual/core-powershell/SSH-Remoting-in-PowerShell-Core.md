@@ -46,8 +46,8 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Instalar o build mais recente [OpenSSH Win32] do GitHub usando as instruções de [instalação]
-3. Edite o arquivo sshd_config no local em que você instalou OpenSSH Win32
+1. Instalar o build mais recente [OpenSSH Win32] do GitHub usando as instruções de [instalação]
+1. Edite o arquivo sshd_config no local em que você instalou OpenSSH Win32
    - Verifique se a autenticação de senha está habilitada
 
    ```
@@ -59,8 +59,8 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
     ```
 
     > [!NOTE]
-    Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema.
-    Veja [esse problema no GitHub para obter mais informações](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+    > Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema.
+    > Veja [esse problema no GitHub para obter mais informações](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
     Uma solução é criar um symlink que não contenha espaços, para o diretório de instalação do Powershell:
 
@@ -84,27 +84,27 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
    PubkeyAuthentication yes
    ```
 
-4. Reinicie o serviço sshd
+1. Reinicie o serviço sshd
 
    ```powershell
    Restart-Service sshd
    ```
 
-5. Adicione o caminho em que OpenSSH está instalado à sua variável Path Env
+1. Adicione o caminho em que OpenSSH está instalado à sua variável Path Env
    - Isso deve ser feito juntamente com as linhas de `C:\Program Files\OpenSSH\`
    - Isso permite que ssh.exe seja localizado
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>Instalação no computador Linux (Ubuntu 14.04)
 
 1. Instalar o build mais recente do [PowerShell Core para Linux] do GitHub
-2. Instalar o [Ubuntu SSH] conforme necessário
+1. Instalar o [Ubuntu SSH] conforme necessário
 
    ```bash
    sudo apt install openssh-client
    sudo apt install openssh-server
    ```
 
-3. Edite o arquivo sshd_config no local /etc/ssh
+1. Edite o arquivo sshd_config no local /etc/ssh
    - Verifique se a autenticação de senha está habilitada
 
    ```
@@ -123,7 +123,7 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
    PubkeyAuthentication yes
    ```
 
-4. Reinicie o serviço sshd
+1. Reinicie o serviço sshd
 
    ```bash
    sudo service sshd restart
@@ -137,7 +137,7 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
      - Clique em `Sharing`
      - Verifique `Remote Login` – deve dizer `Remote Login: On`
      - Permita o acesso a usuários apropriados
-2. Edite o arquivo `sshd_config` no local `/private/etc/ssh/sshd_config`
+1. Edite o arquivo `sshd_config` no local `/private/etc/ssh/sshd_config`
    - Usar seu editor favorito ou
 
      ```bash
@@ -162,7 +162,7 @@ Além disso, você precisará habilitar a autenticação de senha e autenticaç�
      PubkeyAuthentication yes
      ```
 
-3. Reinicie o serviço sshd
+1. Reinicie o serviço sshd
 
    ```bash
    sudo launchctl stop com.openssh.sshd

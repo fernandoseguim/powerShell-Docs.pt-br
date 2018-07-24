@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento de scripts
-ms.openlocfilehash: 5b93da418b836d537491d3f1e4e29fa2e61f2f77
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7d4cec9d2b4ee5ad0b19ad5d9c68bb68747abd57
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188557"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093841"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versões de pré-lançamento de scripts
 
@@ -38,7 +38,6 @@ Uma seção de exemplo de um manifesto de script com uma versão de pré-lançam
 ...
 
 #>
-
 ```
 
 Para usar um sufixo de pré-lançamento, a cadeia de caracteres de versão deve atender aos seguintes requisitos:
