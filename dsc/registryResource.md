@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Registry de DSC
-ms.openlocfilehash: 8819b3704fa1a61d2be5ce11c974542f48177e09
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b77710d7a6fc599949e78c17af309ad88a1a0872
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188693"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093578"
 ---
 # <a name="dsc-registry-resource"></a>Recurso Registry de DSC
 
@@ -32,35 +32,22 @@ Registry [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Propriedades
+
 |  Propriedade  |  Descrição   |
 |---|---|
 | Chave| Indica o caminho da chave do Registro para o qual você deseja garantir um estado específico. Esse caminho deve incluir o hive.|
 | ValueName| Indica o nome do valor de registro. Para adicionar ou remover uma chave do Registro, especifique essa propriedade como uma cadeia de caracteres vazia sem especificar ValueType ou ValueData. Para modificar ou remover o valor padrão de uma chave do Registro, especifica essa propriedade como uma cadeia de caracteres vazia e também especifique ValueType ou ValueData.|
 | Ensure| Indica se a chave e o valor existem. Para garantir que existam, defina essa propriedade como "Present". Para garantir que não existam, defina a propriedade como "Absent". O valor padrão é "Present".|
-| Force| Se a chave do Registro especificada estiver presente, __Force__ a substituirá pelo novo valor. Para excluir uma chave do Registro com subchaves, isso deve ser __$true__|
-| Hex| Indica se os dados serão expressos em formato hexadecimal. Se especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor padrão é __$false__.|
-| DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for __ResourceName__ e seu tipo for __ResourceType__, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
+| Force| Se a chave do Registro especificada estiver presente, **Force** a substituirá pelo novo valor. Para excluir uma chave do Registro com subchaves, isso deve ser **$true** |
+| Hex| Indica se os dados serão expressos em formato hexadecimal. Se especificado, os dados do valor DWORD/QWORD são apresentados em formato hexadecimal. Não é válido para outros tipos. O valor padrão é **$false**.|
+| DependsOn| Indica que a configuração de outro recurso deve ser executada antes de ele ser configurado. Por exemplo, se a ID do bloco de script de configuração do recurso que você deseja executar primeiro for **ResourceName** e seu tipo for **ResourceType**, a sintaxe para usar essa propriedade será `DependsOn = "[ResourceType]ResourceName"`.|
 | ValueData| Os dados para o valor de registro.|
-| ValueType| Indica o tipo de valor. Há suporte para estes tipos:
-<ul><li>Cadeia de caracteres (REG_SZ)</li>
-
-
-<li>Binário (REG-BINARY)</li>
-
-
-<li>DWORD de 32 bits (REG_DWORD)</li>
-
-
-<li>QWORD de 64 bits (REG_QWORD)</li>
-
-
-<li>Cadeia de caracteres múltipla (REG_MULTI_SZ)</li>
-
-
-<li>Cadeia de caracteres expansível (REG_EXPAND_SZ)</li></ul>
+| ValueType| Indica o tipo de valor. Os tipos com suporte são: cadeia de caracteres (REG_SZ), binário (REG-BINARY), Dword de 32 bits (REG_DWORD), Qword de 64 bits (REG_QWORD), cadeia de caracteres múltipla (REG_MULTI_SZ), cadeia de caracteres expansível (REG_EXPAND_SZ) |
 
 ## <a name="example"></a>Exemplo
+
 Este exemplo assegura que uma chave chamada "ExampleKey" está presente no hive **HKEY\_LOCAL\_MACHINE**.
+
 ```powershell
 Configuration RegistryTest
 {
@@ -74,5 +61,5 @@ Configuration RegistryTest
 }
 ```
 
->**Observação:** alterar uma configuração do Registro no hive **HKEY\_CURRENT\_USER** requer que a configuração seja executada com credenciais de usuário, em vez de como o sistema.
->Você pode usar a propriedade **PsDscRunAsCredential** para especificar credenciais de usuário para a configuração. Por exemplo, veja [Executar DSC com as credenciais do usuário](runAsUser.md)
+> [!NOTE]
+> Alterar uma configuração do registro no hive **HKEY\_CURRENT\_USER** requer que a configuração seja executada com credenciais de usuário, em vez de como o sistema. Você pode usar a propriedade **PsDscRunAsCredential** para especificar credenciais de usuário para a configuração. Por exemplo, veja [Executar DSC com as credenciais do usuário](runAsUser.md).

@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de itens que afetam a interface do usuário da Galeria do PowerShell
-ms.openlocfilehash: fd5e48f8cc36795742ae597fc7715f7377605b6f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 00350d3558e2bfa487fb116304956ffa7291ee05
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893470"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093966"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de itens que afetam a interface do usuário da Galeria do PowerShell
 
@@ -84,65 +84,67 @@ Como referência, aqui estão algumas das marcas mais usadas até 14/12/2017.
 Em alguns casos, há opções parecidas, mas talvez menos ideais ao lado da marca.
 É prática recomendada usar as marcas preferenciais, já que elas resultam em menos correspondências difusas e geram melhores resultados de pesquisa para os usuários.
 
-| **Marca preferencial** | **Alternativas e observações** |
+| Marca preferencial | Alternativas e observações |
 | --- | --- |
-| **Azure** |  |
-| **DSC** | DesiredStateConfiguration é menos recomendado, pois é muito longo |
-| **ResourceManager** | "ARM" é usado para descrever um grupo de processadores e não deve ser usado para o Azure Resource Manager | **DSCResourceKit** |  |
-| **SQL** |  |
-| **AWS** |  |
-| **DSCResource** |  |
-| **Automation** |  |
-| **REST** |  |
-| **ActiveDirectory** | "AD" por si só não está em uso no momento  |
-| **SQLServer** |  |
-| **DBA** |  |
-| **Segurança** | "Defense" é menos preciso |
-| **Database** | "Databases" (plural) é menos recomendado |
-| **DevOps** |  |
-| **Windows** |  |
-| **Build** |  |
-| **Deployment** | "Deploy" é usado com menos frequência |
-| **Cloud** |  |
-| **GIT** |  |
-| **Test** | "Testing" é menos recomendado |
-| **VersionControl** | "Version" é menos preciso, embora seja usado com mais frequência  |
-| **Logging** | Recomendamos usar "Logging" como uma ação |
-| **Log** | Recomendamos usar "Log" como um objeto |
-| **Backup** |  |
-| **IaaS** |  |
-| **Linux** |  |
-| **IIS** |  |
-| **AzureAutomation** |  |
-| **Storage** |  |
-| **GitHub** |  |
-| **Json** |  |
-| **Exchange** |  |
-| **Network** | "Networking" é semelhante, porém usado com menos frequência |
-| **SharePoint** |  |
-| **Reporting** | "Reporting" é uma ação e "Report" é um objeto |
-| **Report** | "Report" é um objeto |
-| **WinRM** |  |
-| **Monitoring** |  |
-| **VSTS** |  |
-| **Excel** |  |
-| **Google** |  |
-| **Color** |  |
-| **DNS** |  |
-| **Office365** | Recomendamos usar "Office" sem abreviação. Embora seja mais curto, "O365" é usado com menos frequência | **Gitlab** |  |
-| **Pester** |  |
-| **AzureAD** |  |
-| **HTML** |  |
-| **Hyper-V** | "HyperV" é menos comum como marca |
-| **Configuration** |  |
-| **ChatOps** |  |
-| **PackageManagement** |  |
-| **WMI** |  |
-| **Firewall** |  |
-| **Docker** |  |
-| **Appveyor** |  |
-| **AzureRm** | Usado principalmente nos módulos do AzureRM |
-| **Zip** |  |
-| **MSI** |  |
-| **Mac** |  |
-| **PoshBot** |  |
+| Azure |  |
+| DSC | DesiredStateConfiguration é menos recomendado, pois é muito longo |
+| ResourceManager | "ARM" é usado para descrever um grupo de processadores e não deve ser usado para o Azure Resource Manager |
+| DSCResourceKit |  |
+| SQL |  |
+| AWS |  |
+| DSCResource |  |
+| Automação |  |
+| REST |  |
+| ActiveDirectory | "AD" por si só não está em uso no momento  |
+| SQLServer |  |
+| DBA |  |
+| Segurança | "Defense" é menos preciso |
+| Banco de dados | "Databases" (plural) é menos recomendado |
+| DevOps |  |
+| Windows |  |
+| Build |  |
+| Implantação | "Deploy" é usado com menos frequência |
+| Nuvem |  |
+| GIT |  |
+| Teste | "Testing" é menos recomendado |
+| VersionControl | "Version" é menos preciso, embora seja usado com mais frequência  |
+| Registrando em Log | Recomendamos usar "Logging" como uma ação |
+| Log | Recomendamos usar "Log" como um objeto |
+| Backup |  |
+| IaaS |  |
+| Linux |  |
+| IIS |  |
+| AzureAutomation |  |
+| Armazenamento |  |
+| GitHub |  |
+| Json |  |
+| Exchange |  |
+| Rede | "Networking" é semelhante, porém usado com menos frequência |
+| SharePoint |  |
+| Relatórios | "Reporting" é uma ação e "Report" é um objeto |
+| Relatório | "Report" é um objeto |
+| WinRM |  |
+| Monitoramento |  |
+| VSTS |  |
+| Excel |  |
+| Google |  |
+| Color |  |
+| DNS |  |
+| Office365 | Recomendamos usar "Office" sem abreviação. Embora seja mais curto, "O365" é usado com menos frequência |
+| Gitlab |  |
+| Pester |  |
+| AzureAD |  |
+| HTML |  |
+| Hyper-V | "HyperV" é menos comum como marca |
+| Configuração |  |
+| ChatOps |  |
+| PackageManagement |  |
+| WMI |  |
+| Firewall |  |
+| Docker |  |
+| Appveyor |  |
+| AzureRm | Usado principalmente nos módulos do AzureRM |
+| Zip |  |
+| MSI |  |
+| Mac |  |
+| PoshBot |  |

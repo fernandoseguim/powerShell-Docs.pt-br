@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: ryanpu
 title: Aprimoramentos no recurso JEA (Administração Suficiente)
-ms.openlocfilehash: 79271e77a539764e7a18842efd919413cdc8ab9f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: a9a8a0fd2b726ded33aa07c205292efd7148f3f0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892711"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093612"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
 
@@ -50,7 +50,7 @@ Em seguida, você pode escrever funções personalizadas para processar os dados
 
 Em alguns casos, uma tarefa que um usuário precisa para executar em uma sessão JEA precisará acessar recursos fora do computador local.
 Quando uma sessão JEA é configurada para usar uma conta virtual, qualquer tentativa de acessar esses recursos parecem que serão provenientes da identidade do computador local, não da conta virtual ou do usuário conectado.
-No TP5, habilitamos o suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx)), tornando muito mais fácil acessar recursos de rede usando uma identidade de domínio.
+No TP5, habilitamos o suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431\(v=ws.11\)), facilitando muito o acesso aos recursos de rede usando uma identidade de domínio.
 
 Para configurar uma sessão JEA para executar sob uma conta gMSA, use a nova chave a seguir no arquivo PSSC:
 

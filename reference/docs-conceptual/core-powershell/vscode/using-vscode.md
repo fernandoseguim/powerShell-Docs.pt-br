@@ -58,8 +58,8 @@ Para sair do Visual Studio Code, **Arquivo -> Sair**.
 Se quiser usar uma instalação específica do PowerShell com o Visual Studio Code, precisará adicionar uma nova variável ao arquivo de configurações do usuário.
 
 1. Clique em **Arquivo -> Preferências -> Configurações**
-2. Dois painéis de editor serão exibidos.
-   No painel mais à direita (`settings.json`), insira a configuração abaixo apropriada para seu sistema operacional entre as duas chaves (`{` e `}`) e substitua *<version>* pela versão do PowerShell instalada:
+1. Dois painéis de editor serão exibidos.
+   No painel mais à direita (`settings.json`), insira a configuração abaixo apropriada para seu sistema operacional entre as duas chaves (`{` e `}`) e substitua a **\<versão\>** pela versão do PowerShell instalada:
 
    ```json
     // On Windows:
@@ -72,8 +72,8 @@ Se quiser usar uma instalação específica do PowerShell com o Visual Studio Co
     "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
    ```
 
-3. Substitua a configuração pelo caminho para o executável desejado do PowerShell
-4. Salve o arquivo de configurações e reinicie o Visual Studio Code
+1. Substitua a configuração pelo caminho para o executável desejado do PowerShell
+1. Salve o arquivo de configurações e reinicie o Visual Studio Code
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Definições de configuração para o Visual Studio Code
 
