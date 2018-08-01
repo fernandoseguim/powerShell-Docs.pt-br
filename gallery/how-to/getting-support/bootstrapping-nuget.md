@@ -3,24 +3,20 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: galeria,powershell,cmdlet,psget
 title: Inicializando o NuGet
-ms.openlocfilehash: 2d321097fda201c0d8f843b2194a161eceabe4e1
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: e82fe7bec2e6b7a321fb173cdf9a54c5a97d5f18
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094010"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267840"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Inicializar o provedor do NuGet e o NuGet.exe
 
-O NuGet.exe não está incluído no provedor do NuGet mais recente.
-Para operações de publicação de um módulo ou um de script, o PowerShellGet requer o NuGet.exe executável binário.
-Somente o provedor do NuGet é necessário para todas as outras operações, incluindo *localizar*, *instalar*, *salvar* e *desinstalar*.
-O PowerShellGet inclui a lógica para tratar a inicialização combinada do provedor do NuGet e do NuGet.exe ou a inicialização apenas do provedor do NuGet.
-Em ambos os casos, apenas uma única mensagem de aviso deve ocorrer.
-Se o computador não estiver conectado à Internet, o usuário ou um administrador deverá copiar uma instância confiável do provedor do NuGet e/ou o arquivo NuGet.exe no computador desconectado.
+O NuGet.exe não está incluído no provedor do NuGet mais recente. Para operações de publicação de um módulo ou um de script, o PowerShellGet requer o NuGet.exe executável binário. Somente o provedor do NuGet é necessário para todas as outras operações, incluindo *localizar*, *instalar*, *salvar* e *desinstalar*.
+O PowerShellGet inclui a lógica para tratar a inicialização combinada do provedor do NuGet e do NuGet.exe ou a inicialização apenas do provedor do NuGet. Em ambos os casos, apenas uma única mensagem de aviso deve ocorrer. Se o computador não estiver conectado à Internet, o usuário ou um administrador deverá copiar uma instância confiável do provedor do NuGet e/ou o arquivo NuGet.exe no computador desconectado.
 
 > [!NOTE]
-> A partir da versão 6, o provedor do NuGet é incluído na instalação do PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
+> A partir da versão 6, o provedor do NuGet é incluído na instalação do PowerShell.
 
 ## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a>Resolvendo erro quando o provedor do NuGet não for instalado em um computador conectado à Internet
 
@@ -123,15 +119,11 @@ VERBOSE: Successfully published module 'Contoso' to the module publish location 
 
 ## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a>Inicializando manualmente o provedor do NuGet em um computador que não está conectado à Internet
 
-Os processos demonstrados acima pressupõem que o computador está conectado à Internet e pode baixar arquivos de um local público.
-Se isso não for possível, a única opção será inicializar um computador com os processos descritos acima e copiar manualmente o provedor para o nó isolado por meio de um processo confiável offline.
-O caso de uso mais comum para esse cenário é quando uma galeria privada está disponível para dar suporte a um ambiente isolado.
+Os processos demonstrados acima pressupõem que o computador está conectado à Internet e pode baixar arquivos de um local público. Se isso não for possível, a única opção será inicializar um computador com os processos descritos acima e copiar manualmente o provedor para o nó isolado por meio de um processo confiável offline. O caso de uso mais comum para esse cenário é quando uma galeria privada está disponível para dar suporte a um ambiente isolado.
 
 Depois de seguir o processo acima para inicializar um computador conectado à Internet, você encontrará os arquivos do provedor no local:
 
-```
-C:\Program Files\PackageManagement\ProviderAssemblies\
-```
+`C:\Program Files\PackageManagement\ProviderAssemblies\`
 
 A estrutura de pasta/arquivo do provedor do NuGet será (possivelmente com um número de versão diferente):
 
@@ -147,11 +139,9 @@ Copie essas pastas e arquivos para os computadores offline usando um processo co
 
 Além de processo para inicializar manualmente o provedor do NuGet, se o computador for usado para publicar scripts ou módulos em uma galeria privada usando os cmdlets `Publish-Module` ou `Publish-Script`, o arquivo executável binário NuGet.exe será necessário.
 
-O caso de uso mais comum para esse cenário é quando uma galeria privada está disponível para dar suporte a um ambiente isolado.
-Há duas opções para obter o arquivo NuGet.exe.
+O caso de uso mais comum para esse cenário é quando uma galeria privada está disponível para dar suporte a um ambiente isolado. Há duas opções para obter o arquivo NuGet.exe.
 
-Uma opção é inicializar um computador que esteja conectado à Internet e copiar os arquivos para os computadores offline usando um processo confiável.
-Após inicializar o computador conectado à Internet, o binário NuGet.exe estará localizado em uma das duas pastas:
+Uma opção é inicializar um computador que esteja conectado à Internet e copiar os arquivos para os computadores offline usando um processo confiável. Após inicializar o computador conectado à Internet, o binário NuGet.exe estará localizado em uma das duas pastas:
 
 Se os cmdlets `Publish-Module` ou `Publish-Script` foram executados com permissões elevadas (como um administrador):
 
@@ -165,9 +155,7 @@ Se os cmdlets foram executados como um usuário sem permissões elevadas:
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 
-Uma segunda opção é fazer o download do NuGet.exe do site NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Ao selecionar uma versão NugGet para computadores de produção, verifique se ela é posterior à 2.8.5.208 e identifique a versão rotulada como "recomendada".
-Lembre-se de desbloquear o arquivo se ele tiver sido baixado usando um navegador.
-Isso pode ser feito usando o cmdlet `Unblock-File`.
+Uma segunda opção é fazer o download do NuGet.exe do site NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Ao selecionar uma versão NugGet para computadores de produção, verifique se ela é posterior à 2.8.5.208 e identifique a versão rotulada como "recomendada". Lembre-se de desbloquear o arquivo se ele tiver sido baixado usando um navegador. Isso pode ser feito usando o cmdlet `Unblock-File`.
 
 Em ambos os casos, o arquivo NuGet.exe pode ser copiado para qualquer local em `$env:path`, mas os locais padrão são:
 

@@ -4,22 +4,18 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: ryanpu
 title: Aprimoramentos no recurso JEA (Administração Suficiente)
-ms.openlocfilehash: a9a8a0fd2b726ded33aa07c205292efd7148f3f0
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 66cbacb78f8a365e9c8556c7c56b3c3525de7395
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093612"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267858"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Aprimoramentos no recurso JEA (Administração Suficiente)
 
 ## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>Cópia de arquivo restrito de/para pontos de extremidade JEA
 
-Agora, você pode remotamente copiar arquivos de/para um ponto de extremidade JEA ficar tranquilo que o usuário conectado não poderá copiar *nenhum* arquivo em seu sistema.
-Isso é possível ao configurar seu arquivo PSSC para montar uma unidade de usuário para conectar usuários.
-A unidade de usuário é um novo PSDrive exclusivo para cada usuário conectado e persiste nas sessões.
-Quando `Copy-Item` é usado para copiar arquivos de ou para uma sessão JEA, ele é restrito para permitir apenas acesso à unidade do usuário.
-As tentativas de copiar arquivos para qualquer outro PSDrive falharão.
+Agora, você pode remotamente copiar arquivos de/para um ponto de extremidade JEA ficar tranquilo que o usuário conectado não poderá copiar *nenhum* arquivo em seu sistema. Isso é possível ao configurar seu arquivo PSSC para montar uma unidade de usuário para conectar usuários. A unidade de usuário é um novo PSDrive exclusivo para cada usuário conectado e persiste nas sessões. Quando `Copy-Item` é usado para copiar arquivos de ou para uma sessão JEA, ele é restrito para permitir apenas acesso à unidade do usuário. As tentativas de copiar arquivos para qualquer outro PSDrive falharão.
 
 Para configurar a unidade de usuário no arquivo de configuração de sessão JEA, use os novos campos a seguir:
 
@@ -37,7 +33,8 @@ Para utilizar a unidade de usuário e copiar arquivos de/para um ponto de extrem
 $jeasession = New-PSSession -ComputerName 'srv01' -ConfigurationName 'UserDemo'
 
 # Copy a file in the local folder to the remote machine.
-# Note: you cannot specify the file name or subfolder on the remote machine. You must exactly type "User:"
+# Note: you cannot specify the file name or subfolder on the remote machine.
+# You must exactly type "User:"
 Copy-Item -Path .\SampleFile.txt -Destination User: -ToSession $jeasession
 
 # Copy the file back from the remote machine to your local machine
@@ -48,9 +45,7 @@ Em seguida, você pode escrever funções personalizadas para processar os dados
 
 ## <a name="support-for-group-managed-service-accounts"></a>Suporte para Contas de Serviço Gerenciado de Grupo
 
-Em alguns casos, uma tarefa que um usuário precisa para executar em uma sessão JEA precisará acessar recursos fora do computador local.
-Quando uma sessão JEA é configurada para usar uma conta virtual, qualquer tentativa de acessar esses recursos parecem que serão provenientes da identidade do computador local, não da conta virtual ou do usuário conectado.
-No TP5, habilitamos o suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431\(v=ws.11\)), facilitando muito o acesso aos recursos de rede usando uma identidade de domínio.
+Em alguns casos, uma tarefa que um usuário precisa para executar em uma sessão JEA precisará acessar recursos fora do computador local. Quando uma sessão JEA é configurada para usar uma conta virtual, qualquer tentativa de acessar esses recursos parecem que serão provenientes da identidade do computador local, não da conta virtual ou do usuário conectado. No TP5, habilitamos o suporte para executar o JEA sob o contexto de uma [Conta de Serviço Gerenciado de Grupo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431\(v=ws.11\)), facilitando muito o acesso aos recursos de rede usando uma identidade de domínio.
 
 Para configurar uma sessão JEA para executar sob uma conta gMSA, use a nova chave a seguir no arquivo PSSC:
 
@@ -66,18 +61,13 @@ RunAsVirtualAccount = $false
 
 > [!NOTE]
 > Contas de Serviço Gerenciado de Grupo não arcam com o isolamento ou o escopo limitado de contas virtuais.
-> Cada usuário conectado compartilha a mesma identidade de gMSA, que pode ter permissões em toda a empresa.
-> Tenha muito cuidado ao optar por usar uma gMSA, e sempre prefira contas virtuais que são limitadas no computador local, quando possível.
+> Cada usuário conectado compartilha a mesma identidade de gMSA, que pode ter permissões em toda a empresa. Tenha muito cuidado ao optar por usar uma gMSA, e sempre prefira contas virtuais que são limitadas no computador local, quando possível.
 
 ## <a name="conditional-access-policies"></a>Políticas de acesso condicional
 
-O JEA é excelente para limitar o que alguém pode fazer quando ele se conecta a um sistema para gerenciá-lo, mas e se você também desejar limitar *quando* alguém pode usar JEA?
-Adicionamos opções de configuração aos arquivos de configuração de sessão (.pssc) para permitir que você especifique grupos de segurança aos quais um usuário deve pertencer para estabelecer uma sessão JEA.
-Isso pode ser especialmente útil se você tiver um sistema JIT (Just In Time) em seu ambiente e quiser que seus usuários elevem seus privilégios antes de acessar um ponto de extremidade JEA altamente privilegiado.
+O JEA é excelente para limitar o que alguém pode fazer quando ele se conecta a um sistema para gerenciá-lo, mas e se você também desejar limitar *quando* alguém pode usar JEA? Adicionamos opções de configuração aos arquivos de configuração de sessão (.pssc) para permitir que você especifique grupos de segurança aos quais um usuário deve pertencer para estabelecer uma sessão JEA. Isso pode ser especialmente útil se você tiver um sistema JIT (Just In Time) em seu ambiente e quiser que seus usuários elevem seus privilégios antes de acessar um ponto de extremidade JEA altamente privilegiado.
 
-O novo campo *RequiredGroups* no arquivo de PSSC permite que você especifique a lógica para determinar se um usuário pode se conectar ao JEA.
-Ele consiste em especificar uma tabela de hash (opcionalmente aninhada) que usa as chaves 'E' e 'Ou' para construir as regras.
-Aqui estão alguns exemplos de como utilizar esse campo:
+O novo campo *RequiredGroups* no arquivo de PSSC permite que você especifique a lógica para determinar se um usuário pode se conectar ao JEA. Ele consiste em especificar uma tabela de hash (opcionalmente aninhada) que usa as chaves 'E' e 'Ou' para construir as regras. Aqui estão alguns exemplos de como utilizar esse campo:
 
 ```powershell
 # Example 1: Connecting users must belong to a security group called "elevated-jea"
@@ -93,5 +83,4 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Corrigido: contas virtuais agora têm suporte no Windows Server 2008 R2
 
-No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de recursos entre o Windows Server 2008 R2 - 2016.
-Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.
+No WMF 5.1, agora você poderá usar contas virtuais no Windows Server 2008 R2, permitindo configurações consistentes e paridade de recursos entre o Windows Server 2008 R2 - 2016. Contas virtuais permanecem sem suporte ao usar JEA no Windows 7.
