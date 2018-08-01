@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: 7fa6b9935ae75b62df72609b8a9ec16246b1c610
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: e3e718be903ff2223064d5790d3d0fe554ef04cd
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893681"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267993"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -102,8 +102,8 @@ Muitos comandos (cmdlets) normalmente disponíveis no PowerShell não está disp
 
 A tabela a seguir lista os comandos que não funcionam no PowerShell no Linux/macOS.
 
-|Comandos |Estado Operacional | Observações|
-|---------|------------------|------|
+|Comandos|Estado Operacional|Observações|
+|--------|-----------------|-----|
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Get-Acl`, `Set-Acl`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
