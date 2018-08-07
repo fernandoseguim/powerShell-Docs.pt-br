@@ -1,13 +1,13 @@
 ---
 ms.date: 06/27/2017
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
-ms.openlocfilehash: 14bb18cfc5d9826523a239aede42307a7688eaf5
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 07b85a3c7bced58b9ee8db401f0339ba6011bc96
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094238"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268340"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -19,21 +19,20 @@ O Windows PowerShell Web Access no Windows Server 2012 R2 e no Windows Server 20
 
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configurando regras de autorização e segurança do site
 
-Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente.
-O controle de acesso do ‘Windows PowerShell Web Access’ é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização. Consulte [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do ‘Windows PowerShell Web Access’ é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização.
+Consulte [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
 
 Os administradores podem definir as regras de autenticação `{0-n}` para o Windows PowerShell Web Access. A segurança padrão é restritiva, não permissiva. Se não houver regras de autenticação, significa que nenhum usuário tem acesso a coisa alguma.
 
-[Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de uma sessão ativa do Windows PowerShell Web Access. Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Credential, você pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
+[Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de uma sessão ativa do Windows PowerShell Web Access. Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Credential, você pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
 
-Regras de autenticação do Windows PowerShell Web Access são regras da lista de permissões. Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
+Regras de autenticação do Windows PowerShell Web Access são regras da lista de permissões. Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
 Para obter uma explicação sobre **runspaces** consulte [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/) (Começando a usar runspaces do PowerShell)
 
 > [!IMPORTANT]
-> **Observação de segurança** Um usuário só precisa de uma regra para obter acesso. Se um usuário receber acesso a um computador com acesso completo a linguagem ou acesso somente a cmdlets de gerenciamento remoto do Windows PowerShell, do console baseado na Web, o usuário poderá fazer logon (ou saltar) para outros computadores conectados ao primeiro computador de destino. A maneira mais segura de configurar o Windows PowerShell Web Access é permitir o acesso aos usuários apenas a configurações de sessão restritas, que permitem realizar tarefas específicas que normalmente precisam ser executadas remotamente.
+> Um usuário só precisa de uma regra para obter acesso. Se um usuário receber acesso a um computador com acesso completo a linguagem ou acesso somente a cmdlets de gerenciamento remoto do Windows PowerShell, do console baseado na Web, o usuário poderá fazer logon (ou saltar) para outros computadores conectados ao primeiro computador de destino. A maneira mais segura de configurar o Windows PowerShell Web Access é permitir o acesso aos usuários apenas a configurações de sessão restritas, que permitem realizar tarefas específicas que normalmente precisam ser executadas remotamente.
 
-Os cmdlets referenciados em [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md) permitem criar um conjunto de regras de acesso que são usadas para autorizar um usuário no gateway do Windows PowerShell Web Access.
-As regras são diferentes das listas de controle de acesso (ACLs) no computador de destino e fornecem uma camada adicional de segurança para acesso à Web. A seção a seguir contém mais detalhes sobre segurança.
+Os cmdlets referenciados em [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md) permitem criar um conjunto de regras de acesso que são usadas para autorizar um usuário no gateway do Windows PowerShell Web Access. As regras são diferentes das listas de controle de acesso (ACLs) no computador de destino e fornecem uma camada adicional de segurança para acesso à Web. A seção a seguir contém mais detalhes sobre segurança.
 
 Se os usuários não puderem passar por nenhuma das camadas de segurança anteriores, eles receberão uma mensagem genérica de "acesso negado" na janela do navegador. Embora os detalhes de segurança sejam registrador no servidor do gateway, os usuários finais não recebem informações sobre quantas camadas de segurança eles ultrapassaram, ou em qual camada ocorreu a falha de logon ou autenticação.
 
@@ -42,6 +41,7 @@ Para obter mais informações de como configurar regras de autorização, consul
 ### <a name="security"></a>Segurança
 
 O modelo de segurança do Windows PowerShell Web Access tem quatro camadas entre um usuário final do console baseado na Web e um computador de destino. Os administradores do Windows PowerShell Web Access podem adicionar camadas de segurança por meio de configuração adicional no console do Gerenciador do IIS. Para saber mais sobre como proteger sites no console do Gerenciador do IIS, consulte [Configurar a segurança do servidor Web (IIS 7)](https://technet.microsoft.com/library/cc731278).
+
 Para obter mais informações sobre práticas recomendadas do IIS e sobre como evitar ataques de negação de serviço, consulte [Best Practices for Preventing DoS/Denial of Service Attacks (Práticas recomendadas para evitar ataques DoS/de negação de serviço)](https://technet.microsoft.com/library/cc750213).
 Um administrador também pode comprar e instalar outros softwares de autenticação do varejo.
 
@@ -60,14 +60,14 @@ Informações detalhadas sobre cada camada podem ser encontradas nos seguintes t
 
 Os usuários do Windows PowerShell Web Access sempre devem fornecer um nome de usuário e uma senha para autenticar suas contas no gateway. No entanto, os administradores do Windows PowerShell Web Access também podem ativar ou desativar a autenticação de certificado opcional do cliente, consulte [instalar e usar o Windows PowerShell Web Access](install-and-use-windows-powershell-web-access.md) para habilitar um certificado de teste e, posteriormente, como configurar um certificado original.
 
-O recurso opcional de certificado de cliente exige que os usuários finais tenham um certificado de cliente válido (além de seus nomes de usuário e senhas) e faz parte da configuração do Servidor Web (IIS). Quando a camada de certificados cliente estiver habilitada, a página de entrada do Windows PowerShell Web Access solicitará que os usuários forneçam certificados válidos antes que suas credenciais de entrada sejam avaliadas.
-A autenticação de certificados clientes verifica automaticamente o certificado de cliente. Se um certificado válido não for encontrado, o Windows PowerShell Web Access informará os usuários a respeito, para que eles possam fornecer o certificado. Se um certificado de cliente válido for encontrado, o Windows PowerShell Web Access abrirá a página de entrada para que os usuários forneçam seus respectivos nomes de usuário e suas senhas.
+O recurso opcional de certificado de cliente exige que os usuários finais tenham um certificado de cliente válido (além de seus nomes de usuário e senhas) e faz parte da configuração do Servidor Web (IIS). Quando a camada de certificados cliente estiver habilitada, a página de entrada do Windows PowerShell Web Access solicitará que os usuários forneçam certificados válidos antes que suas credenciais de entrada sejam avaliadas. A autenticação de certificados clientes verifica automaticamente o certificado de cliente. Se um certificado válido não for encontrado, o Windows PowerShell Web Access informará os usuários a respeito, para que eles possam fornecer o certificado. Se um certificado de cliente válido for encontrado, o Windows PowerShell Web Access abrirá a página de entrada para que os usuários forneçam seus respectivos nomes de usuário e suas senhas.
 
-Este é um exemplo de configurações de segurança adicionais oferecidas pelo servidor Web do IIS. Para obter mais informações sobre outros recursos de segurança do IIS, consulte [Configurar a segurança do servidor Web (IIS 7)](https://technet.microsoft.com/library/cc731278)
+Este é um exemplo de configurações de segurança adicionais oferecidas pelo servidor Web do IIS. Para saber mais sobre outros recursos de segurança do IIS, confira [Configure Web Server Security (IIS 7)](https://technet.microsoft.com/library/cc731278) (Configurar a segurança do servidor Web (IIS 7)).
 
 #### <a name="windows-powershell-web-access-forms-based-gateway-authentication"></a>Autenticação de gateway baseada em formulários do Windows PowerShell Web Access
 
-A página de entrada do Windows PowerShell Web Access requer um conjunto de credenciais (nome de usuário e senha) e oferece aos usuários a opção de fornecer outras credenciais para o computador de destino. Se o usuário não fornecer credenciais alternativas, o nome de usuário primário e a respectiva senha usados para conexão com o gateway também serão utilizados para se conectar ao computador cliente.
+A página de entrada do Windows PowerShell Web Access requer um conjunto de credenciais (nome de usuário e senha) e oferece aos usuários a opção de fornecer outras credenciais para o computador de destino.
+Se o usuário não fornecer credenciais alternativas, o nome de usuário primário e a respectiva senha usados para conexão com o gateway também serão utilizados para se conectar ao computador cliente.
 
 As credenciais necessárias são autenticadas no gateway do Windows PowerShell Web Access. Essas credenciais devem ser contas de usuário válidas no servidor de gateway local do Windows PowerShell Web Access ou no Active Directory.
 
@@ -81,18 +81,17 @@ Essas regras serão avaliadas apenas depois que um usuário for autenticado pelo
 
 A camada final de segurança do Windows PowerShell Web Access é a própria configuração de segurança do computador de destino. Os usuários devem ter os direitos de acesso apropriados configurados no computador de destino e nas regras de autorização do Windows PowerShell Web Access para executar um console do Windows PowerShell baseado na Web que afete um computador de destino via Windows PowerShell Web Access.
 
-Essa camada oferece os mesmos mecanismos de segurança que avaliariam tentativas de conexão se usuários tentassem criar uma sessão remota do Windows PowerShell para um computador de destino por meio do Windows PowerShell, executando os cmdlets [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
+Essa camada oferece os mesmos mecanismos de segurança que avaliariam tentativas de conexão se usuários tentassem criar uma sessão remota do Windows PowerShell para um computador de destino por meio do Windows PowerShell, executando os cmdlets [Enter-PSSession](/powershell/module/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession).
 
 Por padrão, o Windows PowerShell Web Access usa o nome de usuário principal e a respectiva senha para autenticação no gateway e no computador de destino. A página de entrada baseada na Web, em uma seção intitulada **Configurações opcionais de conexão**, oferece ao usuário a opção de fornecer outras credenciais para o computador de destino, caso necessário. Se o usuário não fornecer credenciais alternativas, o nome de usuário primário e a respectiva senha usados para conexão com o gateway também serão utilizados para se conectar ao computador cliente.
 
-As regras de autorização podem ser usadas para permitir que os usuários acessem uma configuração de sessão específica. Você pode criar configurações de sessão ou _runspaces restritos_ para o Windows PowerShell Web Access e permitir que usuários específicos se conectem apenas a configurações de sessão específicas quando entrarem no Windows PowerShell Web Access. Você pode usar ACLs (listas de controle de acesso) para determinar quais usuários têm acesso a pontos de extremidade específicos e restringir ainda mais o acesso ao ponto de extremidade para um conjunto específico de usuários, usando as regras de autorização descritas nesta seção.
-Para obter mais informações sobre runspaces restritos, consulte [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668) (Criando um runspace restrito).
+As regras de autorização podem ser usadas para permitir que os usuários acessem uma configuração de sessão específica. Você pode criar configurações de sessão ou _runspaces restritos_ para o Windows PowerShell Web Access e permitir que usuários específicos se conectem apenas a configurações de sessão específicas quando entrarem no Windows PowerShell Web Access. Você pode usar ACLs (listas de controle de acesso) para determinar quais usuários têm acesso a pontos de extremidade específicos e restringir ainda mais o acesso ao ponto de extremidade para um conjunto específico de usuários, usando as regras de autorização descritas nesta seção. Para obter mais informações sobre runspaces restritos, consulte [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668) (Criando um runspace restrito).
 
 ### <a name="configuring-authorization-rules"></a>Configurando regras de autorização
 
 Provavelmente os administradores querem a mesma regra de autorização para usuários do Windows PowerShell Web Access que já estejam definidas no ambiente de gerenciamento remoto do Windows PowerShell. O primeiro procedimento nesta seção descreve como adiciona uma regra de autorização segura que concede acesso a um usuário (que faz logon para gerenciar um computador) em uma única configuração de sessão. O segundo procedimento descreve como remover uma regra de autorização que não é mais necessária.
 
-Se você pretende usar configurações de sessão personalizadas para permitir que usuários específicos trabalhem apenas dentro de runspaces restritos no Windows PowerShell Web Access, crie configurações de sessão personalizadas antes de adicionar regras de autorização que façam referência a elas. Não é possível usar os cmdlets do Windows PowerShell Web Access para criar configurações de sessão personalizadas. Para saber mais de como criar configurações de sessão personalizadas, confira [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Se você pretende usar configurações de sessão personalizadas para permitir que usuários específicos trabalhem apenas dentro de runspaces restritos no Windows PowerShell Web Access, crie configurações de sessão personalizadas antes de adicionar regras de autorização que façam referência a elas. Não é possível usar os cmdlets do Windows PowerShell Web Access para criar configurações de sessão personalizadas. Para saber mais de como criar configurações de sessão personalizadas, confira [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files).
 
 Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga, o asterisco ( \* ). Não há suporte aos caracteres-curinga com cadeias. Use um asterisco pro propriedade (usuários, computadores ou configurações de sessão).
 
@@ -111,23 +110,24 @@ Os cmdlets do Windows PowerShell Web Access dão suporte a um caractere curinga,
 
    Verifique se as configurações de sessão que você deseja usar já existem em suas regras.
 
-   Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+   Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configuration_files).
 
 3. Essa regra de autorização permite que um usuário específico acesse um computador na rede ao qual tipicamente tem acesso, com acesso a uma configuração de sessão específica, voltada para suas necessidades típicas de script e cmdlet. Digite o seguinte e pressione **Enter**.
 
-```
-Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `
-   -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
-```
+   ```
+   Add-PswaAuthorizationRule -UserName <domain\user | computer\user> `
+      -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+   ```
 
-- No exemplo a seguir, um usuário nomeado _JSmith_ no domínio _Contoso_ ganha acesso para gerenciar o computador _Contoso_214_ e usa uma configuração de sessão nomeada _NewAdminsOnly_.
+   - No exemplo a seguir, um usuário nomeado _JSmith_ no domínio _Contoso_ ganha acesso para gerenciar o computador _Contoso_214_ e usa uma configuração de sessão nomeada _NewAdminsOnly_.
 
-```powershell
-Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' `
-   -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
-```
+   ```powershell
+   Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' `
+      -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+   ```
 
-4. Verifique se a regra foi criada ao executar o cmdlet **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domínio\\usuário | computador\\usuário&gt; -ComputerName** &lt;nome_do_computador&gt;. Por exemplo, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
+4. Verifique se a regra foi criada executando o cmdlet **Get-PswaAuthorizationRule**, ou `Test-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName** <computer_name>`.
+   Por exemplo, `Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214`.
 
 #### <a name="to-remove-an-authorization-rule"></a>Para remover uma regra de autorização
 
@@ -135,27 +135,26 @@ Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' `
 
 2. Digite o seguinte e pressione **Enter**, em que *ID da regra* representa o número da ID exclusiva que você deseja remover.
 
-```
-Remove-PswaAuthorizationRule -ID <rule ID>
-```
+   ```
+   Remove-PswaAuthorizationRule -ID <rule ID>
+   ```
 
-De forma alternativa, se você não souber o número da ID, mas souber o nome amigável da regra que deseja remover, poderá obter o nome da regra e redirecioná-la para o cmdlet `Remove-PswaAuthorizationRule` para remover a regra, como mostrado no seguinte exemplo:
+   De forma alternativa, se você não souber o número da ID, mas souber o nome amigável da regra que deseja remover, poderá obter o nome da regra e redirecioná-la para o cmdlet `Remove-PswaAuthorizationRule` para remover a regra, como mostrado no seguinte exemplo:
 
-```
-Get-PswaAuthorizationRule `
-   -RuleName <rule-name> | Remove-PswaAuthorizationRule
-```
+   ```
+   Get-PswaAuthorizationRule `
+      -RuleName <rule-name> | Remove-PswaAuthorizationRule
+  ```
 
 > [!NOTE]
->
 > Você não precisará confirmar se deseja excluir a regra de autorização especificada; a regra será excluída quando você pressionar **Enter**. Verifique se deseja remover a regra de autorização antes de executar o cmdlet `Remove-PswaAuthorizationRule`.
 
 #### <a name="other-authorization-rule-scenario-examples"></a>Outros exemplos de cenários de regras de autorização
 
-Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não houver nenhuma configuração especificada para uma sessão, o Windows PowerShell usará a configuração de sessão interna padrão do Windows PowerShell, chamada Microsoft.PowerShell. A configuração de sessão padrão inclui todos os cmdlets disponíveis em um computador. Os administradores podem restringir o acesso a todos os computadores definindo uma sessão de configuração com um runspace restrito (um intervalo limitado de cmdlets e tarefas que seus usuários finais podem executar). Um usuário com acesso a um computador com acesso à linguagem completa ou somente aos cmdlets de gerenciamento remoto do Windows PowerShell poderá se conectar a outros computadores conectados ao primeiro computador. A definição de um runspace restrito pode evitar que usuários acessem outros computadores do runspace permitido do Windows PowerShell e aumentará a segurança do seu ambiente do Windows PowerShell Web Access. A configuração de sessão pode ser distribuída (por meio de Política de Grupo) entre todos os computadores que os administradores desejam tornar acessíveis através do Windows PowerShell Web Access. Para saber mais sobre configurações de sessão, confira [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx).
-Veja a seguir alguns exemplos desse cenário.
+Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não houver nenhuma configuração especificada para uma sessão, o Windows PowerShell usará a configuração de sessão interna padrão do Windows PowerShell, chamada Microsoft.PowerShell. A configuração de sessão padrão inclui todos os cmdlets disponíveis em um computador. Os administradores podem restringir o acesso a todos os computadores definindo uma sessão de configuração com um runspace restrito (um intervalo limitado de cmdlets e tarefas que seus usuários finais podem executar). Um usuário com acesso a um computador com acesso à linguagem completa ou somente aos cmdlets de gerenciamento remoto do Windows PowerShell poderá se conectar a outros computadores conectados ao primeiro computador. A definição de um runspace restrito pode evitar que usuários acessem outros computadores do runspace permitido do Windows PowerShell e aumentará a segurança do seu ambiente do Windows PowerShell Web Access. A configuração de sessão pode ser distribuída (por meio de Política de Grupo) entre todos os computadores que os administradores desejam tornar acessíveis através do Windows PowerShell Web Access. Para saber mais sobre configurações de sessão, confira [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Veja a seguir alguns exemplos desse cenário.
 
-- Um administrador cria um ponto de extremidade, chamado **PswaEndpoint**, com um runspace restrito. Em seguida, ele cria uma regra, **\*,\*,PswaEndpoint** e distribui o ponto de extremidade para outros computadores. A regra permite o acesso de todos os usuários a todos os computadores com o ponto de extremidade **PswaEndpoint**. Se essa for a única regra de autorização definida no conjunto de regras, os computadores sem esse ponto de extremidade não poderão ser acessados.
+- Um administrador cria um ponto de extremidade, chamado **PswaEndpoint**, com um runspace restrito. Em seguida, o administrador cria uma regra, `*,*,PswaEndpoint` e distribui o ponto de extremidade para outros computadores. A regra permite o acesso de todos os usuários a todos os computadores com o ponto de extremidade **PswaEndpoint**.
+  Se essa for a única regra de autorização definida no conjunto de regras, os computadores sem esse ponto de extremidade não poderão ser acessados.
 
 - O administrador criou um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e deseja restringir o acesso a usuários específicos. O administrador cria um grupo de usuários chamado **Level1Support** e define a seguinte regra: **Level1Support,\*,PswaEndpoint**. A regra concede acesso a todos os usuários no grupo **Level1Support** a todos os computadores com a configuração **PswaEndpoint**. De modo semelhante, o acesso pode ser restrito a um conjunto específico de computadores.
 
@@ -179,11 +178,11 @@ No cenário anterior, o Windows PowerShell Web Access só estabelece uma conexã
 
 1. Autenticação no servidor de gateway de grupo de trabalho adicionando um nome de usuário no formato *nome_do_servidor*\\*nome_de_usuário* à regra de autorização
 
-1. Autenticação no computador de destino usando credenciais alternativas fornecidas na página de entrada, na área **Configurações opcionais de conexão**
+2. Autenticação no computador de destino usando credenciais alternativas fornecidas na página de entrada, na área **Configurações opcionais de conexão**
 
    > [!NOTE]
-   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx") (Criando relações de confiança entre domínios e florestas).
-   > Para obter mais informações de como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, consulte [Gerenciamento remoto com gerenciador do servidor](https://technet.microsoft.com/library/dd759202.aspx)
+   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx) (Criando relações de confiança entre domínios e florestas).
+   > Para saber mais sobre como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, confira [Gerenciamento remoto com gerenciador de servidores](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Usando um único conjunto de regras de autorização para vários sites
 
@@ -193,11 +192,9 @@ O caminho para o arquivo XML de regras de autorização é armazenado no arquivo
 
 ## <a name="session-management"></a>Gerenciamento de sessões
 
-Por padrão, o Windows PowerShell Web Access limita um usuário a três sessões ao mesmo tempo. Você pode editar o arquivo **web.config** do aplicativo Web no Gerenciador do IIS para dar suporte a um número diferente de sessões por usuário.
-O caminho para o arquivo **web.config** é `$Env:Windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
+Por padrão, o Windows PowerShell Web Access limita um usuário a três sessões ao mesmo tempo. Você pode editar o arquivo **web.config** do aplicativo Web no Gerenciador do IIS para dar suporte a um número diferente de sessões por usuário. O caminho para o arquivo **web.config** é `$Env:Windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
 
-Por padrão, o servidor Web do IIS é configurado para reiniciar o pool de aplicativos quando alguma configuração é editada. Por exemplo, o pool de aplicativos é reiniciado quando são feitas alterações no arquivo **web.config**.
->Como o **Windows PowerShell Web Access** usa estados de sessão na memória, os usuários conectados a sessões do **Windows PowerShell Web Access** perdem suas sessões quando o pool de aplicativos é reiniciado.
+Por padrão, o servidor Web do IIS é configurado para reiniciar o pool de aplicativos quando alguma configuração é editada. Por exemplo, o pool de aplicativos é reiniciado quando são feitas alterações no arquivo **web.config**. >Como o **Windows PowerShell Web Access** usa estados de sessão na memória, >os usuários conectados a sessões do **Windows PowerShell Web Access** perdem suas sessões quando o pool de aplicativos é reiniciado.
 
 ### <a name="setting-default-parameters-on-the-sign-in-page"></a>Configurando parâmetros padrão na página de entrada
 
@@ -206,16 +203,16 @@ Se o gateway do Windows PowerShell Web Access estiver em execução no Windows S
 Por exemplo, a chave `defaultApplicationName`, mostrada no bloco de código a seguir, é o valor da variável preferencial **$PSSessionApplicationName** no computador de destino.
 
 ```xml
-    <appSettings>
-            <add key="maxSessionsAllowedPerUser" value="3"/>
-            <add key="defaultPortNumber" value="5985"/>
-            <add key="defaultSSLPortNumber" value="5986"/>
-            <add key="defaultApplicationName" value="WSMAN"/>
-            <add key="defaultUseSslSelection" value="0"/>
-            <add key="defaultAuthenticationType" value="0"/>
-            <add key="defaultAllowRedirection" value="0"/>
-            <add key="defaultConfigurationName" value="Microsoft.PowerShell"/>
-    </appSettings>
+  <appSettings>
+      <add key="maxSessionsAllowedPerUser" value="3"/>
+      <add key="defaultPortNumber" value="5985"/>
+      <add key="defaultSSLPortNumber" value="5986"/>
+      <add key="defaultApplicationName" value="WSMAN"/>
+      <add key="defaultUseSslSelection" value="0"/>
+      <add key="defaultAuthenticationType" value="0"/>
+      <add key="defaultAllowRedirection" value="0"/>
+      <add key="defaultConfigurationName" value="Microsoft.PowerShell"/>
+  </appSettings>
 ```
 
 ### <a name="time-outs-and-unplanned-disconnections"></a>Tempos limite e desconexões não planejadas

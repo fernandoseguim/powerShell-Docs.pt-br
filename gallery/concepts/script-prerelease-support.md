@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento de scripts
-ms.openlocfilehash: 7d4cec9d2b4ee5ad0b19ad5d9c68bb68747abd57
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 14ae1968e5ee73260b6eae05b11185069d047e93
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093841"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268459"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versões de pré-lançamento de scripts
 
@@ -45,12 +45,12 @@ Para usar um sufixo de pré-lançamento, a cadeia de caracteres de versão deve 
 - Um sufixo de pré-lançamento só poderá ser especificado quando a versão tiver três segmentos para Major.Minor.Build.
   Ela é alinhada ao SemVer v1.0.0
 - O sufixo de pré-lançamento é uma cadeia de caracteres que começa com um hífen e pode conter ASCII alfanuméricos [0-9A-Za-z-]
-- Somente as cadeias de caracteres de pré-lançamento SemVer v1.0.0 são compatíveis no momento, portanto o sufixo de pré-lançamento __não deve__ conter um ponto ou + [. +], que é permitido no SemVer 2.0
+- Somente as cadeias de caracteres de pré-lançamento SemVer v1.0.0 são compatíveis no momento, portanto o sufixo de pré-lançamento **não deve** conter um ponto ou + [. +], que é permitido no SemVer 2.0
 - Alguns exemplos de cadeias de caracteres PrereleaseString compatíveis são: -alpha, -alpha1, -BETA, -update20171020
 
-__Impacto na versão de pré-lançamento sobre a ordem de classificação e nas pastas de instalação__
+### <a name="prerelease-versioning-impact-on-sort-order-and-installation-folders"></a>Impacto na versão de pré-lançamento sobre a ordem de classificação e nas pastas de instalação
 
-A ordem de classificação é alterada ao usar uma versão de pré-lançamento, que é importante ao publicar na Galeria do PowerShell e ao instalar scripts usando comandos do PowerShellGet. Se duas versões de scripts com o número de versão existirem, a ordem de classificação será baseada na parte da cadeia de caracteres após o hífen. Portanto, a versão 2.5.0-alpha é menor que a versão 2.5.0-beta, que é menor que a versão 2.5.0-gamma. Se dois scripts tiverem o mesmo número de versão e somente um tiver um PrereleaseString, o script __sem__ o sufixo de pré-lançamento será considerado como a versão pronta para produção e será classificado como uma versão maior do que a versão de pré-lançamento. Por exemplo, ao comparar as versões 2.5.0 e 2.5.0-beta, a versão 2.5.0 será considerada a maior das duas.
+A ordem de classificação é alterada ao usar uma versão de pré-lançamento, que é importante ao publicar na Galeria do PowerShell e ao instalar scripts usando comandos do PowerShellGet. Se duas versões de scripts com o número de versão existirem, a ordem de classificação será baseada na parte da cadeia de caracteres após o hífen. Portanto, a versão 2.5.0-alpha é menor que a versão 2.5.0-beta, que é menor que a versão 2.5.0-gamma. Se dois scripts tiverem o mesmo número de versão e somente um tiver um PrereleaseString, o script **sem** o sufixo de pré-lançamento será considerado como a versão pronta para produção e será classificado como uma versão maior do que a versão de pré-lançamento. Por exemplo, ao comparar as versões 2.5.0 e 2.5.0-beta, a versão 2.5.0 será considerada a maior das duas.
 
 Ao publicar na Galeria do PowerShell, por padrão, a versão do script que está sendo publicado deverá ter uma versão maior do que qualquer versão previamente publicada na Galeria do PowerShell. Um editor pode atualizar a versão 2.5.0-alpha com 2.5.0-beta, ou com 2.5.0 (sem nenhum sufixo de pré-lançamento).
 
@@ -61,7 +61,7 @@ Para lidar com os itens de pré-lançamento usando os comandos PowerShellGet Fin
 As únicas exceções a isso nos comandos do script PowerShellGet são Get-InstalledScript, e alguns casos com Uninstall-Script.
 
 - Get-InstalledScript sempre mostrará as informações de pré-lançamento automaticamente na cadeia de caracteres de versão, se estiver presente.
-- Por padrão, o Uninstall-Script desinstalará a versão mais recente de um script se __nenhuma versão__ for especificada. Esse comportamento não mudou. No entanto, se uma versão de pré-lançamento for especificada usando -RequiredVersion, -AllowPrerelease será necessário.
+- Por padrão, o Uninstall-Script desinstalará a versão mais recente de um script se **nenhuma versão** for especificada. Esse comportamento não mudou. No entanto, se uma versão de pré-lançamento for especificada usando `-RequiredVersion`, `-AllowPrerelease` será necessário.
 
 ## <a name="examples"></a>Exemplos
 
@@ -83,13 +83,13 @@ Version        Name                                Repository           Descript
 # To install a prerelease, you must specify -AllowPrerelease. Specifying a prerelease version string is not sufficient.
 
 C:\windows\system32> Install-Script TestPackage -RequiredVersion 1.9.0-alpha
+
 PackageManagement\Find-Package : No match was found for the specified search criteria and script name 'TestPackage'.
 Try Get-PSRepository to see all available registered script repositories.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PSModule.psm1:1455 char:3
 +         PackageManagement\Find-Package @PSBoundParameters | Microsoft ...
 +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package], Exceptio
-   n
+    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage)[Find-Package], Exception
     + FullyQualifiedErrorId : NoMatchFoundForCriteria,Microsoft.PowerShell.PackageManagement.Cmdlets.FindPackage
 
 # The previous command failed because -AllowPrerelease was not specified.

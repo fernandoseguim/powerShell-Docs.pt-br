@@ -2,12 +2,12 @@
 ms.date: 06/20/2018
 keywords: DSC,powershell,configuração,instalação
 title: Recurso PackageManagement de DSC
-ms.openlocfilehash: 281aee13eb005f00b23c97870eaefaa332d9c232
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892494"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268085"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Recurso PackageManagement de DSC
 
@@ -39,8 +39,8 @@ PackageManagement [string] #ResourceName
 
 ## <a name="properties"></a>Propriedades
 
-|  Propriedade  |  Descrição   |
-|---|---|
+| Propriedade | Descrição |
+| --- | --- |
 | Nome| Especifica o nome do Pacote a ser instalado ou desinstalado.|
 | AdditionalParameters| Tabela de hash específica do provedor dos parâmetros que seria passado para o `Get-Package -AdditionalArguments`. Por exemplo, para o provedor do NuGet, você pode transmitir parâmetros adicionais, como DestinationPath.|
 | Ensure| Determina se o pacote deve ser instalado ou desinstalado.|
@@ -54,10 +54,11 @@ PackageManagement [string] #ResourceName
 ## <a name="additional-parameters"></a>Parâmetros Adicionais
 
 A tabela a seguir lista as opções para a propriedade AdditionalParameters.
-|  Parâmetro  | Descrição   |
-|---|---|
+
+| Parâmetro | Descrição |
+| --- | --- |
 | DestinationPath| Usada por provedores como o Nuget interno. Especifica o local de um arquivo onde você deseja que o pacote seja instalado.|
-| InstallationPolicy| Usada por provedores como o Nuget interno. Determina se você confia na origem do pacote. Um destes: "Não confiável", "Confiável".|
+| InstallationPolicy| Usada por provedores como o Nuget interno. Determina se você confia na origem do pacote. Um de: `Untrusted`, `Trusted`.|
 
 ## <a name="example"></a>Exemplo
 

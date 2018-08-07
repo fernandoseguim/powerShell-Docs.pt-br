@@ -4,18 +4,18 @@ keywords: powershell, cmdlet
 ms.date: 12/12/2016
 title: Add-PswaAuthorizationRule
 schema: 2.0.0
-ms.openlocfilehash: a8904ac36f7fd9fe3c649ad4ca709a98c31b63c3
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: bcf897730881551ec16ce970de6a1330961b67e6
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094221"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268258"
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
 ## <a name="synopsis"></a>SINOPSE
 
-Adiciona uma nova regra de autorização ao conjunto de regras de autorização do Windows PowerShell® Web Access.
+Adiciona uma nova regra de autorização ao conjunto de regras de autorização do Windows PowerShell Web Access.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,12 +45,11 @@ Add-PswaAuthorizationRule [-UserName] <String[]> [-ComputerName] <String> [-Conf
 
 ## <a name="description"></a>DESCRIÇÃO
 
-O cmdlet **Add-PswaAuthorizationRule** adiciona uma nova regra de autorização ao conjunto de regras de autorização do Windows PowerShell® Web Access.
+O cmdlet **Add-PswaAuthorizationRule** adiciona uma nova regra de autorização ao conjunto de regras de autorização do Windows PowerShell(r) Web Access.
 
 Você deve especificar os usuários, computadores e pontos de extremidade do Windows PowerShell para essa regra. Você pode especificar usuários e computadores por contas de usuário e nomes de computador individuais ou especificar grupos.
 
-Para um computador ingressado em um domínio do Active Directory, o cmdlet usa o SID (identificador de segurança) do computador para criar a regra.
-Isso permite que você use um nome curto, um FQDN (nome de domínio totalmente qualificado) ou um endereço IP para o campo **Nome do Computador** na página de entrada.
+Para um computador ingressado em um domínio do Active Directory, o cmdlet usa o SID (identificador de segurança) do computador para criar a regra. Isso permite que você use um nome curto, um FQDN (nome de domínio totalmente qualificado) ou um endereço IP para o campo **Nome do Computador** na página de entrada.
 
 Para um computador que não ingressou em um domínio do Active Directory, o cmdlet cria a regra usando o nome do computador fornecido pelo administrador. Para conectar-se com êxito a esse computador, o usuário final deve fornecer o nome do computador, exatamente como ele aparece na regra.
 
@@ -66,12 +65,12 @@ Especifica o nome de um grupo de computadores no AD DS (Active Directory Domain 
 
 |||
 |-|-|
-| Aliases                              | none                                 |
-| Necessário?                            | verdadeiro                                 |
-| Posição?                            | chamada                                |
-| Valor padrão                        | none                                 |
-| Aceitar entrada do pipeline?               | True (ByPropertyName)                |
-| Aceitar caracteres curinga?          | false                                |
+| Aliases                     | none                  |
+| Necessário?                   | verdadeiro                  |
+| Posição?                   | chamada                 |
+| Valor padrão               | none                  |
+| Aceitar entrada do pipeline?      | True (ByPropertyName) |
+| Aceitar caracteres curinga? | false                 |
 
 ### <a name="-computername-string"></a>-ComputerName \<String\>
 
@@ -79,12 +78,12 @@ Especifica o nome do computador ao qual esta regra concede acesso.
 
 |||
 |-|-|
-| Aliases                              | none                                 |
-| Necessário?                            | verdadeiro                                 |
-| Posição?                            | chamada                                |
-| Valor padrão                        | none                                 |
-| Aceitar entrada do pipeline?               | True (ByPropertyName)                |
-| Aceitar caracteres curinga?          | false                                |
+| Aliases                     | none                  |
+| Necessário?                   | verdadeiro                  |
+| Posição?                   | chamada                 |
+| Valor padrão               | none                  |
+| Aceitar entrada do pipeline?      | True (ByPropertyName) |
+| Aceitar caracteres curinga? | false                 |
 
 ### <a name="-configurationname-string"></a>-ConfigurationName \<String\>
 
@@ -92,12 +91,12 @@ Especifica o nome da configuração de sessão do Windows PowerShell, também co
 
 |||
 |-|-|
-| Aliases                              | none                                 |
-| Necessário?                            | verdadeiro                                 |
-| Posição?                            | chamada                                |
-| Valor padrão                        | none                                 |
-| Aceitar entrada do pipeline?               | True (ByPropertyName)                |
-| Aceitar caracteres curinga?          | false                                |
+| Aliases                     | none                  |
+| Necessário?                   | verdadeiro                  |
+| Posição?                   | chamada                 |
+| Valor padrão               | none                  |
+| Aceitar entrada do pipeline?      | True (ByPropertyName) |
+| Aceitar caracteres curinga? | false                 |
 
 ### <a name="-credential--pscredential"></a>-Credential \<PSCredential\>
 
@@ -105,17 +104,16 @@ Especifica um objeto **PSCredential** para uma conta de usuário que você desej
 
 |||
 |-|-|
-| Aliases                              | none                                 |
-| Necessário?                            | false                                |
-| Posição?                            | chamada                                |
-| Valor padrão                        | none                                 |
-| Aceitar entrada do pipeline?               | false                                |
-| Aceitar caracteres curinga?          | false                                |
+| Aliases                     | none  |
+| Necessário?                   | false |
+| Posição?                   | chamada |
+| Valor padrão               | none  |
+| Aceitar entrada do pipeline?      | false |
+| Aceitar caracteres curinga? | false |
 
 ### <a name="-force"></a>-Force
 
-Força o comando a ser executado sem solicitar confirmação do usuário.\
-Além disso, ele também solicita confirmação quando você insere um nome do computador curto ou simples (como um nome que não seja um nome de domínio ou não seja totalmente qualificado). A confirmação é solicitada por motivos de segurança, de modo que você apenas possa usar o nome simples para adicionar um computador se o computador estiver em um grupo de trabalho.
+Força o comando a ser executado sem solicitar a confirmação do usuário. Além disso, ele também solicita confirmação quando você insere um nome do computador curto ou simples (como um nome que não seja um nome de domínio ou não seja totalmente qualificado). A confirmação é solicitada por motivos de segurança, de modo que você apenas possa usar o nome simples para adicionar um computador se o computador estiver em um grupo de trabalho.
 
 |||
 |-|-|
@@ -154,8 +152,7 @@ Especifica o nome de um ou mais grupos de usuários no AD DS ou grupos locais ao
 
 ### <a name="-username-string"></a>-UserName \<String\[\]\>
 
-Especifica um ou mais usuários aos quais essa regra concede acesso. O nome de usuário pode ser uma conta de usuário local no computador do gateway ou um usuário no AD DS.
-O formato é `domain\user` ou `computer\user`.
+Especifica um ou mais usuários aos quais essa regra concede acesso. O nome de usuário pode ser uma conta de usuário local no computador do gateway ou um usuário no AD DS. O formato é `domain\user` ou `computer\user`.
 
 |||
 |-|-|
@@ -168,7 +165,9 @@ O formato é `domain\user` ou `computer\user`.
 
 ###  <a name="commonparameters"></a>\<CommonParameters\>
 
-Esse cmdlet oferece suporte aos parâmetros comuns: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer e -OutVariable.
+Esse cmdlet oferece suporte aos parâmetros comuns:
+
+-Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer e -OutVariable.
 Para obter mais informações, consulte [about_CommonParameters](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_commonparameters).
 
 ## <a name="inputs"></a>ENTRADAS
@@ -194,9 +193,9 @@ Este cmdlet retorna o objeto de regra de autorização.
 Este exemplo concede acesso à configuração de sessão _PSWAEndpoint_, um runspace restrito no _srv2_ para os usuários no grupo _SMAdmins_.
 
 > [!NOTE]
-> O nome do computador deve ser um FQDN (nome de domínio totalmente qualificado). Os administradores definem uma configuração de sessão restrita ou um runspace, que é um intervalo limitado de cmdlets e tarefas que os usuários finais podem executar. A definição de um runspace restrito pode evitar que usuários acessem outros computadores que não estejam no runspace permitido do Windows PowerShell®, oferecendo assim uma conexão mais segura. Para obter mais informações sobre as configurações de sessão, consulte [about_Session_Configurations](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) ou [Instalar e usar o Windows PowerShell Web Access](../install-and-use-windows-powershell-web-access.md).
+> O nome do computador deve ser um FQDN (nome de domínio totalmente qualificado). Os administradores definem uma configuração de sessão restrita ou um runspace, que é um intervalo limitado de cmdlets e tarefas que os usuários finais podem executar. A definição de um runspace restrito pode evitar que usuários acessem outros computadores que não estejam no runspace permitido do Windows PowerShell(r), oferecendo assim uma conexão mais segura. Para saber mais sobre as configurações de sessão, confira [about_Session_Configurations](/powershell/module/microsoft.powershell.core/about/about_session_configurations) ou [Instalar e usar o Windows PowerShell Web Access](../install-and-use-windows-powershell-web-access.md).
 
-```PowerShell
+```powershell
 Add-PswaAuthorizationRule -ComputerName srv2.contoso.com -UserGroupName contoso\SMAdmins -ConfigurationName PSWAEndpoint
 ```
 
@@ -204,8 +203,8 @@ Add-PswaAuthorizationRule -ComputerName srv2.contoso.com -UserGroupName contoso\
 
 Este exemplo concede acesso à configuração de sessão padrão do Windows PowerShell, `Microsoft.PowerShell`, no *srv2* para os usuários chamados `contoso\user1`, `contoso\user2` e `contoso\user3`. Esse cmdlet cria três regras (uma por pessoa).
 
-```PowerShell
-Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user3 –ComputerName srv2.contoso.com -ConfigurationName Microsoft.PowerShell
+```powershell
+Add-PswaAuthorizationRule -UserName contoso\user1, contoso\user2, contoso\user3 -ComputerName srv2.contoso.com -ConfigurationName Microsoft.PowerShell
 ```
 
 ### <a name="example-3"></a>EXEMPLO 3
@@ -213,18 +212,18 @@ Add-PswaAuthorizationRule –UserName contoso\user1, contoso\user2, contoso\user
 Este exemplo ilustra como inserir valores de nome de usuário por meio do pipeline.
 
 ```powershell
-"contoso\user1","contoso\user2" | Add-pswaAuthorizationRule –ComputerName srv2.contoso.com –ConfigurationName Microsoft.PowerShell
+"contoso\user1","contoso\user2" | Add-pswaAuthorizationRule -ComputerName srv2.contoso.com -ConfigurationName Microsoft.PowerShell
 ```
 
 ### <a name="example-4"></a>EXEMPLO 4
 
 Este exemplo ilustra como todos os parâmetros obtêm os valores do pipeline pelo nome da propriedade.
 
-````PowerShell
+````powershell
 $o = New-Object -TypeName PSObject |
     Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru |
     Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru |
-    Add-Member -Type NoteProperty -Name "ConfigurationName" -Value "Microsoft.PowerShell" –PassThru
+    Add-Member -Type NoteProperty -Name "ConfigurationName" -Value "Microsoft.PowerShell" -PassThru
 
 $o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Microsoft.PowerShell
 ````
@@ -236,19 +235,18 @@ Este exemplo adiciona uma regra para permitir que o usuário local chamado `Pswa
 Este exemplo ilustra um cenário em que o gateway está em um grupo de trabalho e o computador de destino está em um domínio. A regra de autorização aplica-se aos usuários locais no gateway. Na página de logon do Windows PowerShell Web Access, para autenticar-se com êxito, o usuário deve fornecer um segundo conjunto de credenciais na área **Configurações opcionais de conexão**. O servidor de gateway usa o conjunto adicional de credenciais para autenticar o usuário no computador de destino, um servidor chamado *srv1.contoso.com*.
 
 ````powershell
-Add-PswaAuthorizationRule –UserName PswaServer\ChrisLocal –ComputerName srv1.contoso.com –ConfigurationName Microsoft.PowerShell
+Add-PswaAuthorizationRule -UserName PswaServer\ChrisLocal -ComputerName srv1.contoso.com -ConfigurationName Microsoft.PowerShell
 ````
 
 ### <a name="example-6"></a>EXEMPLO 6
 
-Este exemplo permite que todos os usuários acessem todos os pontos de extremidade em todos os computadores.
-Essa opção basicamente desativa as regras de autorização.
+Este exemplo permite que todos os usuários acessem todos os pontos de extremidade em todos os computadores. Essa opção basicamente desativa as regras de autorização.
 
 > [!NOTE]
 > O uso do caractere curinga `*` não é recomendado para implantações que exigem um alto nível de segurança e só deve ser considerado para ambientes de teste ou usado em implantações nas quais a segurança possa ser reduzida.
 
-````PowerShell
-Add-PswaAuthorizationRule –UserName * -ComputerName * -ConfigurationName *
+````powershell
+Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *
 ````
 
 ## <a name="see-also"></a>Consulte Também
