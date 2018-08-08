@@ -1,3 +1,14 @@
+---
+title: Uso do Visual Studio Code para desenvolvimento do PowerShell
+description: Uso do Visual Studio Code para desenvolvimento do PowerShell
+ms.date: 08/06/2018
+ms.openlocfilehash: f8e1e9af257037fc7bd74549e4197c9a1695e952
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587424"
+---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
 Além do [PowerShell ISE][ise], o PowerShell também tem suporte no Visual Studio Code.
