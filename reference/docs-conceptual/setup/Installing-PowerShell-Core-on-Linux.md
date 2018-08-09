@@ -1,8 +1,19 @@
+---
+title: Instalar o PowerShell Core no Linux
+description: Informações sobre a instalação do PowerShell Core em diversas distribuições Linux
+ms.date: 08/06/2018
+ms.openlocfilehash: a6b0e3003f84ea6dc99cffcc7edf1b5b6963aa21
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587441"
+---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
-É compatível com [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.10][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.3][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] e [Arch Linux][arch].
+É compatível com [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 18.10][u18], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.3][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] e [Arch Linux][arch].
 
-Em distribuições Linux sem suporte oficial, tente usar o [PowerShell AppImage][lai].
+Em distribuições Linux sem suporte oficial, tente usar o [Pacote Snap do PowerShell][snap].
 Além disso, tente implantar binários do PowerShell diretamente usando o arquivo [`tar.gz` do Linux][tar], mas você precisaria configurar as dependências necessárias com base no sistema operacional em etapas separadas.
 
 Todos os pacotes estão disponíveis na nossa página [versões][] do GitHub.
@@ -10,7 +21,7 @@ Depois de instalar o pacote, execute `pwsh` em um terminal.
 
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
-[u17]: #ubuntu-1710
+[u18]: #ubuntu-1810
 [u18]: #ubuntu-1804
 [deb8]: #debian-8
 [deb9]: #debian-9
@@ -19,7 +30,7 @@ Depois de instalar o pacote, execute `pwsh` em um terminal.
 [opensuse]: #opensuse-423
 [fedora]: #fedora
 [arch]: #arch-linux
-[lai]: #linux-appimage
+[snap]: #snap-package
 [tar]: #binary-archives
 
 ## <a name="installing-preview-releases"></a>Instalando versões prévias
@@ -132,56 +143,6 @@ sudo apt-get install -f
 sudo apt-get remove powershell
 ```
 
-## <a name="ubuntu-1710"></a>Ubuntu 17.10
-
-> [!NOTE]
-> Foi adicionado suporte para o Ubuntu 17.04 após `6.1.0-preview.2`
-
-### <a name="installation-via-package-repository---ubuntu-1710"></a>Instalação por meio do repositório de pacotes – Ubuntu 17.10
-
-O PowerShell Core para Linux é publicado nos repositórios de pacote para facilitar a instalação (e as atualizações).
-Essa é a opção preferencial.
-
-```sh
-# Import the public repository GPG keys
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-
-# Register the Microsoft Ubuntu repository
-sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/17.10/prod.list
-
-# Update the list of products
-sudo apt-get update
-
-# Install PowerShell
-sudo apt-get install -y powershell
-
-# Start PowerShell
-pwsh
-```
-
-Depois de registrar o repositório Microsoft uma vez como superusuário, daí em diante, você só precisa usar `sudo apt-get upgrade powershell` para atualizá-lo.
-
-### <a name="installation-via-direct-download---ubuntu-1710"></a>Instalação por meio de download direto – Ubuntu 17.10
-
-Baixe o pacote Debian `powershell_6.0.2-1.ubuntu.17.10_amd64.deb` da página [versões][] no computador Ubuntu.
-
-Em seguida, execute o seguinte no terminal:
-
-```sh
-sudo dpkg -i powershell_6.0.2-1.ubuntu.17.10_amd64.deb
-sudo apt-get install -f
-```
-
-> [!NOTE]
-> O comando `dpkg -i` falha com dependências não atendidas.
-> O próximo comando, `apt-get install -f`, resolve esses problemas e, em seguida, conclui a configuração do pacote do PowerShell.
-
-### <a name="uninstallation---ubuntu-1710"></a>Desinstalação – Ubuntu 17.10
-
-```sh
-sudo apt-get remove powershell
-```
-
 ## <a name="ubuntu-1804"></a>Ubuntu 18.04
 
 > [!NOTE]
@@ -231,6 +192,14 @@ sudo apt-get install -f
 ```sh
 sudo apt-get remove powershell
 ```
+
+## <a name="ubuntu-1810"></a>Ubuntu 18.10
+
+> [!NOTE]
+> Foi adicionado suporte para o Ubuntu 18.10 após `6.1.0-preview.3`.
+> Como o 18.10 é um build diário, ele tem suporte apenas pela comunidade.
+
+A instalação no 18.10 é compatível por meio do `snapd`. Veja [Pacote Snap][snap] para obter instruções completas;
 
 ## <a name="debian-8"></a>Debian 8
 
@@ -550,6 +519,33 @@ Para obter mais informações sobre a instalação de pacotes usando o AUR, veja
 [arch-release]: https://aur.archlinux.org/packages/powershell/
 [arch-git]: https://aur.archlinux.org/packages/powershell-git/
 [arch-bin]: https://aur.archlinux.org/packages/powershell-bin/
+
+## <a name="snap-package"></a>Pacote Snap
+
+### <a name="getting-snapd"></a>Usando o Snap
+
+O `snapd` é necessário para executar snaps.  Use [estas instruções](https://docs.snapcraft.io/core/install) para garantir que você tem o `snapd` instalado.
+
+### <a name="installation-via-snap"></a>Instalação por meio do Snap
+
+O PowerShell Core para Linux é publicado na [Snap Store](https://snapcraft.io/store) para facilitar a instalação (e as atualizações).
+Essa é a opção preferencial.
+
+```sh
+# Install PowerShell
+sudo snap install powershell-preview --classic
+
+# Start PowerShell
+pwsh-preview
+```
+
+Depois de instalado o Snap atualizará automaticamente, mas você poderá disparar uma atualização usando `sudo snap refresh powershell-preview`.
+
+### <a name="uninstallation"></a>Desinstalação
+
+```sh
+sudo snap remove powershell-preview
+```
 
 ## <a name="linux-appimage"></a>Linux AppImage
 

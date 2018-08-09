@@ -1,3 +1,14 @@
+---
+title: Novidades no PowerShell Core 6.0
+description: Novos recursos e alterações liberados no PowerShell Core 6.0
+ms.date: 08/06/2018
+ms.openlocfilehash: f0cddad223528cd0f2b4f392faeb6e08e1050c51
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587237"
+---
 # <a name="whats-new-in-powershell-core-60"></a>Novidades no PowerShell Core 6.0
 
 O [PowerShell Core 6.0][github] é uma nova edição do PowerShell multiplataformas (Windows, macOS e Linux), de software livre e criado para ambientes heterogêneos e a nuvem híbrida.
@@ -380,7 +391,7 @@ Encontre mais informações sobre como usamos esses dados nesta [postagem no blo
 [.NET Standard]: https://docs.microsoft.com/dotnet/standard/net-standard
 [.NET Blog]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
-[perguntas frequentes]: https://github.com/dotnet/standard/blob/master/docs/faq.md
+[Perguntas frequentes]: https://github.com/dotnet/standard/blob/master/docs/faq.md
 [CDXML]: https://msdn.microsoft.com/library/jj542525(v=vs.85).aspx
 [docker-hub]: https://hub.docker.com/r/microsoft/powershell/
 [docker]: https://github.com/PowerShell/PowerShell/tree/master/docker

@@ -1,3 +1,14 @@
+---
+title: Ciclo de vida de suporte do PowerShell Core
+description: Políticas que regem o suporte ao PowerShell Core
+ms.date: 08/06/2018
+ms.openlocfilehash: 2e0ca1b9c133e6f316a40aff13365d0489059165
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587152"
+---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo de vida de suporte do PowerShell Core
 
 O PowerShell Core é um conjunto distinto de ferramentas e componentes que é enviado, instalado e configurado separadamente do Windows PowerShell.
@@ -44,7 +55,8 @@ As plataformas listadas como `Experimental` não têm suporte oficialmente, mas 
 | Windows Server 2008 R2, 2012 R2, 2016             | Suportado   | Suportado   |
 | [Windows Server Canal Semestral][semi-annual] | Suportado   | Suportado   |
 | Ubuntu 14.04 e 16.04                           | Suportado   | Suportado   |
-| Ubuntu 17.10 e 18.04                           |             | Suportado   |
+| Ubuntu 18.04                                      |             | Suportado   |
+| Ubuntu 18.10 (por meio do pacote Snap)                   |             | Comunidade   |
 | Debian 8.7+ e 9+                                | Suportado   | Suportado   |
 | CentOS 7                                          | Suportado   | Suportado   |
 | Red Hat Enterprise Linux 7                        | Suportado   | Suportado   |
@@ -56,6 +68,10 @@ As plataformas listadas como `Experimental` não têm suporte oficialmente, mas 
 | Raspbian                                          | Experimental| Comunidade   |
 | Kali                                              | Comunidade   | Comunidade   |
 | AppImage (funciona em várias plataformas Linux)     | Comunidade   | Comunidade   |
+| [Pacote Snap](https://snapcraft.io/powershell)   | Consultar a observação    | Consultar a observação    |
+
+> [!NOTE]
+> Pacotes Snap estarão em fase experimental por um período.  Depois que estivermos confiantes de que não surgirão novos problemas de suporte para o Snap, o suporte seguirá a distribuição na qual você está executando o pacote.
 
 ## <a name="platform-which-are-out-of-support"></a>Plataforma sem suporte
 
@@ -65,13 +81,14 @@ Portanto, o suporte para as versões a seguir foi finalizado pelos proprietário
 
 | SO       | Versão | Fim de vida                                                                                 |
 |----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 26      | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| Fedora   | 25      | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
 | Fedora   | 24      | [Agosto de 2017](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| openSUSE | 42.2    | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
+| Fedora   | 25      | [Dezembro de 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
+| Fedora   | 26      | [Maio de 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
 | openSUSE | 42.1    | [Maio de 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| Ubuntu   | 17.04   | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| openSUSE | 42.2    | [Janeiro de 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
 | Ubuntu   | 16.10   | [Julho de 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
+| Ubuntu   | 17.04   | [Janeiro de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| Ubuntu   | 17.10   | [Julho de 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
 
 ## <a name="notes-on-licensing"></a>Observações sobre o licenciamento
 
