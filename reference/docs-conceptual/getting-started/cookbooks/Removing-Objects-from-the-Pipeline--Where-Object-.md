@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Removendo objetos do pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: 46f210e1418098f4809174cd975ab8d783580285
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753831"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587135"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Removendo objetos do pipeline (Where-Object)
 
@@ -38,7 +38,7 @@ Devido a considerações de análise, símbolos como <, > e = não são usados c
 |-contains|Contém|1,2,3 -contains 1|
 |-notcontains|Não contém|1,2,3 -notcontains 4|
 
-Blocos de script Where-Object usam a variável especial '$_' para fazer referência ao objeto atual no pipeline. Veja um exemplo de como isso funciona. Se tiver uma lista de números e só quiser retornar aqueles inferiores a três, você poderá usar Where-Object para filtrar os números digitando:
+Blocos de script Where-Object usam a variável especial `$_` para fazer referência ao objeto atual no pipeline. Veja um exemplo de como isso funciona. Se tiver uma lista de números e só quiser retornar aqueles inferiores a três, você poderá usar Where-Object para filtrar os números digitando:
 
 ```
 PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
@@ -48,7 +48,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 
 ### <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades de objeto
 
-Como $_ se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
+Como `$_` se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
 
 Por exemplo, podemos ver a classe Win32_SystemDriver no WMI. Pode haver centenas de drivers do sistema em um determinado sistema, mas você pode só estar interessado em um determinado conjunto de drivers do sistema, como aqueles que estão sendo executados. Se usar Get-Member para exibir os membros de Win32_SystemDriver (**Get-WmiObject -Class Win32_SystemDriver | Get-Member -MemberType Property**), você verá que a propriedade relevante é State e que ela tem um valor "Running" quando o driver está sendo executado. Você pode filtrar os drivers do sistema selecionando apenas aqueles em execução digitando:
 
