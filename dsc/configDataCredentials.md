@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Opções de Credenciais nos Dados de Configuração
-ms.openlocfilehash: 12bb8d8ce5fc4685e583e74d411b098320ac4fd4
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 890dbd01ae37ca5834070961ffd693aa811dbaa2
+ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093670"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43133099"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opções de Credenciais nos Dados de Configuração
 >Aplica-se a: Windows PowerShell 5.0
@@ -88,7 +88,7 @@ configuration unencryptedPasswordDemo
     Node "TestMachine2"
     {
         # Now we'll use a node-specific password to this machine
-        $password = $Node.LocalPass | ConvertTo-SecureString -asPlainText -Force
+        $password = $Node.LocalPassword | ConvertTo-SecureString -asPlainText -Force
         $username = $node.UserName
         [PSCredential] $nodeCred = New-Object System.Management.Automation.PSCredential($username,$password)
 
@@ -105,7 +105,7 @@ configuration unencryptedPasswordDemo
 
         Group addToAdmin
         {
-            Credential = $domain
+            Credential = $promptedCreds
             GroupName = "Administrators"
             DependsOn = "[User]User2"
             Ensure = "Present"
