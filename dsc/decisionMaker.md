@@ -1,7 +1,7 @@
 ---
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
-title: Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão
+title: Visão Geral da Desired State Configuration para Tomadores de Decisão
 ms.openlocfilehash: 7c36aa5fadeab8bcb381f316288d102b5ce402e2
 ms.sourcegitcommit: ac20e0faaa37142e9c6e4507a21df2f4a3fdbece
 ms.translationtype: HT
@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/10/2018
 ms.locfileid: "44339830"
 ---
-# <a name="desired-state-configuration-overview-for-decision-makers"></a>Visão Geral da Configuração de Estado Desejado para Tomadores de Decisão
+# <a name="desired-state-configuration-overview-for-decision-makers"></a>Visão Geral da Desired State Configuration para Tomadores de Decisão
 
 Este documento descreve os benefícios comerciais do uso da DSC (Desired State Configuration) do Windows PowerShell. Não é um guia técnico.
 
-## <a name="what-is-desired-state-configuration"></a>Qual é a Configuração de Estado Desejado?
+## <a name="what-is-desired-state-configuration"></a>Qual é a Desired State Configuration?
 
 A Desired State Configuration do PowerShell é uma plataforma de gerenciamento de configuração interna do Windows que se baseia em padrões abertos. A DSC é flexível o suficiente para funcionar de maneira confiável e consistente em cada estágio do ciclo de vida de implantação (desenvolvimento, teste, pré-produção, produção), bem como durante a expansão.
 
@@ -24,7 +24,7 @@ Essas características podem ser tão simples quanto assegurar que um recurso es
 A DSC também tem monitoramento e emissão de relatórios internos.
 Se um sistema não for mais compatível, a DSC poderá gerar um alerta e agir para corrigir o sistema.
 
-## <a name="benefits-of-using-desired-state-configuration"></a>Benefícios do Uso da Configuração de Estado Desejado
+## <a name="benefits-of-using-desired-state-configuration"></a>Benefícios do Uso da Desired State Configuration
 
 As configurações são concebidas para serem fáceis de ler, armazenar e atualizar.
 As configurações declaram o estado em que os dispositivos de destino devem estar, em vez de escrever instruções de como usá-los nesse estado.
@@ -37,7 +37,7 @@ Por sua vez, agiliza e torna as implantações mais confiáveis, o que permite u
 As configurações também podem ser compartilhadas por meio da [Galeria do PowerShell](https://powershellgallery.com), o que significa que talvez já existam cenários comuns e práticas recomendadas para o trabalho necessário.
 
 
-## <a name="desired-state-configuration-and-devops"></a>Configuração de Estado Desejado e DevOps
+## <a name="desired-state-configuration-and-devops"></a>Desired State Configuration e DevOps
 
 A DSC foi projetada com [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) em mente, uma combinação de pessoas, processos e ferramentas que permitem implantar e iterar rapidamente visando fornecer valor a usuários finais internos ou externos.
 Com uma única configuração definindo um ambiente, os desenvolvedores podem codificar seus requisitos em uma única configuração e verificar essa configuração no controle do código-fonte. Assim, as equipes de operações podem implantar facilmente o código sem precisar realizar processos manuais propensos a erro.
@@ -49,7 +49,7 @@ As configurações também são [controladas por dados](configData.md), o que aj
 A DSC pode ser usada para gerenciar implantações locais e externas.
 Para soluções locais, a DSC tem um [servidor pull](pullServer.md) que pode ser utilizado para centralizar o gerenciamento de máquinas e relatar seu status.
 Para soluções de nuvem, a DSC é útil onde quer que o Windows seja utilizável.
-Também há ofertas específicas do Azure integradas na Configuração de Estado Desejado, como a [Automação do Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), que centraliza os relatórios de DSC.
+Também há ofertas específicas do Azure integradas na Desired State Configuration, como a [Automação do Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), que centraliza os relatórios de DSC.
 
 ## <a name="dsc-and-compatibility"></a>DSC e Compatibilidade
 
