@@ -1,37 +1,43 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Obtendo informações sobre comandos
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: c51579fe2cdf4f2a0d3248d1aaf3f1f9cac83868
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 7af83e3a0e776d96e580b442430357b4ea063a72
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482719"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353163"
 ---
-# <a name="getting-information-about-commands"></a><span data-ttu-id="cc51b-103">Obtendo informações sobre comandos</span><span class="sxs-lookup"><span data-stu-id="cc51b-103">Getting Information About Commands</span></span>
-<span data-ttu-id="cc51b-104">O cmdlet `Get-Command` do Windows PowerShell obtém todos os comandos disponíveis na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="cc51b-104">The Windows PowerShell `Get-Command` cmdlet gets all commands that are available in your current session.</span></span> <span data-ttu-id="cc51b-105">Ao digitar `Get-Command` em um prompt do PowerShell, você verá uma saída semelhante à seguinte:</span><span class="sxs-lookup"><span data-stu-id="cc51b-105">When you type `Get-Command` at a PowerShell prompt, you will see output similar to the following:</span></span>
+# <a name="getting-information-about-commands"></a><span data-ttu-id="b24a4-103">Obtendo informações sobre comandos</span><span class="sxs-lookup"><span data-stu-id="b24a4-103">Getting information about commands</span></span>
 
-```
-PS> Get-Command
-CommandType     Name                            Definition
------------     ----                            ----------
-Cmdlet          Add-Content                     Add-Content [-Path] <String[...
-Cmdlet          Add-History                     Add-History [[-InputObject] ...
-Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
+<span data-ttu-id="b24a4-104">O `Get-Command` do PowerShell exibe os comandos disponíveis na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="b24a4-104">The PowerShell `Get-Command` displays commands that are available in your current session.</span></span>
+<span data-ttu-id="b24a4-105">Ao executar o cmdlet `Get-Command`, você verá algo semelhante à seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="b24a4-105">When you run the `Get-Command` cmdlet, you see something similar to the following output:</span></span>
+
+```output
+CommandType     Name                    Version    Source
+-----------     ----                    -------    ------
+Cmdlet          Add-Computer            3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-Content             3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Add-History             3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-JobTrigger          1.1.0.0    PSScheduledJob
+Cmdlet          Add-LocalGroupMember    1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Add-Member              3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Add-PSSnapin            3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-Type                3.1.0.0    Microsoft.PowerShell.Utility
 ...
 ```
 
-<span data-ttu-id="cc51b-106">Esta saída se parece muito como a saída de Ajuda do Cmd.exe: um resumo tabular de comandos internos.</span><span class="sxs-lookup"><span data-stu-id="cc51b-106">This output looks a lot like the Help output of Cmd.exe: a tabular summary of internal commands.</span></span> <span data-ttu-id="cc51b-107">No trecho da saída do comando **Get-Command** mostrado acima, todos os comandos mostrados tem um CommandType do Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cc51b-107">In the excerpt of the **Get-Command** command output shown above, every command shown has a CommandType of Cmdlet.</span></span> <span data-ttu-id="cc51b-108">Um cmdlet é o tipo de comando intrínseco do Windows PowerShell; um tipo que corresponde aproximadamente aos comandos **dir** e **cd** de Cmd.exe e shells integrados do UNIX, como BASH.</span><span class="sxs-lookup"><span data-stu-id="cc51b-108">A cmdlet is Windows PowerShell's intrinsic command type - a type that corresponds roughly to the **dir** and **cd** commands of Cmd.exe and to built-ins in UNIX shells such as BASH.</span></span>
+<span data-ttu-id="b24a4-106">Esta saída se parece muito como a saída de Ajuda do **cmd.exe**: um resumo tabular de comandos internos.</span><span class="sxs-lookup"><span data-stu-id="b24a4-106">This output looks a lot like the Help output of **cmd.exe**: a tabular summary of internal commands.</span></span> <span data-ttu-id="b24a4-107">No trecho do resultado do comando `Get-Command` mostrado acima, todos os comandos mostrados têm um CommandType de Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b24a4-107">In the excerpt of the `Get-Command` command output shown above, every command shown has a CommandType of Cmdlet.</span></span> <span data-ttu-id="b24a4-108">Um cmdlet é o tipo de comando intrínseco do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b24a4-108">A cmdlet is PowerShell's intrinsic command type.</span></span> <span data-ttu-id="b24a4-109">Este tipo corresponde aproximadamente a comandos como `dir` e `cd` no **cmd.exe** ou aos comandos internos de shells de Unix, como bash.</span><span class="sxs-lookup"><span data-stu-id="b24a4-109">This type corresponds roughly to commands like `dir` and `cd` in **cmd.exe** or the built-in commands of Unix shells like bash.</span></span>
 
-<span data-ttu-id="cc51b-109">Na saída do comando `Get-Command`, todas as definições terminam com reticências (...) para indicar que o PowerShell não consegue exibir todo o conteúdo no espaço disponível.</span><span class="sxs-lookup"><span data-stu-id="cc51b-109">In the output of the `Get-Command` command, all the definitions end with ellipses (...) to indicate that PowerShell cannot display all the content in the available space.</span></span> <span data-ttu-id="cc51b-110">Quando o Windows PowerShell exibe a saída, ele formata o resultado como texto e o organiza para ajustar os dados corretamente na janela.</span><span class="sxs-lookup"><span data-stu-id="cc51b-110">When Windows PowerShell displays output, it formats the output as text and then arranges it to make the data fit cleanly into the window.</span></span> <span data-ttu-id="cc51b-111">Falaremos sobre isso mais tarde na seção sobre formatadores.</span><span class="sxs-lookup"><span data-stu-id="cc51b-111">We will talk about this later in the section on formatters.</span></span>
+<span data-ttu-id="b24a4-110">O cmdlet `Get-Command` tem um parâmetro **Syntax** que retorna a sintaxe de cada cmdlet.</span><span class="sxs-lookup"><span data-stu-id="b24a4-110">The `Get-Command` cmdlet has a **Syntax** parameter that returns syntax of each cmdlet.</span></span> <span data-ttu-id="b24a4-111">O exemplo a seguir mostra como obter a sintaxe do cmdlet `Get-Help`:</span><span class="sxs-lookup"><span data-stu-id="b24a4-111">The following example shows how to get the syntax of the `Get-Help` cmdlet:</span></span>
 
-<span data-ttu-id="cc51b-112">O cmdlet `Get-Command` tem um parâmetro **Syntax** que obtém a sintaxe de cada cmdlet.</span><span class="sxs-lookup"><span data-stu-id="cc51b-112">The `Get-Command` cmdlet has a **Syntax** parameter that gets the syntax of each cmdlet.</span></span> <span data-ttu-id="cc51b-113">Para obter a sintaxe do cmdlet Get-Help, use o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="cc51b-113">To get the syntax of the Get-Help cmdlet, use the following command:</span></span>
-
-```
+```powershell
 Get-Command Get-Help -Syntax
+```
 
+```output
 Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component <String[]>] [-Functionality <String[]>]
  [-Role <String[]>] [-Full] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 
@@ -45,35 +51,44 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### <a name="displaying-available-command-types"></a><span data-ttu-id="cc51b-114">Exibindo tipos de comando disponíveis</span><span class="sxs-lookup"><span data-stu-id="cc51b-114">Displaying Available Command Types</span></span>
-<span data-ttu-id="cc51b-115">O comando **Get-Command** não lista todos os comandos disponíveis no Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cc51b-115">The **Get-Command** command does not list every command that is available in Windows PowerShell.</span></span> <span data-ttu-id="cc51b-116">Em vez disso, o comando **Get-Command** lista somente os cmdlets da sessão atual.</span><span class="sxs-lookup"><span data-stu-id="cc51b-116">Instead, the **Get-Command** command lists only the cmdlets in the current session.</span></span> <span data-ttu-id="cc51b-117">Na verdade, o Windows PowerShell oferece suporte a vários outros tipos de comandos.</span><span class="sxs-lookup"><span data-stu-id="cc51b-117">Windows PowerShell actually supports several other types of commands.</span></span> <span data-ttu-id="cc51b-118">Aliases, funções e scripts também são comandos do Windows PowerShell, embora eles não sejam discutidos em detalhes no Guia do Usuário do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cc51b-118">Aliases, functions, and scripts are also Windows PowerShell commands, although they are not discussed in detail in the Windows PowerShell User's Guide.</span></span> <span data-ttu-id="cc51b-119">Arquivos externos executáveis ou que possuem um manipulador do tipo de arquivo registrado também são classificados como comandos.</span><span class="sxs-lookup"><span data-stu-id="cc51b-119">External files that are executable, or have a registered file type handler, are also classified as commands.</span></span>
+## <a name="displaying-available-command-by-type"></a><span data-ttu-id="b24a4-112">Exibir o comando disponível por tipo</span><span class="sxs-lookup"><span data-stu-id="b24a4-112">Displaying available command by type</span></span>
 
-<span data-ttu-id="cc51b-120">Para obter todos os comandos na sessão, digite:</span><span class="sxs-lookup"><span data-stu-id="cc51b-120">To get all commands in the session, type:</span></span>
+<span data-ttu-id="b24a4-113">O comando `Get-Command` lista somente os cmdlets na sessão atual.</span><span class="sxs-lookup"><span data-stu-id="b24a4-113">The `Get-Command` command lists only the cmdlets in the current session.</span></span> <span data-ttu-id="b24a4-114">Na verdade, o PowerShell dá suporte a vários outros tipos de comandos:</span><span class="sxs-lookup"><span data-stu-id="b24a4-114">PowerShell actually supports several other types of commands:</span></span>
+
+- <span data-ttu-id="b24a4-115">Aliases</span><span class="sxs-lookup"><span data-stu-id="b24a4-115">Aliases</span></span>
+- <span data-ttu-id="b24a4-116">Funções</span><span class="sxs-lookup"><span data-stu-id="b24a4-116">Functions</span></span>
+- <span data-ttu-id="b24a4-117">Scripts</span><span class="sxs-lookup"><span data-stu-id="b24a4-117">Scripts</span></span>
+
+<span data-ttu-id="b24a4-118">Arquivos externos executáveis, ou arquivos que possuem um manipulador de tipo de arquivo registrado, também são classificados como comandos.</span><span class="sxs-lookup"><span data-stu-id="b24a4-118">External executable files, or files that have a registered file type handler, are also classified as commands.</span></span>
+
+<span data-ttu-id="b24a4-119">Para obter todos os comandos na sessão, digite:</span><span class="sxs-lookup"><span data-stu-id="b24a4-119">To get all commands in the session, type:</span></span>
 
 ```powershell
 Get-Command *
 ```
 
-<span data-ttu-id="cc51b-121">Como essa lista inclui arquivos externos em seu caminho de pesquisa, ela pode conter milhares de itens.</span><span class="sxs-lookup"><span data-stu-id="cc51b-121">Because this list includes external files in your search path, it may contain thousands of items.</span></span> <span data-ttu-id="cc51b-122">É mais útil examinar um conjunto reduzido de comandos.</span><span class="sxs-lookup"><span data-stu-id="cc51b-122">It is more useful to look at a reduced set of commands.</span></span>
-
-<span data-ttu-id="cc51b-123">Para obter comandos nativos de outros tipos, use o parâmetro **CommandType** do cmdlet `Get-Command`.</span><span class="sxs-lookup"><span data-stu-id="cc51b-123">To get native commands of other types, use the **CommandType** parameter of the `Get-Command` cmdlet.</span></span>
+<span data-ttu-id="b24a4-120">Essa lista inclui comandos externos em seu caminho de pesquisa, portanto pode conter milhares de itens.</span><span class="sxs-lookup"><span data-stu-id="b24a4-120">This list includes external commands in your search path so it can contain thousands of items.</span></span>
+<span data-ttu-id="b24a4-121">É mais útil examinar um conjunto reduzido de comandos.</span><span class="sxs-lookup"><span data-stu-id="b24a4-121">It is more useful to look at a reduced set of commands.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cc51b-124">O asterisco (\*) é usado para correspondência de curingas nos argumentos de comando do Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="cc51b-124">The asterisk (\*) is used for wildcard matching in Windows PowerShell command arguments.</span></span> <span data-ttu-id="cc51b-125">O \* corresponde a “um ou mais caracteres quaisquer”.</span><span class="sxs-lookup"><span data-stu-id="cc51b-125">The \* means "match one or more of any characters".</span></span> <span data-ttu-id="cc51b-126">Você pode digitar `Get-Command a*` para encontrar todos os comandos que começam com a letra "a".</span><span class="sxs-lookup"><span data-stu-id="cc51b-126">You can type `Get-Command a*` to find all commands that begin with the letter "a".</span></span> <span data-ttu-id="cc51b-127">Diferentemente da correspondência de curingas no Cmd.exe, curingas do Windows PowerShell também serão compatíveis com um ponto.</span><span class="sxs-lookup"><span data-stu-id="cc51b-127">Unlike wildcard matching in Cmd.exe, Windows PowerShell's wildcard will also match a period.</span></span>
+> <span data-ttu-id="b24a4-122">O asterisco (\*) é usado para correspondência de curingas nos argumentos de comando do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b24a4-122">The asterisk (\*) is used for wildcard matching in PowerShell command arguments.</span></span> <span data-ttu-id="b24a4-123">O \* corresponde a “um ou mais caracteres quaisquer”.</span><span class="sxs-lookup"><span data-stu-id="b24a4-123">The \* means "match one or more of any characters".</span></span> <span data-ttu-id="b24a4-124">Você pode digitar `Get-Command a*` para encontrar todos os comandos que começam com a letra "a".</span><span class="sxs-lookup"><span data-stu-id="b24a4-124">You can type `Get-Command a*` to find all commands that begin with the letter "a".</span></span> <span data-ttu-id="b24a4-125">Diferentemente da correspondência de curingas no **cmd.exe**, curingas do PowerShell também serão compatíveis com um ponto.</span><span class="sxs-lookup"><span data-stu-id="b24a4-125">Unlike wildcard matching in **cmd.exe**, PowerShell's wildcard will also match a period.</span></span>
 
-<span data-ttu-id="cc51b-128">Para obter os aliases de comando, que são os apelidos atribuídos a comandos, digite:</span><span class="sxs-lookup"><span data-stu-id="cc51b-128">To get command aliases, which are the assigned nicknames of commands, type:</span></span>
+<span data-ttu-id="b24a4-126">Use o parâmetro **CommandType** de `Get-Command` para obter comandos nativos de outros tipos.</span><span class="sxs-lookup"><span data-stu-id="b24a4-126">Use the **CommandType** parameter of `Get-Command` to get native commands of other types.</span></span>
+<span data-ttu-id="b24a4-127">.</span><span class="sxs-lookup"><span data-stu-id="b24a4-127">cmdlet.</span></span>
+
+<span data-ttu-id="b24a4-128">Para obter os aliases de comando, que são os apelidos atribuídos a comandos, digite:</span><span class="sxs-lookup"><span data-stu-id="b24a4-128">To get command aliases, which are the assigned nicknames of commands, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Alias
 ```
 
-<span data-ttu-id="cc51b-129">Para obter as funções na sessão atual, digite:</span><span class="sxs-lookup"><span data-stu-id="cc51b-129">To get the functions in the current session, type:</span></span>
+<span data-ttu-id="b24a4-129">Para obter as funções na sessão atual, digite:</span><span class="sxs-lookup"><span data-stu-id="b24a4-129">To get the functions in the current session, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Function
 ```
 
-<span data-ttu-id="cc51b-130">Para exibir os scripts no caminho de pesquisa do Windows PowerShell, digite:</span><span class="sxs-lookup"><span data-stu-id="cc51b-130">To display scripts in Windows PowerShell's search path, type:</span></span>
+<span data-ttu-id="b24a4-130">Para exibir os scripts no caminho de pesquisa do PowerShell, digite:</span><span class="sxs-lookup"><span data-stu-id="b24a4-130">To display scripts in PowerShell's search path, type:</span></span>
 
 ```powershell
 Get-Command -CommandType Script
