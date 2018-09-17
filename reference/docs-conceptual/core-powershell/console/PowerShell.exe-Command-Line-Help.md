@@ -1,14 +1,14 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/14/2018
 keywords: powershell, cmdlet
 title: Ajuda da linha de comando do PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: 60b6a7e310821a4092b0972b7abbdae0e2d5f738
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c7f35511e876e8e5189d8a2b949555603d43f731
+ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952572"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43133065"
 ---
 # <a name="powershellexe-command-line-help"></a>Ajuda da linha de comando do PowerShell.exe
 
@@ -49,12 +49,9 @@ Define a política de execução padrão para a sessão atual e o salva-a na var
 
 ### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
 
-Executa o script especificado no escopo local ("dot-sourced") para que as funções e variáveis que o script criar estejam disponíveis na sessão atual. Insira o caminho do arquivo de script e quaisquer parâmetros. **File** deve ser o último parâmetro no comando, pois todos os caracteres digitados após nome do parâmetro **File** são interpretados como o caminho do arquivo de script seguido pelos parâmetros do script e seus valores.
+Executa o script especificado no escopo local ("dot-sourced") para que as funções e variáveis que o script criar estejam disponíveis na sessão atual. Insira o caminho do arquivo de script e quaisquer parâmetros. **File** deve ser o último parâmetro no comando. Todos os valores digitados após o parâmetro **-File** são interpretados como o caminho do arquivo de script e os parâmetros passados para esse script.
 
-Você pode incluir os parâmetros de um script e os valores de parâmetro no valor do parâmetro **File**. Por exemplo: `-File .\Get-Script.ps1 -Domain Central` Observe que os parâmetros passados para o script são passados como cadeias de caracteres literais (após a interpretação do shell atual).
-Por exemplo, se você estiver no cmd.exe e quiser para passar um valor de variável de ambiente, use a sintaxe do cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` Se você usar a sintaxe do PowerShell, neste exemplo, o script receberá o literal "$env:windir" e não o valor dessa variável de ambiente: `powershell -File .\test.ps1 -Sample $env:windir`
-
-Normalmente, os parâmetros de opção de um script são incluídos ou omitidos. Por exemplo, o comando a seguir usa o parâmetro **All** do arquivo de script Get-Script.ps1: `-File .\Get-Script.ps1 -All`
+Os parâmetros passados para o script são passados como cadeias de caracteres literais (após a interpretação do shell atual). Por exemplo, se você estiver no cmd.exe e quiser para passar um valor de variável de ambiente, use a sintaxe do cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` Neste exemplo, o script recebe a cadeia de caracteres literal `$env:windir` e não o valor dessa variável de ambiente: `powershell -File .\test.ps1 -Sample $env:windir`
 
 ### <a name="-inputformat-text--xml"></a>\-InputFormat {Texto | XML}
 
@@ -66,7 +63,7 @@ Inicia o PowerShell usando um multi-threaded apartment. Este parâmetro é intro
 
 ### <a name="-noexit"></a>-NoExit
 
-Não é encerrado depois de executar comandos de inicialização.
+Não sai depois de executar comandos de inicialização.
 
 ### <a name="-nologo"></a>-NoLogo
 
@@ -98,7 +95,7 @@ Inicia a versão especificada do PowerShell. A versão que você especificar dev
 
 Se o PowerShell 3.0 não estiver instalado, o único valor válido será "2.0". Outros valores são ignorados.
 
-Para saber mais, confira "[Instalando o Windows PowerShell](../../setup/installing-windows-powershell.md)".
+Para saber mais, consulte [Instalar o Windows PowerShell](../../setup/installing-windows-powershell.md).
 
 ### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
 
@@ -106,12 +103,12 @@ Define o estilo da janela da sessão. Os valores válidos são Normal, Minimized
 
 ### <a name="-command"></a>-Command
 
-Executa os comandos especificados (e quaisquer parâmetros) como se eles fossem digitados no prompt de comando do PowerShell e, em seguida, encerra a sessão, a menos que o parâmetro NoExit seja especificado.
-Basicamente, qualquer texto após `-Command` é enviado como uma única linha de comando para o PowerShell (que é diferente de como `-File` manipula os parâmetros enviados para um script).
+Executa os comandos especificados (com quaisquer parâmetros) como se eles fossem digitados no prompt de comando do PowerShell. Após a execução, o PowerShell é encerrado, a menos que o parâmetro `-NoExit` tenha sido especificado.
+Qualquer texto após `-Command` é enviado como uma única linha de comando para o PowerShell. Isso é diferente de como o `-File` manipula os parâmetros enviados a um script.
 
 O valor do Comando pode ser "-", uma cadeia de caracteres. ou um bloco de script. Se o valor do comando for "-", o texto do comando será lido da entrada padrão.
 
-Blocos de script devem ser colocados entre chaves ({}). Será possível especificar um bloco de script apenas quando o PowerShell.exe no PowerShell estiver em execução. Os resultados do script são retornados para o shell pai como objetos XML desserializados, não objetos vivos.
+Os blocos de script devem ser colocados entre chaves ({}). Será possível especificar um bloco de script apenas quando o PowerShell.exe no PowerShell estiver em execução. Os resultados do script são retornados para o shell pai como objetos XML desserializados, não objetos vivos.
 
 Se o valor do comando for uma cadeia de caracteres, **Command** deverá ser o último parâmetro no comando, pois qualquer caractere digitado depois do comando será interpretado como os argumentos do comando.
 
@@ -121,11 +118,11 @@ Para gravar uma cadeia de caracteres que executa um comando do PowerShell, use o
 "& {<command>}"
 ```
 
-no qual as aspas indicam uma cadeia de caracteres e o operador de invocação (&) faz com que o comando seja executado.
+As aspas indicam uma cadeia de caracteres e o operador de invocação (&) faz com que o comando seja executado.
 
 ### <a name="-help---"></a>-Help, -?, /?
 
-Mostra esta mensagem. Se você estiver digitando um comando do PowerShell.exe no PowerShell, adicione um hífen (-) ao início dos parâmetros do comando, não uma barra (/). Você pode usar um hífen ou uma barra "/" no Cmd.exe.
+Mostra a sintaxe de powershell.exe. Se você estiver digitando um comando do PowerShell.exe no PowerShell, adicione um hífen (-) ao início dos parâmetros do comando, não uma barra (/). Você pode usar um hífen ou uma barra "/" no Cmd.exe.
 
 > [!NOTE]
 > Observação de solução de problemas: no PowerShell 2.0, a inicialização de alguns programas no console do Windows PowerShell falha com um LastExitCode 0xc0000142.
