@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Usando JEA
-ms.openlocfilehash: 891e4be4c3fadceeff5ede7ac5cab04a5f80e5c1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 539d280aff0b2656a5e9c710acfa468057753027
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190070"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522983"
 ---
 # <a name="using-jea"></a>Usando JEA
 
@@ -106,14 +106,14 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 ```
 
 Também é possível manter os cmdlets do proxy da comunicação remota implícita, usando o [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
-Para obter mais informações sobre a comunicação remota implícita, consulte a documentação de ajuda para [Import-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) e [Import-Module](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/import-module).
+Para obter mais informações sobre a comunicação remota implícita, consulte a documentação de ajuda para [Import-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) e [Import-Module](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/import-module).
 
 ## <a name="using-jea-programatically"></a>Usando o JEA de forma programática
 
 O JEA também pode ser usado em sistemas de automação e em aplicativos de usuário, como aplicativos de assistência técnica interna e sites da Web.
 A abordagem é a mesma que a da criação de aplicativos que se comunicam com pontos de extremidade irrestritos do PowerShell, com a ressalva de que o programa deve estar ciente de que o JEA está limitando os comandos que podem ser executados na sessão remota.
 
-Para tarefas simples e únicas, você pode usar [Invoke-Command](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/invoke-command) para executar um conjunto de comandos usando o JEA.
+Para tarefas simples e únicas, você pode usar [Invoke-Command](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/invoke-command) para executar um conjunto de comandos usando o JEA.
 
 ```powershell
 Invoke-Command -ComputerName 'SERVER01' -ConfigurationName 'JEAMaintenance' -ScriptBlock { Get-Process; Get-Service }
@@ -126,14 +126,14 @@ $allowedCommands = Invoke-Command -ComputerName 'SERVER01' -ConfigurationName 'J
 $allowedCommands | Where-Object { $_.CommandType -in 'Function', 'Cmdlet' } | Format-Table Name, Parameters
 ```
 
-Se estiver compilando um aplicativo C#, você pode criar um runspace do PowerShell que se conecta a uma sessão JEA, especificando o nome da configuração em um objeto [WSManConnectionInfo](https://msdn.microsoft.com/en-us/library/system.management.automation.runspaces.wsmanconnectioninfo(v=vs.85).aspx).
+Se estiver compilando um aplicativo C#, você pode criar um runspace do PowerShell que se conecta a uma sessão JEA, especificando o nome da configuração em um objeto [WSManConnectionInfo](https://msdn.microsoft.com/library/system.management.automation.runspaces.wsmanconnectioninfo(v=vs.85).aspx).
 
 ```csharp
 
 // using System.Management.Automation;
 var computerName = "SERVER01";
 var configName   = "JEAMaintenance";
-var creds        = // create a PSCredential object here (https://msdn.microsoft.com/en-us/library/system.management.automation.pscredential(v=vs.85).aspx)
+var creds        = // create a PSCredential object here (https://msdn.microsoft.com/library/system.management.automation.pscredential(v=vs.85).aspx)
 
 WSManConnectionInfo connectionInfo = new WSManConnectionInfo(
                     false,                 // Use SSL
@@ -168,7 +168,7 @@ using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 
 ## <a name="using-jea-with-powershell-direct"></a>Usando o JEA com o PowerShell Direct
 
-O Hyper-V no Windows 10 e o Windows Server 2016 oferecem o [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), um recurso que permite aos administradores do Hyper-V gerenciar máquinas virtuais com o PowerShell, independentemente da configuração da rede ou das configurações de gerenciamento remoto na máquina virtual.
+O Hyper-V no Windows 10 e o Windows Server 2016 oferecem o [PowerShell Direct](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/vmsession), um recurso que permite aos administradores do Hyper-V gerenciar máquinas virtuais com o PowerShell, independentemente da configuração da rede ou das configurações de gerenciamento remoto na máquina virtual.
 
 É possível usar o PowerShell Direct com o JEA para conceder acesso limitado a um administrador de Hyper-V à sua VM, o que pode ser útil se a conectividade de rede com sua VM for perdida e for necessário que um administrador de datacenter corrija as configurações de rede.
 

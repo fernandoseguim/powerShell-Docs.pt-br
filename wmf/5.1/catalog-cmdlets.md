@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Cmdlets de Catálogo
-ms.openlocfilehash: 7eaca09667af0eb5d719f23e987bb112e8514978
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: ec5fc866fe27a894b23b93d3ea46ad9c0cba288e
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189060"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522881"
 ---
 # <a name="catalog-cmdlets"></a>Cmdlets de Catálogo
 
-Adicionamos dois novos cmdlets no módulo [Microsoft.Powershell.Secuity](https://technet.microsoft.com/en-us/library/hh847877.aspx) para gerar e validar os arquivos de catálogo do Windows.
+Adicionamos dois novos cmdlets no módulo [Microsoft.Powershell.Secuity](https://technet.microsoft.com/library/hh847877.aspx) para gerar e validar os arquivos de catálogo do Windows.
 
 ## <a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
@@ -49,5 +49,5 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 ![](../images/TestFileCatalog.jpg)
 
 Esse cmdlet compara os hashes de todos os arquivos e seus caminhos relativos encontrados no arquivo de catálogo, com os hashes e caminhos dos arquivos salvos em disco. Se detectar qualquer incompatibilidade entre os hashes e caminhos de arquivo, será retornado o status de `ValidationFailed`.
-Os usuários podem recuperar todas essas informações usando o comutador `Detailed`. O status da assinatura do catálogo é exibido como o campo `Signature`, que é o mesmo que chamar o cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) no arquivo de catálogo.
+Os usuários podem recuperar todas essas informações usando o comutador `Detailed`. O status da assinatura do catálogo é exibido como o campo `Signature`, que é o mesmo que chamar o cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) no arquivo de catálogo.
 Os usuários também podem ignorar qualquer arquivo durante a validação usando o parâmetro `FilesToSkip`.

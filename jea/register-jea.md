@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Registrando Configurações de JEA
-ms.openlocfilehash: cda899b20378b0183a3d88ecfd593aaf7356e967
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188506"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522825"
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 
@@ -57,7 +57,7 @@ Você pode excluir o arquivo de configuração de sessão a qualquer momento; el
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configuração de vários computadores com o DSC
 
-Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples é usar o recurso [Configuração de Estado Desejado](https://msdn.microsoft.com/en-us/powershell/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
+Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples é usar o recurso [Configuração de Estado Desejado](https://msdn.microsoft.com/powershell/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
 
 Para implantar o JEA com o DSC, você precisará garantir que os seguintes pré-requisitos sejam atendidos:
 - Um ou mais recursos de função foram criados e adicionados a um módulo de PowerShell válido.
@@ -110,7 +110,7 @@ Configuration JEAMaintenance
 }
 ```
 
-Essa configuração pode ser aplicada em um sistema [invocando diretamente o Gerenciador de Configurações Local](https://msdn.microsoft.com/en-us/powershell/dsc/metaconfig) ou atualizando a [configuração do servidor de pull](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver).
+Essa configuração pode ser aplicada em um sistema [invocando diretamente o Gerenciador de Configurações Local](https://msdn.microsoft.com/powershell/dsc/metaconfig) ou atualizando a [configuração do servidor de pull](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 O recurso DSC também permite que você substitua o ponto de extremidade de comunicação remota padrão Microsoft.PowerShell.
 Se você fizer isso, o recurso registrará automaticamente um ponto de extremidade irrestrito de backup chamado "Microsoft.PowerShell.Restricted", que tem a ACL do WinRM padrão (permitindo que Usuários de Gerenciamento Remoto e membros do grupo local de Administradores o acessem).

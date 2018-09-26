@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,instalação
 title: Melhorias da DSC no WMF 5.1
-ms.openlocfilehash: 32bdde6d43d17cc76c454fe10b00097753a9eebe
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
+ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309535"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523003"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Melhorias na DSC (Configuração de Estado Desejado) no WMF 5.1
 
@@ -154,7 +154,7 @@ Set-DscLocalConfigurationManager -Path .\RegistrationMetaConfig -Verbose
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usando a PsDscRunAsCredential com os recursos de composição da DSC
 
-Adicionamos um suporte para usar a [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) com os recursos de [Composição](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) da DSC.
+Adicionamos um suporte para usar a [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) com os recursos de [Composição](https://msdn.microsoft.com/powershell/dsc/authoringresourcecomposite) da DSC.
 
 Agora, você pode especificar o valor para a PsDscRunAsCredential ao usar recursos de composição nas configurações.
 Quando especificado, todos os recursos serão executados em um recurso de composição como um usuário RunAs.
@@ -162,7 +162,7 @@ Se o recurso de composição chamar outro recurso de composição, todos os seus
 As credenciais RunAs são propagadas para qualquer nível da hierarquia do recurso de composição.
 Se qualquer recurso dentro de um recurso de composição especificar seu próprio valor para a PsDscRunAsCredential, ocorrerá um erro de mesclagem durante a compilação da configuração.
 
-Este exemplo mostra o uso com o recurso de composição [WindowsFeatureSet](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_newresources) incluído no módulo PSDesiredStateConfiguration.
+Este exemplo mostra o uso com o recurso de composição [WindowsFeatureSet](https://msdn.microsoft.com/powershell/wmf/dsc_newresources) incluído no módulo PSDesiredStateConfiguration.
 
 ```powershell
 Configuration InstallWindowsFeature

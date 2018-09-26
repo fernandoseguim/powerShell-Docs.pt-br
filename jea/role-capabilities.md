@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Recursos de Função JEA
-ms.openlocfilehash: 0531baa284e66a42a162329ea20ecfdca6d0b526
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190529"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522932"
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
 
@@ -181,9 +181,9 @@ As funções definidas em arquivos de capacidade de função ainda estão sujeit
 
 O Select-Object é um cmdlet padrão, restrito em todas as sessões JEA que não permite que você selecione propriedades arbitrárias em objetos.
 Para usar o Select-Object irrestrito nas funções, você deve solicitar explicitamente a implementação completa, especificando o FQMN.
-Qualquer cmdlet restrito em uma sessão JEA exibirá o mesmo comportamento ao ser invocado de uma função, em acordo com a [precedência de comando](https://msdn.microsoft.com/en-us/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) do PowerShell.
+Qualquer cmdlet restrito em uma sessão JEA exibirá o mesmo comportamento ao ser invocado de uma função, em acordo com a [precedência de comando](https://msdn.microsoft.com/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) do PowerShell.
 
-Se você estiver escrevendo muitas funções personalizadas, poderá ser mais fácil colocá-las em um [Módulo de Script do PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
+Se você estiver escrevendo muitas funções personalizadas, poderá ser mais fácil colocá-las em um [Módulo de Script do PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 Em seguida, você pode tornar essas funções visíveis na sessão JEA, usando o campo VisibleFunctions, assim como faria com módulos internos e de terceiros.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Colocar recursos de função em um módulo
@@ -207,7 +207,7 @@ New-Item -ItemType Directory $rcFolder
 Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
-Consulte [Noções básicas sobre um Módulo do PowerShell](https://msdn.microsoft.com/en-us/library/dd878324.aspx) para obter mais informações sobre módulos do PowerShell, manifestos de módulo e sobre a variável de ambiente PSModulePath.
+Consulte [Noções básicas sobre um Módulo do PowerShell](https://msdn.microsoft.com/library/dd878324.aspx) para obter mais informações sobre módulos do PowerShell, manifestos de módulo e sobre a variável de ambiente PSModulePath.
 
 ## <a name="updating-role-capabilities"></a>Atualizando recursos de função
 
