@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Auditoria e relatórios no JEA (Just Enough Administration)
-ms.openlocfilehash: e68206cd6fe94c51507f42ae2c3e6702f6fd4e0f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2388c735840d8d3683aa8bc9869b9fb0371e5902
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188845"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851213"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Auditoria e relatórios no JEA (Just Enough Administration)
 
@@ -128,7 +128,7 @@ Machine: SERVER01 (Microsoft Windows NT 10.0.14393.0)
 
 No corpo da transcrição são registradas as informações sobre cada comando invocado pelo usuário.
 A sintaxe exata do comando que foi executado pelo usuário não está disponível nas sessões JEA devido à maneira como os comandos são transformados para a comunicação remota do PowerShell, no entanto, você ainda poderá determinar o comando efetivo que foi executado.
-Abaixo está um exemplo de trecho de transcrição de um usuário executando `Get-Service Dns` em uma sessão JEA:
+Abaixo está um exemplo de snippet de transcrição de um usuário executando `Get-Service Dns` em uma sessão JEA:
 
 ```
 PS>CommandInvocation(Get-Service): "Get-Service"
@@ -149,5 +149,4 @@ Os detalhes desse objeto estão impressos algumas linhas abaixo, imitando de per
 
 ## <a name="see-also"></a>Consulte também
 
-- [Auditar ações de usuário em uma sessão JEA](audit-and-report.md)
 - [*Postagem no blog sobre segurança* PowerShell ♥ the Blue Team](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
