@@ -1,13 +1,13 @@
 ---
 ms.date: 06/05/2017
-keywords: PowerShell, cmdlet
+keywords: powershell, cmdlet
 title: Mais aprendizado sobre o PowerShell
-ms.openlocfilehash: b0e17a6894468696365e5a553e6ffccfaa8eb499
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: 17f96620bbb483ca580d351584d5650a6734b876
+ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289201"
 ---
 # <a name="more-powershell-learning"></a>Mais aprendizado sobre o PowerShell
 
@@ -17,29 +17,30 @@ Outras fontes para aprender sobre o PowerShell
 
 Além da Ajuda disponível na linha de comando, os seguintes recursos fornecem mais informações para usuários que desejam executar o Windows PowerShell.
 
-- [Blog da equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/). O melhor recurso para aprender diretamente com a equipe de produto do Windows PowerShell.
-- [Conexão do cliente do Windows PowerShell](http://Connect.Microsoft.com/PowerShell). Faça uma sugestão, envie comentários ou registre um bug para a equipe do Windows PowerShell. Você poderá enviar um bug de código, um erro de documentação ou um bug de localização (tradução).
+- [Blog da equipe do Windows PowerShell](https://blogs.msdn.microsoft.com/powershell/). O melhor recurso para aprender diretamente com a equipe de produto do Windows PowerShell.
 - [O blog Hey, Scripting Guy! ](https://blogs.technet.microsoft.com/heyscriptingguy/) publica novos conteúdos sete dias por semana, sendo constantemente classificado dentre os cinco melhores blogs da Microsoft. Os artigos são direcionados a cenários comuns e escritos com uma abordagem dinâmica e envolvente.
 - [A página Learn PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) é o hub do Windows PowerShell no Script Center do TechNet. Esta página apresenta uma série de sessões de vídeos para iniciantes conduzida pelo Microsoft Scripting Guy Ed Wilson. Ela também contém testes e links para conteúdo da comunidade do Windows PowerShell e muito mais.
-- Dúvidas sobre como usar o Windows PowerShell? Conecte-se a centenas de pessoas com interesses semelhantes no [Fórum oficial do Scripting Guys](http://social.technet.microsoft.com/forums/itcg/threads/).
-- [O Script Center da Microsoft](https://technet.microsoft.com/scriptcenter). Um portal para muitos recursos úteis de Windows PowerShell, incluindo o [Repositório do Script Center](http://gallery.technet.microsoft.com/scriptcenter/). Uma das melhores maneiras de aprender a criar scripts é ver exemplos em ação. Pesquisa dentre os milhares de scripts do Windows PowerShell, todos prontos para você avaliar e adaptar para atender às suas necessidades.
-- Envolva-se com a comunidade de usuários do Windows PowerShell. Consulte na [Página da comunidade do Script Center](https://technet.microsoft.com/scriptcenter/hh182567.aspx) a localização de dezenas de grupos de usuários do Windows PowerShell – provavelmente, há um perto de você. Além disso, mantenha-se atualizado com as atividades da comunidade do Microsoft Scripting Guy.
+- Dúvidas sobre como usar o Windows PowerShell? Conecte-se a centenas de pessoas com interesses semelhantes no [fórum do PowerShell na TechNet](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).
 
 ## <a name="video-training"></a>Treinamento em vídeo
 
 ### <a name="microsoft-virtual-academy"></a>Microsoft Virtual Academy
+
 - [Introdução de início rápido ao PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
-- [Ferramentas avançadas e scripts com o início rápido do PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8231)
+- [Ferramentas avançadas e scripts com o início rápido do PowerShell 3.0](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
 
 ### <a name="script-center-learn"></a>Aprendizado da Central de Scripts
+
 #### <a name="windows-powershell-essentials-for-the-busy-admin-series"></a>Fundamentos do Windows PowerShell para a série de Administradores Ocupados
-- [PowerShell 'SmowerShell': por que você deve conhecer o Windows PowerShell &#40;Parte 1&#41;](http://dlbmodigital.microsoft.com/webcasts/wmv/23976_Dnl_L.wmv)
-- [Ouvi pelo pipeline: como compor os comandos do Windows PowerShell para diversão e lucro &#40;Parte 2&#41;](http://dlbmodigital.microsoft.com/webcasts/wmv/23977_Dnl_L.wmv)
-- [Provedor exclusivo? Dificilmente não: uma análise dos fornecedores do Windows PowerShell &#40;Parte 3&#41;](http://dlbmodigital.microsoft.com/webcasts/wmv/23978_Dnl_L.wmv)
-- [O evento principal: o Windows PowerShell faz logs de eventos &#40;Parte 4&#41;](http://dlbmodigital.microsoft.com/webcasts/wmv/23979_Dnl_L.wmv)
-- [Mais do que remotamente possível: usando o Windows PowerShell para gerenciar a área de trabalho remota &#40;Parte 5&#41;](http://dlbmodigital.microsoft.com/webcasts/wmv/23980_Dnl_L.wmv)
+
+- [PowerShell 'SmowerShell': por que você deve conhecer o Windows PowerShell, Parte 1](http://dlbmodigital.microsoft.com/webcasts/wmv/23976_Dnl_L.wmv)
+- [Ouvi pelo pipeline: como compor os comandos do Windows PowerShell para diversão e lucro, Parte 2](http://dlbmodigital.microsoft.com/webcasts/wmv/23977_Dnl_L.wmv)
+- [Provedor exclusivo? Dificilmente não: uma análise dos fornecedores do Windows PowerShell, Parte 3](http://dlbmodigital.microsoft.com/webcasts/wmv/23978_Dnl_L.wmv)
+- [O evento principal: o Windows PowerShell faz logs de eventos, Parte 4](http://dlbmodigital.microsoft.com/webcasts/wmv/23979_Dnl_L.wmv)
+- [Mais do que remotamente possível: usando o Windows PowerShell para gerenciar a área de trabalho remota, Parte 5](http://dlbmodigital.microsoft.com/webcasts/wmv/23980_Dnl_L.wmv)
 
 #### <a name="learn-it-now-before-its-an-emergency"></a>Aprenda agora antes que seja uma emergência
+
 - [Windows PowerShell: Aprenda agora antes que seja uma emergência – Parte 1](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481530_Dnl_L.wmv)
 - [Windows PowerShell: Aprenda agora antes que seja uma emergência – Parte 2](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481542_Dnl_L.wmv)
 - [Windows PowerShell: Aprenda agora antes que seja uma emergência – Parte 3](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481548_Dnl_L.wmv)

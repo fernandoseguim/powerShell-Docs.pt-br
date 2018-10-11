@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de itens que afetam a interface do usuário da Galeria do PowerShell
-ms.openlocfilehash: 60415193129fe040b53d35b1f8701408cfc4989d
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: e7e9910504a665e464add0a83454cec64c1a0937
+ms.sourcegitcommit: 601609575a3214ea7086a3bcb586ae0d1df3d418
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268170"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532963"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de itens que afetam a interface do usuário da Galeria do PowerShell
 
@@ -44,6 +44,8 @@ A tabela a seguir mostra os elementos da interface do usuário da página do ite
 | **Histórico de versão** | O histórico de versão representa as atualizações feitas em um módulo na Galeria do PowerShell. Quando a versão de um item é ocultada com o recurso Excluir, ela não é exibida no histórico de versão, exceto para os proprietários do item. | Não | Não |
 | **Site do Projeto** | O site do projeto é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando um ProjectURI. No manifesto de script, ele é controlado pela especificação .PROJECTURI. | Sim | Sim |
 | **Licença** | O link da licença é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando uma propriedade LicenseURI. No manifesto de script, ele é controlado pela especificação .LICENSEURI. É importante observar que, quando uma licença não é fornecida por meio de uma propriedade LicenseURI ou dentro de um módulo, os termos de uso da Galeria do PowerShell especificam os termos de uso do item. Confira os termos de uso para saber mais. | Sim | Sim |
+| **Ícone** | Um ícone pode ser especificado para qualquer item na Galeria do PowerShell; basta fornecer o sinalizador IconURI no manifesto do script ou na seção Privatedata-PSData do manifesto do módulo. O IconURI deve apontar para uma imagem de 32 x 32, com tela de fundo transparente. O URI **precisa** ser uma URL de imagem direta e **não deve** conduzir para uma página da Web que contenha a imagem ou um arquivo no pacote da Galeria do PowerShell. | Sim | Sim |
+
 
 ## <a name="editing-item-details"></a>Edição de detalhes do item
 

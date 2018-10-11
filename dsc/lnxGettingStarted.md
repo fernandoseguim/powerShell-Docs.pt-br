@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Introdução à Configuração de Estado Desejado (DSC) para Linux
-ms.openlocfilehash: d5a4a17fbcffbbbd6df3dd902dbd104769b7d17e
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: d436fc3b451efb8a12dfdc44909824934b5fcbe4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893589"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523001"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introdução à Configuração de Estado Desejado (DSC) para Linux
 
@@ -75,7 +75,7 @@ A palavra-chave Configuration do Windows PowerShell é usada para criar uma conf
 
 1. Importe o módulo nx. O módulo nx do Windows PowerShell contém o esquema para recursos internos para DSC para Linux e deve ser instalado no seu computador local e importado na configuração.
 
-   - Para instalar o módulo nx, copie o diretório do módulo nx para `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` ou `$PSHOME\Modules`. O módulo nx está incluído no pacote de instalação da DSC para Linux (MSI). Para importar o módulo nx na sua configuração, use o comando `Import-DSCResource`:
+   - Para instalar o módulo nx, copie o diretório do módulo nx para `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` ou `$PSHOME\Modules`. O módulo nx está incluído no pacote de instalação da DSC para Linux. Para importar o módulo nx na sua configuração, use o comando `Import-DSCResource`:
 
    ```powershell
    Configuration ExampleConfiguration{
