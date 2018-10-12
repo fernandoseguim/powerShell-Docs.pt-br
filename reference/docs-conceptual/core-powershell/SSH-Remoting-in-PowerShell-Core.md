@@ -2,12 +2,12 @@
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 451a55a588381cc9bec265895b2bfad6b6f6e73c
-ms.sourcegitcommit: a652b12a0b87cdd0c8eb76381ae015467dd7b8cd
+ms.openlocfilehash: 84c3896fe28847beb03e930f933bb4a9dfad397f
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134273"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851230"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -35,7 +35,7 @@ No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Vo
 
 ## <a name="set-up-on-windows-machine"></a>Configuração no computador Windows
 
-1. Instale a versão mais recente do [PowerShell Core para Windows]
+1. Instale a versão mais recente do [PowerShell Core para Windows](../setup/installing-powershell-core-on-windows.md#msi)
 
    - Você saberá se ele tem o suporte de comunicação remota do SSH examinando os conjuntos de parâmetros para `New-PSSession`
 
@@ -47,7 +47,7 @@ No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Vo
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Instalar o build mais recente [OpenSSH Win32] do GitHub usando as instruções de [instalação]
+2. Instalar o build mais recente [OpenSSH Win32](https://github.com/PowerShell/Win32-OpenSSH/releases) do GitHub usando as instruções de [instalação](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
 3. Edite o arquivo sshd_config no local em que você instalou OpenSSH Win32
 
    - Verifique se a autenticação de senha está habilitada
@@ -91,8 +91,8 @@ No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Vo
 
 ## <a name="set-up-on-linux-ubuntu-1404-machine"></a>Configuração no computador com Linux (Ubuntu 14.04)
 
-1. Instalar o build mais recente do [PowerShell Core para Linux] do GitHub
-2. Instalar o [Ubuntu SSH] conforme necessário
+1. Instale o build mais recente do [PowerShell Core para Linux](../setup/installing-powershell-core-on-linux.md#ubuntu-1404) do GitHub
+2. Instale o [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html) conforme necessário
 
    ```bash
    sudo apt install openssh-client
@@ -127,7 +127,7 @@ No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Vo
 
 ## <a name="set-up-on-macos-machine"></a>Configuração no computador MacOS
 
-1. Instalar o build mais recente do [PowerShell Core para MacOS]
+1. Instale o build mais recente do [PowerShell Core para MacOS](../setup/installing-powershell-core-on-macos.md)
 
    - Verifique se a comunicação remota do SSH está habilitada, seguindo estas etapas:
      - Abra `System Preferences`
@@ -316,7 +316,5 @@ O comando sudo não funciona em uma sessão remota para computador com Linux.
 [PowerShell Core para MacOS](../setup/installing-powershell-core-on-macos.md)
 
 [OpenSSH Win32](https://github.com/PowerShell/Win32-OpenSSH/releases)
-
-[instalação](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
 
 [Ubuntu SSH](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
