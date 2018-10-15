@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Obtendo informações de ajuda detalhadas
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 88f0357b935a7c75df07d667e3f2f2d0e493f89d
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: d2578604ec7c01c0b2734bd180e1babaca58b153
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134027"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851265"
 ---
 # <a name="getting-detailed-help-information"></a>Obtendo informações de ajuda detalhadas
 
@@ -149,7 +149,7 @@ Exibir artigos de Ajuda online é uma das melhores maneiras de obter ajuda. Os a
 Para obter Ajuda online, use o parâmetro **Online** do cmdlet `Get-Help`. Todos os artigos de Ajuda que acompanham o PowerShell, incluindo a Ajuda do provedor e artigos conceituais de Ajuda (Sobre), estão disponíveis online na documentação do [PowerShell](/powershell/scripting/powershell-scripting).
 
 > [!NOTE]
-> Não é possível usar o parâmetro **Online** com artigos de Ajuda do provedor ou conceituais (about_*).
+> Não é possível usar o parâmetro **Online** com artigos de Ajuda do provedor ou conceituais (about_\*).
 > A ajuda online é opcional, portanto não funciona para todos os cmdlets, funções ou scripts.
 
 Por exemplo, para obter a versão online do artigo de Ajuda sobre o cmdlet `Get-ChildItem`, digite:

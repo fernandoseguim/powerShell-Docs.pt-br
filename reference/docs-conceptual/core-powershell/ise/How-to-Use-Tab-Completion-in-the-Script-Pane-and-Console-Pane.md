@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
-ms.openlocfilehash: e1f8146b6113a82fd3d857c98550ec2e459715a4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 24a3f00987ff5ca4bf82d1a3206857ec3c4b3f09
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954918"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851128"
 ---
 # <a name="how-to-use-tab-completion-in-the-script-pane-and-console-pane"></a>Como usar o preenchimento com Tab no Painel de Script e no Painel de Console
 
@@ -23,7 +23,7 @@ No Painel de Comando ou Painel de Script, digite alguns caracteres de um comando
 
 ## <a name="to-automatically-complete-a-cmdlet-parameter-entry"></a>Para preencher automaticamente uma entrada de parâmetro de cmdlet
 
-No Painel de Comando ou Painel de Script, digite um cmdlet seguido por um traço e pressione TAB.
+No painel de comando ou de script, digite um cmdlet seguido por um traço e pressione TAB.
 
 Por exemplo, digite `Get-Process -` e pressione TAB várias vezes para exibir cada um dos parâmetros do cmdlet sucessivamente.
 

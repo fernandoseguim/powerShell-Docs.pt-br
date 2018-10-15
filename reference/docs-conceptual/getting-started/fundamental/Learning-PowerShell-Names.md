@@ -3,12 +3,12 @@ ms.date: 08/24/2018
 keywords: powershell, cmdlet
 title: Aprendendo os nomes do PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 44c66488a20c38d8528c92d753f6b32dda5a2dcb
-ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
+ms.openlocfilehash: a4f7e12c2b30e8ae6d1cf5a125d613d2d7558c34
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353259"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851248"
 ---
 # <a name="learning-powershell-names"></a>Aprendendo os nomes do PowerShell
 
@@ -92,7 +92,8 @@ Aqui estão algumas das características gerais dos nomes de parâmetro padrão 
 
 ### <a name="the-help-parameter-"></a>O parâmetro de Ajuda (?)
 
-Quando você especifica o parâmetro `-Help` ou `-?` sobre qualquer cmdlet, o PowerShell exibe a ajuda do cmdlet. O cmdlet não é executado.
+Quando você especifica o parâmetro `-?` ou qualquer cmdlet, o PowerShell exibe a ajuda para o cmdlet.
+O cmdlet não é executado.
 
 ### <a name="common-parameters"></a>Parâmetros comuns
 

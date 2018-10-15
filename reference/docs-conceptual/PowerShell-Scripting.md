@@ -2,16 +2,16 @@
 ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Scripts do PowerShell
-ms.openlocfilehash: 754805148dc815a12c5c77e4894fb598c6927f7e
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 8a152ab338d42f861b7ff38de44d68db14262abb
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43133986"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851179"
 ---
 # <a name="powershell"></a>PowerShell
 
-O PowerShell é um shell de linha de comando baseado em tarefas e linguagem de script compilada no .NET Framework.
+O PowerShell é um shell de linha de comando baseado em tarefas e linguagem de script desenvolvido no .NET.
 O PowerShell ajuda os administradores do sistema e usuários avançados a automatizar rapidamente as tarefas que gerenciam processos e sistemas operacionais (Linux, macOS e Windows).
 
 Os comandos do PowerShell permitem que você gerencie os computadores da linha de comando. Os provedores do PowerShell permitem o acesso a repositórios de dados, como o Registro e o repositório de certificados, de forma tão fácil quanto acessar o sistema de arquivos. O PowerShell inclui um valioso analisador de expressões e uma linguagem de scripts totalmente desenvolvida.
