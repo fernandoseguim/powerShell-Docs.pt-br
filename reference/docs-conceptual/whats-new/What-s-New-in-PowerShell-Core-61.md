@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 5e2fe3c819ed638b2c14d7d40e08b7c32953147f
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
+ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289218"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851300"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -197,11 +197,11 @@ e [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke-r
 
 ## <a name="remoting-improvements"></a>Aprimoramentos na comunicação remota
 
-### <a name="powershell-direct-tries-to-use-powershell-core-first"></a>O PowerShell Direct tenta usar primeiro o PowerShell Core
+### <a name="powershell-direct-for-containers-tries-to-use-powershell-core-first"></a>O PowerShell Direct para Contêineres tenta usar primeiro o PowerShell Core
 
-O [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) é um recurso do PowerShell e do Hyper-V que permite que você se conecte a uma VM do Hyper-V sem conectividade de rede ou outros serviços de gerenciamento remoto.
+O [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) é um recurso do PowerShell e do Hyper-V que permite que você se conecte a uma VM ou Contêiner do Hyper-V sem conectividade de rede ou outros serviços de gerenciamento remoto.
 
-No passado, o PowerShell Direct era conectado usando a instância do Windows PowerShell de caixa de entrada na VM.
+No passado, o PowerShell Direct era conectado usando a instância do Windows PowerShell de caixa de entrada no Contêiner.
 Agora, o PowerShell Direct primeiro tenta se conectar usando algum `pwsh.exe` disponível na variável de ambiente `PATH`.
 Se `pwsh.exe` não estiver disponível, o PowerShell Direct voltará a usar `powershell.exe`.
 
@@ -310,45 +310,44 @@ Agora, o padrão de `Update-Help` é salvar a ajuda em uma pasta no escopo do us
 ### <a name="new-methodsproperties-on-pscustomobject"></a>Novos métodos/propriedades em `PSCustomObject`
 
 Graças a [@iSazonov](https://github.com/iSazonov), incluímos novos métodos e propriedades em `PSCustomObject`.
-`PSCustomObject` passou a incluir uma propriedade `Count`/`Length` que informa o número de itens.
-
-Os dois exemplos retornam `2` como o número de `PSCustomObjects` na coleção.
+`PSCustomObject` agora inclui uma propriedade `Count`/`Length` como outros objetos.
 
 ```powershell
-@(
-[pscustomobject]@{foo = '1'},
-[pscustomobject]@{bar = '2' }).Length
+$PSCustomObject = [pscustomobject]@{foo = 1}
+
+$PSCustomObject.Length
+```
+
+```Output
+1
 ```
 
 ```powershell
-@(
-[pscustomobject]@{foo = '1'},
-[pscustomobject]@{bar = '2' }).Count
+$PSCustomObject.Count
+```
+
+```Output
+1
 ```
 
 Esse trabalho também inclui os métodos `ForEach` e `Where`, que permitem que você utilize e filtre os itens `PSCustomObject`:
 
 ```powershell
-@(
->> [pscustomobject]@{foo = 1},
->> [pscustomobject]@{foo = 2 }).ForEach({$_.foo+1})
+$PSCustomObject.ForEach({$_.foo + 1})
 ```
 
 ```Output
 2
-3
 ```
 
 ```powershell
-@(
->> [pscustomobject]@{foo = 1},
->> [pscustomobject]@{foo = 2 }).Where({$_.foo -gt 1})
+$PSCustomObject.Where({$_.foo -gt 0})
 ```
 
 ```Output
 foo
 ---
-  2
+  1
 ```
 
 ### `Where-Object -Not`
@@ -507,7 +506,7 @@ Para recusar essa telemetria, defina a variável de ambiente `POWERSHELL_TELEMET
 
 Para evitar o uso de tráfego não criptografado, a Comunicação Remota do PowerShell em plataformas Unix agora exige o uso de NTLM/Negotiate ou HTTPS.
 
-Para obter mais informações sobre essas alterações, confira [PR #6799](https://github.com/PowerShell/PowerShell/pull/6799).
+Para obter mais informações sobre essas alterações, confira [Problema #6779](https://github.com/PowerShell/PowerShell/issues/6779).
 
 ### <a name="removed-visualbasic-as-a-supported-language-in-add-type"></a>`VisualBasic` removido como linguagem com suporte em Add-Type
 
