@@ -1,0 +1,65 @@
+---
+ms.date: 09/11/2018
+contributor: JKeithB
+keywords: galeria, powershell, psgallery
+title: Download manual do pacote
+ms.openlocfilehash: 0952aa4ec474850af5219fb2e0e9ee3e954b0f9a
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50003634"
+---
+# <a name="manual-package-download"></a><span data-ttu-id="75b2d-103">Download manual do pacote</span><span class="sxs-lookup"><span data-stu-id="75b2d-103">Manual Package Download</span></span>
+
+<span data-ttu-id="75b2d-104">Na Galeria do PowerShell, é possível baixar um pacote diretamente no site, sem usar os cmdlets PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="75b2d-104">The Powershell Gallery supports downloading a package from the website directly, without using the PowerShellGet cmdlets.</span></span> <span data-ttu-id="75b2d-105">O pacote será baixado como um arquivo de pacote do NuGet (.nupkg) que, em seguida, pode ser facilmente copiado para um repositório interno.</span><span class="sxs-lookup"><span data-stu-id="75b2d-105">The package will be downloaded as a NuGet package (.nupkg) file, which can then be easily copied to an internal repository.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="75b2d-106">O download manual do pacote **não** serve para substituir o cmdlet Install-Module.</span><span class="sxs-lookup"><span data-stu-id="75b2d-106">Manual package download is **not** intended as a replacement for the Install-Module cmdlet.</span></span>
+> <span data-ttu-id="75b2d-107">Baixar o pacote não instala o módulo ou script.</span><span class="sxs-lookup"><span data-stu-id="75b2d-107">Downloading the package does not install the module or script.</span></span> <span data-ttu-id="75b2d-108">As dependências não estão incluídas no pacote NuGet baixado.</span><span class="sxs-lookup"><span data-stu-id="75b2d-108">Dependencies are not included in the NuGet package downloaded.</span></span> <span data-ttu-id="75b2d-109">As instruções a seguir são fornecidas apenas para referência.</span><span class="sxs-lookup"><span data-stu-id="75b2d-109">The following instructions are provided for reference purposes only.</span></span>
+
+## <a name="using-manual-download-to-acquire-a-package"></a><span data-ttu-id="75b2d-110">Usar o download manual para adquirir um pacote</span><span class="sxs-lookup"><span data-stu-id="75b2d-110">Using manual download to acquire a package</span></span>
+
+<span data-ttu-id="75b2d-111">Cada página tem um link para Download Manual, conforme mostrado aqui:</span><span class="sxs-lookup"><span data-stu-id="75b2d-111">Each page has a link for Manual Download, as shown here:</span></span>
+
+![Download manual](../../Images/packagedisplaypagewithpseditions.png)
+
+<span data-ttu-id="75b2d-113">Para baixar manualmente, clique em **Baixar o arquivo nupkg bruto**.</span><span class="sxs-lookup"><span data-stu-id="75b2d-113">To download manually, click on **Download the raw nupkg file**.</span></span> <span data-ttu-id="75b2d-114">Uma cópia do pacote é copiada para a pasta de download do navegador com o nome `<name>.<version>.nupkg`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-114">A copy of the package copied to the download folder for your browser with the name `<name>.<version>.nupkg`.</span></span>
+
+<span data-ttu-id="75b2d-115">Um pacote do NuGet é um arquivo ZIP com os arquivos extras com informações sobre o conteúdo do pacote.</span><span class="sxs-lookup"><span data-stu-id="75b2d-115">A NuGet package is a ZIP archive with extra files containing information about the contents of the package.</span></span> <span data-ttu-id="75b2d-116">Alguns navegadores, como o Internet Explorer, substituem automaticamente a extensão de arquivo `.nupkg` por `.zip`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-116">Some browsers, like Internet Explorer, automatically replace the `.nupkg` file extension with `.zip`.</span></span> <span data-ttu-id="75b2d-117">Para expandir o pacote, renomeie o arquivo `.nupkg` como `.zip`, se necessário. Em seguida, extraia o conteúdo para uma pasta local.</span><span class="sxs-lookup"><span data-stu-id="75b2d-117">To expand the package, rename the `.nupkg` file to `.zip`, if needed, then extract the contents to a local folder.</span></span>
+
+<span data-ttu-id="75b2d-118">Um arquivo de pacote do NuGet inclui os seguintes elementos específicos do NuGet que não fazem parte do código original empacotado:</span><span class="sxs-lookup"><span data-stu-id="75b2d-118">A NuGet package file includes the following NuGet-specific elements that aren't part of the original packaged code:</span></span>
+
+- <span data-ttu-id="75b2d-119">Uma pasta chamada `_rels`: contém um arquivo `.rels` que lista as dependências</span><span class="sxs-lookup"><span data-stu-id="75b2d-119">A folder named `_rels` - contains a `.rels` file that lists the dependencies</span></span>
+- <span data-ttu-id="75b2d-120">Uma pasta chamada `package`: contém os dados específicos do NuGet</span><span class="sxs-lookup"><span data-stu-id="75b2d-120">A folder named `package` - contains the NuGet-specific data</span></span>
+- <span data-ttu-id="75b2d-121">Um arquivo chamado `[Content_Types].xml`: descreve como as extensões como PowerShellGet funcionam com o NuGet</span><span class="sxs-lookup"><span data-stu-id="75b2d-121">A file named `[Content_Types].xml` - describes how extensions like PowerShellGet work with NuGet</span></span>
+- <span data-ttu-id="75b2d-122">Um arquivo chamado `<name>.nuspec`: contém a maior parte dos metadados</span><span class="sxs-lookup"><span data-stu-id="75b2d-122">A file named `<name>.nuspec` - contains the bulk of the metadata</span></span>
+
+## <a name="installing-powershell-modules-from-a-nuget-package"></a><span data-ttu-id="75b2d-123">Instalar módulos do PowerShell de um pacote do NuGet</span><span class="sxs-lookup"><span data-stu-id="75b2d-123">Installing PowerShell Modules from a NuGet package</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="75b2d-124">Estas instruções **NÃO** apresentam o mesmo resultado de executar `Install-Module`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-124">These instructions **DO NOT** give the same result as running `Install-Module`.</span></span> <span data-ttu-id="75b2d-125">Estas instruções atendem aos requisitos mínimos.</span><span class="sxs-lookup"><span data-stu-id="75b2d-125">These instructions fulfill the minimum requirements.</span></span> <span data-ttu-id="75b2d-126">Elas não servem como substituição para `Install-Module`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-126">They are not intended to be a replacement for `Install-Module`.</span></span> <span data-ttu-id="75b2d-127">Algumas etapas executadas pelo `Install-Module` não estão incluídas.</span><span class="sxs-lookup"><span data-stu-id="75b2d-127">Some steps performed by `Install-Module` are not included.</span></span>
+
+<span data-ttu-id="75b2d-128">A abordagem mais fácil é remover os elementos específicos do NuGet da pasta.</span><span class="sxs-lookup"><span data-stu-id="75b2d-128">The easiest approach is to remove the NuGet-specific elements from the folder.</span></span> <span data-ttu-id="75b2d-129">Isso deixa o código do PowerShell criado pelo autor do pacote.</span><span class="sxs-lookup"><span data-stu-id="75b2d-129">This leaves the PowerShell code created by the package author.</span></span> <span data-ttu-id="75b2d-130">As etapas são:</span><span class="sxs-lookup"><span data-stu-id="75b2d-130">The steps are:</span></span>
+
+1. <span data-ttu-id="75b2d-131">Extrair o conteúdo do pacote do NuGet em uma pasta local.</span><span class="sxs-lookup"><span data-stu-id="75b2d-131">Extract the contents of the NuGet package to a local folder.</span></span>
+2. <span data-ttu-id="75b2d-132">Exclua os elementos específicos do NuGet da pasta.</span><span class="sxs-lookup"><span data-stu-id="75b2d-132">Delete the NuGet-specific elements from the folder.</span></span>
+3. <span data-ttu-id="75b2d-133">Renomear a pasta.</span><span class="sxs-lookup"><span data-stu-id="75b2d-133">Rename the folder.</span></span> <span data-ttu-id="75b2d-134">Normalmente, o nome de pasta padrão é `<name>.<version>`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-134">The default folder name is usually `<name>.<version>`.</span></span> <span data-ttu-id="75b2d-135">A versão poderá incluir "-pré-lançamento" se o módulo estiver marcado como uma versão de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="75b2d-135">The version can include "-prerelease" if the module is tagged as a prerelease version.</span></span> <span data-ttu-id="75b2d-136">Renomeie a pasta somente com o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="75b2d-136">Rename the folder to just the module name.</span></span> <span data-ttu-id="75b2d-137">Por exemplo, "azurerm.storage.5.0.4-preview" torna-se "azurerm".</span><span class="sxs-lookup"><span data-stu-id="75b2d-137">For example, "azurerm.storage.5.0.4-preview" becomes "azurerm.storage".</span></span>
+4. <span data-ttu-id="75b2d-138">Copie a pasta para PSModulePath.</span><span class="sxs-lookup"><span data-stu-id="75b2d-138">Copy the folder to your PSModulePath.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="75b2d-139">O download manual não inclui quaisquer dependências exigidas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="75b2d-139">The manual download does not include any dependencies required by the module.</span></span> <span data-ttu-id="75b2d-140">Se o pacote tiver dependências, elas precisarão ser instaladas no sistema para que esse módulo funcione corretamente.</span><span class="sxs-lookup"><span data-stu-id="75b2d-140">If the package has dependencies, they must be installed on the system for this module to work correctly.</span></span> <span data-ttu-id="75b2d-141">A Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.</span><span class="sxs-lookup"><span data-stu-id="75b2d-141">The PowerShell Gallery shows all dependencies required by the package.</span></span>
+
+## <a name="installing-powershell-scripts-from-a-nuget-package"></a><span data-ttu-id="75b2d-142">Instalar scripts do PowerShell de um pacote do NuGet</span><span class="sxs-lookup"><span data-stu-id="75b2d-142">Installing PowerShell Scripts from a NuGet package</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="75b2d-143">Estas instruções **NÃO** apresentam o mesmo resultado de executar `Install-Script`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-143">These instructions **DO NOT** give the same result as running `Install-Script`.</span></span> <span data-ttu-id="75b2d-144">Estas instruções atendem aos requisitos mínimos.</span><span class="sxs-lookup"><span data-stu-id="75b2d-144">These instructions fulfill the minimum requirements.</span></span> <span data-ttu-id="75b2d-145">Elas não servem como substituição para `Install-Script`.</span><span class="sxs-lookup"><span data-stu-id="75b2d-145">They are not intended to be a replacement for `Install-Script`.</span></span>
+
+<span data-ttu-id="75b2d-146">A abordagem mais fácil é extrair o pacote do NuGet e, em seguida, usar o script diretamente.</span><span class="sxs-lookup"><span data-stu-id="75b2d-146">The easiest approach is to extract the NuGet package, then use the script directly.</span></span> <span data-ttu-id="75b2d-147">As etapas são:</span><span class="sxs-lookup"><span data-stu-id="75b2d-147">The steps are:</span></span>
+
+1. <span data-ttu-id="75b2d-148">Extrair o conteúdo do pacote do NuGet.</span><span class="sxs-lookup"><span data-stu-id="75b2d-148">Extract the contents of the NuGet package.</span></span>
+2. <span data-ttu-id="75b2d-149">O arquivo `.PS1` na pasta pode ser usado diretamente desse local.</span><span class="sxs-lookup"><span data-stu-id="75b2d-149">The `.PS1` file in the folder can be used directly from this location.</span></span>
+3. <span data-ttu-id="75b2d-150">Você pode excluir os elementos específicos do NuGet da pasta.</span><span class="sxs-lookup"><span data-stu-id="75b2d-150">You may delete the NuGet-specific elements in the folder.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="75b2d-151">O download manual não inclui quaisquer dependências exigidas pelo módulo.</span><span class="sxs-lookup"><span data-stu-id="75b2d-151">The manual download does not include any dependencies required by the module.</span></span> <span data-ttu-id="75b2d-152">Se o pacote tiver dependências, elas precisarão ser instaladas no sistema para que esse módulo funcione corretamente.</span><span class="sxs-lookup"><span data-stu-id="75b2d-152">If the package has dependencies, they must be installed on the system for this module to work correctly.</span></span> <span data-ttu-id="75b2d-153">A Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.</span><span class="sxs-lookup"><span data-stu-id="75b2d-153">The PowerShell Gallery shows all dependencies required by the package.</span></span>
