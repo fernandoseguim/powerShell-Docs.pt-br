@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Registrando Configurações de JEA
-ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002899"
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 
 > Aplica-se a: Windows PowerShell 5.0
 
-A última etapa antes de usar o JEA, depois que você tiver criado os [recursos de função](role-capabilities.md) e os [arquivo de configuração de sessão](session-configurations.md), é registrar o ponto de extremidade JEA.
-Esse processo aplica as informações de configuração de sessão no sistema e torna o ponto de extremidade disponível para uso pelos usuários e pelos mecanismos de automação.
+Depois que você tiver criado os [recursos de função](role-capabilities.md) e os [arquivo de configuração de sessão](session-configurations.md), a última etapa antes de usar o JEA será registrar o ponto de extremidade JEA.
+Registrar o ponto de extremidade JEA no sistema torna o ponto de extremidade disponível para uso pelos usuários e pelos mecanismos de automação.
 
 ## <a name="single-machine-configuration"></a>Configuração de computador único
 
@@ -48,18 +48,18 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 ```
 
 > [!WARNING]
-> O comando acima reiniciará o serviço WinRM no sistema.
-> Isso encerrará todas as sessões de comunicação remota do PowerShell, bem como quaisquer configurações de DSC em andamento.
+> O comando acima reinicia o serviço WinRM no sistema.
+> Isso encerra todas as sessões de comunicação remota do PowerShell, bem como quaisquer configurações de DSC em andamento.
 > É recomendável que você coloque em offline todos computadores de produção antes de executar o comando para evitar interromper as operações de negócios.
 
-Se o registro foi bem-sucedido, você estará pronto para [usar o JEA](using-jea.md).
-Você pode excluir o arquivo de configuração de sessão a qualquer momento; ele não é mais usado depois do registro.
+Se o registro for bem-sucedido, você estará pronto para [usar o JEA](using-jea.md).
+Você pode excluir o arquivo de configuração de sessão a qualquer momento; ele não é mais usado depois do registro do ponto de extremidade.
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configuração de vários computadores com o DSC
 
 Se você estiver implantando o JEA em vários computadores, o modelo de implantação mais simples é usar o recurso [Configuração de Estado Desejado](https://msdn.microsoft.com/powershell/dsc/overview) do JEA para implantar o JEA de forma rápida e consistente em cada computador.
 
-Para implantar o JEA com o DSC, você precisará garantir que os seguintes pré-requisitos sejam atendidos:
+Para implantar o JEA com o DSC, você precisa garantir que os seguintes pré-requisitos sejam atendidos:
 - Um ou mais recursos de função foram criados e adicionados a um módulo de PowerShell válido.
 - O módulo do PowerShell que contém as funções é armazenado em um compartilhamento de arquivo (somente leitura) acessível por cada computador.
 - As configurações para a configuração de sessão foram determinadas. Não é necessário criar um arquivo de configuração de sessão ao usar o recurso DSC do JEA.
@@ -67,7 +67,7 @@ Para implantar o JEA com o DSC, você precisará garantir que os seguintes pré-
 - O [recurso DSC do JEA](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource) foi baixado
 
 Em um computador de destino (ou servidor de pull, se você estiver usando um), crie uma configuração DSC para seu ponto de extremidade JEA.
-Nessa configuração, será utilizado o recurso DSC de JustEnoughAdministration para configurar o arquivo de configuração de sessão e o Recurso de arquivo para copiar sobre os recursos de função do compartilhamento de arquivos.
+Nessa configuração, é utilizado o recurso DSC de JustEnoughAdministration para configurar o arquivo de configuração de sessão e o Recurso de arquivo para copiar sobre os recursos de função do compartilhamento de arquivos.
 
 As seguintes propriedades são configuráveis usando o recurso de DSC:
 - Definições de Função
@@ -118,7 +118,7 @@ Se você fizer isso, o recurso registrará automaticamente um ponto de extremida
 ## <a name="unregistering-jea-configurations"></a>Cancelando o registro de configurações de JEA
 
 Para remover um ponto de extremidade JEA em um sistema, use o cmdlet [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
-O cancelamento do registro de um ponto de extremidade JEA impedirá que novos usuários criem novas sessões de JEA no sistema.
+O cancelamento do registro de um ponto de extremidade JEA impede que novos usuários criem novas sessões de JEA no sistema.
 Ele também permite que você atualize uma configuração de JEA, registrando novamente um arquivo de configuração de sessão atualizado usando o mesmo nome de ponto de extremidade.
 
 ```powershell
@@ -127,8 +127,8 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 ```
 
 > [!WARNING]
-> O cancelamento do registro de um ponto de extremidade JEA fará com que o serviço WinRM seja reiniciado.
-> Isso interromperá a maioria das operações de gerenciamento remotas em andamento, incluindo outras sessões do PowerShell, invocações de WMI e algumas ferramentas de gerenciamento.
+> O cancelamento do registro de um ponto de extremidade JEA faz com que o serviço WinRM seja reiniciado.
+> Isso interrompe a maioria das operações de gerenciamento remotas em andamento, incluindo outras sessões do PowerShell, invocações de WMI e algumas ferramentas de gerenciamento.
 > Cancele o registro de pontos de extremidade do PowerShell somente durante janelas de manutenção planejadas.
 
 ## <a name="next-steps"></a>Próximas etapas

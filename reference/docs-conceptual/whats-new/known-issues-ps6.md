@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
-ms.openlocfilehash: e3e718be903ff2223064d5790d3d0fe554ef04cd
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
+ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267993"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49450989"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -90,9 +90,9 @@ A capacidade de criar pontos de extremidade de comunicação remota de administr
 
 ### <a name="sudo-exec-and-powershell"></a>`sudo`, `exec` e PowerShell
 
-Como o PowerShell executa a maioria dos comandos na memória (como Python ou Ruby), não é possível usar o sudo diretamente com integrações do PowerShell. Você pode, obviamente, executar `powershell` com o sudo. Se for necessário executar um cmdlet do PowerShell de dentro do PowerShell com sudo, por exemplo, `sudo `Set-Date` 8/18/2016`, você faria `sudo powershell `Set-Date` 8/18/2016`. Da mesma forma, não é possível executar uma integração do PowerShell diretamente. Em vez disso, será necessário fazer `exec powershell item_to_exec`.
+Como o PowerShell executa a maioria dos comandos na memória (como Python ou Ruby), não é possível usar o sudo diretamente com integrações do PowerShell. Você pode, obviamente, executar `pwsh` com o sudo. Se for necessário executar um cmdlet do PowerShell de dentro do PowerShell com sudo, por exemplo, `sudo Set-Date 8/18/2016`, você faria `sudo pwsh Set-Date 8/18/2016`. Da mesma forma, não é possível executar uma integração do PowerShell diretamente. Em vez disso, será necessário fazer `exec pwsh item_to_exec`.
 
-Esse problema está sendo acompanhado como parte da #3232.
+Esse problema está sendo acompanhado como parte da [#3232](https://github.com/PowerShell/PowerShell/issues/3232).
 
 ### <a name="missing-cmdlets"></a>Cmdlets ausentes
 

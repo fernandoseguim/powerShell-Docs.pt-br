@@ -3,21 +3,21 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento de scripts
-ms.openlocfilehash: 14ae1968e5ee73260b6eae05b11185069d047e93
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: 4e7eab682008ed57163c51fe3a61a744b347bef2
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268459"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002728"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versões de pré-lançamento de scripts
 
-Começando com a versão 1.6.0, o PowerShellGet e a Galeria do PowerShell são compatíveis com versões de marcação superiores a 1.0.0 como um pré-lançamento. Antes desse recurso, os itens de pré-lançamento eram limitados a ter uma versão que começasse com 0. A meta desses recursos é oferecer maior compatibilidade com a convenção de versão [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html), sem perder a compatibilidade com o PowerShell versão 3 e superiores ou com as versões existentes do PowerShellGet. Este tópico se concentra os recursos específicos do script. Os recursos equivalentes para módulos estão no tópico [Versões de pré-lançamento do módulo](module-prerelease-support.md). Ao usar esses recursos, os editores podem identificar um script como a versão 2.5.0-alpha e, então, lançar uma versão 2.5.0 pronta para produção que substitui a versão de pré-lançamento.
+Começando com a versão 1.6.0, o PowerShellGet e a Galeria do PowerShell são compatíveis com versões de marcação superiores a 1.0.0 como um pré-lançamento. Antes desse recurso, os pacotes de pré-lançamento eram limitados a ter uma versão que começasse com 0. A meta desses recursos é oferecer maior compatibilidade com a convenção de versão [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html), sem perder a compatibilidade com o PowerShell versão 3 e superiores ou com as versões existentes do PowerShellGet. Este tópico se concentra os recursos específicos do script. Os recursos equivalentes para módulos estão no tópico [Versões de pré-lançamento do módulo](module-prerelease-support.md). Ao usar esses recursos, os editores podem identificar um script como a versão 2.5.0-alpha e, então, lançar uma versão 2.5.0 pronta para produção que substitui a versão de pré-lançamento.
 
 Em um nível alto, os recursos de pré-lançamento do script incluem:
 
-- Adição de um sufixo PrereleaseString na cadeia de caracteres de versão no manifesto do script. Quando os scripts são publicados na Galeria do PowerShell, esses dados são extraídos do manifesto e usados para identificar os itens de pré-lançamento.
-- A aquisição dos itens de pré-lançamento exige a adição do sinalizador -AllowPrerelease aos comandos Find-Script, Install-Script, Update-Script e Save-Script do PowerShellGet. Se o sinalizador não for especificado, os itens de pré-lançamento não serão exibidos.
+- Adição de um sufixo PrereleaseString na cadeia de caracteres de versão no manifesto do script. Quando os scripts são publicados na Galeria do PowerShell, esses dados são extraídos do manifesto e usados para identificar os pacotes de pré-lançamento.
+- A aquisição dos pacotes de pré-lançamento exige a adição do sinalizador -AllowPrerelease aos comandos Find-Script, Install-Script, Update-Script e Save-Script do PowerShellGet. Se o sinalizador não for especificado, os pacotes de pré-lançamento não serão exibidos.
 - As versões de script exibidas pelo Find-Script, pelo Get-InstalledScript e na Galeria do PowerShell serão exibidas com o PrereleaseString, como 2.5.0-alpha.
 
 Os detalhes para os recursos estão incluídos abaixo.
@@ -54,9 +54,9 @@ A ordem de classificação é alterada ao usar uma versão de pré-lançamento, 
 
 Ao publicar na Galeria do PowerShell, por padrão, a versão do script que está sendo publicado deverá ter uma versão maior do que qualquer versão previamente publicada na Galeria do PowerShell. Um editor pode atualizar a versão 2.5.0-alpha com 2.5.0-beta, ou com 2.5.0 (sem nenhum sufixo de pré-lançamento).
 
-## <a name="finding-and-acquiring-prerelease-items-using-powershellget-commands"></a>Localização e aquisição de itens de pré-lançamento usando os comandos do PowerShellGet
+## <a name="finding-and-acquiring-prerelease-packages-using-powershellget-commands"></a>Localização e aquisição de pacotes de pré-lançamento usando os comandos do PowerShellGet
 
-Para lidar com os itens de pré-lançamento usando os comandos PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script, é necessário adicionar o sinalizador -AllowPrerelease. Se -AllowPrerelease for especificado, os itens de pré-lançamento serão incluídos se estiverem presentes. Se o sinalizador -AllowPrerelease não for especificado, os itens de pré-lançamento não serão exibidos.
+Para lidar com os pacotes de pré-lançamento usando os comandos PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script, é necessário adicionar o sinalizador -AllowPrerelease. Se -AllowPrerelease for especificado, os pacotes de pré-lançamento serão incluídos se estiverem presentes. Se o sinalizador -AllowPrerelease não for especificado, os pacotes de pré-lançamento não serão exibidos.
 
 As únicas exceções a isso nos comandos do script PowerShellGet são Get-InstalledScript, e alguns casos com Uninstall-Script.
 

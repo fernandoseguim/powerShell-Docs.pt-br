@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Configurações de conta da Galeria do PowerShell
-ms.openlocfilehash: dd7b8b3a99b5b7fbfec5d7f82b81dd6d5cfb906c
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45523121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002779"
 ---
 # <a name="powershell-gallery-account-settings"></a>Configurações de conta da Galeria do PowerShell
 
@@ -34,7 +34,7 @@ A Galeria do PowerShell envia uma mensagem de verificação quando um novo ender
 A Galeria do PowerShell oferece as seguintes opções de notificação:
 
 - Os usuários podem entrar em contato comigo por meio da Galeria do PowerShell
-- Notificar-me quando um item é movido para a Galeria do PowerShell usando minha conta
+- Notificar-me quando um pacote for movido para a Galeria do PowerShell usando minha conta
 
 ![Alterar o endereço de email](../../Images/PSGallery_AccountEmailOptions.png)
 

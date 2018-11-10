@@ -3,13 +3,13 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Relatar abuso
-ms.openlocfilehash: 49f68ba634644c5d22d38a254b4c8c93ea9374d0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 70e599a26c6f04312ed7fc188047721bf96fefe2
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002011"
 ---
 # <a name="report-abuse"></a>Relatar abuso
 
-Se você encontrar algo que viole qualquer um desses itens, clique no link **Relatar Abuso** na página de detalhes do item e envie um relatório.
+Se você encontrar um pacote que viole qualquer um desses pacotes, clique no link **Relatar Abuso** na página de detalhes do pacote e envie um relatório.

@@ -2,12 +2,12 @@
 title: Uso do Visual Studio Code para desenvolvimento do PowerShell
 description: Uso do Visual Studio Code para desenvolvimento do PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 8fbaba826624199d06fe4fdc785998e0135d7fe7
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 9c06ce72c39d08e75fcb7e5cf9d5f92ae5dd8ed9
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134093"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225787"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso do Visual Studio Code para desenvolvimento do PowerShell
 
@@ -110,13 +110,13 @@ A partir da versão do Visual Studio Code 1.9, você pode depurar scripts do Pow
 Basta abrir o arquivo de script do PowerShell usando **Arquivo -> Abrir Arquivo...** , definir um ponto de interrupção em uma linha (pressione F9) e, em seguida, pressionar F5 para iniciar a depuração.
 Será exibido o painel de ações de depuração, que permite que você interrompa o depurador, execute em etapas, retome e pare a depuração.
 
-### <a name="workspace-debugging"></a>Depuração do espaço de trabalho
+### <a name="workspace-debugging"></a>Depuração do workspace
 
-A depuração do espaço de trabalho refere-se a depuração no contexto de uma pasta que você abriu no Visual Studio Code usando **Abrir Pasta...**  do menu **Arquivo**.
+A depuração do workspace refere-se a depuração no contexto de uma pasta que você abriu no Visual Studio Code usando **Abrir Pasta...**  do menu **Arquivo**.
 A pasta que você abrir normalmente é a pasta do projeto do PowerShell e/ou a raiz do repositório Git.
 
 Mesmo nesse modo, você pode iniciar a depuração de script do PowerShell selecionado no momento pressionando F5.
-No entanto, a depuração do espaço de trabalho permite definir várias configurações de depuração diferentes de depurar apenas o arquivo aberto no momento.
+No entanto, a depuração do workspace permite definir várias configurações de depuração diferentes de depurar apenas o arquivo aberto no momento.
 Por exemplo, você pode adicionar configurações para:
 
 - Iniciar testes Pester no depurador
@@ -124,14 +124,13 @@ Por exemplo, você pode adicionar configurações para:
 - Inicie uma sessão interativa no depurador
 - Anexar o depurador a um processo de host do PowerShell
 
-  Siga estas etapas para criar o arquivo de configuração de depuração:
+Siga estas etapas para criar o arquivo de configuração de depuração:
 
   1. Abra a exibição **Depurar** pressionando **Ctrl+Shift+D** (**Cmd+Shift+D** no Mac).
   2. Pressione o ícone de engrenagem **Configurar** na barra de ferramentas.
-  3. O Visual Studio Code solicitará que você **Selecione o Ambiente**.
-  Escolha **PowerShell**.
+  3. O Visual Studio Code solicitará que você **Selecione o Ambiente**. Escolha **PowerShell**.
 
-  Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de espaço de trabalho.
+  Quando você fizer isso, o Visual Studio Code criará um diretório e um arquivo ".vscode\launch.json" na raiz da sua pasta de workspace.
   A configuração de depuração é armazena nesse local. Quando os arquivos estão em um repositório Git, normalmente deseja-se confirmar o arquivo launch.json.
   O conteúdo do arquivo launch.json é:
 
@@ -171,9 +170,7 @@ Por exemplo, você pode adicionar configurações para:
 
   Quando a configuração de depuração é estabelecida, selecione qual configuração você deseja usar durante uma sessão de depuração, selecionando uma no menu suspenso de configuração de depuração na barra de ferramentas da exibição **Depurar**.
 
-  Há alguns blogs que podem ser úteis para você começar a usar a extensão do PowerShell para o Visual Studio Code
-
-Visual Studio Code:
+Há alguns blogs que podem ser úteis para você começar a usar a extensão do PowerShell para o Visual Studio Code:
 
 - [Extensão do PowerShell][ps-extension]
 - [Gravar e depurar scripts do PowerShell no Visual Studio Code][debug]

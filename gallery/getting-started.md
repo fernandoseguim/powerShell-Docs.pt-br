@@ -3,24 +3,24 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Introdução à Galeria do PowerShell
-ms.openlocfilehash: 39998df1a2bf9363dd008dc96a802157c8d691d7
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: 85b0a754aba25d850dc918024419318554f92b33
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45523004"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225668"
 ---
-# <a name="get-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
+# <a name="getting-started-with-the-powershell-gallery"></a>Introdução à Galeria do PowerShell
 
-O modo adequado de instalar itens da Galeria do PowerShell é usar os cmdlets do módulo [PowerShellGet](/powershell/module/powershellget). Não é necessário entrar para baixar itens da Galeria do PowerShell.
+O modo adequado de instalar pacote da Galeria do PowerShell é usar os cmdlets do módulo [PowerShellGet](/powershell/module/powershellget). Não é necessário entrar para baixar itens da Galeria do PowerShell.
 
 > [!NOTE]
-> É possível baixar o pacote diretamente da Galeria do PowerShell, mas essa não é uma abordagem recomendada. Para saber mais detalhes, confira [Download manual do pacote](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/how-to/working-with-items/manual-download.md).  
+> É possível baixar o pacote diretamente da Galeria do PowerShell, mas essa não é uma abordagem recomendada.
+> Para saber mais detalhes, confira [Download manual do pacote](/powershell/gallery/how-to/working-with-packages/manual-download).
 
+## <a name="discovering-packages-from-the-powershell-gallery"></a>Descobrir pacotes da Galeria do PowerShell
 
-## <a name="discovering-items-from-the-powershell-gallery"></a>Descobrindo itens da Galeria do PowerShell
-
-Você pode encontrar itens na Galeria do PowerShell usando o controle **Pesquisar** no site ou navegando pelas páginas de Módulos e Scripts. Você pode também encontrar itens da Galeria do PowerShell executando os cmdlets [Find-Module][] e [Find-Script][], dependendo do tipo de item, com `-Repository PSGallery`.
+Você pode encontrar pacotes na Galeria do PowerShell, usando o controle **Pesquisar** no site ou navegando pelas páginas de Módulos e Scripts. Você pode também encontrar pacotes da Galeria do PowerShell executando os cmdlets [Find-Module][] e [Find-Script][], dependendo do tipo de item, com `-Repository PSGallery`.
 
 A filtragem dos resultados da Galeria pode ser feita usando os seguintes parâmetros:
 
@@ -38,31 +38,31 @@ A filtragem dos resultados da Galeria pode ser feita usando os seguintes parâme
 Caso tenha interesse apenas em descobrir recursos de DSC específicos na Galeria, execute o cmdlet [Find-DscResource]. Find-DscResource retorna dados em recursos de DSC contidos na Galeria.
 Como os recursos de DSC sempre são fornecidos como parte de um módulo, você ainda precisa executar [Install-Module][] para instalar esses recursos.
 
-## <a name="learning-about-items-in-the-powershell-gallery"></a>Aprendendo sobre itens na Galeria do PowerShell
+## <a name="learning-about-packages-in-the-powershell-gallery"></a>Aprender sobre itens na Galeria do PowerShell
 
-Depois de identificar um item no qual tem interesse, talvez você queira aprender mais sobre ele. Você pode fazer isso examinando a página específica do item na Galeria. Nessa página, você poderá ver todos os metadados carregados com o item. Esses metadados do item são fornecidos pelo autor do item e não são verificados pela Microsoft. O Proprietário do item está intimamente ligado à conta da Galeria usada para publicar o item e é mais confiável do que o campo Autor.
+Depois de identificar um pacote no qual tem interesse, talvez você queira aprender mais sobre ele. Você pode fazer isso examinando a página específica do pacote na Galeria. Nessa página, você poderá ver todos os metadados carregados com o pacote. Esses metadados do pacote são fornecidos pelo autor dele e não são verificados pela Microsoft. O Proprietário do pacote está intimamente ligado à conta da Galeria usada para publicar o pacote e é mais confiável do que o campo Autor.
 
-Se você descobrir que um item que acredita que não tenha sido publicado de boa fé, clique em **Relatar Abuso** na página do item.
+Se você descobrir que um pacote que acredita que não tenha sido publicado de boa fé, clique em **Relatar Abuso** na página do pacote.
 
 Se estiver executando [Find-Module][] ou [Find-Script][], você poderá exibir esses dados no objeto PSGetModuleInfo retornado. Por exemplo, executar `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member`
 retorna dados sobre o módulo PSReadLine na Galeria.
 
-## <a name="downloading-items-from-the-powershell-gallery"></a>Baixando itens da Galeria do PowerShell
+## <a name="downloading-packages-from-the-powershell-gallery"></a>Baixar pacotes da Galeria do PowerShell
 
-Recomendamos o processo a seguir para baixar itens da Galeria do PowerShell:
+Recomendamos o processo a seguir para baixar pacotes da Galeria do PowerShell:
 
 ### <a name="inspect"></a>Inspecionar
 
-Para baixar um item da Galeria para inspeção, execute o cmdlet [Save-Module][] ou [Save-Script][], dependendo do tipo de item. Isso permite que você salve o item localmente sem instalá-lo e inspecione o conteúdo do item. Lembre-se de excluir o item salvo manualmente.
+Para baixar um pacote da Galeria para inspeção, execute o cmdlet [Save-Module][] ou [Save-Script][], dependendo do tipo de pacote. Isso permite que você salve o pacote localmente sem instalá-lo e inspecione o conteúdo do pacote. Lembre-se de excluir o pacote salvo manualmente.
 
-Alguns desses itens são criados pela Microsoft e outros são criados pela comunidade do PowerShell.
-A Microsoft recomenda que você examine o conteúdo e o código dos itens nesta galeria antes da instalação.
+Alguns desses pacotes são criados pela Microsoft e outros são criados pela comunidade do PowerShell.
+A Microsoft recomenda que você examine o conteúdo e o código dos pacotes nesta galeria antes da instalação.
 
-Se você descobrir que um item que acredita que não tenha sido publicado de boa fé, clique em **Relatar Abuso** na página do item.
+Se você descobrir que um pacote que acredita que não tenha sido publicado de boa fé, clique em **Relatar Abuso** na página do pacote.
 
 ### <a name="install"></a>Instalar
 
-Para instalar um item da Galeria para uso, execute o cmdlet [Install-Module][] ou [Install-Script][], dependendo do tipo de item.
+Para instalar um pacote da Galeria para uso, execute o cmdlet [Install-Module][] ou [Install-Script][], dependendo do tipo de pacote.
 
 [Install-Module][] instala o módulo em `$env:ProgramFiles\WindowsPowerShell\Modules` por padrão.
 Isso requer uma conta de administrador. Se você adicionar o parâmetro `-Scope CurrentUser`, o módulo será instalado em `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`.
@@ -70,22 +70,22 @@ Isso requer uma conta de administrador. Se você adicionar o parâmetro `-Scope 
 [Install-Script][] instala o script em `$env:ProgramFiles\WindowsPowerShell\Scripts` por padrão.
 Isso requer uma conta de administrador. Se você adicionar o parâmetro `-Scope CurrentUser`, o script será instalado em `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`.
 
-Por padrão, [Install-Module][] e [Install-Script][] instalam a versão mais recente de um item.
-Para instalar uma versão mais antiga do item, adicione o parâmetro `-RequiredVersion`.
+Por padrão, [Install-Module][] e [Install-Script][] instalam a versão mais recente de um pacote.
+Para instalar uma versão mais antiga do pacote, adicione o parâmetro `-RequiredVersion`.
 
 ### <a name="deploy"></a>Implantar
 
-Para implantar um item da Galeria do PowerShell na Automação do Azure, clique em **Implantar na Automação do Azure** na página de detalhes do item. Você será redirecionado ao Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure. Observe que implantar itens com dependências implantará todas as dependências na Automação do Azure. O botão Implantar na Automação do Azure pode ser desabilitado adicionando a marca **AzureAutomationNotSupported** aos metadados do item.
+Para implantar um pacote da Galeria do PowerShell na Automação do Azure, clique em **Implantar na Automação do Azure** na página de detalhes do pacote. Você será redirecionado ao Portal de Gerenciamento do Azure, em que você entra usando as credenciais de sua conta do Azure. Implantar pacotes com dependências implantará todas as dependências na Automação do Azure. O botão "Implantar na Automação do Azure" pode ser desabilitado adicionando a marca **AzureAutomationNotSupported** aos metadados do pacote.
 
 Para saber mais sobre a Automação do Azure, confira a documentação da [Automação do Azure](/azure/automation).
 
-## <a name="updating-items-from-the-powershell-gallery"></a>Atualizando itens da Galeria do PowerShell
+## <a name="updating-packages-from-the-powershell-gallery"></a>Atualizar pacotes da Galeria do PowerShell
 
-Para atualizar itens instalados usando a Galeria do PowerShell, execute o cmdlet [Update-Module][] ou [Update-Script][]. Quando executado sem parâmetros adicionais, [Update-Module][] tenta atualizar cada módulo instalado executando [Install-Module][]. Para atualizar os módulos seletivamente, adicione o parâmetro `-Name`.
+Para atualizar pacotes instalados usando a Galeria do PowerShell, execute o cmdlet [Update-Module][] ou [Update-Script][]. Quando executado sem parâmetros adicionais, [Update-Module][] tenta atualizar cada módulo instalado executando [Install-Module][]. Para atualizar os módulos seletivamente, adicione o parâmetro `-Name`.
 
 Da mesma forma, quando executado sem parâmetros adicionais, [Update-Script][] também tenta atualizar cada script instalado executando [Install-Script][]. Para atualizar os scripts seletivamente, adicione o parâmetro `-Name`.
 
-## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a>Listar itens que você instalou da Galeria do PowerShell
+## <a name="list-packages-that-you-have-installed-from-the-powershell-gallery"></a>Listar pacotes que você instalou da Galeria do PowerShell
 
 Para descobrir quais módulos você instalou da Galeria do PowerShell, execute o cmdlet [Get-InstalledModule][]. Esse comando lista todos os módulos no seu sistema que foram instalados diretamente da Galeria do PowerShell.
 

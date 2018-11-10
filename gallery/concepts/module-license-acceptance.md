@@ -3,18 +3,18 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Módulos que exigem a aceitação da licença
-ms.openlocfilehash: 93f92f6e83bcf18a40c3d89eb39a154e16ca5063
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893103"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002660"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Módulos que exigem a aceitação da licença
 
 ## <a name="synopsis"></a>SINOPSE
 
-Os departamentos jurídicos de alguns publicadores de módulo exigem que os clientes aceitem explicitamente a licença antes de instalar o módulo da Galeria do PowerShell. Se um usuário instala, atualiza ou salva um módulo usando o PowerShellGet, seja diretamente ou como uma dependência de outro item, e esse módulo exige que o usuário concorde com uma licença, o usuário deverá indicar que aceita a licença ou a operação falhará.
+Os departamentos jurídicos de alguns publicadores de módulo exigem que os clientes aceitem explicitamente a licença antes de instalar o módulo da Galeria do PowerShell. Se um usuário instala, atualiza ou salva um módulo, usando o PowerShellGet, seja diretamente ou como uma dependência de outro pacote, e esse módulo exige que o usuário concorde com uma licença, o usuário deverá indicar que aceita a licença ou a operação falhará.
 
 ## <a name="publish-requirements-for-modules"></a>Requisitos de publicação para os módulos
 
@@ -43,7 +43,7 @@ Os módulos que gostariam de exigir dos usuários a aceitação da licença deve
 
 - Durante uma operação Install/Save/Update, se um módulo dependente (outra coisa depender do módulo) exigir a aceitação da licença, o comportamento de aceitação da licença (acima) será necessário.
 - Se a versão do módulo já estiver listada no catálogo local como instalada no sistema, ignoraremos a verificação da licença.
-- Durante a operação de Install/Save/Update, se um módulo dependente exigir uma licença, e a aceitação da licença não ocorrer, a operação falhará e seguirá os processos normais para o item que não conseguiu instalar/salvar/atualizar.
+- Durante a operação de Install/Save/Update, se um módulo dependente exigir uma licença, e a aceitação da licença não ocorrer, a operação falhará e seguirá os processos normais para o pacote que não conseguiu instalar/salvar/atualizar.
 
 ## <a name="impact-on--force"></a>Impacto sobre -Force
 
@@ -219,6 +219,6 @@ O módulo é atualizado sem qualquer solicitação de aceitação da licença.
 
 [Exigir a aceitação da licença para Scripts](./script-license-acceptance.md)
 
-[Suporte à exigência de aceitação da licença no PowerShellGallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
+[Suporte à exigência de aceitação da licença no PowerShellGallery](../how-to/working-with-packages/packages-that-require-license-acceptance.md)
 
-[Exigir a aceitação da licença ao implantar na Automação do Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+[Exigir a aceitação da licença ao implantar na Automação do Azure](../how-to/working-with-packages/deploy-to-azure-automation.md)

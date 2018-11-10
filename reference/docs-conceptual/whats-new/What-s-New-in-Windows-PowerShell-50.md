@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: f5a27c0541e21b379f88b318cbe09a0344c1b372
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 7a2ef581f2cd867b35533597d4942fd5bfc94570
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483178"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225804"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 O Windows PowerShell 5.0 inclui recursos novos importantes que estendem e melhoram o uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
@@ -163,7 +163,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 - Get-ChildItem também tem um novo parâmetro, -Depth, que você pode usar com o parâmetro -Recurse para limitar a recursão. Por exemplo, Get-ChildItem -Recurse -Depth 2 retorna resultados da pasta atual, todas as pastas filho dentro da pasta atual e todas as pastas dentro das pastas filho.
 
-- Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que conectadas a computadores remotos (incluindo computadores que executam o [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+- Copy-Item agora permite copiar arquivos ou pastas de uma sessão do Windows PowerShell para outra, o que significa que você pode copiar arquivos para sessões que estão conectadas a computadores remotos (incluindo computadores que executam o [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e, portanto, não têm nenhuma outra interface). Para copiar os arquivos, especifique as IDs de PSSession como o valor dos novos parâmetros -FromSession e -ToSession e adicione -Path e -Destination para especificar o caminho de origem e o destino, respectivamente. Por exemplo, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 - A transcrição do Windows PowerShell foi aperfeiçoada para ser aplicada a todos os aplicativos de hospedagem (como o ISE do Windows PowerShell), além do host do console (**powershell.exe**). As opções de transcrição (incluindo a habilitação de uma transcrição geral do sistema) podem ser configuradas habilitando a configuração Política de Grupo de **Ativar Transcrição do PowerShell** encontrada em Modelos Administrativos/Componentes do Windows/Windows PowerShell.
 
@@ -505,13 +505,13 @@ O Windows PowerShell Web Access é um recurso do Windows Server 2012 que permite
 Para obter mais informações, consulte [Implantar o Windows PowerShell Web Access](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
 ### <a name="new-windows-powershell-ise-features"></a>Novos recursos do Windows PowerShell ISE
-Para o Windows PowerShell 3.0, o ISE (Ambiente de Script Integrado) do Windows PowerShell tem muitos recursos novos, incluindo IntelliSense, janela Show-Command, um painel de console unificado, trechos de código, correspondência de colchetes, seções expandir-recolher, salvamento automático, lista de itens recentes, cópia avançada, cópia do bloco e suporte completo para escrever fluxos de trabalho de script do Windows PowerShell. Para obter mais informações, consulte [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
+Para o Windows PowerShell 3.0, o ISE (Ambiente de Script Integrado) do Windows PowerShell tem muitos recursos novos, incluindo IntelliSense, janela Show-Command, um painel de console unificado, snippets, correspondência de colchetes, seções expandir-recolher, salvamento automático, lista de itens recentes, cópia avançada, cópia do bloco e suporte completo para escrever fluxos de trabalho de script do Windows PowerShell. Para obter mais informações, consulte [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="support-for-microsoft-net-framework-4"></a>Suporte para o Microsoft .NET Framework 4
 O Windows PowerShell foi desenvolvido com o Common Language Runtime 4.0. Autores de cmdlet, script e fluxo de trabalho podem usar as novas classes do Microsoft .NET Framework 4 no Windows PowerShell, com recursos que incluem a Implantação e Compatibilidade do Aplicativo, Managed Extensibility Framework, Computação Paralela, Rede, Windows Communication Foundation e Windows Workflow Foundation.
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Suporte para o Ambiente de Pré-Instalação do Windows
-O Windows PowerShell 3.0 é um componente opcional do Ambiente de Pré-Instalação do Windows (Windows PE) 4.0 para o Windows 8. O Windows PE é um sistema operacional mínimo que inicia um computador que não tem sistema operacional e o prepara para a instalação do Windows. O Windows PE pode ser usado para particionar e formatar discos rígidos, copiar imagens de disco para um computador e iniciar a Instalação do Windows por meio de um compartilhamento de rede. O Windows PowerShell 3.0 pode ser usado no Windows PE para gerenciar a implantação, diagnósticos e cenários de recuperação.
+O Windows PowerShell 3.0 é um componente opcional do Ambiente de Pré-Instalação do Windows (Windows PE) 4.0 para o Windows 8. O Windows PE é um sistema operacional mínimo que inicia um computador que não possui sistema operacional e o prepara para a instalação do Windows. O Windows PE pode ser usado para particionar e formatar discos rígidos, copiar imagens de disco para um computador e iniciar a Instalação do Windows por meio de um compartilhamento de rede. O Windows PowerShell 3.0 pode ser usado no Windows PE para gerenciar a implantação, diagnósticos e cenários de recuperação.
 
 ### <a name="disconnected-sessions"></a>Sessões desconectadas
 A partir do Windows PowerShell 3.0, sessões persistentes gerenciadas pelo usuário ("PSSessions") que você cria usando o cmdlet New-PSSession são salvas no computador remoto. Elas não dependem mais da sessão na qual foram criadas.
@@ -582,7 +582,7 @@ Nas versões anteriores do Windows PowerShell, o controle nesse nível estava di
 
 Para criar um arquivo de configuração de sessão, use o cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866). Para aplicar o arquivo de configuração de sessão a uma configuração de sessão, use os cmdlets [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) ou [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Para obter mais informações, consulte [about_Session_Configuration_Files](https://technet.microsoft.com/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
+Para obter mais informações, consulte [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configuration_files?view=powershell-5.0) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="scheduled-jobs-and-task-scheduler-integration"></a>Trabalhos Agendados e Integração do Agendador de Tarefas
 Agora você pode agendar trabalhos em segundo plano do Windows PowerShell e gerenciá-los no Windows PowerShell e no Agendador de Tarefas.
@@ -656,7 +656,7 @@ A importação automática de módulos é acionada usando o cmdlet em um comando
 
 Você pode habilitar, desabilitar e configurar a importação automática de módulos usando a variável de preferência **$PSModuleAutoLoadingPreference**.
 
-Para obter mais informações, consulte [about_Modules [v4]](https://technet.microsoft.com/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) e os tópicos da Ajuda para os cmdlets [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
+Para obter mais informações, consulte [about_Modules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-5.0), [about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) e os tópicos da Ajuda para os cmdlets [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="module-experience-improvements"></a>Aprimoramentos da experiência do módulo
 O Windows PowerShell 3.0 oferece suporte a recursos avançados para módulos, incluindo os seguintes recursos novos.
