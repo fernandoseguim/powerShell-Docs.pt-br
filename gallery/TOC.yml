@@ -7,9 +7,9 @@ items:
   href: getting-started.md
 - name: Instruções
   items:
-  - name: Localizando itens na galeria
+  - name: Localizando pacotes na Galeria
     items:
-    - name: Pesquisando por itens
+    - name: Pesquisando pacotes
       href: how-to/finding-packages/search-syntax.md
     - name: Pesquisando por PSEdition
       href: how-to/finding-packages/searching-by-psedition.md
@@ -17,17 +17,17 @@ items:
       href: how-to/finding-packages/filtering-packages.md
   - name: Publicando na galeria
     items:
-    - name: Criando e publicando itens
+    - name: Criando e publicando pacotes
       href: how-to/publishing-packages/publishing-a-package.md
     - name: Criando uma conta de PowerShellGallery
       href: how-to/publishing-packages/creating-an-account.md
-    - name: Removendo itens da lista
+    - name: Remover pacotes da lista
       href: how-to/publishing-packages/unlisting-packages.md
-    - name: Excluindo itens
+    - name: Excluir pacotes
       href: how-to/publishing-packages/deleting-packages.md
-    - name: Gerenciando proprietários do item
+    - name: Gerenciando proprietários de pacotes
       href: how-to/publishing-packages/managing-package-owners.md
-  - name: Trabalhando com itens
+  - name: Trabalhando com pacotes
     items:
     - name: Exibição FileList
       href: how-to/working-with-packages/filelist-view.md
@@ -35,9 +35,9 @@ items:
       href: how-to/working-with-packages/deploy-to-azure-automation.md
     - name: Download manual do pacote
       href: how-to/working-with-packages/manual-download.md
-    - name: Itens que exigem a aceitação da licença
+    - name: Pacotes que exigem aceitação da licença
       href: how-to/working-with-packages/packages-that-require-license-acceptance.md
-    - name: Entrando em contato com os proprietários do item
+    - name: Contatando proprietários de pacotes
       href: how-to/working-with-packages/contacting-package-owners.md
     - name: Fornecendo comentários por meio de mídia social ou do recurso Comentários
       href: how-to/working-with-packages/social-media-feedback.md
@@ -47,11 +47,13 @@ items:
       href: how-to/managing-profile/managing-account.md
     - name: Gerenciando chaves de API
       href: how-to/managing-profile/creating-apikeys.md
+  - name: Trabalhando com repositórios locais do PowerShellGet
+    href: how-to/working-with-local-psrepositories.md
 - name: Conceitos
   items:
   - name: Publicando diretrizes e práticas recomendadas
     href: concepts/publishing-guidelines.md
-  - name: Manifesto de item e interface do usuário da Galeria
+  - name: Manifesto de pacotes e interface do usuário da Galeria
     href: concepts/package-manifest-affecting-ui.md
   - name: Exigir PSEditions específicas
     items:
@@ -65,7 +67,7 @@ items:
       href: concepts/script-license-acceptance.md
     - name: Exigir a aceitação da licença para módulos
       href: concepts/module-license-acceptance.md
-  - name: Definindo itens como pré-lançamento
+  - name: Definindo pacotes como pré-lançamento
     items:
     - name: Definindo um módulo como pré-lançamento
       href: concepts/module-prerelease-support.md
@@ -91,9 +93,9 @@ items:
   href: faqs.md
 - name: Cmdlets do PowerShellGet
   href: https://docs.microsoft.com/powershell/module/powershellget/
-ms.openlocfilehash: 386e86b4a27ea840cc688b47f597e845f041af60
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 123607d3ce1139511ee0006b9ec6ed2e9ae99010
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002318"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619119"
