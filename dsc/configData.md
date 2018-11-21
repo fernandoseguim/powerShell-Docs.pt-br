@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando dados de configuração
-ms.openlocfilehash: 9b0b213e2d71bfdb473fd98f8080de5c874c70e2
-ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
-ms.translationtype: HT
+ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940371"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619170"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Usando dados de configuração em DSC
 
@@ -185,12 +185,13 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Usando variáveis de ConfigurationData em uma configuração
 
-A DSC fornece três variáveis especiais que podem ser usadas em um script de configuração: **$AllNodes**, **$Node** e **$ConfigurationData**.
+DSC fornece as seguintes variáveis especiais que podem ser usadas em um script de configuração:
 
 - A **$AllNodes** refere-se a toda a coleção de nós definida em **ConfigurationData**. Você pode filtrar a coleção **AllNodes** usando **.Where()** e **.ForEach()**.
+- O **ConfigurationData** refere-se à tabela de hash inteira que é passada como parâmetro ao compilar uma configuração.
+- **MyTypeName** contém o [configuração](configurations.md) nome de variável é usada no. Por exemplo, na configuração `MyDscConfiguration`, o `$MyTypeName` terá um valor de `MyDscConfiguration`.
 - O **Nó** refere-se a uma entrada específica na coleção **AllNodes** depois que ela é filtrada usando **.Where()** ou **.ForEach()**.
   - Leia mais sobre esses métodos em [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
-- O **ConfigurationData** refere-se à tabela de hash inteira que é passada como parâmetro ao compilar uma configuração.
 
 ## <a name="using-non-node-data"></a>Usar dados sem nós
 
