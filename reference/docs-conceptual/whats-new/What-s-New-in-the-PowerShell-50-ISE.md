@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: O que há de novo no ISE do PowerShell 50
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 35b825cfa6ea720d0af3537c5d1b16c5ececb701
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: f05e3f3f95c8ceec6e843b8a1c79e6f092e1b87b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953575"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320577"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novidades no ISE do Windows PowerShell
 Este tópico explica os recursos novos e atualizados que foram introduzidos em versões do ISE (Ambiente de Script Integrado) do Windows PowerShell.
@@ -24,7 +24,7 @@ A tabela a seguir lista os recursos novos e alterados para esta versão do ISE d
 |Recurso/funcionalidade|ISE do Windows PowerShell 4.0|ISE do Windows PowerShell 3.0|ISE do Windows PowerShell 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
 |**[IntelliSense](#intellisense)**|X|X||
-|**[Trechos de código](#snippets)**|X|X||
+|**[Snippets](#snippets)**|X|X||
 |**[Ferramentas complementares](#add-on-tools)**|X|X||
 |**[Gerenciador de Reinicialização e Salvamento Automático](#restart-manager-and-auto-save)**|X|X||
 |**[Lista de recém-usados](#most-recently-used-list)**|X|X||
@@ -47,23 +47,23 @@ Com a adição do IntelliSense, ficou mais fácil de descobrir cmdlets e sintaxe
 
 Quando você digita cmdlets no ISE do Windows PowerShell 3.0 ou posterior, um menu rolável e clicável é exibido, permitindo que você navegue e selecione os comandos apropriados.
 
-### <a name="snippets"></a>Trechos de código
+### <a name="snippets"></a>Snippets
 **Adicionado no ISE 3.0**
 
-*Trechos de código* são sessões de código Windows PowerShell curtas que você pode inserir nos scritps que cria no ISE do Windows PowerShell. O ISE do Windows PowerShell vem com um conjunto padrão de trechos de código. Você pode adicionar trechos de código usando o cmdlet **New-Snippet** enquanto trabalha no ISE do Windows PowerShell.
+*Snippets de código* são sessões de código Windows PowerShell curtas que você pode inserir nos scritps que cria no ISE do Windows PowerShell. O ISE do Windows PowerShell vem com um conjunto padrão de snippets. Você pode adicionar trechos de código usando o cmdlet **New-Snippet** enquanto trabalha no ISE do Windows PowerShell.
 
 **Qual é o valor adicionado por esta alteração?**
 
-Usando trechos de código, você pode montar e criar scripts para automatizar seu ambiente rapidamente.
+Usando snippets, você pode montar e criar scripts para automatizar seu ambiente rapidamente.
 
 **O que passou a funcionar de maneira diferente?**
 
-Para usar trechos de código no Windows PowerShell 3.0 ou posterior, no menu **Editar**, clique em **Iniciar Trechos de Código** ou pressione **Ctrl-J**.
+Para usar snippets no Windows PowerShell 3.0 ou posterior, no menu **Editar**, clique em **Iniciar Snippets** ou pressione **Ctrl-J**.
 
 ### <a name="add-on-tools"></a>Ferramentas complementares
 **Adicionado no PowerShell 3.0**
 
-O ISE do Windows PowerShell agora dá suporte para ferramentas complementares, que são controles do WPF (Windows Presentation Foundation) que são adicionados usando o modelo de objeto. As ferramentas complementares podem ser exibidas como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações sobre como importar ou remover ferramentas complementares, confira [Windows PowerShell ISE Operations](http://technet.microsoft.com/library/cc732148.aspx) (Operações do ISE do Windows PowerShell).
+O ISE do Windows PowerShell agora dá suporte para ferramentas complementares, que são controles do WPF (Windows Presentation Foundation) que são adicionados usando o modelo de objeto. As ferramentas complementares podem ser exibidas como um painel vertical ou horizontal no console. Várias ferramentas complementares em um painel são exibidas como um controle com guias. Você também pode adicionar ou remover ferramentas complementares produzidas por terceiros. Para obter mais informações sobre como importar ou remover ferramentas complementares, confira [Windows PowerShell ISE Operations](https://technet.microsoft.com/library/cc732148.aspx) (Operações do ISE do Windows PowerShell).
 
 **Qual é o valor adicionado por esta alteração?**
 
@@ -224,5 +224,5 @@ O Show-Command é uma novidade no ISE do Windows PowerShell 3.0.
 Para mais informações sobre o ISE do Windows PowerShell no Windows PowerShell, consulte os links a seguir.
 
 - [Explorando o Ambiente de Script Integrado do Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
-- [ISE no TechNet Wiki](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
-- [Central de Scripts](http://technet.microsoft.com/scriptcenter/default)
+- [ISE no TechNet Wiki](https://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
+- [Central de Scripts](https://technet.microsoft.com/scriptcenter/default)

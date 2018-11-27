@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
-ms.openlocfilehash: ef476d8e386e5380cb2c9dda69180dfce8748bf4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: c9b98c7a1685679eb88b718de0351154cb84e92e
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953439"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320985"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
 
@@ -49,7 +49,7 @@ Isso pode ocorrer com usuários que entraram com um nome de domínio que contém
 
 #### <a name="workaround"></a>Solução alternativa
 
-1. [Instalar e executar o Internet Explorer 10](http://ie.microsoft.com/testdrive/info/downloads/Default.html)
+1. [Instalar e executar o Internet Explorer 10](https://ie.microsoft.com/testdrive/info/downloads/Default.html)
 1. Altere a configuração **Modo de Documento** do Internet Explorer para os padrões do *IE10*.
    1. Pressione **F12** para abrir o console de Ferramentas de Desenvolvedor
    1. No Internet Explorer 10, clique em **Modo do Navegador** e selecione *Internet Explorer 10*.

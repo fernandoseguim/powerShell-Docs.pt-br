@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Redirecionamento de dados com cmdlets Out
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
-ms.openlocfilehash: 3ca7984e831a995e80cbd8a4d83ae9225c2a4f4c
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: f08879f436ce751b176af020aba21e90f09aa61f
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952113"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321002"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Redirecionamento de dados com cmdlets Out-*
 
@@ -97,7 +97,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 
 O cmdlet **Out-Null** é projetado para descartar imediatamente qualquer entrada que receber. Isso é útil para descartar dados desnecessários obtidos como efeito colateral da execução de um comando. Ao digitar o comando a seguir, você não receberá nenhuma saída dele:
 
-```powreshell
+```powershell
 Get-Command | Out-Null
 ```
 

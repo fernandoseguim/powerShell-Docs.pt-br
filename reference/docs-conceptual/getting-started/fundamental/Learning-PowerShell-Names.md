@@ -3,16 +3,16 @@ ms.date: 08/24/2018
 keywords: powershell, cmdlet
 title: Aprendendo os nomes do PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: a4f7e12c2b30e8ae6d1cf5a125d613d2d7558c34
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.openlocfilehash: 6ed1f99513f00c174147876e1982c0d12869cacb
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320475"
 ---
 # <a name="learning-powershell-names"></a>Aprendendo os nomes do PowerShell
 
-Aprender os nomes de comandos e parâmetros exige um investimento considerável de tempo com a maioria das interfaces de linha de comando. O problema é que há alguns padrões. A memorização é a única maneira de aprender os comandos e parâmetros necessários regularmente.
+Aprender os nomes de comandos e parâmetros exige um investimento considerável de tempo com a maioria das interfaces de linha de comando. O problema é que há alguns padrões. Memorização é a única maneira de aprender os comandos e parâmetros que você precisa usar regularmente.
 
 Ao trabalhar com um novo comando ou parâmetro, nem sempre é possível usar o que você já conhece. Você precisa localizar e aprender um novo nome. Tradicionalmente, as interfaces de linha de comando começam com um pequeno conjunto de ferramentas e aumentam com adições incrementais. É fácil ver por que não há uma estrutura padrão.
 Isso parece lógico para nomes de comando, já que cada comando é uma ferramenta separada. O PowerShell oferece uma maneira melhor de lidar com nomes de comando.

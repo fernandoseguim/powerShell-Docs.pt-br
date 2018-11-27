@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: usar o console do windows powershell baseado na web
-ms.openlocfilehash: 5d29a6f97fddf4b329fcc7097cf7d40d47d22cca
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483144"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320645"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usar o Console do Windows PowerShell baseado na Web
 
@@ -169,7 +169,7 @@ Alt+F7 | Limpa a lista do histórico de comandos
 
     Você pode se deparar com a limitação de salto duplo (ou se conectar a um segundo computador por meio da primeira conexão) se tentar criar ou trabalhar em uma nova sessão usando o Windows PowerShell Web Access. O Windows PowerShell Web Access usa um runspace remoto e, no momento, o **PowerShell.exe** não dá suporte ao estabelecimento de uma conexão remota com um segundo computador de um runspace remoto. Se você tentar se conectar a um segundo computador remoto por meio de uma conexão existente usando o cmdlet **Enter-PSSession**, por exemplo, vários erros poderão ser gerados, como “Não é possível obter recursos da rede”.
 
-    Para evitar erros de salto duplo, o administrador deve configurar a autenticação CredSSP no ambiente de rede da organização. Para obter mais informações sobre a configuração da autenticação CredSSP, consulte [CredSSP for second-hop remoting](http://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) (CredSSP para segundo salto remoto) no site da Microsoft. Também é possível fornecer credenciais explícitas quando você deseja gerenciar um segundo computador remoto, é pouco provável que as credenciais implícitas permitam o segundo salto.
+    Para evitar erros de salto duplo, o administrador deve configurar a autenticação CredSSP no ambiente de rede da organização. Para obter mais informações sobre a configuração da autenticação CredSSP, consulte [CredSSP for second-hop remoting](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) (CredSSP para segundo salto remoto) no site da Microsoft. Também é possível fornecer credenciais explícitas quando você deseja gerenciar um segundo computador remoto, é pouco provável que as credenciais implícitas permitam o segundo salto.
 
 - Comunicação remota
 
@@ -224,12 +224,12 @@ Alt+F7 | Limpa a lista do histórico de comandos
 
         É possível alterar a altura do console de maneira similar.
 
-        Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](http://blogs.msdn.com/b/powershell/).
+        Exemplos adicionais para personalizar a exibição do console estão disponíveis no [Blog da Equipe do Windows PowerShell](https://blogs.msdn.com/b/powershell/).
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Windows PowerShell Cmdlet Reference](https://technet.microsoft.com/library/ee407531(ws.10).aspx) (Referência de cmdlet do Windows PowerShell)
 - [Windows PowerShell no Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-- [Repositório do TechNet Script Center](http://gallery.technet.microsoft.com/scriptcenter)
+- [Repositório do TechNet Script Center](https://gallery.technet.microsoft.com/scriptcenter)
 - [Script Center – Olá, pessoal do script!](https://technet.microsoft.com/scriptcenter)
-- [Windows PowerShell Team Blog](http://blogs.msdn.com/b/powershell/) (Blog da equipe do Windows PowerShell)
+- [Windows PowerShell Team Blog](https://blogs.msdn.com/b/powershell/) (Blog da equipe do Windows PowerShell)
