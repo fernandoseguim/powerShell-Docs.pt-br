@@ -3,16 +3,16 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Atalhos do teclado para o ISE do Windows PowerShell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: e17fee4cf0cc8ac7aa0bb36acde3b452919312d0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953813"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320798"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Atalhos do teclado para o ISE do Windows PowerShell
 
-Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell®. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
+Use os atalhos de teclado a seguir para executar ações no ISE (Ambiente de Script Integrado) do Windows PowerShell®. O ISE do Windows PowerShell está disponível como parte dos sistemas operacionais cliente Windows Server e Windows, mas também pode ser instalado em alguns sistemas operacionais Windows mais antigos como parte do [pacote de download do Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Atalhos de teclado para edição de texto
 
@@ -33,7 +33,7 @@ Você pode usar os seguintes atalhos de teclado ao editar texto.
 |**Substituir no script**|Ctrl+H|Painel de Script|
 |**Salvar**|Ctrl+S|Painel de Script|
 |**Selecionar tudo**|Ctrl+A|Painel de Script, Painel de Comando e Painel de Saída|
-|**Mostrar Trechos de Código**|Ctrl+J|Painel de Script, Painel de Comando|
+|**Mostrar Snippets**|Ctrl+J|Painel de Script, Painel de Comando|
 |**Desfazer**|Ctrl+Z|Painel de Script, Painel de Comando|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Atalhos de teclado para execução de scripts
@@ -120,4 +120,4 @@ Você pode usar os seguintes atalhos de teclado para iniciar o console do Window
 
 ## <a name="see-also"></a>Consulte Também
 
-- [PowerShell Magazine: a lista completa de atalhos de teclado do ISE do Windows PowerShell](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
+- [PowerShell Magazine: a lista completa de atalhos de teclado do ISE do Windows PowerShell](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

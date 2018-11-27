@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Iniciando o Mecanismo do Windows PowerShell 2.0
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: 618745ff4865dd046acf46487e87c3ca0e324f95
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: b600c1f5ea122df9bd53132ccc8edbbc6fa1e9f6
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320781"
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Iniciando o Mecanismo do Windows PowerShell 2.0
 
@@ -22,7 +22,7 @@ Muitos programas que exigem o Mecanismo Windows PowerShell 2.0 o inicia automati
 
 Antes de iniciar o Mecanismo Windows PowerShell 2.0, habilite o Mecanismo Windows PowerShell 2.0 e o Microsoft .NET Framework 3.5 com o Service Pack 1. Para ver as instruções, consulte [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Sistemas nos quais o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0 estão instalados têm todos os componentes necessários. Nenhuma outra configuração é necessária. Para obter informações sobre como instalar o [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0, confira [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
+Sistemas nos quais o Windows Management Framework 4.0 ou Windows Management Framework 3.0 estão instalados têm todos os componentes necessários. Nenhuma outra configuração é necessária. Para obter informações sobre como instalar o [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881) ou Windows Management Framework 3.0, confira [Instalar o Windows PowerShell](Installing-Windows-PowerShell.md).
 
 ## <a name="how-to-start-the-windows-powershell-20-engine"></a>Como iniciar o Mecanismo Windows PowerShell 2.0
 

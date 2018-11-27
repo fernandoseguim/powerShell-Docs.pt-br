@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
-ms.openlocfilehash: e9bed3900263a51b1b8236a3c3430154a5d11886
-ms.sourcegitcommit: 31a221d982305c7f999b1afeb15e3629e9620de8
-ms.translationtype: HT
+ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43133079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321070"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
@@ -20,19 +20,19 @@ O Windows PowerShell Web Access no Windows Server 2012 R2 e no Windows Server 20
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configurando regras de autorização e segurança do site
 
 Depois que o Windows PowerShell Web Access for instalado e o gateway configurado, os usuários poderão abrir a página de entrada em um navegador, mas só poderão entrar depois que o administrador do Windows PowerShell Web Access conceder a eles acesso explicitamente. O controle de acesso do ‘Windows PowerShell Web Access’ é gerenciado por meio de um conjunto de cmdlets do Windows PowerShell descritos na tabela a seguir. Não há uma GUI comparável para adicionar ou gerenciar regras de autorização.
-Consulte [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md).
+Consulte [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps).
 
 Os administradores podem definir as regras de autenticação `{0-n}` para o Windows PowerShell Web Access. A segurança padrão é restritiva, não permissiva. Se não houver regras de autenticação, significa que nenhum usuário tem acesso a coisa alguma.
 
-[Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de uma sessão ativa do Windows PowerShell Web Access. Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Credential, você pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
+[Add-PswaAuthorizationRule](/powershell/module/powershellwebaccess/add-pswaauthorizationrule?view=winserver2012r2-ps) e [Test-PswaAuthorizationRule](/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=winserver2012r2-ps) no Windows Server 2012 R2 incluem um parâmetro Credential que permite adicionar e testar regras de autorização do Windows PowerShell Web Access por meio de um computador remoto ou de uma sessão ativa do Windows PowerShell Web Access. Assim como com outros cmdlets do Windows PowerShell que têm um parâmetro Credential, você pode especificar um objeto PSCredential como o valor do parâmetro. Para criar um objeto PSCredential que contenha credenciais que você deseja passar para um computador remoto, execute o cmdlet [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
 
-Regras de autenticação do Windows PowerShell Web Access são regras da lista de permissões. Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
-Para obter uma explicação sobre **runspaces** consulte [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/) (Começando a usar runspaces do PowerShell)
+Regras de autenticação do Windows PowerShell Web Access são regras da lista de permissões. Cada regra é uma definição de uma conexão permitida entre usuários, computadores de destino e [configurações de sessão](/powershell/module/microsoft.powershell.core/about/about_session_configurations?view=powershell-5.1) do Windows PowerShell específicas (também mencionadas como pontos de extremidade ou _runspaces_) em computadores de destino especificados.
+Para obter uma explicação sobre **runspaces** consulte [Começando a usar runspaces do PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/)
 
 > [!IMPORTANT]
 > Um usuário só precisa de uma regra para obter acesso. Se um usuário receber acesso a um computador com acesso completo a linguagem ou acesso somente a cmdlets de gerenciamento remoto do Windows PowerShell, do console baseado na Web, o usuário poderá fazer logon (ou saltar) para outros computadores conectados ao primeiro computador de destino. A maneira mais segura de configurar o Windows PowerShell Web Access é permitir o acesso aos usuários apenas a configurações de sessão restritas, que permitem realizar tarefas específicas que normalmente precisam ser executadas remotamente.
 
-Os cmdlets referenciados em [Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md) permitem criar um conjunto de regras de acesso que são usadas para autorizar um usuário no gateway do Windows PowerShell Web Access. As regras são diferentes das listas de controle de acesso (ACLs) no computador de destino e fornecem uma camada adicional de segurança para acesso à Web. A seção a seguir contém mais detalhes sobre segurança.
+Os cmdlets referenciados em [Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) permitem criar um conjunto de regras de acesso que são usadas para autorizar um usuário no gateway do Windows PowerShell Web Access. As regras são diferentes das listas de controle de acesso (ACLs) no computador de destino e fornecem uma camada adicional de segurança para acesso à Web. A seção a seguir contém mais detalhes sobre segurança.
 
 Se os usuários não puderem passar por nenhuma das camadas de segurança anteriores, eles receberão uma mensagem genérica de "acesso negado" na janela do navegador. Embora os detalhes de segurança sejam registrador no servidor do gateway, os usuários finais não recebem informações sobre quantas camadas de segurança eles ultrapassaram, ou em qual camada ocorreu a falha de logon ou autenticação.
 
@@ -181,8 +181,8 @@ No cenário anterior, o Windows PowerShell Web Access só estabelece uma conexã
 2. Autenticação no computador de destino usando credenciais alternativas fornecidas na página de entrada, na área **Configurações opcionais de conexão**
 
    > [!NOTE]
-   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Creating Domain and Forest Trusts](https://technet.microsoft.com/library/cc794775.aspx) (Criando relações de confiança entre domínios e florestas).
-   > Para saber mais sobre como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, confira [Gerenciamento remoto com gerenciador de servidores](https://technet.microsoft.com/library/dd759202.aspx).
+   > Se o gateway e os computadores de destino estiverem em domínios ou grupos de trabalho diferentes, uma relação de confiança deverá ser estabelecida entre os dois computadores de grupo de trabalho, entre os dois domínios ou entre o grupo de trabalho e o domínio. Essa relação não pode ser configurada usando cmdlets de regras de autorização do Windows PowerShell Web Access. As regras de autorização não definem uma relação de confiança entre computadores. Elas só podem autorizar usuários a se conectar a computadores de destino e a configurações de sessão específicos. Para obter mais informações sobre como configurar uma relação de confiança entre diferentes domínios, consulte [Criando relações de confiança entre domínios e florestas](https://technet.microsoft.com/library/cc794775.aspx).
+   > Para obter mais informações sobre como adicionar computadores de grupo de trabalho a uma lista de hosts confiáveis, consulte [Gerenciamento remoto com o Gerenciador do Servidor](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Usando um único conjunto de regras de autorização para vários sites
 
@@ -229,4 +229,4 @@ Se o servidor de gateway estiver executando Windows Server 2012 R2, o Windows Po
 
 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 
-[Cmdlets do Windows PowerShell Web Access](cmdlets/web-access-cmdlets.md)
+[Cmdlets do Windows PowerShell Web Access](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps)
