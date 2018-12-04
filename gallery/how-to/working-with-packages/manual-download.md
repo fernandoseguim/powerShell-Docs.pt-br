@@ -3,16 +3,16 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: galeria, powershell, psgallery
 title: Download manual do pacote
-ms.openlocfilehash: 0952aa4ec474850af5219fb2e0e9ee3e954b0f9a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: 57baa14089b803f58c42ccb54553ecace841e34b
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003634"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742815"
 ---
 # <a name="manual-package-download"></a>Download manual do pacote
 
-Na Galeria do PowerShell, é possível baixar um pacote diretamente no site, sem usar os cmdlets PowerShellGet. O pacote será baixado como um arquivo de pacote do NuGet (.nupkg) que, em seguida, pode ser facilmente copiado para um repositório interno.
+Na Galeria do PowerShell, é possível baixar um pacote diretamente no site, sem usar os cmdlets PowerShellGet. Você pode baixar qualquer pacote como um arquivo de pacote (. nupkg) do NuGet, você pode copiar para um repositório interno.
 
 > [!NOTE]
 > O download manual do pacote **não** serve para substituir o cmdlet Install-Module.
@@ -45,7 +45,7 @@ A abordagem mais fácil é remover os elementos específicos do NuGet da pasta. 
 1. Extrair o conteúdo do pacote do NuGet em uma pasta local.
 2. Exclua os elementos específicos do NuGet da pasta.
 3. Renomear a pasta. Normalmente, o nome de pasta padrão é `<name>.<version>`. A versão poderá incluir "-pré-lançamento" se o módulo estiver marcado como uma versão de pré-lançamento. Renomeie a pasta somente com o nome do módulo. Por exemplo, "azurerm.storage.5.0.4-preview" torna-se "azurerm".
-4. Copie a pasta para PSModulePath.
+4. Copie a pasta para uma das pastas no `$env:PSModulePath value`. `$env:PSModulePath` é um conjunto de ponto e vírgula delimitado de caminhos em que PowerShell deve procurar módulos.
 
 > [!IMPORTANT]
 > O download manual não inclui quaisquer dependências exigidas pelo módulo. Se o pacote tiver dependências, elas precisarão ser instaladas no sistema para que esse módulo funcione corretamente. A Galeria do PowerShell mostra todas as dependências exigidas pelo pacote.
