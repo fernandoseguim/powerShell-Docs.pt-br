@@ -3,20 +3,20 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: galeria,powershell,cmdlet,psget
 title: Script com edições compatíveis do PowerShell
-ms.openlocfilehash: fcfe670a0a9ee71427b4a8adaaf3d612411941f7
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: e364879f611429a8583e550fb7704431e456fbb1
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002404"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655269"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Script com edições compatíveis do PowerShell
 
 Da versão 5.1 em diante, o PowerShell está disponível nas edições diferentes que denotam diferentes conjuntos de recursos e compatibilidade de plataforma.
 
-- **Desktop Edition:** criada no .NET Framework e oferece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de superfície completa do Windows, como Server Core e Área de Trabalho do Windows.
+- Desktop Edition Baseado no .NET Framework e oferece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de superfície completa do Windows como núcleo de servidor e área de trabalho do Windows.
 
-- **Core Edition:** criada no .NET Core e oferece compatibilidade com scripts e módulos destinados a versões do PowerShell executando em edições de superfície reduzida do Windows, como o Nano Server e Windows IoT.
+- **Core Edition:** Baseada no .NET Core e fornece compatibilidade com scripts e módulos destinados a versões do PowerShell em execução em edições de volume reduzido do Windows, como o Nano Server e Windows IoT.
 
 A edição de execução do PowerShell é mostrada na propriedade PSEdition do $PSVersionTable.
 
@@ -67,4 +67,4 @@ Find-Script -Tag PSEdition_Core
 ## <a name="more-details"></a>Mais detalhes
 
 - [Módulos com PSEditions](module-psedition-support.md)
-- [Suporte do PSEditions na PowerShellGallery](../how-to/finding-packages/searching-by-psedition.md)
+- [Suporte do PSEditions na PowerShellGallery](../how-to/finding-packages/searching-by-compatibility.md)

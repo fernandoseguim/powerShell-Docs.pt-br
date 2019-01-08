@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: 60ce7a1676403bb08b57bf852ba725acde86a30c
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
-ms.translationtype: HT
+ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309598"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655439"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
 
@@ -271,3 +271,4 @@ A API do .NET subjacente dos cmdlets Web foi alterada para `System.Net.Http.Http
 - As configurações de `System.Net.ServicePointManager` não são mais cumpridas.
 - No momento, não há uma autenticação baseada em certificado disponível no macOS.
 - O uso de `-Credential` sobre uma URI `http://` resultará em erro. Use um URI `https://` ou forneça o parâmetro `-AllowUnencryptedAuthentication` para suprimir o erro.
+- `-MaximumRedirection` Agora produz um erro de encerramento quando as tentativas de redirecionamento excederem o limite fornecido em vez de retornar os resultados do último redirecionamento.
