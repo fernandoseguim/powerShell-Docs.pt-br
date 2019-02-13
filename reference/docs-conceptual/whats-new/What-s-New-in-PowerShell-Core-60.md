@@ -3,11 +3,11 @@ title: Novidades no PowerShell Core 6.0
 description: Novos recursos e alterações liberados no PowerShell Core 6.0
 ms.date: 08/06/2018
 ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289235"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675802"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novidades no PowerShell Core 6.0
 
@@ -65,7 +65,7 @@ Outras só estão presentes ou são aplicáveis em instalações não Windows do
 - `Get-Help` corrigido para dar suporte à correspondência de padrão sem diferenciação de maiúsculas e minúsculas em plataformas Unix. (#3852)
 - Página de manual `powershell` adicionada ao pacote
 
-### <a name="logging"></a>Registrando em Log
+### <a name="logging"></a>Log
 
 No macOS, o PowerShell usa as APIs `os_log` nativas para fazer logon no [sistema de log unificado][os_log] da Apple.
 No Linux, o PowerShell usa [Syslog][], uma solução de registro em log ubíqua.
@@ -274,7 +274,7 @@ Para obter mais informações sobre trabalhos do PowerShell, veja [about_Jobs](h
 - Adicione o comutador `-SkipHeaderValidation` aos cmdlets da Web para dar suporte à adição de cabeçalhos sem validar o valor do cabeçalho. (#4085)
 - Habilite cmdlets da Web para não validar o certificado HTTPS do servidor, se necessário.
 - Adicione parâmetros de autenticação aos cmdlets da Web. (#5052) (Obrigado, [@markekraus](https://github.com/markekraus))
-  - Adicione `-Authentication` que fornece três opções: Basic, OAuth e portador.
+  - Adicionar `-Authentication` que fornece três opções: Basic, OAuth e portador.
   - Adicione `-Token` para obter o token de portador para opções de portador e OAuth.
   - Adicione `-AllowUnencryptedAuthentication` para ignorar a autenticação fornecida para algum esquema de transporte diferente de HTTPS.
 - Adicione `-ResponseHeadersVariable` a `Invoke-RestMethod` para habilitar a captura de cabeçalhos de resposta. (#4888) (Obrigado, [@markekraus](https://github.com/markekraus))

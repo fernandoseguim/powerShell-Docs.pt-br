@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: jianyunt, quoctruong
 title: Melhorias ao Gerenciamento de Pacotes do WMF 5.1
-ms.openlocfilehash: 1ebd574bd98a056de634ac688244813c1947618e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187452"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676403"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Melhorias no gerenciamento de pacote no WMF 5.1#
 
@@ -30,7 +30,7 @@ Isso ocorre porque o parâmetro `-Version` é um alias do parâmetro `-MinimumVe
 
 No entanto, em alguns casos, quando há uma versão antiga do provedor de NuGet instalada em seu computador, a versão mais antiga do NuGet às vezes é carregada primeiro na sessão do PowerShell (ou seja, a condição de corrida no PackageManagement). No entanto, o PowerShellGet requer a versão mais recente do provedor de NuGet para funcionar, portanto, o PowerShellGet solicita que o PackageManagement inicialize o provedor de NuGet novamente. Isso resulta em vários prompts para inicializar o provedor do NuGet.
 
-**Solução**: no WMF 5.1, o PackageManagement carrega a versão mais recente do provedor de NuGet para evitar vários prompts para inicialização do provedor de NuGet.
+**Solução**: No WMF 5.1, o PackageManagement carrega a versão mais recente do provedor do NuGet para evitar vários prompts para inicializar o provedor do NuGet.
 
 Você também pode utilizar uma solução alternativa para esse problema excluindo manualmente a versão antiga do provedor do NuGet (NuGet Anycpu.exe), caso ele exista, de $env:ProgramFiles\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
@@ -41,7 +41,7 @@ Você também pode utilizar uma solução alternativa para esse problema excluin
 
 **Cenário**: no WMF 5.0, o PackageManagement não dava suporte a computadores com acesso somente à intranet (e não à Internet).
 
-**Solução**: no WMF 5.1, você pode seguir estas etapas para permitir que computadores com intranet usem o PackageManagement:
+**Solução**: No WMF 5.1, você pode seguir estas etapas para permitir que computadores com Intranet usem o PackageManagement:
 
 1. Baixe o provedor de NuGet usando outro computador que tenha conexão com a Internet usando `Install-PackageProvider -Name NuGet`.
 
