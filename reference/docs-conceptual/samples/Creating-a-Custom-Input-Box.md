@@ -4,11 +4,11 @@ keywords: powershell, cmdlet
 title: Criando uma caixa de entrada personalizada
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
 ms.openlocfilehash: 2d04ad6df65cdb4ff13d136dea47bbba6a01f3a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400123"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676020"
 ---
 # <a name="creating-a-custom-input-box"></a>Criando uma caixa de entrada personalizada
 
@@ -160,5 +160,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>Consulte Também
 
 - [Ei Scripting Guy: por que esses exemplos de GUI do PowerShell não funcionam?](https://go.microsoft.com/fwlink/?LinkId=506644)
-- [GitHub Winformsexampleupdates do Wyatt Dave](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [GitHub: WinFormsExampleUpdates do Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Windows PowerShell Tip of the Week: Creating a Custom Input Box](https://technet.microsoft.com/library/ff730941.aspx) (Dica da Semana do Windows PowerShell: criar uma caixa de entrada personalizada)

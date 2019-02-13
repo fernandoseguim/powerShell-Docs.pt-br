@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: WinRMSecurity
 ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400201"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676413"
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerações de segurança de comunicação remota do PowerShell
 
@@ -30,7 +30,7 @@ Por padrão, a comunicação remota do PowerShell só permite conexões de membr
 
 Em redes privadas, a regra de Firewall do Windows padrão para comunicação remota do PowerShell aceita todas as conexões. Em redes públicas, a regra padrão do Firewall do Windows permite as conexões da comunicação remota do PowerShell somente dentro da mesma sub-rede. Você precisa alterar explicitamente a regra para abrir a comunicação remota do PowerShell para todas as conexões em uma rede pública.
 
->Aviso A regra de firewall para redes públicas destina-se para proteger o computador contra tentativas de conexão externa potencialmente mal-intencionados. Tenha cuidado ao remover essa regra.
+>**Aviso:** a regra de firewall para redes públicas destina-se a proteger o computador contra tentativas de conexão externa potencialmente mal-intencionada. Tenha cuidado ao remover essa regra.
 
 ## <a name="process-isolation"></a>Isolamento do processo
 

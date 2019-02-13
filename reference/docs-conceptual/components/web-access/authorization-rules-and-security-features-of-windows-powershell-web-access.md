@@ -2,16 +2,16 @@
 ms.date: 06/27/2017
 keywords: powershell, cmdlet
 title: Regras de autorização e recursos de segurança do Windows PowerShell Web Access
-ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: HT
+ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400258"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675891"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regras de autorização e recursos de segurança do Windows PowerShell Web Access
 
-Atualizado: 24 de junho de 2013
+Atualizado em: 24 de junho de 2013
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
@@ -158,7 +158,7 @@ Toda sessão do Windows PowerShell usa uma configuração de sessão. Se não ho
 
 - O administrador criou um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e deseja restringir o acesso a usuários específicos. O administrador cria um grupo de usuários chamado **Level1Support** e define a seguinte regra: **Level1Support,\*,PswaEndpoint**. A regra concede acesso a todos os usuários no grupo **Level1Support** a todos os computadores com a configuração **PswaEndpoint**. De modo semelhante, o acesso pode ser restrito a um conjunto específico de computadores.
 
-- Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define as duas regras a seguir: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
+- Alguns administradores concedem a certos usuários mais acesso do que outros. Por exemplo, um administrador cria dois grupos de usuários: **Admins** e **BasicSupport**. O administrador também cria um ponto de extremidade com um runspace restrito chamado **PswaEndpoint** e define duas regras: **Admins,\*,\*** e **BasicSupport,\*,PswaEndpoint**. A primeira regra fornece a todos os usuários do grupo **Admin** acesso a todos os computadores e a segunda regra fornece a todos os usuários do grupo **BasicSupport** acesso apenas aos computadores com **PswaEndpoint**.
 
 - Um administrador configurou um ambiente de teste privado e deseja permitir que todos os usuários da rede autorizados acessem todos os computadores na rede aos quais têm acesso normalmente, com acesso a todas as configurações de sessão que acessam tipicamente. Como esse é um ambiente de teste privado, o administrador cria uma regra de autorização que não é segura. - O administrador executa o cmdlet `Add-PswaAuthorizationRule * * *`, que usa o caractere curinga **\*** para representar todos os usuários, todos os computadores e todas as configurações. - Essa regra equivale ao seguinte: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 
@@ -186,13 +186,13 @@ No cenário anterior, o Windows PowerShell Web Access só estabelece uma conexã
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Usando um único conjunto de regras de autorização para vários sites
 
-As regras de autorização são armazenadas em um arquivo XML. Por padrão, o nome do caminho do arquivo XML é `%windir%\Web\PowershellWebAccess\data\AuthorizationRules.xml`.
+As regras de autorização são armazenadas em um arquivo XML. Por padrão, o nome do caminho do arquivo XML é `$env:windir\Web\PowershellWebAccess\data\AuthorizationRules.xml`.
 
-O caminho para o arquivo XML de regras de autorização é armazenado no arquivo **powwa.config**, encontrado em `%windir%\Web\PowershellWebAccess\data`. O administrador pode alterar a referência ao caminho padrão em **powwa.config** de acordo com preferências ou requisitos. O fato de o administrador poder alterar a localização do arquivo permite que muitos gateways do Windows PowerShell Web Access usem as mesmas regras de autorização, caso essa configuração seja necessária.
+O caminho para o arquivo XML de regras de autorização é armazenado no arquivo **powwa.config**, encontrado em `$env:windir\Web\PowershellWebAccess\data`. O administrador pode alterar a referência ao caminho padrão em **powwa.config** de acordo com preferências ou requisitos. O fato de o administrador poder alterar a localização do arquivo permite que muitos gateways do Windows PowerShell Web Access usem as mesmas regras de autorização, caso essa configuração seja necessária.
 
 ## <a name="session-management"></a>Gerenciamento de sessões
 
-Por padrão, o Windows PowerShell Web Access limita um usuário a três sessões ao mesmo tempo. Você pode editar o arquivo **web.config** do aplicativo Web no Gerenciador do IIS para dar suporte a um número diferente de sessões por usuário. O caminho para o arquivo **web.config** é `$Env:Windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
+Por padrão, o Windows PowerShell Web Access limita um usuário a três sessões ao mesmo tempo. Você pode editar o arquivo **web.config** do aplicativo Web no Gerenciador do IIS para dar suporte a um número diferente de sessões por usuário. O caminho para o arquivo **web.config** é `$env:windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
 
 Por padrão, o servidor Web do IIS é configurado para reiniciar o pool de aplicativos quando alguma configuração é editada. Por exemplo, o pool de aplicativos é reiniciado quando são feitas alterações no arquivo **web.config**. >Como o **Windows PowerShell Web Access** usa estados de sessão na memória, >os usuários conectados a sessões do **Windows PowerShell Web Access** perdem suas sessões quando o pool de aplicativos é reiniciado.
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando a ferramenta Designer de Recursos
 ms.openlocfilehash: 3fd2f06cf46602ee30dd34f8e7bd77d3c92b808f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400202"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675925"
 ---
 # <a name="using-the-resource-designer-tool"></a>Usando a ferramenta Designer de Recursos
 
@@ -17,16 +17,16 @@ A ferramenta Designer de Recursos é um conjunto de cmdlets expostos pelo módul
 Neste tópico, criaremos um recurso de DSC que gerencia os usuários do Active Directory.
 Use o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xDscResourceDesigner**.
 
->**Observação**: **Install-Module** está incluído na **PowerShellGet** módulo, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+>**Observação**: **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
 ## <a name="creating-resource-properties"></a>Criando propriedades de recurso
 A primeira coisa que precisamos fazer é decidir sobre as propriedades que serão expostas pelo recuso. Para esse exemplo, definiremos um usuário do Active Directory com as seguintes propriedades.
 
 Nome do parâmetro Descrição
-* .**nome**usuário Propriedade de chave que identifica exclusivamente um usuário.
-* Ensure Especifica se a conta de usuário deve estar presentes ou ausentes. Esse parâmetro terá apenas dois valores possíveis.
-* **DomainCredential**: A senha de domínio para o usuário.
-* Senha A senha desejada para o usuário Permitir que uma configuração alterar a senha do usuário, se necessário.
+* **UserName**: propriedade de chave que identifica um usuário com exclusividade.
+* **Ensure**: especifica se a conta do usuário deve ser do tipo Present ou Absent. Esse parâmetro terá apenas dois valores possíveis.
+* **DomainCredential**: a senha do domínio para o usuário.
+* **Password**: a senha desejada para o usuário permitir que uma configuração altere a senha do usuário, se necessário.
 
 Para criar as propriedades, usamos o cmdlet **novo xDscResourceProperty**. Os seguintes comandos do PowerShell criam as propriedades descritas acima.
 
