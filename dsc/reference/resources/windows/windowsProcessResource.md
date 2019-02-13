@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso WindowsProcess de DSC
 ms.openlocfilehash: cee93ab283ded407d6e032161125aa6d6ac98827
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047032"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675662"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Recurso WindowsProcess de DSC
 
-Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 O recurso **WindowsProcess** na Configuração de Estado Desejado (DSC) do Windows PowerShell fornece um mecanismo para configurar processos em um nó de destino.
 

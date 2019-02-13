@@ -3,11 +3,11 @@ title: Como replicar a experiência do ISE no Visual Studio Code
 description: Como replicar a experiência do ISE no Visual Studio Code
 ms.date: 08/06/2018
 ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012476"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676280"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Como replicar a experiência do ISE no Visual Studio Code
 
@@ -19,9 +19,9 @@ Este documento tenta configurações de lista, que você pode definir no VSCode 
 
 | Função                              | Associação de ISE                  | Associação de VSCode                              |
 | ----------------                      | -----------                  | --------------                              |
-| Interromper e interromper o depurador          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
+| Interromper e interromper o depurador          | <kbd>Ctrl</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | Executar o texto de linha/realçada atual | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
-| Lista de trechos de código disponíveis               | <kbd>Ctrl</kbd>+<kbd>J</kbd> | <kbd>CTRL</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
+| Lista de trechos de código disponíveis               | <kbd>Ctrl</kbd>+<kbd>J</kbd> | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
 
 ### <a name="custom-key-bindings"></a>Associações de teclas personalizadas
 

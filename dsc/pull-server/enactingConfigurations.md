@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: DSC,powershell,configuração,instalação
 title: Aplicando configurações
-ms.openlocfilehash: 4a6e7e511446ab27307683ad3d5676391e7c791c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2a40f2055dda78cc0cb6cb05a5e14dce48be9d00
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400521"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675571"
 ---
 # <a name="enacting-configurations"></a>Aplicando configurações
 
@@ -48,6 +48,6 @@ Entenda, no entanto, que essa implementação tem recursos limitados e exige alg
 
 Os tópicos a seguir explicam o serviço de pull e os clientes:
 
-- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Configurando um servidor de pull da Web e SMB](pullServerSMB.md)
 - [Configurando um cliente de pull](pullClientConfigID.md)

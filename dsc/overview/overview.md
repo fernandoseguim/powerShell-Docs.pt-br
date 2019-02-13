@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Visão Geral da Configuração de Estado Desejado do Windows PowerShell
 ms.openlocfilehash: 3e4f0afa17ab60bfa98f1b86b9830462a7c8e1cf
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400311"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675876"
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Visão Geral da Configuração de Estado Desejado do Windows PowerShell
 

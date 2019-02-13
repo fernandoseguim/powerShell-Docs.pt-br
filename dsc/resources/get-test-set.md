@@ -1,15 +1,15 @@
 ---
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
-title: Conjunto de teste de Get
-ms.openlocfilehash: e46710954679bf20f4536c6efbcbd4dafd9e629e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+title: Get-Test-Set
+ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400210"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676331"
 ---
-# <a name="get-test-set"></a>Conjunto de teste de Get
+# <a name="get-test-set"></a>Get-Test-Set
 
 >Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -237,6 +237,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Visão geral do DSC de Automação do Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Configurando um servidor de pull da Web e SMB](../pull-server/pullServerSMB.md)
 - [Configurando um cliente de pull](../pull-server/pullClientConfigID.md)

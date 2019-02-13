@@ -3,11 +3,11 @@ ms.date: 12/14/2018
 keywords: powershell, cmdlet
 title: Gravação de módulos portáteis
 ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: d396d0e4cfe3d279f399c17e7337380a31d373ac
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747714"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676401"
 ---
 # <a name="portable-modules"></a>Módulos portátil
 
@@ -29,7 +29,7 @@ Para módulos de porta escritos para o Windows PowerShell trabalhar com o PowerS
 
 ## <a name="creating-a-new-module"></a>Criar um novo módulo
 
-Se criar um novo módulo, a recomendação é usar o [CLI DO .NET][].
+Se criar um novo módulo, a recomendação é usar o [.NET CLI][].
 
 ### <a name="installing-the-powershell-standard-module-template"></a>Instalando o modelo de módulo do PowerShell padrão
 
@@ -178,7 +178,7 @@ No entanto, ele não é necessário para direcionar .NET Standard para um módul
 
 O [Padrão do PowerShell][] library é uma especificação formal das APIs do PowerShell disponíveis em todas as versões do PowerShell maiores que ou iguais à versão esse padrão.
 
-Por exemplo, [Padrão de PowerShell 5.1][] é compatível com o Windows PowerShell 5.1 e o PowerShell Core 6.0 ou mais recente.
+Por exemplo, [PowerShell Standard 5.1][] é compatível com o Windows PowerShell 5.1 e o PowerShell Core 6.0 ou mais recente.
 
 É recomendável que você compilar o módulo usando a biblioteca padrão do PowerShell. A biblioteca garante que as APIs estão disponíveis e implementados no Windows PowerShell e o PowerShell Core 6.
 PowerShell padrão destina-se a ser sempre encaminhamentos compatível. Um módulo compilado usando o PowerShell 5.1 de biblioteca padrão sempre será compatível com versões futuras do PowerShell.
@@ -259,10 +259,10 @@ Exemplo:
 [PSSnapIn]: /dotnet/api/system.management.automation.pssnapin
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [verificações de tempo de execução]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
-[CLI DO .NET]: /dotnet/core/tools/?tabs=netcore2x
+[.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
 [.NET Standard]: /dotnet/standard/net-standard
 [Padrão do PowerShell]: https://github.com/PowerShell/PowerShellStandard
-[Padrão de PowerShell 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
+[PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [Galeria do PowerShell]: https://www.powershellgallery.com
 [.NET portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support

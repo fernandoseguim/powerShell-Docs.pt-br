@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Environment de DSC
 ms.openlocfilehash: 2bc1600a9df32538d59efa712569b12fa9e3beee
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047011"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675829"
 ---
 # <a name="dsc-environment-resource"></a>Recurso Environment de DSC
 

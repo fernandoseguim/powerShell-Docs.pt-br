@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Recursos de DSC
 ms.openlocfilehash: 1f77b5e6630a2e3de6e1d1a05638f94d2df039ae
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046684"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675841"
 ---
 # <a name="dsc-resources"></a>Recursos de DSC
 
@@ -152,5 +152,5 @@ Recursos do Linux
 * [Recurso do pacote do Linux](../reference/resources/linux/lnxPackageResource.md)
 * [Recursos de Script do Linux](../reference/resources/linux/lnxScriptResource.md)
 * [Recurso de serviço do Linux](../reference/resources/linux/lnxServiceResource.md)
-* [Recurso de SshAuthorizedKeys do Linux](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
+* [Linux SshAuthorizedKeys Resource](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
 * [Recurso de usuário do Linux](../reference/resources/linux/lnxUserResource.md)

@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: instalar e usar o windows powershell web access
-ms.openlocfilehash: a129dfeb61531a1f4d333af3e872d16defa1d12f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400273"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675521"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
@@ -136,7 +136,7 @@ Por padrão, o cmdlet instala o aplicativo Web, o **pswa** (e um pool de aplicat
    - Caminho: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - Caminho físico: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
    **Exemplo**: `Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate`
 
@@ -161,7 +161,7 @@ Por padrão, o cmdlet instala o aplicativo Web, o **pswa** (e um pool de aplicat
    - Caminho: /pswa
    - ApplicationPool: pswa_pool
    - EnabledProtocols: http
-   - Caminho físico: `%*windir*%/Web/PowerShellWebAccess/wwwroot`
+   - PhysicalPath: %windir%/Web/PowerShellWebAccess/wwwroot
 
 3. Abra o console do Gerenciador do IIS seguindo um destes procedimentos.
 
@@ -200,7 +200,7 @@ Para obter mais detalhes sobre as regras e a segurança de autorização do Wind
    - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
    - Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
-2. Etapa opcional para restringir o acesso de usuários usando as configurações de sessão: verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Etapa opcional para restringir o acesso do usuário usando configurações de sessão: verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digite o seguinte e pressione **Enter**.
 
@@ -271,7 +271,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 7. No campo **Pool de Aplicativos**, selecione o pool de aplicativos criado na etapa 3.
 
-8. No campo **Caminho físico**, procure a localização do aplicativo. Você pode usar o local padrão, `%windir%/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
+8. No campo **Caminho físico**, procure a localização do aplicativo. Você pode usar o local padrão, `$env:windir/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
 
 9. Siga as etapas no procedimento [Para configurar um certificado SSL no gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
 
@@ -318,7 +318,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 1. Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Escolha o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
 
-1. Na caixa de texto **Caminho físico**, navegue até %*windir*%/Web/PowerShellWebAccess/wwwroot.
+1. No **caminho físico** texto caixa, navegue até % windir%/Web/PowerShellWebAccess/wwwroot.
 
 1. No campo **Tipo** da área **Associação**, escolha **https**.
 

@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemas conhecidos do PowerShell 6.0
 ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49450989"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675940"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemas conhecidos do PowerShell 6.0
 
@@ -105,8 +105,8 @@ A tabela a seguir lista os comandos que não funcionam no PowerShell no Linux/ma
 |Comandos|Estado Operacional|Observações|
 |--------|-----------------|-----|
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
-|`Get-Acl`, `Set-Acl`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
-|`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-Acl`, `Set-Acl`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
+|`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Não está disponível.|Esses comandos não serão reconhecidos. Isso deve ser corrigido em uma versão futura.|
 |`Wait-Process`|Disponível, não funciona corretamente. |Por exemplo, `Start-Process gvim -PassThru | Wait-Process` não funciona; ele falha ao aguardar o processo.|
 |`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|Disponível, mas não funciona.|Grava uma mensagem de erro indicando que os comandos não estão funcionando. Devem ser corrigidos em uma versão futura.|
 |`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|Disponível, mas não há fontes de evento disponíveis.|Os comandos de evento do PowerShell estão presentes, mas a maioria das fontes de evento usadas com os comandos (como System.Timers.Timer) não está disponível no Linux, tornando os comandos inúteis na versão alfa.|

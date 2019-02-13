@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: Solucionando problemas de acesso no Windows PowerShell Web Access
-ms.openlocfilehash: c9b98c7a1685679eb88b718de0351154cb84e92e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400199"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676386"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Solucionando problemas de acesso no Windows PowerShell Web Access
 
@@ -139,4 +139,4 @@ Para obter mais informações sobre endereços IPv6, consulte [How IPv6 Works](h
 
 - [Authorization Rules and Security Features of Windows PowerShell Web Access](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx) (Regras de autorização e recursos de segurança do Windows PowerShell Web Access)
 - [Usar o Console do Windows PowerShell baseado na Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-- [about_Remote_Requirements](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements)
+- [about_Remote_Requirements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements)

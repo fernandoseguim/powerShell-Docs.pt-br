@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: 9bd18b37b53890713faeeabc634876e5f48725da
-ms.sourcegitcommit: 7ed6ff9a3ce0b8b485d12dc2f5107c23d4b6e68b
+ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978888"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676460"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 O Windows PowerShell 5.0 inclui recursos novos importantes que estendem e melhoram o uso, bem como permitem controlar e gerenciar ambientes baseados no Windows de forma mais fácil e abrangente.
@@ -38,9 +38,9 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
   - [New-DscChecksum](https://technet.microsoft.com/library/dn521622.aspx) agora dá suporte a caminhos UNC.
 
 - Novos cmdlets no módulo [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
-  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx)  Executa uma verificação de servidor de pull sob demanda.
+  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx):  Executa uma verificação de servidor de pull sob demanda.
   - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx)  Interrompe uma configuração que já está em execução.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx)  Permite que você remova documentos de configuração em vários estágios (pendentes, anteriores ou atuais).
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  Permite que você remova documentos de configuração em vários estágios (pendentes, anteriores ou atuais).
 
 - Aprimoramentos de linguagem
   - DependsOn agora dá suporte a recursos de composição.
@@ -140,10 +140,11 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - O parâmetro FullyQualifiedName foi adicionado aos cmdlets Import-Module e Remove-Module para dar suporte ao armazenamento de várias versões de um único módulo.
 - Save-Help, Update-Help, Import-PSSession, Export-PSSession e Get-Command têm um novo parâmetro, FullyQualifiedModule, do tipo ModuleSpecification. Adicione este parâmetro para especificar um módulo pelo nome totalmente qualificado.
 - O valor de **$PSVersionTable.PSVersion** foi atualizado para 5.0.
-
+- WMF 5.0 (PowerShell 5.0) inclui o **Pester** módulo.  Pester é uma unidade na estrutura de teste para o PowerShell. Ele fornece algumas simples de usar as palavras-chave que permitem criar testes para seus scripts. 
+ 
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Novos recursos na Configuração de Estado Desejado do Windows PowerShell
 
-- Os aprimoramentos de linguagem do Windows PowerShell permitem que você defina recursos da DSC (Configuração de Estado Desejado) do Windows PowerShell usando classes. Import-DscResource agora é uma palavra-chave realmente dinâmica. O Windows PowerShell analisa o módulo raiz do módulo especificado, pesquisando classes que contêm o atributo DscResource. Agora você pode usar classes para definir recursos de DSC, nos quais não é necessária um arquivo MOF nem uma subpasta DSCResource da pasta de módulo. Um arquivo de módulo do Windows PowerShell pode conter várias classes de recursos de DSC.
+- Os aprimoramentos de linguagem do Windows PowerShell permitem que você defina recursos da DSC (Configuração de Estado Desejado) do Windows PowerShell usando classes. Import-DscResource agora é uma palavra-chave realmente dinâmica; o Windows PowerShell analisa o módulo raiz do módulo especificado, pesquisando classes que contêm o atributo DscResource. Agora você pode usar classes para definir recursos de DSC, nos quais não é necessária um arquivo MOF nem uma subpasta DSCResource da pasta de módulo. Um arquivo de módulo do Windows PowerShell pode conter várias classes de recursos de DSC.
 - Foi adicionado um novo parâmetro, ThrottleLimit, para os seguintes cmdlets no módulo PSDesiredStateConfiguration. Adicione o parâmetro ThrottleLimit para especificar o número de computadores de destino ou dispositivos nos quais você deseja que o comando trabalhe ao mesmo tempo.
   - Get-DscConfiguration
   - Get-DscConfigurationStatus
@@ -166,7 +167,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - O Windows PowerShell agora inclui suporte para ajuda personalizada para configurações da DSC, definidas pela adição de \[CmdletBinding()] à função de configuração gerada.
 - Um novo atributo **DscLocalConfigurationManager** designa um bloco de configuração como uma metaconfiguração, que é usada para configurar o Gerenciador de Configurações Local da DSC. Esse atributo restringe uma configuração para que ela contenha somente os itens que configuram o Gerenciador de Configurações Local do DSC. Durante o processamento, essa configuração gera um arquivo \*.meta.mof que é enviado para os nós de destino apropriados executando o cmdlet Set-DscLocalConfigurationManager.
 - Configurações parciais agora são permitidas no Windows PowerShell 5.0. É possível entregar documentos de configuração para um nó em fragmentos. Para que um nó receba vários fragmentos de um documento de configuração, o Gerenciador de Configurações Local do nó deve ser definido para especificar os fragmentos esperados
-- Sincronização entre computadores é a novidade na DSC no Windows PowerShell 5.0. Com os recursos internos WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), agora é possível especificar dependências entre computadores durante execuções de configuração, sem a orquestração externa. Estes recursos fornecem sincronização de nó para nó usando conexões CIM por meio do protocolo WS-Man. Uma configuração pode esperar que o estado do recurso específico de outro computador mude.
+- Sincronização entre computadores é a novidade na DSC no Windows PowerShell 5.0. Com os recursos internos WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), agora é possível especificar dependências entre computadores durante execuções de configuração, sem a orquestração externa. Estes recursos fornecem sincronização de nó para nó usando conexões CIM por meio do protocolo WS-Man. Uma configuração pode esperar que o estado de recurso específico de outro computador mude.
 - JEA (Just Enough Administration), um novo recurso de segurança de delegação, aproveita a DSC e os runspaces restritos do Windows PowerShell para ajudar a proteger as empresas contra perda de dados ou o comprometimento pelos funcionários, intencional ou não. Para obter mais informações sobre o JEA, incluindo onde você pode baixar o recurso xJEA DSC, consulte [Just Enough Administration passo a passo](https://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx).
 - Os seguintes cmdlets novos foram adicionados ao módulo PSDesiredStateConfiguration.
   - Um novo cmdlet Get-DscConfigurationStatus obtém informações gerais sobre o status de configuração de um nó de destino. Você pode obter o status do última ou de todas as configurações.
@@ -177,7 +178,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Novos recursos no ISE do Windows PowerShell
 
-- Agora você pode editar scripts e arquivos remotos do Windows PowerShell em uma cópia local do ISE do Windows PowerShell executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você quer editar e, em seguida, executando **PSEdit<path and file name on the remote computer>**. Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
+- Agora você pode editar scripts remotos do Windows PowerShell e arquivos em uma cópia local do ISE do Windows PowerShell, executando Enter-PSSession para iniciar uma sessão remota no computador que está armazenando os arquivos que você deseja editar e, em seguida, executando **PSEdit \<caminho e nome de arquivo no computador remoto\>**. Esse recurso facilita a edição de arquivos Windows PowerShell que são armazenados na opção de instalação Server Core do Windows Server, em que o ISE do Windows PowerShell não pode ser executado.
 - Agora há suporte para o cmdlet Start-Transcript no ISE do Windows PowerShell.
 - Agora você pode depurar scripts remotos no ISE do Windows PowerShell.
 - Um novo comando de menu, **Interromper Tudo** (Ctrl+B), interrompe o depurador de scripts em execução local e remota.
@@ -221,7 +222,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 - Um parâmetro **Passthru** foi adicionado aos cmdlets **Enable-JobTrigger** e **Disable-JobTrigger**. O parâmetro Passthru exibe todos os objetos que são criados ou modificados por seu comando.
 - Os nomes de parâmetro para especificar um grupo de trabalho nos cmdlets **Add-Computer** e **Remove-Computer** agora são consistentes. Ambos os cmdlets agora usam o parâmetro **WorkgroupName**.
 - Um novo parâmetro comum, o **PipelineVariable**, foi adicionado. O PipelineVariable permite salvar os resultados de um comando canalizado (ou parte de um comando canalizado) como uma variável que pode ser passada através do restante do pipeline.
-- Agora há suporte para a filtragem de coleta usando uma sintaxe de método. Isso significa que agora você pode filtrar uma coleção de objetos usando sintaxe simplificada, semelhante ao Where() ou Where-Object, formatada como uma chamada de método. Veja este exemplo: (Get-Process).where({$_.Name -match 'powershell'})
+- Agora há suporte para a filtragem de coleta usando uma sintaxe de método. Isso significa que agora você pode filtrar uma coleção de objetos usando sintaxe simplificada, semelhante ao Where() ou Where-Object, formatada como uma chamada de método. Veja a seguir um exemplo: (Get-Process).where({$_.Name -match 'powershell'})
 - O cmdlet **Get-Process** tem um novo parâmetro de opção, o **IncludeUserName**.
 - Um novo cmdlet, o **Get-FileHash**, que retorna um hash de arquivo em vários formatos para um arquivo especificado, foi adicionado.
 - No Windows PowerShell 4.0, se um módulo usar a chave **DefaultCommandPrefix** em seu manifesto ou se o usuário importar um módulo com o parâmetro **Prefix**, a propriedade **ExportedCommands** do módulo mostrará os comandos no módulo com o prefixo. Quando você executa os comandos usando a sintaxe qualificada por módulo, ModuleName\\CommandName, os nomes de comando devem incluir o prefixo.
@@ -315,7 +316,7 @@ O Windows PowerShell 3.0 inclui os seguintes novos recursos.
 
 ### <a name="windows-powershell-workflow"></a>Fluxo de trabalho do Windows PowerShell
 
-O fluxo de trabalho do Windows PowerShell traz a potência do Windows Workflow Foundation para o Windows PowerShell. Você pode escrever fluxos de trabalho em XAML ou na linguagem do Windows PowerShell e executá-los exatamente como você executaria um cmdlet. O cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtém comandos de fluxo de trabalho e o cmdlet [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtém ajuda para fluxos de trabalho.
+O fluxo de trabalho do Windows PowerShell traz a potência do Windows Workflow Foundation para o Windows PowerShell. Você pode escrever fluxos de trabalho em XAML ou na linguagem do Windows PowerShell e executá-los exatamente como você executaria um cmdlet. O [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet obtém os comandos de fluxo de trabalho e o [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtém ajuda para fluxos de trabalho.
 
 Fluxos de trabalho são sequências de atividades de gerenciamento demoradas, repetíveis, frequentes, frequentes, paralelizáveis, passível de interrupção, passível de suspensão e reiniciáveis. Fluxos de trabalho podem ser reiniciados com uma interrupção acidental ou intencional, como uma interrupção da rede, uma reinicialização do Windows ou uma falha de energia.
 

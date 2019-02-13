@@ -5,11 +5,11 @@ keywords: wmf,powershell,instalação
 contributor: keithb
 title: Instalar e configurar o WMF 5.1
 ms.openlocfilehash: e5c7968744a442b4be9f1e43a45e91429a6d6165
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189339"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675697"
 ---
 # <a name="install-and-configure-wmf-51"></a>Como instalar e configurar o WMF 5.1 #
 
@@ -50,8 +50,8 @@ Depois que você descompactar o arquivo ZIP, poderá copiar todo o conteúdo em 
 
 O Install-WMF5.1.ps1 usa os seguintes parâmetros para facilitar a automação e a instalação no Windows Server 2008 R2 e no Windows 7:
 
-- AcceptEula: quando este parâmetro é incluído, o EULA é aceito automaticamente e, portanto, não é exibido.
-- AllowRestart: este parâmetro só pode ser usado se o AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
+- AcceptEula: Quando esse parâmetro for incluído, o EULA é aceito automaticamente e não será exibido.
+- AllowRestart: Esse parâmetro só pode ser usado se o AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
 
 **Pré-requisitos do WMF 5.1 para Windows Server 2008 R2 SP1 e Windows 7 SP1**
 

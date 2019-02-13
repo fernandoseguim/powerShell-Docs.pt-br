@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851300"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676354"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -37,7 +37,7 @@ O pacote de compatibilidade do Windows permite que o PowerShell Core use **mais 
 
 ## <a name="support-for-application-whitelisting"></a>Suporte à lista de permissões de aplicativos
 
-O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+O PowerShell Core 6.1 tem paridade com o Windows PowerShell 5.1, com suporte para lista de permissões de aplicativos do [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e do [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 A lista de permissões de aplicativos permite um controle granular de quais binários podem ser executados, usado com o [modo de linguagem restrita](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) do PowerShell.
 
 ## <a name="performance-improvements"></a>Aprimoramentos do desempenho

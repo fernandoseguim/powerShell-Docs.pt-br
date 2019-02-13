@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Escrevendo um recurso personalizado de DSC com MOF
-ms.openlocfilehash: 2dcdeb49b50e23bc8b9d87293ebb8d8ec5e7b57d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 5917e20769e750042a9855649ff5bec36ad14eb4
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400126"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55676307"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Escrevendo um recurso personalizado de DSC com MOF
 
@@ -69,7 +69,7 @@ Observe o seguinte sobre o código anterior:
 
 O script de recurso implementa a lógica do recurso. Neste módulo, você deve incluir três funções chamadas **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. As três funções precisam usar um conjunto de parâmetros que seja idêntico ao conjunto de propriedades definidas no esquema MOF criado para seu recurso. Neste documento, esse conjunto de propriedades é chamado de “propriedades de recursos”. Armazene essas três funções em um arquivo chamado <ResourceName>.psm1. No exemplo a seguir, as funções são armazenadas em um arquivo chamado Demo_IISWebsite.psm1.
 
-> **Observação**: Ao executar o mesmo script de configuração no recurso mais de uma vez, você não receberá erros e o recurso permanecerá no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções **Get-TargetResource** e **Test-TargetResource** deixam o recurso inalterado e se chamar a função **Set-TargetResource** mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
+> **Observação**: quando você executa o mesmo script de configuração no recurso mais de uma vez, não deve receber erros e o recurso deve permanecer no mesmo estado do script executado uma vez. Para fazer isso, verifique se suas funções **Get-TargetResource** e **Test-TargetResource** deixam o recurso inalterado e se chamar a função **Set-TargetResource** mais de uma vez em uma sequência com os mesmos valores de parâmetro é sempre equivalente a chamá-la uma vez.
 
 Na implementação da função **Get-TargetResource**, utilize os valores da propriedade de recurso de chave que são fornecidos como parâmetros para verificar o status da instância do recurso especificado. Essa função deve gerar uma tabela de hash que liste todas as propriedades de recursos como chaves e os valores reais dessas propriedades como valores correspondentes. O código a seguir fornece um exemplo.
 
@@ -214,7 +214,7 @@ $result
 }
 ```
 
-**Observação**: Para uma depuração mais fácil, use o cmdlet **Write-Verbose** na implementação das três funções anteriores.
+**Observação**: para uma depuração mais fácil, use o cmdlet **Write-Verbose** na implementação das três funções anteriores.
 >Esse cmdlet escreve o texto para o fluxo de mensagem detalhada.
 >Por padrão, o fluxo de mensagem detalhada não é exibido, mas você pode exibi-lo alterando o valor da variável **$VerbosePreference** ou usando o parâmetro **Verbose** nos cmdlets DSC = novo.
 
@@ -290,3 +290,16 @@ if (PsDscContext.RunAsUser) {
     Write-Verbose "User: $PsDscContext.RunAsUser";
 }
 ```
+
+## <a name="rebooting-the-node"></a>Reinicializar o nó
+
+Se as ações executadas em seu `Set-TargetResource` função exigir uma reinicialização, você pode usar um sinalizador global para informar o LCM para reinicializar o nó. Essa reinicialização ocorre logo após o `Set-TargetResource` função é concluída.
+
+Dentro de seu `Set-TargetResource` de função, adicione a seguinte linha de código.
+
+```powershell
+# Include this line if the resource requires a system reboot.
+$global:DSCMachineStatus = 1
+```
+
+Para que o LCM reinicializar o nó, o **RebootNodeIfNeeded** sinalizador precisa ser definido como `$true`. O **ActionAfterReboot** configuração também deve ser definida como **ContinueConfiguration**, que é o padrão. Para obter mais informações sobre como configurar o LCM, consulte [Configurando o Gerenciador de configuração Local](../managing-nodes/metaConfig.md), ou [Configurando o Gerenciador de configurações Local (v4)](../managing-nodes/metaConfig4.md).

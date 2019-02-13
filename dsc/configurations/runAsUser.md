@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usar credenciais com recursos de DSC
 ms.openlocfilehash: af54c286ce744cd7db0b0e2d05087f60cdf1a33c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400291"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675953"
 ---
 # <a name="use-credentials-with-dsc-resources"></a>Usar credenciais com recursos de DSC
 
-> Aplica-se a: Windows PowerShell 5.0, o Windows PowerShell 5.1
+> Aplica-se a: Windows PowerShell 5.0, Windows PowerShell 5.1
 
 Você pode executar um recurso de DSC em um conjunto específico de credenciais usando a propriedade automática **PsDscRunAsCredential** na configuração.
 Por padrão, o DSC executa cada recurso como a conta do sistema.
