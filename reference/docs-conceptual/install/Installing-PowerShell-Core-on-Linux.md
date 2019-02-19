@@ -2,12 +2,12 @@
 title: Instalar o PowerShell Core no Linux
 description: Informações sobre a instalação do PowerShell Core em diversas distribuições Linux
 ms.date: 08/06/2018
-ms.openlocfilehash: afb11f053517af592fe42754d543f9f4a9966c5b
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2ab9beb19e5f90b392413eee31e3fed317e267b0
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400233"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265528"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Instalar o PowerShell Core no Linux
 
@@ -146,9 +146,6 @@ sudo apt-get remove powershell
 
 ## <a name="ubuntu-1804"></a>Ubuntu 18.04
 
-> [!NOTE]
-> Foi adicionado suporte para o Ubuntu 18.04 após `6.1.0-preview.2`
-
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>Instalação por meio do repositório de pacotes – Ubuntu 18.04
 
 O PowerShell Core para Linux é publicado nos repositórios de pacote para facilitar a instalação (e as atualizações).
@@ -198,8 +195,7 @@ sudo apt-get remove powershell
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 > [!NOTE]
-> Foi adicionado suporte para o Ubuntu 18.10 após `6.1.0-preview.3`.
-> Como o 18.10 é um build diário, ele tem suporte apenas pela comunidade.
+> Como 18.10 é um [versão interim](https://www.ubuntu.com/about/release-cycle), é só [suportada da comunidade](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6).
 
 A instalação no 18.10 é compatível por meio do `snapd`. Veja [Pacote Snap][snap] para obter instruções completas;
 

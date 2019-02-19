@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Dando o segundo salto na Comunicação Remota do PowerShell
-ms.openlocfilehash: 06ca43e3e0524d89ec6f66f6553c4c75072beaf3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 1b6e5ad53346324adc7be2d013e154c8600afa4f
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400215"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265579"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Dando o segundo salto na Comunicação Remota do PowerShell
 
@@ -24,7 +24,7 @@ Há várias maneiras de resolver esse problema. Neste tópico, vamos examinar v�
 
 Você pode usar o [CredSSP (Credential Security Support Provider)](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx) para autenticação. O CredSSP armazena em cache as credenciais no servidor remoto (_ServerB_), portanto, usá-lo abre para ataques de roubo de credenciais. Se o computador remoto estiver comprometido, o invasor terá acesso às credenciais do usuário. O CredSSP é desabilitado por padrão nos computadores cliente e servidor. Você só deve habilitar o CredSSP nos ambientes mais confiáveis. Por exemplo, um administrador de domínio que se conecta a um controlador de domínio porque o controlador de domínio é altamente confiável.
 
-Para obter mais informações sobre questões de segurança ao usar o CredSSP para comunicação remota do PowerShell, consulte [sabotagem acidental: Lembre-se do CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
+Para saber mais sobre questões de segurança ao usar o CredSSP para comunicação remota do PowerShell, consulte [Accidental Sabotage: Beware of CredSSP (Sabotagem acidental: cuidado com o CredSSP)](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
 
 Para obter mais informações sobre ataques de roubo de credenciais, consulte [Mitigando ataques PtH (Pass-the-Hash) e outro roubo de credenciais](https://www.microsoft.com/en-us/download/details.aspx?id=36036).
 
@@ -43,7 +43,7 @@ Para obter um exemplo de como habilitar e usar o CredSSP para a Comunicação Re
 
 Você pode também pode usar a delegação Kerberos irrestrita para realizar o segundo salto. No entanto, esse método não fornece controle de onde as credenciais delegadas são usadas.
 
->**Observação:** As contas do Active Directory que tiverem a propriedade **A conta é confidencial e não pode ser delegada** definida não poderão ser delegadas. Para obter mais informações, consulte [foco na segurança: Análise dos 'Conta é sigilosa e não pode ser delegada' para contas com privilégios](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [configurações e as ferramentas de autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Observação:** As contas do Active Directory que têm a propriedade **Conta sensível à segurança não pode ser delegada** definida, não podem ser delegadas. Para obter mais informações, consulte [Foco de Segurança: analisando 'Conta sensível à segurança não pode ser delegada' para Contas Privilegiadas](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [Configurações e Ferramentas da Autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
 
 ### <a name="pros"></a>Vantagens
 
@@ -56,9 +56,10 @@ Você pode também pode usar a delegação Kerberos irrestrita para realizar o s
 
 ## <a name="kerberos-constrained-delegation"></a>Delegação restrita de Kerberos
 
-Você pode usar a delegação restrita herdada (não baseada em recursos) para realizar o segundo salto.
+Você pode usar a delegação restrita herdada (não baseada em recursos) para realizar o segundo salto. Configurar a delegação restringido de Kerberos com a opção "Usar qualquer protocolo de autenticação" para permitir que a transição de protocolo.
 
->**Observação:** As contas do Active Directory que tiverem a propriedade **A conta é confidencial e não pode ser delegada** definida não poderão ser delegadas. Para obter mais informações, consulte [foco na segurança: Análise dos 'Conta é sigilosa e não pode ser delegada' para contas com privilégios](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [configurações e as ferramentas de autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+> [!NOTE]
+> As contas do Active Directory que tiverem a propriedade **A conta é confidencial e não pode ser delegada** definida não poderão ser delegadas. Para obter mais informações, consulte [Foco de Segurança: analisando 'Conta sensível à segurança não pode ser delegada' para Contas Privilegiadas](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [Configurações e Ferramentas da Autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
 
 ### <a name="pros"></a>Vantagens
 
@@ -76,7 +77,7 @@ Você pode usar a delegação restrita herdada (não baseada em recursos) para r
 A utilização da delegação restrita de Kerberos baseada em recursos (introduzida no Windows Server 2012) permite que seja configurada a delegação de credencial no objeto do servidor no qual os recursos residem.
 No cenário de segundo salto descrito acima, você configura o _ServerC_ para especificar de onde ele aceitará as credenciais delegadas.
 
->**Observação:** As contas do Active Directory que tiverem a propriedade **A conta é confidencial e não pode ser delegada** definida não poderão ser delegadas. Para obter mais informações, consulte [foco na segurança: Análise dos 'Conta é sigilosa e não pode ser delegada' para contas com privilégios](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [configurações e as ferramentas de autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Observação:** As contas do Active Directory que têm a propriedade **Conta sensível à segurança não pode ser delegada** definida, não podem ser delegadas. Para obter mais informações, consulte [Foco de Segurança: analisando 'Conta sensível à segurança não pode ser delegada' para Contas Privilegiadas](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [Configurações e Ferramentas da Autenticação Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
 
 ### <a name="pros"></a>Vantagens
 
@@ -213,7 +214,7 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [Como o Windows Server 2012 Ameniza a Dificuldade da Delegação Restrita de Kerberos, Parte 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1)
 - [Como o Windows Server 2012 Ameniza a Dificuldade da Delegação Restrita de Kerberos, Parte 2](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2)
 - [Noções básicas sobre a Delegação Restrita de Kerberos para Implantações de Proxy de Aplicativo do Azure Active Directory com a Autenticação Integrada do Windows](https://aka.ms/kcdpaper)
-- [[MS-ADA2]: Active Directory Schema atributos M2.210 atributo msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
+- [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
 - [[MS-SFU]: Extensões do protocolo Kerberos: serviço para usuário e Protocolo de Delegação Restrita 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx)
 - [Delegação Restrita de Kerberos Baseada em Recursos](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Administração remota sem a delegação restrita usando PrincipalsAllowedToDelegateToAccount](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/)

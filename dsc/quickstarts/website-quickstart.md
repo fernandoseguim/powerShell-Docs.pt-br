@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Guia de início rápido - criar um site com DSC
-ms.openlocfilehash: c62e2d8af46bf74c4dd13069ddff6cc39763a209
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675582"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265477"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 # <a name="quickstart---create-a-website-with-dsc"></a>Guia de início rápido - criar um site com DSC
 
 Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.
-O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `intepub\wwwroot` desse servidor.
+O exemplo que usaremos garante que o recurso `Web-Server` (IIS) do servidor esteja habilitado e que o conteúdo para um site "Hello World" simples esteja presente no diretório do `inetpub\wwwroot` desse servidor.
 
 Para obter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão Geral da Configuração do Estado Desejado para Tomadores de Decisão](../overview/decisionMaker.md).
 
