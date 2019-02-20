@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: a996a820d6bd52e796a41659c6f468662dbff0f4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 64c3d607b13dce64f70f138fdee849e5baaf85df
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655388"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265562"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -93,8 +93,8 @@ Os proprietários de pacote que respondem corretamente aos comentários são alt
 
 Há dois métodos de comentários disponíveis na Galeria do PowerShell:
 
-- Entre em contato com o proprietário: Isso permite que um usuário envie um email para o proprietário do pacote. Como proprietário de um pacote, é importante monitorar o endereço de email usado com os pacotes da Galeria do PowerShell e responder aos problemas que surgirem. Uma desvantagem desse método é que apenas o usuário e o proprietário verão a comunicação, portanto, o proprietário poderá precisar responder à mesma pergunta várias vezes.
-- Comentários Na parte inferior do pacote de página é um campo de comentário.
+- Contatar proprietário: permite que um usuário envie um email para o proprietário do pacote. Como proprietário de um pacote, é importante monitorar o endereço de email usado com os pacotes da Galeria do PowerShell e responder aos problemas que surgirem. Uma desvantagem desse método é que apenas o usuário e o proprietário verão a comunicação, portanto, o proprietário poderá precisar responder à mesma pergunta várias vezes.
+- Comentários: na parte inferior da página do pacote, há um campo Comentário.
   A vantagem desse sistema é que outros usuários podem ver os comentários e as respostas, o que reduz o número de vezes que uma mesma pergunta deve ser respondida.
   Como proprietário de um pacote, é altamente recomendável que você Siga os comentários de cada pacote.
 Consulte [Fornecendo comentários por meio de mídia social ou do recurso Comentários](../how-to/working-with-packages/social-media-feedback.md) para obter detalhes de como fazer isso.
@@ -142,9 +142,9 @@ Use as seguintes marcas para demonstrar a usuários que pacotes funcionará bem 
 
 - PSEdition_Desktop: Pacotes que são compatíveis com o Windows PowerShell 
 - PSEdition_Core: Pacotes que são compatíveis com o Powershell Core 
-- Windows Pacotes que são compatíveis com o sistema operacional Windows
-- Linux Pacotes que são compatíveis com sistemas operacionais do Linux 
-- macOS Pacotes que são compatíveis com o sistema operacional Mac
+- Windows: Pacotes que são compatíveis com o sistema operacional Windows
+- Linux: Pacotes que são compatíveis com sistemas operacionais do Linux 
+- MacOS: Pacotes que são compatíveis com o sistema operacional Mac
 
 ## <a name="include-tests"></a>Incluir testes
 
@@ -203,7 +203,7 @@ A versão do pacote deve ser incluída nos dados de manifesto.
 - A versão deve ser estruturada como 3 blocos numéricos separados por pontos, como em 0.1.1 ou 4.11.192
 - Versões que começam com "0" indicam que o pacote ainda não está preparado para produção, e o primeiro número somente deverá começar com "0" se esse for o único número usado
 - As alterações no primeiro número (1.9.9999 para 2.0.0) indicam alterações impactantes e recentes entre as versões
-- As alterações no segundo número (1.01 para 1.02) indicam alterações em nível de recurso, como a adição de novos cmdlets em um módulo
+- As alterações no segundo número (1.1 para 1.2) indicam alterações no nível do recurso, como a adição de novos cmdlets a um módulo
 - As alterações no terceiro número indicam alterações não impactantes, como novos parâmetros, exemplos atualizados ou novos testes
 - Ao listar versões, o PowerShell as classificará como cadeias de caracteres de modo que 1.01.0 seja tratado como maior que 1.001.0
 
