@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 066aa188d5d7dfde5af424a3bb8f15ff51c1e936
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cbc8ce0600553f9e9ab973d6f92ea5eafde310e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856952"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430020"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Criar um provedor de navegação do Windows PowerShell
 
 Este tópico descreve como criar um provedor de navegação do Windows PowerShell que pode navegar o armazenamento de dados. Esse tipo de provedor dá suporte a comandos recursivos, contêineres aninhados e caminhos relativos.
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider05.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider05.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
@@ -186,11 +185,9 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
 É possível para um provedor adicionar membros a objetos existentes ou para definir novos objetos. Para obter mais informações, consulte[estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-É possível para um provedor adicionar membros a objetos existentes ou para definir novos objetos. Para obter mais informações, consulte[estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Para obter mais informações, consulte [como registrar Cmdlets, provedores e aplicativos Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Para obter mais informações, consulte [como registrar Cmdlets, provedores e aplicativos Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
@@ -323,11 +320,7 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
 
 [Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
 [Implementar um provedor de contêiner Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
-
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

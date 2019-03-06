@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 6e5d79487539d4f58922e2686f1fdba08797f305
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5e35d2fdfa4c6bd70c1b69ca1f357ee8d8ebcdc4
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429968"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Criar um provedor de conteúdo do Windows PowerShell
 
 Este tópico descreve como criar um provedor do Windows PowerShell que permite ao usuário manipular o conteúdo dos itens em um repositório de dados. Como consequência, um provedor que pode manipular o conteúdo de itens é conhecido como um provedor de conteúdo do Windows PowerShell.
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider06.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider06.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
@@ -233,11 +232,9 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
 Ao escrever um provedor, ele pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso for feito, você deve criar um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-Ao escrever um provedor, ele pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando isso for feito, você deve criar um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
@@ -285,11 +282,7 @@ Country   : USA
 
 [Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
 [Implementar um provedor de navegação Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
-
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

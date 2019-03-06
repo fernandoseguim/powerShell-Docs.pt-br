@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: 30b4dbcd281f712bba8d8e3540d2282d527388e4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be1446dbd2b244f4752e55c8137433edee8427b0
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862062"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429985"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Criar um provedor de itens do Windows PowerShell
 
 Este tópico descreve como criar um provedor do Windows PowerShell que pode manipular os dados em um armazenamento de dados. Neste tópico, os elementos de dados no repositório são referidos como "itens" dos dados de armazenamento. Como consequência, um provedor que pode manipular os dados no repositório é conhecido como um provedor de item do Windows PowerShell.
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider03.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider03.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
@@ -88,7 +87,6 @@ Antes do provedor de item do Windows PowerShell pode manipular os itens no repos
 
 ## <a name="checking-for-path-validity"></a>Verificação de validade do caminho
 
-Ao procurar um item de dados, o tempo de execução do Windows PowerShell fornece um caminho do Windows PowerShell para o provedor, conforme definido na seção "Conceitos PSPath" [como o Windows PowerShell funciona](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Um provedor de item do Windows PowerShell deve verificar a validade de sintática e semântica de qualquer caminho passado para ele com a implementação de [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) método. Esse método retornará `true` se o caminho é válido, e `false` caso contrário. Estar ciente de que a implementação desse método não deve verificar a existência do item no caminho, mas apenas que o caminho é sintaticamente e semanticamente correta.
 Ao procurar um item de dados, o tempo de execução do Windows PowerShell fornece um caminho do Windows PowerShell para o provedor, conforme definido na seção "Conceitos PSPath" [como o Windows PowerShell funciona](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Um provedor de item do Windows PowerShell deve verificar a validade de sintática e semântica de qualquer caminho passado para ele com a implementação de [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) método. Esse método retornará `true` se o caminho é válido, e `false` caso contrário. Estar ciente de que a implementação desse método não deve verificar a existência do item no caminho, mas apenas que o caminho é sintaticamente e semanticamente correta.
 
 Aqui está a implementação do [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) método para esse provedor. Observe que essa implementação chama um método auxiliar de NormalizePath para converter todos os separadores no caminho para um uniforme.
@@ -266,11 +264,9 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="defining-object-types-and-formatting"></a>Definindo tipos de objeto e formatação
 
 Ao escrever um provedor, ele pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando terminar, crie um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-Ao escrever um provedor, ele pode ser necessário adicionar membros a objetos existentes ou definir novos objetos. Quando terminar, crie um arquivo de tipos que o Windows PowerShell pode usar para identificar os membros do objeto e um arquivo de formato que define como o objeto é exibido. Para obter mais informações, consulte [estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
-Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
@@ -289,16 +285,10 @@ Quando esse provedor de item do Windows PowerShell é registrado com o Windows P
 
 [Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estendendo tipos de objeto e formatação](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
-[Como funciona o Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
-
 [Como funciona o Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Criar um provedor de contêiner Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
 
 [Criar um provedor de unidade Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)
-
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

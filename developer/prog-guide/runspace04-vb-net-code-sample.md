@@ -8,19 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f0dea3c-4354-4d7d-9823-5e6234c9a89e
 caps.latest.revision: 6
-ms.openlocfilehash: 348d34dc0132705fa4a50fb6fe1fd43f510ae210
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c1d38c23ea20d7e5ccbc8e475b0c2246f9670ec3
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853612"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429883"
 ---
 # <a name="runspace04--vbnet-code-sample"></a>Exemplo de código RunSpace04 (VB.NET)
 
 Aqui está o código-fonte para o exemplo Runspace04 VB.NET. Este exemplo usa o [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe para executar um script que gera um erro de encerramento. O aplicativo host é responsável por capturar o erro e interpretando o registro de erro.
 
 > [!NOTE]
-> Você pode baixar o arquivo de origem do VB.NET (runspace02.vb) para este exemplo usando o Windows Software Development Kit do Windows Vista e o Microsoft .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Você pode baixar o arquivo de origem do VB.NET (runspace02.vb) para este exemplo usando o Windows Software Development Kit do Windows Vista e o Microsoft .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.

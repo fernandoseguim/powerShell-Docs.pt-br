@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 8c111f8f2943043e4ad2a6a8677db4afe1b3cdab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863162"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430019"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Criar um provedor de contêineres do Windows PowerShell
 
@@ -25,7 +25,6 @@ Este tópico descreve como criar um provedor do Windows PowerShell que pode func
 Provedores que podem trabalhar em repositórios de dados de vários níveis são chamados de provedores de contêiner do Windows PowerShell. No entanto, lembre-se de que um provedor de contêiner do Windows PowerShell pode ser usado somente quando há um contêiner (não há contêineres aninhados) com itens nele. Se houver contêineres aninhados, você deve implementar um provedor de navegação do Windows PowerShell. Para obter mais informações sobre a implementação do provedor de navegação do Windows PowerShell, consulte [criando um provedor de navegação do Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).
 
 > [!NOTE]
-> Você pode baixar o C# arquivo de origem (AccessDBSampleProvider04.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 > Você pode baixar o C# arquivo de origem (AccessDBSampleProvider04.cs) para este provedor usando o Microsoft Windows Software Development Kit para Windows Vista e o .NET Framework 3.0 Runtime Components. Para obter instruções de download, consulte [como instalar o Windows PowerShell e o Download do SDK do Windows PowerShell](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Os arquivos de origem baixado estão disponíveis na  **\<amostras do PowerShell >** directory.
@@ -418,7 +417,6 @@ Para o código de exemplo completo, consulte [exemplo de código AccessDbProvide
 ## <a name="building-the-windows-powershell-provider"></a>Criando o provedor do Windows PowerShell
 
 Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
-Ver [como registrar Cmdlets, provedores e hospedar aplicativos](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testando o provedor do Windows PowerShell
 
@@ -537,8 +535,6 @@ Quando o provedor do Windows PowerShell tiver sido registrado com o Windows Powe
 [Implementando um provedor de Item de Windows PowerShell](./creating-a-windows-powershell-item-provider.md)
 
 [Implementando um provedor de PowerShell do Windows de navegação](./creating-a-windows-powershell-navigation-provider.md)
-
-[Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registrar Cmdlets, provedores e aplicativos de Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
