@@ -2,12 +2,12 @@
 title: Entendendo a codificação de arquivos no VSCode e PowerShell
 description: Configurar a codificação do arquivo no VSCode e o PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: f3b133b4bee7688821a5960429e2f26b69b01e12
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251465"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429798"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Entendendo a codificação de arquivos no VSCode e PowerShell
 
@@ -68,7 +68,7 @@ Nesse útil [referência](https://www.i18nqa.com/debug/utf8-debug.html) lista os
 A extensão do PowerShell interage com scripts de várias maneiras:
 
 1. Quando os scripts são editados no VSCode, o conteúdo é enviado com o VSCode para a extensão. O [protocolo de idioma do servidor][] exige que esse conteúdo é transferido em UTF-8. Portanto, não é possível que a extensão obter a codificação errada.
-2. Quando os scripts são executados diretamente no Console integrado, que estão lidas do arquivo pelo PowerShell diretamente. A codificação de Tf PowerShell difere do VSCode, algo pode dar errado aqui.
+2. Quando os scripts são executados diretamente no Console integrado, que estão lidas do arquivo pelo PowerShell diretamente. Se a codificação do PowerShell difere do VSCode, algo pode dar errado aqui.
 3. Quando um script que está aberto no VSCode faz referência a outro script que não está aberto no VSCode, a extensão de volta ao carregar o conteúdo do script do sistema de arquivos. A extensão do PowerShell padrão é a codificação UTF-8, mas utiliza [marca de ordem de byte][], ou BOM, detecção para selecionar a codificação correta.
 
 O problema ocorre quando supondo que a codificação da BOM sem formatos (como [UTF-8][] sem BOM e [Windows-1252][]).
@@ -136,7 +136,7 @@ Se você não quiser que essas configurações afetam todos os tipos de arquivos
 Da PowerShell codificação padrão varia dependendo da versão:
 
 - No PowerShell 6 +, a codificação padrão é UTF-8 sem BOM em todas as plataformas.
-- No Windows PowerShell, a codificação padrão geralmente é uma extensão do Windows-1252, [latin 1][], também conhecido como ISO 8859-1.
+- No Windows PowerShell, a codificação padrão geralmente é uma extensão do Windows-1252, [latin-1][], também conhecido como ISO 8859-1.
 
 No PowerShell 5 +, você pode encontrar sua codificação padrão com este:
 
@@ -267,7 +267,7 @@ Há algumas outras postagens interessantes sobre codificação e configurar a co
 [@mklement0]: https://github.com/mklement0
 [@rkeithhill]: https://github.com/rkeithhill
 [Windows-1252]: https://wikipedia.org/wiki/Windows-1252
-[latin 1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
+[latin-1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
 [UTF-8]: https://wikipedia.org/wiki/UTF-8
 [marca de ordem de byte]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
