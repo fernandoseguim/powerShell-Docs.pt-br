@@ -2,12 +2,12 @@
 ms.date: 08/09/2017
 keywords: powershell, cmdlet, baixar, instalar, configurar, windows 10, windows 8.1, windows 8.0, windows 7
 title: Instalar o Windows PowerShell
-ms.openlocfilehash: 37f28c2af5a11af26d9110cc6c5f7612124be557
-ms.sourcegitcommit: 10c347a8c3dcbf8962295601834f5ba85342a87b
+ms.openlocfilehash: 345cde8012bece730e7217ed16be6175ad26bb28
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429866"
 ---
 # <a name="installing-windows-powershell"></a>Instalar o Windows PowerShell
 
@@ -17,7 +17,7 @@ Se você estiver interessado no PowerShell 6 e posterior, você precisa instalar
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Localizando o PowerShell no Windows 7, 8.0, 8.1 e 10
 
-Às vezes, localizar o console do PowerShell ou o ISE (Ambiente de Script Integrado) no Windows pode ser difícil, já que sua localização muda de uma versão do Windows para a outra.
+Nem sempre é fácil localizar o console do PowerShell ou o ISE (Ambiente de Script Integrado) no Windows, já que sua localização muda de uma versão do Windows para a outra.
 
 As tabelas a seguir devem ajudar você a localizar PowerShell na sua versão do Windows.
 Todas as versões listadas aqui são a versão original, conforme lançada, sem atualizações.
@@ -85,7 +85,7 @@ Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.c
 
 Se você estiver procurando o **Azure PowerShell**, você poderá começar com a [Visão geral do Azure PowerShell](/powershell/azure/overview).
 
-Caso contrário, talvez seja necessário [instalar e configurar o Azure PowerShell](/powershell/azure/install-azurerm-ps)
+Caso contrário, talvez seja necessário [instalar e configurar o Azure PowerShell](/powershell/azure/install-az-ps)
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: dcab755f565cd176c85ef6b9c719bceae10301b4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be31d03b02394cb1694909cf7b65bbc2a29f6976
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854522"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795429"
 ---
 # <a name="extending-properties-for-objects"></a>Estender as propriedades para objetos
 
@@ -101,7 +101,6 @@ No exemplo a seguir, o `VersionInfo` propriedade é adicionada para o [FileInfo?
 
 ## <a name="property-sets"></a>Conjuntos de propriedades
 
-Um conjunto de propriedades define um grupo de propriedades estendidas que podem ser referenciados pelo nome do conjunto. Por exemplo, o `Property` parâmetro do [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet pode especificar uma propriedade específica definida para ser exibido. Quando um conjunto de propriedades for especificado, somente as propriedades que pertencem ao conjunto são exibidas.
 Um conjunto de propriedades define um grupo de propriedades estendidas que podem ser referenciados pelo nome do conjunto. Por exemplo, o `Property` parâmetro do [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet pode especificar uma propriedade específica definida para ser exibido. Quando um conjunto de propriedades for especificado, somente as propriedades que pertencem ao conjunto são exibidas.
 
 Não há nenhuma restrição no número de conjuntos de propriedades que podem ser definidas para um objeto. No entanto, os conjuntos de propriedades usados para definir as propriedades de exibição padrão de um objeto devem ser especificados dentro do conjunto de membro PSStandardMembers. No arquivo Types.ps1xml tipos, os nomes de conjunto de propriedades padrão incluem DefaultDisplayProperty, DefaultDisplayPropertySet e DefaultKeyPropertySet. Todos os conjuntos de propriedades adicionais que você adiciona ao conjunto de membros PSStandardMembers são ignorados.

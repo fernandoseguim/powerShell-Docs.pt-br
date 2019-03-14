@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a48de31-7961-4b0e-b58b-93466e38370b
 caps.latest.revision: 6
-ms.openlocfilehash: 08c64d4094d8ba6c551b454887331666f0694f11
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86a0e8b7e8967280daa57faf5c323efcd3b1368b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860622"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794188"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Carregar e exportar dados de formatação
 
@@ -24,16 +24,13 @@ Depois de criar seu arquivo de formatação, você precisará atualizar os dados
 Arquivos de formatação podem ser carregados para a sessão atual usando os seguintes métodos:
 
 - Você pode importar o arquivo de formatação para a sessão atual da linha de comando. Use o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet conforme descrito no procedimento a seguir.
-- Você pode importar o arquivo de formatação para a sessão atual da linha de comando. Use o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet conforme descrito no procedimento a seguir.
 
-- Você pode criar um manifesto de módulo que faz referência a seu arquivo de formatação. Módulos permitem que você empacote você formatá-los para distribuição. Use o [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) para criar o manifesto e o [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet para carregar o módulo para a sessão atual. Para obter mais informações sobre os módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 - Você pode criar um manifesto de módulo que faz referência a seu arquivo de formatação. Módulos permitem que você empacote você formatá-los para distribuição. Use o [New-ModuleManifest](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) para criar o manifesto e o [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet para carregar o módulo para a sessão atual. Para obter mais informações sobre os módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - Você pode criar um snap-in que faz referência a seu arquivo de formatação. Use o [System.Management.Automation.Pssnapin.Formats](/dotnet/api/System.Management.Automation.PSSnapIn.Formats) para fazer referência a arquivos de formatação. É altamente recomendável usar módulos para cmdlets do pacote e qualquer formatação associados e arquivos de tipos para distribuição. Para obter mais informações sobre os módulos, consulte [escrevendo um módulo do Windows PowerShell](../module/writing-a-windows-powershell-module.md).
 
 - Se você estiver chamando comandos por meio de programação, você pode adicionar uma entrada de arquivo de formatação para o estado de sessão inicial do runspace no qual os comandos são executados. Para obter mais informações sobre o tipo do .NET usado para adicionar o arquivo de formatação, consulte o [System.Management.Automation.Runspaces.Sessionstateformatentry? Displayproperty = Fullname](/dotnet/api/System.Management.Automation.Runspaces.SessionStateFormatEntry) classe.
 
-Quando um arquivo de formatação é carregado, ele é adicionado a uma lista interna que o Windows PowerShell usa para determinar qual exibição a ser usado ao exibir os objetos na linha de comando. Você pode colocar seu arquivo de formatação para o início da lista ou acrescente-ao final da lista. É importante se você estiver carregando um arquivo de formatação que define uma exibição para um objeto que tem uma exibição existente definida, como quando você deseja alterar como um objeto que é retornado por um cmdlet do Windows PowerShell core é saber onde seu arquivo de formatação é adicionado a esta lista  exibido. Se você estiver carregando um arquivo de formatação que define o modo de exibição único para um objeto, você pode usar qualquer um dos métodos descritos anteriormente.  Se você estiver carregando um arquivo de formatação que define outra exibição de um objeto, você deve usar o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet e preceder seu arquivo para o início da lista.
 Quando um arquivo de formatação é carregado, ele é adicionado a uma lista interna que o Windows PowerShell usa para determinar qual exibição a ser usado ao exibir os objetos na linha de comando. Você pode colocar seu arquivo de formatação para o início da lista ou acrescente-ao final da lista. É importante se você estiver carregando um arquivo de formatação que define uma exibição para um objeto que tem uma exibição existente definida, como quando você deseja alterar como um objeto que é retornado por um cmdlet do Windows PowerShell core é saber onde seu arquivo de formatação é adicionado a esta lista  exibido. Se você estiver carregando um arquivo de formatação que define o modo de exibição único para um objeto, você pode usar qualquer um dos métodos descritos anteriormente.  Se você estiver carregando um arquivo de formatação que define outra exibição de um objeto, você deve usar o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet e preceder seu arquivo para o início da lista.
 
 ## <a name="storing-your-formatting-file"></a>Armazenar o arquivo de formatação
@@ -44,7 +41,6 @@ Não há nenhum requisito para onde os arquivos de formatação são armazenados
 
 1. Store seu arquivo de formatação para o disco.
 
-2. Execute o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet usando um dos comandos a seguir.
 2. Execute o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet usando um dos comandos a seguir.
 
    Para adicionar sua formatação de arquivo para a frente da lista de usar esse comando. Use este comando se você estiver alterando como um objeto é exibido.
@@ -59,7 +55,6 @@ Não há nenhum requisito para onde os arquivos de formatação são armazenados
    Update-FormatData -AppendPath PathToFormattingFile
    ```
 
-   Depois de adicionar um arquivo usando o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet, você não pode remover o arquivo da lista durante uma sessão aberta. Você deve fechar a sessão para remover o arquivo de formatação da lista.
    Depois de adicionar um arquivo usando o [Update-FormatData](/powershell/module/Microsoft.PowerShell.Utility/Update-FormatData) cmdlet, você não pode remover o arquivo da lista durante uma sessão aberta. Você deve fechar a sessão para remover o arquivo de formatação da lista.
 
 ## <a name="exporting-format-data"></a>Exportando dados de formato

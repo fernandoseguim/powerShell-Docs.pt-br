@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], specified in snap-ins
 ms.assetid: 55c8b5cb-8ee2-4080-afc4-3f09c9f20128
 caps.latest.revision: 6
-ms.openlocfilehash: 20b7fdce1d31e3dee4598a7595962fca1c99d80a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 4d50ef4dcd75d5c0ba802fbcfe2d7d1d7c954707
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863342"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795582"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>Escrever um snap-in personalizado do Windows PowerShell
 
@@ -216,8 +216,6 @@ public class CustomPSSnapinTest : CustomPSSnapIn
 Para obter mais informações sobre como registrar o snap-ins, consulte [como registrar Cmdlets, provedores e aplicativos de Host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c) na [guia do programador do Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md).
 
 ## <a name="see-also"></a>Consulte Também
-
-[Como registrar Cmdlets, provedores e aplicativos de Host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Como registrar Cmdlets, provedores e aplicativos de Host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

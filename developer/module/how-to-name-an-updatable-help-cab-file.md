@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: de302da0-c17a-4d31-a8ef-14a626738993
 caps.latest.revision: 7
-ms.openlocfilehash: 23303489372cfe7e036fdea842ae75f7e47503c8
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0b58d5ee19a85bed26bc6549ced48b890cd62f64
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861282"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794750"
 ---
 # <a name="how-to-name-an-updatable-help-cab-file"></a>Como nomear um arquivo CAB de ajuda atualizável
 
@@ -28,7 +28,6 @@ Atualizável é um gabinete (. Arquivo CAB) deve ter um nome com o seguinte form
 Os elementos do nome são da seguinte maneira.
 
 ModuleName o valor da **nome** propriedade da **ModuleInfo** do objeto que o [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet retorna.
-O valor da **nome** propriedade da **ModuleInfo** do objeto que o [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet retorna.
 
 ModuleGUID o valor da **GUID** chave no manifesto de módulo.
 

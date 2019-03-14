@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
-ms.openlocfilehash: 9aff23647e55e8c9c41c54e5b62cedc15fb28a2d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857162"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794698"
 ---
 # <a name="background-jobs"></a>Trabalhos em segundo plano
 
@@ -21,7 +21,6 @@ Cmdlets pode executar sua ação internamente ou como um Windows PowerShell*trab
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>Trabalhos em segundo plano, trabalhos filhos e o repositório de trabalho
 
-O objeto de trabalho que é retornado pelos cmdlets que oferecem suporte a trabalhos em segundo plano define o trabalho. (O [Start-Job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet também retorna um objeto de trabalho.) O nome do trabalho, um identificador que é usado para especificar o trabalho, as informações de estado e os trabalhos filhos são incluídos nessa definição. O trabalho não realiza o trabalho. Cada trabalho em segundo plano tem pelo menos um trabalho filho, porque o trabalho filho executa o trabalho real. Quando você executar um cmdlet, para que o trabalho é executado como um trabalho em segundo plano, o cmdlet deve adicionar o trabalho e os trabalhos filho para um repositório comum, conhecido como o *repositório de trabalho*.
 O objeto de trabalho que é retornado pelos cmdlets que oferecem suporte a trabalhos em segundo plano define o trabalho. (O [Start-Job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet também retorna um objeto de trabalho.) O nome do trabalho, um identificador que é usado para especificar o trabalho, as informações de estado e os trabalhos filhos são incluídos nessa definição. O trabalho não realiza o trabalho. Cada trabalho em segundo plano tem pelo menos um trabalho filho, porque o trabalho filho executa o trabalho real. Quando você executar um cmdlet, para que o trabalho é executado como um trabalho em segundo plano, o cmdlet deve adicionar o trabalho e os trabalhos filho para um repositório comum, conhecido como o *repositório de trabalho*.
 
 Para obter mais informações sobre como os trabalhos em segundo plano são tratados na linha de comando, consulte o seguinte:
