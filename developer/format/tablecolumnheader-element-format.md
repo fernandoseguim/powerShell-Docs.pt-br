@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
-ms.openlocfilehash: 15f47c97ac5d55cb76e153af86672b3ffaf176c9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858592"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057868"
 ---
 # <a name="tablecolumnheader-element-format"></a>Elemento TableColumnHeader (formato)
 
@@ -45,7 +45,7 @@ Nenhum.
 |-------------|-----------------|
 |[Elemento de rótulo para TableColumnHeader para TableControl (formato)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Define o rótulo que é exibido na parte superior da coluna. Se nenhum rótulo for especificado, o nome da propriedade cujo valor é exibido nas linhas é usado.|
 |[Elemento de largura para TableColumnHeader para TableControl (formato)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento necessário.<br /><br /> Especifica a largura (em caracteres) da coluna.|
-|[Elemento de alinhamento para TableColumbnHeader para TableControl (formato)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Especifica como o rótulo da coluna é exibido. Se nenhum alinhamento for especificado, o rótulo é alinhado à esquerda.|
+|[Elemento de alinhamento para TableColumnHeader para TableControl (formato)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)|Elemento opcional.<br /><br /> Especifica como o rótulo da coluna é exibido. Se nenhum alinhamento for especificado, o rótulo é alinhado à esquerda.|
 
 ### <a name="parent-elements"></a>Elementos pais
 
@@ -82,7 +82,7 @@ O exemplo a seguir mostra dois `TableColumnHeader` elementos. O primeiro element
 
 ## <a name="see-also"></a>Consulte Também
 
-[Elemento de alinhamento para TableColumnHeader para TableContrl (formato)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
+[Elemento de alinhamento para TableColumnHeader para TableControl (formato)](./alignment-element-for-tablecolumnheader-for-tablecontrol-format.md)
 
 [Criando uma exibição de tabela](./creating-a-table-view.md)
 

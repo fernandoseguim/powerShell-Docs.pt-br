@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
-ms.openlocfilehash: 4e962890fa1d5c282a02a89f0ae2e263844c635e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856962"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057596"
 ---
 # <a name="updatable-help-overview"></a>Visão geral da ajuda atualizável
 
@@ -31,7 +31,9 @@ A Ajuda atualizável é totalmente suportada por todos os módulos do Windows Po
 
 A Ajuda atualizável inclui os seguintes recursos.
 
-- O [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, que determina se os usuários têm a Ajuda mais recentes de arquivos para um módulo e, se não estiver, baixa os arquivos de ajuda mais recentes da Internet, descompacta-os e instala-os nos subdiretórios de módulo correto no computador do usuário. Os usuários podem usar o [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet para exibir os tópicos da Ajuda recém-instalado imediatamente. Eles não precisam reiniciar o Windows PowerShell.
+- O [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, que determina se os usuários têm a Ajuda mais recentes de arquivos para um módulo e, se não estiver, baixa os arquivos de ajuda mais recentes da Internet, descompacta-os e instala-os nos subdiretórios de módulo correto no computador do usuário.
+  Os usuários podem usar o [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet para exibir os tópicos da Ajuda recém-instalado imediatamente.
+  Eles não precisam reiniciar o PowerShell.
 
 - O [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) cmdlet, que baixa a Ajuda mais recentes da Internet e os salva em um diretório de sistema de arquivos. Os usuários podem usar o `Update-Help` cmdlet para obter os arquivos de Ajuda do diretório do sistema de arquivos e descompactar e instalá-los nos subdiretórios de módulo no computador do usuário. O `Save-Help` cmdlet é projetado para os usuários que têm limitado ou sem acesso à Internet e para as empresas que preferem limitar o acesso à Internet.
 

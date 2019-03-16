@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Cmdlet attribute
 ms.assetid: 1d323332-f773-4c0e-8a69-2aada765afb2
 caps.latest.revision: 12
-ms.openlocfilehash: 2bc03aaade1f18d48f65ecf5f9ee437ffaf07f92
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6887467ad5ccafe6edf8f03f531b4750133aa9e9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863422"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058021"
 ---
 # <a name="cmdlet-attribute-declaration"></a>Declaração de atributo de cmdlet
 
@@ -36,9 +36,9 @@ O atributo de Cmdlet identifica uma classe do Microsoft .NET Framework como um c
 
 `NounName` ([System. String](/dotnet/api/System.String)) necessário. Especifica o substantivo do cmdlet. Este substantivo Especifica os recursos que o cmdlet atua. Para obter mais informações sobre nomes de cmdlet, consulte [Cmdlet declaração](./cmdlet-class-declaration.md) e [altamente incentivados diretrizes de desenvolvimento](./strongly-encouraged-development-guidelines.md).
 
-`SupportsShouldProcess` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o cmdlet oferece suporte a chamadas para o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método, que fornece uma maneira para avisar o usuário antes de uma ação que altera o sistema é executada o cmdlet. `False`, o valor padrão, indica que o cmdlet não dá suporte a chamadas para o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. Para obter mais informações sobre solicitações de confirmação, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
+`SupportsShouldProcess` ([System. Boolean](/dotnet/api/System.Boolean)) parâmetro nomeado opcional. `True` indica que o cmdlet oferece suporte a chamadas para o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método, que fornece uma maneira para avisar o usuário antes de uma ação que altera o sistema é executada o cmdlet. `False`, o valor padrão, indica que o cmdlet não dá suporte a chamadas para o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. Para obter mais informações sobre solicitações de confirmação, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
 
-`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) parâmetro nomeado opcional. Especifica quando a ação do cmdlet deve ser confirmada por uma chamada para o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) só será chamado quando o valor de ConfirmImpact do cmdlet (por padrão, médio) é igual ou maior que o valor da `$ConfirmPreference` variável. Esse parâmetro deve ser especificado somente quando o `SupportsShouldProcess` parâmetro for especificado.
+`ConfirmImpact` ([System.Management.Automation.Confirmimpact](/dotnet/api/System.Management.Automation.ConfirmImpact)) parâmetro nomeado opcional. Especifica quando a ação do cmdlet deve ser confirmada por uma chamada para o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método. [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) só será chamado quando o valor de ConfirmImpact do cmdlet (por padrão, médio) é igual ou maior que o valor da `$ConfirmPreference` variável. Esse parâmetro deve ser especificado somente quando o `SupportsShouldProcess` parâmetro for especificado.
 
 `DefaultParameterSetName` ([System. String](/dotnet/api/System.String)) parâmetro nomeado opcional. Especifica que o parâmetro padrão definido que o tempo de execução do Windows PowerShell tenta usar quando ele não pode determinar qual parâmetro definido para usar. Observe que essa situação pode ser eliminada, fazendo com que o parâmetro unique de cada parâmetro de definir um parâmetro obrigatório.
 
@@ -54,9 +54,9 @@ Há um caso em que o Windows PowerShell não é possível usar o parâmetro padr
 
 **VerbName-NounName**
 
-- Todos os cmdlets que alteram recursos fora do Windows PowerShell deve incluir a `SupportsShouldProcess` palavra-chave quando o atributo do Cmdlet é declarado, que permite que o cmdlet chamar o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método antes que o cmdlet executa sua ação. Se o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamar retorna `false`, a ação não deve ser tomada. Para obter mais informações sobre as solicitações de confirmação geradas pelo [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamam, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
+- Todos os cmdlets que alteram recursos fora do Windows PowerShell deve incluir a `SupportsShouldProcess` palavra-chave quando o atributo do Cmdlet é declarado, que permite que o cmdlet chamar o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método antes que o cmdlet executa sua ação. Se o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamar retorna `false`, a ação não deve ser tomada. Para obter mais informações sobre as solicitações de confirmação geradas pelo [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamam, consulte [solicitando confirmação](./requesting-confirmation-from-cmdlets.md).
 
-O `Confirm` e `WhatIf` parâmetros de cmdlet estão disponíveis apenas para cmdlets que suportam [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamadas.
+O `Confirm` e `WhatIf` parâmetros de cmdlet estão disponíveis apenas para cmdlets que suportam [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamadas.
 
 ## <a name="example"></a>Exemplo
 

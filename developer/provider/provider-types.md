@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e523a8e1-42e4-4633-887f-fb74b3464561
 caps.latest.revision: 12
-ms.openlocfilehash: 25b604621c90f1aa88bc1eea365e47db66e98c3d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 37689571eb1650e5991af2e7002cd037ae99dd68
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858402"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057953"
 ---
 # <a name="provider-types"></a>Tipos de provedor
 
@@ -65,7 +65,7 @@ Provedores de contêiner permitem ao usuário gerenciar os itens que são contê
 
 O [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe define os seguintes métodos para a implementação de cmdlets do provedor específico. Na maioria dos casos, para dar suporte a um cmdlet do provedor você deve substituir o método que chama de mecanismo do Windows PowerShell para invocar o cmdlet, como o `CopyItem` método para o `Copy-Item` cmdlet e, opcionalmente, você pode substituir um segundo método, como `CopyItemDynamicParameters`, para adicionar parâmetros dinâmicos para o cmdlet.
 
-- O [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) e [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) os métodos definem como o provedor oferece suporte a `Copy-Item` cmdlet do provedor. Esse cmdlet permite ao usuário copiar um item de um local para outro.
+- O [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) e [System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) os métodos definem como o provedor oferece suporte a `Copy-Item` cmdlet do provedor. Esse cmdlet permite ao usuário copiar um item de um local para outro.
 
 - O [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) e [System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) métodos definem como o provedor oferece suporte a `Get-ChildItem` cmdlet do provedor. Esse cmdlet permite ao usuário recuperar os itens filhos do item pai.
 

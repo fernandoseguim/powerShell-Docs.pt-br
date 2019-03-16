@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 46dc0657-110f-4367-8bb6-a95dca2c5016
 caps.latest.revision: 8
-ms.openlocfilehash: 59832ed8a4fad3b07a171946bff28fb3e1dbe442
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f020f023f9a379ff8a610edb7d5dcfe207170394
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854652"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055539"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
@@ -40,7 +40,7 @@ Este exemplo demonstra o seguinte:
 
 - Substituindo o [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) método para alterar o comportamento do `Get-Content` cmdlet, permitindo que o usuário recuperar o conteúdo de um item. (Este exemplo mostra como adicionar parâmetros dinâmicos para a `Get-Content` cmdlet.).
 
-- Substituindo o [Microsoft.Powershell.Commands.Filesystemprovider.Getcontentwriter*](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter) método para alterar o comportamento do `Set-Content` cmdlet, permitindo que o usuário atualizar o conteúdo de um item. (Este exemplo mostra como adicionar parâmetros dinâmicos para a `Set-Content` cmdlet.)
+- Substituindo o [Microsoft.PowerShell.Commands.Filesystemprovider.Getcontentwriter*](/dotnet/api/Microsoft.PowerShell.Commands.FileSystemProvider.GetContentWriter) método para alterar o comportamento do `Set-Content` cmdlet, permitindo que o usuário atualizar o conteúdo de um item. (Este exemplo mostra como adicionar parâmetros dinâmicos para a `Set-Content` cmdlet.)
 
 ## <a name="example"></a>Exemplo
 

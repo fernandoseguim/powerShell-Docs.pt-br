@@ -11,12 +11,12 @@ helpviewer_keywords:
 - session state [PowerShell]
 ms.assetid: 74912940-2b10-4a76-b174-6d035d71c02b
 caps.latest.revision: 8
-ms.openlocfilehash: 5d4effb508c9f2544832dad557671520cb0a7ac7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: fa207130bbb120750780bb0aa9b32150a32daaa2
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862982"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059534"
 ---
 # <a name="windows-powershell-session-state"></a>Estado de sessão do Windows PowerShell
 
@@ -46,11 +46,11 @@ Dados de estado de sessão são armazenados pela instância atual do mecanismo d
 
 ## <a name="accessing-session-state-data-within-cmdlets"></a>Acessando dados de estado de sessão dentro de Cmdlets
 
-Cmdlets podem acessar os dados de estado de sessão ou indiretamente por meio de [System.Management.Automation.Pscmdlet.Sessionstate*](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) propriedade de classe do cmdlet ou diretamente por meio de [ System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) classe. O [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) classe fornece propriedades que podem ser usadas para investigar os diferentes tipos de dados de estado de sessão.
+Cmdlets podem acessar os dados de estado de sessão ou indiretamente por meio de [System.Management.Automation.PSCmdlet.Sessionstate*](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) propriedade de classe do cmdlet ou diretamente por meio de [ System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) classe. O [System.Management.Automation.Sessionstate](/dotnet/api/System.Management.Automation.SessionState) classe fornece propriedades que podem ser usadas para investigar os diferentes tipos de dados de estado de sessão.
 
 ## <a name="see-also"></a>Consulte Também
 
-[System.Management.Automation.Pscmdlet.Sessionstate](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState)
+[System.Management.Automation.PSCmdlet.Sessionstate](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState)
 
 [System.Management.Automation.Sessionstate?Displayproperty=Fullname](/dotnet/api/System.Management.Automation.SessionState)
 

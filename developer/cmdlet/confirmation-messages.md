@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
 caps.latest.revision: 8
-ms.openlocfilehash: 75214a3fe4bc019836f75db19fb873bd081f200f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861412"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059466"
 ---
 # <a name="confirmation-messages"></a>Mensagens de confirmação
 
-Aqui estão as mensagens de confirmação diferentes que podem ser exibidas, dependendo das variantes do [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos que são chamados.
+Aqui estão as mensagens de confirmação diferentes que podem ser exibidas, dependendo das variantes do [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue ](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) métodos que são chamados.
 
 > [!IMPORTANT]
 > Para o código de exemplo que mostra como solicitar confirmações, consulte [como a solicitação de confirmações](./how-to-request-confirmations.md).
@@ -33,7 +33,7 @@ Performing operation "Test-RequestConfirmationTemplate1" on Target "MyResource".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-Se o usuário seleciona **Yes** ou **Sim para tudo** para a confirmação da solicitação (conforme mostrado no exemplo a seguir), uma chamada para o [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método é feito, o que faz com que uma segunda mensagem de confirmação a ser exibido.
+Se o usuário seleciona **Yes** ou **Sim para tudo** para a confirmação da solicitação (conforme mostrado no exemplo a seguir), uma chamada para o [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)método é feito, o que faz com que uma segunda mensagem de confirmação a ser exibido.
 
 ```output
 Confirm
@@ -57,7 +57,7 @@ Performing operation "MyAction" on Target "MyResource".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-Se o usuário seleciona **Yes** ou **Sim para tudo** para a mensagem anterior, uma chamada para o [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método é feita, o que faz com que um segunda mensagem de confirmação a ser exibido.
+Se o usuário seleciona **Yes** ou **Sim para tudo** para a mensagem anterior, uma chamada para o [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método é feita, o que faz com que um segunda mensagem de confirmação a ser exibido.
 
 ```output
 Confirm

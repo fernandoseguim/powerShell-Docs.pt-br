@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
 caps.latest.revision: 6
-ms.openlocfilehash: 1513d340cdadc5cb7622e791cc3c163ff39dfe1d
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795395"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059245"
 ---
 # <a name="credential-attribute-declaration"></a>Declaração de atributo de credencial
 

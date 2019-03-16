@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
-ms.openlocfilehash: 2f3bb481722363557c93ebbc5e6df62baeff2555
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0550dacc33f45f45ba105ca5cb4d2e5b5d675fb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862002"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056049"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Adicionar relatórios de erros de não encerramento ao seu cmdlet
 
-Cmdlets podem relatar erros sem encerramento chamando o [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método e ainda continuar a operar no objeto de entrada atual ou em entrada mais objetos do pipeline. Esta seção explica como criar um cmdlet que relata erros sem encerramento de seus métodos de processamento de entrada.
+Cmdlets podem relatar erros sem encerramento chamando o [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método e ainda continuar a operar no objeto de entrada atual ou em entrada mais objetos do pipeline. Esta seção explica como criar um cmdlet que relata erros sem encerramento de seus métodos de processamento de entrada.
 
-Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar uma [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto identifica o erro. Cada registro de erro é identificado por uma cadeia de caracteres exclusiva, chamada "identificador de erro". Além do identificador, a categoria de cada erro é especificada pelo constantes definidas por um [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração. O usuário pode exibir os erros com base em sua categoria, definindo o `$ErrorView` variável para "CategoryView".
+Para erros de não encerramento (bem como erros de encerramento), o cmdlet deve passar uma [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto identifica o erro. Cada registro de erro é identificado por uma cadeia de caracteres exclusiva, chamada "identificador de erro". Além do identificador, a categoria de cada erro é especificada pelo constantes definidas por um [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumeração. O usuário pode exibir os erros com base em sua categoria, definindo o `$ErrorView` variável para "CategoryView".
 
 Para obter mais informações sobre os registros de erro, consulte [registros de erros do Windows PowerShell](./windows-powershell-error-records.md).
 
@@ -101,11 +101,11 @@ Todos os cmdlets devem substituir pelo menos uma entrada de processamento métod
 > [!NOTE]
 > O cmdlet deve tratar cada registro independentemente do quanto possível.
 
-Esse cmdlet Get-Proc substitui o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para lidar com o `Name` parâmetro de entrada fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado ou todos os processos se nenhum nome for fornecido. Detalhes dessa substituição são fornecidos nas [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md).
+Esse cmdlet Get-Proc substitui o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para lidar com o `Name` parâmetro de entrada fornecida pelo usuário ou um script. Esse método obtém os processos para cada nome de processo solicitado ou todos os processos se nenhum nome for fornecido. Detalhes dessa substituição são fornecidos nas [criando seu primeiro Cmdlet](./creating-a-cmdlet-without-parameters.md).
 
 #### <a name="things-to-remember-when-reporting-errors"></a>Itens a lembrar ao relatar erros
 
-O [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) do objeto que o cmdlet transmite ao escrever um erro requer uma exceção em seu núcleo. Siga as diretrizes do .NET ao determinar a exceção a usar. Basicamente, se o erro semanticamente é o mesmo que uma exceção existente, o cmdlet deve usar ou derivar dessa exceção. Caso contrário, ele deve derivar uma nova exceção ou hierarquia de exceções diretamente a partir de [System. Exception](/dotnet/api/System.Exception) classe.
+O [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) do objeto que o cmdlet transmite ao escrever um erro requer uma exceção em seu núcleo. Siga as diretrizes do .NET ao determinar a exceção a usar. Basicamente, se o erro semanticamente é o mesmo que uma exceção existente, o cmdlet deve usar ou derivar dessa exceção. Caso contrário, ele deve derivar uma nova exceção ou hierarquia de exceções diretamente a partir de [System. Exception](/dotnet/api/System.Exception) classe.
 
 Durante a criação de identificadores de erro (acessados por meio da propriedade da classe ErrorRecord FullyQualifiedErrorId) tenha em mente o seguinte.
 
@@ -135,7 +135,7 @@ Exceções não tratadas não são detectadas pelo Windows PowerShell nas seguin
 
 ## <a name="reporting-nonterminating-errors"></a>Relatando erros sem encerramento
 
-Qualquer um dos métodos de processamento de entrada pode relatar um erro sem encerramento no fluxo de saída usando o [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método. Aqui está um exemplo de código desse cmdlet Get-Proc que ilustra a chamada para [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) de dentro a substituição do [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. Nesse caso, a chamada será feita se o cmdlet não é possível localizar um processo para um identificador de processo especificado.
+Qualquer um dos métodos de processamento de entrada pode relatar um erro sem encerramento no fluxo de saída usando o [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método. Aqui está um exemplo de código desse cmdlet Get-Proc que ilustra a chamada para [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) de dentro a substituição do [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método. Nesse caso, a chamada será feita se o cmdlet não é possível localizar um processo para um identificador de processo especificado.
 
 ```csharp
 protected override void ProcessRecord()

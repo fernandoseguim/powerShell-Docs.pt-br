@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 97a2d3587f8f69edc92150474e94a620ff9a2f71
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854542"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056559"
 ---
 # <a name="advisory-development-guidelines"></a>Diretrizes para desenvolvimento de consultoria
 
@@ -89,17 +89,17 @@ Ao nomear a classe do .NET Framework que implementa um cmdlet, nomeie a classe "
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Se nenhuma entrada do Pipeline substituir o método BeginProcessing (AC02)
 
-Se seu cmdlet não aceita entrada do pipeline, o processamento deve ser implementado na [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método. O uso desse método permite que o Windows PowerShell manter a ordem entre os cmdlets. O primeiro cmdlet no pipeline sempre retorna seus objetos antes dos cmdlets restantes no pipeline de obter a oportunidade de começar seu processamento.
+Se seu cmdlet não aceita entrada do pipeline, o processamento deve ser implementado na [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método. O uso desse método permite que o Windows PowerShell manter a ordem entre os cmdlets. O primeiro cmdlet no pipeline sempre retorna seus objetos antes dos cmdlets restantes no pipeline de obter a oportunidade de começar seu processamento.
 
 ### <a name="to-handle-stop-requests-override-the-stopprocessing-method-ac03"></a>Para lidar com solicitações de interrupção de substituem o método StopProcessing (AC03)
 
-Substituir a [System.Management.Automation.Cmdlet.Stopprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) método para que seu cmdlet pode lidar com sinal de parada. Alguns cmdlets levar muito tempo para concluir sua operação, e eles permitem que um longo tempo passe entre as chamadas para o tempo de execução do Windows PowerShell, como quando o cmdlet bloqueia o thread em chamadas RPC de longa execução. Isso inclui cmdlets que fazem chamadas para o [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) método, para o [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método e outros comentários mecanismos que podem levar muito tempo para ser concluída. Nesses casos, o usuário talvez precise enviar um sinal de parada para esses cmdlets.
+Substituir a [System.Management.Automation.Cmdlet.StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) método para que seu cmdlet pode lidar com sinal de parada. Alguns cmdlets levar muito tempo para concluir sua operação, e eles permitem que um longo tempo passe entre as chamadas para o tempo de execução do Windows PowerShell, como quando o cmdlet bloqueia o thread em chamadas RPC de longa execução. Isso inclui cmdlets que fazem chamadas para o [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) método, para o [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método e outros comentários mecanismos que podem levar muito tempo para ser concluída. Nesses casos, o usuário talvez precise enviar um sinal de parada para esses cmdlets.
 
 ### <a name="implement-the-idisposable-interface-ac04"></a>Implementar a Interface IDisposable (AC04)
 
-Se seu cmdlet tiver objetos que não são descartados de (gravado no pipeline) o [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, seu cmdlet pode exigir a disposição do objeto adicionais. Por exemplo, se seu cmdlet abre um identificador de arquivo em seu [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e mantém o identificador aberto para uso pelo [System.Management.Automation.Cmdlet.Processrecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, esse identificador deve ser fechado no final do processamento.
+Se seu cmdlet tiver objetos que não são descartados de (gravado no pipeline) o [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, seu cmdlet pode exigir a disposição do objeto adicionais. Por exemplo, se seu cmdlet abre um identificador de arquivo em seu [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método e mantém o identificador aberto para uso pelo [System.Management.Automation.Cmdlet.ProcessRecord ](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, esse identificador deve ser fechado no final do processamento.
 
-O tempo de execução do Windows PowerShell nem sempre chama a [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Por exemplo, o [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método não pode ser chamado se o cmdlet foi cancelado no Centro por meio de sua operação ou se um encerramento ocorrerá erro em qualquer parte do cmdlet. Portanto, a classe do .NET Framework para um cmdlet que requer a limpeza do objeto deve implementar completo [System. IDisposable](/dotnet/api/System.IDisposable) padrão de interface, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar ambos o [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) métodos no final do processamento.
+O tempo de execução do Windows PowerShell nem sempre chama a [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Por exemplo, o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método não pode ser chamado se o cmdlet foi cancelado no Centro por meio de sua operação ou se um encerramento ocorrerá erro em qualquer parte do cmdlet. Portanto, a classe do .NET Framework para um cmdlet que requer a limpeza do objeto deve implementar completo [System. IDisposable](/dotnet/api/System.IDisposable) padrão de interface, incluindo o finalizador, para que o tempo de execução do Windows PowerShell possa chamar ambos o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System.IDisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) métodos no final do processamento.
 
 ### <a name="use-serialization-friendly-parameter-types-ac05"></a>Usar tipos de parâmetro amigável à serialização (AC05)
 
@@ -117,7 +117,7 @@ Tipos de rehydratable internos:
 
 - PSPrimitiveDictionary
 
-- SwitchParmeter
+- SwitchParameter
 
 - PSListModifier
 

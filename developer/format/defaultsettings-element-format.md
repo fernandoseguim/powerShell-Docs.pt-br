@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
 caps.latest.revision: 11
-ms.openlocfilehash: 59cc0514087cc52438e0d1271b8b77a7799eb32c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855662"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059058"
 ---
 # <a name="defaultsettings-element-format"></a>Elemento DefaultSettings (formato)
 
@@ -45,7 +45,7 @@ Nenhum.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento DisplayError (Frmat)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro ao exibir uma parte dos dados.|
+|[Elemento DisplayError (formato)](./displayerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que a cadeia de caracteres #ERR é exibida quando ocorre um erro ao exibir uma parte dos dados.|
 |[Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)|Elemento opcional.<br /><br /> Define as diferentes maneiras em que os objetos do .NET são expandidas quando eles são exibidos em uma exibição.|
 |[PropertyCountForTable (formato)](./propertycountfortable-element-format.md)|Elemento opcional.<br /><br /> Especifica o número mínimo de propriedades de um objeto deve ter para exibir o objeto em uma exibição de tabela.|
 |[Elemento ShowError (formato)](./showerror-element-format.md)|Elemento opcional.<br /><br /> Especifica que o registro completo de erro é exibido quando ocorre um erro ao exibir uma parte dos dados.|
@@ -63,7 +63,7 @@ Nenhum.
 
 [Elemento de configuração](./configuration-element-format.md)
 
-[Elemento DisplayError (Frmat)](./displayerror-element-format.md)
+[Elemento DisplayError (formato)](./displayerror-element-format.md)
 
 [Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)
 

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3d09eaa-924f-4e2b-adfb-14bb729090dd
 caps.latest.revision: 8
-ms.openlocfilehash: d0fb81ee1ca1f80e216c021e1bd64771b8de4dc3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ad7f9737c646dd5cea5abb14b828236e40feac5a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860112"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057035"
 ---
 # <a name="provider-cmdlet-parameters"></a>Parâmetros de cmdlet do provedor
 
@@ -29,9 +29,9 @@ Parâmetros estáticos são definidos pelo Windows PowerShell. Um grande conjunt
 
 `Clear-ItemProperty` cmdlet, você pode definir como o provedor usará os valores passados para o `Path` e `Name` parâmetros da `Clear-ItemProperty` cmdlet Implementando o [ System.Management.Automation.Provider.Ipropertycmdletprovider.Clearproperty*](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) método.
 
-`Copy-Item` cmdlet, você pode definir como o provedor usará os valores passados para o `Path`, `Destination`, e `Recurse` parâmetros da `Copy-Item` cmdlet Implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método.
+`Copy-Item` cmdlet, você pode definir como o provedor usará os valores passados para o `Path`, `Destination`, e `Recurse` parâmetros da `Copy-Item` cmdlet Implementando o [ System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) método.
 
-Cmdlet Get-ChildItems você pode definir como o provedor usará os valores passados para o `Path` e `Recures` parâmetros da `Get-ChildItem` cmdlet Implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) métodos.
+Cmdlet Get-ChildItems você pode definir como o provedor usará os valores passados para o `Path` e `Recurse` parâmetros da `Get-ChildItem` cmdlet Implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnames*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNames) métodos.
 
 `Get-Content` cmdlet, você pode definir como o provedor usará os valores passados para o `Path` parâmetro do `Get-Content` cmdlet Implementando o [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) método.
 
@@ -45,7 +45,7 @@ Cmdlet Get-ChildItems você pode definir como o provedor usará os valores passa
 
 `New-Item` cmdlet, você pode definir como o provedor usará os valores passados para o `Path`, `ItemType`, e `Value` parâmetros da `New-Item` cmdlet Implementando o [ System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) método.
 
-`New-ItemProperty` cmdlet, você pode definir como o provedor usará os valores passados para o `Path`, `Name`, `PropertyType`, e `Value` parâmetros da `New-ItemProperty` cmdlet Implementando o [ Microsoft.Powershell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) método.
+`New-ItemProperty` cmdlet, você pode definir como o provedor usará os valores passados para o `Path`, `Name`, `PropertyType`, e `Value` parâmetros da `New-ItemProperty` cmdlet Implementando o [ Microsoft.PowerShell.Commands.Registryprovider.Newproperty*](/dotnet/api/Microsoft.PowerShell.Commands.RegistryProvider.NewProperty) método.
 
 `Remove-Item` Você pode definir como o provedor usará os valores passados para o `Path` e `Recurse` parâmetros da `Remove-Item` cmdlet Implementando o [System.Management.Automation.Provider.Containercmdletprovider.Removeitem* ](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) método.
 

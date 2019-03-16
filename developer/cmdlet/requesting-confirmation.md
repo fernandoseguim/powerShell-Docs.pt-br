@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4468066f-6759-402f-84db-0d8303cfd5cb
 caps.latest.revision: 7
-ms.openlocfilehash: 4081333c6411bfcd10005bd7018d004d44d5a932
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c5deaa9bb0dd9621b6f03aeb188cf76ed35dff6c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854372"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054932"
 ---
 # <a name="requesting-confirmation"></a>Solicitar confirmação
 
@@ -23,7 +23,7 @@ Esta seção discute as mensagens de confirmação que podem ser exibidas antes 
 
 [Solicitando o processo de confirmação para comandos](./requesting-confirmation-from-cmdlets.md) discute o processo que os cmdlets, funções e provedores devem seguir para solicitar uma confirmação antes de eles fazem uma alteração no sistema.
 
-[Os usuários solicitando confirmação](./users-requesting-confirmation.md) discute como os usuários podem fazer uma confirmação de solicitação do cmdlet, função ou provedor quando o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método é chamado.
+[Os usuários solicitando confirmação](./users-requesting-confirmation.md) discute como os usuários podem fazer uma confirmação de solicitação do cmdlet, função ou provedor quando o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método é chamado.
 
 [Mensagens de confirmação](./confirmation-messages.md) fornece exemplos das mensagens de confirmação diferentes que podem ser exibidos.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - error records [PowerShell], non-terminating
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
-ms.openlocfilehash: 7b54fc220a66a47c25b3e8cba644882d31713cb7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 45f5934314a2871ceb921c7a66b9dfb658d0bd99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857682"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057936"
 ---
 # <a name="cmdlet-error-reporting"></a>Relatório de erros do cmdlet
 
@@ -43,7 +43,7 @@ As diretrizes a seguir podem ser usadas para determinar se uma condição de err
 
 ## <a name="reporting-nonterminating-errors"></a>Relatando erros sem encerramento
 
-O relatório de um erro sem encerramento sempre deve ser feito dentro da implementação do cmdlet do [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método, o [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, ou o [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Esses tipos de erros são relatados por meio da chamada a [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método que por sua vez envia um registro de erro para o fluxo de erro.
+O relatório de um erro sem encerramento sempre deve ser feito dentro da implementação do cmdlet do [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) método, o [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método, ou o [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) método. Esses tipos de erros são relatados por meio da chamada a [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) método que por sua vez envia um registro de erro para o fluxo de erro.
 
 ## <a name="reporting-terminating-errors"></a>Relatório de erros de finalização
 
@@ -53,7 +53,7 @@ Você também pode definir suas próprias exceções para questões específicas
 
 ## <a name="error-records"></a>Registros de erro
 
-Windows PowerShell descreve uma condição de erro sem encerramento através do uso do [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objetos. Cada [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto fornece informações de categoria de erro, um objeto de destino opcionais e detalhes sobre a condição de erro.
+Windows PowerShell descreve uma condição de erro sem encerramento através do uso do [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objetos. Cada [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) objeto fornece informações de categoria de erro, um objeto de destino opcionais e detalhes sobre a condição de erro.
 
 ### <a name="error-identifiers"></a>Identificadores de erro
 
@@ -61,7 +61,7 @@ O identificador de erro é uma simple cadeia de caracteres que identifica a cond
 
 As diretrizes a seguir devem ser seguidas ao especificar identificadores de erro.
 
-- Atribua identificadores de erro diferente, altamente específico, para caminhos de código diferentes. Cada caminho de código que chama [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve ter seu próprio identificador de erro.
+- Atribua identificadores de erro diferente, altamente específico, para caminhos de código diferentes. Cada caminho de código que chama [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) ou [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve ter seu próprio identificador de erro.
 
 - Identificadores de erro devem ser exclusivos para os tipos de exceção do CLR para erros de finalização e sem encerramento.
 

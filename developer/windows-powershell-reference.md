@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: dfda6cb68b089a30a156760345420ee80d1d3ae9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862102"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055488"
 ---
 # <a name="windows-powershell-reference"></a>Referência do Windows PowerShell
 
@@ -47,10 +47,10 @@ Além do SDK do Windows PowerShell, os recursos a seguir fornecem mais informaç
 
 [System.Management.Automation.Provider](/dotnet/api/System.Management.Automation.Provider) este namespace contém as classes, enumerações e interfaces necessárias para implementar um provedor do Windows PowerShell. Em particular, o [System.Management.Automation.Provider.Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) é a classe base da qual PowerShell Windows todas as classes de provedor devem ser derivadas.
 
-[Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) este namespace contém classes para os cmdlets e provedores implementados pelo Windows PowerShell. Da mesma forma, é recomendável que você crie uma *YourName*. Os comandos de namespace para os cmdlets que você implementar.
+[Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) este namespace contém classes para os cmdlets e provedores implementados pelo Windows PowerShell. Da mesma forma, é recomendável que você crie uma *YourName*. Os comandos de namespace para os cmdlets que você implementar.
 
 [System.Management.Automation.Host](/dotnet/api/System.Management.Automation.Host) este namespace contém as classes, enumerações e interfaces que o cmdlet usa para definir a interação entre o usuário e o Windows PowerShell.
 
-[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) este namespace contém as classes base usadas por outras classes do namespace. Por exemplo, o [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) é a classe base para o [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) classe.
+[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) este namespace contém as classes base usadas por outras classes do namespace. Por exemplo, o [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) é a classe base para o [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) classe.
 
 [System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) este namespace contém as classes, enumerações e interfaces usadas para criar um espaço de execução do Windows PowerShell. Nesse contexto, o espaço de execução do Windows PowerShell é o contexto no qual um ou mais pipelines de Windows PowerShell invocar cmdlets. Ou seja, os cmdlets funcionam dentro do contexto de um espaço de execução do Windows PowerShell. Para obter mais informações aboutWindows runspaces do PowerShell, consulte [espaços de execução do Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).

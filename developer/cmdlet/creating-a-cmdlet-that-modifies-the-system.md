@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: d93cc4a05a6625d073791c067d1e9b6662c3a565
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856332"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055131"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Criar um cmdlet que modifica o sistema
 
@@ -26,15 +26,15 @@ ms.locfileid: "56856332"
 
 Para dar suporte à confirmação de um cmdlet deve fazer duas coisas.
 
-- Declarar que o cmdlet oferece suporte a confirmação quando você especifica o [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo definindo a palavra-chave SupportsShouldProcess como `true`.
+- Declarar que o cmdlet oferece suporte a confirmação quando você especifica o [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo definindo a palavra-chave SupportsShouldProcess como `true`.
 
-- Chame [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) durante a execução do cmdlet (conforme mostrado no exemplo a seguir).
+- Chame [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) durante a execução do cmdlet (conforme mostrado no exemplo a seguir).
 
 Com o suporte à confirmação, um cmdlet expõe o `Confirm` e `WhatIf` parâmetros que são fornecidos pelo Windows PowerShell e também atende as diretrizes de desenvolvimento para cmdlets (para obter mais informações sobre as diretrizes de desenvolvimento do cmdlet, consulte [ Diretrizes de desenvolvimento do cmdlet](./cmdlet-development-guidelines.md).).
 
 ## <a name="changing-the-system"></a>Alterando o sistema
 
-O ato de "alterando o sistema" se refere a qualquer cmdlet que potencialmente altera o estado do sistema fora do Windows PowerShell. Por exemplo, interromper um processo, habilitar ou desabilitar uma conta de usuário ou adicionando uma linha em uma tabela de banco de dados são todas as alterações no sistema que devem ser confirmados. Por outro lado, as operações que leia dados ou estabeleçam conexões transitórias não alteram o sistema e geralmente não exigem a confirmação. Confirmação também não é necessária para ações cujo efeito é limitado para dentro do runtime do Windows PowerShell, como `set-variable`. Os cmdlets que podem ou não pode fazer uma alteração persistente deve declarar `SupportsShouldProcess` e chame [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) somente se eles estiverem prestes a fazer uma alteração persistente.
+O ato de "alterando o sistema" se refere a qualquer cmdlet que potencialmente altera o estado do sistema fora do Windows PowerShell. Por exemplo, interromper um processo, habilitar ou desabilitar uma conta de usuário ou adicionando uma linha em uma tabela de banco de dados são todas as alterações no sistema que devem ser confirmados. Por outro lado, as operações que leia dados ou estabeleçam conexões transitórias não alteram o sistema e geralmente não exigem a confirmação. Confirmação também não é necessária para ações cujo efeito é limitado para dentro do runtime do Windows PowerShell, como `set-variable`. Os cmdlets que podem ou não pode fazer uma alteração persistente deve declarar `SupportsShouldProcess` e chame [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) somente se eles estiverem prestes a fazer uma alteração persistente.
 
 > [!NOTE]
 > Confirmação de ShouldProcess se aplica somente aos cmdlets. Se um comando ou script modifica o estado de execução de um sistema chamando diretamente as propriedades ou métodos do .NET, ou por aplicativos de chamada fora do Windows PowerShell, essa forma de confirmação não estará disponível.
@@ -77,11 +77,11 @@ A seguir está a definição de classe para esse cmdlet Stop-Proc.
 public class StopProcCommand : Cmdlet
 ```
 
-Lembre-se que no [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) declaração, o `SupportsShouldProcess` palavra-chave do atributo é definido como `true` para habilitar o cmdlet fazer chamadas para [ System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Sem este conjunto de palavra-chave, o `Confirm` e `WhatIf` parâmetros não estarão disponíveis para o usuário.
+Lembre-se que no [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) declaração, o `SupportsShouldProcess` palavra-chave do atributo é definido como `true` para habilitar o cmdlet fazer chamadas para [ System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Sem este conjunto de palavra-chave, o `Confirm` e `WhatIf` parâmetros não estarão disponíveis para o usuário.
 
 ### <a name="extremely-destructive-actions"></a>Ações destrutivas extremamente
 
-Algumas operações são extremamente nocivo como reformatar uma partição de disco de rígido de Active Directory. Nesses casos, o cmdlet deve ser definido `ConfirmImpact`  =  `ConfirmImpact.High` ao declarar o [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo. Essa configuração força o cmdlet para solicitar a confirmação de usuário, mesmo quando o usuário não especificou o `Confirm` parâmetro. No entanto, os desenvolvedores de cmdlet devem evitar o uso excessivo `ConfirmImpact` para operações que são apenas potencialmente destrutivas, como excluir uma conta de usuário. Lembre-se de que, se `ConfirmImpact` é definido como [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High).
+Algumas operações são extremamente nocivo como reformatar uma partição de disco de rígido de Active Directory. Nesses casos, o cmdlet deve ser definido `ConfirmImpact`  =  `ConfirmImpact.High` ao declarar o [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) atributo. Essa configuração força o cmdlet para solicitar a confirmação de usuário, mesmo quando o usuário não especificou o `Confirm` parâmetro. No entanto, os desenvolvedores de cmdlet devem evitar o uso excessivo `ConfirmImpact` para operações que são apenas potencialmente destrutivas, como excluir uma conta de usuário. Lembre-se de que, se `ConfirmImpact` é definido como [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High).
 
 Da mesma forma, algumas operações são improvável de ser destrutivo, embora eles teoricamente modificam o estado de execução de um sistema fora do Windows PowerShell. Esses cmdlets pode definir `ConfirmImpact` à [System.Management.Automation.Confirmimpact.Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0). Isso irá ignorar as solicitações de confirmação em que o usuário pediu para confirmar as operações somente impacto médio e alto impacto.
 
@@ -93,7 +93,7 @@ O cmdlet Stop-Proc define três parâmetros: `Name`, `Force`, e `PassThru`.
 
 O `Name` parâmetro corresponde à `Name` propriedade do objeto de entrada do processo. Lembre-se que o `Name` parâmetro neste exemplo é obrigatório, pois o cmdlet falhará se não tiver um processo nomeado para parar.
 
-O `Force` parâmetro permite que o usuário substituir chamadas para [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Na verdade, qualquer cmdlet que chama [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve ter uma `Force` parâmetro, de modo que quando `Force` for especificado, o cmdlet ignora a chamada para [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) e prossegue com a operação. Lembre-se de que isso não afeta chamadas para [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
+O `Force` parâmetro permite que o usuário substituir chamadas para [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Na verdade, qualquer cmdlet que chama [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve ter uma `Force` parâmetro, de modo que quando `Force` for especificado, o cmdlet ignora a chamada para [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) e prossegue com a operação. Lembre-se de que isso não afeta chamadas para [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
 
 O `PassThru` parâmetro permite que o usuário indicar se o cmdlet passa um objeto de saída por meio do pipeline, nesse caso, depois que um processo é interrompido. Lembre-se de que esse parâmetro é vinculado ao cmdlet em si em vez de para uma propriedade do objeto de entrada.
 
@@ -142,7 +142,7 @@ private bool passThru;
 
 ## <a name="overriding-an-input-processing-method"></a>Substituindo uma método de processamento de entrada
 
-O cmdlet deve substituir uma método de processamento de entrada. O código a seguir ilustra a [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) usada no cmdlet Stop-Proc exemplo de substituição. Para cada solicitado o nome do processo, esse método garante que o processo não é um processo especial, tenta interromper o processo e, em seguida, envia um objeto de saída se o `PassThru` parâmetro for especificado.
+O cmdlet deve substituir uma método de processamento de entrada. O código a seguir ilustra a [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) usada no cmdlet Stop-Proc exemplo de substituição. Para cada solicitado o nome do processo, esse método garante que o processo não é um processo especial, tenta interromper o processo e, em seguida, envia um objeto de saída se o `PassThru` parâmetro for especificado.
 
 ```csharp
 protected override void ProcessRecord()
@@ -200,9 +200,9 @@ protected override void ProcessRecord()
                 processName);
 
           // It is possible that ProcessRecord is called multiple times
-          // when the Name parameter reveives objects as input from the
+          // when the Name parameter receives objects as input from the
           // pipeline. So to retain YesToAll and NoToAll input that the
-          // user may enter across mutilple calls to ProcessRecord, this
+          // user may enter across multiple calls to ProcessRecord, this
           // information is stored as private members of the cmdlet.
           if (!ShouldContinue(message, "Warning!",
                               ref yesToAll,
@@ -210,7 +210,7 @@ protected override void ProcessRecord()
           {
             continue;
           }
-        } // if (cricicalProcess...
+        } // if (criticalProcess...
         // Stop the named process.
         try
         {
@@ -246,14 +246,14 @@ protected override void ProcessRecord()
 
 ## <a name="calling-the-shouldprocess-method"></a>Chamar o método ShouldProcess
 
-A método do seu cmdlet de processamento de entrada deve chamar o [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método para confirmar a execução de uma operação antes que uma alteração (por exemplo, exclusão de arquivos) é feita para a execução estado do sistema. Isso permite que o tempo de execução do Windows PowerShell fornecer o comportamento correto de "WhatIf" e "Confirmar" dentro do shell.
+A método do seu cmdlet de processamento de entrada deve chamar o [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) método para confirmar a execução de uma operação antes que uma alteração (por exemplo, exclusão de arquivos) é feita para o estado de execução do sistema. Isso permite que o tempo de execução do Windows PowerShell fornecer o comportamento correto de "WhatIf" e "Confirmar" dentro do shell.
 
 > [!NOTE]
-> Se um cmdlet informa que ele oferece suporte deve processar e não fizer a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamar, o usuário pode modificar o sistema inesperadamente.
+> Se um cmdlet informa que ele oferece suporte deve processar e não fizer a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chamar, o usuário pode modificar o sistema inesperadamente.
 
-A chamada para [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) envia o nome do recurso a ser alterado para o usuário, com o tempo de execução do Windows PowerShell levando em consideração quaisquer configurações de linha de comando ou variáveis de preferências determinar o que deve ser exibido ao usuário.
+A chamada para [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) envia o nome do recurso a ser alterado para o usuário, com o tempo de execução do Windows PowerShell levando em consideração quaisquer configurações de linha de comando ou variáveis de preferências determinar o que deve ser exibido ao usuário.
 
-O exemplo a seguir mostra a chamada para [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) de substituição do [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método no exemplo de cmdlet Stop-Proc.
+O exemplo a seguir mostra a chamada para [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) de substituição do [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método no exemplo Cmdlet Stop-Proc.
 
 ```csharp
 if (!ShouldProcess(string.Format("{0} ({1})", processName,
@@ -265,9 +265,9 @@ if (!ShouldProcess(string.Format("{0} ({1})", processName,
 
 ## <a name="calling-the-shouldcontinue-method"></a>Chamar o método ShouldContinue
 
-A chamada para o [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método envia uma mensagem de secundária para o usuário. Essa chamada é feita após a chamada para [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) retorna `true` e, se o `Force` parâmetro não foi definido como `true`. O usuário pode, em seguida, fornecer comentários para dizer se a operação deve continuar. Suas chamadas de cmdlet [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) como uma verificação adicional para modificações no sistema potencialmente perigoso ou quando você deseja fornecer opções Sim para todos e não para todos para o usuário.
+A chamada para o [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) método envia uma mensagem de secundária para o usuário. Essa chamada é feita após a chamada para [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) retorna `true` e, se o `Force` parâmetro não foi definido como `true`. O usuário pode, em seguida, fornecer comentários para dizer se a operação deve continuar. Suas chamadas de cmdlet [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) como uma verificação adicional para modificações no sistema potencialmente perigoso ou quando você deseja fornecer opções Sim para todos e não para todos para o usuário.
 
-O exemplo a seguir mostra a chamada para [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) de substituição do [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método no exemplo de cmdlet Stop-Proc.
+O exemplo a seguir mostra a chamada para [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) de substituição do [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método no exemplo Cmdlet Stop-Proc.
 
 ```csharp
 if (criticalProcess &&!force)
@@ -277,9 +277,9 @@ if (criticalProcess &&!force)
         processName);
 
   // It is possible that ProcessRecord is called multiple times
-  // when the Name parameter reveives objects as input from the
+  // when the Name parameter receives objects as input from the
   // pipeline. So to retain YesToAll and NoToAll input that the
-  // user may enter across mutilple calls to ProcessRecord, this
+  // user may enter across multiple calls to ProcessRecord, this
   // information is stored as private members of the cmdlet.
   if (!ShouldContinue(message, "Warning!",
                       ref yesToAll,
@@ -287,12 +287,12 @@ if (criticalProcess &&!force)
   {
     continue;
   }
-} // if (cricicalProcess...
+} // if (criticalProcess...
 ```
 
 ## <a name="stopping-input-processing"></a>Parar processamento de entrada
 
-A método de um cmdlet que faz modificações no sistema de processamento de entrada deve fornecer uma maneira de parar o processamento de entrada. No caso desse cmdlet Stop-Proc, é feita uma chamada do [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para o [System.Diagnostics.Process.Kill*](/dotnet/api/System.Diagnostics.Process.Kill) método. Porque o `PassThru` parâmetro é definido como `true`, [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) também chama [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) para Envie o objeto de processo para o pipeline.
+A método de um cmdlet que faz modificações no sistema de processamento de entrada deve fornecer uma maneira de parar o processamento de entrada. No caso desse cmdlet Stop-Proc, é feita uma chamada do [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) método para o [System.Diagnostics.Process.Kill*](/dotnet/api/System.Diagnostics.Process.Kill) método. Porque o `PassThru` parâmetro é definido como `true`, [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) também chama [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) para enviar o objeto de processo para o pipeline.
 
 ## <a name="code-sample"></a>Exemplo de código
 

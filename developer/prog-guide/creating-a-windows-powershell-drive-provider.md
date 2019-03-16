@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: d1546ab0b0e6b5502f35c92c01ce148211c53db2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855792"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055641"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Criar um provedor de unidade do Windows PowerShell
 
@@ -73,7 +73,7 @@ Para permitir que o tempo de execução do Windows PowerShell criar uma unidade,
 
 Sua substituição desse método deve fazer o seguinte:
 
-- Verifique se que o [System.Management.Automation.Psdriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) membro existe e que uma conexão ao armazenamento de dados pode ser feita.
+- Verifique se que o [System.Management.Automation.PSDriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) membro existe e que uma conexão ao armazenamento de dados pode ser feita.
 
 - Criar uma unidade e preencher o membro de conexão, suportados a `New-PSDrive` cmdlet.
 
@@ -81,7 +81,7 @@ Sua substituição desse método deve fazer o seguinte:
 
 - Modificar a [psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) do objeto que descreve a unidade com qualquer informação de confiabilidade ou de desempenho necessários, ou fornecer dados extras para os chamadores usando a unidade.
 
-- Lidar com falhas usando o [System.Management.Automation.Provider.Cmdletprovider.Writeerror*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) método e, em seguida, retorno `null`.
+- Lidar com falhas usando o [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) método e, em seguida, retorno `null`.
 
   Esse método retorna as informações do disco que foi passadas para o método ou uma versão específica do provedor dele.
 
