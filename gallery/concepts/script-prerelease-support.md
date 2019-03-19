@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: galeria,powershell,cmdlet,psget
 title: Versões de pré-lançamento de scripts
-ms.openlocfilehash: 4e7eab682008ed57163c51fe3a61a744b347bef2
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: c0198c2f575d2c004949ccebab49d93ce54716be
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002728"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055879"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versões de pré-lançamento de scripts
 
@@ -120,10 +120,10 @@ C:\windows\system32> Uninstall-Script TestPackage -RequiredVersion 1.9.0-alpha
 Uninstall-Script: The '-AllowPrerelease' parameter must be specified when using the Prerelease string in
 MinimumVersion, MaximumVersion, or RequiredVersion.
 At line:1 char:1
-+ Unnstall-Script TestPackage -RequiredVersion 1.9.0-beta
++ Uninstall-Script TestPackage -RequiredVersion 1.9.0-beta
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Uninstall-Script], ArgumentException
-    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninnstall-script
+    + FullyQualifiedErrorId : AllowPrereleaseRequiredToUsePrereleaseStringInVersion,Uninstall-script
 
 
 C:\windows\system32> Uninstall-Script TestPackage -RequiredVersion 1.9.0-alpha -AllowPrerelease

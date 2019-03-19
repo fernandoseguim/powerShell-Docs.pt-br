@@ -1,22 +1,20 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,instalação
-ms.openlocfilehash: 01d4989711c22db20431876c52740afb350caad0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 1153738fdf6f926d5d819bbf91450408dcb17f71
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219541"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794477"
 ---
 # <a name="generate-powershell-cmdlets-based-on-odata-endpoint"></a>Gerar cmdlets do PowerShell com base em um ponto de extremidade OData
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData
---------------------------------------------------------------
+
+## <a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData
 
 **Export-ODataEndpointProxy** é um cmdlet que gera um conjunto de cmdlets do Windows PowerShell com base na funcionalidade exposta por determinado ponto de extremidade OData.
 
 O seguinte exemplo mostra como usar este novo cmdlet:
-
-\# Caso de uso básico de Export-ODataEndpointProxy
 
 ```powershell
 Export-ODataEndpointProxy -Uri 'http://services.odata.org/v3/(S(snyobsk1hhutkb2yulwldgf1))/odata/odata.svc' -OutputModule C:\Users\user\Generated.psd1
@@ -50,8 +48,8 @@ Ainda há partes de casos de uso básico em desenvolvimento para essa funcionali
 -   Associações
 -   Fluxos para passar argumentos
 
-<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData com ODataUtils
-------------------------------------------------------------------------------
+## <a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Gerar cmdlets do Windows PowerShell com base em um ponto de extremidade OData com ODataUtils
+
 O módulo ODataUtils permite a geração de cmdlets do Windows PowerShell de pontos de extremidade REST que dão suporte a OData. As seguintes melhorias incrementais estão no módulo Microsoft.PowerShell.ODataUtils do Windows PowerShell.
 -   Informações adicionais do canal do ponto de extremidade do lado do servidor para o do lado do cliente.
 -   Suporte à paginação do lado do cliente
@@ -59,6 +57,7 @@ O módulo ODataUtils permite a geração de cmdlets do Windows PowerShell de pon
 -   Suporte para cabeçalhos de solicitação da Web
 
 Os cmdlets do proxy gerados pelo cmdlet Export-ODataEndPointProxy fornecem informações adicionais (não mencionadas no $metadata usado durante a geração de proxy do lado do cliente) do ponto de extremidade OData do lado do servidor no Fluxo de informações (um novo recurso do Windows PowerShell 5.0). Aqui está um exemplo de como obter essas informações.
+
 ```powershell
 Import-Module Microsoft.PowerShell.ODataUtils -Force
 $generatedProxyModuleDir = Join-Path -Path $env:SystemDrive -ChildPath 'ODataDemoProxy'
@@ -81,6 +80,7 @@ $additionalInfo['odata.count']
 ```
 
 É possível obter os registros do lado do servidor em lotes usando o suporte à paginação do lado do cliente. Isso é útil quando é necessário obter uma grande quantidade de dados do servidor pela rede.
+
 ```powershell
 $skipCount = 0
 $batchSize = 3
@@ -94,6 +94,7 @@ $skipCount += $batchSize
 ```
 
 Os cmdlets do proxy gerados dão suporte ao parâmetro –Select, que pode ser usado como um filtro para receber apenas as propriedades de registro de que o cliente precisa. Isso reduz a quantidade de dados que são transferidos pela rede, pois a filtragem ocorre no lado do servidor.
+
 ```powershell
 # In the below example only the Name property of the
 # Product record is retrieved from the server side.
@@ -101,6 +102,7 @@ Get-Product -Top 2 -AllowUnsecureConnection -AllowAdditionalData -Select Name
 ```
 
 O cmdlet Export-ODataEndpointProxy, bem como os cmdlets do proxy gerados por ele, agora dão suporte ao parâmetro Headers (fornecem valores como uma tabela de hash), que pode ser usado para transmitir qualquer informação adicional esperada pelo ponto de extremidade OData do lado do servidor. No exemplo a seguir, é possível transmitir uma chave de Assinatura por meio de Cabeçalhos para serviços que esperam uma chave de Assinatura para autenticação.
+
 ```powershell
 # As an example, in the below command 'XXXX' is the authentication used by the
 # Export-ODataEndpointProxy cmdlet to interact with the server-side
