@@ -2,12 +2,12 @@
 ms.date: 08/24/2018
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Script de DSC
-ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 86dfb74bf52d8907686bb955fd722f4fb8b9131b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675666"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054740"
 ---
 # <a name="dsc-script-resource"></a>Recurso Script de DSC
 
@@ -57,11 +57,11 @@ O cmdlet [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/
 
 ### <a name="setscript"></a>SetScript
 
-O modifica `SetScript` o nó para impor o estado desejado. Ele será chamado pelo DSC se o bloco de script `TestScript` retornar `$false`. O `SetScript` não deve ter nenhum valor de retorno.
+O `SetScript` modifica o nó para impor o estado desejado. Ele será chamado pelo DSC se o bloco de script `TestScript` retornar `$false`. O `SetScript` não deve ter nenhum valor de retorno.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="example-1-write-sample-text-using-a-script-resource"></a>Exemplo 1: Gravar o texto de exemplo usando um recurso de Script
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>Exemplo 1: Escrever texto de exemplo usando um recurso de Script
 
 Este exemplo testa a existência de `C:\TempFolder\TestFile.txt` em cada nó. Se não existir, ele o criará usando o `SetScript`. O `GetScript` retorna o conteúdo do arquivo, e seu valor de retorno não é usado.
 
@@ -86,7 +86,7 @@ Configuration ScriptTest
 }
 ```
 
-### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar as informações de versão usando um recurso de Script
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>Exemplo 2: Comparar informações de versão usando um recurso de Script
 
 Este exemplo recupera as informações da versão *compatível* de um arquivo de texto no computador de criação e as armazenam na variável `$version`. Ao gerar o arquivo MOF do nó, o DSC substitui as variáveis `$using:version` em cada bloco de script pelo valor da variável `$version`. Durante a execução, a versão *compatível* é armazenada em um arquivo de texto em cada Node, comparada e atualizada em execuções subsequentes.
 

@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: 64c3d607b13dce64f70f138fdee849e5baaf85df
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.openlocfilehash: 25c359c7acbe7430762a275d8cc4a28f527ec57a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265562"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056491"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -33,7 +33,7 @@ Os pacotes que seguem estas diretrizes têm uma probabilidade muito maior de ser
 - Seja receptivo aos comentários
 - Fornecer módulos em vez de scripts
 - Fornecer links para um site do projeto
-- Marcar seu pacote com as plataformas e PSEdition(s) compatível 
+- Marcar seu pacote com as plataformas e PSEdition(s) compatíveis
 - Incluir testes com os módulos
 - Incluir e/ou vincular aos termos de licença
 - Assinar o código
@@ -136,15 +136,15 @@ A adição de um link é feita incluindo ProjectURI na seção PSData do manifes
 
 Quando um ProjectURI for fornecido, a Galeria do PowerShell incluirá um link para o site do projeto no lado esquerdo da página do pacote.
 
-## <a name="tag-your-package-with-the-compatible-pseditions-and-platforms"></a>Marcar seu pacote com as plataformas e PSEdition(s) compatível 
+## <a name="tag-your-package-with-the-compatible-pseditions-and-platforms"></a>Marcar seu pacote com as plataformas e PSEdition(s) compatíveis
 
-Use as seguintes marcas para demonstrar a usuários que pacotes funcionará bem com seu ambiente:
+Use as seguintes marcas para demonstrar aos usuários quais pacotes funcionarão bem com o ambiente deles:
 
-- PSEdition_Desktop: Pacotes que são compatíveis com o Windows PowerShell 
-- PSEdition_Core: Pacotes que são compatíveis com o Powershell Core 
-- Windows: Pacotes que são compatíveis com o sistema operacional Windows
-- Linux: Pacotes que são compatíveis com sistemas operacionais do Linux 
-- MacOS: Pacotes que são compatíveis com o sistema operacional Mac
+- PSEdition_Desktop: pacotes compatíveis com o Windows PowerShell
+- PSEdition_Core: pacotes compatíveis com o PowerShell Core
+- Windows: pacotes compatíveis com o sistema operacional Windows
+- Linux: pacotes compatíveis com os sistemas operacionais Linux
+- MacOS: pacotes compatíveis com o sistema operacional Mac
 
 ## <a name="include-tests"></a>Incluir testes
 
@@ -251,4 +251,3 @@ A abordagem mais bem-sucedida que encontramos para pacotes publicados na Galeria
 - Decida se você deseja assinar o código do seu pacote
 - Quando você achar que o projeto está pronto para ser usado em um ambiente de produção, publique uma versão 1.0.0 na Galeria do PowerShell
 - Continue a coletar comentários e itere em seu código com base nas informações fornecidas pelos usuários
-

@@ -2,16 +2,16 @@
 ms.date: 08/23/2017
 keywords: powershell, cmdlet
 title: instalar e usar o windows powershell web access
-ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675521"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056712"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Instalar e usar o Windows PowerShell Web Access
 
-Atualizado: 5 de novembro de 2013 (editado: Agosto de 23, 2017
+Atualizado: 5 de novembro de 2013 (editado: 23 de agosto de 2017)
 
 Aplica-se a: Windows Server 2012 R2, Windows Server 2012
 
@@ -97,7 +97,7 @@ Você pode instalar o gateway do Windows PowerShell Web Access em um servidor qu
    `Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart`
 
    > [!NOTE]
-   > A instalação do Windows PowerShell Web Access usando cmdlets do Windows PowerShell não adiciona ferramentas de gerenciamento do Servidor Web (IIS) por padrão. Se você deseja instalar as ferramentas de gerenciamento no mesmo servidor que o gateway do Windows PowerShell Web Access, adicione o parâmetro `-IncludeManagementTools` ao comando de instalação (como fornecido nesta etapa). Se você estiver gerenciando o site do Windows PowerShell Web Access de um computador remoto, instale o snap-in do Gerenciador do IIS ao instalar as [Ferramentas de Administração de Servidor Remoto para Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) ou as [Ferramentas de Administração de Servidor Remoto para Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) no computador do qual deseja gerenciar o gateway.
+   > A instalação do Windows PowerShell Web Access usando cmdlets do Windows PowerShell não adiciona ferramentas de gerenciamento do Servidor Web (IIS) por padrão. Se você deseja instalar as ferramentas de gerenciamento no mesmo servidor que o gateway do Windows PowerShell Web Access, adicione o parâmetro `-IncludeManagementTools` ao comando de instalação (como fornecido nesta etapa). Se você estiver gerenciando o site do Windows PowerShell Web Access de um computador remoto, instale o snap-in Gerenciador do IIS ao instalar as [Ferramentas de Administração de Servidor Remoto do Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) ou as [Ferramentas de Administração de Servidor Remoto para Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) no computador do qual você quer gerenciar o gateway.
 
    Para instalar funções e recursos em um VHD offline, adicione os parâmetros `-ComputerName` e `-VHD` . O parâmetro `-ComputerName` contém o nome do servidor em que será montado o VHD, e o parâmetro `-VHD` contém o caminho para o arquivo VHD no servidor especificado.
 
@@ -178,7 +178,7 @@ Por padrão, o cmdlet instala o aplicativo Web, o **pswa** (e um pool de aplicat
 7. Na caixa de diálogo **Adicionar Associação do Site**, no campo **Tipo**, escolha **https**.
 
 8. No campo **Certificado SSL**, selecione o certificado assinado no menu suspenso.
-   Clique em **OK**. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações sobre como obter um certificado.
+   Clique em **OK**. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico para obter mais informações sobre como obter um certificado.
 
    O aplicativo web Windows PowerShell Web Access agora está configurado para usar seu certificado SSL assinado.
 
@@ -200,7 +200,7 @@ Para obter mais detalhes sobre as regras e a segurança de autorização do Wind
    - Na área de trabalho do Windows, clique com o botão direito do mouse em **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
    - Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como Administrador**.
 
-2. Etapa opcional para restringir o acesso do usuário usando configurações de sessão: verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Etapa opcional para restringir o acesso de usuários usando as configurações de sessão: verifique se as configurações de sessão que você deseja usar em suas regras já existem. Se elas ainda não foram criadas, siga as instruções de como criar configurações de sessão em [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digite o seguinte e pressione **Enter**.
 
@@ -273,7 +273,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 8. No campo **Caminho físico**, procure a localização do aplicativo. Você pode usar o local padrão, `$env:windir/Web/PowerShellWebAccess/wwwroot`. Clique em **OK**.
 
-9. Siga as etapas no procedimento [Para configurar um certificado SSL no gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico.
+9. Siga as etapas no procedimento [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico.
 
 10. ![](images/SecurityNote.jpeg) Etapa opcional de segurança:
 
@@ -318,7 +318,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 1. Um pool de aplicativos será criado automaticamente para o novo site. Para usar outro pool de aplicativos, clique em **Selecionar** para selecionar um pool de aplicativos a ser associado ao novo site. Escolha o pool de aplicativos alternativo na caixa de diálogo **Selecionar Pool de Aplicativos** e clique em **OK**.
 
-1. No **caminho físico** texto caixa, navegue até % windir%/Web/PowerShellWebAccess/wwwroot.
+1. Na caixa de texto **Caminho físico**, navegue até %windir%/Web/PowerShellWebAccess/wwwroot.
 
 1. No campo **Tipo** da área **Associação**, escolha **https**.
 
@@ -329,7 +329,7 @@ As instruções nesta seção referem-se à instalação do aplicativo Web Windo
 
 1. Opcionalmente, se necessário para sua organização, especifique um nome de host que faça sentido para a organização e para os usuários, como **`www.contoso.com`**. Clique em **OK**.
 
-1. Para um ambiente de produção mais seguro, recomendamos enfaticamente fornecer um certificado válido assinado por uma AC. Forneça um certificado SSL, pois os usuários só podem se conectar ao Windows PowerShell Web Access por meio de um site HTTPS. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-Manager) neste tópico para obter mais informações de como obter um certificado.
+1. Para um ambiente de produção mais seguro, recomendamos enfaticamente fornecer um certificado válido assinado por uma AC. Forneça um certificado SSL, pois os usuários só podem se conectar ao Windows PowerShell Web Access por meio de um site HTTPS. Consulte [Para configurar um certificado SSL no Gerenciador do IIS](#to-configure-an-ssl-certificate-in-iis-manager) neste tópico para obter mais informações sobre como obter um certificado.
 
 1. Clique em **OK** para fechar a caixa de diálogo **Adicionar Site**.
 

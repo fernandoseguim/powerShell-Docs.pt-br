@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: DSC,powershell,configuração,instalação
 title: Serviço de Pull de DSC
-ms.openlocfilehash: 64c22bc021666026ae58a4c4fb4e3d31b25bae5c
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 00e01e6c71226e6bde48b221e4e4fcf5f346feb4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429951"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056763"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Serviço de Pull de Desired State Configuration
 
@@ -72,7 +72,8 @@ Um script de exemplo é fornecido abaixo.
 
 Começando na versão 17090 do [Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), o SQL Server é uma opção compatível com o serviço de pull (Recurso do Windows *Serviço de DSC*). Essa é uma nova opção para dimensionar grandes ambientes de DSC que não foram migrados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started).
 
-> **Observação**: o suporte ao SQL Server não será adicionado às versões anteriores do WMF 5.1 (ou mais antigas) e só estará disponível nas versões do Windows Server maiores ou iguais à 17090.
+> [!NOTE]
+> O suporte ao SQL Server não será adicionado às versões anteriores do WMF 5.1 (ou mais antigas) e só estará disponível nas versões do Windows Server maiores ou iguais à 17090.
 
 Para configurar o servidor de recepção para usar o SQL Server, defina **SqlProvider** para `$true` e **SqlConnectionString** para uma cadeia de conexão válida do SQL Server. Para obter mais informações, confira [Cadeias de conexão SqlClient](/dotnet/framework/data/adonet/connection-string-syntax#sqlclient-connection-strings).
 Para obter um exemplo de configuração do SQL Server com **xDscWebService**, primeiro leia [Usando o recurso xDscWebService](#using-the-xdscwebservice-resource) e, em seguida, examine [Sample_xDscWebServiceRegistration_UseSQLProvider.ps1 no GitHub](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/master/Examples/Sample_xDscWebServiceRegistration_UseSQLProvider.ps1).
@@ -84,12 +85,12 @@ As etapas a seguir explicam como usar o recurso em uma configuração que config
 
 1. Chame o cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) para instalar o módulo **xPSDesiredStateConfiguration**.
    > [!NOTE]
-   > **Install-Module** está incluído na **PowerShellGet** módulo, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+   > **Install-Module** está incluído no módulo **PowerShellGet**, que está incluído no PowerShell 5.0. É possível baixar o módulo **PowerShellGet** para o PowerShell 3.0 e 4.0 em [Visualização de Módulos do PowerShell do PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 2. Obtenha um certificado SSL para o servidor de Pull de DSC de uma Autoridade de Certificação confiável, seja de dentro de sua organização ou de uma autoridade pública. O certificado recebido da autoridade geralmente está no formato PFX.
-3. Instalar o certificado no nó que se tornará o servidor de Pull de DSC no local padrão, que deve ser `CERT:\LocalMachine\My`.
+3. Instale o certificado no nó que se tornará o servidor de pull de DSC na localização padrão, que deve ser `CERT:\LocalMachine\My`.
    - Anote a impressão digital do certificado.
-4. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: ` [guid]::newGuid()` ou `New-Guid`. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, confira a seção Chave de registro abaixo.
-5. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta de exemplos de **xPSDesiredStateConfiguration** módulo como `Sample_xDscWebServiceRegistration.ps1`). Esse script configura o servidor de pull.
+4. Selecione um GUID a ser usado como a Chave de Registro. Para gerar um usando o PowerShell, insira o seguinte no prompt do PS e pressione enter: `[guid]::newGuid()` ou `New-Guid`. Essa chave será usada por nós de cliente como uma chave compartilhada para autenticação durante o registro. Para obter mais informações, confira a seção Chave de registro abaixo.
+5. No ISE do PowerShell, inicie (F5) o script de configuração a seguir (incluído na pasta Examples do módulo **xPSDesiredStateConfiguration** como `Sample_xDscWebServiceRegistration.ps1`). Esse script configura o servidor de pull.
 
     ```powershell
     configuration Sample_xDscWebServiceRegistration
@@ -166,7 +167,7 @@ Para permitir que os nós clientes sejam registrados no servidor para poderem us
 > [!NOTE]
 > Não há suporte para chaves de registro no PowerShell 4.0.
 
-Para configurar um nó para ser autenticado no servidor de recepção, a chave de registro deverá estar na metaconfiguração do nó de destino que será registrado nesse servidor de recepção. Observe que o **RegistrationKey** na metaconfiguração abaixo é removida depois que o computador de destino tiver sido registrado com êxito e o valor deve corresponder ao valor armazenado no `RegistrationKeys.txt` arquivo no servidor de pull (' 140a952b-b9d6-406b-b416-e0f759c9c0e4' neste exemplo). Sempre trate o valor da chave do registro com segurança, porque o conhecimento permite que qualquer computador de destino seja registrado com o servidor de pull.
+Para configurar um nó para ser autenticado no servidor de recepção, a chave de registro deverá estar na metaconfiguração do nó de destino que será registrado nesse servidor de recepção. Observe que a **RegistrationKey** na metaconfiguração abaixo é removida após o computador de destino ser registrado com sucesso e que o valor deve corresponder ao valor armazenado no arquivo `RegistrationKeys.txt` no servidor de pull ('140a952b-b9d6-406b-b416-e0f759c9c0e4' neste exemplo). Sempre trate o valor da chave do registro com segurança, porque o conhecimento permite que qualquer computador de destino seja registrado com o servidor de pull.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -210,7 +211,7 @@ Sample_MetaConfigurationToRegisterWithLessSecurePullServer -RegistrationKey $Reg
 ```
 
 > [!NOTE]
-> O **ReportServerWeb** seção permite que dados sejam enviados para o servidor de pull de relatórios.
+> A seção **ReportServerWeb** permite que dados de relatório sejam enviados ao servidor de pull.
 
 A falta da propriedade **ConfigurationID** no arquivo de metaconfiguração significa implicitamente que esse servidor pull dá suporte à versão V2 do protocolo de servidor pull, de modo que um registro inicial é necessário.
 Por outro lado, a presença de uma **ConfigurationID** significa que a versão V1 do protocolo do servidor de pull é usada e não há nenhum processamento de registro.
@@ -227,12 +228,12 @@ Esses arquivos precisam estar em um formato específico para que o servidor de r
 
 Cada módulo de recurso precisa ser compactado e nomeado de acordo com o seguinte padrão `{Module Name}_{Module Version}.zip`.
 
-Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo do correspondente a 3.1.2.0 seria nomeado `xWebAdministration_3.2.1.0.zip`.
+Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado `xWebAdministration_3.2.1.0.zip`.
 Cada versão de um módulo deve estar contido em um único arquivo zip.
 Como há apenas uma única versão de um recurso em cada arquivo zip, não há suporte para o formato do módulo adicionado ao WMF 5.0 com suporte para várias versões de módulo em um único diretório.
 Isso significa que antes de empacotar módulos de recursos DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios.
 O formato padrão de módulos contendo recursos DSC no WMF 5.0 é `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
-Antes do empacotamento para o servidor de recepção, remova os **{Module version}** pasta para que o caminho se torne `{Module Folder}\DscResources\{DSC Resource Folder}\`.
+Antes de empacotar o servidor de pull, remova a pasta **{versão do módulo}** para que o caminho se torne `{Module Folder}\DscResources\{DSC Resource Folder}\`.
 Com essa alteração, compacte a pasta conforme descrito acima e coloque esses arquivos zip na pasta **ModulePath**.
 
 Use `New-DscChecksum {module zip file}` para criar um arquivo de soma de verificação para o módulo recém-adicionado.

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Práticas recomendadas do servidor de pull
-ms.openlocfilehash: da67f8fd793878b097ffb260afad0fcf5c69bb04
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675928"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057698"
 ---
 # <a name="pull-server-best-practices"></a>Práticas recomendadas do servidor de pull
 
@@ -16,7 +16,7 @@ Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 > [!IMPORTANT]
 > O Servidor de Recepção (Recurso do Windows *Serviço DSC*) é um componente compatível com o Windows Server, no entanto, não há planos de oferecer novos recursos ou funcionalidades. É recomendável começar a fazer a transição dos clientes gerenciados para o [DSC de Automação do Azure](/azure/automation/automation-dsc-getting-started) (inclui recursos além do Servidor de Recepção no Windows Server) ou para uma das soluções da comunidade listadas [aqui](pullserver.md#community-solutions-for-pull-service).
 
-Resumo: Este documento destina-se a incluir processo e extensibilidade para ajudar os engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
+Resumo: este documento tem a finalidade de incluir o processo e a extensibilidade para ajudar engenheiros que estão se preparando para a solução. Os detalhes devem fornecer as práticas recomendadas, como identificadas por clientes e, em seguida, validadas pela equipe de produto para garantir que as recomendações sejam voltadas para o futuro e consideradas estáveis.
 
 | |Informações do documento|
 |:---|:---|
@@ -64,7 +64,7 @@ A implantação de um servidor de pull requer o recurso de Serviço DSC do Windo
 
 ### <a name="software-downloads"></a>Downloads de software
 
-Além de instalar o conteúdo mais recente do Windows Update, há dois downloads, uma prática recomendada para implantar um servidor de pull de DSC: A versão mais recente do Windows Management Framework e um módulo de DSC para automatizar o provisionamento do servidor de pull.
+Além de instalar o conteúdo mais recente do Windows Update, dois downloads são considerados melhores práticas ao implantar um servidor de pull de DSC: A versão mais recente do Windows Management Framework e um módulo de DSC para automatizar o provisionamento do servidor de pull.
 
 ### <a name="wmf"></a>WINDOWS MANAGEMENT FRAMEWORK
 
@@ -104,7 +104,7 @@ Você tem acesso aos arquivos de instalação do Windows Server que já contêm 
 
 As implantações de servidor de pull têm suporte em servidores físicos e virtuais. Os requisitos de dimensionamento para o servidor de pull estão alinhados com os requisitos do Windows Server 2012 R2.
 
-CPU: 1,4 memória de processador de GHz e 64 bits: 512 MB de espaço em disco Rede de 32 GB: Adaptador Gigabit Ethernet
+CPU: processador de 64 bits e 1,4 GHz Memória: 512 MB Espaço em disco: 32 GB Rede: Adaptador Gigabit Ethernet
 
 Tarefa de planejamento|
 ---|
@@ -260,7 +260,7 @@ O comando solicitará sua aprovação antes de baixar o módulo.
 
 O melhor método para implantar um servidor de pull de DSC é usar um script de configuração DSC. Este documento apresentará scripts que incluem as configurações básicas que configurariam apenas o serviço Web da DSC e as configurações avançadas, que configurariam um Windows Server de ponta a ponta, incluindo o serviço Web da DSC.
 
-Observação:  Atualmente, o `xPSDesiredStateConfiguation` módulo DSC exige que o servidor seja a localidade EN-US.
+Observação:  atualmente, o módulo `xPSDesiredStateConfiguration` de DSC exige que o servidor esteja na localidade EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configuração básica para Windows Server 2012
 

@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: DSC,powershell,configuração,instalação
 title: Configurando um servidor de pull de SMB para DSC
-ms.openlocfilehash: 722120369df9ff383a02c69111e0bacf2e2e76a5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675675"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057749"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurando um servidor de pull de SMB para DSC
 
@@ -59,7 +59,7 @@ Configuration SmbShare
         {
             Name = 'DscSmbShare'
             Path = 'C:\DscSmbShare'
-            FullAccess = 'admininstrator'
+            FullAccess = 'administrator'
             ReadAccess = 'myDomain\Contoso-Server$'
             FolderEnumerationMode = 'AccessBased'
             Ensure = 'Present'
@@ -69,14 +69,14 @@ Configuration SmbShare
 }
 ```
 
-A configuração cria o diretório `C:\DscSmbShare`, se ainda não existir e, em seguida, usa esse diretório como um compartilhamento de arquivos SMB. **FullAccess** deve ser fornecido a qualquer conta que precise gravar ou excluir do compartilhamento de arquivos. **ReadAccess** deve ser fornecido a quaisquer nós de cliente que obtêm as configurações e/ou recursos de DSC do compartilhamento.
+A configuração cria o diretório `C:\DscSmbShare` se ele ainda não existe e, em seguida, usa esse diretório como um compartilhamento de arquivo SMB. **FullAccess** deve ser concedido a qualquer conta que precisar gravar ou excluir do compartilhamento de arquivo. **ReadAccess** deve ser concedido a todos os nós de cliente que obtêm configurações e/ou recursos de DSC do compartilhamento.
 
 > [!NOTE]
-> DSC é executado como a conta do sistema por padrão, o próprio computador deve ter acesso ao compartilhamento.
+> A DSC é executada como a conta do sistema por padrão, de modo que o próprio computador deve ter acesso ao compartilhamento.
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Conceder acesso ao sistema de arquivos para o cliente de pull
 
-Conceder **ReadAccess** para um nó do cliente permite que esse nó acesse o compartilhamento SMB, mas não arquivos ou pastas dentro desse compartilhamento. Você precisa conceder explicitamente acesso de nós para a pasta de compartilhamento SMB e as subpastas de cliente. Podemos fazer isso com o DSC adicionando/usando o recurso **cNtfsPermissionEntry**, que está contido no módulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). A configuração a seguir adiciona um bloco **cNtfsPermissionEntry**, que concede acesso ReadAndExecute ao cliente de pull:
+Conceder **ReadAccess** para um nó do cliente permite que esse nó acesse o compartilhamento SMB, mas não arquivos ou pastas dentro desse compartilhamento. Você precisa conceder explicitamente aos nós do cliente acesso à pasta e às subpastas de compartilhamento SMB. Podemos fazer isso com o DSC adicionando/usando o recurso **cNtfsPermissionEntry**, que está contido no módulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). A configuração a seguir adiciona um bloco **cNtfsPermissionEntry**, que concede acesso ReadAndExecute ao cliente de pull:
 
 ```powershell
 Configuration DSCSMB
@@ -135,7 +135,7 @@ O arquivo MOF de configuração no servidor de pull deve ser nomeado como *Confi
 > [!NOTE]
 > Você deverá usar IDs de configuração se estiver usando um servidor de pull de SMB. Não há suporte para nomes de configuração para SMB.
 
-Cada módulo de recurso precisa ser compactado e nomeado de acordo com o seguinte padrão `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Não há suporte para versões separadas de um módulo em um arquivo zip. Antes de empacotar módulos de recursos de DSC para uso com o servidor de pull, você precisa fazer uma pequena alteração na estrutura de diretório.
+Cada módulo de recurso precisa ser compactado e nomeado de acordo com o seguinte padrão `{Module Name}_{Module Version}.zip`. Por exemplo, um módulo chamado xWebAdminstration com uma versão do módulo correspondente a 3.1.2.0 seria nomeado 'xWebAdministration_3.2.1.0.zip'. Cada versão de um módulo deve estar contido em um único arquivo zip. Não há suporte para versões separadas de um módulo em um arquivo zip. Antes de empacotar módulos de recursos de DSC para uso com o servidor de pull, você precisará fazer uma pequena alteração na estrutura de diretórios.
 
 O formato padrão de módulos contendo recursos DSC no WMF 5.0 é `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
 
@@ -207,7 +207,7 @@ $ConfigurationData = @{
 
 ## <a name="acknowledgements"></a>Agradecimentos
 
-Agradecimentos especiais a seguintes pessoas:
+Agradecimentos especiais às pessoas a seguir:
 
 - Mike F. Robbins, cujas postagens sobre o uso de SMB para DSC ajudaram a informar o conteúdo deste tópico. Seu blog está em [Mike F Robbins](http://mikefrobbins.com/).
 - Serge Nikalaichyk, que criou o módulo **cNtfsAccessControl**. A fonte para esse módulo está em [cNtfsAccessControl](https://github.com/SNikalaichyk/cNtfsAccessControl).

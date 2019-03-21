@@ -2,12 +2,12 @@
 title: Comunicação remota do PowerShell por SSH
 description: Comunicação remota no PowerShell Core usando SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: b5c6bd70841e270c2c128601612c07af9d9aa6e4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655286"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056525"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicação remota do PowerShell por SSH
 
@@ -30,7 +30,7 @@ Para criar uma sessão remota, especifique o computador de destino com o parâme
 
 ## <a name="general-setup-information"></a>Informações gerais de configuração
 
-O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para que possa fazer comunicação remota entre os computadores. OpenSSH para o Windows agora está disponível no Windows 10 build 1809 e Windows Server 2019. Para obter mais informações, consulte [OpenSSH para Windows](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Você também precisará instalar o PowerShell Core no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. Você também deve configurar autenticação baseada em chave ou habilitação por senha.
+O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.exe`) e o servidor (`sshd.exe`) para que possa fazer comunicação remota entre os computadores. Agora, o OpenSSH para Windows está disponível no build 1809 do Windows 10 e no Windows Server 2019. Para obter mais informações, confira [OpenSSH para Windows](/windows-server/administration/openssh/openssh_overview). No Linux, instale o SSH (incluindo sshd server) apropriado à sua plataforma. Você também precisará instalar o PowerShell Core no GitHub para obter o recurso de comunicação remota do SSH. O servidor SSH deve ser configurado para criar um subsistema de SSH para hospedar um processo do PowerShell no computador remoto. Você também deve configurar autenticação baseada em chave ou habilitação por senha.
 
 ## <a name="set-up-on-windows-machine"></a>Configuração no computador Windows
 
@@ -46,8 +46,8 @@ O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.e
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Instale o OpenSSH Win32 mais recente. Para obter instruções de instalação, consulte [instalação do OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
-3. Editar o `sshd_config` arquivo localizado em `%ProgramData%\ssh`.
+2. Instale o OpenSSH Win32 mais recente. Para obter instruções de instalação, confira [Instalação do OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
+3. Edite o arquivo `sshd_config` localizado em `$env:ProgramData\ssh`.
 
    - Verifique se a autenticação de senha está habilitada
 
@@ -62,7 +62,7 @@ O SSH deve ser instalado em todos os computadores. Instale o cliente SSH (`ssh.e
      > [!NOTE]
      > Há um bug no OpenSSH para Windows que impede que os espaços trabalhem em caminhos executáveis do subsistema. Saiba mais neste [tópico do GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
-     Uma solução é criar um symlink para o diretório de instalação do Powershell que não contenha espaços:
+     Uma solução é criar um symlink para o diretório de instalação do PowerShell que não contenha espaços:
 
      ```powershell
      mklink /D c:\pwsh "C:\Program Files\PowerShell\6"

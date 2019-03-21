@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Recurso Group de DSC
-ms.openlocfilehash: 9894150f6f749fc23efd4ce2b155b18788557d1d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 123e09b54a923af942a15f80fa7291c555b4235f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676299"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054961"
 ---
 # <a name="dsc-group-resource"></a>Recurso Group de DSC
 
@@ -36,7 +36,7 @@ Group [string] #ResourceName
 |  Propriedade  |  Descrição   |
 |---|---|
 | GroupName| O nome do grupo para o qual você deseja garantir um estado específico.|
-| Credential| As credenciais necessárias para acessar recursos remotos. **Observação**: essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro quando a configuração for executada no nó de destino.
+| Credential| As credenciais necessárias para acessar recursos remotos. **Observação**: Essa conta deve ter as permissões apropriadas do Active Directory para adicionar todas as contas não locais ao grupo; caso contrário, ocorrerá um erro quando a configuração for executada no nó de destino.
 | Descrição| A descrição do grupo.|
 | Ensure| Indica se o grupo existe. Defina essa propriedade como "Absent" para garantir que o grupo não exista. Ao defini-la como "Present" (o valor padrão), você garante que o grupo exista.|
 | Membros| Use essa propriedade para substituir a associação ao grupo pelos membros especificados. O valor dessa propriedade é uma matriz de cadeias de caracteres do formulário *Domínio*\\*NomeDoUsuário*. Se você definir essa propriedade em uma configuração, não use a propriedade **MembersToExclude** ou **MembersToInclude**. Isso gerará um erro.|
@@ -95,7 +95,7 @@ Group AddADUserToLocalAdminGroup {
 O exemplo a seguir mostra como verificar se um grupo local, TigerTeamAdmins, no servidor TigerTeamSource.Contoso.Com, não contém uma conta de domínio específico, Contoso\JerryG.
 
 ```powershell
-Configuration SecureTigerTeamSrouce {
+Configuration SecureTigerTeamSource {
   Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
   Node TigerTeamSource.Contoso.Com {

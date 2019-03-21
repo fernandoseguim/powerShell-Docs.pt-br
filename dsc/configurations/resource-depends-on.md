@@ -2,24 +2,24 @@
 ms.date: 12/12/2018
 keywords: DSC,powershell,configuração,instalação
 title: Dependências de recursos usando DependsOn
-ms.openlocfilehash: 0d060f7d99bd261b0766028b245d4d32a5e1c349
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400189"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055692"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Dependências de recursos usando DependsOn
 
-Quando você escreve [configurações](configurations.md), você adiciona [blocos de recurso](../resources/resources.md) configurar aspectos de um nó de destino. Enquanto você continua a adicionar blocos de recurso, suas configurações podem crescer muito grandes e difíceis de gerenciar. Um tal desafio é a ordem aplicada dos seus blocos de recurso. Normalmente os recursos são aplicados na ordem em que eles são definidos dentro da configuração. À medida que sua configuração cresce maiores e mais complexos, você pode usar o `DependsOn` chave para alterar a ordem aplicada de seus recursos, especificando que um recurso depende de outro recurso.
+Quando escreve [Configurações](configurations.md), você adiciona [Blocos de recurso](../resources/resources.md) para configurar aspectos de um nó de destino. Conforme você continua adicionando blocos de recurso, suas configurações podem se tornar muito grandes e difíceis de gerenciar. Um dos desafios é a ordem aplicada dos blocos de recurso. Normalmente, os recursos são aplicados na ordem em que são definidos dentro da configuração. Conforme sua configuração se torna maior e mais complexa, você pode usar a chave `DependsOn` para alterar a ordem aplicada de seus recursos especificando que um recurso depende de outro.
 
-O `DependsOn` chave pode ser usada em qualquer bloco de recurso. Ela é definida com o mesmo mecanismo de chave/valor como outras chaves de recurso. O `DependsOn` chave espera uma matriz de cadeias de caracteres com a sintaxe a seguir.
+A chave `DependsOn` pode ser usada em qualquer bloco de recurso. Ela é definida com o mesmo mecanismo de chave/valor que outras chaves de recurso. A chave `DependsOn` espera uma matriz de cadeias de caracteres com a sintaxe a seguir.
 
 ```
-DependsOn = '[<Resource Type>]<Resoure Name>', '[<Resource Type>]<Resource Name'
+DependsOn = '[<Resource Type>]<Resource Name>', '[<Resource Type>]<Resource Name'
 ```
 
-O exemplo a seguir configura uma regra de firewall depois de habilitar e configurar o perfil público.
+O exemplo a seguir configura uma regra de firewall após habilitar e configurar o perfil público.
 
 ```powershell
 # Install the NetworkingDSC module to configure firewall rules and profiles.
@@ -60,7 +60,7 @@ Configuration ConfigureFirewall
 ConfigureFirewall -OutputPath C:\Temp\
 ```
 
-Quando você aplica a configuração, o perfil do firewall sempre será configurado primeiro, independentemente de qual ordem os blocos de recurso são definidos. Se você aplicar a configuração, certifique-se de observar os nós de destino existente de configuração para que você pode reverter se desejado.
+Quando você aplica a configuração, o perfil do firewall sempre é configurado primeiro, independentemente da ordem em que os blocos de recurso são definidos. Se você aplicar a configuração, certifique-se de tomar nota da configuração existente dos nós de destino para poder revertê-la se desejar.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -Path C:\Temp\ -ComputerName localhost
@@ -118,13 +118,13 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 15.385 seconds
 ```
 
-Isso também garante que, se o **FirewallProfile** recurso falha por algum motivo, o **Firewall** bloco não será executado mesmo que ele foi definido pela primeira vez. O `DependsOn` chave permite mais flexibilidade em blocos de recurso de agrupamento e garantindo que as dependências são resolvidas antes de ser executado um recurso.
+Isso também garante que, se o recurso **FirewallProfile** falhar por algum motivo, o bloco **Firewall** não será executado mesmo que tenha sido definido primeiro. A chave `DependsOn` possibilita ter mais flexibilidade ao agrupar blocos de recurso e garantir que as dependências sejam resolvidas antes da execução de um recurso.
 
-Em configurações mais avançadas, você também pode usar [entre o nó dependência](crossNodeDependencies.md) para permitir que o controle ainda mais granular (por exemplo, garantindo um controlador de domínio é configurado antes de ingressar um cliente no domínio).
+Em configurações mais avançadas, você também pode usar a [Dependência entre nós](crossNodeDependencies.md) para permitir um controle ainda mais granular (por exemplo, para garantir que um controlador de domínio seja configurado antes de ingressar um cliente no domínio).
 
 ## <a name="cleaning-up"></a>Limpeza
 
-Se você aplicou a configuração acima, você pode reverter chaves para desfazer todas as alterações. No exemplo acima, definindo o **Enabled** chave como false desabilitará a regra de firewall e o perfil. Você deve modificar o exemplo conforme necessário para corresponder ao estado configurado do anterior do nó de destino.
+Se tiver aplicado a configuração acima, você poderá reverter as chaves para desfazer todas as alterações. No exemplo acima, definir a chave **Enabled** como false desabilitará o perfil e a regra de firewall. Modifique o exemplo conforme necessário para corresponder ao estado configurado anterior do nó de destino.
 
 ```powershell
         Firewall Firewall
@@ -143,4 +143,4 @@ Se você aplicou a configuração acima, você pode reverter chaves para desfaze
 
 ## <a name="see-also"></a>Consulte também
 
-- [Usar dependências de nó cruzado](./crossNodeDependencies.md)
+- [Usar dependências entre nós](./crossNodeDependencies.md)

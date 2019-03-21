@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
-ms.openlocfilehash: dcba56d9f7edf0c08a3b9e3f2326b39a6b3be3fa
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655338"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58058208"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valores de manifesto de pacotes que afetam a interface do usuário da Galeria do PowerShell
 
@@ -40,7 +40,7 @@ A tabela a seguir mostra os elementos da interface do usuário da página do pac
 | **Recursos de função** | São relacionados quando o módulo publicado na Galeria do PowerShell contém um ou mais arquivos de recurso de função (.psrc), que são usados pelo JEA. Confira a documentação do JEA para saber mais sobre [recursos de função](/powershell/jea/role-capabilities). | Sim | Não |
 | **Edições do PowerShell** | São especificadas no manifesto de módulo ou de script. No caso dos módulos projetados para uso com o PowerShell 5.0 ou posterior, elas são controladas com marcas. Para o Desktop, use a marca PSEdition_Desktop. No caso do núcleo, use a marca PSEdition_Core. Para os módulos que serão usados apenas no PowerShell 5.1 ou superior, há uma chave CompatiblePSEditions no manifesto principal. Para obter mais detalhes, veja o recurso PS Edition na [documentação do PowerShell Get](module-psedition-support.md). | Sim | Sim |
 | **Dependências** | As dependências representam os módulos na Galeria do PowerShell. Elas são declaradas no módulo como RequiredModules ou no manifesto de script como #Requires –Module (nome). | Sim | Sim |
-| **Versão mínima do Powershell** | Pode ser especificada em um manifesto de módulo como PowerShellVersion | Sim | Não |
+| **Versão mínima do PowerShell** | Pode ser especificada em um manifesto de módulo como PowerShellVersion | Sim | Não |
 | **Histórico de versão** | O histórico de versão representa as atualizações feitas em um módulo na Galeria do PowerShell. Quando a versão de um pacote é ocultada com o recurso Excluir, ela não é exibida no histórico de versão, exceto para os proprietários do pacote. | Não | Não |
 | **Site do Projeto** | O site do projeto é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando um ProjectURI. No manifesto de script, ele é controlado pela especificação .PROJECTURI. | Sim | Sim |
 | **Licença** | O link da licença é fornecido para os módulos na seção Privatedata\PSData do manifesto de módulo, especificando uma propriedade LicenseURI. No manifesto de script, ele é controlado pela especificação .LICENSEURI. É importante observar que, quando uma licença não é fornecida por meio de uma propriedade LicenseURI ou dentro de um módulo, os termos de uso da Galeria do PowerShell especificam os termos de uso do pacote. Confira os termos de uso para saber mais. | Sim | Sim |

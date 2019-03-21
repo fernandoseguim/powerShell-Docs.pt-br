@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Recursos de Função JEA
-ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522932"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055046"
 ---
 # <a name="jea-role-capabilities"></a>Recursos de Função JEA
 
@@ -58,7 +58,7 @@ A documentação de ajuda do PowerShell contém vários exemplos de como você p
 
 ### <a name="allowing-powershell-cmdlets-and-functions"></a>Permitir cmdlets e funções do PowerShell
 
-Para autorizar usuários a executar funções ou cmdlets do PowerShell, adicione o nome do cmdlet ou da função nos campos VisbibleCmdlets ou VisibleFunctions.
+Para autorizar usuários a executar funções ou cmdlets do PowerShell, adicione o nome do cmdlet ou da função nos campos VisibleCmdlets ou VisibleFunctions.
 Se você não tiver certeza se um comando é um cmdlet ou uma função, você poderá executar `Get-Command <name>` e verificar a propriedade "CommandType" na saída.
 
 ```powershell
@@ -101,7 +101,6 @@ Exemplo                                                                         
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}`  | Permite que o usuário execute `My-Func` com o parâmetro `Param1`. Somente "Value1" e "Value2" podem ser fornecidos ao parâmetro.
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`     | Permite que o usuário execute `My-Func` com o parâmetro `Param1`. Qualquer valor começando com "contoso" pode ser fornecido ao parâmetro.
 
-
 > [!WARNING]
 > Como práticas recomendadas de segurança, não é recomendável usar curingas ao definir cmdlets ou funções visíveis.
 > Em vez disso, você deve listar explicitamente cada comando confiável para garantir que outros comandos que compartilham o mesmo esquema de nomenclatura não sejam acidentalmente autorizados.
@@ -129,7 +128,7 @@ Uma maneira de verificar é usar `net share`.
 No entanto, permitir o net.exe é muito perigoso, pois o administrador poderia facilmente usar o comando para obter privilégios de administrador com `net group Administrators unprivilegedjeauser /add`.
 Uma abordagem melhor é permitir o [Get-SmbShare](https://technet.microsoft.com/library/jj635704.aspx) que alcança o mesmo resultado, mas tem um escopo muito mais limitado.
 
-Ao disponibilizar comandos externos aos usuários em uma sessão JEA, sempre especifique o caminho completo para o executável para garantir que um programa nomeado da mesma forma (e potencialmente mal-intencionado) colocado em outro lugar no sistema não seja executado em vez disso.
+Ao disponibilizar comandos externos para os usuários em uma sessão de JEA, sempre especifique o caminho completo para o executável para garantir que um programa nomeado de forma semelhante (e potencialmente mal intencionado) colocado em outro lugar no sistema não seja executado em vez dele.
 
 ### <a name="allowing-access-to-powershell-providers"></a>Permitindo acesso aos provedores do PowerShell
 
@@ -171,7 +170,6 @@ FunctionDefinitions = @{
 > [!IMPORTANT]
 > Não se esqueça de adicionar o nome de suas funções personalizadas no campo **VisibleFunctions** para que elas possam ser executadas pelos usuários JEA.
 
-
 O corpo (bloco de script) de funções personalizadas é executado no modo de idioma padrão do sistema e não está sujeito a restrições de linguagem do JEA.
 Isso significa que as funções podem acessar o sistema de arquivos e o Registro e executar comandos que não foram tornados visíveis no arquivo de capacidade de função.
 Tome cuidado para evitar a permissão de execução de códigos arbitrários ao usar parâmetros e evitar redirecionar a entrada do usuário diretamente em cmdlets como o `Invoke-Expression`.
@@ -211,14 +209,12 @@ Consulte [Noções básicas sobre um Módulo do PowerShell](https://msdn.microso
 
 ## <a name="updating-role-capabilities"></a>Atualizando recursos de função
 
-
 Você pode atualizar um arquivo de capacidade de função a qualquer momento, bastando salvar as alterações no arquivo de capacidade de função.
 Qualquer nova sessão JEA iniciada depois que a capacidade de função foi atualizado refletirá os recursos revisados.
 
 É por isso que é tão importante controlar o acesso à pasta de recursos de função.
 Apenas administradores altamente confiáveis devem ser capazes de alterar os arquivos de capacidade de função.
 Se um usuário não confiável puder alterar os arquivos de capacidade de função, poderá facilmente conceder a si próprio o acesso aos cmdlets que permitem que ele eleve seus privilégios.
-
 
 Para os administradores que desejam bloquear o acesso às capacidades de função, verifique se a Sistema Local tem acesso de leitura aos arquivos de capacidade de função e aos módulos nesses arquivos.
 
@@ -256,16 +252,14 @@ $roleB = @{
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
 }
 
-# Resulting permisisons for a user who belongs to both role A and B
-# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# Resulting permissions for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored because of rule #4
 # - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
 $mergedAandB = @{
     VisibleCmdlets = 'Get-Service',
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
 }
 ```
-
-
 
 **VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
 

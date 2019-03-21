@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655439"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795684"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
 
@@ -65,6 +65,10 @@ Devido ao uso de APIs sem suporte, removemos `Microsoft.PowerShell.LocalAccounts
 ### <a name="-counter-cmdlets"></a>Os cmdlets do `*-Counter`
 
 Devido ao uso de APIs sem suporte, removemos `*-Counter` do PowerShell Core até encontrarmos uma solução melhor.
+
+### <a name="-eventlog-cmdlets"></a>Os cmdlets do `*-EventLog`
+
+Devido ao uso de APIs sem suporte, `*-EventLog` foi removido do PowerShell Core. até encontrarmos uma solução melhor. `Get-WinEvent` e `Create-WinEvent` estão disponíveis para obter e criar eventos no Windows.
 
 ## <a name="enginelanguage-changes"></a>Alterações de mecanismo/linguagem
 
@@ -179,9 +183,9 @@ Altera os códigos de saída de `pwsh.exe` para alinhar com as convenções Unix
 
 Devido à falta de suporte às APIs, o módulo `LocalAccounts` e os cmdlets `Counter` no módulo `Diagnostics` foram removidos até encontrarmos uma solução melhor.
 
-### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>A execução de script do powershell com o parâmetro bool não funciona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
+### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>A execução de script do PowerShell com o parâmetro bool não funciona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Antes, usar o powershell.exe (agora `pwsh.exe`) para executar um script do PowerShell usando `-File` não fornecia uma maneira de passar $true/$false como valores de parâmetro. Adicionamos o suporte para $true/$false como valores analisados para parâmetros. Também há suporte para valores de opção, pois a sintaxe documentada no momento não funciona.
+Antes, usar **powershell.exe** (agora **pwsh.exe**) para executar um script do PowerShell usando `-File` não fornecia uma maneira de passar `$true`/`$false` como valores de parâmetro. Adicionamos suporte para `$true`/`$false` como valores analisados para parâmetros. Também há suporte para valores de opção, pois a sintaxe documentada no momento não funciona.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Remoção da propriedade `ClrVersion` de `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -193,7 +197,7 @@ Habilitação geral do uso do PowerShell em plataformas diferentes do Windows. I
 
 ### <a name="implement-unicode-escape-parsing-3958httpsgithubcompowershellpowershellissues3958"></a>Implementação da análise de escape de Unicode [#3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
-`` `u#### `` ou `` `u{####} `` é convertido no caractere Unicode correspondente. Para gerar um `` `u `` literal, escape o acento grave: ``` ``u ```.
+`` `u####`` ou `` `u{####}`` é convertido no caractere Unicode correspondente. Para gerar um `` `u`` literal, escape o acento grave: ``` ``u```.
 
 ### <a name="change-new-modulemanifest-encoding-to-utf8nobom-on-non-windows-platforms-3940httpsgithubcompowershellpowershellissues3940"></a>Altere a codificação `New-ModuleManifest` para `UTF8NoBOM` em plataformas que não são o Windows [#3940](https://github.com/PowerShell/PowerShell/issues/3940)
 
@@ -271,4 +275,4 @@ A API do .NET subjacente dos cmdlets Web foi alterada para `System.Net.Http.Http
 - As configurações de `System.Net.ServicePointManager` não são mais cumpridas.
 - No momento, não há uma autenticação baseada em certificado disponível no macOS.
 - O uso de `-Credential` sobre uma URI `http://` resultará em erro. Use um URI `https://` ou forneça o parâmetro `-AllowUnencryptedAuthentication` para suprimir o erro.
-- `-MaximumRedirection` Agora produz um erro de encerramento quando as tentativas de redirecionamento excederem o limite fornecido em vez de retornar os resultados do último redirecionamento.
+- Agora, `-MaximumRedirection` produz um erro de encerramento quando as tentativas de redirecionamento excedem o limite fornecido em vez de retornar os resultados do último redirecionamento.

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Registrando Configurações de JEA
-ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 6fa0ce434c8e70eb718545e99417bfe034cda6bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002899"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059432"
 ---
 # <a name="registering-jea-configurations"></a>Registrando Configurações de JEA
 

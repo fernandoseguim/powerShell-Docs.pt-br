@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,powershell,configuração,instalação
 title: Usando DSC no Nano Server
-ms.openlocfilehash: fd81fe56d16100f45d9ee2dfd8fdc303c2a6c17a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: ac5eaf3885788f40e12e4f0a0f19025668280f7e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400207"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054655"
 ---
 # <a name="using-dsc-on-nano-server"></a>Usando DSC no Nano Server
 
@@ -38,7 +38,7 @@ Nos modos push e pull
 - [Stop-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Stop-DscConfiguration)
 - [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration)
 - [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
-- [Publish-DscConfiguraiton](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
+- [Publish-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration)
 - [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration)
 - [Restore-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Restore-DscConfiguration)
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
@@ -50,7 +50,7 @@ Nos modos push e pull
 
 - Compilação de configurações (confira [Configurações DSC](../configurations/configurations.md))
 
-  **Edição #1629** Criptografia de senha (veja [protegendo o arquivo MOF](../pull-server/secureMOF.md)) durante a configuração de compilação não funciona.
+  **Problema:** a criptografia de senha (confira [Protegendo o arquivo MOF](../pull-server/secureMOF.md)) durante a compilação da configuração não funciona.
 
 - Compilação de metaconfigurações (confira [Configurando o Gerenciador de Configurações Local](../managing-nodes/metaConfig.md))
 
@@ -60,7 +60,7 @@ Nos modos push e pull
 
 - Depuração dos recursos de DSC (confira [Depurando os recursos de DSC](../troubleshooting/debugResource.md))
 
-  **Edição #1629** Não funcionará se um recurso estiver usando PsDscRunAsCredential (Confira [executar DSC com credenciais de usuário](../configurations/runAsUser.md))
+  **Problema:** não funciona se um recurso estiver usando PsDscRunAsCredential (confira [Executar DSC com credenciais de usuário](../configurations/runAsUser.md))
 
 - [Especificando dependências de nó cruzado](../configurations/crossNodeDependencies.md)
 
@@ -97,12 +97,12 @@ Nos modos push e pull
 - **Grupo**
 - **GroupSet**
 
-  **Edição #1629** Recursos acima falharão se a instância específica é chamada duas vezes (executando a mesma configuração duas vezes)
+  **Problema:** os recursos acima falharão se a instância específica for chamada duas vezes (executando a mesma configuração duas vezes)
 
 - **Service**
 - **ServiceSet**
 
-  **Edição #1629** Funciona somente para iniciar/parar serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
+  **Problema:** funciona apenas para iniciar/interromper o serviço (status). Falha, se alguém tentar alterar outros atributos de serviço como startuptype, credenciais, descrição etc. O erro emitido é semelhante a:
 
   *Não é possível localizar o tipo [management.managementobject]: verifique se o assembly que contém esse tipo é carregado.*
 

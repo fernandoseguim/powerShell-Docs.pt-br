@@ -1,32 +1,32 @@
 ---
 ms.date: 12/12/2018
-keywords: DSC, powershell, configuração, serviço, a instalação
+keywords: DSC,powershell,configuração,serviço,instalação
 title: Escrever, compilar e aplicar uma configuração
-ms.openlocfilehash: fa4d98fd12202439ba7025fd8af3fa398653ca05
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: c884af9d92ac375457d6eb75d815ae9a9159e273
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675605"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795412"
 ---
 > Aplica-se a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 # <a name="write-compile-and-apply-a-configuration"></a>Escrever, compilar e aplicar uma configuração
 
 Este exercício oferece instruções de como criar e aplicar uma configuração para a Configuração Estado Desejado (DSC) do início ao fim.
-O exemplo a seguir, você aprenderá como escrever e aplicar uma configuração muito simple. A configuração garantirá que existe um arquivo de "HelloWorld.txt" em seu computador local. Se você excluir o arquivo, DSC irá recriá-lo na próxima vez que ele atualiza.
+No exemplo a seguir, você aprenderá como escrever e aplicar uma configuração muito simples. A configuração garantirá que um arquivo "HelloWorld.txt" existe em seu computador local. Se você excluir o arquivo, a DSC o criará novamente em sua próxima atualização.
 
-Para uma visão geral do DSC What ' s e como ele funciona, consulte [Desired State Configuration visão geral para desenvolvedores](../overview/overview.md).
+Para ter uma visão geral sobre o que é a DSC e como ela funciona, confira [Visão geral da Desired State Configuration para desenvolvedores](../overview/overview.md).
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar este exemplo, você precisará de um computador que executa o PowerShell 4.0 ou posterior.
+Para executar este exemplo, você precisará de um computador com o PowerShell 4.0 ou posterior.
 
 ## <a name="write-the-configuration"></a>Gravar a configuração
 
 Uma [Configuração](configurations.md) DSC é uma função especial do PowerShell que define como você deseja configurar um ou mais computadores de destino (nós).
 
-No ISE do PowerShell, ou outro editor do PowerShell, digite o seguinte:
+No ISE do PowerShell ou em outro editor do PowerShell, digite o seguinte:
 
 ```powershell
 Configuration HelloWorld {
@@ -49,18 +49,20 @@ Configuration HelloWorld {
 
 Salve o arquivo como "HelloWorld.ps1".
 
-Definir uma configuração é como a definição de uma função. O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `localhost`.
+Definir uma configuração é semelhante a definir uma função. O bloco **Nó** especifica o nó de destino a ser configurado, neste caso `localhost`.
 
-A configuração chama um [recursos](../resources/resources.md), o `File` recursos. Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.
+A configuração chama um [recurso](../resources/resources.md), o recurso `File`. Os recursos fazem o trabalho de garantir que o nó de destino está no estado definido pela configuração.
 
 ## <a name="compile-the-configuration"></a>Compilar a configuração
 
 Para que uma configuração DSC seja aplicada a um nó, ela deve primeiro ser compilada em um arquivo MOF.
-Executando a configuração, como uma função, compilar um arquivo ". MOF" para cada nó definido pelo `Node` bloco.
-Para executar a configuração, você precisa *origem dot* seu script de "HelloWorld.ps1" no escopo atual.
-Para obter mais informações, consulte [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
+Executar a configuração, assim como ocorre com uma função, compila um arquivo ".mof" para cada nó definido pelo bloco `Node`.
+Para executar a configuração, você precisa aplicar *dot source* ao seu script de "HelloWorld.ps1" no escopo atual.
+Para obter mais informações, confira [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
 
-*Origem de ponto* seu script de "HelloWorld.ps1" digitando o caminho onde você armazenou, após o `. ` (ponto, espaço). Você pode em seguida, execute a configuração chamando-o como uma função.
+<!-- markdownlint-disable MD038 -->
+*Aplique dot source* ao seu script de "HelloWorld.ps1" digitando o caminho em que você o armazenou, após o `. ` (ponto, espaço). Em seguida, você pode executar a configuração chamando-a como uma função.
+<!-- markdownlint-enable MD038 -->
 
 ```powershell
 . C:\Scripts\WebsiteTest.ps1
@@ -82,13 +84,13 @@ Mode                LastWriteTime         Length Name
 
 Agora que você tem o MOF compilado, é possível aplicar a configuração ao nó de destino (neste caso, o computador local) chamando o cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration).
 
-O `Start-DscConfiguration` cmdlet informa o [Gerenciador de configurações Local (LCM)](../managing-nodes/metaConfig.md), o mecanismo de DSC para aplicar a configuração.
+O cmdlet `Start-DscConfiguration` instrui o [LCM (Gerenciador de Configurações Local)](../managing-nodes/metaConfig.md), que é o mecanismo da DSC, a aplicar a configuração.
 O LCM realiza o trabalho de chamar os recursos de DSC para aplicar a configuração.
 
-Use o código a seguir para executar o `Start-DSCConfiguration` cmdlet. Especifique o caminho de diretório em que "localhost.mof" é armazenado para o `-Path` parâmetro. O `Start-DSCConfiguration` cmdlet examinará o diretório especificado para qualquer "\<computername\>. MOF" arquivos. O `Start-DSCConfiguration` cmdlet tenta aplicar a cada arquivo ". MOF" encontrado para o nome do computador especificado pelo nome do arquivo ("localhost", "server01", "controlador de domínio-02", etc.).
+Use o código a seguir para executar o cmdlet `Start-DSCConfiguration`. Especifique o caminho do diretório em que seu "localhost.mof" está armazenado para o parâmetro `-Path`. O cmdlet `Start-DSCConfiguration` examina o diretório especificado para ver se há arquivos "\<nome de computador\>.mof". O cmdlet `Start-DSCConfiguration` tenta aplicar a cada arquivo ".mof" encontrado ao nome de computador especificado pelo nome do arquivo ("localhost", "server01", "dc-02", etc.).
 
 > [!NOTE]
-> Se o `-Wait` parâmetro não for especificado, `Start-DSCConfiguration` cria um trabalho em segundo plano para executar a operação. Especificando o `-Verbose` parâmetro permite que você assista a **detalhado** saída da operação. `-Wait`, e `-Verbose` são ambos os parâmetros opcionais.
+> Se o parâmetro `-Wait` não for especificado, `Start-DSCConfiguration` criará um trabalho em segundo plano para executar a operação. Especificar o parâmetro `-Verbose` permite que você inspecione a saída **Detalhada** da operação. `-Wait` e `-Verbose` são parâmetros opcionais.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
@@ -96,11 +98,11 @@ Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 
 ## <a name="test-the-configuration"></a>Testar a configuração
 
-Uma vez o `Start-DSCConfiguration` cmdlet estiver concluída, você deverá ver um arquivo de "HelloWorld.txt" no local especificado por você. Você pode verificar o conteúdo com o [Get-Content](/powershell/module/microsoft.powershell.management/get-content) cmdlet.
+Quando o cmdlet `Start-DSCConfiguration` estiver concluído, você deverá ver um arquivo "HelloWorld.txt" na localização especificada. Você pode verificar o conteúdo com o cmdlet [Get-Content](/powershell/module/microsoft.powershell.management/get-content).
 
 Você também pode *testar* o status atual usando [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration).
 
-A saída deve ser "True" se o nó é atualmente compatível com a configuração aplicada.
+A saída deverá ser "True" se o nó for estiver em conformidade com a configuração aplicada.
 
 ```powershell
 Test-DSCConfiguration
@@ -118,9 +120,9 @@ Get-Content -Path C:\Temp\HelloWorld.txt
 Hello World from DSC!
 ```
 
-## <a name="re-applying-the-configuration"></a>Novamente, aplicando a configuração
+## <a name="re-applying-the-configuration"></a>Reaplicando a configuração
 
-Para ver sua configuração serão aplicadas novamente, você pode remover o arquivo de texto criado por sua configuração. O uso de `Start-DSCConfiguration` cmdlet com o `-UseExisting` parâmetro. O `-UseExisting` parâmetro instrui `Start-DSCConfiguration` para reaplicar o arquivo "Current", que representa mais recentemente com êxito aplicado configuração.
+Para ver sua configuração ser aplicada novamente, você pode remover o arquivo de texto criado por ela. Em seguida, use o cmdlet `Start-DSCConfiguration` com o parâmetro `-UseExisting`. O parâmetro `-UseExisting` instrui `Start-DSCConfiguration` a reaplicar o arquivo "current.mof", que representa a configuração aplicada com sucesso mais recentemente.
 
 ```powershell
 Remove-Item -Path C:\Temp\HelloWorld.txt

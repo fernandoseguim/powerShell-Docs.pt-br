@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: powershell, cmdlet
 title: Usando nomes familiares de comando
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: c5665f64fd832eb9c807f413a8e879f63db7f8c6
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: b61d647d882d4b2f7ea423a48319e3c104ce96c7
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400591"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795667"
 ---
 # <a name="using-familiar-command-names"></a>Usando nomes de comando familiares
 
@@ -45,7 +45,7 @@ Alias           cls -> Clear-Host
 
 ## <a name="interpreting-standard-aliases"></a>Interpretar aliases padrão
 
-Os aliases que descrevemos antes foram projetados para compatibilidade de nome com outros shells de comando.
+Os aliases descritos anteriormente foram criados de maneira a terem compatibilidade de nomenclatura com outros shells de comando.
 A maioria dos aliases criados no PowerShell é projetada para manter a brevidade. Os nomes mais curtos são mais fáceis de digitar, mas são difíceis de ler se você não souber a que se referem.
 
 Os aliases do PowerShell tentam equilibrar a clareza e a brevidade. O PowerShell usa um conjunto padrão de aliases para substantivos e verbos comum.
@@ -65,7 +65,7 @@ Esses aliases são compreensíveis quando você conhece os nomes abreviados.
 
 | Nome do cmdlet    | Alias |
 |----------------|-------|
-| `Get-Item `    | gi    |
+| `Get-Item`     | gi    |
 | `Set-Item`     | si    |
 | `Get-Location` | gl    |
 | `Set-Location` | sl    |

@@ -4,21 +4,22 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: jianyunt, quoctruong
 title: Melhorias ao Gerenciamento de Pacotes do WMF 5.1
-ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 30ef59ed9dc0d56636d85cc6e53523a9a73963a4
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676403"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794273"
 ---
-# <a name="improvements-to-package-management-in-wmf-51"></a>Melhorias no gerenciamento de pacote no WMF 5.1#
+# <a name="improvements-to-package-management-in-wmf-51"></a>Melhorias ao Gerenciamento de Pacotes do WMF 5.1
 
-## <a name="improvements-in-packagemanagement"></a>Melhorias ao PackageManagement ##
+## <a name="improvements-in-packagemanagement"></a>Melhorias ao PackageManagement
+
 Veja a seguir as correções feitas no WMF 5.1:
 
 ### <a name="version-alias"></a>Alias de versão
 
-**Cenário**: se você tiver as versões 1.0 e 2.0 de um pacote, P1, instaladas em seu sistema e desejar desinstalar a versão 1.0, você executará `Uninstall-Package -Name P1 -Version 1.0` e esperará a versão 1.0 ser desinstalada após a execução do cmdlet. No entanto o resultado é que a versão 2.0 é desinstalada.
+**Cenário**: se tiver as versões 1.0 e 2.0 de um pacote, P1, instaladas em seu sistema e desejar desinstalar a versão 1.0, você executará `Uninstall-Package -Name P1 -Version 1.0` e esperará a versão 1.0 ser desinstalada após a execução do cmdlet. No entanto o resultado é que a versão 2.0 é desinstalada.
 
 Isso ocorre porque o parâmetro `-Version` é um alias do parâmetro `-MinimumVersion`. Quando PackageManagement está procurando um pacote qualificado com a versão mínima de 1.0, ele retorna a versão mais recente. Esse comportamento é esperado em casos normais, pois encontrar a versão mais recente é geralmente o resultado desejado. No entanto, ele não deve se aplicar ao caso de `Uninstall-Package`.
 
@@ -26,22 +27,22 @@ Isso ocorre porque o parâmetro `-Version` é um alias do parâmetro `-MinimumVe
 
 ### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>Vários prompts para inicializar o provedor do NuGet
 
-**Cenário**: ao executar `Find-Module` ou `Install-Module` ou outros cmdlets PackageManagement em seu computador pela primeira vez, o PackageManagement tenta inicializar o provedor de NuGet. Isso ocorre porque o provedor PowerShellGet também usa o provedor do NuGet para baixar os módulos do PowerShell. Depois, o PackageManagement solicita permissão do usuário para instalar o provedor de NuGet. Após o usuário selecionar "sim" para a inicialização, a versão mais recente do provedor do NuGet será instalada.
+**Cenário**: ao executar `Find-Module` ou `Install-Module` ou outros cmdlets PackageManagement em seu computador pela primeira vez, PackageManagement tenta inicializar o provedor de NuGet. Isso ocorre porque o provedor PowerShellGet também usa o provedor do NuGet para baixar os módulos do PowerShell. Depois, o PackageManagement solicita permissão do usuário para instalar o provedor de NuGet. Após o usuário selecionar "sim" para a inicialização, a versão mais recente do provedor do NuGet será instalada.
 
 No entanto, em alguns casos, quando há uma versão antiga do provedor de NuGet instalada em seu computador, a versão mais antiga do NuGet às vezes é carregada primeiro na sessão do PowerShell (ou seja, a condição de corrida no PackageManagement). No entanto, o PowerShellGet requer a versão mais recente do provedor de NuGet para funcionar, portanto, o PowerShellGet solicita que o PackageManagement inicialize o provedor de NuGet novamente. Isso resulta em vários prompts para inicializar o provedor do NuGet.
 
-**Solução**: No WMF 5.1, o PackageManagement carrega a versão mais recente do provedor do NuGet para evitar vários prompts para inicializar o provedor do NuGet.
+**Solução**: no WMF 5.1, PackageManagement carrega a versão mais recente do provedor de NuGet para evitar vários prompts para inicialização do provedor de NuGet.
 
 Você também pode utilizar uma solução alternativa para esse problema excluindo manualmente a versão antiga do provedor do NuGet (NuGet Anycpu.exe), caso ele exista, de $env:ProgramFiles\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
 
 ### <a name="support-for-packagemanagement-on-computers-with-intranet-access-only"></a>Suporte para PackageManagement em computadores somente com acesso à intranet
 
-**Cenário**: para o cenário corporativo, as pessoas estão trabalhando em um ambiente em que não há acesso à Internet, somente à intranet. O PackageManagement não dava suporte a esse caso no WMF 5.0.
+**Cenário**: para o cenário empresarial, as pessoas estão trabalhando em um ambiente em que não há acesso à Internet, somente à intranet. O PackageManagement não dava suporte a esse caso no WMF 5.0.
 
-**Cenário**: no WMF 5.0, o PackageManagement não dava suporte a computadores com acesso somente à intranet (e não à Internet).
+**Cenário**: no WMF 5.0, PackageManagement não dava suporte a computadores com acesso somente à intranet (e não à Internet).
 
-**Solução**: No WMF 5.1, você pode seguir estas etapas para permitir que computadores com Intranet usem o PackageManagement:
+**Solução**: no WMF 5.1, você pode seguir estas etapas para permitir que computadores com intranet usem o PackageManagement:
 
 1. Baixe o provedor de NuGet usando outro computador que tenha conexão com a Internet usando `Install-PackageProvider -Name NuGet`.
 
@@ -61,6 +62,7 @@ No WMF 5.1, o PackageManagement dá suporte para localizar e instalar pacotes de
 ``` PowerShell
 Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 ```
+
 ### <a name="support-for-using-packagemanagement-behind-a-proxy"></a>Suporte para usar o PackageManagement atrás de um proxy
 
 No WMF 5.1, agora o PackageManagement leva novos parâmetros de proxy `-ProxyCredential` e `-Proxy`. Usando esses parâmetros, você pode especificar a URL do proxy e as credenciais para cmdlets do PackageManagement. Por padrão, as configurações de proxy do sistema são usadas. Por exemplo:

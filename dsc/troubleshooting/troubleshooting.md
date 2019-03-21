@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: DSC,powershell,configuração,instalação
 title: Solucionando problemas de DSC
-ms.openlocfilehash: e1f36bbc97569ac0d65f003ee08f52ec174a4520
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675682"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059738"
 ---
 # <a name="troubleshooting-dsc"></a>Solucionando problemas de DSC
 
@@ -74,19 +74,19 @@ InDesiredState        :    False
 InitialState          :
 InstanceName          :    ServiceDll
 RebootRequested       :    False
-ReosurceName          :    File
+ResourceName          :    File
 StartDate             :    11/24/2015  3:44:56
 PSComputerName        :
 ```
 
-## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Meu script não funciona: Usando a DSC registra em log para diagnosticar erros de script
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Meu script não funciona: usando logs de DSC para diagnosticar erros de script
 
 Como todos os softwares do Windows, a DSC registra erros e eventos em [logs](/windows/desktop/EventLog/about-event-logging) que podem ser exibidos no [Visualizador de Eventos](https://support.microsoft.com/hub/4338813/windows-help).
 Um exame desses logs pode ajudá-lo a entender por que uma determinada operação falhou e como evitar falhas no futuro. Escrever scripts de configuração pode ser complicado; portanto, para facilitar o rastreamento de erros durante a criação, use o recurso de Log de DSC para acompanhar o progresso da sua configuração no log de eventos Analítico de DSC.
 
 ## <a name="where-are-dsc-event-logs"></a>Onde estão os logs de eventos de DSC?
 
-No Visualizador de eventos, eventos de DSC estão em: **Aplicativos e serviços Logs/Microsoft/Windows/Desired State Configuration**
+No Visualizador de Eventos, os eventos de DSC estão em: **Logs de Aplicativos e Serviços /Microsoft/Windows/Desired State Configuration**
 
 O cmdlet do PowerShell correspondente, [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent), também pode ser executado para exibir os logs de eventos:
 
@@ -100,7 +100,7 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Como mostrado acima, o nome do log primário da DSC é **Microsoft->Windows->DSC** (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC escreve principalmente em três tipos de logs: [Logs operacional, analítico e depuração](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos. Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão **Iniciar**, clique em **Painel de Controle**, em **Ferramentas Administrativas** e, em seguida, clique em **Visualizador de Eventos**.
+Como mostrado acima, o nome do log primário da DSC é **Microsoft->Windows->DSC** (outros nomes de logs no Windows não são mostrados aqui por uma questão de brevidade). O nome primário é anexado ao nome do canal para criar o nome completo do log. O mecanismo de DSC grava principalmente em três tipos de logs: [Logs Operacionais, Analíticos e de Depuração](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Como os logs analítico e de depuração permanecem desligados por padrão, devem ser habilitados no Visualizador de Eventos. Para fazer isso, abra o Visualizador de Eventos digitando Show-EventLog no Windows PowerShell; ou clique no botão **Iniciar**, clique em **Painel de Controle**, em **Ferramentas Administrativas** e, em seguida, clique em **Visualizador de Eventos**.
 No menu **Exibir** no Visualizador de Eventos, clique em **Mostrar Logs Analítico e de Depuração**. O nome do log para o canal analítico **Microsoft-Windows-Dsc/Analytic**; para o canal de depuração é **Microsoft-Windows-Dsc/Debug**. Também é possível usar o utilitário [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) para habilitar os logs, conforme mostrado no exemplo a seguir.
 
 ```powershell
@@ -327,7 +327,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-Passe o **GUID** atribuído a uma operação de DSC específica (conforme retornado pelo `Get-xDscOperation` cmdlet) para obter os detalhes do evento para essa operação de DSC:
+Passe o **GUID** atribuído a uma operação de DSC específica (conforme retornado pelo cmdlet `Get-xDscOperation`) para obter os detalhes do evento para a operação de DSC:
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
@@ -461,7 +461,7 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull co
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
 ```
 
-## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Meus recursos não são atualizados: Como redefinir o cache
+## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Meus recursos não são atualizados: como redefinir o cache
 
 O mecanismo de DSC armazena em cache os recursos implementados como um módulo do PowerShell para fins de eficiência.
 No entanto, isso pode causar problemas quando você está criando um recurso e testando-o simultaneamente, porque DSC carregará a versão armazenada em cache até o processo ser reiniciado. A única maneira de fazer a DSC carregar a versão mais recente é eliminar explicitamente o processo que hospeda o mecanismo de DSC.

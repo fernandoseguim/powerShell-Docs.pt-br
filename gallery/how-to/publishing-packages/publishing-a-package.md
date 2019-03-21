@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Criando e publicando um item
-ms.openlocfilehash: 70696535a3bf540ff75a2dc43bca80cb1adf8f45
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.openlocfilehash: 0e0f871b5d43508735e396224fdfd1a29b1e91c0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012527"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055471"
 ---
 # <a name="creating-and-publishing-an-item"></a>Criando e publicando um item
 
@@ -32,7 +32,7 @@ Consulte [Creating a PowerShell Gallery Account](/powershell/gallery/how-to/publ
 
 Depois de criar uma conta, você poderá obter a chave de API necessária para publicar um item. Depois que você entrar usando a conta, seu nome de usuário será exibido na parte superior das páginas da Galeria do PowerShell em vez de Registrar. Clicar em seu nome de usuário levará à página Minha conta, na qual você encontrará a chave de API.
 
-Observação: A chave de API deve ser tratada de maneira seu logon e senha mais segura.
+Observação: a chave de API deve ser tratada com a mesma segurança que seu logon e sua senha.
 Com essa chave você ou qualquer outra pessoa pode atualizar qualquer item que você possua na Galeria do PowerShell.
 É recomendável atualizar a chave regularmente, o que pode ser feito usando Redefinir chave na página Minha conta.
 
@@ -43,18 +43,18 @@ A Galeria do PowerShell fornece informações aos usuários da galeria que são 
 
 Os cmdlets [New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest) e [New-ScriptFileInfo](/powershell/module/PowerShellGet/New-ScriptFileInfo) criarão o modelo de manifesto para você, com espaços reservados para todos os elementos do manifesto.
 
-Ambos os manifestos têm duas seções que são importantes para a publicação, a área de dados de chave primária e PSData de PrivateData. Os dados de chave primários em um manifesto de módulo do PowerShell são tudo o que na seção PrivateData. O conjunto de chaves primárias é vinculado à versão do PowerShell em uso e os indefinidos não têm suporte. PrivateData dá suporte à adição de novas chaves, portanto, os elementos específicos da Galeria do PowerShell ficam no PSData.
+Os dois manifestos têm duas seções importantes para a publicação, os Dados de Chave Primária e PSData de PrivateData. Os dados de chave primária em um manifesto de módulo do PowerShell são tudo o que está fora da seção PrivateData. O conjunto de chaves primárias é vinculado à versão do PowerShell em uso e os indefinidos não têm suporte. PrivateData dá suporte à adição de novas chaves, portanto, os elementos específicos da Galeria do PowerShell ficam no PSData.
 
 
 Os elementos do manifesto mais importantes que devem ser preenchidos para o item publicado na Galeria do PowerShell são:
 
 - Nome do script ou do módulo – são extraídos dos nomes do .PS1 para um script ou do .PSD1 para um módulo.
-- Versão – essa é uma chave primária necessária, formato deve seguir as diretrizes de SemVer. Consulte as práticas recomendadas para obter detalhes.
-- Autor - isso é uma chave primária necessária e contém o nome a ser associado ao item.
-Consulte autores e proprietários abaixo.
+- Versão – é uma chave primária necessária e o formato deve seguir as diretrizes de SemVer. Confira as Práticas recomendadas para obter detalhes.
+- Autor – é uma chave primária necessária e contém o nome a ser associado ao item.
+Confira Autores e Proprietários abaixo.
 - Descrição – é uma chave primária necessária, usada para explicar brevemente o que esse item faz e os requisitos para usá-lo
 - ProjectURI – é um campo de URI altamente recomendado em PSData que fornece um link para um repositório Github ou local semelhante ao qual você pode fazer o desenvolvimento no item
-- As marcas - é uma recomendação veemente para marcar seu pacote com base em sua compatibilidade com PSEditions e plataformas. Para obter detalhes, consulte o [diretrizes de publicação](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms).
+- Marcas – é uma recomendação importante marcar seu pacote com base na compatibilidade com PSEditions e plataformas. Para obter detalhes, confira [Diretrizes de publicação](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms).
 
 Autores e Proprietários de itens da Galeria do PowerShell são conceitos relacionados, mas nem sempre correspondem. Proprietários de item são usuários com contas da Galeria do PowerShell que têm permissão para manter o item. Pode haver vários Proprietários que podem atualizar um item. O Proprietário só está disponível na Galeria do PowerShell e será perdido se o item for copiado de um sistema para outro. Autor é uma cadeia de caracteres criada nos dados do manifesto, portanto, ele sempre faz parte do item. As recomendações para itens de produtos da Microsoft são:
 
@@ -75,7 +75,7 @@ Há algumas ferramentas que você precisa executar no código antes de publicar 
 Se as informações de manifesto no item não puderem ser lidas pela infraestrutura da Galeria do PowerShell, você não poderá publicar.
 O [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) detectará problemas comuns que possam fazer com que o módulo fique inutilizável ao ser instalado. Ele deve ser executado para cada módulo antes de publicar na Galeria do PowerShell.
 
-Da mesma forma, [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) valida os metadados em um script e deve ser executado em cada script (publicado separado de um módulo) antes de publicar na Galeria do Powershell.
+Da mesma forma, [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) valida os metadados em um script e deve ser executado em cada script (publicado separado de um módulo) antes da publicação na Galeria do PowerShell.
 
 
 ## <a name="publishing-items"></a>Publicando itens
@@ -91,10 +91,10 @@ Para evitar erros, é altamente recomendado que você experimente os comandos us
 
 Exemplos seriam:
 
-* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -Whatif -Verbose`
-* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -Whatif -Verbose`
+* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -WhatIf -Verbose`
+* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -WhatIf -Verbose`
 
-Examine a saída com cuidado e, se não aparecerem erros ou avisos, repita o comando sem o parâmetro -Whatif.
+Examine a saída com cuidado e, se não aparecerem erros ou avisos, repita o comando sem o parâmetro -WhatIf.
 
 Todos os itens que são publicados na Galeria do PowerShell serão verificados em busca de vírus e serão analisados usando o PowerShell Script Analyzer. Quaisquer problemas que surgirem no momento serão enviados ao publicador para resolução.
 

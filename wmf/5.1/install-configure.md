@@ -4,15 +4,14 @@ ms.topic: conceptual
 keywords: wmf,powershell,instalação
 contributor: keithb
 title: Instalar e configurar o WMF 5.1
-ms.openlocfilehash: e5c7968744a442b4be9f1e43a45e91429a6d6165
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: c439d0851189a89a81fa38194632dc54475a001d
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675697"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055972"
 ---
-# <a name="install-and-configure-wmf-51"></a>Como instalar e configurar o WMF 5.1 #
-
+# <a name="install-and-configure-wmf-51"></a>Como instalar e configurar o WMF 5.1
 
 ## <a name="download-and-install-the-wmf-51-package"></a>Como baixar e instalar o pacote do WMF 5.1
 
@@ -35,7 +34,8 @@ Baixe o pacote do WMF 5.1 de acordo com o seu sistema operacional e a sua arquit
 
 ## <a name="install-wmf-51-for-windows-server-2008-r2-and-windows-7"></a>Como instalar o WMF 5.1 para Windows Server 2008 R2 e Windows 7
 
-> **Observação:** as instruções de instalação do Windows Server 2008 R2 e do Windows 7 foram alteradas e diferem das instruções dos outros pacotes. Veja a seguir as instruções de instalação do Windows Server 2012 R2, do Windows Server 2012 e do Windows 8.1.
+> [!NOTE]
+> As instruções de instalação do Windows Server 2008 R2 e do Windows 7 foram alteradas e diferem das instruções dos outros pacotes. Veja a seguir as instruções de instalação do Windows Server 2012 R2, do Windows Server 2012 e do Windows 8.1.
 
 **Instalação do WMF 5.1 em Windows Server 2008 R2 e Windows 7**
 
@@ -50,8 +50,8 @@ Depois que você descompactar o arquivo ZIP, poderá copiar todo o conteúdo em 
 
 O Install-WMF5.1.ps1 usa os seguintes parâmetros para facilitar a automação e a instalação no Windows Server 2008 R2 e no Windows 7:
 
-- AcceptEula: Quando esse parâmetro for incluído, o EULA é aceito automaticamente e não será exibido.
-- AllowRestart: Esse parâmetro só pode ser usado se o AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
+- AcceptEula: quando este parâmetro é incluído, o EULA é aceito automaticamente e, portanto, não é exibido.
+- AllowRestart: este parâmetro poderá ser usado apenas se AcceptEula for especificado. Se esse parâmetro for incluído e for necessário reiniciar após a instalação do WMF 5.1, o reinício ocorrerá automaticamente após a conclusão da instalação.
 
 **Pré-requisitos do WMF 5.1 para Windows Server 2008 R2 SP1 e Windows 7 SP1**
 
@@ -67,8 +67,8 @@ O DSC (Desired State Configuration) do Windows PowerShell depende do WinRM.
 O WinRM não é habilitado por padrão no Windows Server 2008 R2 nem no Windows 7.
 Execute o `Set-WSManQuickConfig`, em uma sessão com privilégios elevados do Windows PowerShell para habilitar o WinRM.
 
-
 ## <a name="install-wmf-51-for-windows-server-2012-r2-windows-server-2012-and-windows-81"></a>Como instalar o WMF 5.1 em Windows Server 2012 R2, Windows Server 2012 e Windows 8.1
+
 **Como instalar usando o Windows Explorer (ou Explorador de Arquivos no Windows Server 2012 R2 ou no Windows 8.1)**
 
 1. Navegue até a pasta em que você baixou o arquivo MSU.

@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Fornecendo comentários por meio de mídia social ou do recurso Comentários
-ms.openlocfilehash: a7cdcc2ff2c18fb606d077adf0bdecf57c90703f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003631"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054995"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecendo comentários por meio de mídia social ou do recurso Comentários
 
-A Galeria do Powershell dá suporte a duas abordagens para que os usuários forneçam comentários públicos sobre um pacote:
+A Galeria do PowerShell dá suporte a duas abordagens para que os usuários forneçam comentários públicos sobre um pacote:
 
 - Use os links na borda esquerda para "compartilhar" um pacote nos sites de mídia social Facebook, LinkedIn ou Twitter;
 - Use o recurso Comentário para enviar comentários sobre um pacote e para permitir que os autores detectem comentários sobre os pacotes que eles publicaram.
@@ -26,8 +26,7 @@ Os usuários precisam fazer logon no site que escolheram para compartilhar o pac
 
 Recomenda-se fazer isso quando o usuário acha que um pacote é algo que ele recomendaria a outros usuários.
 A Galeria do PowerShell verificará cada site de mídia social buscando "compartilhamentos" do pacote e exibirá quantas vezes o pacote foi compartilhado em cada um dos sites de mídia social.
-Como isso mostra apenas o número de vezes que algo foi compartilhado, isso será interpretado como: se os outros usuários "gostaram" do pacote.
-
+Como isso mostra apenas o número de vezes que algo foi compartilhado, será interpretado que os outros usuários "gostaram" do pacote.
 
 ## <a name="comments"></a>Comentários
 

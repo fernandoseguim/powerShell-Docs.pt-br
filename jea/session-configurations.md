@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,segurança
 title: Configurações de Sessão de JEA
-ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: b98726ea7ed3aabdfd05034c3b70118e327160cd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655456"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056576"
 ---
 # <a name="jea-session-configurations"></a>Configurações de Sessão de JEA
 
@@ -60,7 +60,7 @@ Você pode decidir qual identidade JEA será usada no arquivo de configuração 
 
 #### <a name="local-virtual-account"></a>Conta Virtual Local
 
-Se as funções com suporte nesse ponto de extremidade JEA são usadas para gerenciar o computador local e uma conta de administrador local for suficiente para executar os comandos com êxito, você deverá configurar o JEA para usar uma conta virtual local.
+Se as funções com suporte nesse ponto de extremidade do JEA forem usadas para gerenciar o computador local e uma conta de administrador local for suficiente para executar os comandos com êxito, você deverá configurar o JEA para usar uma conta virtual local.
 As contas virtuais são contas temporárias exclusivas para um usuário específico e permanecem ativas apenas durante a sessão do PowerShell.
 Em um servidor membro ou estação de trabalho, as contas virtuais pertencem ao grupo de **Administradores** do computador local e têm acesso à maioria dos recursos do sistema.
 Em um Controlador de Domínio do Active Directory, as contas virtuais pertencem ao grupo **Administradores do domínio** do domínio.
@@ -80,8 +80,9 @@ Quando um ou mais grupos de segurança forem especificados, a conta virtual não
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+
 > [!NOTE]
-> As contas virtuais recebem temporariamente o Logon como um serviço certo na política de segurança de servidor local.  Se um do VirtualAccountGroups especificado já tem esse direito na política, a conta virtual individual não será adicionada e removida da política.  Isso pode ser útil em cenários como controladores de domínio onde as revisões de diretiva de segurança de controlador de domínio intimamente são auditadas.  Isso só está disponível no Windows Server 2016 com novembro de 2018 ou distribuição mais recente e 2019 do Windows Server com o de janeiro de 2019 ou pacote cumulativo de atualizações posteriores.
+> As contas virtuais recebem temporariamente o direito de Logon como serviço na política de segurança do servidor local.  Se um dos VirtualAccountGroups especificados já tiver esse direito na política, a conta virtual individual não será adicionada e removida da política.  Isso pode ser útil em cenários como controladores de domínio, em que as revisões da política de segurança do controlador de domínio são auditadas minuciosamente.  Isso está disponível apenas no Windows Server 2016 com o pacote cumulativo de atualizações de novembro de 2018 ou posterior e no Windows Server 2019 com o pacote cumulativo de atualizações de janeiro de 2019 ou posterior.
 
 #### <a name="group-managed-service-account"></a>Conta de Serviço Gerenciado de Grupo
 
@@ -104,7 +105,6 @@ As contas gMSA só devem ser usadas quando for necessário o acesso aos recursos
 
 > [!NOTE]
 > As contas de serviço gerenciado de grupo estão disponíveis apenas no Windows PowerShell 5.1 ou mais recente e em computadores que ingressaram no domínio.
-
 
 #### <a name="more-information-about-run-as-users"></a>Mais informações sobre usuários Run As
 
@@ -179,6 +179,7 @@ RoleDefinitions = @{
 ```
 
 ### <a name="role-capability-search-order"></a>Ordem de pesquisa de capacidade de função
+
 Conforme mostrado no exemplo acima, os recursos de função são referenciados pelo nome simples (nome sem a extensão) do arquivo de capacidade de função.
 Se vários recursos de função estão disponíveis no sistema com o mesmo nome simples, o PowerShell usará sua ordem de pesquisa implícita para selecionar o arquivo de capacidade de função efetivo.
 Ele **não** dará acesso a todos os arquivos de capacidade de função com o mesmo nome.
@@ -217,6 +218,7 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > As regras de acesso condicional só estão disponíveis no Windows PowerShell 5.1 ou mais recente.
 
 ### <a name="other-properties"></a>Outras propriedades
+
 Os arquivos de configuração de sessão também podem fazer tudo o que um arquivo de recurso de função pode fazer, mas sem a capacidade de fornecer aos usuários que estão se conectando o acesso a comandos diferentes.
 Se quiser permitir que todos os usuários acessem provedores, funções ou cmdlets específicos, você poderá fazer isso diretamente no arquivo de configuração de sessão.
 Para obter uma lista completa das propriedades com suporte no arquivo de configuração de sessão, execute `Get-Help New-PSSessionConfigurationFile -Full`.
