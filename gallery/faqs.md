@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Perguntas frequentes sobre a Galeria do PowerShell
-ms.openlocfilehash: 3fa52892ce50491c040251baae8b4ae4ee3dcba0
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002865"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057681"
 ---
 # <a name="frequently-asked-questions"></a>perguntas frequentes
 
@@ -31,7 +31,8 @@ Normalmente, os módulos são melhores para compartilhamento, mas nós estamos h
 
 Você precisa registrar uma conta na Galeria do PowerShell antes que possa publicar pacotes na Galeria. Isso ocorre porque a publicação de pacotes requer uma NuGetApiKey, que é fornecida no registro. Para se registrar, use sua conta pessoal, corporativa ou de estudante para entrar na Galeria do PowerShell. Um processo de registro único é necessário quando você entra pela primeira vez. Posteriormente, a NuGetApiKey fica disponível em sua página de perfil.
 
-Após ter se registrado na Galeria, use os cmdlets [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou [Publish-Script](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) para publicar seu pacote na Galeria. Para obter mais detalhes sobre como executar esses cmdlets, visite a guia Publicar ou leia a documentação sobre [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [Publish-Script](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Após ter se registrado na Galeria, use os cmdlets [Publish-Module][] ou [Publish-Script][] para publicar seu pacote na Galeria.
+Para obter mais detalhes sobre como executar esses cmdlets, visite a guia Publicar ou leia a documentação sobre [Publish-Module][] e [Publish-Script][].
 
 **Você não precisa se registrar ou entrar na Galeria para instalar ou salvar pacotes.**
 
@@ -56,29 +57,37 @@ Quando marca uma caixa de seleção de Categoria, você está dizendo "Eu gostar
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>Quais são os requisitos para publicar um módulo na Galeria do PowerShell?
 
-Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários ou módulos de manifesto) pode ser publicado na Galeria. Para publicar um módulo, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação do *manifesto do módulo* arquivo (.psd1) ou do valor do parâmetro [**LicenseUri**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) do cmdlet **Publish-Module**. Todos os módulos publicados na Galeria devem ter manifestos de módulo. Qualquer módulo que incluir as seguintes informações em seu manifesto pode ser publicado na Galeria:
+Qualquer tipo de módulo do PowerShell (módulos de script, módulos binários ou módulos de manifesto) pode ser publicado na Galeria.
+Para publicar um módulo, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado.
+Essas informações são lidas como parte do processo de publicação do *manifesto do módulo* arquivo (.psd1) ou do valor do parâmetro **LicenseUri** do cmdlet [Publish-Module][].
+Todos os módulos publicados na Galeria devem ter manifestos de módulo.
+Qualquer módulo que incluir as seguintes informações em seu manifesto pode ser publicado na Galeria:
 
 - Versão
 - Descrição
 - Autor
-- Um URI para os termos de licença do módulo, como parte da seção **PrivateData** do manifesto ou no parâmetro **LicenseUri** do cmdlet [**Publish-Module**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+- Um URI para os termos de licença do módulo, como parte da seção **PrivateData** do manifesto ou no parâmetro **LicenseUri** do cmdlet [Publish-Module][].
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Como posso criar um manifesto de módulo formatado corretamente?
 
-A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [**New-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um manifesto de módulo é executar o cmdlet [New-ModuleManifest][]. No PowerShell 5.0 ou mais recente, New-ModuleManifest gera um manifesto de módulo formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o manifesto gerado como um exemplo da formatação correta.
 
-Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [**Test-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ModuleManifest][].
 
-Para atualizar os campos do arquivo de manifesto do módulo, use o cmdlet [**Update-ModuleManifest**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Para atualizar os campos do arquivo de manifesto do módulo, use o cmdlet [Update-ModuleManifest][].
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>Quais são os requisitos para publicar um script na Galeria?
 
-Qualquer tipo de script do PowerShell (scripts ou fluxos de trabalho) pode ser publicado na Galeria. Para publicar um script, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado. Essas informações são lidas como parte do processo de publicação da seção *PSScriptInfo* do arquivo de script ou do valor do parâmetro [**LicenseUri**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) do cmdlet **Publish-Script**. Todos os scripts publicados na Galeria devem ter informações dos metadados. Qualquer script que incluir as seguintes informações em sua seção PSScriptInfo pode ser publicado na Galeria:
+Qualquer tipo de script do PowerShell (scripts ou fluxos de trabalho) pode ser publicado na Galeria.
+Para publicar um script, o PowerShellGet precisa saber algumas coisas sobre ele – a versão, a descrição, o autor e como ele está licenciado.
+Essas informações são lidas como parte do processo de publicação da seção *PSScriptInfo* do arquivo de script ou do valor do parâmetro **LicenseUri** do cmdlet [Publish-Script][].
+Todos os scripts publicados na Galeria devem ter informações dos metadados.
+Qualquer script que incluir as seguintes informações em sua seção PSScriptInfo pode ser publicado na Galeria:
 
 - Versão
 - Descrição
 - Autor
-- Um URI para os termos de licença do script, como parte da seção **PSScriptInfo** do manifesto ou no parâmetro **LicenseUri** do cmdlet [**Publish-Script**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+- Um URI para os termos de licença do script, como parte da seção **PSScriptInfo** do manifesto ou no parâmetro **LicenseUri** do cmdlet [Publish-Script][].
 
 ## <a name="how-do-i-search"></a>Como pesquisar?
 
@@ -94,11 +103,11 @@ Portanto, por exemplo, quando você pesquisa PowerShellVersion: "2.0", apenas os
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Como posso criar um arquivo de script formatado corretamente?
 
-A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [**New-ScriptFileInfo**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
+A maneira mais fácil de criar um arquivo de script formatado corretamente é executar o cmdlet [New-ScriptFileInfo][]. No PowerShell 5.0, New-ScriptFileInfo gera um arquivo de script formatado corretamente com campos em branco para metadados úteis, como **ProjectUri**, **LicenseUri** e **Tags**. Basta preencher os espaços em branco ou usar o arquivo de script gerado como um exemplo da formatação correta.
 
-Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [**Test-ScriptFileInfo**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Para verificar se todos os campos de metadados obrigatórios foram preenchidos corretamente, use o cmdlet [Test-ScriptFileInfo][].
 
-Para atualizar os campos de metadados do script, use o cmdlet [**Update-ScriptFileInfo**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Para atualizar os campos de metadados do script, use o cmdlet [Update-ScriptFileInfo][].
 
 ## <a name="what-other-types-of-powershell-modules-exist"></a>Quais outros tipos de módulos do PowerShell existem?
 
@@ -112,7 +121,10 @@ Todos os módulos na Galeria contêm manifestos de módulo e a maioria desses m�
 
 PackageManagement é uma interface comum para trabalhar com qualquer gerenciador de pacotes. Quer esteja lidando com módulos do PowerShell, MSIs, RubyGems, pacotes do NuGet ou módulos do Perl, você deve ser capaz de usar comandos do PackageManagement (Find-Package e Install-Package) para localizar e instalá-los. PackageManagement faz isso tendo um provedor de pacote para cada gerenciador de pacotes que se conecta a ele. Os provedores fazem todo o trabalho real; eles buscam o conteúdo de repositórios e instalam o conteúdo localmente. Frequentemente, os provedores de pacote simplesmente encapsulam as ferramentas do gerenciador de pacotes existente para um determinado tipo de pacote.
 
-PowerShellGet é o gerenciador de pacotes do PowerShell. Há um provedor de pacotes PSModule que expõe a funcionalidade do PowerShellGet por meio de PackageManagement. Por isso, é possível executar [Install-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) ou Install-Package -Provider PSModule para instalar um módulo na Galeria do PowerShell. Algumas funcionalidades do PowerShellGet, incluindo [Update-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [Publish-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), não podem ser acessadas por meio de comandos do PackageManagement.
+PowerShellGet é o gerenciador de pacotes do PowerShell.
+Há um provedor de pacotes PSModule que expõe a funcionalidade do PowerShellGet por meio de PackageManagement.
+Por isso, é possível executar [Install-Module][] ou Install-Package -Provider PSModule para instalar um módulo na Galeria do PowerShell.
+Algumas funcionalidades do PowerShellGet, incluindo [Update-Module][] e [Publish-Module][], não podem ser acessadas por meio de comandos do PackageManagement.
 
 Em resumo, o PowerShellGet destina-se unicamente a ter uma experiência de gerenciamento de pacotes premium para o conteúdo do PowerShell. PackageManagement destina-se a expor todas as experiências de gerenciamento de pacotes por meio de um conjunto de ferramentas geral. Se você considerar esta resposta insatisfatória, haverá uma resposta longa na parte inferior deste documento, na seção **Como PackageManagement de fato está relacionado ao PowerShellGet?**.
 
@@ -122,7 +134,7 @@ Para obter mais informações, visite a [página do projeto do PackageManagement
 
 A Galeria do PowerShell é uma versão modificada da [Galeria do NuGet](https://www.nuget.org/). O PowerShellGet usa o provedor do NuGet para trabalhar com repositórios baseados em NuGet, como a Galeria do PowerShell.
 
-Você pode usar o PowerShellGet com qualquer compartilhamento de arquivo ou repositório do NuGet válido. Basta adicionar o repositório executando o cmdlet [**Register-PSRepository**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Você pode usar o PowerShellGet com qualquer compartilhamento de arquivo ou repositório do NuGet válido. Basta adicionar o repositório executando o cmdlet [Register-PSRepository][].
 
 ## <a name="does-that-mean-i-can-use-nugetexe-to-work-with-the-gallery"></a>Isso significa que posso usar NuGet.exe para trabalhar com a Galeria?
 
@@ -132,13 +144,13 @@ Sim.
 
 Nos bastidores, o PowerShellGet utiliza intensamente a infraestrutura de PackageManagement.
 
-Na camada de cmdlet do PowerShell, [Install-Module](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) é, na verdade, um wrapper fino ao redor de Install-Package -Provider PSModule.
+Na camada de cmdlet do PowerShell, [Install-Module][] é, na verdade, um wrapper fino ao redor de Install-Package -Provider PSModule.
 
 Na camada do provedor do pacote PackageManagement, o provedor de pacote PSModule chama outros provedores do pacote PackageManagement. Por exemplo, quando você está trabalhando com galerias baseadas em NuGet (como a Galeria do PowerShell), o provedor do pacote PSModule usa o provedor de pacote do NuGet para trabalhar com o repositório.
 
 ![Arquitetura do PowerShellGet](Images/powershellgetArchitecture.png)
 
-Figura 1: Arquitetura do PowerShellGet
+Figura 1: Arquitetura do PowerShellGet
 
 ## <a name="what-is-required-to-run-powershellget"></a>O que é necessário para executar o PowerShellGet?
 
@@ -169,3 +181,16 @@ Confira [Gerenciando proprietários do pacote em PowerShellGallery.com](./how-to
 ## <a name="how-do-i-deal-with-a-package-owner-who-is-violating-my-package-license"></a>Como lidar com um proprietário de pacote que está violando a licença do meu pacote?
 
 Recomendamos que a comunidade do PowerShell trabalhe junta para resolver controvérsias que podem surgir entre os proprietários dos pacotes.  Nós criamos um [processo de solução de controvérsias](./how-to/getting-support/dispute-resolution.md) e solicitamos que você o siga antes que os administradores do PowerShellGallery.com intercedam.
+
+[New-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest
+[Test-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Test-ModuleManifest
+[Update-ModuleManifest]: /powershell/module/Microsoft.PowerShell.Core/Update-ModuleManifest
+
+[Install-Module]: /powershell/module/PowershellGet/Install-Module
+[New-ScriptFileInfo]: /powershell/module/PowershellGet/New-ScriptFileInfo
+[Publish-Module]: /powershell/module/PowershellGet/Publish-Module
+[Publish-Script]: /powershell/module/PowershellGet/Publish-Script
+[Register-PSRepository]: /powershell/module/PowershellGet/Register-PSRepository
+[Test-ScriptFileInfo]: /powershell/module/PowershellGet/Test-ScriptFileInfo
+[Update-Module]: /powershell/module/PowershellGet/Update-Module
+[Update-ScriptFileInfo]: /powershell/module/PowershellGet/Update-ScriptFileInfo
