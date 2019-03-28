@@ -2,12 +2,12 @@
 title: Entendendo a codificação de arquivos no VSCode e PowerShell
 description: Configurar a codificação de arquivos no VSCode e no PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: ec06d8f5d446a92e6cd9d2d70b11260d1d0afda8
+ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795106"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58320397"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Entendendo a codificação de arquivos no VSCode e PowerShell
 
@@ -215,7 +215,7 @@ Observe que isso não persistiria entre inicializações.
 ### <a name="source-control-software"></a>Software de controle do código-fonte
 
 Algumas ferramentas de controle do código-fonte, como git, ignoram as codificações; o git apenas controla os bytes.
-Outras, como TFS ou Mercurial, podem não fazer isso. Até mesmo algumas ferramentas baseadas em git dependem da decodificação de texto.
+Outros, como Azure DevOps ou Mercurial, podem não fazer isso. Até mesmo algumas ferramentas baseadas em git dependem da decodificação de texto.
 
 Quando for esse o caso, não deixe de:
 
