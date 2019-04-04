@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
-ms.openlocfilehash: 1f7b5b60b202f4de0cf3d44b65057f5edd41f2b0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860042"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920383"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>O programador do Windows PowerShell&#39;guia
 
@@ -57,7 +57,7 @@ Se você expõe um armazenamento de dados que o usuário precisar de acesso, voc
 
 Windows PowerShell inclui o padrão host aplicativo powershell.exe, que é um aplicativo de console que interage com o usuário e hospeda o tempo de execução do Windows PowerShell usando uma janela do console.
 
-Raramente você precisará escrever seu próprio aplicativo de host para o Windows PowerShell, embora haja suporte para a personalização. Um caso em que o seu próprio aplicativo pode ser necessário é quando você tem um requisito para uma interface GUI que é mais sofisticada do que a interface fornecida pelo aplicativo host padrão. Você também poderá um aplicativo personalizado quando você estiver baseando sua GUI na linha de comando. Para obter mais informações, consulte[como criar um aplicativo de Host do Windows PowerShell](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07).
+Raramente você precisará escrever seu próprio aplicativo de host para o Windows PowerShell, embora haja suporte para a personalização. Um caso em que o seu próprio aplicativo pode ser necessário é quando você tem um requisito para uma interface GUI que é mais sofisticada do que a interface fornecida pelo aplicativo host padrão. Você também poderá um aplicativo personalizado quando você estiver baseando sua GUI na linha de comando. Para obter mais informações, consulte [como criar um aplicativo de Host do Windows PowerShell](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07).
 
 ### <a name="windows-powershell-runtime"></a>O tempo de execução do Windows PowerShell
 
@@ -101,8 +101,8 @@ Para obter mais informações sobre como começar a usar o shell do Windows Powe
 |-----------|----------------|
 |[Como criar um provedor do Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|Esta seção descreve como criar um provedor do Windows PowerShell para o Windows PowerShell.|
 |[Como criar um aplicativo de Host do PowerShell do Windows](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)|Esta seção descreve como escrever um aplicativo host que manipula um runspace e como escrever um aplicativo host que implementa seu próprio host personalizado.|
-|[Como criar um Snap-in do PowerShell do Windows](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta seção descreve como criar um snap-in que é usado para registrar todos os cmdlets e provedores em um assembly e como criar um snap-in personalizado.|
-|[Como criar um Shell do Console](./how-to-create-a-console-shell.md)|Esta seção descreve como criar um shell de console que não é extensível.|
+|[Como criar um snap-in do Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Esta seção descreve como criar um snap-in que é usado para registrar todos os cmdlets e provedores em um assembly e como criar um snap-in personalizado.|
+|[Como criar um shell do console](./how-to-create-a-console-shell.md)|Esta seção descreve como criar um shell de console que não é extensível.|
 |[Conceitos do Windows PowerShell](./windows-powershell-concepts.md)|Esta seção contém informações conceituais que ajudarão você a entender o Windows PowerShell do ponto de vista de um desenvolvedor.|
 
 ## <a name="see-also"></a>Consulte Também
