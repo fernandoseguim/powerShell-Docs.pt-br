@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 title: Fornecendo comentários por meio de mídia social ou do recurso Comentários
-ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58054995"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623884"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Fornecendo comentários por meio de mídia social ou do recurso Comentários
 
@@ -29,6 +29,10 @@ A Galeria do PowerShell verificará cada site de mídia social buscando "compart
 Como isso mostra apenas o número de vezes que algo foi compartilhado, será interpretado que os outros usuários "gostaram" do pacote.
 
 ## <a name="comments"></a>Comentários
+
+> [!IMPORTANT]
+> Os comentários do Livefyre são fornecidos por um fornecedor de terceiros e não possuem mais suporte.
+> Os comentários do Livefyre não estarão mais disponíveis na Galeria do PowerShell a partir de 01/05/2019. 
 
 A Galeria do PowerShell usa o serviço LiveFyre para permitir que os usuários comentem sobre os pacotes.
 Os usuários que têm recomendações ou comentários podem usar esse recurso para fornecer comentários que ficam visíveis para qualquer pessoa que visitar a página do pacote.

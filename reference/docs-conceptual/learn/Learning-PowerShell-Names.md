@@ -1,18 +1,18 @@
 ---
 ms.date: 08/24/2018
 keywords: powershell, cmdlet
-title: Aprendendo nomes de comando do PowerShell
+title: Aprender os nomes de comandos do PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.openlocfilehash: 8d50ca03f98ed4ca8f9c09c83ae57afbf0d7888d
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012459"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623714"
 ---
-# <a name="learning-powershell-command-names"></a>Aprendendo nomes de comando do PowerShell
+# <a name="learning-powershell-command-names"></a>Aprender os nomes de comandos do PowerShell
 
-Aprender os nomes de comandos e parâmetros exige um investimento considerável de tempo com a maioria das interfaces de linha de comando. O problema é que há alguns padrões. Memorização é a única maneira de aprender os comandos e parâmetros que você precisa usar regularmente.
+Aprender os nomes de comandos e parâmetros exige um investimento considerável de tempo com a maioria das interfaces de linha de comando. O problema é que há alguns padrões. A memorização é a única maneira de aprender os comandos e parâmetros necessários regularmente.
 
 Ao trabalhar com um novo comando ou parâmetro, nem sempre é possível usar o que você já conhece. Você precisa localizar e aprender um novo nome. Tradicionalmente, as interfaces de linha de comando começam com um pequeno conjunto de ferramentas e aumentam com adições incrementais. É fácil ver por que não há uma estrutura padrão.
 Isso parece lógico para nomes de comando, já que cada comando é uma ferramenta separada. O PowerShell oferece uma maneira melhor de lidar com nomes de comando.
@@ -25,7 +25,7 @@ Além disso, comandos têm especificações de parâmetro irregulares. Não é p
 Para listar tarefas em execução no DC01, use o parâmetro **/S** e o nome do computador sem barras invertidas. Por exemplo, `tasklist /S DC01`.
 
 > [!NOTE]
-> Antes do PowerShell v6, `sc` era um alias para o cmdlet `Set-Content`. Para executar o comando **sc.exe**, você deve incluir a extensão de arquivo.
+> Antes do PowerShell v6, `sc` era um alias para o cmdlet `Set-Content`. Portanto, para executar o comando **sc.exe** em uma versão do PowerShell anterior à v6, você deve incluir o nome de arquivo completo **sc.exe** e a extensão de arquivo **exe**.
 
 Os serviços e os processos são exemplos de elementos gerenciáveis em um computador com ciclos de vida bem-definidos. Você pode iniciar ou parar serviços ou processos, ou obter uma lista dos serviços ou processos em execução no momento. Apesar de haver distinções técnicas importantes entre elas, conceitualmente, as ações executadas em serviços e processos são as mesmas. Além disso, as escolhas que fazemos para personalizar uma ação especificando parâmetros também podem ser conceitualmente semelhantes.
 

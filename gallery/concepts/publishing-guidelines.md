@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: galeria,powershell,cmdlet,psgallery
 description: Diretrizes para publicadores
 title: Diretrizes e práticas recomendadas da Galeria do PowerShell
-ms.openlocfilehash: 25c359c7acbe7430762a275d8cc4a28f527ec57a
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 1cd0140cc208949e13d23331b23a58ffc374430b
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58056491"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623901"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas da Galeria do PowerShell
 
@@ -145,6 +145,9 @@ Use as seguintes marcas para demonstrar aos usuários quais pacotes funcionarão
 - Windows: pacotes compatíveis com o sistema operacional Windows
 - Linux: pacotes compatíveis com os sistemas operacionais Linux
 - MacOS: pacotes compatíveis com o sistema operacional Mac
+
+Marcando o seu pacote com as plataformas compatíveis, ele será incluído nos filtros de pesquisa da Galeria no painel à esquerda dos resultados da pesquisa. Se você hospedar seu pacote no GitHub, ao marcar a seu pacote, você também pode aproveitar o nosso [escudo de compatibilidade da Galeria do PowerShell](https://img.shields.io/powershellgallery/p/:packageName.svg) 
+![escudo de compatibilidade](https://img.shields.io/powershellgallery/p/CosmosDB.svg).  
 
 ## <a name="include-tests"></a>Incluir testes
 

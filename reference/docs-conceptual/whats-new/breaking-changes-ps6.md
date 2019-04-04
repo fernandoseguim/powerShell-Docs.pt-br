@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Alterações da falha no PowerShell Core 6.0
-ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795684"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623918"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Alterações da falha no PowerShell Core 6.0
 
@@ -61,6 +61,15 @@ Em vez disso, recomendamos que você use os cmdlets do CIM (também conhecidos c
 ### <a name="microsoftpowershelllocalaccounts"></a>Microsoft.PowerShell.LocalAccounts
 
 Devido ao uso de APIs sem suporte, removemos `Microsoft.PowerShell.LocalAccounts` do PowerShell Core até encontrarmos uma solução melhor.
+
+### <a name="-computer-cmdlets"></a>Os cmdlets do `*-Computer`
+
+Devido ao uso de APIs sem suporte, os seguintes cmdlets foram removidos do PowerShell Core até encontrarmos uma solução melhor.
+
+- Add-Computer
+- Checkpoint-Computer
+- Remove-Computer
+- Restore-Computer
 
 ### <a name="-counter-cmdlets"></a>Os cmdlets do `*-Counter`
 
