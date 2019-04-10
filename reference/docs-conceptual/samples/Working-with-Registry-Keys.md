@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Trabalhando com chaves do Registro
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: a9d08f2f6b5803980dec45a4e266ad66879c8c8d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293179"
 ---
 # <a name="working-with-registry-keys"></a>Trabalhando com chaves do Registro
 
 Como as chaves do Registro são itens em unidades do Windows PowerShell, trabalhar com elas é muito semelhante a trabalhar com arquivos e pastas. Uma diferença fundamental é que cada item em uma unidade do Windows PowerShell com base no Registro é um contêiner, assim como uma pasta em uma unidade de sistema de arquivos. No entanto, as entradas do Registro e seus valores associados são propriedades de itens, não itens distintos.
 
-### <a name="listing-all-subkeys-of-a-registry-key"></a>Listar todas as subchaves de uma chave do Registro
+## <a name="listing-all-subkeys-of-a-registry-key"></a>Listar todas as subchaves de uma chave do Registro
 
 Você pode mostrar todos os itens dentro de uma chave do Registro usando **Get-ChildItem**. Adicione o parâmetro opcional **Force** para exibir itens ocultos ou do sistema. Por exemplo, este comando exibe os itens diretamente na unidade do Windows PowerShell HKCU:, que corresponde ao hive do Registro HKEY_CURRENT_USER:
 
@@ -58,7 +58,7 @@ Get-ChildItem -Path hkcu:\ -Recurse
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
-### <a name="copying-keys"></a>Copiar chaves
+## <a name="copying-keys"></a>Copiar chaves
 
 A cópia é feita com **Copy-Item**. O comando a seguir copia HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion e todas as suas propriedades em HKCU:\\, criando uma nova chave chamada “CurrentVersion”:
 
@@ -74,7 +74,7 @@ Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination h
 
 Você ainda pode usar outras ferramentas que já estão disponíveis para executar cópias do sistema de arquivos. Quaisquer ferramentas de edição de Registro, incluindo reg.exe, regini.exe e regedit.exe, e objetos COM que dão suporte à edição do Registro (como o WScript.Shell e a classe StdRegProv do WMI) podem ser usados de dentro do Windows PowerShell.
 
-### <a name="creating-keys"></a>Criar chaves
+## <a name="creating-keys"></a>Criar chaves
 
 Criar novas chaves no Registro é mais simples do que criar um novo item em um sistema de arquivos. Como todas as chaves do Registro são contêineres, você não precisa especificar o tipo de item; basta fornecer um caminho explícito, como:
 
@@ -88,7 +88,7 @@ Você também pode usar um caminho de provedor para especificar uma chave:
 New-Item -Path Registry::HKCU_DeleteMe
 ```
 
-### <a name="deleting-keys"></a>Excluir chaves
+## <a name="deleting-keys"></a>Excluir chaves
 
 Excluir itens é essencialmente o mesmo para todos os provedores. Os comandos a seguir removerão itens silenciosamente:
 
@@ -97,7 +97,7 @@ Remove-Item -Path hkcu:\Software_DeleteMe
 Remove-Item -Path 'hkcu:\key with spaces in the name'
 ```
 
-### <a name="removing-all-keys-under-a-specific-key"></a>Remover todas as chaves sob uma chave específica
+## <a name="removing-all-keys-under-a-specific-key"></a>Remover todas as chaves sob uma chave específica
 
 Você pode remover os itens contidos usando **Remove-Item**, mas será solicitado que confirme a remoção se o item contiver qualquer outra coisa. Por exemplo, se tentarmos excluir a subchave HKCU:\\CurrentVersion que criamos, veremos isto:
 

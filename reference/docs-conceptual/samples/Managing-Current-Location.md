@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Gerenciando o local atual
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: d1ebc9507a45841e6d4d8219e45c002990e1328c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293173"
 ---
 # <a name="managing-current-location"></a>Gerenciando o local atual
 
@@ -16,7 +16,7 @@ Ao navegar em sistemas de pasta no Explorador de arquivos, você normalmente tem
 
 O Windows PowerShell usa o substantivo **Location** para referir-se ao diretório de trabalho e implementa uma família de cmdlets para examinar e manipular seu local.
 
-### <a name="getting-your-current-location-get-location"></a>Obtendo seu local atual (Get-Location)
+## <a name="getting-your-current-location-get-location"></a>Obtendo seu local atual (Get-Location)
 
 Para determinar o caminho do seu local de diretório atual, digite o comando **Get-Location**:
 
@@ -30,7 +30,7 @@ C:\Documents and Settings\PowerUser
 > [!NOTE]
 > O cmdlet Get-Location é semelhante ao comando **pwd** no shell BASH. O cmdlet Set-Location é semelhante ao comando **cd** do Cmd.exe.
 
-### <a name="setting-your-current-location-set-location"></a>Definindo seu local atual (Set-Location)
+## <a name="setting-your-current-location-set-location"></a>Definindo seu local atual (Set-Location)
 
 O comando **Get-Location** é usado com o comando **Set-Location**. O comando **Set-Location** permite especificar seu local de diretório atual.
 
@@ -96,7 +96,7 @@ chdir -Path .. -PassThru
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
-### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvar e recuperar locais recentes (Push-Location e Pop-Location)
+## <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvar e recuperar locais recentes (Push-Location e Pop-Location)
 
 Ao alterar locais, é muito útil controlar onde você esteve para poder retornar ao local anterior. O cmdlet do Windows PowerShell **Push-Location** cria um histórico ordenado (uma "pilha") de caminhos de diretório nos quais você esteve, para que seja possível percorrer novamente o histórico de caminhos de diretório usando o cmdlet complementar **Pop-Location**.
 

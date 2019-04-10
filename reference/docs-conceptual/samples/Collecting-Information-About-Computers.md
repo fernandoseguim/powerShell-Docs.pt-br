@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Coletando informações sobre computadores
 ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: 99125ef701705c20d4e955c79eaa3469ce4d58fb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: d837684108656e17ebf26189bd4841c5de01051c
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293156"
 ---
 # <a name="collecting-information-about-computers"></a>Coletando informações sobre computadores
 
@@ -22,7 +22,7 @@ Especificamos o parâmetro **ComputerName** com o valor de ponto (**.**), que re
 É possível especificar um nome ou endereço IP associado a qualquer computador que você pode acessar por meio do WMI.
 Para recuperar as informações sobre o computador local, você pode omitir o parâmetro **ComputerName**.
 
-### <a name="listing-desktop-settings"></a>Listar Configurações de Área de Trabalho
+## <a name="listing-desktop-settings"></a>Listar Configurações de Área de Trabalho
 
 Vamos começar com um comando que coleta informações sobre as áreas de trabalho no computador local.
 
@@ -44,7 +44,7 @@ Get-CimInstance -ClassName Win32_Desktop -ComputerName . | Select-Object -Exclud
 
 Para filtrar os metadados, use um operador de pipeline (|) para enviar os resultados do comando `Get-CimInstance` para `Select-Object -ExcludeProperty "CIM*"`.
 
-### <a name="listing-bios-information"></a>Listando informações de BIOS
+## <a name="listing-bios-information"></a>Listando informações de BIOS
 
 A classe WMI **Win32_BIOS** retorna informações bastante compactas e completas sobre o BIOS do sistema no computador local:
 
@@ -52,7 +52,7 @@ A classe WMI **Win32_BIOS** retorna informações bastante compactas e completas
 Get-CimInstance -ClassName Win32_BIOS -ComputerName .
 ```
 
-### <a name="listing-processor-information"></a>Listar informações do processador
+## <a name="listing-processor-information"></a>Listar informações do processador
 
 Você pode recuperar informações gerais do processador por meio da classe **Win32_Processor** do WMI, embora provavelmente você preferirá filtrar as informações:
 
@@ -70,7 +70,7 @@ SystemType
 X86-based PC
 ```
 
-### <a name="listing-computer-manufacturer-and-model"></a>Listar o modelo e o fabricante do computador
+## <a name="listing-computer-manufacturer-and-model"></a>Listar o modelo e o fabricante do computador
 
 As informações de modelo do computador também estão disponíveis no **Win32_ComputerSystem**.
 A saída padrão exibida não precisará de filtragem para fornecer dados de OEM:
@@ -88,7 +88,7 @@ MyPC Jane Doe         WORKGROUP 804765696           DA243A-ABA 6415cl NA910 Comp
 A saída de comandos como este, que retornam informações diretamente de alguns dispositivos de hardware, é válida na mesma medida que os dados que você tem.
 Algumas informações não são configuradas corretamente pelos fabricantes de hardware e, portanto, podem estar indisponíveis.
 
-### <a name="listing-installed-hotfixes"></a>Listar os hotfixes instalados
+## <a name="listing-installed-hotfixes"></a>Listar os hotfixes instalados
 
 Você pode listar os hotfixes instalados usando **Win32_QuickFixEngineering**:
 
@@ -143,7 +143,7 @@ HotFixId
 KB4048951
 ```
 
-### <a name="listing-operating-system-version-information"></a>Listar informações de versão do sistema operacional
+## <a name="listing-operating-system-version-information"></a>Listar informações de versão do sistema operacional
 
 As propriedades da classe **Win32_OperatingSystem** incluem informações sobre versão e service pack.
 Você pode selecionar apenas essas propriedades para obter um resumo das informações de versão de **Win32_OperatingSystem**:
@@ -167,7 +167,7 @@ ServicePackMajorVersion : 0
 ServicePackMinorVersion : 0
 ```
 
-### <a name="listing-local-users-and-owner"></a>Listar proprietário e usuários locais
+## <a name="listing-local-users-and-owner"></a>Listar proprietário e usuários locais
 
 Informações gerais de usuário local – o número de usuários licenciados, número de usuários atuais e nome do proprietário – podem ser encontradas com uma seleção das propriedades da classe **Win32_OperatingSystem**.
 Você pode selecionar as propriedades a serem exibidas desta forma:
@@ -182,7 +182,7 @@ Uma versão mais sucinta usando caracteres curinga seria:
 Get-CimInstance -ClassName Win32_OperatingSystem -ComputerName . | Select-Object -Property *user*
 ```
 
-### <a name="getting-available-disk-space"></a>Obter o espaço em disco disponível
+## <a name="getting-available-disk-space"></a>Obter o espaço em disco disponível
 
 Para ver o espaço em disco e o espaço livre para as unidades locais, você pode usar a classe WMI Win32_LogicalDisk.
 Você precisa ver apenas as instâncias com um DriveType de 3 – o valor que o WMI usa para discos rígidos fixos.
@@ -203,7 +203,7 @@ FreeSpace 109839607808
 Size      326846914560
 ```
 
-### <a name="getting-logon-session-information"></a>Obter informações de sessão de logon
+## <a name="getting-logon-session-information"></a>Obter informações de sessão de logon
 
 Você pode obter informações gerais sobre as sessões de logon associadas aos usuários por meio da classe WMI **Win32_LogonSession**:
 
@@ -211,7 +211,7 @@ Você pode obter informações gerais sobre as sessões de logon associadas aos 
 Get-CimInstance -ClassName Win32_LogonSession -ComputerName .
 ```
 
-### <a name="getting-the-user-logged-on-to-a-computer"></a>Obter o usuário conectado a um computador
+## <a name="getting-the-user-logged-on-to-a-computer"></a>Obter o usuário conectado a um computador
 
 Você pode exibir o usuário conectado a um sistema de computador específico usando Win32_ComputerSystem.
 Esse comando retorna somente o usuário conectado à área de trabalho do sistema:
@@ -220,7 +220,7 @@ Esse comando retorna somente o usuário conectado à área de trabalho do sistem
 Get-CimInstance -ClassName Win32_ComputerSystem -Property UserName -ComputerName .
 ```
 
-### <a name="getting-local-time-from-a-computer"></a>Obter a hora local de um computador
+## <a name="getting-local-time-from-a-computer"></a>Obter a hora local de um computador
 
 Você pode recuperar a hora local atual em um computador específico usando a classe WMI **Win32_LocalTime**.
 
@@ -240,7 +240,7 @@ Year         : 2017
 PSComputerName : .
 ```
 
-### <a name="displaying-service-status"></a>Exibir o status do serviço
+## <a name="displaying-service-status"></a>Exibir o status do serviço
 
 Para exibir o status de todos os serviços em um computador específico, você pode usar o cmdlet `Get-Service` localmente.
 Para sistemas remotos, você pode usar a classe WMI **Win32_Service**.

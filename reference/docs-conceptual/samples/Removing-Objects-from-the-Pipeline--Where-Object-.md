@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Removendo objetos do pipeline Where-Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293139"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Removendo objetos do pipeline (Where-Object)
 
@@ -16,7 +16,7 @@ No Windows PowerShell, você muitas vezes gera e passa mais objetos em um pipeli
 
 O Windows PowerShell inclui um cmdlet `Where-Object` que permite testar cada objeto no pipeline e apenas passá-lo pelo pipeline caso ele atenda a determinada condição de teste. Objetos que não passarem no teste são removidos do pipeline. Forneça a condição de teste como o valor do parâmetro `Where-Object` **FilterScript**.
 
-### <a name="performing-simple-tests-with-where-object"></a>Executando testes simples com Where-Object
+## <a name="performing-simple-tests-with-where-object"></a>Executando testes simples com Where-Object
 
 O valor de **FilterScript** é um *bloco de script* (um ou mais comandos do Windows PowerShell entre chaves {}) que é avaliado como verdadeiro ou falso. Esses blocos de script podem ser muito simples, mas criá-los requer conhecimento sobre outro conceito do Windows PowerShell, os operadores de comparação. Um operador de comparação compara os itens que aparecem em cada lado dela. Operadores de comparação começam com um caractere '-' e são seguidos por um nome. Operadores de comparação básicos funcionam em praticamente qualquer tipo de objeto. Os operadores de comparação mais avançados podem funcionar apenas em texto ou matrizes.
 
@@ -46,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades de objeto
+## <a name="filtering-based-on-object-properties"></a>Filtragem com base nas propriedades de objeto
 
 Como `$_` se refere ao objeto atual no pipeline, podemos acessar suas propriedades para nossos testes.
 
