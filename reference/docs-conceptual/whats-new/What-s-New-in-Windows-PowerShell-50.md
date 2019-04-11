@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Novidades sobre o Windows PowerShell 5.0
-ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
+ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59363523"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novidades sobre o Windows PowerShell 5.0
 
@@ -23,7 +23,7 @@ Para instalar o Windows PowerShell 5.0 em Windows Server 2012 R2, Windows 8.1 En
 
 ## <a name="in-this-topic"></a>Neste tópico
 
-- [Atualizações do Windows PowerShell 4.0 DSC na KB 3000850](#windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850)
+- [Atualizações do Windows PowerShell 4.0 DSC no KB 3000850](#windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850)
 - [Novos recursos no Windows PowerShell 5.0](#new-features-in-windows-powershell-50)
 - [Novos recursos no Windows PowerShell 4.0](#new-features-in-windows-powershell-40)
 - [Novos recursos no Windows PowerShell 3.0](#new-features-in-windows-powershell-30)
@@ -94,8 +94,8 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - [Novos recursos no Windows PowerShell](#new-features-in-windows-powershell)
 - [Novos recursos na Configuração de Estado Desejado do Windows PowerShell](#new-features-in-windows-powershell-desired-state-configuration)
 - [Novos recursos no ISE do Windows PowerShell](#new-features-in-windows-powershell-ise)
-- [Novos recursos nos Serviços Web do Windows PowerShell](#new-features-in-windows-powershell-web-services-management-odata-iis-extension)
-- [Correções de bugs importantes no Windows PowerShell 5.0](#notable-bug-fixes-in-windows-powershell-50)
+- [Novos recursos no Windows PowerShell Web Services](#new-features-in-windows-powershell-web-services-management-odata-iis-extension)
+- [Correções de bugs notáveis no Windows PowerShell 5.0](#notable-bug-fixes-in-windows-powershell-50)
 
 ### <a name="new-features-in-windows-powershell"></a>Novos recursos no Windows PowerShell
 
@@ -127,7 +127,7 @@ Muitas atualizações e aprimoramentos para a DSC (Configuração de Estado Dese
 - Um novo cmdlet, New-TemporaryFile, permite criar um arquivo temporário como parte do script. Por padrão, o novo arquivo temporário é criado em ```C:\Users\<user name>\AppData\Local\Temp```.
 - Os cmdlets Out-File, Add-Content e Set-Content agora têm um novo parâmetro -NoNewline, que omite uma nova linha após a saída.
 - O cmdlet New-Guid aproveita a nova classe Guid do .NET Framework para gerar um GUID, o que é útil quando você está escrevendo scripts ou recursos de DSC.
-- Como as informações de versão de arquivo podem ser enganosas, principalmente depois que um arquivo é corrigido, novas propriedades de script FileVersionRaw e ProductVersionRaw estão disponíveis para os objetos FileInfo. Por exemplo, você pode executar o comando a seguir para exibir os valores dessas propriedades para powershell.exe, em que $pid contém a ID de processo para uma sessão em execução do Windows PowerShell: ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
+- Como as informações de versão de arquivo podem ser enganosas, principalmente depois que um arquivo é corrigido, novas propriedades de script FileVersionRaw e ProductVersionRaw estão disponíveis para os objetos FileInfo. Por exemplo, você pode executar o comando a seguir para exibir os valores dessas propriedades para powershell.exe, no qual $pid contém a ID de processo para uma sessão em execução do Windows PowerShell:  ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
 - Os novos cmdlets Enter-PSHostProcess e Exit-PSHostProcess permitem depurar scripts do Windows PowerShell em processos separados do processo atual que está sendo executado no console do Windows PowerShell. Execute Enter-PSHostProcess para inserir ou anexar a uma ID de processo específica, em seguida, execute Get-Runspace para retornar os runspaces ativos dentro do processo. Execute Exit-PSHostProcess para desanexar do processo quando tiver terminado de depurar o script dentro do processo.
 - Um novo cmdlet Wait-Debugger foi adicionado ao módulo [Microsoft.PowerShell.Utility](https://technet.microsoft.com/library/hh849958.aspx). Você pode executar o Wait-Debugger para interromper um script no depurador antes de executar a próxima instrução no script.
 - O depurador de fluxo de trabalho do Windows PowerShell agora dá suporte ao preenchimento com Tab ou comando e você pode depurar funções de fluxo de trabalho aninhadas. Você agora pode pressionar **Ctrl+Break** para inserir o depurador em um script em execução, em sessões tanto locais quanto remotas, e em um script de fluxo de trabalho.
@@ -202,15 +202,15 @@ O Windows PowerShell 4.0 é compatível com versões anteriores. Os cmdlets, pro
 O Windows PowerShell 4.0 está instalado por padrão no Windows 8.1 e no Windows Server 2012 R2. Para instalar o Windows PowerShell 4.0 no Windows 7 com SP1 ou Windows Server 2008 R2, baixe e instale o [Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855). Certifique-se de ler os detalhes de download e atender a todos os requisitos de sistema antes de instalar o Windows Management Framework 4.0.
 
 - [Novos recursos no Windows PowerShell](#new-features-in-windows-powershell-1)
-- [Novos recursos no ISE (Ambiente de Script Integrado) do Windows PowerShell](#new-features-in-windows-powershell-integrated-scripting-environment-ise)
-- [Novos recursos no fluxo de trabalho do Windows PowerShell](#new-features-in-windows-powershell-workflow)
-- [Novos recursos nos Serviços Web do Windows PowerShell](#new-features-in-windows-powershell-web-services)
+- [Novos recursos no Ambiente de Script Integrado (ISE) do Windows PowerShell](#new-features-in-windows-powershell-integrated-scripting-environment-ise)
+- [Novos recursos no Fluxo de Trabalho do Windows PowerShell](#new-features-in-windows-powershell-workflow)
+- [Novos recursos no Windows PowerShell Web Services](#new-features-in-windows-powershell-web-services)
 - [Novos recursos no Windows PowerShell Web Access](#new-features-in-windows-powershell-web-access)
-- [Correções de bugs importantes no Windows PowerShell 4.0](#notable-bug-fixes-in-windows-powershell-40)
+- [Correções importantes no Windows PowerShell 4.0](#notable-bug-fixes-in-windows-powershell-40)
 
 O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 
-### <a name="new-features-in-windows-powershell"></a>Novos recursos no Windows PowerShell
+### <a name="a-namenew-features-in-windows-powershell-1-new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Novos recursos no Windows PowerShell
 
 - A **DSC (Configuração de Estado Desejado) do Windows PowerShell** é uma nova plataforma de gerenciamento no Windows PowerShell 4.0 que permite a implantação e o gerenciamento de dados de configuração de serviços de software e o ambiente no qual esses serviços são executados. Para obter mais informações sobre o DSC, consulte [Introdução à Configuração de Estado Desejado do Windows PowerShell](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 - **Save-Help** agora permite salvar ajuda para módulos instalados em computadores remotos. Você pode usar Save-Help para baixar o módulo da Ajuda de um cliente conectado à Internet (nos quais nem todos os módulos para o qual você deseja obter ajuda estão necessariamente instalados) e copiar a Ajuda salva em uma pasta compartilhada remota ou um computador remoto que não tem acesso à Internet.
@@ -230,7 +230,7 @@ O Windows PowerShell 4.0 inclui os seguintes novos recursos.
 - Um novo cmdlet, o **Get-FileHash**, que retorna um hash de arquivo em vários formatos para um arquivo especificado, foi adicionado.
 - No Windows PowerShell 4.0, se um módulo usar a chave **DefaultCommandPrefix** em seu manifesto ou se o usuário importar um módulo com o parâmetro **Prefix**, a propriedade **ExportedCommands** do módulo mostrará os comandos no módulo com o prefixo. Quando você executa os comandos usando a sintaxe qualificada por módulo, ModuleName\\CommandName, os nomes de comando devem incluir o prefixo.
 - O valor de **$PSVersionTable.PSVersion** foi atualizado para 4.0.
-- O comportamento do operador **Where()** foi alterado. Não há mais suporte para o `Collection.Where('property -match name')` aceitar uma expressão de cadeia de caracteres no formato `"Property -CompareOperator Value"`. No entanto, o operador **Where()** aceita expressões de cadeia de caracteres no formato de um scriptblock; ainda há suporte para isso.
+- O comportamento do operador **Where()** foi alterado. `Collection.Where('property -match name')` Não há mais suporte para aceitar uma expressão de cadeia de caracteres no formato `"Property -CompareOperator Value"`. No entanto, o operador **Where()** aceita expressões de cadeia de caracteres no formato de um scriptblock; ainda há suporte para isso.
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Novos recursos no Ambiente de Script Integrado (ISE) do Windows PowerShell
 
@@ -291,31 +291,31 @@ O Windows PowerShell 3.0 inclui os seguintes novos recursos.
 
 - [Fluxo de trabalho do Windows PowerShell](#windows-powershell-workflow)
 - [Windows PowerShell Web Access](#windows-powershell-web-access)
-- [Novos recursos do ISE do Windows PowerShell](#new-windows-powershell-ise-features)
+- [Novos recursos do Windows PowerShell ISE](#new-windows-powershell-ise-features)
 - [Suporte para o Microsoft .NET Framework 4.0](#support-for-microsoft-net-framework-4)
 - [Suporte para o Ambiente de Pré-Instalação do Windows](#support-for-windows-preinstallation-environment)
 - [Sessões desconectadas](#disconnected-sessions)
 - [Conectividade robusta de sessão](#robust-session-connectivity)
-- [Sistema de ajuda atualizável](#updatable-help-system)
-- [Ajuda online avançada](#enhanced-online-help)
+- [Sistema de Ajuda Atualizável](#updatable-help-system)
+- [Ajuda Online Avançada](#enhanced-online-help)
 - [Integração do CIM](#cim-integration)
 - [Arquivos de configuração de sessão](#session-configuration-files)
-- [Integração do Agendador de Tarefas e trabalhos agendados](#scheduled-jobs-and-task-scheduler-integration)
-- [Melhorias da linguagem do Windows PowerShell](#windows-powershell-language-enhancements)
+- [Trabalhos Agendados e Integração do Agendador de Tarefas](#scheduled-jobs-and-task-scheduler-integration)
+- [Aprimoramentos da Linguagem do Windows PowerShell](#windows-powershell-language-enhancements)
 - [Novos cmdlets principais](#new-core-cmdlets)
-- [Aprimoramentos nos cmdlets e nos provedores principais existentes](#improvements-to-existing-core-cmdlets-and-providers)
+- [Aprimoramentos em cmdlets e provedores principais existentes](#improvements-to-existing-core-cmdlets-and-providers)
 - [Importação e descoberta de módulo remoto](#remote-module-import-and-discovery)
-- [Preenchimento com Tab avançado](#enhanced-tab-completion)
+- [Preenchimento de tabela avançado](#enhanced-tab-completion)
 - [Módulo de carregamento automático](#module-auto-loading)
 - [Aprimoramentos da experiência do módulo](#module-experience-improvements)
 - [Descoberta de comando simplificada](#simplified-command-discovery)
-- [Suporte aprimorado a registro em log, a diagnósticos e à Política de Grupo](#improved-logging-diagnostics-and-group-policy-support)
-- [Aprimoramentos de saída e de formatação](#formatting-and-output-improvements)
-- [Experiência de host de console avançada](#enhanced-console-host-experience)
-- [Novas APIs de cmdlet e de hospedagem](#new-cmdlet-and-hosting-apis)
-- [Aprimoramentos de desempenho](#performance-improvements)
-- [Suporte a Host Compartilhado e a Executar como](#runas-and-shared-host-support)
-- [Aprimoramentos no tratamento de caracteres especiais](#special-character-handling-improvements)
+- [Suporte aprimorado ao registro em log, diagnósticos e políticas de grupo](#improved-logging-diagnostics-and-group-policy-support)
+- [Aprimoramentos de saída e formatação](#formatting-and-output-improvements)
+- [Experiência de host de console aprimorada](#enhanced-console-host-experience)
+- [Novas APIs de cmdlet e hospedagem](#new-cmdlet-and-hosting-apis)
+- [Aprimoramento de desempenho](#performance-improvements)
+- [Executar como e suporte de host compartilhado](#runas-and-shared-host-support)
+- [Aprimoramentos na manipulação de caracteres especiais](#special-character-handling-improvements)
 
 ### <a name="windows-powershell-workflow"></a>Fluxo de trabalho do Windows PowerShell
 
@@ -333,9 +333,9 @@ A seguir estão os benefícios do fluxo de trabalho do Windows PowerShell
 - **Execução de tarefa única de processos complexos.** Você pode combinar scripts relacionados que implementam um cenário inteiro ponta a ponta em um único fluxo de trabalho.
 - **Persistência**: um fluxo de trabalho é salvo (ou verificado) em determinados pontos definidos por seu autor para que você possa retomar o fluxo de trabalho da última tarefa (ou ponto de verificação) persistida, em vez de reiniciá-lo desde o início.
 - **Robustez.** Recuperação de falhas automatizada. Fluxos de trabalho sobrevivem a reinicializações planejadas e não planejadas. Você pode suspender a execução do fluxo de trabalho e depois retomar o fluxo de trabalho a partir do último ponto de persistência. Os autores de fluxo de trabalho podem designar atividades específicas para serem executadas novamente em caso de falha em um ou mais nós gerenciados.
-- **Capacidade de desconectar, reconectar e executar em sessões desconectadas.** Os usuários podem se conectar e desconectar do servidor, mas o fluxo de trabalho permanece em execução. Saia do computador cliente ou reinicie-o e monitore a execução do fluxo de trabalho de outro computador sem interromper o fluxo de trabalho.
+- **Capacidade de desconectar, reconecte e execução em sessões desconectadas.** Os usuários podem se conectar e desconectar do servidor, mas o fluxo de trabalho permanece em execução. Saia do computador cliente ou reinicie-o e monitore a execução do fluxo de trabalho de outro computador sem interromper o fluxo de trabalho.
 - **Agendamento.** As tarefas de fluxo de trabalho podem ser agendadas como qualquer cmdlet ou script Windows PowerShell.
-- **Limitação de conexão e de fluxo de trabalho.** Execução de fluxo de trabalho e conexões para nós podem ser aceleradas, permitindo cenários de escalabilidade e alta disponibilidade.
+- **Fluxo de trabalho e aceleração de conexão.** Execução de fluxo de trabalho e conexões para nós podem ser aceleradas, permitindo cenários de escalabilidade e alta disponibilidade.
 
 ### <a name="windows-powershell-web-access"></a>Windows PowerShell Web Access
 
@@ -353,7 +353,7 @@ O Windows PowerShell foi desenvolvido com o Common Language Runtime 4.0. Autores
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Suporte para o Ambiente de Pré-Instalação do Windows
 
-O Windows PowerShell 3.0 é um componente opcional do Ambiente de Pré-Instalação do Windows (Windows PE) 4.0 para o Windows 8. O Windows PE é um sistema operacional mínimo que inicia um computador que não possui sistema operacional e o prepara para a instalação do Windows. O Windows PE pode ser usado para particionar e formatar discos rígidos, copiar imagens de disco para um computador e iniciar a Instalação do Windows por meio de um compartilhamento de rede. O Windows PowerShell 3.0 pode ser usado no Windows PE para gerenciar a implantação, diagnósticos e cenários de recuperação.
+O Windows PowerShell 3.0 é um componente opcional do Ambiente de Pré-Instalação do Windows (Windows PE) 4.0 para o Windows 8. O Windows PE é um sistema operacional mínimo que inicia um computador que não tem sistema operacional e o prepara para a instalação do Windows. O Windows PE pode ser usado para particionar e formatar discos rígidos, copiar imagens de disco para um computador e iniciar a Instalação do Windows por meio de um compartilhamento de rede. O Windows PowerShell 3.0 pode ser usado no Windows PE para gerenciar a implantação, diagnósticos e cenários de recuperação.
 
 ### <a name="disconnected-sessions"></a>Sessões desconectadas
 
@@ -487,7 +487,7 @@ Foram adicionados novos cmdlets à instalação do Windows PowerShell Core, incl
 
 ### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>Aprimoramentos em cmdlets e provedores principais existentes
 
-O Windows PowerShell 3.0 inclui novos recursos para os cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: Cmdlets Computer, CSV, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, Security cmdlets, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member e WMI.
+O Windows PowerShell 3.0 inclui novos recursos para os cmdlets existentes, incluindo sintaxe simplificada e novos parâmetros para os seguintes cmdlets: Cmdlets Computer, CSV, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, cmdlets Security, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member e cmdlets WMI.
 
 Os provedores do Windows PowerShell também foram aprimorados significativamente, incluindo o suporte para provedor de certificados para gerenciar certificados Secure Socket Layer (SSL) para hospedagem na web, suporte para credenciais, unidades de rede persistente e fluxos de dados alternados em unidades de sistema de arquivos.
 
@@ -570,4 +570,4 @@ Para melhorar a capacidade do Windows PowerShell 3.0 de interpretar e manipular 
 ## <a name="see-also"></a>Consulte Também
 
 - [about_Windows_PowerShell_5.0](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
-- [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+- [Usando o Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)

@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Criando objetos .NET e COM New Object
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
-ms.openlocfilehash: 1ffd8d4afa419ec0c24321e44aa4a2f41a9bee44
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: ef8215303aacd90536d3c2ae57bc3629e202f318
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53400589"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293360"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Criando objetos .NET e COM (New-Object)
 
 Existem componentes de software com as interfaces .NET Framework e COM que permitem executar muitas tarefas de administração do sistema. O Windows PowerShell permite usar esses componentes para que você não fique limitado a tarefas que podem ser executadas usando cmdlets. Muitos dos cmdlets na versão inicial do Windows PowerShell não funcionam em computadores remotos. Demonstraremos como contornar essa limitação gerenciando logs de eventos usando a classe **System.Diagnostics.EventLog** do .NET Framework diretamente do Windows PowerShell.
 
-### <a name="using-new-object-for-event-log-access"></a>Usando New-Object para acesso ao Log de Eventos
+## <a name="using-new-object-for-event-log-access"></a>Usando New-Object para acesso ao Log de Eventos
 
 A Biblioteca de Classes do .NET Framework inclui uma classe chamada **System.Diagnostics.EventLog** que pode ser usada para gerenciar logs de eventos. Você pode criar uma nova instância de uma classe do .NET Framework usando o cmdlet **New-Object** com o parâmetro **TypeName**. Por exemplo, o comando a seguir cria uma referência de log de eventos:
 
@@ -27,7 +27,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 Embora o comando tenha criado uma instância da classe EventLog, ela não inclui nenhum dado. Isso ocorre porque não especificamos um log de eventos específico. Como obter um log de eventos real?
 
-#### <a name="using-constructors-with-new-object"></a>Usando construtores com New-Object
+### <a name="using-constructors-with-new-object"></a>Usando construtores com New-Object
 
 Para consultar um log de eventos específico, é necessário especificar o nome do log. **New-Object** tem um parâmetro **ArgumentList**. Os argumentos que você passa como valores para esse parâmetro são usados por um método especial de inicialização do objeto. O método é chamado de *construtor* porque ele é usado para construir o objeto. Por exemplo, para obter uma referência para o Log do aplicativo, especifique a cadeia de caracteres “Application” (Aplicativo) como um argumento:
 
@@ -42,7 +42,7 @@ Max(K) Retain OverflowAction        Entries Name
 > [!NOTE]
 > Uma vez que a maioria das classes principais do .NET Framework está contida no namespace System, o Windows PowerShell tentará localizar automaticamente as classes que você especificar no namespace System se ele não encontrar uma correspondência para o typename especificado. Isso significa que você pode especificar Diagnostics.EventLog em vez de System.Diagnostics.EventLog.
 
-#### <a name="storing-objects-in-variables"></a>Armazenar objetos em variáveis
+### <a name="storing-objects-in-variables"></a>Armazenar objetos em variáveis
 
 Pode ser útil armazenar uma referência a um objeto para que você pode usá-lo no shell atual. Embora o Windows PowerShell permita fazer grande parte do trabalho com pipelines, reduzindo a necessidade de variáveis, às vezes armazenar as referências a objetos em variáveis torna mais conveniente a tarefa de manipular esses objetos.
 
@@ -62,7 +62,7 @@ PS> $AppLog
   16,384      7 OverwriteOlder          2,160 Application
 ```
 
-#### <a name="accessing-a-remote-event-log-with-new-object"></a>Acessando um Log de Eventos Remoto com New-Object
+### <a name="accessing-a-remote-event-log-with-new-object"></a>Acessando um Log de Eventos Remoto com New-Object
 
 Os comandos usados na seção anterior destinam-se ao computador local. O cmdlet **Get-EventLog** pode fazer isso. Para acessar o log do aplicativo em um computador remoto, você deve fornecer tanto o nome do log quanto um nome do computador (ou endereço IP) como argumentos.
 
@@ -77,7 +77,7 @@ PS> $RemoteAppLog
 
 Agora que temos uma referência a um log de eventos armazenado na variável $RemoteAppLog, quais tarefas que podemos realizar nela?
 
-#### <a name="clearing-an-event-log-with-object-methods"></a>Limpar um Log de Eventos com métodos de objeto
+### <a name="clearing-an-event-log-with-object-methods"></a>Limpar um Log de Eventos com métodos de objeto
 
 Objetos geralmente têm métodos que podem ser chamados para executar tarefas. Você pode usar **Get-Member** para exibir os métodos associados a um objeto. O seguinte comando e a saída selecionada mostram alguns métodos da classe EventLog:
 
@@ -118,12 +118,12 @@ PS> $RemoteAppLog
      512      7 OverwriteOlder              0 Application
 ```
 
-### <a name="creating-com-objects-with-new-object"></a>Criação de objetos COM usando New-Object
+## <a name="creating-com-objects-with-new-object"></a>Criação de objetos COM usando New-Object
 Você pode usar **New-Object** para trabalhar com componentes COM (Component Object Model). Os componentes variam desde as várias bibliotecas incluídas no WSH (Windows Script Host) até aplicativos de ActiveX como o Internet Explorer que estão instalados na maioria dos sistemas.
 
 **New-Object** usa Runtime Callable Wrappers do .NET Framework para criar objetos COM, portanto, ele tem as mesmas limitações que o .NET Framework ao chamar objetos COM. Para criar um objeto COM, você precisa especificar o parâmetro **ComObject** com o identificador programático ou *ProgId* da classe COM que você deseja usar. Uma discussão completa sobre as limitações de uso de COM e como determinar quais ProgIds estão disponíveis em um sistema está além do escopo deste guia do usuário, mas a maioria dos objetos bem conhecidos de ambientes como WSH podem ser usados no Windows PowerShell.
 
-Você pode criar objetos WSH especificando essas progids: **WScript. Shell**, **Wscript. Network**, **Dictionary**, e **Scripting. FileSystemObject**. Os comandos a seguir criam esses objetos:
+Você pode criar objetos WSH especificando essas progids: **WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, e **Scripting.FileSystemObject**. Os comandos a seguir criam esses objetos:
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -134,7 +134,7 @@ New-Object -ComObject Scripting.FileSystemObject
 
 Embora a maioria das funcionalidades dessas classes seja disponibilizada de outras maneiras no Windows PowerShell, algumas tarefas, como a criação de atalhos, são ainda mais fáceis de executar usando as classes WSH.
 
-### <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>Criar um atalho da área de trabalho com WScript.Shell
+## <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>Criar um atalho da área de trabalho com WScript.Shell
 
 Uma tarefa que pode ser executada rapidamente um objeto COM é a criação de um atalho. Suponha que você deseja criar um atalho na área de trabalho que a vincula a pasta base ao Windows PowerShell. Você precisa primeiro criar uma referência a **WScript.Shell**, que armazenaremos em uma variável chamada **$WshShell**:
 
@@ -203,7 +203,7 @@ $lnk.TargetPath = $PSHome
 $lnk.Save()
 ```
 
-### <a name="using-internet-explorer-from-windows-powershell"></a>Usando o Internet Explorer do Windows PowerShell
+## <a name="using-internet-explorer-from-windows-powershell"></a>Usando o Internet Explorer do Windows PowerShell
 
 Muitos aplicativos (incluindo a família de aplicativos Microsoft Office e o Internet Explorer) podem ser automatizados usando COM. O Internet Explorer ilustra algumas das técnicas e problemas típicos envolvidos ao trabalhar com aplicativos baseados em COM.
 
@@ -262,7 +262,7 @@ Remove-Variable ie
 > [!NOTE]
 > não há um padrão comum para se executáveis do ActiveX fecham ou continuam em execução quando você remove uma referência deles. Dependendo das circunstâncias, tal como se o aplicativo estiver visível, se um documento editado está em execução e até mesmo se o Windows PowerShell ainda está em execução, o aplicativo pode ser encerrado ou não. Por esse motivo, você deve testar o comportamento de encerramento para cada executável do ActiveX que você deseja usar no Windows PowerShell.
 
-### <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>Obtendo avisos sobre objetos COM Wrapped do .NET Framework
+## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>Obtendo avisos sobre objetos COM Wrapped do .NET Framework
 
 Em alguns casos, um objeto COM pode ter um *Runtime Callable Wrapper* ou RCW do .NET Framework associado, e este será usado pelo **New-Object**. Como o comportamento do RCW pode ser diferente do comportamento do objeto COM normal, **New-Object** tem um parâmetro **Strict** para avisar sobre o acesso ao RCW. Se você especificar o parâmetro **Strict** e criar um objeto COM que usa um RCW, receberá uma mensagem de aviso:
 

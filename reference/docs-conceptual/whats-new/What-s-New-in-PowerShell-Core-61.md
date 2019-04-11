@@ -2,12 +2,12 @@
 title: Novidades no PowerShell Core 6.1
 description: Novos recursos e alterações liberados no PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55676354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293309"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novidades no PowerShell Core 6.1
 
@@ -207,7 +207,7 @@ Se `pwsh.exe` não estiver disponível, o PowerShell Direct voltará a usar `pow
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` já cria pontos de extremidade de comunicação remota separados para versões prévias
 
-`Enable-PSRemoting` já cria duas configurações de sessão de comunicação remota:
+`Enable-PSRemoting` agora cria duas configurações de sessão de comunicação remota:
 
 - Uma para a versão principal do PowerShell. Por exemplo, `PowerShell.6`. Esse ponto de extremidade que pode ser utilizado em versões secundárias é atualizado como a configuração de sessão do PowerShell 6 "para todo o sistema"
 - Uma configuração de sessão específica da versão, por exemplo: `PowerShell.6.1.0`
@@ -305,7 +305,7 @@ Graças a [@iSazonov](https://github.com/iSazonov), o [`Test-Connection`](/power
 ### <a name="update-help-as-non-admin"></a>`Update-Help` como não administrador
 
 Por demanda popular, `Update-Help` não precisa mais ser executado como um administrador.
-Agora, o padrão de `Update-Help` é salvar a ajuda em uma pasta no escopo do usuário.
+`Update-Help` agora o padrão é salvar a ajuda em uma pasta no escopo do usuário.
 
 ### <a name="new-methodsproperties-on-pscustomobject"></a>Novos métodos/propriedades em `PSCustomObject`
 
@@ -516,3 +516,10 @@ O Visual Basic raramente era usado com `Add-Type`. Removemos esse recurso para r
 ### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a>Usos limpos de `CommandTypes.Workflow` e `WorkflowInfoCleaned`
 
 Para obter mais informações sobre essas alterações, confira [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).
+
+### <a name="group-object-now-sorts-the-groups"></a>Agora o Group-Object classifica os grupos
+
+Como parte da melhoria de desempenho, agora `Group-Object` retorna uma lista classificada dos grupos.
+Embora você não deva confiar na classificação, essa alteração pode desviá-lo se você quiser o primeiro grupo. Decidimos que essa melhoria de desempenho faz a alteração valer a pena, pois o impacto de depender do comportamento anterior é baixo.
+
+Confira mais informações sobre essa alteração em [Problema #7409](https://github.com/PowerShell/PowerShell/issues/7409).

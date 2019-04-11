@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell, cmdlet
 title: Manipulando itens diretamente
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 5f5b6cf4a777229029743b9d9967030effc58215
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293258"
 ---
 # <a name="manipulating-items-directly"></a>Manipulando itens diretamente
 
@@ -32,7 +32,7 @@ Cmdlet          Rename-Item                     Rename-Item [-Path] <String>...
 Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
-### <a name="creating-new-items-new-item"></a>Criando novos itens (New-Item)
+## <a name="creating-new-items-new-item"></a>Criando novos itens (New-Item)
 
 Para criar um novo item no sistema de arquivos, use o cmdlet **New-Item**. Inclua o parâmetro **Path** com o caminho para o item e o parâmetro **ItemType** com um valor de "file" ou "directory".
 
@@ -75,7 +75,7 @@ SKC  VC Name                           Property
 
 Ao digitar um caminho do Registro, certifique-se de incluir os dois-pontos (**:**) nos nomes de unidades do Windows PowerShell, HKLM: e HKCU:. Sem os dois pontos, o Windows PowerShell não reconhece o nome de unidade no caminho.
 
-### <a name="why-registry-values-are-not-items"></a>Por que os valores do registro não são itens
+## <a name="why-registry-values-are-not-items"></a>Por que os valores do registro não são itens
 
 Ao usar o cmdlet **Get-ChildItem** para localizar os itens em uma chave do Registro, você nunca verá entradas reais do Registro ou seus valores.
 
@@ -95,7 +95,7 @@ SKC  VC Name                           Property
 
 Embora seria algo conveniente tratar as entradas do registro como itens, não é possível você especificar um caminho para uma entrada de registro de uma maneira que garanta que ele seja exclusivo. A notação de caminho não faz distinção entre a subchave do Registro chamada **Run** e a entrada do Registro **(Default)** na subchave **Run**. Além disso, como nomes de entrada do Registro podem conter o caractere de barra invertida (**\\**), se as entradas de Registro fossem itens, você não poderia usar a notação de caminho para distinguir uma entrada do Registro denominada **Windows\\CurrentVersion\\Run** da subchave localizada nesse caminho.
 
-### <a name="renaming-existing-items-rename-item"></a>Renomeando itens existentes (Rename-Item)
+## <a name="renaming-existing-items-rename-item"></a>Renomeando itens existentes (Rename-Item)
 
 Para alterar o nome de um arquivo ou uma pasta, use o cmdlet **Rename-Item**. O comando a seguir altera o nome do arquivo **file1.txt** para **fileOne.txt**.
 
@@ -112,7 +112,7 @@ At line:1 char:12
 + Rename-Item  <<<< -Path C:\temp\New.Directory\fileOne c:\temp\fileOne.txt
 ```
 
-### <a name="moving-items-move-item"></a>Movendo itens (Move Item)
+## <a name="moving-items-move-item"></a>Movendo itens (Move Item)
 
 Para mover um arquivo ou uma pasta, use o cmdlet **Move-Item**.
 
@@ -128,7 +128,7 @@ Mode                LastWriteTime     Length Name
 d----        2006-05-18  12:14 PM            New.Directory
 ```
 
-### <a name="copying-items-copy-item"></a>Copiando itens (Copy-Item)
+## <a name="copying-items-copy-item"></a>Copiando itens (Copy-Item)
 
 Se estiver familiarizado com as operações de cópia em outros shells, você poderá achar o comportamento do cmdlet **Copy-Item** do Windows PowerShell um tanto incomum. Quando você copia um item de um local para outro, o Copy-Item não copia o conteúdo por padrão.
 
@@ -167,7 +167,7 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-### <a name="deleting-items-remove-item"></a>Excluindo itens (Remove-Item)
+## <a name="deleting-items-remove-item"></a>Excluindo itens (Remove-Item)
 
 Para excluir arquivos ou pastas, use o cmdlet **Remove-Item**. Cmdlets do Windows PowerShell, como o **Remove-Item**, que podem executar alterações significativas e irreversíveis, geralmente solicitarão confirmação quando você inserir seus comandos. Por exemplo, se você tentar remover a pasta **New.Directory**, será solicitado a confirmar o comando, pois a pasta contém arquivos:
 
@@ -188,7 +188,7 @@ Como **Sim** é a resposta padrão, para excluir a pasta e seus arquivos, pressi
 Remove-Item C:\temp\New.Directory -Recurse
 ```
 
-### <a name="executing-items-invoke-item"></a>Executando itens (Invoke-Item)
+## <a name="executing-items-invoke-item"></a>Executando itens (Invoke-Item)
 
 O Windows PowerShell usa o cmdlet **Invoke-Item** para executar uma ação padrão para um arquivo ou uma pasta. Essa ação padrão é determinada pelo manipulador de aplicativo padrão no registro. O efeito é o mesmo que clicar duas vezes o item no Explorador de arquivos.
 
