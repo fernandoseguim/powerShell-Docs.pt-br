@@ -22,7 +22,7 @@ Para habilitar a comunicação remota do PowerShell pelo WSMan, os pré-requisit
 
 ## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Instalando o pacote MSI
 
-Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões][] no GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
+Para instalar o PowerShell em um cliente do Windows ou Windows Server (funciona no Windows 7 SP1, no Server 2008 R2 e posterior), baixe o pacote MSI da nossa página [versões](https://github.com/PowerShell/PowerShell/releases) no GitHub. Role a tela até a seção **Ativos** da versão que você deseja instalar. A seção Ativos pode estar recolhida e, portanto, talvez você precise clicar para expandi-la.
 
 O arquivo MSI tem esta aparência – `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
